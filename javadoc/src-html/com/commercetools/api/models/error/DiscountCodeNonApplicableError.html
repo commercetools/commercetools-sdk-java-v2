@@ -67,27 +67,28 @@
 <span class="source-line-no">054</span><span id="line.54">    public static DiscountCodeNonApplicableError of(final DiscountCodeNonApplicableError template) {</span>
 <span class="source-line-no">055</span><span id="line.55">        DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();</span>
 <span class="source-line-no">056</span><span id="line.56">        instance.setMessage(template.getMessage());</span>
-<span class="source-line-no">057</span><span id="line.57">        instance.setDiscountCode(template.getDiscountCode());</span>
-<span class="source-line-no">058</span><span id="line.58">        instance.setReason(template.getReason());</span>
-<span class="source-line-no">059</span><span id="line.59">        instance.setDicountCodeId(template.getDicountCodeId());</span>
-<span class="source-line-no">060</span><span id="line.60">        instance.setValidFrom(template.getValidFrom());</span>
-<span class="source-line-no">061</span><span id="line.61">        instance.setValidUntil(template.getValidUntil());</span>
-<span class="source-line-no">062</span><span id="line.62">        instance.setValidityCheckTime(template.getValidityCheckTime());</span>
-<span class="source-line-no">063</span><span id="line.63">        return instance;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public static DiscountCodeNonApplicableErrorBuilder builder() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return DiscountCodeNonApplicableErrorBuilder.of();</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public static DiscountCodeNonApplicableErrorBuilder builder(final DiscountCodeNonApplicableError template) {</span>
-<span class="source-line-no">071</span><span id="line.71">        return DiscountCodeNonApplicableErrorBuilder.of(template);</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    default &lt;T&gt; T withDiscountCodeNonApplicableError(Function&lt;DiscountCodeNonApplicableError, T&gt; helper) {</span>
-<span class="source-line-no">075</span><span id="line.75">        return helper.apply(this);</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77">}</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">        instance.setDiscountCode(template.getDiscountCode());</span>
+<span class="source-line-no">059</span><span id="line.59">        instance.setReason(template.getReason());</span>
+<span class="source-line-no">060</span><span id="line.60">        instance.setDicountCodeId(template.getDicountCodeId());</span>
+<span class="source-line-no">061</span><span id="line.61">        instance.setValidFrom(template.getValidFrom());</span>
+<span class="source-line-no">062</span><span id="line.62">        instance.setValidUntil(template.getValidUntil());</span>
+<span class="source-line-no">063</span><span id="line.63">        instance.setValidityCheckTime(template.getValidityCheckTime());</span>
+<span class="source-line-no">064</span><span id="line.64">        return instance;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public static DiscountCodeNonApplicableErrorBuilder builder() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return DiscountCodeNonApplicableErrorBuilder.of();</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public static DiscountCodeNonApplicableErrorBuilder builder(final DiscountCodeNonApplicableError template) {</span>
+<span class="source-line-no">072</span><span id="line.72">        return DiscountCodeNonApplicableErrorBuilder.of(template);</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    default &lt;T&gt; T withDiscountCodeNonApplicableError(Function&lt;DiscountCodeNonApplicableError, T&gt; helper) {</span>
+<span class="source-line-no">076</span><span id="line.76">        return helper.apply(this);</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78">}</span>
 
 
 

@@ -40,14 +40,14 @@
 <span class="source-line-no">027</span><span id="line.27"></span>
 <span class="source-line-no">028</span><span id="line.28">    private Long other;</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    private java.util.List&lt;com.commercetools.api.models.product.FacetResultTerm&gt; terms;</span>
+<span class="source-line-no">030</span><span id="line.30">    private java.util.List&lt;com.commercetools.api.models.product.FacetTerm&gt; terms;</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    @JsonCreator</span>
 <span class="source-line-no">033</span><span id="line.33">    TermFacetResultImpl(</span>
 <span class="source-line-no">034</span><span id="line.34">            @JsonProperty("dataType") final com.commercetools.api.models.product.TermFacetResultType dataType,</span>
 <span class="source-line-no">035</span><span id="line.35">            @JsonProperty("missing") final Long missing, @JsonProperty("total") final Long total,</span>
 <span class="source-line-no">036</span><span id="line.36">            @JsonProperty("other") final Long other,</span>
-<span class="source-line-no">037</span><span id="line.37">            @JsonProperty("terms") final java.util.List&lt;com.commercetools.api.models.product.FacetResultTerm&gt; terms) {</span>
+<span class="source-line-no">037</span><span id="line.37">            @JsonProperty("terms") final java.util.List&lt;com.commercetools.api.models.product.FacetTerm&gt; terms) {</span>
 <span class="source-line-no">038</span><span id="line.38">        this.dataType = dataType;</span>
 <span class="source-line-no">039</span><span id="line.39">        this.missing = missing;</span>
 <span class="source-line-no">040</span><span id="line.40">        this.total = total;</span>
@@ -80,7 +80,7 @@
 <span class="source-line-no">067</span><span id="line.67">        return this.other;</span>
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public java.util.List&lt;com.commercetools.api.models.product.FacetResultTerm&gt; getTerms() {</span>
+<span class="source-line-no">070</span><span id="line.70">    public java.util.List&lt;com.commercetools.api.models.product.FacetTerm&gt; getTerms() {</span>
 <span class="source-line-no">071</span><span id="line.71">        return this.terms;</span>
 <span class="source-line-no">072</span><span id="line.72">    }</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
@@ -100,11 +100,11 @@
 <span class="source-line-no">087</span><span id="line.87">        this.other = other;</span>
 <span class="source-line-no">088</span><span id="line.88">    }</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public void setTerms(final com.commercetools.api.models.product.FacetResultTerm... terms) {</span>
+<span class="source-line-no">090</span><span id="line.90">    public void setTerms(final com.commercetools.api.models.product.FacetTerm... terms) {</span>
 <span class="source-line-no">091</span><span id="line.91">        this.terms = new ArrayList&lt;&gt;(Arrays.asList(terms));</span>
 <span class="source-line-no">092</span><span id="line.92">    }</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public void setTerms(final java.util.List&lt;com.commercetools.api.models.product.FacetResultTerm&gt; terms) {</span>
+<span class="source-line-no">094</span><span id="line.94">    public void setTerms(final java.util.List&lt;com.commercetools.api.models.product.FacetTerm&gt; terms) {</span>
 <span class="source-line-no">095</span><span id="line.95">        this.terms = terms;</span>
 <span class="source-line-no">096</span><span id="line.96">    }</span>
 <span class="source-line-no">097</span><span id="line.97"></span>

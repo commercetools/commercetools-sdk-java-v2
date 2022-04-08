@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a>&gt;</code>, <code><a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a>&gt;</code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a>&gt;</code>, <code><a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreImpl.html#line.17">StoreImpl</a></span>
@@ -143,7 +143,9 @@ implements <a href="Store.html" title="interface in com.commercetools.api.models
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getId()">getId</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">The unique ID of this object.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getKey()">getKey</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
@@ -242,6 +244,9 @@ implements <a href="Store.html" title="interface in com.commercetools.api.models
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.BaseResource">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></h3>
 <code><a href="../common/BaseResource.html#withBaseResource(java.util.function.Function)">withBaseResource</a></code></div>
 <div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.Customizable">Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a></h3>
+<code><a href="../Customizable.html#unwrapCustomizable()">unwrapCustomizable</a></code></div>
+<div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.DomainResource">Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a></h3>
 <code><a href="../DomainResource.html#get()">get</a></code></div>
 <div class="inherited-list">
@@ -279,13 +284,19 @@ implements <a href="Store.html" title="interface in com.commercetools.api.models
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreImpl.html#line.77">getId</a></span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../Identifiable.html#getId()">Identifiable</a></code></span></div>
+<div class="block">The unique ID of this object.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/BaseResource.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="../DomainResource.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a>&gt;</code></dd>
 <dt>Specified by:</dt>
+<dd><code><a href="../Identifiable.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a>&gt;</code></dd>
+<dt>Specified by:</dt>
 <dd><code><a href="Store.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a></code></dd>
+<dt>Returns:</dt>
+<dd>ID</dd>
 </dl>
 </section>
 </li>
@@ -423,6 +434,8 @@ implements <a href="Store.html" title="interface in com.commercetools.api.models
 <h3>getCustom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreImpl.html#line.150">getCustom</a></span>()</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../Customizable.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="Store.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a></code></dd>
 </dl>
@@ -601,6 +614,8 @@ implements <a href="Store.html" title="interface in com.commercetools.api.models
 <h3>setCustom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreImpl.html#line.223">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../Customizable.html#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="Store.html#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="Store.html" title="interface in com.commercetools.api.models.store">Store</a></code></dd>
 </dl>

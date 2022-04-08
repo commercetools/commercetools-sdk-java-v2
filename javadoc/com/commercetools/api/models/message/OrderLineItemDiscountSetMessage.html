@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a>&gt;</code>, <code><a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></code>, <code><a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.19">OrderLineItemDiscountSetMessage</a></span><span class="extends-implements">
-extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
+extends <a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -132,7 +132,10 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getTotalPrice()">getTotalPrice</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Draft type that stores amounts in cent precision for the specified currency.<br/>
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
@@ -169,6 +172,9 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.message.Message">Methods inherited from interface&nbsp;com.commercetools.api.models.message.<a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></h3>
 <code><a href="Message.html#getCreatedAt()">getCreatedAt</a>, <a href="Message.html#getCreatedBy()">getCreatedBy</a>, <a href="Message.html#getId()">getId</a>, <a href="Message.html#getLastModifiedAt()">getLastModifiedAt</a>, <a href="Message.html#getLastModifiedBy()">getLastModifiedBy</a>, <a href="Message.html#getResource()">getResource</a>, <a href="Message.html#getResourceUserProvidedIdentifiers()">getResourceUserProvidedIdentifiers</a>, <a href="Message.html#getResourceVersion()">getResourceVersion</a>, <a href="Message.html#getSequenceNumber()">getSequenceNumber</a>, <a href="Message.html#getType()">getType</a>, <a href="Message.html#getVersion()">getVersion</a>, <a href="Message.html#setCreatedAt(java.time.ZonedDateTime)">setCreatedAt</a>, <a href="Message.html#setCreatedBy(com.commercetools.api.models.common.CreatedBy)">setCreatedBy</a>, <a href="Message.html#setId(java.lang.String)">setId</a>, <a href="Message.html#setLastModifiedAt(java.time.ZonedDateTime)">setLastModifiedAt</a>, <a href="Message.html#setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">setLastModifiedBy</a>, <a href="Message.html#setResource(com.commercetools.api.models.common.Reference)">setResource</a>, <a href="Message.html#setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">setResourceUserProvidedIdentifiers</a>, <a href="Message.html#setResourceVersion(java.lang.Long)">setResourceVersion</a>, <a href="Message.html#setSequenceNumber(java.lang.Long)">setSequenceNumber</a>, <a href="Message.html#setVersion(java.lang.Long)">setVersion</a>, <a href="Message.html#withMessage(java.util.function.Function)">withMessage</a></code></div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.message.OrderMessage">Methods inherited from interface&nbsp;com.commercetools.api.models.message.<a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></h3>
+<code><a href="OrderMessage.html#withOrderMessage(java.util.function.Function)">withOrderMessage</a></code></div>
 </section>
 </li>
 </ul>
@@ -218,74 +224,76 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <h3>getTotalPrice</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.34">getTotalPrice</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.38">getTotalPrice</a></span>()</div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.<br/>
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxedPrice()">
 <h3>getTaxedPrice</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.39">getTaxedPrice</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.43">getTaxedPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLineItemId(java.lang.String)">
 <h3>setLineItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.43">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.47">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDiscountedPricePerQuantity(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity...)">
 <h3>setDiscountedPricePerQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.45">setDiscountedPricePerQuantity</a></span>&#8203;<span class="parameters">(<a href="../cart/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPriceForQuantity</a>...&nbsp;discountedPricePerQuantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.49">setDiscountedPricePerQuantity</a></span>&#8203;<span class="parameters">(<a href="../cart/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPriceForQuantity</a>...&nbsp;discountedPricePerQuantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDiscountedPricePerQuantity(java.util.List)">
 <h3>setDiscountedPricePerQuantity</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.48">setDiscountedPricePerQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPriceForQuantity</a>&gt;&nbsp;discountedPricePerQuantity)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.52">setDiscountedPricePerQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPriceForQuantity</a>&gt;&nbsp;discountedPricePerQuantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTotalPrice(com.commercetools.api.models.common.Money)">
 <h3>setTotalPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.51">setTotalPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalPrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.55">setTotalPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice)">
 <h3>setTaxedPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.53">setTaxedPrice</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;taxedPrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.57">setTaxedPrice</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;taxedPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.55">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.59">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderLineItemDiscountSetMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.59">of</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.63">of</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.78">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.82">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.OrderLineItemDiscountSetMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.82">builder</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.86">builder</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderLineItemDiscountSetMessage(java.util.function.Function)">
 <h3>withOrderLineItemDiscountSetMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.86">withOrderLineItemDiscountSetMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#line.90">withOrderLineItemDiscountSetMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

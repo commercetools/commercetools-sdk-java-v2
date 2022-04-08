@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></code>, <code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
+<dd><code><a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></code>, <code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code>, <code><a href="OrderMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderMessagePayload</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.17">OrderLineItemRemovedMessagePayloadImpl</a></span>
@@ -154,7 +154,9 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getNewTotalPrice()">getNewTotalPrice</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Base polymorphic read-only Money type which is stored in cent precision or high precision.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getRemovedQuantity()">getRemovedQuantity</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -206,6 +208,9 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.message.OrderLineItemRemovedMessagePayload">Methods inherited from interface&nbsp;com.commercetools.api.models.message.<a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></h3>
 <code><a href="OrderLineItemRemovedMessagePayload.html#withOrderLineItemRemovedMessagePayload(java.util.function.Function)">withOrderLineItemRemovedMessagePayload</a></code></div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.message.OrderMessagePayload">Methods inherited from interface&nbsp;com.commercetools.api.models.message.<a href="OrderMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderMessagePayload</a></h3>
+<code><a href="OrderMessagePayload.html#withOrderMessagePayload(java.util.function.Function)">withOrderMessagePayload</a></code></div>
 </section>
 </li>
 </ul>
@@ -284,7 +289,8 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="getNewTotalPrice()">
 <h3>getNewTotalPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.82">getNewTotalPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.85">getNewTotalPrice</a></span>()</div>
+<div class="block"><p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#getNewTotalPrice()">getNewTotalPrice</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -294,7 +300,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="getNewTaxedPrice()">
 <h3>getNewTaxedPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.86">getNewTaxedPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.89">getNewTaxedPrice</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#getNewTaxedPrice()">getNewTaxedPrice</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -304,7 +310,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="getNewPrice()">
 <h3>getNewPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.90">getNewPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.93">getNewPrice</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#getNewPrice()">getNewPrice</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -314,7 +320,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="getNewShippingDetail()">
 <h3>getNewShippingDetail</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.94">getNewShippingDetail</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.97">getNewShippingDetail</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#getNewShippingDetail()">getNewShippingDetail</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -324,7 +330,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="setLineItemId(java.lang.String)">
 <h3>setLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.98">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.101">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#setLineItemId(java.lang.String)">setLineItemId</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -334,7 +340,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="setRemovedQuantity(java.lang.Long)">
 <h3>setRemovedQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.102">setRemovedQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;removedQuantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.105">setRemovedQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;removedQuantity)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#setRemovedQuantity(java.lang.Long)">setRemovedQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -344,7 +350,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="setNewQuantity(java.lang.Long)">
 <h3>setNewQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.106">setNewQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;newQuantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.109">setNewQuantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;newQuantity)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#setNewQuantity(java.lang.Long)">setNewQuantity</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -354,7 +360,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="setNewState(com.commercetools.api.models.order.ItemState...)">
 <h3>setNewState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.110">setNewState</a></span>&#8203;<span class="parameters">(<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>...&nbsp;newState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.113">setNewState</a></span>&#8203;<span class="parameters">(<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>...&nbsp;newState)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#setNewState(com.commercetools.api.models.order.ItemState...)">setNewState</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -364,7 +370,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="setNewState(java.util.List)">
 <h3>setNewState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.114">setNewState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;&nbsp;newState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.117">setNewState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;&nbsp;newState)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#setNewState(java.util.List)">setNewState</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -374,7 +380,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="setNewTotalPrice(com.commercetools.api.models.common.TypedMoney)">
 <h3>setNewTotalPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.118">setNewTotalPrice</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;newTotalPrice)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.121">setNewTotalPrice</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;newTotalPrice)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#setNewTotalPrice(com.commercetools.api.models.common.TypedMoney)">setNewTotalPrice</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -384,7 +390,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="setNewTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice)">
 <h3>setNewTaxedPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.122">setNewTaxedPrice</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;newTaxedPrice)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.125">setNewTaxedPrice</a></span>&#8203;<span class="parameters">(<a href="../cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;newTaxedPrice)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#setNewTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice)">setNewTaxedPrice</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -394,7 +400,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="setNewPrice(com.commercetools.api.models.common.Price)">
 <h3>setNewPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.126">setNewPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&nbsp;newPrice)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.129">setNewPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&nbsp;newPrice)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#setNewPrice(com.commercetools.api.models.common.Price)">setNewPrice</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -404,7 +410,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="setNewShippingDetail(com.commercetools.api.models.cart.ItemShippingDetails)">
 <h3>setNewShippingDetail</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.130">setNewShippingDetail</a></span>&#8203;<span class="parameters">(<a href="../cart/ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a>&nbsp;newShippingDetail)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.133">setNewShippingDetail</a></span>&#8203;<span class="parameters">(<a href="../cart/ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a>&nbsp;newShippingDetail)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="OrderLineItemRemovedMessagePayload.html#setNewShippingDetail(com.commercetools.api.models.cart.ItemShippingDetails)">setNewShippingDetail</a></code>&nbsp;in interface&nbsp;<code><a href="OrderLineItemRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayload</a></code></dd>
@@ -414,7 +420,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.134">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.137">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -424,7 +430,7 @@ implements <a href="OrderLineItemRemovedMessagePayload.html" title="interface in
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.156">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemRemovedMessagePayloadImpl.html#line.159">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

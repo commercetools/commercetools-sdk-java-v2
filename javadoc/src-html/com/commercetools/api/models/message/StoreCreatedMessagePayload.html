@@ -59,61 +59,64 @@
 <span class="source-line-no">046</span><span id="line.46">    @JsonProperty("productSelections")</span>
 <span class="source-line-no">047</span><span id="line.47">    public List&lt;ProductSelectionSetting&gt; getProductSelections();</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @Valid</span>
-<span class="source-line-no">050</span><span id="line.50">    @JsonProperty("custom")</span>
-<span class="source-line-no">051</span><span id="line.51">    public CustomFields getCustom();</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    @JsonIgnore</span>
-<span class="source-line-no">056</span><span id="line.56">    public void setLanguages(final String... languages);</span>
+<span class="source-line-no">049</span><span id="line.49">    /**</span>
+<span class="source-line-no">050</span><span id="line.50">    *  &lt;p&gt;Serves as value of the &lt;code&gt;custom&lt;/code&gt; field on a resource or data type customized with a &lt;a href="ctp:api:type:Type"&gt;Type&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">    */</span>
+<span class="source-line-no">052</span><span id="line.52">    @Valid</span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("custom")</span>
+<span class="source-line-no">054</span><span id="line.54">    public CustomFields getCustom();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public void setName(final LocalizedString name);</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public void setLanguages(final List&lt;String&gt; languages);</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    @JsonIgnore</span>
-<span class="source-line-no">061</span><span id="line.61">    public void setDistributionChannels(final ChannelReference... distributionChannels);</span>
+<span class="source-line-no">058</span><span id="line.58">    @JsonIgnore</span>
+<span class="source-line-no">059</span><span id="line.59">    public void setLanguages(final String... languages);</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public void setLanguages(final List&lt;String&gt; languages);</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setDistributionChannels(final List&lt;ChannelReference&gt; distributionChannels);</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    @JsonIgnore</span>
-<span class="source-line-no">066</span><span id="line.66">    public void setSupplyChannels(final ChannelReference... supplyChannels);</span>
+<span class="source-line-no">063</span><span id="line.63">    @JsonIgnore</span>
+<span class="source-line-no">064</span><span id="line.64">    public void setDistributionChannels(final ChannelReference... distributionChannels);</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public void setDistributionChannels(final List&lt;ChannelReference&gt; distributionChannels);</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public void setSupplyChannels(final List&lt;ChannelReference&gt; supplyChannels);</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    @JsonIgnore</span>
-<span class="source-line-no">071</span><span id="line.71">    public void setProductSelections(final ProductSelectionSetting... productSelections);</span>
+<span class="source-line-no">068</span><span id="line.68">    @JsonIgnore</span>
+<span class="source-line-no">069</span><span id="line.69">    public void setSupplyChannels(final ChannelReference... supplyChannels);</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public void setSupplyChannels(final List&lt;ChannelReference&gt; supplyChannels);</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public void setProductSelections(final List&lt;ProductSelectionSetting&gt; productSelections);</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public void setCustom(final CustomFields custom);</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public static StoreCreatedMessagePayload of() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return new StoreCreatedMessagePayloadImpl();</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public static StoreCreatedMessagePayload of(final StoreCreatedMessagePayload template) {</span>
-<span class="source-line-no">082</span><span id="line.82">        StoreCreatedMessagePayloadImpl instance = new StoreCreatedMessagePayloadImpl();</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setName(template.getName());</span>
-<span class="source-line-no">084</span><span id="line.84">        instance.setLanguages(template.getLanguages());</span>
-<span class="source-line-no">085</span><span id="line.85">        instance.setDistributionChannels(template.getDistributionChannels());</span>
-<span class="source-line-no">086</span><span id="line.86">        instance.setSupplyChannels(template.getSupplyChannels());</span>
-<span class="source-line-no">087</span><span id="line.87">        instance.setProductSelections(template.getProductSelections());</span>
-<span class="source-line-no">088</span><span id="line.88">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">089</span><span id="line.89">        return instance;</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public static StoreCreatedMessagePayloadBuilder builder() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return StoreCreatedMessagePayloadBuilder.of();</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public static StoreCreatedMessagePayloadBuilder builder(final StoreCreatedMessagePayload template) {</span>
-<span class="source-line-no">097</span><span id="line.97">        return StoreCreatedMessagePayloadBuilder.of(template);</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    default &lt;T&gt; T withStoreCreatedMessagePayload(Function&lt;StoreCreatedMessagePayload, T&gt; helper) {</span>
-<span class="source-line-no">101</span><span id="line.101">        return helper.apply(this);</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103">}</span>
+<span class="source-line-no">073</span><span id="line.73">    @JsonIgnore</span>
+<span class="source-line-no">074</span><span id="line.74">    public void setProductSelections(final ProductSelectionSetting... productSelections);</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public void setProductSelections(final List&lt;ProductSelectionSetting&gt; productSelections);</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public static StoreCreatedMessagePayload of() {</span>
+<span class="source-line-no">081</span><span id="line.81">        return new StoreCreatedMessagePayloadImpl();</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public static StoreCreatedMessagePayload of(final StoreCreatedMessagePayload template) {</span>
+<span class="source-line-no">085</span><span id="line.85">        StoreCreatedMessagePayloadImpl instance = new StoreCreatedMessagePayloadImpl();</span>
+<span class="source-line-no">086</span><span id="line.86">        instance.setName(template.getName());</span>
+<span class="source-line-no">087</span><span id="line.87">        instance.setLanguages(template.getLanguages());</span>
+<span class="source-line-no">088</span><span id="line.88">        instance.setDistributionChannels(template.getDistributionChannels());</span>
+<span class="source-line-no">089</span><span id="line.89">        instance.setSupplyChannels(template.getSupplyChannels());</span>
+<span class="source-line-no">090</span><span id="line.90">        instance.setProductSelections(template.getProductSelections());</span>
+<span class="source-line-no">091</span><span id="line.91">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">092</span><span id="line.92">        return instance;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public static StoreCreatedMessagePayloadBuilder builder() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return StoreCreatedMessagePayloadBuilder.of();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static StoreCreatedMessagePayloadBuilder builder(final StoreCreatedMessagePayload template) {</span>
+<span class="source-line-no">100</span><span id="line.100">        return StoreCreatedMessagePayloadBuilder.of(template);</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    default &lt;T&gt; T withStoreCreatedMessagePayload(Function&lt;StoreCreatedMessagePayload, T&gt; helper) {</span>
+<span class="source-line-no">104</span><span id="line.104">        return helper.apply(this);</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106">}</span>
 
 
 

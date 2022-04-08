@@ -31,34 +31,38 @@
 <span class="source-line-no">018</span><span id="line.18"></span>
 <span class="source-line-no">019</span><span id="line.19">    String REMOVE_FIELD_DEFINITION = "removeFieldDefinition";</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    @NotNull</span>
-<span class="source-line-no">022</span><span id="line.22">    @JsonProperty("fieldName")</span>
-<span class="source-line-no">023</span><span id="line.23">    public String getFieldName();</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    public void setFieldName(final String fieldName);</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    public static TypeRemoveFieldDefinitionAction of() {</span>
-<span class="source-line-no">028</span><span id="line.28">        return new TypeRemoveFieldDefinitionActionImpl();</span>
-<span class="source-line-no">029</span><span id="line.29">    }</span>
+<span class="source-line-no">021</span><span id="line.21">    /**</span>
+<span class="source-line-no">022</span><span id="line.22">    *  &lt;p&gt;&lt;code&gt;name&lt;/code&gt; of the &lt;a href="ctp:api:type:FieldDefinition"&gt;FieldDefinition&lt;/a&gt; to remove.</span>
+<span class="source-line-no">023</span><span id="line.23">    *  The removal of a FieldDefinition deletes &lt;a href="/../api/general-concepts#eventual-consistency"&gt;asynchronously&lt;/a&gt; all Custom Fields using the FieldDefinition as well.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24">    */</span>
+<span class="source-line-no">025</span><span id="line.25">    @NotNull</span>
+<span class="source-line-no">026</span><span id="line.26">    @JsonProperty("fieldName")</span>
+<span class="source-line-no">027</span><span id="line.27">    public String getFieldName();</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    public void setFieldName(final String fieldName);</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    public static TypeRemoveFieldDefinitionAction of(final TypeRemoveFieldDefinitionAction template) {</span>
-<span class="source-line-no">032</span><span id="line.32">        TypeRemoveFieldDefinitionActionImpl instance = new TypeRemoveFieldDefinitionActionImpl();</span>
-<span class="source-line-no">033</span><span id="line.33">        instance.setFieldName(template.getFieldName());</span>
-<span class="source-line-no">034</span><span id="line.34">        return instance;</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public static TypeRemoveFieldDefinitionActionBuilder builder() {</span>
-<span class="source-line-no">038</span><span id="line.38">        return TypeRemoveFieldDefinitionActionBuilder.of();</span>
+<span class="source-line-no">031</span><span id="line.31">    public static TypeRemoveFieldDefinitionAction of() {</span>
+<span class="source-line-no">032</span><span id="line.32">        return new TypeRemoveFieldDefinitionActionImpl();</span>
+<span class="source-line-no">033</span><span id="line.33">    }</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    public static TypeRemoveFieldDefinitionAction of(final TypeRemoveFieldDefinitionAction template) {</span>
+<span class="source-line-no">036</span><span id="line.36">        TypeRemoveFieldDefinitionActionImpl instance = new TypeRemoveFieldDefinitionActionImpl();</span>
+<span class="source-line-no">037</span><span id="line.37">        instance.setFieldName(template.getFieldName());</span>
+<span class="source-line-no">038</span><span id="line.38">        return instance;</span>
 <span class="source-line-no">039</span><span id="line.39">    }</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public static TypeRemoveFieldDefinitionActionBuilder builder(final TypeRemoveFieldDefinitionAction template) {</span>
-<span class="source-line-no">042</span><span id="line.42">        return TypeRemoveFieldDefinitionActionBuilder.of(template);</span>
+<span class="source-line-no">041</span><span id="line.41">    public static TypeRemoveFieldDefinitionActionBuilder builder() {</span>
+<span class="source-line-no">042</span><span id="line.42">        return TypeRemoveFieldDefinitionActionBuilder.of();</span>
 <span class="source-line-no">043</span><span id="line.43">    }</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    default &lt;T&gt; T withTypeRemoveFieldDefinitionAction(Function&lt;TypeRemoveFieldDefinitionAction, T&gt; helper) {</span>
-<span class="source-line-no">046</span><span id="line.46">        return helper.apply(this);</span>
+<span class="source-line-no">045</span><span id="line.45">    public static TypeRemoveFieldDefinitionActionBuilder builder(final TypeRemoveFieldDefinitionAction template) {</span>
+<span class="source-line-no">046</span><span id="line.46">        return TypeRemoveFieldDefinitionActionBuilder.of(template);</span>
 <span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48">}</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    default &lt;T&gt; T withTypeRemoveFieldDefinitionAction(Function&lt;TypeRemoveFieldDefinitionAction, T&gt; helper) {</span>
+<span class="source-line-no">050</span><span id="line.50">        return helper.apply(this);</span>
+<span class="source-line-no">051</span><span id="line.51">    }</span>
+<span class="source-line-no">052</span><span id="line.52">}</span>
 
 
 

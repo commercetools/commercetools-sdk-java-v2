@@ -31,66 +31,70 @@
 <span class="source-line-no">018</span><span id="line.18"></span>
 <span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">020</span><span id="line.20">@JsonDeserialize(as = MyShoppingListAddTextLineItemActionImpl.class)</span>
-<span class="source-line-no">021</span><span id="line.21">public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdateAction {</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    String ADD_TEXT_LINE_ITEM = "addTextLineItem";</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    @NotNull</span>
-<span class="source-line-no">026</span><span id="line.26">    @Valid</span>
-<span class="source-line-no">027</span><span id="line.27">    @JsonProperty("name")</span>
-<span class="source-line-no">028</span><span id="line.28">    public LocalizedString getName();</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    @Valid</span>
-<span class="source-line-no">031</span><span id="line.31">    @JsonProperty("description")</span>
-<span class="source-line-no">032</span><span id="line.32">    public LocalizedString getDescription();</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("quantity")</span>
-<span class="source-line-no">035</span><span id="line.35">    public Long getQuantity();</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    @JsonProperty("addedAt")</span>
-<span class="source-line-no">038</span><span id="line.38">    public ZonedDateTime getAddedAt();</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    @Valid</span>
-<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("custom")</span>
-<span class="source-line-no">042</span><span id="line.42">    public CustomFieldsDraft getCustom();</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public void setDescription(final LocalizedString description);</span>
+<span class="source-line-no">021</span><span id="line.21">public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdateAction,</span>
+<span class="source-line-no">022</span><span id="line.22">        com.commercetools.api.models.CustomizableDraft&lt;MyShoppingListAddTextLineItemAction&gt; {</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    String ADD_TEXT_LINE_ITEM = "addTextLineItem";</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    @NotNull</span>
+<span class="source-line-no">027</span><span id="line.27">    @Valid</span>
+<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("name")</span>
+<span class="source-line-no">029</span><span id="line.29">    public LocalizedString getName();</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    @Valid</span>
+<span class="source-line-no">032</span><span id="line.32">    @JsonProperty("description")</span>
+<span class="source-line-no">033</span><span id="line.33">    public LocalizedString getDescription();</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    @JsonProperty("quantity")</span>
+<span class="source-line-no">036</span><span id="line.36">    public Long getQuantity();</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("addedAt")</span>
+<span class="source-line-no">039</span><span id="line.39">    public ZonedDateTime getAddedAt();</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    /**</span>
+<span class="source-line-no">042</span><span id="line.42">    *  &lt;p&gt;The representation used when creating or updating a &lt;a href="/../api/projects/types#list-of-customizable-data-types"&gt;customizable data type&lt;/a&gt; with Custom Fields.&lt;/p&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">    */</span>
+<span class="source-line-no">044</span><span id="line.44">    @Valid</span>
+<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("custom")</span>
+<span class="source-line-no">046</span><span id="line.46">    public CustomFieldsDraft getCustom();</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public void setQuantity(final Long quantity);</span>
+<span class="source-line-no">048</span><span id="line.48">    public void setName(final LocalizedString name);</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public void setAddedAt(final ZonedDateTime addedAt);</span>
+<span class="source-line-no">050</span><span id="line.50">    public void setDescription(final LocalizedString description);</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public void setCustom(final CustomFieldsDraft custom);</span>
+<span class="source-line-no">052</span><span id="line.52">    public void setQuantity(final Long quantity);</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public static MyShoppingListAddTextLineItemAction of() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return new MyShoppingListAddTextLineItemActionImpl();</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">054</span><span id="line.54">    public void setAddedAt(final ZonedDateTime addedAt);</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public void setCustom(final CustomFieldsDraft custom);</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public static MyShoppingListAddTextLineItemAction of(final MyShoppingListAddTextLineItemAction template) {</span>
-<span class="source-line-no">059</span><span id="line.59">        MyShoppingListAddTextLineItemActionImpl instance = new MyShoppingListAddTextLineItemActionImpl();</span>
-<span class="source-line-no">060</span><span id="line.60">        instance.setName(template.getName());</span>
-<span class="source-line-no">061</span><span id="line.61">        instance.setDescription(template.getDescription());</span>
-<span class="source-line-no">062</span><span id="line.62">        instance.setQuantity(template.getQuantity());</span>
-<span class="source-line-no">063</span><span id="line.63">        instance.setAddedAt(template.getAddedAt());</span>
-<span class="source-line-no">064</span><span id="line.64">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">065</span><span id="line.65">        return instance;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public static MyShoppingListAddTextLineItemActionBuilder builder() {</span>
-<span class="source-line-no">069</span><span id="line.69">        return MyShoppingListAddTextLineItemActionBuilder.of();</span>
+<span class="source-line-no">058</span><span id="line.58">    public static MyShoppingListAddTextLineItemAction of() {</span>
+<span class="source-line-no">059</span><span id="line.59">        return new MyShoppingListAddTextLineItemActionImpl();</span>
+<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public static MyShoppingListAddTextLineItemAction of(final MyShoppingListAddTextLineItemAction template) {</span>
+<span class="source-line-no">063</span><span id="line.63">        MyShoppingListAddTextLineItemActionImpl instance = new MyShoppingListAddTextLineItemActionImpl();</span>
+<span class="source-line-no">064</span><span id="line.64">        instance.setName(template.getName());</span>
+<span class="source-line-no">065</span><span id="line.65">        instance.setDescription(template.getDescription());</span>
+<span class="source-line-no">066</span><span id="line.66">        instance.setQuantity(template.getQuantity());</span>
+<span class="source-line-no">067</span><span id="line.67">        instance.setAddedAt(template.getAddedAt());</span>
+<span class="source-line-no">068</span><span id="line.68">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">069</span><span id="line.69">        return instance;</span>
 <span class="source-line-no">070</span><span id="line.70">    }</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public static MyShoppingListAddTextLineItemActionBuilder builder(</span>
-<span class="source-line-no">073</span><span id="line.73">            final MyShoppingListAddTextLineItemAction template) {</span>
-<span class="source-line-no">074</span><span id="line.74">        return MyShoppingListAddTextLineItemActionBuilder.of(template);</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    default &lt;T&gt; T withMyShoppingListAddTextLineItemAction(Function&lt;MyShoppingListAddTextLineItemAction, T&gt; helper) {</span>
-<span class="source-line-no">078</span><span id="line.78">        return helper.apply(this);</span>
+<span class="source-line-no">072</span><span id="line.72">    public static MyShoppingListAddTextLineItemActionBuilder builder() {</span>
+<span class="source-line-no">073</span><span id="line.73">        return MyShoppingListAddTextLineItemActionBuilder.of();</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public static MyShoppingListAddTextLineItemActionBuilder builder(</span>
+<span class="source-line-no">077</span><span id="line.77">            final MyShoppingListAddTextLineItemAction template) {</span>
+<span class="source-line-no">078</span><span id="line.78">        return MyShoppingListAddTextLineItemActionBuilder.of(template);</span>
 <span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80">}</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    default &lt;T&gt; T withMyShoppingListAddTextLineItemAction(Function&lt;MyShoppingListAddTextLineItemAction, T&gt; helper) {</span>
+<span class="source-line-no">082</span><span id="line.82">        return helper.apply(this);</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84">}</span>
 
 
 

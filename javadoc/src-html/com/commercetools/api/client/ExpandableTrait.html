@@ -25,12 +25,12 @@
 <span class="source-line-no">012</span><span id="line.12">    /**</span>
 <span class="source-line-no">013</span><span id="line.13">     * set expand with the specificied value</span>
 <span class="source-line-no">014</span><span id="line.14">     */</span>
-<span class="source-line-no">015</span><span id="line.15">    ExpandableTrait&lt;T&gt; withExpand(final String expand);</span>
+<span class="source-line-no">015</span><span id="line.15">    &lt;TValue&gt; ExpandableTrait&lt;T&gt; withExpand(final TValue expand);</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">    /**</span>
 <span class="source-line-no">018</span><span id="line.18">     * add additional expand query parameter</span>
 <span class="source-line-no">019</span><span id="line.19">     */</span>
-<span class="source-line-no">020</span><span id="line.20">    ExpandableTrait&lt;T&gt; addExpand(final String expand);</span>
+<span class="source-line-no">020</span><span id="line.20">    &lt;TValue&gt; ExpandableTrait&lt;T&gt; addExpand(final TValue expand);</span>
 <span class="source-line-no">021</span><span id="line.21"></span>
 <span class="source-line-no">022</span><span id="line.22">    default ExpandableTrait&lt;T&gt; asExpandableTrait() {</span>
 <span class="source-line-no">023</span><span id="line.23">        return this;</span>

@@ -89,77 +89,85 @@
 <span class="source-line-no">076</span><span id="line.76">        return this.assetKey;</span>
 <span class="source-line-no">077</span><span id="line.77">    }</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public String getName() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return this.name;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public java.lang.Object getValue() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.value;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setVariantId(final Long variantId) {</span>
-<span class="source-line-no">088</span><span id="line.88">        this.variantId = variantId;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setSku(final String sku) {</span>
-<span class="source-line-no">092</span><span id="line.92">        this.sku = sku;</span>
+<span class="source-line-no">079</span><span id="line.79">    /**</span>
+<span class="source-line-no">080</span><span id="line.80">    *  &lt;p&gt;Name of the &lt;a href="/../api/projects/custom-fields"&gt;Custom Field&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">    */</span>
+<span class="source-line-no">082</span><span id="line.82">    public String getName() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.name;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    /**</span>
+<span class="source-line-no">087</span><span id="line.87">    *  &lt;p&gt;If &lt;code&gt;value&lt;/code&gt; is absent or &lt;code&gt;null&lt;/code&gt;, this field will be removed if it exists.</span>
+<span class="source-line-no">088</span><span id="line.88">    *  Trying to remove a field that does not exist will fail with an &lt;a href="/../api/errors#general-400-invalid-operation"&gt;InvalidOperation&lt;/a&gt; error.</span>
+<span class="source-line-no">089</span><span id="line.89">    *  If &lt;code&gt;value&lt;/code&gt; is provided, it is set for the field defined by &lt;code&gt;name&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">090</span><span id="line.90">    */</span>
+<span class="source-line-no">091</span><span id="line.91">    public java.lang.Object getValue() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return this.value;</span>
 <span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public void setStaged(final Boolean staged) {</span>
-<span class="source-line-no">096</span><span id="line.96">        this.staged = staged;</span>
+<span class="source-line-no">095</span><span id="line.95">    public void setVariantId(final Long variantId) {</span>
+<span class="source-line-no">096</span><span id="line.96">        this.variantId = variantId;</span>
 <span class="source-line-no">097</span><span id="line.97">    }</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public void setAssetId(final String assetId) {</span>
-<span class="source-line-no">100</span><span id="line.100">        this.assetId = assetId;</span>
+<span class="source-line-no">099</span><span id="line.99">    public void setSku(final String sku) {</span>
+<span class="source-line-no">100</span><span id="line.100">        this.sku = sku;</span>
 <span class="source-line-no">101</span><span id="line.101">    }</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public void setAssetKey(final String assetKey) {</span>
-<span class="source-line-no">104</span><span id="line.104">        this.assetKey = assetKey;</span>
+<span class="source-line-no">103</span><span id="line.103">    public void setStaged(final Boolean staged) {</span>
+<span class="source-line-no">104</span><span id="line.104">        this.staged = staged;</span>
 <span class="source-line-no">105</span><span id="line.105">    }</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public void setName(final String name) {</span>
-<span class="source-line-no">108</span><span id="line.108">        this.name = name;</span>
+<span class="source-line-no">107</span><span id="line.107">    public void setAssetId(final String assetId) {</span>
+<span class="source-line-no">108</span><span id="line.108">        this.assetId = assetId;</span>
 <span class="source-line-no">109</span><span id="line.109">    }</span>
 <span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public void setValue(final java.lang.Object value) {</span>
-<span class="source-line-no">112</span><span id="line.112">        this.value = value;</span>
+<span class="source-line-no">111</span><span id="line.111">    public void setAssetKey(final String assetKey) {</span>
+<span class="source-line-no">112</span><span id="line.112">        this.assetKey = assetKey;</span>
 <span class="source-line-no">113</span><span id="line.113">    }</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    @Override</span>
-<span class="source-line-no">116</span><span id="line.116">    public boolean equals(Object o) {</span>
-<span class="source-line-no">117</span><span id="line.117">        if (this == o)</span>
-<span class="source-line-no">118</span><span id="line.118">            return true;</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">121</span><span id="line.121">            return false;</span>
+<span class="source-line-no">115</span><span id="line.115">    public void setName(final String name) {</span>
+<span class="source-line-no">116</span><span id="line.116">        this.name = name;</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public void setValue(final java.lang.Object value) {</span>
+<span class="source-line-no">120</span><span id="line.120">        this.value = value;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
 <span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">        ProductSetAssetCustomFieldActionImpl that = (ProductSetAssetCustomFieldActionImpl) o;</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">126</span><span id="line.126">                .append(variantId, that.variantId)</span>
-<span class="source-line-no">127</span><span id="line.127">                .append(sku, that.sku)</span>
-<span class="source-line-no">128</span><span id="line.128">                .append(staged, that.staged)</span>
-<span class="source-line-no">129</span><span id="line.129">                .append(assetId, that.assetId)</span>
-<span class="source-line-no">130</span><span id="line.130">                .append(assetKey, that.assetKey)</span>
-<span class="source-line-no">131</span><span id="line.131">                .append(name, that.name)</span>
-<span class="source-line-no">132</span><span id="line.132">                .append(value, that.value)</span>
-<span class="source-line-no">133</span><span id="line.133">                .isEquals();</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    @Override</span>
-<span class="source-line-no">137</span><span id="line.137">    public int hashCode() {</span>
-<span class="source-line-no">138</span><span id="line.138">        return new HashCodeBuilder(17, 37).append(action)</span>
-<span class="source-line-no">139</span><span id="line.139">                .append(variantId)</span>
-<span class="source-line-no">140</span><span id="line.140">                .append(sku)</span>
-<span class="source-line-no">141</span><span id="line.141">                .append(staged)</span>
-<span class="source-line-no">142</span><span id="line.142">                .append(assetId)</span>
-<span class="source-line-no">143</span><span id="line.143">                .append(assetKey)</span>
-<span class="source-line-no">144</span><span id="line.144">                .append(name)</span>
-<span class="source-line-no">145</span><span id="line.145">                .append(value)</span>
-<span class="source-line-no">146</span><span id="line.146">                .toHashCode();</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">}</span>
+<span class="source-line-no">123</span><span id="line.123">    @Override</span>
+<span class="source-line-no">124</span><span id="line.124">    public boolean equals(Object o) {</span>
+<span class="source-line-no">125</span><span id="line.125">        if (this == o)</span>
+<span class="source-line-no">126</span><span id="line.126">            return true;</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">129</span><span id="line.129">            return false;</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">        ProductSetAssetCustomFieldActionImpl that = (ProductSetAssetCustomFieldActionImpl) o;</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">134</span><span id="line.134">                .append(variantId, that.variantId)</span>
+<span class="source-line-no">135</span><span id="line.135">                .append(sku, that.sku)</span>
+<span class="source-line-no">136</span><span id="line.136">                .append(staged, that.staged)</span>
+<span class="source-line-no">137</span><span id="line.137">                .append(assetId, that.assetId)</span>
+<span class="source-line-no">138</span><span id="line.138">                .append(assetKey, that.assetKey)</span>
+<span class="source-line-no">139</span><span id="line.139">                .append(name, that.name)</span>
+<span class="source-line-no">140</span><span id="line.140">                .append(value, that.value)</span>
+<span class="source-line-no">141</span><span id="line.141">                .isEquals();</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    @Override</span>
+<span class="source-line-no">145</span><span id="line.145">    public int hashCode() {</span>
+<span class="source-line-no">146</span><span id="line.146">        return new HashCodeBuilder(17, 37).append(action)</span>
+<span class="source-line-no">147</span><span id="line.147">                .append(variantId)</span>
+<span class="source-line-no">148</span><span id="line.148">                .append(sku)</span>
+<span class="source-line-no">149</span><span id="line.149">                .append(staged)</span>
+<span class="source-line-no">150</span><span id="line.150">                .append(assetId)</span>
+<span class="source-line-no">151</span><span id="line.151">                .append(assetKey)</span>
+<span class="source-line-no">152</span><span id="line.152">                .append(name)</span>
+<span class="source-line-no">153</span><span id="line.153">                .append(value)</span>
+<span class="source-line-no">154</span><span id="line.154">                .toHashCode();</span>
+<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">}</span>
 
 
 

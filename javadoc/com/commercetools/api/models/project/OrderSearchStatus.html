@@ -81,7 +81,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.15">OrderSearchStatus</a></span></div>
-<div class="block"><p>Activated indicates that the Order Search feature is active. Deactivated means that the namely feature is currently configured to be inactive.</p></div>
+<div class="block"><p>Specifies the status of the <a href="/../api/projects/order-search">Order Search</a> index.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -111,10 +111,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static <a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a></code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="#ACTIVATED">ACTIVATED</a></span></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">indicates that the <a href="/../api/projects/order-search#search-orders">Search Orders</a> endpoint is fully operational.</div>
+</div>
 <div class="col-first odd-row-color"><code>static <a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#DEACTIVATED">DEACTIVATED</a></span></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">indicates that the Order Search feature is currently not active, but can be activated by <a href="#change-order-search-status">update action</a>.</div>
+</div>
 </div>
 </section>
 </li>
@@ -164,13 +168,15 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="ACTIVATED">
 <h3>ACTIVATED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.18">ACTIVATED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.22">ACTIVATED</a></span></div>
+<div class="block"><p>indicates that the <a href="/../api/projects/order-search#search-orders">Search Orders</a> endpoint is fully operational.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="DEACTIVATED">
 <h3>DEACTIVATED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.20">DEACTIVATED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.27">DEACTIVATED</a></span></div>
+<div class="block"><p>indicates that the Order Search feature is currently not active, but can be activated by <a href="#change-order-search-status">update action</a>.</p></div>
 </section>
 </li>
 </ul>
@@ -184,19 +190,19 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getJsonName()">
 <h3>getJsonName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.41">getJsonName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.48">getJsonName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="name()">
 <h3>name</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.44">name</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.51">name</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.46">toString</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.53">toString</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -206,19 +212,19 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="findEnum(java.lang.String)">
 <h3>findEnum</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.48">findEnum</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.55">findEnum</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="findEnumViaJsonName(java.lang.String)">
 <h3>findEnumViaJsonName</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.67">findEnumViaJsonName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonName)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.74">findEnumViaJsonName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="values()">
 <h3>values</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.71">values</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderSearchStatus.html" title="interface in com.commercetools.api.models.project">OrderSearchStatus</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/OrderSearchStatus.html#line.78">values</a></span>()</div>
 </section>
 </li>
 </ul>

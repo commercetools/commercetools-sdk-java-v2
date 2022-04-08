@@ -14,22 +14,31 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package io.vrap.rmf.base.client.http;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import org.slf4j.event.Level;</span>
+<span class="source-line-no">004</span><span id="line.4">import java.util.Map;</span>
 <span class="source-line-no">005</span><span id="line.5"></span>
-<span class="source-line-no">006</span><span id="line.6">/**</span>
-<span class="source-line-no">007</span><span id="line.7"> * Middleware instrumenting the {@link InternalLogger}</span>
-<span class="source-line-no">008</span><span id="line.8"> */</span>
-<span class="source-line-no">009</span><span id="line.9">public interface InternalLoggerMiddleware extends Middleware {</span>
-<span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">    static InternalLoggerMiddleware of(final InternalLoggerFactory internalLoggerFactory) {</span>
-<span class="source-line-no">012</span><span id="line.12">        return new InternalLoggerMiddlewareImpl(internalLoggerFactory);</span>
-<span class="source-line-no">013</span><span id="line.13">    }</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    static InternalLoggerMiddleware of(final InternalLoggerFactory internalLoggerFactory, final Level responseLogEvent,</span>
-<span class="source-line-no">016</span><span id="line.16">            final Level deprecationLogEvent) {</span>
-<span class="source-line-no">017</span><span id="line.17">        return new InternalLoggerMiddlewareImpl(internalLoggerFactory, responseLogEvent, deprecationLogEvent);</span>
-<span class="source-line-no">018</span><span id="line.18">    }</span>
-<span class="source-line-no">019</span><span id="line.19">}</span>
+<span class="source-line-no">006</span><span id="line.6">import org.slf4j.event.Level;</span>
+<span class="source-line-no">007</span><span id="line.7"></span>
+<span class="source-line-no">008</span><span id="line.8">/**</span>
+<span class="source-line-no">009</span><span id="line.9"> * Middleware instrumenting the {@link InternalLogger}</span>
+<span class="source-line-no">010</span><span id="line.10"> */</span>
+<span class="source-line-no">011</span><span id="line.11">public interface InternalLoggerMiddleware extends Middleware {</span>
+<span class="source-line-no">012</span><span id="line.12"></span>
+<span class="source-line-no">013</span><span id="line.13">    static InternalLoggerMiddleware of(final InternalLoggerFactory internalLoggerFactory) {</span>
+<span class="source-line-no">014</span><span id="line.14">        return new InternalLoggerMiddlewareImpl(internalLoggerFactory);</span>
+<span class="source-line-no">015</span><span id="line.15">    }</span>
+<span class="source-line-no">016</span><span id="line.16"></span>
+<span class="source-line-no">017</span><span id="line.17">    static InternalLoggerMiddleware of(final InternalLoggerFactory internalLoggerFactory, final Level responseLogEvent,</span>
+<span class="source-line-no">018</span><span id="line.18">            final Level deprecationLogEvent) {</span>
+<span class="source-line-no">019</span><span id="line.19">        return new InternalLoggerMiddlewareImpl(internalLoggerFactory, responseLogEvent, deprecationLogEvent);</span>
+<span class="source-line-no">020</span><span id="line.20">    }</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">    static InternalLoggerMiddleware of(final InternalLoggerFactory internalLoggerFactory, final Level responseLogEvent,</span>
+<span class="source-line-no">023</span><span id="line.23">            final Level deprecationLogEvent, final Level defaultExceptionLogEvent,</span>
+<span class="source-line-no">024</span><span id="line.24">            final Map&lt;Class&lt;? extends Throwable&gt;, Level&gt; exceptionLogEvents) {</span>
+<span class="source-line-no">025</span><span id="line.25">        return new InternalLoggerMiddlewareImpl(internalLoggerFactory, responseLogEvent, deprecationLogEvent,</span>
+<span class="source-line-no">026</span><span id="line.26">            defaultExceptionLogEvent, exceptionLogEvents);</span>
+<span class="source-line-no">027</span><span id="line.27">    }</span>
+<span class="source-line-no">028</span><span id="line.28">}</span>
 
 
 

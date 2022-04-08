@@ -197,18 +197,19 @@
 <span class="source-line-no">184</span><span id="line.184">        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderUpdateItemShippingAddressActionImpl.class, name = StagedOrderUpdateItemShippingAddressAction.UPDATE_ITEM_SHIPPING_ADDRESS),</span>
 <span class="source-line-no">185</span><span id="line.185">        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoActionImpl.class, name = StagedOrderUpdateSyncInfoAction.UPDATE_SYNC_INFO) })</span>
 <span class="source-line-no">186</span><span id="line.186">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StagedOrderUpdateActionImpl.class, visible = true)</span>
-<span class="source-line-no">187</span><span id="line.187">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">188</span><span id="line.188">public interface StagedOrderUpdateAction</span>
-<span class="source-line-no">189</span><span id="line.189">        extends com.commercetools.api.models.ResourceUpdateAction&lt;StagedOrderUpdateAction&gt; {</span>
-<span class="source-line-no">190</span><span id="line.190"></span>
-<span class="source-line-no">191</span><span id="line.191">    @NotNull</span>
-<span class="source-line-no">192</span><span id="line.192">    @JsonProperty("action")</span>
-<span class="source-line-no">193</span><span id="line.193">    public String getAction();</span>
-<span class="source-line-no">194</span><span id="line.194"></span>
-<span class="source-line-no">195</span><span id="line.195">    default &lt;T&gt; T withStagedOrderUpdateAction(Function&lt;StagedOrderUpdateAction, T&gt; helper) {</span>
-<span class="source-line-no">196</span><span id="line.196">        return helper.apply(this);</span>
-<span class="source-line-no">197</span><span id="line.197">    }</span>
-<span class="source-line-no">198</span><span id="line.198">}</span>
+<span class="source-line-no">187</span><span id="line.187">@JsonDeserialize(as = StagedOrderUpdateActionImpl.class)</span>
+<span class="source-line-no">188</span><span id="line.188">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">189</span><span id="line.189">public interface StagedOrderUpdateAction</span>
+<span class="source-line-no">190</span><span id="line.190">        extends com.commercetools.api.models.ResourceUpdateAction&lt;StagedOrderUpdateAction&gt; {</span>
+<span class="source-line-no">191</span><span id="line.191"></span>
+<span class="source-line-no">192</span><span id="line.192">    @NotNull</span>
+<span class="source-line-no">193</span><span id="line.193">    @JsonProperty("action")</span>
+<span class="source-line-no">194</span><span id="line.194">    public String getAction();</span>
+<span class="source-line-no">195</span><span id="line.195"></span>
+<span class="source-line-no">196</span><span id="line.196">    default &lt;T&gt; T withStagedOrderUpdateAction(Function&lt;StagedOrderUpdateAction, T&gt; helper) {</span>
+<span class="source-line-no">197</span><span id="line.197">        return helper.apply(this);</span>
+<span class="source-line-no">198</span><span id="line.198">    }</span>
+<span class="source-line-no">199</span><span id="line.199">}</span>
 
 
 

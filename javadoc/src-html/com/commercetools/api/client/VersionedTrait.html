@@ -25,12 +25,12 @@
 <span class="source-line-no">012</span><span id="line.12">    /**</span>
 <span class="source-line-no">013</span><span id="line.13">     * set version with the specificied value</span>
 <span class="source-line-no">014</span><span id="line.14">     */</span>
-<span class="source-line-no">015</span><span id="line.15">    VersionedTrait&lt;T&gt; withVersion(final long version);</span>
+<span class="source-line-no">015</span><span id="line.15">    &lt;TValue&gt; VersionedTrait&lt;T&gt; withVersion(final TValue version);</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">    /**</span>
 <span class="source-line-no">018</span><span id="line.18">     * add additional version query parameter</span>
 <span class="source-line-no">019</span><span id="line.19">     */</span>
-<span class="source-line-no">020</span><span id="line.20">    VersionedTrait&lt;T&gt; addVersion(final long version);</span>
+<span class="source-line-no">020</span><span id="line.20">    &lt;TValue&gt; VersionedTrait&lt;T&gt; addVersion(final TValue version);</span>
 <span class="source-line-no">021</span><span id="line.21"></span>
 <span class="source-line-no">022</span><span id="line.22">    default VersionedTrait&lt;T&gt; asVersionedTrait() {</span>
 <span class="source-line-no">023</span><span id="line.23">        return this;</span>

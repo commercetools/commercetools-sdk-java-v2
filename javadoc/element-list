@@ -1,4 +1,6 @@
+com.commercetools.api
 com.commercetools.api.client
+com.commercetools.api.client.error
 com.commercetools.api.defaultconfig
 com.commercetools.api.json
 com.commercetools.api.models
@@ -40,8 +42,8 @@ com.commercetools.compat
 com.commercetools.docs.meta
 com.commercetools.history.client
 com.commercetools.history.defaultconfig
-com.commercetools.history.models
 com.commercetools.history.models.change
+com.commercetools.history.models.change_history
 com.commercetools.history.models.change_value
 com.commercetools.history.models.common
 com.commercetools.history.models.label
@@ -76,6 +78,7 @@ com.commercetools.ml.models.image_search
 com.commercetools.ml.models.image_search_config
 com.commercetools.ml.models.missing_data
 com.commercetools.ml.models.similar_products
+com.commercetools.money
 io.vrap.rmf.base.client
 io.vrap.rmf.base.client.error
 io.vrap.rmf.base.client.http

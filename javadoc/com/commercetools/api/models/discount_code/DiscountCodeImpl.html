@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code>, <code><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeImpl.html#line.17">DiscountCodeImpl</a></span>
@@ -293,6 +293,9 @@ implements <a href="DiscountCode.html" title="interface in com.commercetools.api
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.BaseResource">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></h3>
 <code><a href="../common/BaseResource.html#withBaseResource(java.util.function.Function)">withBaseResource</a></code></div>
 <div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.Customizable">Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a></h3>
+<code><a href="../Customizable.html#unwrapCustomizable()">unwrapCustomizable</a></code></div>
+<div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.discount_code.DiscountCode">Methods inherited from interface&nbsp;com.commercetools.api.models.discount_code.<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></h3>
 <code><a href="DiscountCode.html#withDiscountCode(java.util.function.Function)">withDiscountCode</a></code></div>
 <div class="inherited-list">
@@ -338,6 +341,10 @@ implements <a href="DiscountCode.html" title="interface in com.commercetools.api
 <dd><code><a href="DiscountCode.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="../DomainResource.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="../Identifiable.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>ID</dd>
 </dl>
 </section>
 </li>
@@ -505,6 +512,8 @@ implements <a href="DiscountCode.html" title="interface in com.commercetools.api
 <h3>getCustom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeImpl.html#line.194">getCustom</a></span>()</div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../Customizable.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCode.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></code></dd>
 </dl>
@@ -742,6 +751,8 @@ implements <a href="DiscountCode.html" title="interface in com.commercetools.api
 <h3>setCustom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeImpl.html#line.301">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../Customizable.html#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="DiscountCode.html#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></code></dd>
 </dl>

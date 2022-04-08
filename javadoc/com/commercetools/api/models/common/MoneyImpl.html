@@ -80,12 +80,14 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
+<dd><code><a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></code>, <code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.17">MoneyImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.21">MoneyImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.<br/>
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -127,7 +129,9 @@ implements <a href="Money.html" title="interface in com.commercetools.api.models
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCentAmount()">getCentAmount</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">amount in the smallest indivisible unit of a currency, such as</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getCurrencyCode()">getCurrencyCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
@@ -152,6 +156,9 @@ implements <a href="Money.html" title="interface in com.commercetools.api.models
 <h3 id="methods.inherited.from.class.io.vrap.rmf.base.client.ModelBase">Methods inherited from interface&nbsp;io.vrap.rmf.base.client.<a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></h3>
 <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html#reflectionString()">reflectionString</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html#reflectionString(org.apache.commons.lang3.builder.ToStringStyle)">reflectionString</a></code></div>
 <div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.common.MonetaryAmountConvertable">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></h3>
+<code><a href="MonetaryAmountConvertable.html#toMonetaryAmount()">toMonetaryAmount</a></code></div>
+<div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.Money">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></h3>
 <code><a href="Money.html#withMoney(java.util.function.Function)">withMoney</a></code></div>
 </section>
@@ -168,7 +175,7 @@ implements <a href="Money.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MoneyImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.31">MoneyImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.35">MoneyImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -182,7 +189,12 @@ implements <a href="Money.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getCentAmount()">
 <h3>getCentAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.34">getCentAmount</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.45">getCentAmount</a></span>()</div>
+<div class="block"><p>amount in the smallest indivisible unit of a currency, such as</p>
+  <ul>
+  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
+  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
+  </ul></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Money.html#getCentAmount()">getCentAmount</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
@@ -192,7 +204,7 @@ implements <a href="Money.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="getCurrencyCode()">
 <h3>getCurrencyCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.41">getCurrencyCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.52">getCurrencyCode</a></span>()</div>
 <div class="block"><p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -203,7 +215,7 @@ implements <a href="Money.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setCentAmount(java.lang.Long)">
 <h3>setCentAmount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.45">setCentAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.56">setCentAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Money.html#setCentAmount(java.lang.Long)">setCentAmount</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
@@ -213,7 +225,7 @@ implements <a href="Money.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="setCurrencyCode(java.lang.String)">
 <h3>setCurrencyCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.49">setCurrencyCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.60">setCurrencyCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Money.html#setCurrencyCode(java.lang.String)">setCurrencyCode</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
@@ -223,7 +235,7 @@ implements <a href="Money.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.53">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.64">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -233,7 +245,7 @@ implements <a href="Money.html" title="interface in com.commercetools.api.models
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.68">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/MoneyImpl.html#line.79">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

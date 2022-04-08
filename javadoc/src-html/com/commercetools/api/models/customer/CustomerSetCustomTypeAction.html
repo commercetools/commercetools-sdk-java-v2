@@ -34,15 +34,15 @@
 <span class="source-line-no">021</span><span id="line.21">    String SET_CUSTOM_TYPE = "setCustomType";</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    /**</span>
-<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;If absent, the custom type and any existing custom fields are removed.&lt;/p&gt;</span>
-<span class="source-line-no">025</span><span id="line.25">    */</span>
-<span class="source-line-no">026</span><span id="line.26">    @Valid</span>
-<span class="source-line-no">027</span><span id="line.27">    @JsonProperty("type")</span>
-<span class="source-line-no">028</span><span id="line.28">    public TypeResourceIdentifier getType();</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    /**</span>
-<span class="source-line-no">031</span><span id="line.31">    *  &lt;p&gt;A valid JSON object, based on the FieldDefinitions of the Type.</span>
-<span class="source-line-no">032</span><span id="line.32">    *  Sets the custom fields to this value.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;Defines the &lt;a href="ctp:api:type:Type"&gt;Type&lt;/a&gt; that extends the Customer with &lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt;.</span>
+<span class="source-line-no">025</span><span id="line.25">    *  If absent, any existing Type and Custom Fields are removed from the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">026</span><span id="line.26">    */</span>
+<span class="source-line-no">027</span><span id="line.27">    @Valid</span>
+<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("type")</span>
+<span class="source-line-no">029</span><span id="line.29">    public TypeResourceIdentifier getType();</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    /**</span>
+<span class="source-line-no">032</span><span id="line.32">    *  &lt;p&gt;Sets the &lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt; fields for the Customer.&lt;/p&gt;</span>
 <span class="source-line-no">033</span><span id="line.33">    */</span>
 <span class="source-line-no">034</span><span id="line.34">    @Valid</span>
 <span class="source-line-no">035</span><span id="line.35">    @JsonProperty("fields")</span>

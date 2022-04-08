@@ -23,36 +23,36 @@
 <span class="source-line-no">010</span><span id="line.10">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">011</span><span id="line.11">public class RangeFacetResultBuilder implements Builder&lt;RangeFacetResult&gt; {</span>
 <span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    private java.util.List&lt;com.commercetools.api.models.product.FacetResultRange&gt; ranges;</span>
+<span class="source-line-no">013</span><span id="line.13">    private java.util.List&lt;com.commercetools.api.models.product.FacetRange&gt; ranges;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    public RangeFacetResultBuilder ranges(final com.commercetools.api.models.product.FacetResultRange... ranges) {</span>
+<span class="source-line-no">015</span><span id="line.15">    public RangeFacetResultBuilder ranges(final com.commercetools.api.models.product.FacetRange... ranges) {</span>
 <span class="source-line-no">016</span><span id="line.16">        this.ranges = new ArrayList&lt;&gt;(Arrays.asList(ranges));</span>
 <span class="source-line-no">017</span><span id="line.17">        return this;</span>
 <span class="source-line-no">018</span><span id="line.18">    }</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    public RangeFacetResultBuilder withRanges(</span>
-<span class="source-line-no">021</span><span id="line.21">            Function&lt;com.commercetools.api.models.product.FacetResultRangeBuilder, com.commercetools.api.models.product.FacetResultRangeBuilder&gt; builder) {</span>
+<span class="source-line-no">021</span><span id="line.21">            Function&lt;com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRangeBuilder&gt; builder) {</span>
 <span class="source-line-no">022</span><span id="line.22">        this.ranges = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">023</span><span id="line.23">        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetResultRangeBuilder.of()).build());</span>
+<span class="source-line-no">023</span><span id="line.23">        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()).build());</span>
 <span class="source-line-no">024</span><span id="line.24">        return this;</span>
 <span class="source-line-no">025</span><span id="line.25">    }</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
 <span class="source-line-no">027</span><span id="line.27">    public RangeFacetResultBuilder plusRanges(</span>
-<span class="source-line-no">028</span><span id="line.28">            Function&lt;com.commercetools.api.models.product.FacetResultRangeBuilder, com.commercetools.api.models.product.FacetResultRangeBuilder&gt; builder) {</span>
+<span class="source-line-no">028</span><span id="line.28">            Function&lt;com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRangeBuilder&gt; builder) {</span>
 <span class="source-line-no">029</span><span id="line.29">        if (this.ranges == null) {</span>
 <span class="source-line-no">030</span><span id="line.30">            this.ranges = new ArrayList&lt;&gt;();</span>
 <span class="source-line-no">031</span><span id="line.31">        }</span>
-<span class="source-line-no">032</span><span id="line.32">        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetResultRangeBuilder.of()).build());</span>
+<span class="source-line-no">032</span><span id="line.32">        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()).build());</span>
 <span class="source-line-no">033</span><span id="line.33">        return this;</span>
 <span class="source-line-no">034</span><span id="line.34">    }</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    public RangeFacetResultBuilder ranges(</span>
-<span class="source-line-no">037</span><span id="line.37">            final java.util.List&lt;com.commercetools.api.models.product.FacetResultRange&gt; ranges) {</span>
+<span class="source-line-no">037</span><span id="line.37">            final java.util.List&lt;com.commercetools.api.models.product.FacetRange&gt; ranges) {</span>
 <span class="source-line-no">038</span><span id="line.38">        this.ranges = ranges;</span>
 <span class="source-line-no">039</span><span id="line.39">        return this;</span>
 <span class="source-line-no">040</span><span id="line.40">    }</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public java.util.List&lt;com.commercetools.api.models.product.FacetResultRange&gt; getRanges() {</span>
+<span class="source-line-no">042</span><span id="line.42">    public java.util.List&lt;com.commercetools.api.models.product.FacetRange&gt; getRanges() {</span>
 <span class="source-line-no">043</span><span id="line.43">        return this.ranges;</span>
 <span class="source-line-no">044</span><span id="line.44">    }</span>
 <span class="source-line-no">045</span><span id="line.45"></span>

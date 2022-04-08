@@ -59,49 +59,57 @@
 <span class="source-line-no">046</span><span id="line.46">        return this.parcelId;</span>
 <span class="source-line-no">047</span><span id="line.47">    }</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public String getName() {</span>
-<span class="source-line-no">050</span><span id="line.50">        return this.name;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public java.lang.Object getValue() {</span>
-<span class="source-line-no">054</span><span id="line.54">        return this.value;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public void setParcelId(final String parcelId) {</span>
-<span class="source-line-no">058</span><span id="line.58">        this.parcelId = parcelId;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setName(final String name) {</span>
-<span class="source-line-no">062</span><span id="line.62">        this.name = name;</span>
+<span class="source-line-no">049</span><span id="line.49">    /**</span>
+<span class="source-line-no">050</span><span id="line.50">    *  &lt;p&gt;Name of the &lt;a href="/../api/projects/custom-fields"&gt;Custom Field&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">    */</span>
+<span class="source-line-no">052</span><span id="line.52">    public String getName() {</span>
+<span class="source-line-no">053</span><span id="line.53">        return this.name;</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">    *  &lt;p&gt;If &lt;code&gt;value&lt;/code&gt; is absent or &lt;code&gt;null&lt;/code&gt;, this field will be removed if it exists.</span>
+<span class="source-line-no">058</span><span id="line.58">    *  Trying to remove a field that does not exist will fail with an &lt;a href="/../api/errors#general-400-invalid-operation"&gt;InvalidOperation&lt;/a&gt; error.</span>
+<span class="source-line-no">059</span><span id="line.59">    *  If &lt;code&gt;value&lt;/code&gt; is provided, it is set for the field defined by &lt;code&gt;name&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">    */</span>
+<span class="source-line-no">061</span><span id="line.61">    public java.lang.Object getValue() {</span>
+<span class="source-line-no">062</span><span id="line.62">        return this.value;</span>
 <span class="source-line-no">063</span><span id="line.63">    }</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public void setValue(final java.lang.Object value) {</span>
-<span class="source-line-no">066</span><span id="line.66">        this.value = value;</span>
+<span class="source-line-no">065</span><span id="line.65">    public void setParcelId(final String parcelId) {</span>
+<span class="source-line-no">066</span><span id="line.66">        this.parcelId = parcelId;</span>
 <span class="source-line-no">067</span><span id="line.67">    }</span>
 <span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    @Override</span>
-<span class="source-line-no">070</span><span id="line.70">    public boolean equals(Object o) {</span>
-<span class="source-line-no">071</span><span id="line.71">        if (this == o)</span>
-<span class="source-line-no">072</span><span id="line.72">            return true;</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">075</span><span id="line.75">            return false;</span>
+<span class="source-line-no">069</span><span id="line.69">    public void setName(final String name) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.name = name;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public void setValue(final java.lang.Object value) {</span>
+<span class="source-line-no">074</span><span id="line.74">        this.value = value;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">        OrderSetParcelCustomFieldActionImpl that = (OrderSetParcelCustomFieldActionImpl) o;</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">080</span><span id="line.80">                .append(parcelId, that.parcelId)</span>
-<span class="source-line-no">081</span><span id="line.81">                .append(name, that.name)</span>
-<span class="source-line-no">082</span><span id="line.82">                .append(value, that.value)</span>
-<span class="source-line-no">083</span><span id="line.83">                .isEquals();</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    @Override</span>
-<span class="source-line-no">087</span><span id="line.87">    public int hashCode() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return new HashCodeBuilder(17, 37).append(action).append(parcelId).append(name).append(value).toHashCode();</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">}</span>
+<span class="source-line-no">077</span><span id="line.77">    @Override</span>
+<span class="source-line-no">078</span><span id="line.78">    public boolean equals(Object o) {</span>
+<span class="source-line-no">079</span><span id="line.79">        if (this == o)</span>
+<span class="source-line-no">080</span><span id="line.80">            return true;</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">083</span><span id="line.83">            return false;</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">        OrderSetParcelCustomFieldActionImpl that = (OrderSetParcelCustomFieldActionImpl) o;</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">088</span><span id="line.88">                .append(parcelId, that.parcelId)</span>
+<span class="source-line-no">089</span><span id="line.89">                .append(name, that.name)</span>
+<span class="source-line-no">090</span><span id="line.90">                .append(value, that.value)</span>
+<span class="source-line-no">091</span><span id="line.91">                .isEquals();</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    @Override</span>
+<span class="source-line-no">095</span><span id="line.95">    public int hashCode() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return new HashCodeBuilder(17, 37).append(action).append(parcelId).append(name).append(value).toHashCode();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">}</span>
 
 
 

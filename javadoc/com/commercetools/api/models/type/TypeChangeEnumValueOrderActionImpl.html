@@ -83,9 +83,11 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</code>, <code><a href="TypeChangeEnumValueOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeEnumValueOrderAction</a></code>, <code><a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.17">TypeChangeEnumValueOrderActionImpl</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.21">TypeChangeEnumValueOrderActionImpl</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeEnumValueOrderAction</a>, <a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></span></div>
+<div class="block"><p>Changes the order of <a href="ctp:api:type:CustomFieldEnumValue">EnumValues</a> in an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition.
+  This update action can be used to update an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> FieldDefinition of <a href="ctp:api:type:CustomFieldEnumType">EnumType</a>.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -139,10 +141,14 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFieldName()">getFieldName</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block"><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getKeys()">getKeys</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -187,7 +193,7 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TypeChangeEnumValueOrderActionImpl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.34">TypeChangeEnumValueOrderActionImpl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.38">TypeChangeEnumValueOrderActionImpl</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -201,7 +207,7 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <li>
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.38">getAction</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.42">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</code></dd>
@@ -213,7 +219,8 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <li>
 <section class="detail" id="getFieldName()">
 <h3>getFieldName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.42">getFieldName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.49">getFieldName</a></span>()</div>
+<div class="block"><p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeChangeEnumValueOrderAction.html#getFieldName()">getFieldName</a></code>&nbsp;in interface&nbsp;<code><a href="TypeChangeEnumValueOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeEnumValueOrderAction</a></code></dd>
@@ -223,7 +230,8 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <li>
 <section class="detail" id="getKeys()">
 <h3>getKeys</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.46">getKeys</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.56">getKeys</a></span>()</div>
+<div class="block"><p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeChangeEnumValueOrderAction.html#getKeys()">getKeys</a></code>&nbsp;in interface&nbsp;<code><a href="TypeChangeEnumValueOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeEnumValueOrderAction</a></code></dd>
@@ -233,7 +241,7 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <li>
 <section class="detail" id="setFieldName(java.lang.String)">
 <h3>setFieldName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.50">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.60">setFieldName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;fieldName)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeChangeEnumValueOrderAction.html#setFieldName(java.lang.String)">setFieldName</a></code>&nbsp;in interface&nbsp;<code><a href="TypeChangeEnumValueOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeEnumValueOrderAction</a></code></dd>
@@ -243,7 +251,7 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <li>
 <section class="detail" id="setKeys(java.lang.String...)">
 <h3>setKeys</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.54">setKeys</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;keys)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.64">setKeys</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;keys)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeChangeEnumValueOrderAction.html#setKeys(java.lang.String...)">setKeys</a></code>&nbsp;in interface&nbsp;<code><a href="TypeChangeEnumValueOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeEnumValueOrderAction</a></code></dd>
@@ -253,7 +261,7 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <li>
 <section class="detail" id="setKeys(java.util.List)">
 <h3>setKeys</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.58">setKeys</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;keys)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.68">setKeys</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;keys)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TypeChangeEnumValueOrderAction.html#setKeys(java.util.List)">setKeys</a></code>&nbsp;in interface&nbsp;<code><a href="TypeChangeEnumValueOrderAction.html" title="interface in com.commercetools.api.models.type">TypeChangeEnumValueOrderAction</a></code></dd>
@@ -263,7 +271,7 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.62">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.72">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -273,7 +281,7 @@ implements <a href="TypeChangeEnumValueOrderAction.html" title="interface in com
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.78">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeChangeEnumValueOrderActionImpl.html#line.88">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

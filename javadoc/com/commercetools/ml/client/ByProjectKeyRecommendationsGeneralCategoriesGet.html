@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.20">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.22">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a>,&#8203;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;</span></div>
 <div class="block"><p>This endpoint takes arbitrary product names or image URLs and generates recommendations from a general set of categories, which cover a broad range of industries. The full list of supported categories can be found <a href="https://docs.commercetools.com/category_recommendations_supported_categories.txt">here</a>. These are independent of the categories that are actually defined in your project. The main  purpose of this API is to provide a quick way to test the behavior of the category recommendations engine for different names and images. In contrast to the <a href="https://docs.commercetools.com/http-api-projects-categoryrecommendations#project-specific-category-recommendations">project-specific endpoint</a>, this endpoint does not have <a href="https://docs.commercetools.com/http-api-projects-categoryrecommendations#activating-the-api">activation criteria</a> and is enabled for all projects.</p></div>
 </section>
@@ -128,177 +128,294 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMax(double)">addConfidenceMax</a></span>&#8203;(double&nbsp;confidenceMax)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMax(java.util.function.Function)">addConfidenceMax</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional confidenceMax query parameter</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMax(java.util.List)">addConfidenceMax</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;confidenceMax)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMax(java.util.function.Supplier)">addConfidenceMax</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional confidenceMax query parameter</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMax(java.util.List)">addConfidenceMax</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;confidenceMax)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional confidenceMax query parameters</div>
 </div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMax(TValue)">addConfidenceMax</a></span>&#8203;(TValue&nbsp;confidenceMax)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional confidenceMax query parameter</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMin(double)">addConfidenceMin</a></span>&#8203;(double&nbsp;confidenceMin)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMin(java.util.function.Function)">addConfidenceMin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional confidenceMin query parameter</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMin(java.util.List)">addConfidenceMin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;confidenceMin)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMin(java.util.function.Supplier)">addConfidenceMin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional confidenceMin query parameter</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMin(java.util.List)">addConfidenceMin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;confidenceMin)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional confidenceMin query parameters</div>
 </div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addConfidenceMin(TValue)">addConfidenceMin</a></span>&#8203;(TValue&nbsp;confidenceMin)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional confidenceMin query parameter</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addLimit(int)">addLimit</a></span>&#8203;(int&nbsp;limit)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addLimit(java.util.function.Function)">addLimit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional limit query parameter</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addLimit(java.util.List)">addLimit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;limit)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addLimit(java.util.function.Supplier)">addLimit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional limit query parameter</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addLimit(java.util.List)">addLimit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;limit)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional limit query parameters</div>
 </div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addLimit(TValue)">addLimit</a></span>&#8203;(TValue&nbsp;limit)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional limit query parameter</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addOffset(int)">addOffset</a></span>&#8203;(int&nbsp;offset)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addOffset(java.util.function.Function)">addOffset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional offset query parameter</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addOffset(java.util.List)">addOffset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;offset)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addOffset(java.util.function.Supplier)">addOffset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional offset query parameter</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addOffset(java.util.List)">addOffset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;offset)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional offset query parameters</div>
 </div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addOffset(TValue)">addOffset</a></span>&#8203;(TValue&nbsp;offset)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional offset query parameter</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductImageUrl(java.lang.String)">addProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productImageUrl)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductImageUrl(java.util.function.Function)">addProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional productImageUrl query parameter</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductImageUrl(java.util.List)">addProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productImageUrl)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductImageUrl(java.util.function.Supplier)">addProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional productImageUrl query parameter</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductImageUrl(java.util.List)">addProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;productImageUrl)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional productImageUrl query parameters</div>
 </div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductImageUrl(TValue)">addProductImageUrl</a></span>&#8203;(TValue&nbsp;productImageUrl)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional productImageUrl query parameter</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductName(java.lang.String)">addProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productName)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductName(java.util.function.Function)">addProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional productName query parameter</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductName(java.util.List)">addProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productName)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductName(java.util.function.Supplier)">addProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional productName query parameter</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductName(java.util.List)">addProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;productName)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
 <div class="block">add additional productName query parameters</div>
 </div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#createHttpRequest()">createHttpRequest</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#addProductName(TValue)">addProductName</a></span>&#8203;(TValue&nbsp;productName)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">add additional productName query parameter</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#execute(io.vrap.rmf.base.client.ApiHttpClient)">execute</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#execute(io.vrap.rmf.base.client.ApiHttpClient)">execute</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">executeBlocking</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">executeBlocking</a></span>&#8203;(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getConfidenceMax()">getConfidenceMax</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getConfidenceMin()">getConfidenceMin</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getConfidenceMax()">getConfidenceMax</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getConfidenceMin()">getConfidenceMin</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getLimit()">getLimit</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProductImageUrl()">getProductImageUrl</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getOffset()">getOffset</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProductName()">getProductName</a></span>()</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProductImageUrl()">getProductImageUrl</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProjectKey()">getProjectKey</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProductName()">getProductName</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getProjectKey()">getProjectKey</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reflectionHashCode()">reflectionHashCode</a></span>()</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setProjectKey(java.lang.String)">setProjectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#reflectionHashCode()">reflectionHashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setProjectKey(java.lang.String)">setProjectKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMax(double)">withConfidenceMax</a></span>&#8203;(double&nbsp;confidenceMax)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set confidenceMax with the specificied value</div>
-</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#toString()">toString</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMax(java.util.List)">withConfidenceMax</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;confidenceMax)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMax(java.util.function.Function)">withConfidenceMax</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set confidenceMax with the specificied values</div>
+<div class="block">set confidenceMax with the specified value</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMin(double)">withConfidenceMin</a></span>&#8203;(double&nbsp;confidenceMin)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMax(java.util.function.Supplier)">withConfidenceMax</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set confidenceMin with the specificied value</div>
+<div class="block">set confidenceMax with the specified value</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMax(java.util.List)">withConfidenceMax</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;confidenceMax)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set confidenceMax with the specified values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMax(TValue)">withConfidenceMax</a></span>&#8203;(TValue&nbsp;confidenceMax)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set confidenceMax with the specified value</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMin(java.util.List)">withConfidenceMin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;confidenceMin)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMin(java.util.function.Function)">withConfidenceMin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set confidenceMin with the specificied values</div>
+<div class="block">set confidenceMin with the specified value</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withLimit(int)">withLimit</a></span>&#8203;(int&nbsp;limit)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMin(java.util.function.Supplier)">withConfidenceMin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set limit with the specificied value</div>
+<div class="block">set confidenceMin with the specified value</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMin(java.util.List)">withConfidenceMin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;confidenceMin)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set confidenceMin with the specified values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withConfidenceMin(TValue)">withConfidenceMin</a></span>&#8203;(TValue&nbsp;confidenceMin)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set confidenceMin with the specified value</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withLimit(java.util.List)">withLimit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;limit)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withLimit(java.util.function.Function)">withLimit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set limit with the specificied values</div>
+<div class="block">set limit with the specified value</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOffset(int)">withOffset</a></span>&#8203;(int&nbsp;offset)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withLimit(java.util.function.Supplier)">withLimit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set offset with the specificied value</div>
+<div class="block">set limit with the specified value</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withLimit(java.util.List)">withLimit</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;limit)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set limit with the specified values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withLimit(TValue)">withLimit</a></span>&#8203;(TValue&nbsp;limit)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set limit with the specified value</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOffset(java.util.List)">withOffset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;offset)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOffset(java.util.function.Function)">withOffset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set offset with the specificied values</div>
+<div class="block">set offset with the specified value</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductImageUrl(java.lang.String)">withProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productImageUrl)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOffset(java.util.function.Supplier)">withOffset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set productImageUrl with the specificied value</div>
+<div class="block">set offset with the specified value</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOffset(java.util.List)">withOffset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;offset)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set offset with the specified values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withOffset(TValue)">withOffset</a></span>&#8203;(TValue&nbsp;offset)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set offset with the specified value</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductImageUrl(java.util.List)">withProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productImageUrl)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductImageUrl(java.util.function.Function)">withProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set productImageUrl with the specificied values</div>
+<div class="block">set productImageUrl with the specified value</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductName(java.lang.String)">withProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productName)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductImageUrl(java.util.function.Supplier)">withProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set productName with the specificied value</div>
+<div class="block">set productImageUrl with the specified value</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductImageUrl(java.util.List)">withProductImageUrl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;productImageUrl)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set productImageUrl with the specified values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductImageUrl(TValue)">withProductImageUrl</a></span>&#8203;(TValue&nbsp;productImageUrl)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set productImageUrl with the specified value</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductName(java.util.List)">withProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productName)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductName(java.util.function.Function)">withProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">set productName with the specificied values</div>
+<div class="block">set productName with the specified value</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductName(java.util.function.Supplier)">withProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set productName with the specified value</div>
+</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductName(java.util.List)">withProductName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;productName)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set productName with the specified values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>&lt;TValue&gt;&nbsp;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withProductName(TValue)">withProductName</a></span>&#8203;(TValue&nbsp;productName)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">set productName with the specified value</div>
 </div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.io.vrap.rmf.base.client.ApiMethod">Methods inherited from class&nbsp;io.vrap.rmf.base.client.<a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a></h3>
-<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader(java.lang.String,java.lang.String)">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam(java.lang.String,V)">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParams(java.util.List)">addQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#contentType(java.lang.String)">contentType</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute()">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(com.fasterxml.jackson.core.type.TypeReference)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(com.fasterxml.jackson.databind.JavaType)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.core.type.TypeReference)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.databind.JavaType)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(io.vrap.rmf.base.client.ApiHttpClient,java.lang.Class)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(java.lang.Class)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking()">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(com.fasterxml.jackson.core.type.TypeReference)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(com.fasterxml.jackson.databind.JavaType)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.core.type.TypeReference)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.databind.JavaType)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.lang.Class)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration,com.fasterxml.jackson.core.type.TypeReference)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration,com.fasterxml.jackson.databind.JavaType)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration,java.lang.Class)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.lang.Class)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.time.Duration)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.time.Duration,com.fasterxml.jackson.core.type.TypeReference)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.time.Duration,com.fasterxml.jackson.databind.JavaType)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.time.Duration,java.lang.Class)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getFirstQueryParam(java.lang.String)">getFirstQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders()">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam(java.lang.String)">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams()">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriString()">getQueryParamUriString</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings()">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#send()">send</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#sendBlocking()">sendBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#sendBlocking(java.time.Duration)">sendBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader(java.lang.String,java.lang.String)">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders(io.vrap.rmf.base.client.ApiHttpHeaders)">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader(java.lang.String)">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam(java.lang.String)">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam(java.lang.String,V)">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams(java.util.List)">withQueryParams</a></code></div>
+<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader(java.lang.String,java.lang.String)">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam(java.lang.String,V)">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParams(java.util.List)">addQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#contentType(java.lang.String)">contentType</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#createHttpRequest()">createHttpRequest</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute()">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(com.fasterxml.jackson.core.type.TypeReference)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(com.fasterxml.jackson.databind.JavaType)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.core.type.TypeReference)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.databind.JavaType)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(io.vrap.rmf.base.client.ApiHttpClient,java.lang.Class)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute(java.lang.Class)">execute</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking()">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(com.fasterxml.jackson.core.type.TypeReference)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(com.fasterxml.jackson.databind.JavaType)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.core.type.TypeReference)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,com.fasterxml.jackson.databind.JavaType)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.lang.Class)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration,com.fasterxml.jackson.core.type.TypeReference)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration,com.fasterxml.jackson.databind.JavaType)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration,java.lang.Class)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.lang.Class)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.time.Duration)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.time.Duration,com.fasterxml.jackson.core.type.TypeReference)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.time.Duration,com.fasterxml.jackson.databind.JavaType)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking(java.time.Duration,java.lang.Class)">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getFirstQueryParam(java.lang.String)">getFirstQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders()">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam(java.lang.String)">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams()">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriString()">getQueryParamUriString</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings()">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#send()">send</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#sendBlocking()">sendBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#sendBlocking(java.time.Duration)">sendBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#with(java.util.function.Function)">with</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader(java.lang.String,java.lang.String)">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders(io.vrap.rmf.base.client.ApiHttpHeaders)">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHttpRequest(java.util.function.Function)">withHttpRequest</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader(java.lang.String)">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam(java.lang.String)">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam(java.lang.String,V)">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams(java.util.List)">withQueryParams</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -316,14 +433,14 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="&lt;init&gt;(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String)">
 <h3>ByProjectKeyRecommendationsGeneralCategoriesGet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.26">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.28">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="&lt;init&gt;(com.commercetools.ml.client.ByProjectKeyRecommendationsGeneralCategoriesGet)">
 <h3>ByProjectKeyRecommendationsGeneralCategoriesGet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.31">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a>&nbsp;t)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.33">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a>&nbsp;t)</span></div>
 </section>
 </li>
 </ul>
@@ -335,19 +452,9 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="createHttpRequest()">
-<h3>createHttpRequest</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.36">createHttpRequest</a></span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#createHttpRequest()">createHttpRequest</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a>,&#8203;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;</code></dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">
 <h3>executeBlocking</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.47">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.48">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -360,7 +467,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.54">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.55">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html#execute(io.vrap.rmf.base.client.ApiHttpClient)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/general_category_recommendations/GeneralCategoryRecommendationPagedQueryResponse.html" title="interface in com.commercetools.ml.models.general_category_recommendations">GeneralCategoryRecommendationPagedQueryResponse</a>&gt;</code></dd>
@@ -372,229 +479,421 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.61">getProjectKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.62">getProjectKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductImageUrl()">
 <h3>getProductImageUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.65">getProductImageUrl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.66">getProductImageUrl</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductName()">
 <h3>getProductName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.69">getProductName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.70">getProductName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.73">getLimit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.74">getLimit</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.77">getOffset</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.78">getOffset</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getConfidenceMin()">
 <h3>getConfidenceMin</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.81">getConfidenceMin</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.82">getConfidenceMin</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getConfidenceMax()">
 <h3>getConfidenceMax</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.85">getConfidenceMax</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.86">getConfidenceMax</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.89">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.90">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="withProductImageUrl(java.lang.String)">
+<section class="detail" id="withProductImageUrl(TValue)">
+<h3 id="withProductImageUrl(java.lang.Object)">withProductImageUrl</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.97">withProductImageUrl</a></span>&#8203;<span class="parameters">(TValue&nbsp;productImageUrl)</span></div>
+<div class="block">set productImageUrl with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addProductImageUrl(TValue)">
+<h3 id="addProductImageUrl(java.lang.Object)">addProductImageUrl</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.104">addProductImageUrl</a></span>&#8203;<span class="parameters">(TValue&nbsp;productImageUrl)</span></div>
+<div class="block">add additional productImageUrl query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withProductImageUrl(java.util.function.Supplier)">
 <h3>withProductImageUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.96">withProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productImageUrl)</span></div>
-<div class="block">set productImageUrl with the specificied value</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.111">withProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">set productImageUrl with the specified value</div>
 </section>
 </li>
 <li>
-<section class="detail" id="addProductImageUrl(java.lang.String)">
+<section class="detail" id="addProductImageUrl(java.util.function.Supplier)">
 <h3>addProductImageUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.103">addProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productImageUrl)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.118">addProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">add additional productImageUrl query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withProductImageUrl(java.util.function.Function)">
+<h3>withProductImageUrl</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.125">withProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="block">set productImageUrl with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addProductImageUrl(java.util.function.Function)">
+<h3>addProductImageUrl</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.133">addProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional productImageUrl query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductImageUrl(java.util.List)">
 <h3>withProductImageUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.110">withProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productImageUrl)</span></div>
-<div class="block">set productImageUrl with the specificied values</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.141">withProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;productImageUrl)</span></div>
+<div class="block">set productImageUrl with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addProductImageUrl(java.util.List)">
 <h3>addProductImageUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.120">addProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productImageUrl)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.152">addProductImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;productImageUrl)</span></div>
 <div class="block">add additional productImageUrl query parameters</div>
 </section>
 </li>
 <li>
-<section class="detail" id="withProductName(java.lang.String)">
-<h3>withProductName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.129">withProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productName)</span></div>
-<div class="block">set productName with the specificied value</div>
+<section class="detail" id="withProductName(TValue)">
+<h3 id="withProductName(java.lang.Object)">withProductName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.162">withProductName</a></span>&#8203;<span class="parameters">(TValue&nbsp;productName)</span></div>
+<div class="block">set productName with the specified value</div>
 </section>
 </li>
 <li>
-<section class="detail" id="addProductName(java.lang.String)">
+<section class="detail" id="addProductName(TValue)">
+<h3 id="addProductName(java.lang.Object)">addProductName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.169">addProductName</a></span>&#8203;<span class="parameters">(TValue&nbsp;productName)</span></div>
+<div class="block">add additional productName query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withProductName(java.util.function.Supplier)">
+<h3>withProductName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.176">withProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">set productName with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addProductName(java.util.function.Supplier)">
 <h3>addProductName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.136">addProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.183">addProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">add additional productName query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withProductName(java.util.function.Function)">
+<h3>withProductName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.190">withProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="block">set productName with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addProductName(java.util.function.Function)">
+<h3>addProductName</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.198">addProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional productName query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductName(java.util.List)">
 <h3>withProductName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.143">withProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productName)</span></div>
-<div class="block">set productName with the specificied values</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.206">withProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;productName)</span></div>
+<div class="block">set productName with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addProductName(java.util.List)">
 <h3>addProductName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.153">addProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.216">addProductName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;productName)</span></div>
 <div class="block">add additional productName query parameters</div>
 </section>
 </li>
 <li>
-<section class="detail" id="withLimit(int)">
-<h3>withLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.161">withLimit</a></span>&#8203;<span class="parameters">(int&nbsp;limit)</span></div>
-<div class="block">set limit with the specificied value</div>
+<section class="detail" id="withLimit(TValue)">
+<h3 id="withLimit(java.lang.Object)">withLimit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.224">withLimit</a></span>&#8203;<span class="parameters">(TValue&nbsp;limit)</span></div>
+<div class="block">set limit with the specified value</div>
 </section>
 </li>
 <li>
-<section class="detail" id="addLimit(int)">
+<section class="detail" id="addLimit(TValue)">
+<h3 id="addLimit(java.lang.Object)">addLimit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.231">addLimit</a></span>&#8203;<span class="parameters">(TValue&nbsp;limit)</span></div>
+<div class="block">add additional limit query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withLimit(java.util.function.Supplier)">
+<h3>withLimit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.238">withLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">set limit with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addLimit(java.util.function.Supplier)">
 <h3>addLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.168">addLimit</a></span>&#8203;<span class="parameters">(int&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.245">addLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">add additional limit query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withLimit(java.util.function.Function)">
+<h3>withLimit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.252">withLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="block">set limit with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addLimit(java.util.function.Function)">
+<h3>addLimit</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.259">addLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional limit query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withLimit(java.util.List)">
 <h3>withLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.175">withLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;limit)</span></div>
-<div class="block">set limit with the specificied values</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.266">withLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;limit)</span></div>
+<div class="block">set limit with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addLimit(java.util.List)">
 <h3>addLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.184">addLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.275">addLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;limit)</span></div>
 <div class="block">add additional limit query parameters</div>
 </section>
 </li>
 <li>
-<section class="detail" id="withOffset(int)">
-<h3>withOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.192">withOffset</a></span>&#8203;<span class="parameters">(int&nbsp;offset)</span></div>
-<div class="block">set offset with the specificied value</div>
+<section class="detail" id="withOffset(TValue)">
+<h3 id="withOffset(java.lang.Object)">withOffset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.283">withOffset</a></span>&#8203;<span class="parameters">(TValue&nbsp;offset)</span></div>
+<div class="block">set offset with the specified value</div>
 </section>
 </li>
 <li>
-<section class="detail" id="addOffset(int)">
+<section class="detail" id="addOffset(TValue)">
+<h3 id="addOffset(java.lang.Object)">addOffset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.290">addOffset</a></span>&#8203;<span class="parameters">(TValue&nbsp;offset)</span></div>
+<div class="block">add additional offset query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withOffset(java.util.function.Supplier)">
+<h3>withOffset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.297">withOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">set offset with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addOffset(java.util.function.Supplier)">
 <h3>addOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.199">addOffset</a></span>&#8203;<span class="parameters">(int&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.304">addOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">add additional offset query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withOffset(java.util.function.Function)">
+<h3>withOffset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.311">withOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="block">set offset with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addOffset(java.util.function.Function)">
+<h3>addOffset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.318">addOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional offset query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOffset(java.util.List)">
 <h3>withOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.206">withOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;offset)</span></div>
-<div class="block">set offset with the specificied values</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.325">withOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;offset)</span></div>
+<div class="block">set offset with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addOffset(java.util.List)">
 <h3>addOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.215">addOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.334">addOffset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;offset)</span></div>
 <div class="block">add additional offset query parameters</div>
 </section>
 </li>
 <li>
-<section class="detail" id="withConfidenceMin(double)">
-<h3>withConfidenceMin</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.223">withConfidenceMin</a></span>&#8203;<span class="parameters">(double&nbsp;confidenceMin)</span></div>
-<div class="block">set confidenceMin with the specificied value</div>
+<section class="detail" id="withConfidenceMin(TValue)">
+<h3 id="withConfidenceMin(java.lang.Object)">withConfidenceMin</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.342">withConfidenceMin</a></span>&#8203;<span class="parameters">(TValue&nbsp;confidenceMin)</span></div>
+<div class="block">set confidenceMin with the specified value</div>
 </section>
 </li>
 <li>
-<section class="detail" id="addConfidenceMin(double)">
+<section class="detail" id="addConfidenceMin(TValue)">
+<h3 id="addConfidenceMin(java.lang.Object)">addConfidenceMin</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.349">addConfidenceMin</a></span>&#8203;<span class="parameters">(TValue&nbsp;confidenceMin)</span></div>
+<div class="block">add additional confidenceMin query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withConfidenceMin(java.util.function.Supplier)">
+<h3>withConfidenceMin</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.356">withConfidenceMin</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">set confidenceMin with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addConfidenceMin(java.util.function.Supplier)">
 <h3>addConfidenceMin</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.230">addConfidenceMin</a></span>&#8203;<span class="parameters">(double&nbsp;confidenceMin)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.363">addConfidenceMin</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">add additional confidenceMin query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withConfidenceMin(java.util.function.Function)">
+<h3>withConfidenceMin</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.370">withConfidenceMin</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="block">set confidenceMin with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addConfidenceMin(java.util.function.Function)">
+<h3>addConfidenceMin</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.378">addConfidenceMin</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional confidenceMin query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withConfidenceMin(java.util.List)">
 <h3>withConfidenceMin</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.237">withConfidenceMin</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;confidenceMin)</span></div>
-<div class="block">set confidenceMin with the specificied values</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.386">withConfidenceMin</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;confidenceMin)</span></div>
+<div class="block">set confidenceMin with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addConfidenceMin(java.util.List)">
 <h3>addConfidenceMin</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.247">addConfidenceMin</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;confidenceMin)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.397">addConfidenceMin</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;confidenceMin)</span></div>
 <div class="block">add additional confidenceMin query parameters</div>
 </section>
 </li>
 <li>
-<section class="detail" id="withConfidenceMax(double)">
-<h3>withConfidenceMax</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.256">withConfidenceMax</a></span>&#8203;<span class="parameters">(double&nbsp;confidenceMax)</span></div>
-<div class="block">set confidenceMax with the specificied value</div>
+<section class="detail" id="withConfidenceMax(TValue)">
+<h3 id="withConfidenceMax(java.lang.Object)">withConfidenceMax</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.406">withConfidenceMax</a></span>&#8203;<span class="parameters">(TValue&nbsp;confidenceMax)</span></div>
+<div class="block">set confidenceMax with the specified value</div>
 </section>
 </li>
 <li>
-<section class="detail" id="addConfidenceMax(double)">
+<section class="detail" id="addConfidenceMax(TValue)">
+<h3 id="addConfidenceMax(java.lang.Object)">addConfidenceMax</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.413">addConfidenceMax</a></span>&#8203;<span class="parameters">(TValue&nbsp;confidenceMax)</span></div>
+<div class="block">add additional confidenceMax query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withConfidenceMax(java.util.function.Supplier)">
+<h3>withConfidenceMax</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.420">withConfidenceMax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">set confidenceMax with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addConfidenceMax(java.util.function.Supplier)">
 <h3>addConfidenceMax</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.263">addConfidenceMax</a></span>&#8203;<span class="parameters">(double&nbsp;confidenceMax)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.427">addConfidenceMax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;supplier)</span></div>
+<div class="block">add additional confidenceMax query parameter</div>
+</section>
+</li>
+<li>
+<section class="detail" id="withConfidenceMax(java.util.function.Function)">
+<h3>withConfidenceMax</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.434">withConfidenceMax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="block">set confidenceMax with the specified value</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addConfidenceMax(java.util.function.Function)">
+<h3>addConfidenceMax</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.442">addConfidenceMax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional confidenceMax query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withConfidenceMax(java.util.List)">
 <h3>withConfidenceMax</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.270">withConfidenceMax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;confidenceMax)</span></div>
-<div class="block">set confidenceMax with the specificied values</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.450">withConfidenceMax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;confidenceMax)</span></div>
+<div class="block">set confidenceMax with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addConfidenceMax(java.util.List)">
 <h3>addConfidenceMax</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.280">addConfidenceMax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;confidenceMax)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>
+<span class="return-type"><a href="ByProjectKeyRecommendationsGeneralCategoriesGet.html" title="class in com.commercetools.ml.client">ByProjectKeyRecommendationsGeneralCategoriesGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.461">addConfidenceMax</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;confidenceMax)</span></div>
 <div class="block">add additional confidenceMax query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.286">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.467">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.299">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/ml/client/ByProjectKeyRecommendationsGeneralCategoriesGet.html#line.480">hashCode</a></span>()</div>
 </section>
 </li>
 <li>

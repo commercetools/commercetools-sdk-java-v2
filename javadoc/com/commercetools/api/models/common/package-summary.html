@@ -90,28 +90,41 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a></div>
+<div class="col-first even-row-color"><a href="GenericReference.html" title="interface in com.commercetools.api.models.common">GenericReference</a>&lt;T&gt;</div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a></div>
+<div class="col-first odd-row-color"><a href="GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></div>
+<div class="col-first even-row-color"><a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></div>
+<div class="col-first odd-row-color"><a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Money object that stores an amount of a fraction of the smallest indivisible unit of the specified currency.</div>
+</div>
+<div class="col-first even-row-color"><a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></div>
+<div class="col-last even-row-color">
+<div class="block">Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.</div>
+</div>
+<div class="col-first odd-row-color"><a href="Image.html" title="interface in com.commercetools.api.models.common">Image</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="Image.html" title="interface in com.commercetools.api.models.common">Image</a></div>
+<div class="col-first even-row-color"><a href="ImageDimensions.html" title="interface in com.commercetools.api.models.common">ImageDimensions</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="ImageDimensions.html" title="interface in com.commercetools.api.models.common">ImageDimensions</a></div>
+<div class="col-first odd-row-color"><a href="KeyReference.html" title="interface in com.commercetools.api.models.common">KeyReference</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="KeyReference.html" title="interface in com.commercetools.api.models.common">KeyReference</a></div>
+<div class="col-first even-row-color"><a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></div>
+<div class="col-first odd-row-color"><a href="LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></div>
+<div class="col-first even-row-color"><a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Draft type that stores amounts in cent precision for the specified currency.<br/>
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</div>
+</div>
 <div class="col-first even-row-color"><a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</div>
+</div>
 <div class="col-first odd-row-color"><a href="PagedQueryResponse.html" title="interface in com.commercetools.api.models.common">PagedQueryResponse</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="Price.html" title="interface in com.commercetools.api.models.common">Price</a></div>
@@ -133,7 +146,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><a href="ScopedPrice.html" title="interface in com.commercetools.api.models.common">ScopedPrice</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Base polymorphic read-only Money type which is stored in cent precision or high precision.</div>
+</div>
 <div class="col-first even-row-color"><a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="Update.html" title="interface in com.commercetools.api.models.common">Update</a></div>
@@ -201,86 +216,101 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="DiscountedPriceImpl.html" title="class in com.commercetools.api.models.common">DiscountedPriceImpl</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="GeoJsonImpl.html" title="class in com.commercetools.api.models.common">GeoJsonImpl</a></div>
+<div class="col-first odd-row-color"><a href="GenericReferenceImpl.html" title="class in com.commercetools.api.models.common">GenericReferenceImpl</a>&lt;T&gt;</div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="GeoJsonPointBuilder.html" title="class in com.commercetools.api.models.common">GeoJsonPointBuilder</a></div>
+<div class="col-first even-row-color"><a href="GeoJsonImpl.html" title="class in com.commercetools.api.models.common">GeoJsonImpl</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="GeoJsonPointImpl.html" title="class in com.commercetools.api.models.common">GeoJsonPointImpl</a></div>
+<div class="col-first odd-row-color"><a href="GeoJsonPointBuilder.html" title="class in com.commercetools.api.models.common">GeoJsonPointBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="HighPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyBuilder</a></div>
+<div class="col-first even-row-color"><a href="GeoJsonPointImpl.html" title="class in com.commercetools.api.models.common">GeoJsonPointImpl</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></div>
+<div class="col-first odd-row-color"><a href="HighPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="HighPrecisionMoneyDraftImpl.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftImpl</a></div>
+<div class="col-first even-row-color"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="HighPrecisionMoneyImpl.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyImpl</a></div>
+<div class="col-first odd-row-color"><a href="HighPrecisionMoneyDraftImpl.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftImpl</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.</div>
+</div>
+<div class="col-first even-row-color"><a href="HighPrecisionMoneyImpl.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyImpl</a></div>
+<div class="col-last even-row-color">
+<div class="block">Money object that stores an amount of a fraction of the smallest indivisible unit of the specified currency.</div>
+</div>
+<div class="col-first odd-row-color"><a href="ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a></div>
+<div class="col-first even-row-color"><a href="ImageDimensionsBuilder.html" title="class in com.commercetools.api.models.common">ImageDimensionsBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="ImageDimensionsBuilder.html" title="class in com.commercetools.api.models.common">ImageDimensionsBuilder</a></div>
+<div class="col-first odd-row-color"><a href="ImageDimensionsImpl.html" title="class in com.commercetools.api.models.common">ImageDimensionsImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="ImageDimensionsImpl.html" title="class in com.commercetools.api.models.common">ImageDimensionsImpl</a></div>
+<div class="col-first even-row-color"><a href="ImageImpl.html" title="class in com.commercetools.api.models.common">ImageImpl</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="ImageImpl.html" title="class in com.commercetools.api.models.common">ImageImpl</a></div>
+<div class="col-first odd-row-color"><a href="KeyReferenceImpl.html" title="class in com.commercetools.api.models.common">KeyReferenceImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="KeyReferenceImpl.html" title="class in com.commercetools.api.models.common">KeyReferenceImpl</a></div>
+<div class="col-first even-row-color"><a href="LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a></div>
+<div class="col-first odd-row-color"><a href="LastModifiedByImpl.html" title="class in com.commercetools.api.models.common">LastModifiedByImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="LastModifiedByImpl.html" title="class in com.commercetools.api.models.common">LastModifiedByImpl</a></div>
+<div class="col-first even-row-color"><a href="LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a></div>
+<div class="col-first odd-row-color"><a href="LocalizedStringEntry.html" title="class in com.commercetools.api.models.common">LocalizedStringEntry</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="LocalizedStringImpl.html" title="class in com.commercetools.api.models.common">LocalizedStringImpl</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="MoneyImpl.html" title="class in com.commercetools.api.models.common">MoneyImpl</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="PagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.common">PagedQueryResponseBuilder</a></div>
+<div class="col-last even-row-color">
+<div class="block">Draft type that stores amounts in cent precision for the specified currency.<br/>
+  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</div>
+</div>
+<div class="col-first odd-row-color"><a href="MoneyUtil.html" title="class in com.commercetools.api.models.common">MoneyUtil</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="PagedQueryResponseImpl.html" title="class in com.commercetools.api.models.common">PagedQueryResponseImpl</a></div>
+<div class="col-first even-row-color"><a href="PagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.common">PagedQueryResponseBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></div>
+<div class="col-first odd-row-color"><a href="PagedQueryResponseImpl.html" title="class in com.commercetools.api.models.common">PagedQueryResponseImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a></div>
+<div class="col-first even-row-color"><a href="PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="PriceDraftImpl.html" title="class in com.commercetools.api.models.common">PriceDraftImpl</a></div>
+<div class="col-first odd-row-color"><a href="PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="PriceImpl.html" title="class in com.commercetools.api.models.common">PriceImpl</a></div>
+<div class="col-first even-row-color"><a href="PriceDraftImpl.html" title="class in com.commercetools.api.models.common">PriceDraftImpl</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></div>
+<div class="col-first odd-row-color"><a href="PriceImpl.html" title="class in com.commercetools.api.models.common">PriceImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="PriceTierDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceTierDraftBuilder</a></div>
+<div class="col-first even-row-color"><a href="PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="PriceTierDraftImpl.html" title="class in com.commercetools.api.models.common">PriceTierDraftImpl</a></div>
+<div class="col-first odd-row-color"><a href="PriceTierDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceTierDraftBuilder</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="PriceTierImpl.html" title="class in com.commercetools.api.models.common">PriceTierImpl</a></div>
+<div class="col-first even-row-color"><a href="PriceTierDraftImpl.html" title="class in com.commercetools.api.models.common">PriceTierDraftImpl</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="QueryPriceBuilder.html" title="class in com.commercetools.api.models.common">QueryPriceBuilder</a></div>
+<div class="col-first odd-row-color"><a href="PriceTierImpl.html" title="class in com.commercetools.api.models.common">PriceTierImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="QueryPriceImpl.html" title="class in com.commercetools.api.models.common">QueryPriceImpl</a></div>
+<div class="col-first even-row-color"><a href="QueryPriceBuilder.html" title="class in com.commercetools.api.models.common">QueryPriceBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="ReferenceImpl.html" title="class in com.commercetools.api.models.common">ReferenceImpl</a></div>
+<div class="col-first odd-row-color"><a href="QueryPriceImpl.html" title="class in com.commercetools.api.models.common">QueryPriceImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="ResourceIdentifierImpl.html" title="class in com.commercetools.api.models.common">ResourceIdentifierImpl</a></div>
+<div class="col-first even-row-color"><a href="ReferenceImpl.html" title="class in com.commercetools.api.models.common">ReferenceImpl</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="ScopedPriceBuilder.html" title="class in com.commercetools.api.models.common">ScopedPriceBuilder</a></div>
+<div class="col-first odd-row-color"><a href="ResourceIdentifierImpl.html" title="class in com.commercetools.api.models.common">ResourceIdentifierImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="ScopedPriceImpl.html" title="class in com.commercetools.api.models.common">ScopedPriceImpl</a></div>
+<div class="col-first even-row-color"><a href="ScopedPriceBuilder.html" title="class in com.commercetools.api.models.common">ScopedPriceBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="TypedMoneyDraftImpl.html" title="class in com.commercetools.api.models.common">TypedMoneyDraftImpl</a></div>
+<div class="col-first odd-row-color"><a href="ScopedPriceImpl.html" title="class in com.commercetools.api.models.common">ScopedPriceImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="TypedMoneyImpl.html" title="class in com.commercetools.api.models.common">TypedMoneyImpl</a></div>
+<div class="col-first even-row-color"><a href="TypedMoneyDraftImpl.html" title="class in com.commercetools.api.models.common">TypedMoneyDraftImpl</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="UpdateActionBuilder.html" title="class in com.commercetools.api.models.common">UpdateActionBuilder</a></div>
+<div class="col-first odd-row-color"><a href="TypedMoneyImpl.html" title="class in com.commercetools.api.models.common">TypedMoneyImpl</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Base polymorphic read-only Money type which is stored in cent precision or high precision.</div>
+</div>
+<div class="col-first even-row-color"><a href="UpdateActionBuilder.html" title="class in com.commercetools.api.models.common">UpdateActionBuilder</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="UpdateActionImpl.html" title="class in com.commercetools.api.models.common">UpdateActionImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="UpdateActionImpl.html" title="class in com.commercetools.api.models.common">UpdateActionImpl</a></div>
+<div class="col-first even-row-color"><a href="UpdateBuilder.html" title="class in com.commercetools.api.models.common">UpdateBuilder</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="UpdateBuilder.html" title="class in com.commercetools.api.models.common">UpdateBuilder</a></div>
+<div class="col-first odd-row-color"><a href="UpdateImpl.html" title="class in com.commercetools.api.models.common">UpdateImpl</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><a href="UpdateImpl.html" title="class in com.commercetools.api.models.common">UpdateImpl</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </li>
 <li>

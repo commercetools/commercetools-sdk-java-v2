@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
+<dd><code><a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></code>, <code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -106,10 +106,14 @@ extends <a href="Money.html" title="interface in com.commercetools.api.models.co
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getFractionDigits()">getFractionDigits</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">Must be equal to the default number of fraction digits for the specified currency.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setFractionDigits(java.lang.Integer)">setFractionDigits</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
@@ -119,6 +123,9 @@ extends <a href="Money.html" title="interface in com.commercetools.api.models.co
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.common.MonetaryAmountConvertable">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></h3>
+<code><a href="MonetaryAmountConvertable.html#toMonetaryAmount()">toMonetaryAmount</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.Money">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></h3>
 <code><a href="Money.html#getCentAmount()">getCentAmount</a>, <a href="Money.html#getCurrencyCode()">getCurrencyCode</a>, <a href="Money.html#setCentAmount(java.lang.Long)">setCentAmount</a>, <a href="Money.html#setCurrencyCode(java.lang.String)">setCurrencyCode</a>, <a href="Money.html#withMoney(java.util.function.Function)">withMoney</a></code></div>
@@ -137,25 +144,27 @@ extends <a href="Money.html" title="interface in com.commercetools.api.models.co
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.22">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.26">getType</a></span>()</div>
+<div class="block"><p>The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFractionDigits()">
 <h3>getFractionDigits</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.26">getFractionDigits</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.34">getFractionDigits</a></span>()</div>
+<div class="block"><p>Must be equal to the default number of fraction digits for the specified currency.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFractionDigits(java.lang.Integer)">
 <h3>setFractionDigits</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.29">setFractionDigits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.37">setFractionDigits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTypedMoneyDraft(java.util.function.Function)">
 <h3>withTypedMoneyDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.31">withTypedMoneyDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.39">withTypedMoneyDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

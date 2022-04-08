@@ -32,7 +32,7 @@
 <span class="source-line-no">019</span><span id="line.19">    private com.commercetools.api.models.type.TypeResourceIdentifier type;</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
 <span class="source-line-no">021</span><span id="line.21">    @Nullable</span>
-<span class="source-line-no">022</span><span id="line.22">    private java.lang.Object fields;</span>
+<span class="source-line-no">022</span><span id="line.22">    private com.commercetools.api.models.type.FieldContainer fields;</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    public StagedOrderSetReturnItemCustomTypeActionBuilder returnItemId(final String returnItemId) {</span>
 <span class="source-line-no">025</span><span id="line.25">        this.returnItemId = returnItemId;</span>
@@ -51,52 +51,59 @@
 <span class="source-line-no">038</span><span id="line.38">        return this;</span>
 <span class="source-line-no">039</span><span id="line.39">    }</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public StagedOrderSetReturnItemCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {</span>
-<span class="source-line-no">042</span><span id="line.42">        this.fields = fields;</span>
-<span class="source-line-no">043</span><span id="line.43">        return this;</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public String getReturnItemId() {</span>
-<span class="source-line-no">047</span><span id="line.47">        return this.returnItemId;</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    @Nullable</span>
-<span class="source-line-no">051</span><span id="line.51">    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return this.type;</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    @Nullable</span>
-<span class="source-line-no">056</span><span id="line.56">    public java.lang.Object getFields() {</span>
-<span class="source-line-no">057</span><span id="line.57">        return this.fields;</span>
-<span class="source-line-no">058</span><span id="line.58">    }</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    public StagedOrderSetReturnItemCustomTypeAction build() {</span>
-<span class="source-line-no">061</span><span id="line.61">        Objects.requireNonNull(returnItemId,</span>
-<span class="source-line-no">062</span><span id="line.62">            StagedOrderSetReturnItemCustomTypeAction.class + ": returnItemId is missing");</span>
-<span class="source-line-no">063</span><span id="line.63">        return new StagedOrderSetReturnItemCustomTypeActionImpl(returnItemId, type, fields);</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     * builds StagedOrderSetReturnItemCustomTypeAction without checking for non null required values</span>
-<span class="source-line-no">068</span><span id="line.68">     */</span>
-<span class="source-line-no">069</span><span id="line.69">    public StagedOrderSetReturnItemCustomTypeAction buildUnchecked() {</span>
+<span class="source-line-no">041</span><span id="line.41">    public StagedOrderSetReturnItemCustomTypeActionBuilder fields(</span>
+<span class="source-line-no">042</span><span id="line.42">            Function&lt;com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder&gt; builder) {</span>
+<span class="source-line-no">043</span><span id="line.43">        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();</span>
+<span class="source-line-no">044</span><span id="line.44">        return this;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public StagedOrderSetReturnItemCustomTypeActionBuilder fields(</span>
+<span class="source-line-no">048</span><span id="line.48">            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {</span>
+<span class="source-line-no">049</span><span id="line.49">        this.fields = fields;</span>
+<span class="source-line-no">050</span><span id="line.50">        return this;</span>
+<span class="source-line-no">051</span><span id="line.51">    }</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    public String getReturnItemId() {</span>
+<span class="source-line-no">054</span><span id="line.54">        return this.returnItemId;</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    @Nullable</span>
+<span class="source-line-no">058</span><span id="line.58">    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {</span>
+<span class="source-line-no">059</span><span id="line.59">        return this.type;</span>
+<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    @Nullable</span>
+<span class="source-line-no">063</span><span id="line.63">    public com.commercetools.api.models.type.FieldContainer getFields() {</span>
+<span class="source-line-no">064</span><span id="line.64">        return this.fields;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public StagedOrderSetReturnItemCustomTypeAction build() {</span>
+<span class="source-line-no">068</span><span id="line.68">        Objects.requireNonNull(returnItemId,</span>
+<span class="source-line-no">069</span><span id="line.69">            StagedOrderSetReturnItemCustomTypeAction.class + ": returnItemId is missing");</span>
 <span class="source-line-no">070</span><span id="line.70">        return new StagedOrderSetReturnItemCustomTypeActionImpl(returnItemId, type, fields);</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public static StagedOrderSetReturnItemCustomTypeActionBuilder of() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return new StagedOrderSetReturnItemCustomTypeActionBuilder();</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public static StagedOrderSetReturnItemCustomTypeActionBuilder of(</span>
-<span class="source-line-no">078</span><span id="line.78">            final StagedOrderSetReturnItemCustomTypeAction template) {</span>
-<span class="source-line-no">079</span><span id="line.79">        StagedOrderSetReturnItemCustomTypeActionBuilder builder = new StagedOrderSetReturnItemCustomTypeActionBuilder();</span>
-<span class="source-line-no">080</span><span id="line.80">        builder.returnItemId = template.getReturnItemId();</span>
-<span class="source-line-no">081</span><span id="line.81">        builder.type = template.getType();</span>
-<span class="source-line-no">082</span><span id="line.82">        builder.fields = template.getFields();</span>
-<span class="source-line-no">083</span><span id="line.83">        return builder;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">}</span>
+<span class="source-line-no">073</span><span id="line.73">    /**</span>
+<span class="source-line-no">074</span><span id="line.74">     * builds StagedOrderSetReturnItemCustomTypeAction without checking for non null required values</span>
+<span class="source-line-no">075</span><span id="line.75">     */</span>
+<span class="source-line-no">076</span><span id="line.76">    public StagedOrderSetReturnItemCustomTypeAction buildUnchecked() {</span>
+<span class="source-line-no">077</span><span id="line.77">        return new StagedOrderSetReturnItemCustomTypeActionImpl(returnItemId, type, fields);</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public static StagedOrderSetReturnItemCustomTypeActionBuilder of() {</span>
+<span class="source-line-no">081</span><span id="line.81">        return new StagedOrderSetReturnItemCustomTypeActionBuilder();</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public static StagedOrderSetReturnItemCustomTypeActionBuilder of(</span>
+<span class="source-line-no">085</span><span id="line.85">            final StagedOrderSetReturnItemCustomTypeAction template) {</span>
+<span class="source-line-no">086</span><span id="line.86">        StagedOrderSetReturnItemCustomTypeActionBuilder builder = new StagedOrderSetReturnItemCustomTypeActionBuilder();</span>
+<span class="source-line-no">087</span><span id="line.87">        builder.returnItemId = template.getReturnItemId();</span>
+<span class="source-line-no">088</span><span id="line.88">        builder.type = template.getType();</span>
+<span class="source-line-no">089</span><span id="line.89">        builder.fields = template.getFields();</span>
+<span class="source-line-no">090</span><span id="line.90">        return builder;</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">}</span>
 
 
 

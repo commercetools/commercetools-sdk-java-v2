@@ -77,15 +77,16 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code>, <code><a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></code></dd>
+<dd><code><a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></code>, <code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code>, <code><a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
 <dd><code><a href="HighPrecisionMoneyDraftImpl.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.15">HighPrecisionMoneyDraft</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.18">HighPrecisionMoneyDraft</a></span><span class="extends-implements">
 extends <a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></span></div>
+<div class="block"><p>Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -121,15 +122,25 @@ extends <a href="TypedMoneyDraft.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#builder(com.commercetools.api.models.common.HighPrecisionMoneyDraft)">builder</a></span>&#8203;(<a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPreciseAmount()">getPreciseAmount</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getCentAmount()">getCentAmount</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">amount in the smallest indivisible unit of a currency, such as</div>
+</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getPreciseAmount()">getPreciseAmount</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">
+<div class="block">amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.common.HighPrecisionMoneyDraft)">of</a></span>&#8203;(<a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of()">of</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.common.HighPrecisionMoneyDraft)">of</a></span>&#8203;(<a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setCentAmount(java.lang.Long)">setCentAmount</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setPreciseAmount(java.lang.Long)">setPreciseAmount</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;preciseAmount)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
@@ -140,8 +151,11 @@ extends <a href="TypedMoneyDraft.html" title="interface in com.commercetools.api
 </div>
 </div>
 <div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.common.MonetaryAmountConvertable">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="MonetaryAmountConvertable.html" title="interface in com.commercetools.api.models.common">MonetaryAmountConvertable</a></h3>
+<code><a href="MonetaryAmountConvertable.html#toMonetaryAmount()">toMonetaryAmount</a></code></div>
+<div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.Money">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></h3>
-<code><a href="Money.html#getCentAmount()">getCentAmount</a>, <a href="Money.html#getCurrencyCode()">getCurrencyCode</a>, <a href="Money.html#setCentAmount(java.lang.Long)">setCentAmount</a>, <a href="Money.html#setCurrencyCode(java.lang.String)">setCurrencyCode</a>, <a href="Money.html#withMoney(java.util.function.Function)">withMoney</a></code></div>
+<code><a href="Money.html#getCurrencyCode()">getCurrencyCode</a>, <a href="Money.html#setCurrencyCode(java.lang.String)">setCurrencyCode</a>, <a href="Money.html#withMoney(java.util.function.Function)">withMoney</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.TypedMoneyDraft">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a></h3>
 <code><a href="TypedMoneyDraft.html#getFractionDigits()">getFractionDigits</a>, <a href="TypedMoneyDraft.html#getType()">getType</a>, <a href="TypedMoneyDraft.html#setFractionDigits(java.lang.Integer)">setFractionDigits</a>, <a href="TypedMoneyDraft.html#withTypedMoneyDraft(java.util.function.Function)">withTypedMoneyDraft</a></code></div>
@@ -159,7 +173,7 @@ extends <a href="TypedMoneyDraft.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="HIGH_PRECISION">
 <h3>HIGH_PRECISION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.19">HIGH_PRECISION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.22">HIGH_PRECISION</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.common.HighPrecisionMoneyDraft.HIGH_PRECISION">Constant Field Values</a></dd>
@@ -178,43 +192,70 @@ extends <a href="TypedMoneyDraft.html" title="interface in com.commercetools.api
 <section class="detail" id="getPreciseAmount()">
 <h3>getPreciseAmount</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.21">getPreciseAmount</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.27">getPreciseAmount</a></span>()</div>
+<div class="block"><p>amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getCentAmount()">
+<h3>getCentAmount</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.31">getCentAmount</a></span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="Money.html#getCentAmount()">Money</a></code></span></div>
+<div class="block"><p>amount in the smallest indivisible unit of a currency, such as</p>
+  <ul>
+  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
+  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
+  </ul></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Money.html#getCentAmount()">getCentAmount</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreciseAmount(java.lang.Long)">
 <h3>setPreciseAmount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.25">setPreciseAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;preciseAmount)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.34">setPreciseAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;preciseAmount)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setCentAmount(java.lang.Long)">
+<h3>setCentAmount</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.36">setCentAmount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;centAmount)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Money.html#setCentAmount(java.lang.Long)">setCentAmount</a></code>&nbsp;in interface&nbsp;<code><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.27">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.38">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.common.HighPrecisionMoneyDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.31">of</a></span>&#8203;<span class="parameters">(<a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.42">of</a></span>&#8203;<span class="parameters">(<a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.40">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.51">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.common.HighPrecisionMoneyDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.44">builder</a></span>&#8203;<span class="parameters">(<a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.55">builder</a></span>&#8203;<span class="parameters">(<a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHighPrecisionMoneyDraft(java.util.function.Function)">
 <h3>withHighPrecisionMoneyDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.48">withHighPrecisionMoneyDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/HighPrecisionMoneyDraft.html#line.59">withHighPrecisionMoneyDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

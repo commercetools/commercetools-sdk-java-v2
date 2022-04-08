@@ -30,23 +30,24 @@
 <span class="source-line-no">017</span><span id="line.17">        @JsonSubTypes.Type(value = com.commercetools.ml.models.common.ProductReferenceImpl.class, name = ProductReference.PRODUCT),</span>
 <span class="source-line-no">018</span><span id="line.18">        @JsonSubTypes.Type(value = com.commercetools.ml.models.common.ProductTypeReferenceImpl.class, name = ProductTypeReference.PRODUCT_TYPE) })</span>
 <span class="source-line-no">019</span><span id="line.19">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ReferenceImpl.class, visible = true)</span>
-<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">021</span><span id="line.21">public interface Reference {</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    @NotNull</span>
-<span class="source-line-no">024</span><span id="line.24">    @JsonProperty("typeId")</span>
-<span class="source-line-no">025</span><span id="line.25">    public ReferenceTypeId getTypeId();</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    @NotNull</span>
-<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("id")</span>
-<span class="source-line-no">029</span><span id="line.29">    public String getId();</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    public void setId(final String id);</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    default &lt;T&gt; T withReference(Function&lt;Reference, T&gt; helper) {</span>
-<span class="source-line-no">034</span><span id="line.34">        return helper.apply(this);</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36">}</span>
+<span class="source-line-no">020</span><span id="line.20">@JsonDeserialize(as = ReferenceImpl.class)</span>
+<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">022</span><span id="line.22">public interface Reference {</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    @NotNull</span>
+<span class="source-line-no">025</span><span id="line.25">    @JsonProperty("typeId")</span>
+<span class="source-line-no">026</span><span id="line.26">    public ReferenceTypeId getTypeId();</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    @NotNull</span>
+<span class="source-line-no">029</span><span id="line.29">    @JsonProperty("id")</span>
+<span class="source-line-no">030</span><span id="line.30">    public String getId();</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    public void setId(final String id);</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    default &lt;T&gt; T withReference(Function&lt;Reference, T&gt; helper) {</span>
+<span class="source-line-no">035</span><span id="line.35">        return helper.apply(this);</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
+<span class="source-line-no">037</span><span id="line.37">}</span>
 
 
 

@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;</code>, <code><a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
+<dd><code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>,&#8203;<a href="StateUpdateBuilder.html" title="class in com.commercetools.api.models.state">StateUpdateBuilder</a>&gt;</code>, <code><a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.17">StateUpdateImpl</a></span>
@@ -127,10 +127,14 @@ implements <a href="StateUpdate.html" title="interface in com.commercetools.api.
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getActions()">getActions</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Update actions to be performed on the State.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVersion()">getVersion</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Expected version of the State on which the changes should be applied.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -186,10 +190,11 @@ implements <a href="StateUpdate.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.34">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.37">getVersion</a></span>()</div>
+<div class="block"><p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> will be returned.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../ResourceUpdate.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;</code></dd>
+<dd><code><a href="../ResourceUpdate.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>,&#8203;<a href="StateUpdateBuilder.html" title="class in com.commercetools.api.models.state">StateUpdateBuilder</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="StateUpdate.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a></code></dd>
 </dl>
@@ -198,10 +203,11 @@ implements <a href="StateUpdate.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="getActions()">
 <h3>getActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.38">getActions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.44">getActions</a></span>()</div>
+<div class="block"><p>Update actions to be performed on the State.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../ResourceUpdate.html#getActions()">getActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;</code></dd>
+<dd><code><a href="../ResourceUpdate.html#getActions()">getActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>,&#8203;<a href="StateUpdateBuilder.html" title="class in com.commercetools.api.models.state">StateUpdateBuilder</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="StateUpdate.html#getActions()">getActions</a></code>&nbsp;in interface&nbsp;<code><a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a></code></dd>
 </dl>
@@ -210,10 +216,10 @@ implements <a href="StateUpdate.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.42">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.48">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../ResourceUpdate.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;</code></dd>
+<dd><code><a href="../ResourceUpdate.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>,&#8203;<a href="StateUpdateBuilder.html" title="class in com.commercetools.api.models.state">StateUpdateBuilder</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="StateUpdate.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a></code></dd>
 </dl>
@@ -222,7 +228,7 @@ implements <a href="StateUpdate.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setActions(com.commercetools.api.models.state.StateUpdateAction...)">
 <h3>setActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.46">setActions</a></span>&#8203;<span class="parameters">(<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>...&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.52">setActions</a></span>&#8203;<span class="parameters">(<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>...&nbsp;actions)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="StateUpdate.html#setActions(com.commercetools.api.models.state.StateUpdateAction...)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a></code></dd>
@@ -232,10 +238,10 @@ implements <a href="StateUpdate.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="setActions(java.util.List)">
 <h3>setActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.50">setActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.56">setActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;&nbsp;actions)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="../ResourceUpdate.html#setActions(java.util.List)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>&gt;</code></dd>
+<dd><code><a href="../ResourceUpdate.html#setActions(java.util.List)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a>,&#8203;<a href="StateUpdateAction.html" title="interface in com.commercetools.api.models.state">StateUpdateAction</a>,&#8203;<a href="StateUpdateBuilder.html" title="class in com.commercetools.api.models.state">StateUpdateBuilder</a>&gt;</code></dd>
 <dt>Specified by:</dt>
 <dd><code><a href="StateUpdate.html#setActions(java.util.List)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="StateUpdate.html" title="interface in com.commercetools.api.models.state">StateUpdate</a></code></dd>
 </dl>
@@ -244,7 +250,7 @@ implements <a href="StateUpdate.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.54">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.60">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -254,7 +260,7 @@ implements <a href="StateUpdate.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.67">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateUpdateImpl.html#line.73">hashCode</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>

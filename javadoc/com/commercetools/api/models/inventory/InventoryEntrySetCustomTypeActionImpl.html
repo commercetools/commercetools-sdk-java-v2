@@ -140,12 +140,12 @@ implements <a href="InventoryEntrySetCustomTypeAction.html" title="interface in 
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getFields()">getFields</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">A valid JSON object, based on the FieldDefinitions of the Type.</div>
+<div class="block">Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the InventoryEntry.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">If absent, the custom type and any existing CustomFields are removed.</div>
+<div class="block">Defines the <a href="ctp:api:type:Type">Type</a> that extends the InventoryEntry with <a href="/../api/projects/custom-fields">Custom Fields</a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
@@ -214,8 +214,9 @@ implements <a href="InventoryEntrySetCustomTypeAction.html" title="interface in 
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetCustomTypeActionImpl.html#line.46">getType</a></span>()</div>
-<div class="block"><p>If absent, the custom type and any existing CustomFields are removed.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetCustomTypeActionImpl.html#line.47">getType</a></span>()</div>
+<div class="block"><p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the InventoryEntry with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+  If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntrySetCustomTypeAction.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntrySetCustomTypeAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetCustomTypeAction</a></code></dd>
@@ -226,8 +227,7 @@ implements <a href="InventoryEntrySetCustomTypeAction.html" title="interface in 
 <section class="detail" id="getFields()">
 <h3>getFields</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/inventory/InventoryEntrySetCustomTypeActionImpl.html#line.54">getFields</a></span>()</div>
-<div class="block"><p>A valid JSON object, based on the FieldDefinitions of the Type.
-  Sets the custom fields to this value.</p></div>
+<div class="block"><p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the InventoryEntry.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="InventoryEntrySetCustomTypeAction.html#getFields()">getFields</a></code>&nbsp;in interface&nbsp;<code><a href="InventoryEntrySetCustomTypeAction.html" title="interface in com.commercetools.api.models.inventory">InventoryEntrySetCustomTypeAction</a></code></dd>

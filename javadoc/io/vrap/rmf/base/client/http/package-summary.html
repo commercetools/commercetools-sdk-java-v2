@@ -70,22 +70,28 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="block">Used to convert API errors to Exceptions</div>
 </div>
-<div class="col-first even-row-color"><a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a></div>
-<div class="col-last even-row-color">
+<div class="col-first even-row-color"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Creates the <a href="InternalLogger.html" title="class in io.vrap.rmf.base.client.http"><code>InternalLogger</code></a> instances for the specified request</div>
 </div>
-<div class="col-first odd-row-color"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a></div>
+<div class="col-last even-row-color">
 <div class="block">Middleware instrumenting the <a href="InternalLogger.html" title="class in io.vrap.rmf.base.client.http"><code>InternalLogger</code></a></div>
 </div>
-<div class="col-first even-row-color"><a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Interface for a HTTP middleware used to modify a request and the response</div>
 </div>
+<div class="col-first even-row-color"><a href="NotFoundExceptionMiddleware.html" title="interface in io.vrap.rmf.base.client.http">NotFoundExceptionMiddleware</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a></div>
 <div class="col-last odd-row-color">
 <div class="block">Middleware to add an oauth authentication header to requests</div>
 </div>
+<div class="col-first even-row-color"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </li>
 <li>
@@ -105,18 +111,22 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Handler to execute the given request using a HTTP client</div>
 </div>
-<div class="col-first odd-row-color"><a href="InternalLogger.html" title="class in io.vrap.rmf.base.client.http">InternalLogger</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first odd-row-color"><a href="HttpStatusCode.html" title="class in io.vrap.rmf.base.client.http">HttpStatusCode</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="InternalLogger.html" title="class in io.vrap.rmf.base.client.http">InternalLogger</a></div>
+<div class="col-last even-row-color">
 <div class="block">Unified logger instance to perform logging only for configured logging levels.</div>
 </div>
-<div class="col-first even-row-color"><a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><a href="OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Handler for retrieving an oauth authentication token</div>
 </div>
-<div class="col-first odd-row-color"><a href="OAuthMiddlewareImpl.html" title="class in io.vrap.rmf.base.client.http">OAuthMiddlewareImpl</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><a href="OAuthMiddlewareImpl.html" title="class in io.vrap.rmf.base.client.http">OAuthMiddlewareImpl</a></div>
+<div class="col-last even-row-color">
 <div class="block">Default implementation for the <a href="OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>OAuthMiddleware</code></a> with automatic retry upon expired access</div>
 </div>
+<div class="col-first odd-row-color"><a href="QueueMiddleware.html" title="class in io.vrap.rmf.base.client.http">QueueMiddleware</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></div>
 <div class="col-last even-row-color">
 <div class="block">Implementation for a retry of a requests upon configured response status codes</div>

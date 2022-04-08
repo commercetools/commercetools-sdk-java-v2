@@ -20,7 +20,7 @@ public class MoneyTest {
                 .fractionDigits(2)
                 .currencyCode("EUR")
                 .build();
-        final MonetaryAmount centAmount = centPrecisionMoney.asMonetary();
+        final MonetaryAmount centAmount = centPrecisionMoney.asMonetaryAmount();
         Assertions.assertThat(centAmount.getNumber().doubleValueExact()).isEqualTo(1.00);
         Assertions.assertThat(centAmount.isZero()).isFalse();
 
@@ -30,7 +30,7 @@ public class MoneyTest {
                 .fractionDigits(3)
                 .currencyCode("EUR")
                 .build();
-        final MonetaryAmount highAmount = highPrecisionMoney.asMonetary();
+        final MonetaryAmount highAmount = highPrecisionMoney.asMonetaryAmount();
         Assertions.assertThat(highAmount.getNumber().doubleValueExact()).isEqualTo(1.001);
 
         final TypedMoney typedMoney = HighPrecisionMoneyBuilder.of()
@@ -39,7 +39,7 @@ public class MoneyTest {
                 .fractionDigits(3)
                 .currencyCode("EUR")
                 .build();
-        final MonetaryAmount typedAmount = typedMoney.asMonetary();
+        final MonetaryAmount typedAmount = typedMoney.asMonetaryAmount();
         Assertions.assertThat(typedAmount.getNumber().doubleValueExact()).isEqualTo(1.001);
     }
 

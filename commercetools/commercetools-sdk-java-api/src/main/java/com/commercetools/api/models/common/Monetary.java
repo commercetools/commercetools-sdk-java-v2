@@ -8,7 +8,7 @@ import javax.money.*;
 public interface Monetary {
     <T> T withMoney(Function<Money, T> helper);
 
-    default public MonetaryAmount asMonetary() {
-        return withMoney(MoneyUtil::asMonetary);
+    default public MonetaryAmount asMonetaryAmount() {
+        return withMoney(MoneyUtil::asMonetaryAmount);
     }
 }

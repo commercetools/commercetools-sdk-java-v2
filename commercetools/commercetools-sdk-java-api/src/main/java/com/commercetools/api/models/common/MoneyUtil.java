@@ -22,48 +22,48 @@ public class MoneyUtil {
         MONETARY_PROVIDER = MonetarySupplier.instance();
     }
 
-    public static MonetaryAmount asMonetary(Money money) {
+    public static MonetaryAmount asMonetaryAmount(Money money) {
         if (money instanceof TypedMoneyDraft) {
-            return asMonetary((TypedMoneyDraft) money);
+            return asMonetaryAmount((TypedMoneyDraft) money);
         }
         if (money instanceof TypedMoney) {
-            return asMonetary((TypedMoney) money);
+            return asMonetaryAmount((TypedMoney) money);
         }
         return MONETARY_PROVIDER.asMonetaryAmount(money.getCentAmount(), Monetary.getCurrency(money.getCurrencyCode()));
     }
 
-    public static MonetaryAmount asMonetary(TypedMoneyDraft money) {
+    public static MonetaryAmount asMonetaryAmount(TypedMoneyDraft money) {
         if (money instanceof HighPrecisionMoneyDraft) {
-            return asMonetary((HighPrecisionMoneyDraft) money);
+            return asMonetaryAmount((HighPrecisionMoneyDraft) money);
         }
-        return asMonetary((CentPrecisionMoneyDraft) money);
+        return asMonetaryAmount((CentPrecisionMoneyDraft) money);
     }
 
-    public static MonetaryAmount asMonetary(CentPrecisionMoneyDraft money) {
+    public static MonetaryAmount asMonetaryAmount(CentPrecisionMoneyDraft money) {
         CurrencyUnit unit = Monetary.getCurrency(money.getCurrencyCode());
         return MONETARY_PROVIDER.asMonetaryAmount(money.getCentAmount(),
             Optional.ofNullable(money.getFractionDigits()).orElse(unit.getDefaultFractionDigits()), unit);
     }
 
-    public static MonetaryAmount asMonetary(HighPrecisionMoneyDraft money) {
+    public static MonetaryAmount asMonetaryAmount(HighPrecisionMoneyDraft money) {
         CurrencyUnit unit = Monetary.getCurrency(money.getCurrencyCode());
         return MONETARY_PROVIDER.asMonetaryAmount(money.getPreciseAmount(), money.getFractionDigits(), unit);
     }
 
-    public static MonetaryAmount asMonetary(TypedMoney money) {
+    public static MonetaryAmount asMonetaryAmount(TypedMoney money) {
         if (money instanceof HighPrecisionMoney) {
-            return asMonetary((HighPrecisionMoney) money);
+            return asMonetaryAmount((HighPrecisionMoney) money);
         }
-        return asMonetary((CentPrecisionMoney) money);
+        return asMonetaryAmount((CentPrecisionMoney) money);
     }
 
-    public static MonetaryAmount asMonetary(CentPrecisionMoney money) {
+    public static MonetaryAmount asMonetaryAmount(CentPrecisionMoney money) {
         CurrencyUnit unit = Monetary.getCurrency(money.getCurrencyCode());
         return MONETARY_PROVIDER.asMonetaryAmount(money.getCentAmount(),
             Optional.ofNullable(money.getFractionDigits()).orElse(unit.getDefaultFractionDigits()), unit);
     }
 
-    public static MonetaryAmount asMonetary(HighPrecisionMoney money) {
+    public static MonetaryAmount asMonetaryAmount(HighPrecisionMoney money) {
         CurrencyUnit unit = Monetary.getCurrency(money.getCurrencyCode());
         return MONETARY_PROVIDER.asMonetaryAmount(money.getPreciseAmount(), money.getFractionDigits(), unit);
     }

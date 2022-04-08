@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
-public interface Money {
+public interface Money extends Monetary {
 
     /**
     *  <p>amount in the smallest indivisible unit of a currency, such as</p>

@@ -13,22 +13,23 @@ import org.javamoney.moneta.FastMoney;
  */
 public class FastMoneyProvider implements MonetaryProvider {
     @Override
-    public MonetaryAmount asMonetaryAmount(long amount, long fractionDigits, String currencyCode) {
+    public MonetaryAmount asMonetaryAmount(final long amount, final long fractionDigits, final String currencyCode) {
         return FastMoney.of(amount / Math.pow(10, fractionDigits), currencyCode);
     }
 
     @Override
-    public MonetaryAmount asMonetaryAmount(long amount, long fractionDigits, CurrencyUnit currencyCode) {
+    public MonetaryAmount asMonetaryAmount(final long amount, final long fractionDigits,
+            final CurrencyUnit currencyCode) {
         return FastMoney.of(amount / Math.pow(10, fractionDigits), currencyCode);
     }
 
     @Override
-    public MonetaryAmount asMonetaryAmount(double amount, CurrencyUnit currencyCode) {
+    public MonetaryAmount asMonetaryAmount(final double amount, final CurrencyUnit currencyCode) {
         return FastMoney.of(amount, currencyCode);
     }
 
     @Override
-    public MonetaryAmount asMonetaryAmount(BigDecimal amount, CurrencyUnit currencyCode) {
+    public MonetaryAmount asMonetaryAmount(final BigDecimal amount, final CurrencyUnit currencyCode) {
         return FastMoney.of(amount, currencyCode);
     }
 }

@@ -9,6 +9,6 @@ public interface Monetary {
     <T> T withMoney(Function<Money, T> helper);
 
     default public MonetaryAmount asMonetary() {
-        return withMoney(MonetaryUtil::asMonetary);
+        return withMoney(MoneyUtil::asMonetary);
     }
 }

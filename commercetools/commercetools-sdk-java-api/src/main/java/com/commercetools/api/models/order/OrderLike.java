@@ -1,7 +1,7 @@
 
 package com.commercetools.api.models.order;
 
-import static com.commercetools.api.models.common.MonetaryUtil.zeroAmount;
+import static com.commercetools.api.models.common.MoneyUtil.zeroAmount;
 
 import java.time.ZonedDateTime;
 import java.util.List;

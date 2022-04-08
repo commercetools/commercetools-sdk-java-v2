@@ -79,6 +79,7 @@ public class MoneyUtil {
     public static CentPrecisionMoney asCentPrecision(final MonetaryAmount monetaryAmount) {
         return CentPrecisionMoneyBuilder.of()
                 .centAmount(amountToCents(monetaryAmount))
+                .fractionDigits(monetaryAmount.getCurrency().getDefaultFractionDigits())
                 .currencyCode(monetaryAmount.getCurrency().getCurrencyCode())
                 .build();
     }

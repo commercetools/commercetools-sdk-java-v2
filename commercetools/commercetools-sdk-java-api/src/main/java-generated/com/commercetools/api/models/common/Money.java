@@ -1,8 +1,6 @@
 
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.constraints.NotNull;
@@ -18,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
-public interface Money {
+public interface Money extends MonetaryAmountConvertable {
 
     /**
     *  <p>amount in the smallest indivisible unit of a currency, such as</p>

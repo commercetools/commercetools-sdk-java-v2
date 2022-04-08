@@ -21,7 +21,7 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
 
     private String lineItemId;
 
-    private Double quantity;
+    private Long quantity;
 
     private com.commercetools.api.models.common.Money externalPrice;
 
@@ -31,7 +31,7 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
 
     @JsonCreator
     StagedOrderRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("quantity") final Double quantity,
+            @JsonProperty("quantity") final Long quantity,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
             @JsonProperty("shippingDetailsToRemove") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
@@ -55,7 +55,7 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
         return this.lineItemId;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -79,7 +79,7 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
         this.lineItemId = lineItemId;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

@@ -31,7 +31,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     private String sku;
 
     @Nullable
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private java.time.ZonedDateTime addedAt;
@@ -102,7 +102,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
         return this;
     }
 
-    public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Double quantity) {
+    public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -195,7 +195,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     @Nullable
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

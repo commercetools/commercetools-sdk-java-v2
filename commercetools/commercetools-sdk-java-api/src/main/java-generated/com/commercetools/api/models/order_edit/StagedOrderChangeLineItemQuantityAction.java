@@ -28,7 +28,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     /**
     *  <p>Draft type that stores amounts in cent precision for the specified currency.
@@ -44,7 +44,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
 
     public void setLineItemId(final String lineItemId);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setExternalPrice(final Money externalPrice);
 

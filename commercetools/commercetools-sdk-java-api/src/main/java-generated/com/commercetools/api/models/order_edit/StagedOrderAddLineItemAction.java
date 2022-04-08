@@ -55,7 +55,7 @@ public interface StagedOrderAddLineItemAction
     public String getSku();
 
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
@@ -95,7 +95,7 @@ public interface StagedOrderAddLineItemAction
 
     public void setSku(final String sku);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setAddedAt(final ZonedDateTime addedAt);
 

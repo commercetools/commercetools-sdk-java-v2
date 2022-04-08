@@ -23,7 +23,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
 
     private com.commercetools.api.models.common.LocalizedString name;
 
-    private Double quantity;
+    private Long quantity;
 
     private String slug;
 
@@ -36,7 +36,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     @JsonCreator
     StagedOrderAddCustomLineItemActionImpl(@JsonProperty("money") final com.commercetools.api.models.common.Money money,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("quantity") final Double quantity, @JsonProperty("slug") final String slug,
+            @JsonProperty("quantity") final Long quantity, @JsonProperty("slug") final String slug,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
@@ -70,7 +70,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         return this.name;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -104,7 +104,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         this.name = name;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

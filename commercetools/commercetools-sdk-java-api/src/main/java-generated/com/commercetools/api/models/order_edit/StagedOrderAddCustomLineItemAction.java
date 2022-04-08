@@ -41,7 +41,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public LocalizedString getName();
 
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @NotNull
     @JsonProperty("slug")
@@ -69,7 +69,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     public void setName(final LocalizedString name);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setSlug(final String slug);
 

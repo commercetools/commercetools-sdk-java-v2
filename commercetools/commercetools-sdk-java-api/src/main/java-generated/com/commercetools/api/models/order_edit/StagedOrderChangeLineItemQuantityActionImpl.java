@@ -21,7 +21,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
 
     private String lineItemId;
 
-    private Double quantity;
+    private Long quantity;
 
     private com.commercetools.api.models.common.Money externalPrice;
 
@@ -29,7 +29,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
 
     @JsonCreator
     StagedOrderChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("quantity") final Double quantity,
+            @JsonProperty("quantity") final Long quantity,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.lineItemId = lineItemId;
@@ -51,7 +51,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
         return this.lineItemId;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -71,7 +71,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
         this.lineItemId = lineItemId;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

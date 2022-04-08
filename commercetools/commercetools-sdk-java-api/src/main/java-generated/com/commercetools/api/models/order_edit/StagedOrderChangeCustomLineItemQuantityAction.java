@@ -25,11 +25,11 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     public void setCustomLineItemId(final String customLineItemId);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public static StagedOrderChangeCustomLineItemQuantityAction of() {
         return new StagedOrderChangeCustomLineItemQuantityActionImpl();

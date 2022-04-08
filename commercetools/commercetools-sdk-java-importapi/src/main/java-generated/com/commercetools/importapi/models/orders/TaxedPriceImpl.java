@@ -23,13 +23,17 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions;
 
+    private com.commercetools.importapi.models.common.Money totalTax;
+
     @JsonCreator
     TaxedPriceImpl(@JsonProperty("totalNet") final com.commercetools.importapi.models.common.Money totalNet,
             @JsonProperty("totalGross") final com.commercetools.importapi.models.common.Money totalGross,
-            @JsonProperty("taxPortions") final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions) {
+            @JsonProperty("taxPortions") final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions,
+            @JsonProperty("totalTax") final com.commercetools.importapi.models.common.Money totalTax) {
         this.totalNet = totalNet;
         this.totalGross = totalGross;
         this.taxPortions = taxPortions;
+        this.totalTax = totalTax;
     }
 
     public TaxedPriceImpl() {
@@ -56,6 +60,13 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
         return this.taxPortions;
     }
 
+    /**
+    *  <p>Maps to <code>TaxedPrice.totalTax</code>.</p>
+    */
+    public com.commercetools.importapi.models.common.Money getTotalTax() {
+        return this.totalTax;
+    }
+
     public void setTotalNet(final com.commercetools.importapi.models.common.Money totalNet) {
         this.totalNet = totalNet;
     }
@@ -72,6 +83,10 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
         this.taxPortions = taxPortions;
     }
 
+    public void setTotalTax(final com.commercetools.importapi.models.common.Money totalTax) {
+        this.totalTax = totalTax;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -85,12 +100,17 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
         return new EqualsBuilder().append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
                 .append(taxPortions, that.taxPortions)
+                .append(totalTax, that.totalTax)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(totalNet).append(totalGross).append(taxPortions).toHashCode();
+        return new HashCodeBuilder(17, 37).append(totalNet)
+                .append(totalGross)
+                .append(taxPortions)
+                .append(totalTax)
+                .toHashCode();
     }
 
 }

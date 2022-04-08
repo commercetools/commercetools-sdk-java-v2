@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.common;
 
+import java.time.*;
+import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.constraints.NotNull;
@@ -11,12 +13,12 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Draft type that stores amounts in cent precision for the specified currency.<br />
+*  <p>Draft type that stores amounts in cent precision for the specified currency.
 *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
-public interface Money extends MonetaryAmountConvertable {
+public interface Money extends com.commercetools.api.models.common.MonetaryAmountConvertable {
 
     /**
     *  <p>amount in the smallest indivisible unit of a currency, such as</p>

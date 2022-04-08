@@ -21,7 +21,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
 
     private String lineItemId;
 
-    private Double quantity;
+    private Long quantity;
 
     private com.commercetools.api.models.common.Money externalPrice;
 
@@ -29,7 +29,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
 
     @JsonCreator
     StagedOrderChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("quantity") final Double quantity,
+            @JsonProperty("quantity") final Long quantity,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.lineItemId = lineItemId;
@@ -51,12 +51,12 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
         return this.lineItemId;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.<br />
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
     *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
     */
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -71,7 +71,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
         this.lineItemId = lineItemId;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

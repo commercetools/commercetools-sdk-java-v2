@@ -27,7 +27,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.<br />
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
     *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
     */
     @NotNull
@@ -41,7 +41,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public LocalizedString getName();
 
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @NotNull
     @JsonProperty("slug")
@@ -69,7 +69,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     public void setName(final LocalizedString name);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setSlug(final String slug);
 

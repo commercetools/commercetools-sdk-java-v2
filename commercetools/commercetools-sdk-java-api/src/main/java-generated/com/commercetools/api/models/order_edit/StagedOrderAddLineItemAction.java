@@ -55,7 +55,7 @@ public interface StagedOrderAddLineItemAction
     public String getSku();
 
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
@@ -68,7 +68,7 @@ public interface StagedOrderAddLineItemAction
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.<br />
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
     *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
     */
     @Valid
@@ -95,7 +95,7 @@ public interface StagedOrderAddLineItemAction
 
     public void setSku(final String sku);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setAddedAt(final ZonedDateTime addedAt);
 

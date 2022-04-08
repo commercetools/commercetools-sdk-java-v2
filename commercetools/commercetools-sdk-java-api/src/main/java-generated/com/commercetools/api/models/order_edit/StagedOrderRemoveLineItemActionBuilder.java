@@ -15,7 +15,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     private String lineItemId;
 
     @Nullable
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private com.commercetools.api.models.common.Money externalPrice;
@@ -31,7 +31,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
         return this;
     }
 
-    public StagedOrderRemoveLineItemActionBuilder quantity(@Nullable final Double quantity) {
+    public StagedOrderRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -81,7 +81,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     @Nullable
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

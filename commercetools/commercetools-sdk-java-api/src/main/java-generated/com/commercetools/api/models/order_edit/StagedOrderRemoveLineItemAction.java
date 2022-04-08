@@ -28,10 +28,10 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public String getLineItemId();
 
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.<br />
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
     *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
     */
     @Valid
@@ -48,7 +48,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
 
     public void setLineItemId(final String lineItemId);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setExternalPrice(final Money externalPrice);
 

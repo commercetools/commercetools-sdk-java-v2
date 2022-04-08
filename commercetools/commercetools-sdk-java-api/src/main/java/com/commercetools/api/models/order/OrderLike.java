@@ -114,13 +114,13 @@ public interface OrderLike<T extends OrderLike<T>> {
         final MonetaryAmount lineItemTotal = this.getLineItems()
                 .stream()
                 .map(LineItem::getTotalPrice)
-                .map(Monetary::asMonetaryAmount)
+                .map(MonetaryAmountConvertable::asMonetaryAmount)
                 .reduce(zeroAmount(Optional.ofNullable(this.getTotalPrice()).map(Money::getCurrencyCode).orElse(null)),
                     MonetaryAmount::add);
         final MonetaryAmount customLineItemTotal = this.getCustomLineItems()
                 .stream()
                 .map(CustomLineItem::getTotalPrice)
-                .map(Monetary::asMonetaryAmount)
+                .map(MonetaryAmountConvertable::asMonetaryAmount)
                 .reduce(zeroAmount(Optional.ofNullable(this.getTotalPrice()).map(Money::getCurrencyCode).orElse(null)),
                     MonetaryAmount::add);
         return lineItemTotal.add(customLineItemTotal);

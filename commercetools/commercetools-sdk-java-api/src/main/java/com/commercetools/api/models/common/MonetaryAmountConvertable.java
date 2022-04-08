@@ -5,7 +5,7 @@ import java.util.function.Function;
 
 import javax.money.*;
 
-public interface Monetary {
+public interface MonetaryAmountConvertable {
     <T> T withMoney(Function<Money, T> helper);
 
     default public MonetaryAmount asMonetaryAmount() {

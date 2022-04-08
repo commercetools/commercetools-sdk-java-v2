@@ -3,6 +3,8 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -12,6 +14,9 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     private com.commercetools.api.models.common.TypedMoney totalNet;
 
     private com.commercetools.api.models.common.TypedMoney totalGross;
+
+    @Nullable
+    private com.commercetools.api.models.common.TypedMoney totalTax;
 
     public TaxedItemPriceBuilder totalNet(final com.commercetools.api.models.common.TypedMoney totalNet) {
         this.totalNet = totalNet;
@@ -23,6 +28,11 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
         return this;
     }
 
+    public TaxedItemPriceBuilder totalTax(@Nullable final com.commercetools.api.models.common.TypedMoney totalTax) {
+        this.totalTax = totalTax;
+        return this;
+    }
+
     public com.commercetools.api.models.common.TypedMoney getTotalNet() {
         return this.totalNet;
     }
@@ -31,17 +41,22 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
         return this.totalGross;
     }
 
+    @Nullable
+    public com.commercetools.api.models.common.TypedMoney getTotalTax() {
+        return this.totalTax;
+    }
+
     public TaxedItemPrice build() {
         Objects.requireNonNull(totalNet, TaxedItemPrice.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedItemPrice.class + ": totalGross is missing");
-        return new TaxedItemPriceImpl(totalNet, totalGross);
+        return new TaxedItemPriceImpl(totalNet, totalGross, totalTax);
     }
 
     /**
      * builds TaxedItemPrice without checking for non null required values
      */
     public TaxedItemPrice buildUnchecked() {
-        return new TaxedItemPriceImpl(totalNet, totalGross);
+        return new TaxedItemPriceImpl(totalNet, totalGross, totalTax);
     }
 
     public static TaxedItemPriceBuilder of() {
@@ -52,6 +67,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
         TaxedItemPriceBuilder builder = new TaxedItemPriceBuilder();
         builder.totalNet = template.getTotalNet();
         builder.totalGross = template.getTotalGross();
+        builder.totalTax = template.getTotalTax();
         return builder;
     }
 

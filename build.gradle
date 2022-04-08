@@ -175,6 +175,7 @@ def documentationProjects= [
         ":commercetools:commercetools-apachehttp-client",
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
+        ":commercetools:commercetools-money",
         ":commercetools:internal-docs",
         ":rmf:okhttp-client"
 ]

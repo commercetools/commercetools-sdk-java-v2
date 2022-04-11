@@ -19,17 +19,30 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
         return this;
     }
 
+    public DiscountedLineItemPriceBuilder value(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public DiscountedLineItemPriceBuilder includedDiscounts(
             final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
         this.includedDiscounts = new ArrayList<>(Arrays.asList(includedDiscounts));
         return this;
     }
 
-    public DiscountedLineItemPriceBuilder withIncludedDiscounts(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {
-        this.includedDiscounts = new ArrayList<>();
-        this.includedDiscounts
-                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());
+    public DiscountedLineItemPriceBuilder includedDiscounts(
+            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
+        this.includedDiscounts = includedDiscounts;
+        return this;
+    }
+
+    public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
+            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
+        if (this.includedDiscounts == null) {
+            this.includedDiscounts = new ArrayList<>();
+        }
+        this.includedDiscounts.addAll(Arrays.asList(includedDiscounts));
         return this;
     }
 
@@ -43,9 +56,11 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
         return this;
     }
 
-    public DiscountedLineItemPriceBuilder includedDiscounts(
-            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
-        this.includedDiscounts = includedDiscounts;
+    public DiscountedLineItemPriceBuilder withIncludedDiscounts(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {
+        this.includedDiscounts = new ArrayList<>();
+        this.includedDiscounts
+                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());
         return this;
     }
 

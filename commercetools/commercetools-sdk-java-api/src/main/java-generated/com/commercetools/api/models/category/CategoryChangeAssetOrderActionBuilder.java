@@ -21,6 +21,14 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
         return this;
     }
 
+    public CategoryChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {
+        if (this.assetOrder == null) {
+            this.assetOrder = new ArrayList<>();
+        }
+        this.assetOrder.addAll(Arrays.asList(assetOrder));
+        return this;
+    }
+
     public java.util.List<String> getAssetOrder() {
         return this.assetOrder;
     }

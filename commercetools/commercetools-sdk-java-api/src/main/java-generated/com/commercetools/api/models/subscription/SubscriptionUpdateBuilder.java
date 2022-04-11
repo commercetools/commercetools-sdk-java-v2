@@ -2,6 +2,7 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,33 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
     public SubscriptionUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public SubscriptionUpdateBuilder plusActions(
+            final com.commercetools.api.models.subscription.SubscriptionUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public SubscriptionUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.subscription.SubscriptionUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public SubscriptionUpdateBuilder withActions(
+            Function<com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.subscription.SubscriptionUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.subscription.SubscriptionUpdateActionBuilder.of()).build());
         return this;
     }
 

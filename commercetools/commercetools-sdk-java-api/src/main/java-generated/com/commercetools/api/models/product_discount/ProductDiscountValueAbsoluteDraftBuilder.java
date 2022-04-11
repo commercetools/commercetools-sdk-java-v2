@@ -17,10 +17,18 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
         return this;
     }
 
-    public ProductDiscountValueAbsoluteDraftBuilder withMoney(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.money = new ArrayList<>();
-        this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
+    public ProductDiscountValueAbsoluteDraftBuilder money(
+            final java.util.List<com.commercetools.api.models.common.Money> money) {
+        this.money = money;
+        return this;
+    }
+
+    public ProductDiscountValueAbsoluteDraftBuilder plusMoney(
+            final com.commercetools.api.models.common.Money... money) {
+        if (this.money == null) {
+            this.money = new ArrayList<>();
+        }
+        this.money.addAll(Arrays.asList(money));
         return this;
     }
 
@@ -33,9 +41,10 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
         return this;
     }
 
-    public ProductDiscountValueAbsoluteDraftBuilder money(
-            final java.util.List<com.commercetools.api.models.common.Money> money) {
-        this.money = money;
+    public ProductDiscountValueAbsoluteDraftBuilder withMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.money = new ArrayList<>();
+        this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
         return this;
     }
 

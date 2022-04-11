@@ -60,6 +60,14 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this;
     }
 
+    public InvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object... allowedValues) {
+        if (this.allowedValues == null) {
+            this.allowedValues = new ArrayList<>();
+        }
+        this.allowedValues.addAll(Arrays.asList(allowedValues));
+        return this;
+    }
+
     public String getMessage() {
         return this.message;
     }

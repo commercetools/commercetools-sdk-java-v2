@@ -24,6 +24,14 @@ public interface ShippingRateInput {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.cart.ClassificationShippingRateInputBuilder classificationBuilder() {
+        return com.commercetools.api.models.cart.ClassificationShippingRateInputBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.ScoreShippingRateInputBuilder scoreBuilder() {
+        return com.commercetools.api.models.cart.ScoreShippingRateInputBuilder.of();
+    }
+
     default <T> T withShippingRateInput(Function<ShippingRateInput, T> helper) {
         return helper.apply(this);
     }

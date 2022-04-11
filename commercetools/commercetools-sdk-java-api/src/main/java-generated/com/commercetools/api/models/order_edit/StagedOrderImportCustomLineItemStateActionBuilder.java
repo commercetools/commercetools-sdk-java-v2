@@ -26,10 +26,18 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
         return this;
     }
 
-    public StagedOrderImportCustomLineItemStateActionBuilder withState(
-            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
-        this.state = new ArrayList<>();
-        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+    public StagedOrderImportCustomLineItemStateActionBuilder state(
+            final java.util.List<com.commercetools.api.models.order.ItemState> state) {
+        this.state = state;
+        return this;
+    }
+
+    public StagedOrderImportCustomLineItemStateActionBuilder plusState(
+            final com.commercetools.api.models.order.ItemState... state) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.addAll(Arrays.asList(state));
         return this;
     }
 
@@ -42,9 +50,10 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
         return this;
     }
 
-    public StagedOrderImportCustomLineItemStateActionBuilder state(
-            final java.util.List<com.commercetools.api.models.order.ItemState> state) {
-        this.state = state;
+    public StagedOrderImportCustomLineItemStateActionBuilder withState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        this.state = new ArrayList<>();
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
 

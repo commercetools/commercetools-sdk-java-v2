@@ -67,6 +67,14 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
         return this;
     }
 
+    public MissingAttributesBuilder plusMissingAttributeValues(final String... missingAttributeValues) {
+        if (this.missingAttributeValues == null) {
+            this.missingAttributeValues = new ArrayList<>();
+        }
+        this.missingAttributeValues.addAll(Arrays.asList(missingAttributeValues));
+        return this;
+    }
+
     public MissingAttributesBuilder missingAttributeNames(@Nullable final String... missingAttributeNames) {
         this.missingAttributeNames = new ArrayList<>(Arrays.asList(missingAttributeNames));
         return this;
@@ -75,6 +83,14 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     public MissingAttributesBuilder missingAttributeNames(
             @Nullable final java.util.List<String> missingAttributeNames) {
         this.missingAttributeNames = missingAttributeNames;
+        return this;
+    }
+
+    public MissingAttributesBuilder plusMissingAttributeNames(@Nullable final String... missingAttributeNames) {
+        if (this.missingAttributeNames == null) {
+            this.missingAttributeNames = new ArrayList<>();
+        }
+        this.missingAttributeNames.addAll(Arrays.asList(missingAttributeNames));
         return this;
     }
 

@@ -49,11 +49,18 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
         return this;
     }
 
-    public ProductSelectionPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(
-            builder.apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of()).build());
+    public ProductSelectionPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ProductSelectionPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.product_selection.ProductSelection... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -67,9 +74,11 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
         return this;
     }
 
-    public ProductSelectionPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results) {
-        this.results = results;
+    public ProductSelectionPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(
+            builder.apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of()).build());
         return this;
     }
 

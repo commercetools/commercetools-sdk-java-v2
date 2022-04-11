@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -19,6 +20,31 @@ public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDisco
     public ProductDiscountValueAbsoluteBuilder money(
             final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
         this.money = money;
+        return this;
+    }
+
+    public ProductDiscountValueAbsoluteBuilder plusMoney(
+            final com.commercetools.api.models.common.TypedMoney... money) {
+        if (this.money == null) {
+            this.money = new ArrayList<>();
+        }
+        this.money.addAll(Arrays.asList(money));
+        return this;
+    }
+
+    public ProductDiscountValueAbsoluteBuilder plusMoney(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        if (this.money == null) {
+            this.money = new ArrayList<>();
+        }
+        this.money.add(builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build());
+        return this;
+    }
+
+    public ProductDiscountValueAbsoluteBuilder withMoney(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.money = new ArrayList<>();
+        this.money.add(builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -19,9 +20,21 @@ public class CustomLineItemTaxedPriceBuilder implements Builder<CustomLineItemTa
         return this;
     }
 
+    public CustomLineItemTaxedPriceBuilder totalNet(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        this.totalNet = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemTaxedPriceBuilder totalGross(
             final com.commercetools.importapi.models.common.TypedMoney totalGross) {
         this.totalGross = totalGross;
+        return this;
+    }
+
+    public CustomLineItemTaxedPriceBuilder totalGross(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        this.totalGross = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 

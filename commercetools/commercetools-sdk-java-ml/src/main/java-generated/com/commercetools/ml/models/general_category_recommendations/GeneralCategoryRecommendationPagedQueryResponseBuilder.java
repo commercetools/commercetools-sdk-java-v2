@@ -40,13 +40,18 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder
-                .apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder
-                        .of())
-                .build());
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results) {
+        this.results = results;
+        return this;
+    }
+
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder plusResults(
+            final com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -62,9 +67,13 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
-    public GeneralCategoryRecommendationPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results) {
-        this.results = results;
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder
+                        .of())
+                .build());
         return this;
     }
 

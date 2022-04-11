@@ -111,11 +111,18 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
-    public ProductDraftImportBuilder withCategories(
-            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
-        this.categories = new ArrayList<>();
-        this.categories
-                .add(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()).build());
+    public ProductDraftImportBuilder categories(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
+        this.categories = categories;
+        return this;
+    }
+
+    public ProductDraftImportBuilder plusCategories(
+            @Nullable final com.commercetools.importapi.models.common.CategoryKeyReference... categories) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories.addAll(Arrays.asList(categories));
         return this;
     }
 
@@ -129,9 +136,11 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
-    public ProductDraftImportBuilder categories(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
-        this.categories = categories;
+    public ProductDraftImportBuilder withCategories(
+            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
+        this.categories = new ArrayList<>();
+        this.categories
+                .add(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()).build());
         return this;
     }
 
@@ -193,12 +202,18 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
-    public ProductDraftImportBuilder withVariants(
-            Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder> builder) {
-        this.variants = new ArrayList<>();
-        this.variants.add(
-            builder.apply(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder.of())
-                    .build());
+    public ProductDraftImportBuilder variants(
+            @Nullable final java.util.List<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> variants) {
+        this.variants = variants;
+        return this;
+    }
+
+    public ProductDraftImportBuilder plusVariants(
+            @Nullable final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport... variants) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.addAll(Arrays.asList(variants));
         return this;
     }
 
@@ -213,9 +228,12 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
-    public ProductDraftImportBuilder variants(
-            @Nullable final java.util.List<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> variants) {
-        this.variants = variants;
+    public ProductDraftImportBuilder withVariants(
+            Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(
+            builder.apply(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder.of())
+                    .build());
         return this;
     }
 

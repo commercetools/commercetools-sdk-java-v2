@@ -18,12 +18,18 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
         return this;
     }
 
-    public ProductPriceDiscountsSetMessagePayloadBuilder withUpdatedPrices(
-            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {
-        this.updatedPrices = new ArrayList<>();
-        this.updatedPrices.add(
-            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of())
-                    .build());
+    public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices(
+            final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
+        this.updatedPrices = updatedPrices;
+        return this;
+    }
+
+    public ProductPriceDiscountsSetMessagePayloadBuilder plusUpdatedPrices(
+            final com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice... updatedPrices) {
+        if (this.updatedPrices == null) {
+            this.updatedPrices = new ArrayList<>();
+        }
+        this.updatedPrices.addAll(Arrays.asList(updatedPrices));
         return this;
     }
 
@@ -38,9 +44,12 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
         return this;
     }
 
-    public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices(
-            final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
-        this.updatedPrices = updatedPrices;
+    public ProductPriceDiscountsSetMessagePayloadBuilder withUpdatedPrices(
+            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {
+        this.updatedPrices = new ArrayList<>();
+        this.updatedPrices.add(
+            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of())
+                    .build());
         return this;
     }
 

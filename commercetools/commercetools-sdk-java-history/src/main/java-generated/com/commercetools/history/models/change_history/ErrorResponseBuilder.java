@@ -51,10 +51,18 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this;
     }
 
-    public ErrorResponseBuilder withErrors(
-            Function<com.commercetools.history.models.change_history.ErrorObjectBuilder, com.commercetools.history.models.change_history.ErrorObjectBuilder> builder) {
-        this.errors = new ArrayList<>();
-        this.errors.add(builder.apply(com.commercetools.history.models.change_history.ErrorObjectBuilder.of()).build());
+    public ErrorResponseBuilder errors(
+            @Nullable final java.util.List<com.commercetools.history.models.change_history.ErrorObject> errors) {
+        this.errors = errors;
+        return this;
+    }
+
+    public ErrorResponseBuilder plusErrors(
+            @Nullable final com.commercetools.history.models.change_history.ErrorObject... errors) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.addAll(Arrays.asList(errors));
         return this;
     }
 
@@ -67,9 +75,10 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this;
     }
 
-    public ErrorResponseBuilder errors(
-            @Nullable final java.util.List<com.commercetools.history.models.change_history.ErrorObject> errors) {
-        this.errors = errors;
+    public ErrorResponseBuilder withErrors(
+            Function<com.commercetools.history.models.change_history.ErrorObjectBuilder, com.commercetools.history.models.change_history.ErrorObjectBuilder> builder) {
+        this.errors = new ArrayList<>();
+        this.errors.add(builder.apply(com.commercetools.history.models.change_history.ErrorObjectBuilder.of()).build());
         return this;
     }
 

@@ -31,6 +31,14 @@ public class DateTimeSetAttributeBuilder implements Builder<DateTimeSetAttribute
         return this;
     }
 
+    public DateTimeSetAttributeBuilder plusValue(final java.time.ZonedDateTime... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     @Nullable
     public String getName() {
         return this.name;

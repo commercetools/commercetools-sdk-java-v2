@@ -17,10 +17,17 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
         return this;
     }
 
-    public CartDiscountValueFixedDraftBuilder withMoney(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.money = new ArrayList<>();
-        this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
+    public CartDiscountValueFixedDraftBuilder money(
+            final java.util.List<com.commercetools.api.models.common.Money> money) {
+        this.money = money;
+        return this;
+    }
+
+    public CartDiscountValueFixedDraftBuilder plusMoney(final com.commercetools.api.models.common.Money... money) {
+        if (this.money == null) {
+            this.money = new ArrayList<>();
+        }
+        this.money.addAll(Arrays.asList(money));
         return this;
     }
 
@@ -33,9 +40,10 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
         return this;
     }
 
-    public CartDiscountValueFixedDraftBuilder money(
-            final java.util.List<com.commercetools.api.models.common.Money> money) {
-        this.money = money;
+    public CartDiscountValueFixedDraftBuilder withMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
+        this.money = new ArrayList<>();
+        this.money.add(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build());
         return this;
     }
 

@@ -31,11 +31,18 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
-    public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {
-        this.includedDiscounts = new ArrayList<>();
-        this.includedDiscounts
-                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());
+    public DiscountedLineItemPriceDraftBuilder includedDiscounts(
+            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
+        this.includedDiscounts = includedDiscounts;
+        return this;
+    }
+
+    public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
+            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
+        if (this.includedDiscounts == null) {
+            this.includedDiscounts = new ArrayList<>();
+        }
+        this.includedDiscounts.addAll(Arrays.asList(includedDiscounts));
         return this;
     }
 
@@ -49,9 +56,11 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
-    public DiscountedLineItemPriceDraftBuilder includedDiscounts(
-            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
-        this.includedDiscounts = includedDiscounts;
+    public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {
+        this.includedDiscounts = new ArrayList<>();
+        this.includedDiscounts
+                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());
         return this;
     }
 

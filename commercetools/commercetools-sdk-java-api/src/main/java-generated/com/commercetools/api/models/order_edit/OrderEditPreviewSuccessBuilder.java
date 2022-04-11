@@ -37,6 +37,33 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
         return this;
     }
 
+    public OrderEditPreviewSuccessBuilder plusMessagePayloads(
+            final com.commercetools.api.models.message.MessagePayload... messagePayloads) {
+        if (this.messagePayloads == null) {
+            this.messagePayloads = new ArrayList<>();
+        }
+        this.messagePayloads.addAll(Arrays.asList(messagePayloads));
+        return this;
+    }
+
+    public OrderEditPreviewSuccessBuilder plusMessagePayloads(
+            Function<com.commercetools.api.models.message.MessagePayloadBuilder, Builder<? extends com.commercetools.api.models.message.MessagePayload>> builder) {
+        if (this.messagePayloads == null) {
+            this.messagePayloads = new ArrayList<>();
+        }
+        this.messagePayloads
+                .add(builder.apply(com.commercetools.api.models.message.MessagePayloadBuilder.of()).build());
+        return this;
+    }
+
+    public OrderEditPreviewSuccessBuilder withMessagePayloads(
+            Function<com.commercetools.api.models.message.MessagePayloadBuilder, Builder<? extends com.commercetools.api.models.message.MessagePayload>> builder) {
+        this.messagePayloads = new ArrayList<>();
+        this.messagePayloads
+                .add(builder.apply(com.commercetools.api.models.message.MessagePayloadBuilder.of()).build());
+        return this;
+    }
+
     public com.commercetools.api.models.order_edit.StagedOrder getPreview() {
         return this.preview;
     }

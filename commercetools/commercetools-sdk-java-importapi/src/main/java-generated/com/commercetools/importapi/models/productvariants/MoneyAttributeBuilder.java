@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -23,6 +24,12 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
 
     public MoneyAttributeBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
+        return this;
+    }
+
+    public MoneyAttributeBuilder value(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -26,6 +27,30 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     public ReturnInfoBuilder items(final java.util.List<com.commercetools.api.models.order.ReturnItem> items) {
         this.items = items;
+        return this;
+    }
+
+    public ReturnInfoBuilder plusItems(final com.commercetools.api.models.order.ReturnItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
+        return this;
+    }
+
+    public ReturnInfoBuilder plusItems(
+            Function<com.commercetools.api.models.order.ReturnItemBuilder, Builder<? extends com.commercetools.api.models.order.ReturnItem>> builder) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemBuilder.of()).build());
+        return this;
+    }
+
+    public ReturnInfoBuilder withItems(
+            Function<com.commercetools.api.models.order.ReturnItemBuilder, Builder<? extends com.commercetools.api.models.order.ReturnItem>> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemBuilder.of()).build());
         return this;
     }
 

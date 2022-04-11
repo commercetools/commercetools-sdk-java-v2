@@ -17,10 +17,17 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
         return this;
     }
 
-    public PaymentInfoBuilder withPayments(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.payments = new ArrayList<>();
-        this.payments.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+    public PaymentInfoBuilder payments(
+            final java.util.List<com.commercetools.history.models.common.Reference> payments) {
+        this.payments = payments;
+        return this;
+    }
+
+    public PaymentInfoBuilder plusPayments(final com.commercetools.history.models.common.Reference... payments) {
+        if (this.payments == null) {
+            this.payments = new ArrayList<>();
+        }
+        this.payments.addAll(Arrays.asList(payments));
         return this;
     }
 
@@ -33,9 +40,10 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
         return this;
     }
 
-    public PaymentInfoBuilder payments(
-            final java.util.List<com.commercetools.history.models.common.Reference> payments) {
-        this.payments = payments;
+    public PaymentInfoBuilder withPayments(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.payments = new ArrayList<>();
+        this.payments.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 

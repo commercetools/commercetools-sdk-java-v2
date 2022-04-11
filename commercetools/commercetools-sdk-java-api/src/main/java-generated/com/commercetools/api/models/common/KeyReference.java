@@ -30,6 +30,10 @@ public interface KeyReference {
 
     public void setKey(final String key);
 
+    public static com.commercetools.api.models.store.StoreKeyReferenceBuilder storeBuilder() {
+        return com.commercetools.api.models.store.StoreKeyReferenceBuilder.of();
+    }
+
     default <T> T withKeyReference(Function<KeyReference, T> helper) {
         return helper.apply(this);
     }

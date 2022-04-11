@@ -33,6 +33,46 @@ public interface ProductDiscountUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.product_discount.ProductDiscountChangeIsActiveActionBuilder changeIsActiveBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountChangeIsActiveActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountChangePredicateActionBuilder changePredicateBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountChangePredicateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountChangeSortOrderActionBuilder changeSortOrderBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountChangeSortOrderActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountChangeValueActionBuilder changeValueBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountChangeValueActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountSetDescriptionActionBuilder setDescriptionBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountSetDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountSetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountSetValidFromActionBuilder setValidFromBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountSetValidFromActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountSetValidFromAndUntilActionBuilder setValidFromAndUntilBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountSetValidFromAndUntilActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountSetValidUntilActionBuilder setValidUntilBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountSetValidUntilActionBuilder.of();
+    }
+
     default <T> T withProductDiscountUpdateAction(Function<ProductDiscountUpdateAction, T> helper) {
         return helper.apply(this);
     }

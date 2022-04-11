@@ -29,6 +29,30 @@ public interface ProductSelectionUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.product_selection.ProductSelectionAddProductActionBuilder addProductBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionAddProductActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductSelectionChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductSelectionRemoveProductActionBuilder removeProductBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionRemoveProductActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionBuilder.of();
+    }
+
     default <T> T withProductSelectionUpdateAction(Function<ProductSelectionUpdateAction, T> helper) {
         return helper.apply(this);
     }

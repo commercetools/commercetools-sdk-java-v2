@@ -33,6 +33,14 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
         return this;
     }
 
+    public RemoveBillingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
+        return this;
+    }
+
     public RemoveBillingAddressIdChangeBuilder previousValue(final String... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
@@ -40,6 +48,14 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
 
     public RemoveBillingAddressIdChangeBuilder previousValue(final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public RemoveBillingAddressIdChangeBuilder plusPreviousValue(final String... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 

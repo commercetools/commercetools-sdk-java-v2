@@ -94,6 +94,12 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
         return this;
     }
 
+    public PaymentStatusInterfaceCodeSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public PaymentStatusInterfaceCodeSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;

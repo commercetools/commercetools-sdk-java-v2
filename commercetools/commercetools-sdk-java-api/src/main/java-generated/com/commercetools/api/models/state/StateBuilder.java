@@ -141,15 +141,31 @@ public class StateBuilder implements Builder<State> {
         return this;
     }
 
+    public StateBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
+        if (this.roles == null) {
+            this.roles = new ArrayList<>();
+        }
+        this.roles.addAll(Arrays.asList(roles));
+        return this;
+    }
+
     public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference... transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
         return this;
     }
 
-    public StateBuilder withTransitions(
-            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
-        this.transitions = new ArrayList<>();
-        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());
+    public StateBuilder transitions(
+            @Nullable final java.util.List<com.commercetools.api.models.state.StateReference> transitions) {
+        this.transitions = transitions;
+        return this;
+    }
+
+    public StateBuilder plusTransitions(
+            @Nullable final com.commercetools.api.models.state.StateReference... transitions) {
+        if (this.transitions == null) {
+            this.transitions = new ArrayList<>();
+        }
+        this.transitions.addAll(Arrays.asList(transitions));
         return this;
     }
 
@@ -162,9 +178,10 @@ public class StateBuilder implements Builder<State> {
         return this;
     }
 
-    public StateBuilder transitions(
-            @Nullable final java.util.List<com.commercetools.api.models.state.StateReference> transitions) {
-        this.transitions = transitions;
+    public StateBuilder withTransitions(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
+        this.transitions = new ArrayList<>();
+        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());
         return this;
     }
 

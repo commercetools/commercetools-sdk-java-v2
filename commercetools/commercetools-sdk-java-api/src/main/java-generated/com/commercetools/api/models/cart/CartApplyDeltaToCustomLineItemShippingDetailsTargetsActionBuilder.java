@@ -27,10 +27,18 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
         return this;
     }
 
-    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(
-            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {
-        this.targetsDelta = new ArrayList<>();
-        this.targetsDelta.add(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()).build());
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder targetsDelta(
+            final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
+        this.targetsDelta = targetsDelta;
+        return this;
+    }
+
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder plusTargetsDelta(
+            final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {
+        if (this.targetsDelta == null) {
+            this.targetsDelta = new ArrayList<>();
+        }
+        this.targetsDelta.addAll(Arrays.asList(targetsDelta));
         return this;
     }
 
@@ -43,9 +51,10 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
         return this;
     }
 
-    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder targetsDelta(
-            final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
-        this.targetsDelta = targetsDelta;
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder withTargetsDelta(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {
+        this.targetsDelta = new ArrayList<>();
+        this.targetsDelta.add(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()).build());
         return this;
     }
 

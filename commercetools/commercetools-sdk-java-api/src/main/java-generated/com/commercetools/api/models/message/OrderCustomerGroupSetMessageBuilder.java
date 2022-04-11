@@ -95,6 +95,12 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
         return this;
     }
 
+    public OrderCustomerGroupSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderCustomerGroupSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;

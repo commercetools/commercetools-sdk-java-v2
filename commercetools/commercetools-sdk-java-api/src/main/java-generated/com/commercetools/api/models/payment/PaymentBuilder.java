@@ -120,6 +120,12 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
+    public PaymentBuilder amountPlanned(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.amountPlanned = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public PaymentBuilder paymentMethodInfo(
             Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder> builder) {
         this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())
@@ -149,10 +155,17 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
-    public PaymentBuilder withTransactions(
-            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
-        this.transactions = new ArrayList<>();
-        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());
+    public PaymentBuilder transactions(
+            final java.util.List<com.commercetools.api.models.payment.Transaction> transactions) {
+        this.transactions = transactions;
+        return this;
+    }
+
+    public PaymentBuilder plusTransactions(final com.commercetools.api.models.payment.Transaction... transactions) {
+        if (this.transactions == null) {
+            this.transactions = new ArrayList<>();
+        }
+        this.transactions.addAll(Arrays.asList(transactions));
         return this;
     }
 
@@ -165,9 +178,10 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
-    public PaymentBuilder transactions(
-            final java.util.List<com.commercetools.api.models.payment.Transaction> transactions) {
-        this.transactions = transactions;
+    public PaymentBuilder withTransactions(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
+        this.transactions = new ArrayList<>();
+        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());
         return this;
     }
 
@@ -177,11 +191,18 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
-    public PaymentBuilder withInterfaceInteractions(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
-        this.interfaceInteractions = new ArrayList<>();
-        this.interfaceInteractions
-                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build());
+    public PaymentBuilder interfaceInteractions(
+            final java.util.List<com.commercetools.api.models.type.CustomFields> interfaceInteractions) {
+        this.interfaceInteractions = interfaceInteractions;
+        return this;
+    }
+
+    public PaymentBuilder plusInterfaceInteractions(
+            final com.commercetools.api.models.type.CustomFields... interfaceInteractions) {
+        if (this.interfaceInteractions == null) {
+            this.interfaceInteractions = new ArrayList<>();
+        }
+        this.interfaceInteractions.addAll(Arrays.asList(interfaceInteractions));
         return this;
     }
 
@@ -195,9 +216,11 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
-    public PaymentBuilder interfaceInteractions(
-            final java.util.List<com.commercetools.api.models.type.CustomFields> interfaceInteractions) {
-        this.interfaceInteractions = interfaceInteractions;
+    public PaymentBuilder withInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.interfaceInteractions = new ArrayList<>();
+        this.interfaceInteractions
+                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build());
         return this;
     }
 

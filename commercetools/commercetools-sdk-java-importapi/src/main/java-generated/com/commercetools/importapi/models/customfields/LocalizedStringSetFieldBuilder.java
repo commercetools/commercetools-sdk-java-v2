@@ -18,10 +18,18 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
         return this;
     }
 
-    public LocalizedStringSetFieldBuilder withValue(
-            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
-        this.value = new ArrayList<>();
-        this.value.add(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build());
+    public LocalizedStringSetFieldBuilder value(
+            final java.util.List<com.commercetools.importapi.models.common.LocalizedString> value) {
+        this.value = value;
+        return this;
+    }
+
+    public LocalizedStringSetFieldBuilder plusValue(
+            final com.commercetools.importapi.models.common.LocalizedString... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
         return this;
     }
 
@@ -34,9 +42,10 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
         return this;
     }
 
-    public LocalizedStringSetFieldBuilder value(
-            final java.util.List<com.commercetools.importapi.models.common.LocalizedString> value) {
-        this.value = value;
+    public LocalizedStringSetFieldBuilder withValue(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.value = new ArrayList<>();
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
 

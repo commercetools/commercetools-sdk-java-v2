@@ -104,10 +104,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return this;
     }
 
-    public OrderImportDraftBuilder withLineItems(
-            Function<com.commercetools.api.models.order.LineItemImportDraftBuilder, com.commercetools.api.models.order.LineItemImportDraftBuilder> builder) {
-        this.lineItems = new ArrayList<>();
-        this.lineItems.add(builder.apply(com.commercetools.api.models.order.LineItemImportDraftBuilder.of()).build());
+    public OrderImportDraftBuilder lineItems(
+            @Nullable final java.util.List<com.commercetools.api.models.order.LineItemImportDraft> lineItems) {
+        this.lineItems = lineItems;
+        return this;
+    }
+
+    public OrderImportDraftBuilder plusLineItems(
+            @Nullable final com.commercetools.api.models.order.LineItemImportDraft... lineItems) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.addAll(Arrays.asList(lineItems));
         return this;
     }
 
@@ -120,9 +128,10 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return this;
     }
 
-    public OrderImportDraftBuilder lineItems(
-            @Nullable final java.util.List<com.commercetools.api.models.order.LineItemImportDraft> lineItems) {
-        this.lineItems = lineItems;
+    public OrderImportDraftBuilder withLineItems(
+            Function<com.commercetools.api.models.order.LineItemImportDraftBuilder, com.commercetools.api.models.order.LineItemImportDraftBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems.add(builder.apply(com.commercetools.api.models.order.LineItemImportDraftBuilder.of()).build());
         return this;
     }
 
@@ -132,11 +141,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return this;
     }
 
-    public OrderImportDraftBuilder withCustomLineItems(
-            Function<com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder, com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder> builder) {
-        this.customLineItems = new ArrayList<>();
-        this.customLineItems
-                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder.of()).build());
+    public OrderImportDraftBuilder customLineItems(
+            @Nullable final java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> customLineItems) {
+        this.customLineItems = customLineItems;
+        return this;
+    }
+
+    public OrderImportDraftBuilder plusCustomLineItems(
+            @Nullable final com.commercetools.api.models.cart.CustomLineItemImportDraft... customLineItems) {
+        if (this.customLineItems == null) {
+            this.customLineItems = new ArrayList<>();
+        }
+        this.customLineItems.addAll(Arrays.asList(customLineItems));
         return this;
     }
 
@@ -150,9 +166,11 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return this;
     }
 
-    public OrderImportDraftBuilder customLineItems(
-            @Nullable final java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> customLineItems) {
-        this.customLineItems = customLineItems;
+    public OrderImportDraftBuilder withCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder, com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder> builder) {
+        this.customLineItems = new ArrayList<>();
+        this.customLineItems
+                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder.of()).build());
         return this;
     }
 
@@ -310,11 +328,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return this;
     }
 
-    public OrderImportDraftBuilder withItemShippingAddresses(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
-        this.itemShippingAddresses = new ArrayList<>();
-        this.itemShippingAddresses
-                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
+    public OrderImportDraftBuilder itemShippingAddresses(
+            @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses) {
+        this.itemShippingAddresses = itemShippingAddresses;
+        return this;
+    }
+
+    public OrderImportDraftBuilder plusItemShippingAddresses(
+            @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {
+        if (this.itemShippingAddresses == null) {
+            this.itemShippingAddresses = new ArrayList<>();
+        }
+        this.itemShippingAddresses.addAll(Arrays.asList(itemShippingAddresses));
         return this;
     }
 
@@ -328,9 +353,11 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         return this;
     }
 
-    public OrderImportDraftBuilder itemShippingAddresses(
-            @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses) {
-        this.itemShippingAddresses = itemShippingAddresses;
+    public OrderImportDraftBuilder withItemShippingAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.itemShippingAddresses = new ArrayList<>();
+        this.itemShippingAddresses
+                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,12 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
     public AttributeSetTypeBuilder elementType(
             final com.commercetools.api.models.product_type.AttributeType elementType) {
         this.elementType = elementType;
+        return this;
+    }
+
+    public AttributeSetTypeBuilder elementType(
+            Function<com.commercetools.api.models.product_type.AttributeTypeBuilder, Builder<? extends com.commercetools.api.models.product_type.AttributeType>> builder) {
+        this.elementType = builder.apply(com.commercetools.api.models.product_type.AttributeTypeBuilder.of()).build();
         return this;
     }
 

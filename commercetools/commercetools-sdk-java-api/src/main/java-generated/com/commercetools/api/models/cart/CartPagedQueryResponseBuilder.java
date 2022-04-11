@@ -48,10 +48,16 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
         return this;
     }
 
-    public CartPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build());
+    public CartPagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.cart.Cart> results) {
+        this.results = results;
+        return this;
+    }
+
+    public CartPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.cart.Cart... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,8 +70,10 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
         return this;
     }
 
-    public CartPagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.cart.Cart> results) {
-        this.results = results;
+    public CartPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build());
         return this;
     }
 

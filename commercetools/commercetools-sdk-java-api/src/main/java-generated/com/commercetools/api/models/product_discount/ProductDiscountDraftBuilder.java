@@ -68,6 +68,13 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
         return this;
     }
 
+    public ProductDiscountDraftBuilder value(
+            Function<com.commercetools.api.models.product_discount.ProductDiscountValueDraftBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountValueDraft>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.product_discount.ProductDiscountValueDraftBuilder.of())
+                .build();
+        return this;
+    }
+
     public ProductDiscountDraftBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;

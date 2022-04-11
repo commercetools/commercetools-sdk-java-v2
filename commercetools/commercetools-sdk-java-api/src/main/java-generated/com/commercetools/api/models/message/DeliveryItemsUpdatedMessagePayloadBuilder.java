@@ -27,10 +27,18 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this;
     }
 
-    public DeliveryItemsUpdatedMessagePayloadBuilder withItems(
-            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+    public DeliveryItemsUpdatedMessagePayloadBuilder items(
+            final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public DeliveryItemsUpdatedMessagePayloadBuilder plusItems(
+            final com.commercetools.api.models.order.DeliveryItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -43,9 +51,10 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this;
     }
 
-    public DeliveryItemsUpdatedMessagePayloadBuilder items(
-            final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-        this.items = items;
+    public DeliveryItemsUpdatedMessagePayloadBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -55,10 +64,18 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this;
     }
 
-    public DeliveryItemsUpdatedMessagePayloadBuilder withOldItems(
-            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
-        this.oldItems = new ArrayList<>();
-        this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+    public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
+            final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
+        this.oldItems = oldItems;
+        return this;
+    }
+
+    public DeliveryItemsUpdatedMessagePayloadBuilder plusOldItems(
+            final com.commercetools.api.models.order.DeliveryItem... oldItems) {
+        if (this.oldItems == null) {
+            this.oldItems = new ArrayList<>();
+        }
+        this.oldItems.addAll(Arrays.asList(oldItems));
         return this;
     }
 
@@ -71,9 +88,10 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         return this;
     }
 
-    public DeliveryItemsUpdatedMessagePayloadBuilder oldItems(
-            final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
-        this.oldItems = oldItems;
+    public DeliveryItemsUpdatedMessagePayloadBuilder withOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.oldItems = new ArrayList<>();
+        this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 

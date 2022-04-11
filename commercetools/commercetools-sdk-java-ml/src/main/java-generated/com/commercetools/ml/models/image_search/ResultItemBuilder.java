@@ -25,10 +25,18 @@ public class ResultItemBuilder implements Builder<ResultItem> {
         return this;
     }
 
-    public ResultItemBuilder withProductVariants(
-            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
-        this.productVariants = new ArrayList<>();
-        this.productVariants.add(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()).build());
+    public ResultItemBuilder productVariants(
+            final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
+        this.productVariants = productVariants;
+        return this;
+    }
+
+    public ResultItemBuilder plusProductVariants(
+            final com.commercetools.ml.models.common.ProductVariant... productVariants) {
+        if (this.productVariants == null) {
+            this.productVariants = new ArrayList<>();
+        }
+        this.productVariants.addAll(Arrays.asList(productVariants));
         return this;
     }
 
@@ -41,9 +49,10 @@ public class ResultItemBuilder implements Builder<ResultItem> {
         return this;
     }
 
-    public ResultItemBuilder productVariants(
-            final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
-        this.productVariants = productVariants;
+    public ResultItemBuilder withProductVariants(
+            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
+        this.productVariants = new ArrayList<>();
+        this.productVariants.add(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()).build());
         return this;
     }
 

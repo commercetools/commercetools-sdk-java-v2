@@ -40,10 +40,18 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this;
     }
 
-    public DuplicateAttributeValuesErrorBuilder withAttributes(
-            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
-        this.attributes = new ArrayList<>();
-        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+    public DuplicateAttributeValuesErrorBuilder attributes(
+            final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    public DuplicateAttributeValuesErrorBuilder plusAttributes(
+            final com.commercetools.api.models.product.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
 
@@ -56,9 +64,10 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
         return this;
     }
 
-    public DuplicateAttributeValuesErrorBuilder attributes(
-            final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
-        this.attributes = attributes;
+    public DuplicateAttributeValuesErrorBuilder withAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
     }
 

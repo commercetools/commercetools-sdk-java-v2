@@ -43,10 +43,17 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
         return this;
     }
 
-    public ZoneDraftBuilder withLocations(
-            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
-        this.locations = new ArrayList<>();
-        this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
+    public ZoneDraftBuilder locations(
+            @Nullable final java.util.List<com.commercetools.api.models.zone.Location> locations) {
+        this.locations = locations;
+        return this;
+    }
+
+    public ZoneDraftBuilder plusLocations(@Nullable final com.commercetools.api.models.zone.Location... locations) {
+        if (this.locations == null) {
+            this.locations = new ArrayList<>();
+        }
+        this.locations.addAll(Arrays.asList(locations));
         return this;
     }
 
@@ -59,9 +66,10 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
         return this;
     }
 
-    public ZoneDraftBuilder locations(
-            @Nullable final java.util.List<com.commercetools.api.models.zone.Location> locations) {
-        this.locations = locations;
+    public ZoneDraftBuilder withLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
+        this.locations = new ArrayList<>();
+        this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
         return this;
     }
 

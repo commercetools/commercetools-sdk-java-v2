@@ -48,10 +48,16 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
         return this;
     }
 
-    public TypePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build());
+    public TypePagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.type.Type> results) {
+        this.results = results;
+        return this;
+    }
+
+    public TypePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.type.Type... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,8 +70,10 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
         return this;
     }
 
-    public TypePagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.type.Type> results) {
-        this.results = results;
+    public TypePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build());
         return this;
     }
 

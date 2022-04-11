@@ -91,6 +91,12 @@ public class DeliveryAddedMessageBuilder implements Builder<DeliveryAddedMessage
         return this;
     }
 
+    public DeliveryAddedMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public DeliveryAddedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;

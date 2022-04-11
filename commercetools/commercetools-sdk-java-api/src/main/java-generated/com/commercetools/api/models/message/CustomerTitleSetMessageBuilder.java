@@ -92,6 +92,12 @@ public class CustomerTitleSetMessageBuilder implements Builder<CustomerTitleSetM
         return this;
     }
 
+    public CustomerTitleSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public CustomerTitleSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;

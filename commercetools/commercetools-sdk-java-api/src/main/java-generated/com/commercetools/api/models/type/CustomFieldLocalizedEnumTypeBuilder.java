@@ -18,11 +18,18 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
         return this;
     }
 
-    public CustomFieldLocalizedEnumTypeBuilder withValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
-        this.values = new ArrayList<>();
-        this.values.add(
-            builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
+    public CustomFieldLocalizedEnumTypeBuilder values(
+            final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
+        this.values = values;
+        return this;
+    }
+
+    public CustomFieldLocalizedEnumTypeBuilder plusValues(
+            final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue... values) {
+        if (this.values == null) {
+            this.values = new ArrayList<>();
+        }
+        this.values.addAll(Arrays.asList(values));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
         return this;
     }
 
-    public CustomFieldLocalizedEnumTypeBuilder values(
-            final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
-        this.values = values;
+    public CustomFieldLocalizedEnumTypeBuilder withValues(
+            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
+        this.values = new ArrayList<>();
+        this.values.add(
+            builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
         return this;
     }
 

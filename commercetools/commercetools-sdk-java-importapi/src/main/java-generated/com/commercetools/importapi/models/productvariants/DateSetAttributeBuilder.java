@@ -31,6 +31,14 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
         return this;
     }
 
+    public DateSetAttributeBuilder plusValue(final java.time.LocalDate... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     @Nullable
     public String getName() {
         return this.name;

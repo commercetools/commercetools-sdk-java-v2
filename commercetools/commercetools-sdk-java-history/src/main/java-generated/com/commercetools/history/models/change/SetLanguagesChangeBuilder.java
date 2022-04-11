@@ -30,6 +30,14 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
         return this;
     }
 
+    public SetLanguagesChangeBuilder plusPreviousValue(final String... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
+        return this;
+    }
+
     public SetLanguagesChangeBuilder nextValue(final String... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
@@ -37,6 +45,14 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     public SetLanguagesChangeBuilder nextValue(final java.util.List<String> nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetLanguagesChangeBuilder plusNextValue(final String... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 

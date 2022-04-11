@@ -18,11 +18,18 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
         return this;
     }
 
-    public CartClassificationTypeBuilder withValues(
-            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
-        this.values = new ArrayList<>();
-        this.values.add(
-            builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
+    public CartClassificationTypeBuilder values(
+            final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
+        this.values = values;
+        return this;
+    }
+
+    public CartClassificationTypeBuilder plusValues(
+            final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue... values) {
+        if (this.values == null) {
+            this.values = new ArrayList<>();
+        }
+        this.values.addAll(Arrays.asList(values));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
         return this;
     }
 
-    public CartClassificationTypeBuilder values(
-            final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
-        this.values = values;
+    public CartClassificationTypeBuilder withValues(
+            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
+        this.values = new ArrayList<>();
+        this.values.add(
+            builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
         return this;
     }
 

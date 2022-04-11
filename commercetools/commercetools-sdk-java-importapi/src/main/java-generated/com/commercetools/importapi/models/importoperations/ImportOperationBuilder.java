@@ -79,17 +79,49 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
         return this;
     }
 
+    public ImportOperationBuilder plusErrors(
+            @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.addAll(Arrays.asList(errors));
+        return this;
+    }
+
+    public ImportOperationBuilder plusErrors(
+            Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.add(builder.apply(com.commercetools.importapi.models.errors.ErrorObjectBuilder.of()).build());
+        return this;
+    }
+
+    public ImportOperationBuilder withErrors(
+            Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
+        this.errors = new ArrayList<>();
+        this.errors.add(builder.apply(com.commercetools.importapi.models.errors.ErrorObjectBuilder.of()).build());
+        return this;
+    }
+
     public ImportOperationBuilder unresolvedReferences(
             @Nullable final com.commercetools.importapi.models.common.UnresolvedReferences... unresolvedReferences) {
         this.unresolvedReferences = new ArrayList<>(Arrays.asList(unresolvedReferences));
         return this;
     }
 
-    public ImportOperationBuilder withUnresolvedReferences(
-            Function<com.commercetools.importapi.models.common.UnresolvedReferencesBuilder, com.commercetools.importapi.models.common.UnresolvedReferencesBuilder> builder) {
-        this.unresolvedReferences = new ArrayList<>();
-        this.unresolvedReferences
-                .add(builder.apply(com.commercetools.importapi.models.common.UnresolvedReferencesBuilder.of()).build());
+    public ImportOperationBuilder unresolvedReferences(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> unresolvedReferences) {
+        this.unresolvedReferences = unresolvedReferences;
+        return this;
+    }
+
+    public ImportOperationBuilder plusUnresolvedReferences(
+            @Nullable final com.commercetools.importapi.models.common.UnresolvedReferences... unresolvedReferences) {
+        if (this.unresolvedReferences == null) {
+            this.unresolvedReferences = new ArrayList<>();
+        }
+        this.unresolvedReferences.addAll(Arrays.asList(unresolvedReferences));
         return this;
     }
 
@@ -103,9 +135,11 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
         return this;
     }
 
-    public ImportOperationBuilder unresolvedReferences(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> unresolvedReferences) {
-        this.unresolvedReferences = unresolvedReferences;
+    public ImportOperationBuilder withUnresolvedReferences(
+            Function<com.commercetools.importapi.models.common.UnresolvedReferencesBuilder, com.commercetools.importapi.models.common.UnresolvedReferencesBuilder> builder) {
+        this.unresolvedReferences = new ArrayList<>();
+        this.unresolvedReferences
+                .add(builder.apply(com.commercetools.importapi.models.common.UnresolvedReferencesBuilder.of()).build());
         return this;
     }
 

@@ -81,6 +81,13 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         return this;
     }
 
+    public CartDiscountDraftBuilder value(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountValueDraftBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountValueDraft>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountValueDraftBuilder.of())
+                .build();
+        return this;
+    }
+
     public CartDiscountDraftBuilder cartPredicate(final String cartPredicate) {
         this.cartPredicate = cartPredicate;
         return this;
@@ -89,6 +96,12 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     public CartDiscountDraftBuilder target(
             @Nullable final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.target = target;
+        return this;
+    }
+
+    public CartDiscountDraftBuilder target(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountTarget>> builder) {
+        this.target = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder.of()).build();
         return this;
     }
 

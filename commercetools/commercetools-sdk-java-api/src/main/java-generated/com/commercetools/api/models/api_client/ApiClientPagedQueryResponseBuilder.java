@@ -49,10 +49,18 @@ public class ApiClientPagedQueryResponseBuilder implements Builder<ApiClientPage
         return this;
     }
 
-    public ApiClientPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.api_client.ApiClientBuilder, com.commercetools.api.models.api_client.ApiClientBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.api_client.ApiClientBuilder.of()).build());
+    public ApiClientPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.api_client.ApiClient> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ApiClientPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.api_client.ApiClient... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class ApiClientPagedQueryResponseBuilder implements Builder<ApiClientPage
         return this;
     }
 
-    public ApiClientPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.api_client.ApiClient> results) {
-        this.results = results;
+    public ApiClientPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.api_client.ApiClientBuilder, com.commercetools.api.models.api_client.ApiClientBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.api_client.ApiClientBuilder.of()).build());
         return this;
     }
 

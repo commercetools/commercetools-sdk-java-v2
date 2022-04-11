@@ -31,6 +31,14 @@ public class LocalizableEnumSetAttributeBuilder implements Builder<LocalizableEn
         return this;
     }
 
+    public LocalizableEnumSetAttributeBuilder plusValue(final String... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     @Nullable
     public String getName() {
         return this.name;

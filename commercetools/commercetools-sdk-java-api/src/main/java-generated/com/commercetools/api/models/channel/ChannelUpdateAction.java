@@ -34,6 +34,54 @@ public interface ChannelUpdateAction extends com.commercetools.api.models.Resour
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.channel.ChannelAddRolesActionBuilder addRolesBuilder() {
+        return com.commercetools.api.models.channel.ChannelAddRolesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelChangeDescriptionActionBuilder changeDescriptionBuilder() {
+        return com.commercetools.api.models.channel.ChannelChangeDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelChangeKeyActionBuilder changeKeyBuilder() {
+        return com.commercetools.api.models.channel.ChannelChangeKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.channel.ChannelChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelRemoveRolesActionBuilder removeRolesBuilder() {
+        return com.commercetools.api.models.channel.ChannelRemoveRolesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelSetAddressActionBuilder setAddressBuilder() {
+        return com.commercetools.api.models.channel.ChannelSetAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelSetAddressCustomFieldActionBuilder setAddressCustomFieldBuilder() {
+        return com.commercetools.api.models.channel.ChannelSetAddressCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelSetAddressCustomTypeActionBuilder setAddressCustomTypeBuilder() {
+        return com.commercetools.api.models.channel.ChannelSetAddressCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.channel.ChannelSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.channel.ChannelSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelSetGeoLocationActionBuilder setGeoLocationBuilder() {
+        return com.commercetools.api.models.channel.ChannelSetGeoLocationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelSetRolesActionBuilder setRolesBuilder() {
+        return com.commercetools.api.models.channel.ChannelSetRolesActionBuilder.of();
+    }
+
     default <T> T withChannelUpdateAction(Function<ChannelUpdateAction, T> helper) {
         return helper.apply(this);
     }

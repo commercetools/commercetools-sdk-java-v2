@@ -31,6 +31,14 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
         return this;
     }
 
+    public BooleanSetAttributeBuilder plusValue(final Boolean... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     @Nullable
     public String getName() {
         return this.name;

@@ -30,6 +30,14 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
         return this;
     }
 
+    public ChangeAttributeOrderByNameChangeBuilder plusPreviousValue(final String... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
+        return this;
+    }
+
     public ChangeAttributeOrderByNameChangeBuilder nextValue(final String... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
@@ -37,6 +45,14 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     public ChangeAttributeOrderByNameChangeBuilder nextValue(final java.util.List<String> nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeAttributeOrderByNameChangeBuilder plusNextValue(final String... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 

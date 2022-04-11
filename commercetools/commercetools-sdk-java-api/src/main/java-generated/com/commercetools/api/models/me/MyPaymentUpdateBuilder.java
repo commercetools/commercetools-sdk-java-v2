@@ -2,6 +2,7 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,6 +27,30 @@ public class MyPaymentUpdateBuilder implements Builder<MyPaymentUpdate> {
     public MyPaymentUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.me.MyPaymentUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public MyPaymentUpdateBuilder plusActions(final com.commercetools.api.models.me.MyPaymentUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public MyPaymentUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.me.MyPaymentUpdateActionBuilder, Builder<? extends com.commercetools.api.models.me.MyPaymentUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(builder.apply(com.commercetools.api.models.me.MyPaymentUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public MyPaymentUpdateBuilder withActions(
+            Function<com.commercetools.api.models.me.MyPaymentUpdateActionBuilder, Builder<? extends com.commercetools.api.models.me.MyPaymentUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(builder.apply(com.commercetools.api.models.me.MyPaymentUpdateActionBuilder.of()).build());
         return this;
     }
 

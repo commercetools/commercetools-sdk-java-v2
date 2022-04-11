@@ -47,6 +47,14 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
         return this;
     }
 
+    public ProductChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {
+        if (this.assetOrder == null) {
+            this.assetOrder = new ArrayList<>();
+        }
+        this.assetOrder.addAll(Arrays.asList(assetOrder));
+        return this;
+    }
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;

@@ -143,10 +143,17 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
-    public CategoryBuilder withAncestors(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
-        this.ancestors = new ArrayList<>();
-        this.ancestors.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
+    public CategoryBuilder ancestors(
+            final java.util.List<com.commercetools.api.models.category.CategoryReference> ancestors) {
+        this.ancestors = ancestors;
+        return this;
+    }
+
+    public CategoryBuilder plusAncestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
+        if (this.ancestors == null) {
+            this.ancestors = new ArrayList<>();
+        }
+        this.ancestors.addAll(Arrays.asList(ancestors));
         return this;
     }
 
@@ -159,9 +166,10 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
-    public CategoryBuilder ancestors(
-            final java.util.List<com.commercetools.api.models.category.CategoryReference> ancestors) {
-        this.ancestors = ancestors;
+    public CategoryBuilder withAncestors(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        this.ancestors = new ArrayList<>();
+        this.ancestors.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
         return this;
     }
 
@@ -237,10 +245,16 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
-    public CategoryBuilder withAssets(
-            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
-        this.assets = new ArrayList<>();
-        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
+    public CategoryBuilder assets(@Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
+        this.assets = assets;
+        return this;
+    }
+
+    public CategoryBuilder plusAssets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
+        if (this.assets == null) {
+            this.assets = new ArrayList<>();
+        }
+        this.assets.addAll(Arrays.asList(assets));
         return this;
     }
 
@@ -253,8 +267,10 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
-    public CategoryBuilder assets(@Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
-        this.assets = assets;
+    public CategoryBuilder withAssets(
+            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
+        this.assets = new ArrayList<>();
+        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
         return this;
     }
 

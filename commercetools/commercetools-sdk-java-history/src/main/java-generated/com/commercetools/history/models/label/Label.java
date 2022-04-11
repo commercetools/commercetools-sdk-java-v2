@@ -33,6 +33,38 @@ public interface Label {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.history.models.label.CustomObjectLabelBuilder customObjectLabelBuilder() {
+        return com.commercetools.history.models.label.CustomObjectLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.CustomerLabelBuilder customerLabelBuilder() {
+        return com.commercetools.history.models.label.CustomerLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.LocalizedLabelBuilder localizedLabelBuilder() {
+        return com.commercetools.history.models.label.LocalizedLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.OrderLabelBuilder orderLabelBuilder() {
+        return com.commercetools.history.models.label.OrderLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.PaymentLabelBuilder paymentLabelBuilder() {
+        return com.commercetools.history.models.label.PaymentLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.ProductLabelBuilder productLabelBuilder() {
+        return com.commercetools.history.models.label.ProductLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.ReviewLabelBuilder reviewLabelBuilder() {
+        return com.commercetools.history.models.label.ReviewLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.StringLabelBuilder stringLabelBuilder() {
+        return com.commercetools.history.models.label.StringLabelBuilder.of();
+    }
+
     default <T> T withLabel(Function<Label, T> helper) {
         return helper.apply(this);
     }

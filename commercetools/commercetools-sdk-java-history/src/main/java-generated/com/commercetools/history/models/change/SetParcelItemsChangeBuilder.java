@@ -42,10 +42,18 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
-    public SetParcelItemsChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+    public SetParcelItemsChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetParcelItemsChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.DeliveryItem... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -58,9 +66,10 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
-    public SetParcelItemsChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue) {
-        this.nextValue = nextValue;
+    public SetParcelItemsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -70,10 +79,18 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
-    public SetParcelItemsChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+    public SetParcelItemsChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetParcelItemsChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.DeliveryItem... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -86,9 +103,10 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
         return this;
     }
 
-    public SetParcelItemsChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue) {
-        this.previousValue = previousValue;
+    public SetParcelItemsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 

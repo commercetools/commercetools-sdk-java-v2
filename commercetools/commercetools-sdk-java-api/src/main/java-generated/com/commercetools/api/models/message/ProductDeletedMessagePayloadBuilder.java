@@ -24,6 +24,14 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
         return this;
     }
 
+    public ProductDeletedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
+        if (this.removedImageUrls == null) {
+            this.removedImageUrls = new ArrayList<>();
+        }
+        this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));
+        return this;
+    }
+
     public ProductDeletedMessagePayloadBuilder currentProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
         this.currentProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())

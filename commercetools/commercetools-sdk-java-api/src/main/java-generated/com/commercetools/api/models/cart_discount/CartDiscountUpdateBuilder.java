@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,33 @@ public class CartDiscountUpdateBuilder implements Builder<CartDiscountUpdate> {
     public CartDiscountUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public CartDiscountUpdateBuilder plusActions(
+            final com.commercetools.api.models.cart_discount.CartDiscountUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public CartDiscountUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public CartDiscountUpdateBuilder withActions(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountUpdateActionBuilder.of()).build());
         return this;
     }
 

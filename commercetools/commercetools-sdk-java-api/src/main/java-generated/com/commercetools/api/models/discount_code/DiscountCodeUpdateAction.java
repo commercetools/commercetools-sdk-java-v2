@@ -36,6 +36,58 @@ public interface DiscountCodeUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsActionBuilder changeCartDiscountsBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionBuilder changeGroupsBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveActionBuilder changeIsActiveBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionBuilder setCartPredicateBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionBuilder setDescriptionBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionBuilder setMaxApplicationsBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionBuilder setMaxApplicationsPerCustomerBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetNameActionBuilder setNameBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionBuilder setValidFromBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilActionBuilder setValidFromAndUntilBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionBuilder setValidUntilBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionBuilder.of();
+    }
+
     default <T> T withDiscountCodeUpdateAction(Function<DiscountCodeUpdateAction, T> helper) {
         return helper.apply(this);
     }

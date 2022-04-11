@@ -42,10 +42,16 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
         return this;
     }
 
-    public OrderPagedSearchResponseBuilder withHits(
-            Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.HitBuilder> builder) {
-        this.hits = new ArrayList<>();
-        this.hits.add(builder.apply(com.commercetools.api.models.order.HitBuilder.of()).build());
+    public OrderPagedSearchResponseBuilder hits(final java.util.List<com.commercetools.api.models.order.Hit> hits) {
+        this.hits = hits;
+        return this;
+    }
+
+    public OrderPagedSearchResponseBuilder plusHits(final com.commercetools.api.models.order.Hit... hits) {
+        if (this.hits == null) {
+            this.hits = new ArrayList<>();
+        }
+        this.hits.addAll(Arrays.asList(hits));
         return this;
     }
 
@@ -58,8 +64,10 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
         return this;
     }
 
-    public OrderPagedSearchResponseBuilder hits(final java.util.List<com.commercetools.api.models.order.Hit> hits) {
-        this.hits = hits;
+    public OrderPagedSearchResponseBuilder withHits(
+            Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.HitBuilder> builder) {
+        this.hits = new ArrayList<>();
+        this.hits.add(builder.apply(com.commercetools.api.models.order.HitBuilder.of()).build());
         return this;
     }
 

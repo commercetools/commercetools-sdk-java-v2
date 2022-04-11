@@ -51,10 +51,18 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return this;
     }
 
-    public ProductProjectionPagedSearchResponseBuilder withResults(
-            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
+    public ProductProjectionPagedSearchResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.product.ProductProjection> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ProductProjectionPagedSearchResponseBuilder plusResults(
+            final com.commercetools.api.models.product.ProductProjection... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -67,9 +75,10 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         return this;
     }
 
-    public ProductProjectionPagedSearchResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.product.ProductProjection> results) {
-        this.results = results;
+    public ProductProjectionPagedSearchResponseBuilder withResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()).build());
         return this;
     }
 

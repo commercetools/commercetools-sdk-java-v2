@@ -31,6 +31,14 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
         return this;
     }
 
+    public TextSetAttributeBuilder plusValue(final String... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     @Nullable
     public String getName() {
         return this.name;

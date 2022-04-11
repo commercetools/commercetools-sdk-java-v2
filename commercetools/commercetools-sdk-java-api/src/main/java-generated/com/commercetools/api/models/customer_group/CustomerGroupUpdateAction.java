@@ -27,6 +27,22 @@ public interface CustomerGroupUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionBuilder.of();
+    }
+
     default <T> T withCustomerGroupUpdateAction(Function<CustomerGroupUpdateAction, T> helper) {
         return helper.apply(this);
     }

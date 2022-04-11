@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,6 +21,33 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     public OrderEditSetStagedActionsActionBuilder stagedActions(
             final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
         this.stagedActions = stagedActions;
+        return this;
+    }
+
+    public OrderEditSetStagedActionsActionBuilder plusStagedActions(
+            final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
+        if (this.stagedActions == null) {
+            this.stagedActions = new ArrayList<>();
+        }
+        this.stagedActions.addAll(Arrays.asList(stagedActions));
+        return this;
+    }
+
+    public OrderEditSetStagedActionsActionBuilder plusStagedActions(
+            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+        if (this.stagedActions == null) {
+            this.stagedActions = new ArrayList<>();
+        }
+        this.stagedActions
+                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public OrderEditSetStagedActionsActionBuilder withStagedActions(
+            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+        this.stagedActions = new ArrayList<>();
+        this.stagedActions
+                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
         return this;
     }
 

@@ -27,11 +27,18 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         return this;
     }
 
-    public GraphQLErrorBuilder withLocations(
-            Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder> builder) {
-        this.locations = new ArrayList<>();
-        this.locations
-                .add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder.of()).build());
+    public GraphQLErrorBuilder locations(
+            final java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations) {
+        this.locations = locations;
+        return this;
+    }
+
+    public GraphQLErrorBuilder plusLocations(
+            final com.commercetools.api.models.graph_ql.GraphQLErrorLocation... locations) {
+        if (this.locations == null) {
+            this.locations = new ArrayList<>();
+        }
+        this.locations.addAll(Arrays.asList(locations));
         return this;
     }
 
@@ -45,9 +52,11 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         return this;
     }
 
-    public GraphQLErrorBuilder locations(
-            final java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations) {
-        this.locations = locations;
+    public GraphQLErrorBuilder withLocations(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder> builder) {
+        this.locations = new ArrayList<>();
+        this.locations
+                .add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder.of()).build());
         return this;
     }
 
@@ -58,6 +67,14 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     public GraphQLErrorBuilder path(final java.util.List<java.lang.Object> path) {
         this.path = path;
+        return this;
+    }
+
+    public GraphQLErrorBuilder plusPath(final java.lang.Object... path) {
+        if (this.path == null) {
+            this.path = new ArrayList<>();
+        }
+        this.path.addAll(Arrays.asList(path));
         return this;
     }
 

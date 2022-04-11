@@ -59,6 +59,94 @@ public interface Attribute {
 
     public void setName(final String name);
 
+    public static com.commercetools.importapi.models.productvariants.BooleanAttributeBuilder booleanBuilder() {
+        return com.commercetools.importapi.models.productvariants.BooleanAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.BooleanSetAttributeBuilder booleanSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.BooleanSetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.DateAttributeBuilder dateBuilder() {
+        return com.commercetools.importapi.models.productvariants.DateAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.DateSetAttributeBuilder dateSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.DateSetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.DateTimeAttributeBuilder datetimeBuilder() {
+        return com.commercetools.importapi.models.productvariants.DateTimeAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.DateTimeSetAttributeBuilder datetimeSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.DateTimeSetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.EnumAttributeBuilder enumBuilder() {
+        return com.commercetools.importapi.models.productvariants.EnumAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.EnumSetAttributeBuilder enumSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.EnumSetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.LocalizableEnumAttributeBuilder lenumBuilder() {
+        return com.commercetools.importapi.models.productvariants.LocalizableEnumAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.LocalizableEnumSetAttributeBuilder lenumSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.LocalizableEnumSetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.LocalizableTextAttributeBuilder ltextBuilder() {
+        return com.commercetools.importapi.models.productvariants.LocalizableTextAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.LocalizableTextSetAttributeBuilder ltextSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.LocalizableTextSetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.MoneyAttributeBuilder moneyBuilder() {
+        return com.commercetools.importapi.models.productvariants.MoneyAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.MoneySetAttributeBuilder moneySetBuilder() {
+        return com.commercetools.importapi.models.productvariants.MoneySetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.NumberAttributeBuilder numberBuilder() {
+        return com.commercetools.importapi.models.productvariants.NumberAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.NumberSetAttributeBuilder numberSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.NumberSetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.ReferenceAttributeBuilder referenceBuilder() {
+        return com.commercetools.importapi.models.productvariants.ReferenceAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.ReferenceSetAttributeBuilder referenceSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.ReferenceSetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.TextAttributeBuilder textBuilder() {
+        return com.commercetools.importapi.models.productvariants.TextAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.TextSetAttributeBuilder textSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.TextSetAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.TimeAttributeBuilder timeBuilder() {
+        return com.commercetools.importapi.models.productvariants.TimeAttributeBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.productvariants.TimeSetAttributeBuilder timeSetBuilder() {
+        return com.commercetools.importapi.models.productvariants.TimeSetAttributeBuilder.of();
+    }
+
     default <T> T withAttribute(Function<Attribute, T> helper) {
         return helper.apply(this);
     }

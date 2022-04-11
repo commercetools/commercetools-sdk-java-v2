@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -24,9 +25,22 @@ public class OrderShippingRateInputSetMessagePayloadBuilder
         return this;
     }
 
+    public OrderShippingRateInputSetMessagePayloadBuilder shippingRateInput(
+            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
+        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
+        return this;
+    }
+
     public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(
             @Nullable final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput) {
         this.oldShippingRateInput = oldShippingRateInput;
+        return this;
+    }
+
+    public OrderShippingRateInputSetMessagePayloadBuilder oldShippingRateInput(
+            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
+        this.oldShippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of())
+                .build();
         return this;
     }
 

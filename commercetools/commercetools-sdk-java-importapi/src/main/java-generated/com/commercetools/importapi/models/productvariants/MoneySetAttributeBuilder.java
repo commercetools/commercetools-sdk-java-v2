@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -29,6 +30,30 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     public MoneySetAttributeBuilder value(
             final java.util.List<com.commercetools.importapi.models.common.TypedMoney> value) {
         this.value = value;
+        return this;
+    }
+
+    public MoneySetAttributeBuilder plusValue(final com.commercetools.importapi.models.common.TypedMoney... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
+    public MoneySetAttributeBuilder plusValue(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build());
+        return this;
+    }
+
+    public MoneySetAttributeBuilder withValue(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        this.value = new ArrayList<>();
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build());
         return this;
     }
 

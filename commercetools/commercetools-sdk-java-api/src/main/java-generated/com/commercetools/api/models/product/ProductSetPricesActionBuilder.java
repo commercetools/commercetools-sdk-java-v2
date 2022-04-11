@@ -38,10 +38,17 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
         return this;
     }
 
-    public ProductSetPricesActionBuilder withPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
-        this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+    public ProductSetPricesActionBuilder prices(
+            final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+        this.prices = prices;
+        return this;
+    }
+
+    public ProductSetPricesActionBuilder plusPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
+        if (this.prices == null) {
+            this.prices = new ArrayList<>();
+        }
+        this.prices.addAll(Arrays.asList(prices));
         return this;
     }
 
@@ -54,9 +61,10 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
         return this;
     }
 
-    public ProductSetPricesActionBuilder prices(
-            final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
-        this.prices = prices;
+    public ProductSetPricesActionBuilder withPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.prices = new ArrayList<>();
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
         return this;
     }
 

@@ -19,6 +19,12 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
         return this;
     }
 
+    public DiscountedPriceBuilder value(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public DiscountedPriceBuilder discount(
             Function<com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder, com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder> builder) {
         this.discount = builder

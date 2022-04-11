@@ -31,6 +31,14 @@ public class TimeSetAttributeBuilder implements Builder<TimeSetAttribute> {
         return this;
     }
 
+    public TimeSetAttributeBuilder plusValue(final java.time.LocalTime... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     @Nullable
     public String getName() {
         return this.name;

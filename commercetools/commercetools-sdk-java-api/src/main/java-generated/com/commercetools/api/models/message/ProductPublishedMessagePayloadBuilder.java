@@ -26,6 +26,14 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
         return this;
     }
 
+    public ProductPublishedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
+        if (this.removedImageUrls == null) {
+            this.removedImageUrls = new ArrayList<>();
+        }
+        this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));
+        return this;
+    }
+
     public ProductPublishedMessagePayloadBuilder productProjection(
             Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjectionBuilder> builder) {
         this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of())

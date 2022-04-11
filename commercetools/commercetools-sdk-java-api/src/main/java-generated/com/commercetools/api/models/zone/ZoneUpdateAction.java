@@ -27,6 +27,26 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.zone.ZoneAddLocationActionBuilder addLocationBuilder() {
+        return com.commercetools.api.models.zone.ZoneAddLocationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.zone.ZoneChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.zone.ZoneChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.zone.ZoneRemoveLocationActionBuilder removeLocationBuilder() {
+        return com.commercetools.api.models.zone.ZoneRemoveLocationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.zone.ZoneSetDescriptionActionBuilder setDescriptionBuilder() {
+        return com.commercetools.api.models.zone.ZoneSetDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.zone.ZoneSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.zone.ZoneSetKeyActionBuilder.of();
+    }
+
     default <T> T withZoneUpdateAction(Function<ZoneUpdateAction, T> helper) {
         return helper.apply(this);
     }

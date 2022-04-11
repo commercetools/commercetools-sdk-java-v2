@@ -49,10 +49,18 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
         return this;
     }
 
-    public SubscriptionPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.subscription.SubscriptionBuilder, com.commercetools.api.models.subscription.SubscriptionBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.subscription.SubscriptionBuilder.of()).build());
+    public SubscriptionPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.subscription.Subscription> results) {
+        this.results = results;
+        return this;
+    }
+
+    public SubscriptionPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.subscription.Subscription... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
         return this;
     }
 
-    public SubscriptionPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.subscription.Subscription> results) {
-        this.results = results;
+    public SubscriptionPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.subscription.SubscriptionBuilder, com.commercetools.api.models.subscription.SubscriptionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.subscription.SubscriptionBuilder.of()).build());
         return this;
     }
 

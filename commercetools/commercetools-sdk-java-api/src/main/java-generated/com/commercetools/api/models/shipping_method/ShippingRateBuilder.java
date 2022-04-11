@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -26,8 +27,20 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return this;
     }
 
+    public ShippingRateBuilder price(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public ShippingRateBuilder freeAbove(@Nullable final com.commercetools.api.models.common.TypedMoney freeAbove) {
         this.freeAbove = freeAbove;
+        return this;
+    }
+
+    public ShippingRateBuilder freeAbove(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.freeAbove = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 
@@ -45,6 +58,33 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     public ShippingRateBuilder tiers(
             final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
         this.tiers = tiers;
+        return this;
+    }
+
+    public ShippingRateBuilder plusTiers(
+            final com.commercetools.api.models.shipping_method.ShippingRatePriceTier... tiers) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.addAll(Arrays.asList(tiers));
+        return this;
+    }
+
+    public ShippingRateBuilder plusTiers(
+            Function<com.commercetools.api.models.shipping_method.ShippingRatePriceTierBuilder, Builder<? extends com.commercetools.api.models.shipping_method.ShippingRatePriceTier>> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.add(
+            builder.apply(com.commercetools.api.models.shipping_method.ShippingRatePriceTierBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingRateBuilder withTiers(
+            Function<com.commercetools.api.models.shipping_method.ShippingRatePriceTierBuilder, Builder<? extends com.commercetools.api.models.shipping_method.ShippingRatePriceTier>> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(
+            builder.apply(com.commercetools.api.models.shipping_method.ShippingRatePriceTierBuilder.of()).build());
         return this;
     }
 

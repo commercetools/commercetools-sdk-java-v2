@@ -55,10 +55,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
-    public ProductDataBuilder withCategories(
-            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
-        this.categories = new ArrayList<>();
-        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
+    public ProductDataBuilder categories(
+            final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
+        this.categories = categories;
+        return this;
+    }
+
+    public ProductDataBuilder plusCategories(
+            final com.commercetools.api.models.category.CategoryReference... categories) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories.addAll(Arrays.asList(categories));
         return this;
     }
 
@@ -71,9 +79,10 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
-    public ProductDataBuilder categories(
-            final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
-        this.categories = categories;
+    public ProductDataBuilder withCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
+        this.categories = new ArrayList<>();
+        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
         return this;
     }
 
@@ -164,10 +173,17 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
-    public ProductDataBuilder withVariants(
-            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
-        this.variants = new ArrayList<>();
-        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());
+    public ProductDataBuilder variants(
+            final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
+        this.variants = variants;
+        return this;
+    }
+
+    public ProductDataBuilder plusVariants(final com.commercetools.api.models.product.ProductVariant... variants) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.addAll(Arrays.asList(variants));
         return this;
     }
 
@@ -180,9 +196,10 @@ public class ProductDataBuilder implements Builder<ProductData> {
         return this;
     }
 
-    public ProductDataBuilder variants(
-            final java.util.List<com.commercetools.api.models.product.ProductVariant> variants) {
-        this.variants = variants;
+    public ProductDataBuilder withVariants(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());
         return this;
     }
 

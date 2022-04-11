@@ -27,11 +27,18 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
         return this;
     }
 
-    public ChangeTextLineItemsOrderChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(
-            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()).build());
+    public ChangeTextLineItemsOrderChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public ChangeTextLineItemsOrderChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.change_value.TextLineItemValue... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -45,9 +52,11 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
         return this;
     }
 
-    public ChangeTextLineItemsOrderChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> previousValue) {
-        this.previousValue = previousValue;
+    public ChangeTextLineItemsOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(
+            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()).build());
         return this;
     }
 
@@ -57,11 +66,18 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
         return this;
     }
 
-    public ChangeTextLineItemsOrderChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(
-            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()).build());
+    public ChangeTextLineItemsOrderChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeTextLineItemsOrderChangeBuilder plusNextValue(
+            final com.commercetools.history.models.change_value.TextLineItemValue... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -75,9 +91,11 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
         return this;
     }
 
-    public ChangeTextLineItemsOrderChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> nextValue) {
-        this.nextValue = nextValue;
+    public ChangeTextLineItemsOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValueBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(
+            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()).build());
         return this;
     }
 

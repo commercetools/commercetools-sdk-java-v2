@@ -32,6 +32,42 @@ public interface InventoryEntryUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.inventory.InventoryEntryAddQuantityActionBuilder addQuantityBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntryAddQuantityActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.inventory.InventoryEntryChangeQuantityActionBuilder changeQuantityBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntryChangeQuantityActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityActionBuilder removeQuantityBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryActionBuilder setExpectedDeliveryBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.inventory.InventoryEntrySetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysActionBuilder setRestockableInDaysBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelActionBuilder setSupplyChannelBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelActionBuilder.of();
+    }
+
     default <T> T withInventoryEntryUpdateAction(Function<InventoryEntryUpdateAction, T> helper) {
         return helper.apply(this);
     }

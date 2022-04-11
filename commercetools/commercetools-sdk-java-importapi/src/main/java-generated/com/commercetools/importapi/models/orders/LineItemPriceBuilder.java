@@ -43,6 +43,12 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    public LineItemPriceBuilder value(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public LineItemPriceBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
@@ -101,10 +107,18 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
-    public LineItemPriceBuilder withTiers(
-            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
-        this.tiers = new ArrayList<>();
-        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
+    public LineItemPriceBuilder tiers(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
+        this.tiers = tiers;
+        return this;
+    }
+
+    public LineItemPriceBuilder plusTiers(
+            @Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.addAll(Arrays.asList(tiers));
         return this;
     }
 
@@ -117,9 +131,10 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
-    public LineItemPriceBuilder tiers(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
-        this.tiers = tiers;
+    public LineItemPriceBuilder withTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
         return this;
     }
 

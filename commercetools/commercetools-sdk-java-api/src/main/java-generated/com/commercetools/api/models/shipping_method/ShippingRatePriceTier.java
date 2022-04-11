@@ -28,6 +28,18 @@ public interface ShippingRatePriceTier {
     @JsonProperty("type")
     public ShippingRateTierType getType();
 
+    public static com.commercetools.api.models.shipping_method.CartClassificationTierBuilder cartClassificationBuilder() {
+        return com.commercetools.api.models.shipping_method.CartClassificationTierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.shipping_method.CartScoreTierBuilder cartScoreBuilder() {
+        return com.commercetools.api.models.shipping_method.CartScoreTierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.shipping_method.CartValueTierBuilder cartValueBuilder() {
+        return com.commercetools.api.models.shipping_method.CartValueTierBuilder.of();
+    }
+
     default <T> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
         return helper.apply(this);
     }

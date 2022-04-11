@@ -92,6 +92,12 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
         return this;
     }
 
+    public ProductSelectionCreatedMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ProductSelectionCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -114,6 +120,14 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
     public ProductSelectionCreatedMessageBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
         this.productSelection = productSelection;
+        return this;
+    }
+
+    public ProductSelectionCreatedMessageBuilder productSelection(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductSelectionType>> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder.of())
+                .build();
         return this;
     }
 

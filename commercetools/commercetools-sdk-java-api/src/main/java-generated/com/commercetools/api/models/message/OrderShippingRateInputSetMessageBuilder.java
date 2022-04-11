@@ -96,6 +96,12 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
         return this;
     }
 
+    public OrderShippingRateInputSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderShippingRateInputSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -121,9 +127,22 @@ public class OrderShippingRateInputSetMessageBuilder implements Builder<OrderShi
         return this;
     }
 
+    public OrderShippingRateInputSetMessageBuilder shippingRateInput(
+            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
+        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
+        return this;
+    }
+
     public OrderShippingRateInputSetMessageBuilder oldShippingRateInput(
             @Nullable final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput) {
         this.oldShippingRateInput = oldShippingRateInput;
+        return this;
+    }
+
+    public OrderShippingRateInputSetMessageBuilder oldShippingRateInput(
+            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
+        this.oldShippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of())
+                .build();
         return this;
     }
 

@@ -21,6 +21,14 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
         return this;
     }
 
+    public ProjectChangeCurrenciesActionBuilder plusCurrencies(final String... currencies) {
+        if (this.currencies == null) {
+            this.currencies = new ArrayList<>();
+        }
+        this.currencies.addAll(Arrays.asList(currencies));
+        return this;
+    }
+
     public java.util.List<String> getCurrencies() {
         return this.currencies;
     }

@@ -26,6 +26,10 @@ public interface ProductSelectionType {
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();
 
+    public static com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder individualBuilder() {
+        return com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of();
+    }
+
     default <T> T withProductSelectionType(Function<ProductSelectionType, T> helper) {
         return helper.apply(this);
     }

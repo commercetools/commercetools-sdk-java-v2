@@ -97,6 +97,12 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
         return this;
     }
 
+    public DeliveryAddressSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public DeliveryAddressSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;

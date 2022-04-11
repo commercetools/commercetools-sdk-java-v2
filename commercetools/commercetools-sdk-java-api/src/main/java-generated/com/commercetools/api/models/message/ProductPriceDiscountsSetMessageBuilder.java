@@ -92,6 +92,12 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
         return this;
     }
 
+    public ProductPriceDiscountsSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ProductPriceDiscountsSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -117,12 +123,18 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
         return this;
     }
 
-    public ProductPriceDiscountsSetMessageBuilder withUpdatedPrices(
-            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {
-        this.updatedPrices = new ArrayList<>();
-        this.updatedPrices.add(
-            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of())
-                    .build());
+    public ProductPriceDiscountsSetMessageBuilder updatedPrices(
+            final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
+        this.updatedPrices = updatedPrices;
+        return this;
+    }
+
+    public ProductPriceDiscountsSetMessageBuilder plusUpdatedPrices(
+            final com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice... updatedPrices) {
+        if (this.updatedPrices == null) {
+            this.updatedPrices = new ArrayList<>();
+        }
+        this.updatedPrices.addAll(Arrays.asList(updatedPrices));
         return this;
     }
 
@@ -137,9 +149,12 @@ public class ProductPriceDiscountsSetMessageBuilder implements Builder<ProductPr
         return this;
     }
 
-    public ProductPriceDiscountsSetMessageBuilder updatedPrices(
-            final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
-        this.updatedPrices = updatedPrices;
+    public ProductPriceDiscountsSetMessageBuilder withUpdatedPrices(
+            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder> builder) {
+        this.updatedPrices = new ArrayList<>();
+        this.updatedPrices.add(
+            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of())
+                    .build());
         return this;
     }
 

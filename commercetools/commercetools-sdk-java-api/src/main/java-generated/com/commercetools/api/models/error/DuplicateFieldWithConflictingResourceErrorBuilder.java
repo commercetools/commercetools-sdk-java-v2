@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -51,6 +52,12 @@ public class DuplicateFieldWithConflictingResourceErrorBuilder
     public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(
             final com.commercetools.api.models.common.Reference conflictingResource) {
         this.conflictingResource = conflictingResource;
+        return this;
+    }
+
+    public DuplicateFieldWithConflictingResourceErrorBuilder conflictingResource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.conflictingResource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

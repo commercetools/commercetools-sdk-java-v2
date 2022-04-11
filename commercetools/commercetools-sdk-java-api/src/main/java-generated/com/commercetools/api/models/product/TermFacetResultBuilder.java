@@ -45,10 +45,16 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
         return this;
     }
 
-    public TermFacetResultBuilder withTerms(
-            Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTermBuilder> builder) {
-        this.terms = new ArrayList<>();
-        this.terms.add(builder.apply(com.commercetools.api.models.product.FacetTermBuilder.of()).build());
+    public TermFacetResultBuilder terms(final java.util.List<com.commercetools.api.models.product.FacetTerm> terms) {
+        this.terms = terms;
+        return this;
+    }
+
+    public TermFacetResultBuilder plusTerms(final com.commercetools.api.models.product.FacetTerm... terms) {
+        if (this.terms == null) {
+            this.terms = new ArrayList<>();
+        }
+        this.terms.addAll(Arrays.asList(terms));
         return this;
     }
 
@@ -61,8 +67,10 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
         return this;
     }
 
-    public TermFacetResultBuilder terms(final java.util.List<com.commercetools.api.models.product.FacetTerm> terms) {
-        this.terms = terms;
+    public TermFacetResultBuilder withTerms(
+            Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTermBuilder> builder) {
+        this.terms = new ArrayList<>();
+        this.terms.add(builder.apply(com.commercetools.api.models.product.FacetTermBuilder.of()).build());
         return this;
     }
 

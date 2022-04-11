@@ -21,11 +21,18 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
         return this;
     }
 
-    public SubscriptionSetChangesActionBuilder withChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
-        this.changes = new ArrayList<>();
-        this.changes
-                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+    public SubscriptionSetChangesActionBuilder changes(
+            @Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
+        this.changes = changes;
+        return this;
+    }
+
+    public SubscriptionSetChangesActionBuilder plusChanges(
+            @Nullable final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes.addAll(Arrays.asList(changes));
         return this;
     }
 
@@ -39,9 +46,11 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
         return this;
     }
 
-    public SubscriptionSetChangesActionBuilder changes(
-            @Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
-        this.changes = changes;
+    public SubscriptionSetChangesActionBuilder withChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        this.changes = new ArrayList<>();
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
         return this;
     }
 

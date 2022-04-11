@@ -48,6 +48,12 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         return this;
     }
 
+    public ShippingInfoBuilder price(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public ShippingInfoBuilder shippingRate(
             Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
         this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of())
@@ -115,10 +121,18 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         return this;
     }
 
-    public ShippingInfoBuilder withDeliveries(
-            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
-        this.deliveries = new ArrayList<>();
-        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
+    public ShippingInfoBuilder deliveries(
+            @Nullable final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
+        this.deliveries = deliveries;
+        return this;
+    }
+
+    public ShippingInfoBuilder plusDeliveries(
+            @Nullable final com.commercetools.api.models.order.Delivery... deliveries) {
+        if (this.deliveries == null) {
+            this.deliveries = new ArrayList<>();
+        }
+        this.deliveries.addAll(Arrays.asList(deliveries));
         return this;
     }
 
@@ -131,9 +145,10 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         return this;
     }
 
-    public ShippingInfoBuilder deliveries(
-            @Nullable final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
-        this.deliveries = deliveries;
+    public ShippingInfoBuilder withDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
+        this.deliveries = new ArrayList<>();
+        this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
         return this;
     }
 

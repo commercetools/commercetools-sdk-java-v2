@@ -45,6 +45,14 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
         return this;
     }
 
+    public OutOfStockErrorBuilder plusLineItems(final String... lineItems) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.addAll(Arrays.asList(lineItems));
+        return this;
+    }
+
     public OutOfStockErrorBuilder skus(final String... skus) {
         this.skus = new ArrayList<>(Arrays.asList(skus));
         return this;
@@ -52,6 +60,14 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
 
     public OutOfStockErrorBuilder skus(final java.util.List<String> skus) {
         this.skus = skus;
+        return this;
+    }
+
+    public OutOfStockErrorBuilder plusSkus(final String... skus) {
+        if (this.skus == null) {
+            this.skus = new ArrayList<>();
+        }
+        this.skus.addAll(Arrays.asList(skus));
         return this;
     }
 

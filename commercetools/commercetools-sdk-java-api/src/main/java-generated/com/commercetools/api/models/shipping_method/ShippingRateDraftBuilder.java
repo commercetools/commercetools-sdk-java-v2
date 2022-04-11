@@ -54,6 +54,33 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return this;
     }
 
+    public ShippingRateDraftBuilder plusTiers(
+            @Nullable final com.commercetools.api.models.shipping_method.ShippingRatePriceTier... tiers) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.addAll(Arrays.asList(tiers));
+        return this;
+    }
+
+    public ShippingRateDraftBuilder plusTiers(
+            Function<com.commercetools.api.models.shipping_method.ShippingRatePriceTierBuilder, Builder<? extends com.commercetools.api.models.shipping_method.ShippingRatePriceTier>> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.add(
+            builder.apply(com.commercetools.api.models.shipping_method.ShippingRatePriceTierBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingRateDraftBuilder withTiers(
+            Function<com.commercetools.api.models.shipping_method.ShippingRatePriceTierBuilder, Builder<? extends com.commercetools.api.models.shipping_method.ShippingRatePriceTier>> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(
+            builder.apply(com.commercetools.api.models.shipping_method.ShippingRatePriceTierBuilder.of()).build());
+        return this;
+    }
+
     public com.commercetools.api.models.common.Money getPrice() {
         return this.price;
     }

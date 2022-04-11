@@ -23,6 +23,14 @@ public class ShoppingListChangeTextLineItemsOrderActionBuilder
         return this;
     }
 
+    public ShoppingListChangeTextLineItemsOrderActionBuilder plusTextLineItemOrder(final String... textLineItemOrder) {
+        if (this.textLineItemOrder == null) {
+            this.textLineItemOrder = new ArrayList<>();
+        }
+        this.textLineItemOrder.addAll(Arrays.asList(textLineItemOrder));
+        return this;
+    }
+
     public java.util.List<String> getTextLineItemOrder() {
         return this.textLineItemOrder;
     }

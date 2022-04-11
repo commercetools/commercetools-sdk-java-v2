@@ -32,6 +32,15 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
         return this;
     }
 
+    public SetStateRolesChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.StateRole... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
+        return this;
+    }
+
     public SetStateRolesChangeBuilder nextValue(final com.commercetools.history.models.common.StateRole... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
@@ -40,6 +49,15 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
     public SetStateRolesChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.StateRole> nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetStateRolesChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.StateRole... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 

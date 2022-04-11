@@ -43,6 +43,14 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
         return this;
     }
 
+    public ProductSetSelectorBuilder plusProductIds(@Nullable final String... productIds) {
+        if (this.productIds == null) {
+            this.productIds = new ArrayList<>();
+        }
+        this.productIds.addAll(Arrays.asList(productIds));
+        return this;
+    }
+
     public ProductSetSelectorBuilder productTypeIds(@Nullable final String... productTypeIds) {
         this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
@@ -50,6 +58,14 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
 
     public ProductSetSelectorBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
         this.productTypeIds = productTypeIds;
+        return this;
+    }
+
+    public ProductSetSelectorBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {
+        if (this.productTypeIds == null) {
+            this.productTypeIds = new ArrayList<>();
+        }
+        this.productTypeIds.addAll(Arrays.asList(productTypeIds));
         return this;
     }
 

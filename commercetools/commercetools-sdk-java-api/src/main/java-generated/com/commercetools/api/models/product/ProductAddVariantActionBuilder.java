@@ -49,10 +49,18 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return this;
     }
 
-    public ProductAddVariantActionBuilder withPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
-        this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+    public ProductAddVariantActionBuilder prices(
+            @Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+        this.prices = prices;
+        return this;
+    }
+
+    public ProductAddVariantActionBuilder plusPrices(
+            @Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
+        if (this.prices == null) {
+            this.prices = new ArrayList<>();
+        }
+        this.prices.addAll(Arrays.asList(prices));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return this;
     }
 
-    public ProductAddVariantActionBuilder prices(
-            @Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
-        this.prices = prices;
+    public ProductAddVariantActionBuilder withPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.prices = new ArrayList<>();
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
         return this;
     }
 
@@ -76,10 +85,18 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return this;
     }
 
-    public ProductAddVariantActionBuilder withImages(
-            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
-        this.images = new ArrayList<>();
-        this.images.add(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build());
+    public ProductAddVariantActionBuilder images(
+            @Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
+        this.images = images;
+        return this;
+    }
+
+    public ProductAddVariantActionBuilder plusImages(
+            @Nullable final com.commercetools.api.models.common.Image... images) {
+        if (this.images == null) {
+            this.images = new ArrayList<>();
+        }
+        this.images.addAll(Arrays.asList(images));
         return this;
     }
 
@@ -92,9 +109,10 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return this;
     }
 
-    public ProductAddVariantActionBuilder images(
-            @Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
-        this.images = images;
+    public ProductAddVariantActionBuilder withImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
+        this.images = new ArrayList<>();
+        this.images.add(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build());
         return this;
     }
 
@@ -104,10 +122,18 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return this;
     }
 
-    public ProductAddVariantActionBuilder withAttributes(
-            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
-        this.attributes = new ArrayList<>();
-        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+    public ProductAddVariantActionBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    public ProductAddVariantActionBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
 
@@ -120,9 +146,10 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return this;
     }
 
-    public ProductAddVariantActionBuilder attributes(
-            @Nullable final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
-        this.attributes = attributes;
+    public ProductAddVariantActionBuilder withAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
     }
 
@@ -136,10 +163,18 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return this;
     }
 
-    public ProductAddVariantActionBuilder withAssets(
-            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
-        this.assets = new ArrayList<>();
-        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
+    public ProductAddVariantActionBuilder assets(
+            @Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
+        this.assets = assets;
+        return this;
+    }
+
+    public ProductAddVariantActionBuilder plusAssets(
+            @Nullable final com.commercetools.api.models.common.Asset... assets) {
+        if (this.assets == null) {
+            this.assets = new ArrayList<>();
+        }
+        this.assets.addAll(Arrays.asList(assets));
         return this;
     }
 
@@ -152,9 +187,10 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return this;
     }
 
-    public ProductAddVariantActionBuilder assets(
-            @Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
-        this.assets = assets;
+    public ProductAddVariantActionBuilder withAssets(
+            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
+        this.assets = new ArrayList<>();
+        this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
         return this;
     }
 

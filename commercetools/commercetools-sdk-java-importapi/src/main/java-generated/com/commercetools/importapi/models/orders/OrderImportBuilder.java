@@ -105,11 +105,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this;
     }
 
-    public OrderImportBuilder withLineItems(
-            Function<com.commercetools.importapi.models.orders.LineItemImportDraftBuilder, com.commercetools.importapi.models.orders.LineItemImportDraftBuilder> builder) {
-        this.lineItems = new ArrayList<>();
-        this.lineItems
-                .add(builder.apply(com.commercetools.importapi.models.orders.LineItemImportDraftBuilder.of()).build());
+    public OrderImportBuilder lineItems(
+            @Nullable final java.util.List<com.commercetools.importapi.models.orders.LineItemImportDraft> lineItems) {
+        this.lineItems = lineItems;
+        return this;
+    }
+
+    public OrderImportBuilder plusLineItems(
+            @Nullable final com.commercetools.importapi.models.orders.LineItemImportDraft... lineItems) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.addAll(Arrays.asList(lineItems));
         return this;
     }
 
@@ -123,9 +130,11 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this;
     }
 
-    public OrderImportBuilder lineItems(
-            @Nullable final java.util.List<com.commercetools.importapi.models.orders.LineItemImportDraft> lineItems) {
-        this.lineItems = lineItems;
+    public OrderImportBuilder withLineItems(
+            Function<com.commercetools.importapi.models.orders.LineItemImportDraftBuilder, com.commercetools.importapi.models.orders.LineItemImportDraftBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems
+                .add(builder.apply(com.commercetools.importapi.models.orders.LineItemImportDraftBuilder.of()).build());
         return this;
     }
 
@@ -135,11 +144,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this;
     }
 
-    public OrderImportBuilder withCustomLineItems(
-            Function<com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder, com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder> builder) {
-        this.customLineItems = new ArrayList<>();
-        this.customLineItems
-                .add(builder.apply(com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder.of()).build());
+    public OrderImportBuilder customLineItems(
+            @Nullable final java.util.List<com.commercetools.importapi.models.orders.CustomLineItemDraft> customLineItems) {
+        this.customLineItems = customLineItems;
+        return this;
+    }
+
+    public OrderImportBuilder plusCustomLineItems(
+            @Nullable final com.commercetools.importapi.models.orders.CustomLineItemDraft... customLineItems) {
+        if (this.customLineItems == null) {
+            this.customLineItems = new ArrayList<>();
+        }
+        this.customLineItems.addAll(Arrays.asList(customLineItems));
         return this;
     }
 
@@ -153,14 +169,22 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this;
     }
 
-    public OrderImportBuilder customLineItems(
-            @Nullable final java.util.List<com.commercetools.importapi.models.orders.CustomLineItemDraft> customLineItems) {
-        this.customLineItems = customLineItems;
+    public OrderImportBuilder withCustomLineItems(
+            Function<com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder, com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder> builder) {
+        this.customLineItems = new ArrayList<>();
+        this.customLineItems
+                .add(builder.apply(com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder.of()).build());
         return this;
     }
 
     public OrderImportBuilder totalPrice(final com.commercetools.importapi.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
+        return this;
+    }
+
+    public OrderImportBuilder totalPrice(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        this.totalPrice = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 
@@ -295,11 +319,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this;
     }
 
-    public OrderImportBuilder withItemShippingAddresses(
-            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
-        this.itemShippingAddresses = new ArrayList<>();
-        this.itemShippingAddresses
-                .add(builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build());
+    public OrderImportBuilder itemShippingAddresses(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses) {
+        this.itemShippingAddresses = itemShippingAddresses;
+        return this;
+    }
+
+    public OrderImportBuilder plusItemShippingAddresses(
+            @Nullable final com.commercetools.importapi.models.common.Address... itemShippingAddresses) {
+        if (this.itemShippingAddresses == null) {
+            this.itemShippingAddresses = new ArrayList<>();
+        }
+        this.itemShippingAddresses.addAll(Arrays.asList(itemShippingAddresses));
         return this;
     }
 
@@ -313,9 +344,11 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         return this;
     }
 
-    public OrderImportBuilder itemShippingAddresses(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses) {
-        this.itemShippingAddresses = itemShippingAddresses;
+    public OrderImportBuilder withItemShippingAddresses(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
+        this.itemShippingAddresses = new ArrayList<>();
+        this.itemShippingAddresses
+                .add(builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build());
         return this;
     }
 

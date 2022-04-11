@@ -31,6 +31,14 @@ public class MessageSubscriptionBuilder implements Builder<MessageSubscription> 
         return this;
     }
 
+    public MessageSubscriptionBuilder plusTypes(@Nullable final String... types) {
+        if (this.types == null) {
+            this.types = new ArrayList<>();
+        }
+        this.types.addAll(Arrays.asList(types));
+        return this;
+    }
+
     public String getResourceTypeId() {
         return this.resourceTypeId;
     }

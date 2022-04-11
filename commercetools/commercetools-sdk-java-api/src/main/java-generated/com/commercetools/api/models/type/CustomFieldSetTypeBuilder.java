@@ -2,6 +2,7 @@
 package com.commercetools.api.models.type;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -13,6 +14,12 @@ public class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
 
     public CustomFieldSetTypeBuilder elementType(final com.commercetools.api.models.type.FieldType elementType) {
         this.elementType = elementType;
+        return this;
+    }
+
+    public CustomFieldSetTypeBuilder elementType(
+            Function<com.commercetools.api.models.type.FieldTypeBuilder, Builder<? extends com.commercetools.api.models.type.FieldType>> builder) {
+        this.elementType = builder.apply(com.commercetools.api.models.type.FieldTypeBuilder.of()).build();
         return this;
     }
 

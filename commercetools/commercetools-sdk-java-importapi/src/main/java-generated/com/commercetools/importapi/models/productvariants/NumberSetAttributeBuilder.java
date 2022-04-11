@@ -31,6 +31,14 @@ public class NumberSetAttributeBuilder implements Builder<NumberSetAttribute> {
         return this;
     }
 
+    public NumberSetAttributeBuilder plusValue(final Double... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     @Nullable
     public String getName() {
         return this.name;

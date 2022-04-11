@@ -35,11 +35,18 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
         return this;
     }
 
-    public CartSetCartTotalTaxActionBuilder withExternalTaxPortions(
-            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
-        this.externalTaxPortions = new ArrayList<>();
-        this.externalTaxPortions
-                .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
+    public CartSetCartTotalTaxActionBuilder externalTaxPortions(
+            @Nullable final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
+        this.externalTaxPortions = externalTaxPortions;
+        return this;
+    }
+
+    public CartSetCartTotalTaxActionBuilder plusExternalTaxPortions(
+            @Nullable final com.commercetools.api.models.cart.TaxPortionDraft... externalTaxPortions) {
+        if (this.externalTaxPortions == null) {
+            this.externalTaxPortions = new ArrayList<>();
+        }
+        this.externalTaxPortions.addAll(Arrays.asList(externalTaxPortions));
         return this;
     }
 
@@ -53,9 +60,11 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
         return this;
     }
 
-    public CartSetCartTotalTaxActionBuilder externalTaxPortions(
-            @Nullable final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
-        this.externalTaxPortions = externalTaxPortions;
+    public CartSetCartTotalTaxActionBuilder withExternalTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
+        this.externalTaxPortions = new ArrayList<>();
+        this.externalTaxPortions
+                .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
     }
 

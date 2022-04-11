@@ -96,6 +96,12 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
         return this;
     }
 
+    public OrderStateTransitionMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderStateTransitionMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;

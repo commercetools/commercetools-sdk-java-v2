@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.orders;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -30,6 +31,12 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     public TaxPortionBuilder amount(final com.commercetools.importapi.models.common.TypedMoney amount) {
         this.amount = amount;
+        return this;
+    }
+
+    public TaxPortionBuilder amount(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        this.amount = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 

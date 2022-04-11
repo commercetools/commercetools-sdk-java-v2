@@ -27,6 +27,22 @@ public interface SubscriptionUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.subscription.SubscriptionChangeDestinationActionBuilder changeDestinationBuilder() {
+        return com.commercetools.api.models.subscription.SubscriptionChangeDestinationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.SubscriptionSetChangesActionBuilder setChangesBuilder() {
+        return com.commercetools.api.models.subscription.SubscriptionSetChangesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.SubscriptionSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.subscription.SubscriptionSetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.SubscriptionSetMessagesActionBuilder setMessagesBuilder() {
+        return com.commercetools.api.models.subscription.SubscriptionSetMessagesActionBuilder.of();
+    }
+
     default <T> T withSubscriptionUpdateAction(Function<SubscriptionUpdateAction, T> helper) {
         return helper.apply(this);
     }

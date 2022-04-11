@@ -35,6 +35,58 @@ public interface AttributeType {
     @JsonProperty("name")
     public String getName();
 
+    public static com.commercetools.api.models.product_type.AttributeBooleanTypeBuilder booleanBuilder() {
+        return com.commercetools.api.models.product_type.AttributeBooleanTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeDateTimeTypeBuilder datetimeBuilder() {
+        return com.commercetools.api.models.product_type.AttributeDateTimeTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeDateTypeBuilder dateBuilder() {
+        return com.commercetools.api.models.product_type.AttributeDateTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeEnumTypeBuilder enumBuilder() {
+        return com.commercetools.api.models.product_type.AttributeEnumTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeLocalizableTextTypeBuilder ltextBuilder() {
+        return com.commercetools.api.models.product_type.AttributeLocalizableTextTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeLocalizedEnumTypeBuilder lenumBuilder() {
+        return com.commercetools.api.models.product_type.AttributeLocalizedEnumTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeMoneyTypeBuilder moneyBuilder() {
+        return com.commercetools.api.models.product_type.AttributeMoneyTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeNestedTypeBuilder nestedBuilder() {
+        return com.commercetools.api.models.product_type.AttributeNestedTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeNumberTypeBuilder numberBuilder() {
+        return com.commercetools.api.models.product_type.AttributeNumberTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeReferenceTypeBuilder referenceBuilder() {
+        return com.commercetools.api.models.product_type.AttributeReferenceTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeSetTypeBuilder setBuilder() {
+        return com.commercetools.api.models.product_type.AttributeSetTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeTextTypeBuilder textBuilder() {
+        return com.commercetools.api.models.product_type.AttributeTextTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.AttributeTimeTypeBuilder timeBuilder() {
+        return com.commercetools.api.models.product_type.AttributeTimeTypeBuilder.of();
+    }
+
     default <T> T withAttributeType(Function<AttributeType, T> helper) {
         return helper.apply(this);
     }

@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -29,6 +30,31 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     public ReferenceSetAttributeBuilder value(
             final java.util.List<com.commercetools.importapi.models.common.KeyReference> value) {
         this.value = value;
+        return this;
+    }
+
+    public ReferenceSetAttributeBuilder plusValue(
+            final com.commercetools.importapi.models.common.KeyReference... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
+    public ReferenceSetAttributeBuilder plusValue(
+            Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public ReferenceSetAttributeBuilder withValue(
+            Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
+        this.value = new ArrayList<>();
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build());
         return this;
     }
 

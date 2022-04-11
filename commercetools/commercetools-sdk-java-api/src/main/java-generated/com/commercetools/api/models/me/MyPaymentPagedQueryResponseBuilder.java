@@ -48,10 +48,17 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
         return this;
     }
 
-    public MyPaymentPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.me.MyPaymentBuilder, com.commercetools.api.models.me.MyPaymentBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.me.MyPaymentBuilder.of()).build());
+    public MyPaymentPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.me.MyPayment> results) {
+        this.results = results;
+        return this;
+    }
+
+    public MyPaymentPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.me.MyPayment... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +71,10 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
         return this;
     }
 
-    public MyPaymentPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.me.MyPayment> results) {
-        this.results = results;
+    public MyPaymentPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.me.MyPaymentBuilder, com.commercetools.api.models.me.MyPaymentBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.me.MyPaymentBuilder.of()).build());
         return this;
     }
 

@@ -21,6 +21,14 @@ public class BooleanSetFieldBuilder implements Builder<BooleanSetField> {
         return this;
     }
 
+    public BooleanSetFieldBuilder plusValue(final Boolean... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     public java.util.List<Boolean> getValue() {
         return this.value;
     }

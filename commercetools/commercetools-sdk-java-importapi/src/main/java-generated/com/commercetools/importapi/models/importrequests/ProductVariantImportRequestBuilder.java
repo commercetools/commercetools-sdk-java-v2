@@ -18,11 +18,18 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
         return this;
     }
 
-    public ProductVariantImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder, com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder> builder) {
-        this.resources = new ArrayList<>();
-        this.resources.add(
-            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder.of()).build());
+    public ProductVariantImportRequestBuilder resources(
+            final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources) {
+        this.resources = resources;
+        return this;
+    }
+
+    public ProductVariantImportRequestBuilder plusResources(
+            final com.commercetools.importapi.models.productvariants.ProductVariantImport... resources) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources.addAll(Arrays.asList(resources));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
         return this;
     }
 
-    public ProductVariantImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources) {
-        this.resources = resources;
+    public ProductVariantImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder, com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources.add(
+            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder.of()).build());
         return this;
     }
 

@@ -48,10 +48,17 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
         return this;
     }
 
-    public ReviewPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build());
+    public ReviewPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.review.Review> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ReviewPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.review.Review... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +71,10 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
         return this;
     }
 
-    public ReviewPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.review.Review> results) {
-        this.results = results;
+    public ReviewPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build());
         return this;
     }
 

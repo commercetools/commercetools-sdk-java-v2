@@ -76,11 +76,18 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
         return this;
     }
 
-    public SimilarProductSearchRequestBuilder withProductSetSelectors(
-            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {
-        this.productSetSelectors = new ArrayList<>();
-        this.productSetSelectors.add(
-            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()).build());
+    public SimilarProductSearchRequestBuilder productSetSelectors(
+            @Nullable final java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors) {
+        this.productSetSelectors = productSetSelectors;
+        return this;
+    }
+
+    public SimilarProductSearchRequestBuilder plusProductSetSelectors(
+            @Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector... productSetSelectors) {
+        if (this.productSetSelectors == null) {
+            this.productSetSelectors = new ArrayList<>();
+        }
+        this.productSetSelectors.addAll(Arrays.asList(productSetSelectors));
         return this;
     }
 
@@ -94,9 +101,11 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
         return this;
     }
 
-    public SimilarProductSearchRequestBuilder productSetSelectors(
-            @Nullable final java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors) {
-        this.productSetSelectors = productSetSelectors;
+    public SimilarProductSearchRequestBuilder withProductSetSelectors(
+            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder> builder) {
+        this.productSetSelectors = new ArrayList<>();
+        this.productSetSelectors.add(
+            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.inventory;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,33 @@ public class InventoryEntryUpdateBuilder implements Builder<InventoryEntryUpdate
     public InventoryEntryUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public InventoryEntryUpdateBuilder plusActions(
+            final com.commercetools.api.models.inventory.InventoryEntryUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public InventoryEntryUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.inventory.InventoryEntryUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public InventoryEntryUpdateBuilder withActions(
+            Function<com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.inventory.InventoryEntryUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.inventory.InventoryEntryUpdateActionBuilder.of()).build());
         return this;
     }
 

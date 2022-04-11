@@ -173,10 +173,18 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
-    public CustomerDraftBuilder withAddresses(
-            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
-        this.addresses = new ArrayList<>();
-        this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
+    public CustomerDraftBuilder addresses(
+            @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+
+    public CustomerDraftBuilder plusAddresses(
+            @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<>();
+        }
+        this.addresses.addAll(Arrays.asList(addresses));
         return this;
     }
 
@@ -189,9 +197,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
-    public CustomerDraftBuilder addresses(
-            @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
-        this.addresses = addresses;
+    public CustomerDraftBuilder withAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
+        this.addresses = new ArrayList<>();
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
     }
 
@@ -210,6 +219,14 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
+    public CustomerDraftBuilder plusShippingAddresses(@Nullable final Integer... shippingAddresses) {
+        if (this.shippingAddresses == null) {
+            this.shippingAddresses = new ArrayList<>();
+        }
+        this.shippingAddresses.addAll(Arrays.asList(shippingAddresses));
+        return this;
+    }
+
     public CustomerDraftBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {
         this.defaultBillingAddress = defaultBillingAddress;
         return this;
@@ -222,6 +239,14 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
 
     public CustomerDraftBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
         this.billingAddresses = billingAddresses;
+        return this;
+    }
+
+    public CustomerDraftBuilder plusBillingAddresses(@Nullable final Integer... billingAddresses) {
+        if (this.billingAddresses == null) {
+            this.billingAddresses = new ArrayList<>();
+        }
+        this.billingAddresses.addAll(Arrays.asList(billingAddresses));
         return this;
     }
 
@@ -281,10 +306,18 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
-    public CustomerDraftBuilder withStores(
-            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
-        this.stores = new ArrayList<>();
-        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+    public CustomerDraftBuilder stores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    public CustomerDraftBuilder plusStores(
+            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
         return this;
     }
 
@@ -297,9 +330,10 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return this;
     }
 
-    public CustomerDraftBuilder stores(
-            @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
-        this.stores = stores;
+    public CustomerDraftBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
     }
 

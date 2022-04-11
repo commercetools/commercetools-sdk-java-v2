@@ -24,6 +24,14 @@ public interface ShippingRateInputDraft {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.cart.ClassificationShippingRateInputDraftBuilder classificationBuilder() {
+        return com.commercetools.api.models.cart.ClassificationShippingRateInputDraftBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.ScoreShippingRateInputDraftBuilder scoreBuilder() {
+        return com.commercetools.api.models.cart.ScoreShippingRateInputDraftBuilder.of();
+    }
+
     default <T> T withShippingRateInputDraft(Function<ShippingRateInputDraft, T> helper) {
         return helper.apply(this);
     }

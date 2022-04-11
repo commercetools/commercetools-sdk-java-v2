@@ -52,10 +52,18 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
-    public OrderLineItemRemovedMessagePayloadBuilder withNewState(
-            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
-        this.newState = new ArrayList<>();
-        this.newState.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+    public OrderLineItemRemovedMessagePayloadBuilder newState(
+            final java.util.List<com.commercetools.api.models.order.ItemState> newState) {
+        this.newState = newState;
+        return this;
+    }
+
+    public OrderLineItemRemovedMessagePayloadBuilder plusNewState(
+            final com.commercetools.api.models.order.ItemState... newState) {
+        if (this.newState == null) {
+            this.newState = new ArrayList<>();
+        }
+        this.newState.addAll(Arrays.asList(newState));
         return this;
     }
 
@@ -68,15 +76,22 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         return this;
     }
 
-    public OrderLineItemRemovedMessagePayloadBuilder newState(
-            final java.util.List<com.commercetools.api.models.order.ItemState> newState) {
-        this.newState = newState;
+    public OrderLineItemRemovedMessagePayloadBuilder withNewState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        this.newState = new ArrayList<>();
+        this.newState.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
 
     public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
             final com.commercetools.api.models.common.TypedMoney newTotalPrice) {
         this.newTotalPrice = newTotalPrice;
+        return this;
+    }
+
+    public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.newTotalPrice = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 

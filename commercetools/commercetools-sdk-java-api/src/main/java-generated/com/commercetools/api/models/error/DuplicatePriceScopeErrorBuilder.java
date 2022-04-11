@@ -40,10 +40,18 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         return this;
     }
 
-    public DuplicatePriceScopeErrorBuilder withConflictingPrices(
-            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
-        this.conflictingPrices = new ArrayList<>();
-        this.conflictingPrices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
+    public DuplicatePriceScopeErrorBuilder conflictingPrices(
+            final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
+        this.conflictingPrices = conflictingPrices;
+        return this;
+    }
+
+    public DuplicatePriceScopeErrorBuilder plusConflictingPrices(
+            final com.commercetools.api.models.common.Price... conflictingPrices) {
+        if (this.conflictingPrices == null) {
+            this.conflictingPrices = new ArrayList<>();
+        }
+        this.conflictingPrices.addAll(Arrays.asList(conflictingPrices));
         return this;
     }
 
@@ -56,9 +64,10 @@ public class DuplicatePriceScopeErrorBuilder implements Builder<DuplicatePriceSc
         return this;
     }
 
-    public DuplicatePriceScopeErrorBuilder conflictingPrices(
-            final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
-        this.conflictingPrices = conflictingPrices;
+    public DuplicatePriceScopeErrorBuilder withConflictingPrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+        this.conflictingPrices = new ArrayList<>();
+        this.conflictingPrices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
         return this;
     }
 

@@ -27,6 +27,14 @@ public interface ExtensionDestination {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.extension.AWSLambdaDestinationBuilder awsLambdaBuilder() {
+        return com.commercetools.api.models.extension.AWSLambdaDestinationBuilder.of();
+    }
+
+    public static com.commercetools.api.models.extension.HttpDestinationBuilder httpBuilder() {
+        return com.commercetools.api.models.extension.HttpDestinationBuilder.of();
+    }
+
     default <T> T withExtensionDestination(Function<ExtensionDestination, T> helper) {
         return helper.apply(this);
     }

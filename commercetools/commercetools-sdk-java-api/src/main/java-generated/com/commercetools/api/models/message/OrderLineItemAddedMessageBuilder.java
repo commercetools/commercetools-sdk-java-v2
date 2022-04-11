@@ -93,6 +93,12 @@ public class OrderLineItemAddedMessageBuilder implements Builder<OrderLineItemAd
         return this;
     }
 
+    public OrderLineItemAddedMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderLineItemAddedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;

@@ -62,6 +62,12 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
         return this;
     }
 
+    public ReviewStateTransitionMessagePayloadBuilder target(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.target = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ReviewStateTransitionMessagePayloadBuilder force(final Boolean force) {
         this.force = force;
         return this;

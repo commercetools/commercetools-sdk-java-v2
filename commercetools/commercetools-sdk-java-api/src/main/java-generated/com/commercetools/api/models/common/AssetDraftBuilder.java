@@ -33,10 +33,16 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
         return this;
     }
 
-    public AssetDraftBuilder withSources(
-            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
-        this.sources = new ArrayList<>();
-        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+    public AssetDraftBuilder sources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
+        this.sources = sources;
+        return this;
+    }
+
+    public AssetDraftBuilder plusSources(final com.commercetools.api.models.common.AssetSource... sources) {
+        if (this.sources == null) {
+            this.sources = new ArrayList<>();
+        }
+        this.sources.addAll(Arrays.asList(sources));
         return this;
     }
 
@@ -49,8 +55,10 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
         return this;
     }
 
-    public AssetDraftBuilder sources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
-        this.sources = sources;
+    public AssetDraftBuilder withSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        this.sources = new ArrayList<>();
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
 
@@ -84,6 +92,14 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     public AssetDraftBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    public AssetDraftBuilder plusTags(@Nullable final String... tags) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.addAll(Arrays.asList(tags));
         return this;
     }
 

@@ -49,10 +49,18 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
         return this;
     }
 
-    public InventoryPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build());
+    public InventoryPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.inventory.InventoryEntry> results) {
+        this.results = results;
+        return this;
+    }
+
+    public InventoryPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.inventory.InventoryEntry... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
         return this;
     }
 
-    public InventoryPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.inventory.InventoryEntry> results) {
-        this.results = results;
+    public InventoryPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build());
         return this;
     }
 

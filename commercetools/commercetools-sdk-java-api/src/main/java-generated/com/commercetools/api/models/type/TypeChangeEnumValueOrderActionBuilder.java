@@ -28,6 +28,14 @@ public class TypeChangeEnumValueOrderActionBuilder implements Builder<TypeChange
         return this;
     }
 
+    public TypeChangeEnumValueOrderActionBuilder plusKeys(final String... keys) {
+        if (this.keys == null) {
+            this.keys = new ArrayList<>();
+        }
+        this.keys.addAll(Arrays.asList(keys));
+        return this;
+    }
+
     public String getFieldName() {
         return this.fieldName;
     }

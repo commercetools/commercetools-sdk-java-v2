@@ -42,11 +42,18 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
         return this;
     }
 
-    public ProductTypeImportBuilder withAttributes(
-            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
-        this.attributes = new ArrayList<>();
-        this.attributes.add(
-            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()).build());
+    public ProductTypeImportBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    public ProductTypeImportBuilder plusAttributes(
+            @Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
 
@@ -60,9 +67,11 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
         return this;
     }
 
-    public ProductTypeImportBuilder attributes(
-            @Nullable final java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes) {
-        this.attributes = attributes;
+    public ProductTypeImportBuilder withAttributes(
+            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(
+            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()).build());
         return this;
     }
 

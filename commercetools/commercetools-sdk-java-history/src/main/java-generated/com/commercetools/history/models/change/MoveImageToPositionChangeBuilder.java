@@ -34,10 +34,18 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         return this;
     }
 
-    public MoveImageToPositionChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
+    public MoveImageToPositionChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.common.Image> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public MoveImageToPositionChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.Image... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -50,9 +58,10 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         return this;
     }
 
-    public MoveImageToPositionChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.Image> previousValue) {
-        this.previousValue = previousValue;
+    public MoveImageToPositionChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
         return this;
     }
 
@@ -62,10 +71,18 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         return this;
     }
 
-    public MoveImageToPositionChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
+    public MoveImageToPositionChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.Image> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public MoveImageToPositionChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.Image... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -78,9 +95,10 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         return this;
     }
 
-    public MoveImageToPositionChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.Image> nextValue) {
-        this.nextValue = nextValue;
+    public MoveImageToPositionChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
         return this;
     }
 

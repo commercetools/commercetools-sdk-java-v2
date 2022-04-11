@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.customfields;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -13,6 +14,12 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
 
     public MoneyFieldBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
+        return this;
+    }
+
+    public MoneyFieldBuilder value(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 

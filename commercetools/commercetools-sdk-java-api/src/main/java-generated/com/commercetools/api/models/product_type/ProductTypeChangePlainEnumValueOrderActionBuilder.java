@@ -26,11 +26,18 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
         return this;
     }
 
-    public ProductTypeChangePlainEnumValueOrderActionBuilder withValues(
-            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
-        this.values = new ArrayList<>();
-        this.values.add(
-            builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of()).build());
+    public ProductTypeChangePlainEnumValueOrderActionBuilder values(
+            final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
+        this.values = values;
+        return this;
+    }
+
+    public ProductTypeChangePlainEnumValueOrderActionBuilder plusValues(
+            final com.commercetools.api.models.product_type.AttributePlainEnumValue... values) {
+        if (this.values == null) {
+            this.values = new ArrayList<>();
+        }
+        this.values.addAll(Arrays.asList(values));
         return this;
     }
 
@@ -44,9 +51,11 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
         return this;
     }
 
-    public ProductTypeChangePlainEnumValueOrderActionBuilder values(
-            final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
-        this.values = values;
+    public ProductTypeChangePlainEnumValueOrderActionBuilder withValues(
+            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder> builder) {
+        this.values = new ArrayList<>();
+        this.values.add(
+            builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of()).build());
         return this;
     }
 

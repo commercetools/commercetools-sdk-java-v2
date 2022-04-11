@@ -34,10 +34,18 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
-    public SetDeliveryItemsChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+    public SetDeliveryItemsChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetDeliveryItemsChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.DeliveryItem... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -50,9 +58,10 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
-    public SetDeliveryItemsChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue) {
-        this.nextValue = nextValue;
+    public SetDeliveryItemsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -62,10 +71,18 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
-    public SetDeliveryItemsChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+    public SetDeliveryItemsChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetDeliveryItemsChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.DeliveryItem... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -78,9 +95,10 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         return this;
     }
 
-    public SetDeliveryItemsChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue) {
-        this.previousValue = previousValue;
+    public SetDeliveryItemsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 

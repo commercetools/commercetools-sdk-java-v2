@@ -48,10 +48,17 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
         return this;
     }
 
-    public StorePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.StoreBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.store.StoreBuilder.of()).build());
+    public StorePagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.store.Store> results) {
+        this.results = results;
+        return this;
+    }
+
+    public StorePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.store.Store... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +71,10 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
         return this;
     }
 
-    public StorePagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.store.Store> results) {
-        this.results = results;
+    public StorePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.StoreBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.store.StoreBuilder.of()).build());
         return this;
     }
 

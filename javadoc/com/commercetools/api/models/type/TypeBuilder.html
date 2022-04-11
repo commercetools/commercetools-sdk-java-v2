@@ -203,7 +203,13 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.type.Type)">of</a></span>&#8203;(<a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a>&nbsp;template)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusFieldDefinitions(java.util.function.Function)">plusFieldDefinitions</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>,&#8203;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusFieldDefinitions(com.commercetools.api.models.type.FieldDefinition...)">plusFieldDefinitions</a></span>&#8203;(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>...&nbsp;fieldDefinitions)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusFieldDefinitions(java.util.function.Function)">plusFieldDefinitions</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>,&#8203;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusResourceTypeIds(com.commercetools.api.models.type.ResourceTypeId...)">plusResourceTypeIds</a></span>&#8203;(<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>...&nbsp;resourceTypeIds)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceTypeIds(com.commercetools.api.models.type.ResourceTypeId...)">resourceTypeIds</a></span>&#8203;(<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>...&nbsp;resourceTypeIds)</code></div>
@@ -342,102 +348,114 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="plusResourceTypeIds(com.commercetools.api.models.type.ResourceTypeId...)">
+<h3>plusResourceTypeIds</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.121">plusResourceTypeIds</a></span>&#8203;<span class="parameters">(<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>...&nbsp;resourceTypeIds)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="fieldDefinitions(com.commercetools.api.models.type.FieldDefinition...)">
 <h3>fieldDefinitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.121">fieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>...&nbsp;fieldDefinitions)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="withFieldDefinitions(java.util.function.Function)">
-<h3>withFieldDefinitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.126">withFieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>,&#8203;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&gt;&nbsp;builder)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="plusFieldDefinitions(java.util.function.Function)">
-<h3>plusFieldDefinitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.133">plusFieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>,&#8203;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.129">fieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>...&nbsp;fieldDefinitions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="fieldDefinitions(java.util.List)">
 <h3>fieldDefinitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.142">fieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;&nbsp;fieldDefinitions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.134">fieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;&nbsp;fieldDefinitions)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusFieldDefinitions(com.commercetools.api.models.type.FieldDefinition...)">
+<h3>plusFieldDefinitions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.140">plusFieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>...&nbsp;fieldDefinitions)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusFieldDefinitions(java.util.function.Function)">
+<h3>plusFieldDefinitions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.149">plusFieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>,&#8203;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withFieldDefinitions(java.util.function.Function)">
+<h3>withFieldDefinitions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.158">withFieldDefinitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>,&#8203;<a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.148">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.165">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.152">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.169">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.156">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.173">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.160">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.177">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.164">getLastModifiedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.181">getLastModifiedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.169">getCreatedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.186">getCreatedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.174">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.191">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.178">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.195">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.182">getDescription</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.199">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceTypeIds()">
 <h3>getResourceTypeIds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.187">getResourceTypeIds</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.204">getResourceTypeIds</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFieldDefinitions()">
 <h3>getFieldDefinitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.191">getFieldDefinitions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.208">getFieldDefinitions</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.195">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.212">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a>&gt;</code></dd>
@@ -447,20 +465,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.211">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.228">buildUnchecked</a></span>()</div>
 <div class="block">builds Type without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.216">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.233">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.Type)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.220">of</a></span>&#8203;<span class="parameters">(<a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TypeBuilder.html" title="class in com.commercetools.api.models.type">TypeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeBuilder.html#line.237">of</a></span>&#8203;<span class="parameters">(<a href="Type.html" title="interface in com.commercetools.api.models.type">Type</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -212,6 +212,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.state.State)">of</a></span>&#8203;(<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusRoles(com.commercetools.api.models.state.StateRoleEnum...)">plusRoles</a></span>&#8203;(<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>...&nbsp;roles)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTransitions(com.commercetools.api.models.state.StateReference...)">plusTransitions</a></span>&#8203;(<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>...&nbsp;transitions)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTransitions(java.util.function.Function)">plusTransitions</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>,&#8203;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></code></div>
@@ -381,125 +387,139 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="plusRoles(com.commercetools.api.models.state.StateRoleEnum...)">
+<h3>plusRoles</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.144">plusRoles</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>...&nbsp;roles)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="transitions(com.commercetools.api.models.state.StateReference...)">
 <h3>transitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.144">transitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.152">transitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>...&nbsp;transitions)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="withTransitions(java.util.function.Function)">
-<h3>withTransitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.149">withTransitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>,&#8203;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="plusTransitions(java.util.function.Function)">
-<h3>plusTransitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.156">plusTransitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>,&#8203;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="transitions(java.util.List)">
 <h3>transitions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.165">transitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.157">transitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&gt;&nbsp;transitions)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusTransitions(com.commercetools.api.models.state.StateReference...)">
+<h3>plusTransitions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.163">plusTransitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>...&nbsp;transitions)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusTransitions(java.util.function.Function)">
+<h3>plusTransitions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.172">plusTransitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>,&#8203;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withTransitions(java.util.function.Function)">
+<h3>withTransitions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.181">withTransitions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>,&#8203;<a href="StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.171">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.188">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.175">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.192">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.179">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.196">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.183">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.200">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.187">getLastModifiedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.204">getLastModifiedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.192">getCreatedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.209">getCreatedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.197">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.214">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateTypeEnum.html" title="interface in com.commercetools.api.models.state">StateTypeEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.201">getType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StateTypeEnum.html" title="interface in com.commercetools.api.models.state">StateTypeEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.218">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.205">getName</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.222">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.210">getDescription</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.227">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInitial()">
 <h3>getInitial</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.215">getInitial</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.232">getInitial</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getBuiltIn()">
 <h3>getBuiltIn</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.219">getBuiltIn</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.236">getBuiltIn</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRoles()">
 <h3>getRoles</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.223">getRoles</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateRoleEnum.html" title="interface in com.commercetools.api.models.state">StateRoleEnum</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.240">getRoles</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTransitions()">
 <h3>getTransitions</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.228">getTransitions</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.245">getTransitions</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.233">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.250">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&gt;</code></dd>
@@ -509,20 +529,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.249">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="State.html" title="interface in com.commercetools.api.models.state">State</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.266">buildUnchecked</a></span>()</div>
 <div class="block">builds State without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.254">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.271">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.state.State)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.258">of</a></span>&#8203;<span class="parameters">(<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StateBuilder.html" title="class in com.commercetools.api.models.state">StateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/state/StateBuilder.html#line.275">of</a></span>&#8203;<span class="parameters">(<a href="State.html" title="interface in com.commercetools.api.models.state">State</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

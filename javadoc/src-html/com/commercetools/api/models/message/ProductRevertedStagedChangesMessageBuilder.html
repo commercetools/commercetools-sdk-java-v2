@@ -105,128 +105,142 @@
 <span class="source-line-no">092</span><span id="line.92">        return this;</span>
 <span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public ProductRevertedStagedChangesMessageBuilder resourceVersion(final Long resourceVersion) {</span>
-<span class="source-line-no">096</span><span id="line.96">        this.resourceVersion = resourceVersion;</span>
-<span class="source-line-no">097</span><span id="line.97">        return this;</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public ProductRevertedStagedChangesMessageBuilder resourceUserProvidedIdentifiers(</span>
-<span class="source-line-no">101</span><span id="line.101">            Function&lt;com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder&gt; builder) {</span>
-<span class="source-line-no">102</span><span id="line.102">        this.resourceUserProvidedIdentifiers = builder</span>
-<span class="source-line-no">103</span><span id="line.103">                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())</span>
-<span class="source-line-no">104</span><span id="line.104">                .build();</span>
-<span class="source-line-no">105</span><span id="line.105">        return this;</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public ProductRevertedStagedChangesMessageBuilder resourceUserProvidedIdentifiers(</span>
-<span class="source-line-no">109</span><span id="line.109">            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
-<span class="source-line-no">110</span><span id="line.110">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">095</span><span id="line.95">    public ProductRevertedStagedChangesMessageBuilder resource(</span>
+<span class="source-line-no">096</span><span id="line.96">            Function&lt;com.commercetools.api.models.common.ReferenceBuilder, Builder&lt;? extends com.commercetools.api.models.common.Reference&gt;&gt; builder) {</span>
+<span class="source-line-no">097</span><span id="line.97">        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();</span>
+<span class="source-line-no">098</span><span id="line.98">        return this;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public ProductRevertedStagedChangesMessageBuilder resourceVersion(final Long resourceVersion) {</span>
+<span class="source-line-no">102</span><span id="line.102">        this.resourceVersion = resourceVersion;</span>
+<span class="source-line-no">103</span><span id="line.103">        return this;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public ProductRevertedStagedChangesMessageBuilder resourceUserProvidedIdentifiers(</span>
+<span class="source-line-no">107</span><span id="line.107">            Function&lt;com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder&gt; builder) {</span>
+<span class="source-line-no">108</span><span id="line.108">        this.resourceUserProvidedIdentifiers = builder</span>
+<span class="source-line-no">109</span><span id="line.109">                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())</span>
+<span class="source-line-no">110</span><span id="line.110">                .build();</span>
 <span class="source-line-no">111</span><span id="line.111">        return this;</span>
 <span class="source-line-no">112</span><span id="line.112">    }</span>
 <span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public ProductRevertedStagedChangesMessageBuilder removedImageUrls(final String... removedImageUrls) {</span>
-<span class="source-line-no">115</span><span id="line.115">        this.removedImageUrls = new ArrayList&lt;&gt;(Arrays.asList(removedImageUrls));</span>
-<span class="source-line-no">116</span><span id="line.116">        return this;</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public ProductRevertedStagedChangesMessageBuilder removedImageUrls(final java.util.List&lt;String&gt; removedImageUrls) {</span>
-<span class="source-line-no">120</span><span id="line.120">        this.removedImageUrls = removedImageUrls;</span>
-<span class="source-line-no">121</span><span id="line.121">        return this;</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    public String getId() {</span>
-<span class="source-line-no">125</span><span id="line.125">        return this.id;</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public Long getVersion() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return this.version;</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">133</span><span id="line.133">        return this.createdAt;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">137</span><span id="line.137">        return this.lastModifiedAt;</span>
-<span class="source-line-no">138</span><span id="line.138">    }</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    @Nullable</span>
-<span class="source-line-no">141</span><span id="line.141">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">142</span><span id="line.142">        return this.lastModifiedBy;</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    @Nullable</span>
-<span class="source-line-no">146</span><span id="line.146">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">147</span><span id="line.147">        return this.createdBy;</span>
+<span class="source-line-no">114</span><span id="line.114">    public ProductRevertedStagedChangesMessageBuilder resourceUserProvidedIdentifiers(</span>
+<span class="source-line-no">115</span><span id="line.115">            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
+<span class="source-line-no">116</span><span id="line.116">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">117</span><span id="line.117">        return this;</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    public ProductRevertedStagedChangesMessageBuilder removedImageUrls(final String... removedImageUrls) {</span>
+<span class="source-line-no">121</span><span id="line.121">        this.removedImageUrls = new ArrayList&lt;&gt;(Arrays.asList(removedImageUrls));</span>
+<span class="source-line-no">122</span><span id="line.122">        return this;</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    public ProductRevertedStagedChangesMessageBuilder removedImageUrls(final java.util.List&lt;String&gt; removedImageUrls) {</span>
+<span class="source-line-no">126</span><span id="line.126">        this.removedImageUrls = removedImageUrls;</span>
+<span class="source-line-no">127</span><span id="line.127">        return this;</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    public ProductRevertedStagedChangesMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {</span>
+<span class="source-line-no">131</span><span id="line.131">        if (this.removedImageUrls == null) {</span>
+<span class="source-line-no">132</span><span id="line.132">            this.removedImageUrls = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">133</span><span id="line.133">        }</span>
+<span class="source-line-no">134</span><span id="line.134">        this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));</span>
+<span class="source-line-no">135</span><span id="line.135">        return this;</span>
+<span class="source-line-no">136</span><span id="line.136">    }</span>
+<span class="source-line-no">137</span><span id="line.137"></span>
+<span class="source-line-no">138</span><span id="line.138">    public String getId() {</span>
+<span class="source-line-no">139</span><span id="line.139">        return this.id;</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    public Long getVersion() {</span>
+<span class="source-line-no">143</span><span id="line.143">        return this.version;</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">147</span><span id="line.147">        return this.createdAt;</span>
 <span class="source-line-no">148</span><span id="line.148">    }</span>
 <span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public Long getSequenceNumber() {</span>
-<span class="source-line-no">151</span><span id="line.151">        return this.sequenceNumber;</span>
+<span class="source-line-no">150</span><span id="line.150">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">151</span><span id="line.151">        return this.lastModifiedAt;</span>
 <span class="source-line-no">152</span><span id="line.152">    }</span>
 <span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    public com.commercetools.api.models.common.Reference getResource() {</span>
-<span class="source-line-no">155</span><span id="line.155">        return this.resource;</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public Long getResourceVersion() {</span>
-<span class="source-line-no">159</span><span id="line.159">        return this.resourceVersion;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    @Nullable</span>
-<span class="source-line-no">163</span><span id="line.163">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
-<span class="source-line-no">164</span><span id="line.164">        return this.resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public java.util.List&lt;String&gt; getRemovedImageUrls() {</span>
-<span class="source-line-no">168</span><span id="line.168">        return this.removedImageUrls;</span>
-<span class="source-line-no">169</span><span id="line.169">    }</span>
-<span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    public ProductRevertedStagedChangesMessage build() {</span>
-<span class="source-line-no">172</span><span id="line.172">        Objects.requireNonNull(id, ProductRevertedStagedChangesMessage.class + ": id is missing");</span>
-<span class="source-line-no">173</span><span id="line.173">        Objects.requireNonNull(version, ProductRevertedStagedChangesMessage.class + ": version is missing");</span>
-<span class="source-line-no">174</span><span id="line.174">        Objects.requireNonNull(createdAt, ProductRevertedStagedChangesMessage.class + ": createdAt is missing");</span>
-<span class="source-line-no">175</span><span id="line.175">        Objects.requireNonNull(lastModifiedAt,</span>
-<span class="source-line-no">176</span><span id="line.176">            ProductRevertedStagedChangesMessage.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">177</span><span id="line.177">        Objects.requireNonNull(sequenceNumber,</span>
-<span class="source-line-no">178</span><span id="line.178">            ProductRevertedStagedChangesMessage.class + ": sequenceNumber is missing");</span>
-<span class="source-line-no">179</span><span id="line.179">        Objects.requireNonNull(resource, ProductRevertedStagedChangesMessage.class + ": resource is missing");</span>
-<span class="source-line-no">180</span><span id="line.180">        Objects.requireNonNull(resourceVersion,</span>
-<span class="source-line-no">181</span><span id="line.181">            ProductRevertedStagedChangesMessage.class + ": resourceVersion is missing");</span>
-<span class="source-line-no">182</span><span id="line.182">        Objects.requireNonNull(removedImageUrls,</span>
-<span class="source-line-no">183</span><span id="line.183">            ProductRevertedStagedChangesMessage.class + ": removedImageUrls is missing");</span>
-<span class="source-line-no">184</span><span id="line.184">        return new ProductRevertedStagedChangesMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,</span>
-<span class="source-line-no">185</span><span id="line.185">            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls);</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    /**</span>
-<span class="source-line-no">189</span><span id="line.189">     * builds ProductRevertedStagedChangesMessage without checking for non null required values</span>
-<span class="source-line-no">190</span><span id="line.190">     */</span>
-<span class="source-line-no">191</span><span id="line.191">    public ProductRevertedStagedChangesMessage buildUnchecked() {</span>
-<span class="source-line-no">192</span><span id="line.192">        return new ProductRevertedStagedChangesMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,</span>
-<span class="source-line-no">193</span><span id="line.193">            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls);</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public static ProductRevertedStagedChangesMessageBuilder of() {</span>
-<span class="source-line-no">197</span><span id="line.197">        return new ProductRevertedStagedChangesMessageBuilder();</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    public static ProductRevertedStagedChangesMessageBuilder of(final ProductRevertedStagedChangesMessage template) {</span>
-<span class="source-line-no">201</span><span id="line.201">        ProductRevertedStagedChangesMessageBuilder builder = new ProductRevertedStagedChangesMessageBuilder();</span>
-<span class="source-line-no">202</span><span id="line.202">        builder.id = template.getId();</span>
-<span class="source-line-no">203</span><span id="line.203">        builder.version = template.getVersion();</span>
-<span class="source-line-no">204</span><span id="line.204">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">205</span><span id="line.205">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">206</span><span id="line.206">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">207</span><span id="line.207">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">208</span><span id="line.208">        builder.sequenceNumber = template.getSequenceNumber();</span>
-<span class="source-line-no">209</span><span id="line.209">        builder.resource = template.getResource();</span>
-<span class="source-line-no">210</span><span id="line.210">        builder.resourceVersion = template.getResourceVersion();</span>
-<span class="source-line-no">211</span><span id="line.211">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
-<span class="source-line-no">212</span><span id="line.212">        builder.removedImageUrls = template.getRemovedImageUrls();</span>
-<span class="source-line-no">213</span><span id="line.213">        return builder;</span>
-<span class="source-line-no">214</span><span id="line.214">    }</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">}</span>
+<span class="source-line-no">154</span><span id="line.154">    @Nullable</span>
+<span class="source-line-no">155</span><span id="line.155">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">156</span><span id="line.156">        return this.lastModifiedBy;</span>
+<span class="source-line-no">157</span><span id="line.157">    }</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    @Nullable</span>
+<span class="source-line-no">160</span><span id="line.160">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">161</span><span id="line.161">        return this.createdBy;</span>
+<span class="source-line-no">162</span><span id="line.162">    }</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">    public Long getSequenceNumber() {</span>
+<span class="source-line-no">165</span><span id="line.165">        return this.sequenceNumber;</span>
+<span class="source-line-no">166</span><span id="line.166">    }</span>
+<span class="source-line-no">167</span><span id="line.167"></span>
+<span class="source-line-no">168</span><span id="line.168">    public com.commercetools.api.models.common.Reference getResource() {</span>
+<span class="source-line-no">169</span><span id="line.169">        return this.resource;</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    public Long getResourceVersion() {</span>
+<span class="source-line-no">173</span><span id="line.173">        return this.resourceVersion;</span>
+<span class="source-line-no">174</span><span id="line.174">    }</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    @Nullable</span>
+<span class="source-line-no">177</span><span id="line.177">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
+<span class="source-line-no">178</span><span id="line.178">        return this.resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public java.util.List&lt;String&gt; getRemovedImageUrls() {</span>
+<span class="source-line-no">182</span><span id="line.182">        return this.removedImageUrls;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public ProductRevertedStagedChangesMessage build() {</span>
+<span class="source-line-no">186</span><span id="line.186">        Objects.requireNonNull(id, ProductRevertedStagedChangesMessage.class + ": id is missing");</span>
+<span class="source-line-no">187</span><span id="line.187">        Objects.requireNonNull(version, ProductRevertedStagedChangesMessage.class + ": version is missing");</span>
+<span class="source-line-no">188</span><span id="line.188">        Objects.requireNonNull(createdAt, ProductRevertedStagedChangesMessage.class + ": createdAt is missing");</span>
+<span class="source-line-no">189</span><span id="line.189">        Objects.requireNonNull(lastModifiedAt,</span>
+<span class="source-line-no">190</span><span id="line.190">            ProductRevertedStagedChangesMessage.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">191</span><span id="line.191">        Objects.requireNonNull(sequenceNumber,</span>
+<span class="source-line-no">192</span><span id="line.192">            ProductRevertedStagedChangesMessage.class + ": sequenceNumber is missing");</span>
+<span class="source-line-no">193</span><span id="line.193">        Objects.requireNonNull(resource, ProductRevertedStagedChangesMessage.class + ": resource is missing");</span>
+<span class="source-line-no">194</span><span id="line.194">        Objects.requireNonNull(resourceVersion,</span>
+<span class="source-line-no">195</span><span id="line.195">            ProductRevertedStagedChangesMessage.class + ": resourceVersion is missing");</span>
+<span class="source-line-no">196</span><span id="line.196">        Objects.requireNonNull(removedImageUrls,</span>
+<span class="source-line-no">197</span><span id="line.197">            ProductRevertedStagedChangesMessage.class + ": removedImageUrls is missing");</span>
+<span class="source-line-no">198</span><span id="line.198">        return new ProductRevertedStagedChangesMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,</span>
+<span class="source-line-no">199</span><span id="line.199">            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls);</span>
+<span class="source-line-no">200</span><span id="line.200">    }</span>
+<span class="source-line-no">201</span><span id="line.201"></span>
+<span class="source-line-no">202</span><span id="line.202">    /**</span>
+<span class="source-line-no">203</span><span id="line.203">     * builds ProductRevertedStagedChangesMessage without checking for non null required values</span>
+<span class="source-line-no">204</span><span id="line.204">     */</span>
+<span class="source-line-no">205</span><span id="line.205">    public ProductRevertedStagedChangesMessage buildUnchecked() {</span>
+<span class="source-line-no">206</span><span id="line.206">        return new ProductRevertedStagedChangesMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,</span>
+<span class="source-line-no">207</span><span id="line.207">            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, removedImageUrls);</span>
+<span class="source-line-no">208</span><span id="line.208">    }</span>
+<span class="source-line-no">209</span><span id="line.209"></span>
+<span class="source-line-no">210</span><span id="line.210">    public static ProductRevertedStagedChangesMessageBuilder of() {</span>
+<span class="source-line-no">211</span><span id="line.211">        return new ProductRevertedStagedChangesMessageBuilder();</span>
+<span class="source-line-no">212</span><span id="line.212">    }</span>
+<span class="source-line-no">213</span><span id="line.213"></span>
+<span class="source-line-no">214</span><span id="line.214">    public static ProductRevertedStagedChangesMessageBuilder of(final ProductRevertedStagedChangesMessage template) {</span>
+<span class="source-line-no">215</span><span id="line.215">        ProductRevertedStagedChangesMessageBuilder builder = new ProductRevertedStagedChangesMessageBuilder();</span>
+<span class="source-line-no">216</span><span id="line.216">        builder.id = template.getId();</span>
+<span class="source-line-no">217</span><span id="line.217">        builder.version = template.getVersion();</span>
+<span class="source-line-no">218</span><span id="line.218">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">219</span><span id="line.219">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">220</span><span id="line.220">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">221</span><span id="line.221">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">222</span><span id="line.222">        builder.sequenceNumber = template.getSequenceNumber();</span>
+<span class="source-line-no">223</span><span id="line.223">        builder.resource = template.getResource();</span>
+<span class="source-line-no">224</span><span id="line.224">        builder.resourceVersion = template.getResourceVersion();</span>
+<span class="source-line-no">225</span><span id="line.225">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
+<span class="source-line-no">226</span><span id="line.226">        builder.removedImageUrls = template.getRemovedImageUrls();</span>
+<span class="source-line-no">227</span><span id="line.227">        return builder;</span>
+<span class="source-line-no">228</span><span id="line.228">    }</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">}</span>
 
 
 

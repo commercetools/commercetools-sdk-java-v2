@@ -143,6 +143,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.shipping_method.ShippingRateDraft)">of</a></span>&#8203;(<a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;template)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTiers(com.commercetools.api.models.shipping_method.ShippingRatePriceTier...)">plusTiers</a></span>&#8203;(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>...&nbsp;tiers)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusTiers(java.util.function.Function)">plusTiers</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRatePriceTierBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#price(com.commercetools.api.models.common.Money)">price</a></span>&#8203;(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;price)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></code></div>
@@ -154,6 +160,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#tiers(java.util.List)">tiers</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withTiers(java.util.function.Function)">withTiers</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRatePriceTierBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -225,29 +234,48 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="plusTiers(com.commercetools.api.models.shipping_method.ShippingRatePriceTier...)">
+<h3>plusTiers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.57">plusTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusTiers(java.util.function.Function)">
+<h3>plusTiers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.66">plusTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRatePriceTierBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withTiers(java.util.function.Function)">
+<h3>withTiers</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.76">withTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ShippingRatePriceTierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRatePriceTierBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.57">getPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.84">getPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFreeAbove()">
 <h3>getFreeAbove</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.61">getFreeAbove</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.88">getFreeAbove</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTiers()">
 <h3>getTiers</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.66">getTiers</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.93">getTiers</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.71">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.98">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&gt;</code></dd>
@@ -257,20 +285,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.79">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.106">buildUnchecked</a></span>()</div>
 <div class="block">builds ShippingRateDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.83">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.110">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.shipping_method.ShippingRateDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.87">of</a></span>&#8203;<span class="parameters">(<a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html#line.114">of</a></span>&#8203;<span class="parameters">(<a href="ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

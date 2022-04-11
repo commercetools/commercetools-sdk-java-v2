@@ -154,140 +154,157 @@
 <span class="source-line-no">141</span><span id="line.141">        return this;</span>
 <span class="source-line-no">142</span><span id="line.142">    }</span>
 <span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference... transitions) {</span>
-<span class="source-line-no">145</span><span id="line.145">        this.transitions = new ArrayList&lt;&gt;(Arrays.asList(transitions));</span>
-<span class="source-line-no">146</span><span id="line.146">        return this;</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    public StateBuilder withTransitions(</span>
-<span class="source-line-no">150</span><span id="line.150">            Function&lt;com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">151</span><span id="line.151">        this.transitions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">152</span><span id="line.152">        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());</span>
-<span class="source-line-no">153</span><span id="line.153">        return this;</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public StateBuilder plusTransitions(</span>
-<span class="source-line-no">157</span><span id="line.157">            Function&lt;com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">158</span><span id="line.158">        if (this.transitions == null) {</span>
-<span class="source-line-no">159</span><span id="line.159">            this.transitions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">160</span><span id="line.160">        }</span>
-<span class="source-line-no">161</span><span id="line.161">        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());</span>
-<span class="source-line-no">162</span><span id="line.162">        return this;</span>
-<span class="source-line-no">163</span><span id="line.163">    }</span>
-<span class="source-line-no">164</span><span id="line.164"></span>
-<span class="source-line-no">165</span><span id="line.165">    public StateBuilder transitions(</span>
-<span class="source-line-no">166</span><span id="line.166">            @Nullable final java.util.List&lt;com.commercetools.api.models.state.StateReference&gt; transitions) {</span>
-<span class="source-line-no">167</span><span id="line.167">        this.transitions = transitions;</span>
-<span class="source-line-no">168</span><span id="line.168">        return this;</span>
-<span class="source-line-no">169</span><span id="line.169">    }</span>
-<span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    public String getId() {</span>
-<span class="source-line-no">172</span><span id="line.172">        return this.id;</span>
-<span class="source-line-no">173</span><span id="line.173">    }</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    public Long getVersion() {</span>
-<span class="source-line-no">176</span><span id="line.176">        return this.version;</span>
-<span class="source-line-no">177</span><span id="line.177">    }</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">180</span><span id="line.180">        return this.createdAt;</span>
-<span class="source-line-no">181</span><span id="line.181">    }</span>
-<span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">184</span><span id="line.184">        return this.lastModifiedAt;</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    @Nullable</span>
-<span class="source-line-no">188</span><span id="line.188">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">189</span><span id="line.189">        return this.lastModifiedBy;</span>
+<span class="source-line-no">144</span><span id="line.144">    public StateBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {</span>
+<span class="source-line-no">145</span><span id="line.145">        if (this.roles == null) {</span>
+<span class="source-line-no">146</span><span id="line.146">            this.roles = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">147</span><span id="line.147">        }</span>
+<span class="source-line-no">148</span><span id="line.148">        this.roles.addAll(Arrays.asList(roles));</span>
+<span class="source-line-no">149</span><span id="line.149">        return this;</span>
+<span class="source-line-no">150</span><span id="line.150">    }</span>
+<span class="source-line-no">151</span><span id="line.151"></span>
+<span class="source-line-no">152</span><span id="line.152">    public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference... transitions) {</span>
+<span class="source-line-no">153</span><span id="line.153">        this.transitions = new ArrayList&lt;&gt;(Arrays.asList(transitions));</span>
+<span class="source-line-no">154</span><span id="line.154">        return this;</span>
+<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    public StateBuilder transitions(</span>
+<span class="source-line-no">158</span><span id="line.158">            @Nullable final java.util.List&lt;com.commercetools.api.models.state.StateReference&gt; transitions) {</span>
+<span class="source-line-no">159</span><span id="line.159">        this.transitions = transitions;</span>
+<span class="source-line-no">160</span><span id="line.160">        return this;</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    public StateBuilder plusTransitions(</span>
+<span class="source-line-no">164</span><span id="line.164">            @Nullable final com.commercetools.api.models.state.StateReference... transitions) {</span>
+<span class="source-line-no">165</span><span id="line.165">        if (this.transitions == null) {</span>
+<span class="source-line-no">166</span><span id="line.166">            this.transitions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">167</span><span id="line.167">        }</span>
+<span class="source-line-no">168</span><span id="line.168">        this.transitions.addAll(Arrays.asList(transitions));</span>
+<span class="source-line-no">169</span><span id="line.169">        return this;</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    public StateBuilder plusTransitions(</span>
+<span class="source-line-no">173</span><span id="line.173">            Function&lt;com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">174</span><span id="line.174">        if (this.transitions == null) {</span>
+<span class="source-line-no">175</span><span id="line.175">            this.transitions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">176</span><span id="line.176">        }</span>
+<span class="source-line-no">177</span><span id="line.177">        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());</span>
+<span class="source-line-no">178</span><span id="line.178">        return this;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public StateBuilder withTransitions(</span>
+<span class="source-line-no">182</span><span id="line.182">            Function&lt;com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">183</span><span id="line.183">        this.transitions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">184</span><span id="line.184">        this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());</span>
+<span class="source-line-no">185</span><span id="line.185">        return this;</span>
+<span class="source-line-no">186</span><span id="line.186">    }</span>
+<span class="source-line-no">187</span><span id="line.187"></span>
+<span class="source-line-no">188</span><span id="line.188">    public String getId() {</span>
+<span class="source-line-no">189</span><span id="line.189">        return this.id;</span>
 <span class="source-line-no">190</span><span id="line.190">    }</span>
 <span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    @Nullable</span>
-<span class="source-line-no">193</span><span id="line.193">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">194</span><span id="line.194">        return this.createdBy;</span>
-<span class="source-line-no">195</span><span id="line.195">    }</span>
-<span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">    public String getKey() {</span>
-<span class="source-line-no">198</span><span id="line.198">        return this.key;</span>
-<span class="source-line-no">199</span><span id="line.199">    }</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    public com.commercetools.api.models.state.StateTypeEnum getType() {</span>
-<span class="source-line-no">202</span><span id="line.202">        return this.type;</span>
-<span class="source-line-no">203</span><span id="line.203">    }</span>
-<span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    @Nullable</span>
-<span class="source-line-no">206</span><span id="line.206">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">207</span><span id="line.207">        return this.name;</span>
-<span class="source-line-no">208</span><span id="line.208">    }</span>
-<span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    @Nullable</span>
-<span class="source-line-no">211</span><span id="line.211">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
-<span class="source-line-no">212</span><span id="line.212">        return this.description;</span>
-<span class="source-line-no">213</span><span id="line.213">    }</span>
-<span class="source-line-no">214</span><span id="line.214"></span>
-<span class="source-line-no">215</span><span id="line.215">    public Boolean getInitial() {</span>
-<span class="source-line-no">216</span><span id="line.216">        return this.initial;</span>
-<span class="source-line-no">217</span><span id="line.217">    }</span>
-<span class="source-line-no">218</span><span id="line.218"></span>
-<span class="source-line-no">219</span><span id="line.219">    public Boolean getBuiltIn() {</span>
-<span class="source-line-no">220</span><span id="line.220">        return this.builtIn;</span>
-<span class="source-line-no">221</span><span id="line.221">    }</span>
-<span class="source-line-no">222</span><span id="line.222"></span>
-<span class="source-line-no">223</span><span id="line.223">    @Nullable</span>
-<span class="source-line-no">224</span><span id="line.224">    public java.util.List&lt;com.commercetools.api.models.state.StateRoleEnum&gt; getRoles() {</span>
-<span class="source-line-no">225</span><span id="line.225">        return this.roles;</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    @Nullable</span>
-<span class="source-line-no">229</span><span id="line.229">    public java.util.List&lt;com.commercetools.api.models.state.StateReference&gt; getTransitions() {</span>
-<span class="source-line-no">230</span><span id="line.230">        return this.transitions;</span>
-<span class="source-line-no">231</span><span id="line.231">    }</span>
-<span class="source-line-no">232</span><span id="line.232"></span>
-<span class="source-line-no">233</span><span id="line.233">    public State build() {</span>
-<span class="source-line-no">234</span><span id="line.234">        Objects.requireNonNull(id, State.class + ": id is missing");</span>
-<span class="source-line-no">235</span><span id="line.235">        Objects.requireNonNull(version, State.class + ": version is missing");</span>
-<span class="source-line-no">236</span><span id="line.236">        Objects.requireNonNull(createdAt, State.class + ": createdAt is missing");</span>
-<span class="source-line-no">237</span><span id="line.237">        Objects.requireNonNull(lastModifiedAt, State.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">238</span><span id="line.238">        Objects.requireNonNull(key, State.class + ": key is missing");</span>
-<span class="source-line-no">239</span><span id="line.239">        Objects.requireNonNull(type, State.class + ": type is missing");</span>
-<span class="source-line-no">240</span><span id="line.240">        Objects.requireNonNull(initial, State.class + ": initial is missing");</span>
-<span class="source-line-no">241</span><span id="line.241">        Objects.requireNonNull(builtIn, State.class + ": builtIn is missing");</span>
-<span class="source-line-no">242</span><span id="line.242">        return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,</span>
-<span class="source-line-no">243</span><span id="line.243">            description, initial, builtIn, roles, transitions);</span>
-<span class="source-line-no">244</span><span id="line.244">    }</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">    /**</span>
-<span class="source-line-no">247</span><span id="line.247">     * builds State without checking for non null required values</span>
-<span class="source-line-no">248</span><span id="line.248">     */</span>
-<span class="source-line-no">249</span><span id="line.249">    public State buildUnchecked() {</span>
-<span class="source-line-no">250</span><span id="line.250">        return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,</span>
-<span class="source-line-no">251</span><span id="line.251">            description, initial, builtIn, roles, transitions);</span>
-<span class="source-line-no">252</span><span id="line.252">    }</span>
-<span class="source-line-no">253</span><span id="line.253"></span>
-<span class="source-line-no">254</span><span id="line.254">    public static StateBuilder of() {</span>
-<span class="source-line-no">255</span><span id="line.255">        return new StateBuilder();</span>
-<span class="source-line-no">256</span><span id="line.256">    }</span>
-<span class="source-line-no">257</span><span id="line.257"></span>
-<span class="source-line-no">258</span><span id="line.258">    public static StateBuilder of(final State template) {</span>
-<span class="source-line-no">259</span><span id="line.259">        StateBuilder builder = new StateBuilder();</span>
-<span class="source-line-no">260</span><span id="line.260">        builder.id = template.getId();</span>
-<span class="source-line-no">261</span><span id="line.261">        builder.version = template.getVersion();</span>
-<span class="source-line-no">262</span><span id="line.262">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">263</span><span id="line.263">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">264</span><span id="line.264">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">265</span><span id="line.265">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">266</span><span id="line.266">        builder.key = template.getKey();</span>
-<span class="source-line-no">267</span><span id="line.267">        builder.type = template.getType();</span>
-<span class="source-line-no">268</span><span id="line.268">        builder.name = template.getName();</span>
-<span class="source-line-no">269</span><span id="line.269">        builder.description = template.getDescription();</span>
-<span class="source-line-no">270</span><span id="line.270">        builder.initial = template.getInitial();</span>
-<span class="source-line-no">271</span><span id="line.271">        builder.builtIn = template.getBuiltIn();</span>
-<span class="source-line-no">272</span><span id="line.272">        builder.roles = template.getRoles();</span>
-<span class="source-line-no">273</span><span id="line.273">        builder.transitions = template.getTransitions();</span>
-<span class="source-line-no">274</span><span id="line.274">        return builder;</span>
-<span class="source-line-no">275</span><span id="line.275">    }</span>
-<span class="source-line-no">276</span><span id="line.276"></span>
-<span class="source-line-no">277</span><span id="line.277">}</span>
+<span class="source-line-no">192</span><span id="line.192">    public Long getVersion() {</span>
+<span class="source-line-no">193</span><span id="line.193">        return this.version;</span>
+<span class="source-line-no">194</span><span id="line.194">    }</span>
+<span class="source-line-no">195</span><span id="line.195"></span>
+<span class="source-line-no">196</span><span id="line.196">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">197</span><span id="line.197">        return this.createdAt;</span>
+<span class="source-line-no">198</span><span id="line.198">    }</span>
+<span class="source-line-no">199</span><span id="line.199"></span>
+<span class="source-line-no">200</span><span id="line.200">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">201</span><span id="line.201">        return this.lastModifiedAt;</span>
+<span class="source-line-no">202</span><span id="line.202">    }</span>
+<span class="source-line-no">203</span><span id="line.203"></span>
+<span class="source-line-no">204</span><span id="line.204">    @Nullable</span>
+<span class="source-line-no">205</span><span id="line.205">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">206</span><span id="line.206">        return this.lastModifiedBy;</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">    @Nullable</span>
+<span class="source-line-no">210</span><span id="line.210">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">211</span><span id="line.211">        return this.createdBy;</span>
+<span class="source-line-no">212</span><span id="line.212">    }</span>
+<span class="source-line-no">213</span><span id="line.213"></span>
+<span class="source-line-no">214</span><span id="line.214">    public String getKey() {</span>
+<span class="source-line-no">215</span><span id="line.215">        return this.key;</span>
+<span class="source-line-no">216</span><span id="line.216">    }</span>
+<span class="source-line-no">217</span><span id="line.217"></span>
+<span class="source-line-no">218</span><span id="line.218">    public com.commercetools.api.models.state.StateTypeEnum getType() {</span>
+<span class="source-line-no">219</span><span id="line.219">        return this.type;</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    @Nullable</span>
+<span class="source-line-no">223</span><span id="line.223">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">224</span><span id="line.224">        return this.name;</span>
+<span class="source-line-no">225</span><span id="line.225">    }</span>
+<span class="source-line-no">226</span><span id="line.226"></span>
+<span class="source-line-no">227</span><span id="line.227">    @Nullable</span>
+<span class="source-line-no">228</span><span id="line.228">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
+<span class="source-line-no">229</span><span id="line.229">        return this.description;</span>
+<span class="source-line-no">230</span><span id="line.230">    }</span>
+<span class="source-line-no">231</span><span id="line.231"></span>
+<span class="source-line-no">232</span><span id="line.232">    public Boolean getInitial() {</span>
+<span class="source-line-no">233</span><span id="line.233">        return this.initial;</span>
+<span class="source-line-no">234</span><span id="line.234">    }</span>
+<span class="source-line-no">235</span><span id="line.235"></span>
+<span class="source-line-no">236</span><span id="line.236">    public Boolean getBuiltIn() {</span>
+<span class="source-line-no">237</span><span id="line.237">        return this.builtIn;</span>
+<span class="source-line-no">238</span><span id="line.238">    }</span>
+<span class="source-line-no">239</span><span id="line.239"></span>
+<span class="source-line-no">240</span><span id="line.240">    @Nullable</span>
+<span class="source-line-no">241</span><span id="line.241">    public java.util.List&lt;com.commercetools.api.models.state.StateRoleEnum&gt; getRoles() {</span>
+<span class="source-line-no">242</span><span id="line.242">        return this.roles;</span>
+<span class="source-line-no">243</span><span id="line.243">    }</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">    @Nullable</span>
+<span class="source-line-no">246</span><span id="line.246">    public java.util.List&lt;com.commercetools.api.models.state.StateReference&gt; getTransitions() {</span>
+<span class="source-line-no">247</span><span id="line.247">        return this.transitions;</span>
+<span class="source-line-no">248</span><span id="line.248">    }</span>
+<span class="source-line-no">249</span><span id="line.249"></span>
+<span class="source-line-no">250</span><span id="line.250">    public State build() {</span>
+<span class="source-line-no">251</span><span id="line.251">        Objects.requireNonNull(id, State.class + ": id is missing");</span>
+<span class="source-line-no">252</span><span id="line.252">        Objects.requireNonNull(version, State.class + ": version is missing");</span>
+<span class="source-line-no">253</span><span id="line.253">        Objects.requireNonNull(createdAt, State.class + ": createdAt is missing");</span>
+<span class="source-line-no">254</span><span id="line.254">        Objects.requireNonNull(lastModifiedAt, State.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">255</span><span id="line.255">        Objects.requireNonNull(key, State.class + ": key is missing");</span>
+<span class="source-line-no">256</span><span id="line.256">        Objects.requireNonNull(type, State.class + ": type is missing");</span>
+<span class="source-line-no">257</span><span id="line.257">        Objects.requireNonNull(initial, State.class + ": initial is missing");</span>
+<span class="source-line-no">258</span><span id="line.258">        Objects.requireNonNull(builtIn, State.class + ": builtIn is missing");</span>
+<span class="source-line-no">259</span><span id="line.259">        return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,</span>
+<span class="source-line-no">260</span><span id="line.260">            description, initial, builtIn, roles, transitions);</span>
+<span class="source-line-no">261</span><span id="line.261">    }</span>
+<span class="source-line-no">262</span><span id="line.262"></span>
+<span class="source-line-no">263</span><span id="line.263">    /**</span>
+<span class="source-line-no">264</span><span id="line.264">     * builds State without checking for non null required values</span>
+<span class="source-line-no">265</span><span id="line.265">     */</span>
+<span class="source-line-no">266</span><span id="line.266">    public State buildUnchecked() {</span>
+<span class="source-line-no">267</span><span id="line.267">        return new StateImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, type, name,</span>
+<span class="source-line-no">268</span><span id="line.268">            description, initial, builtIn, roles, transitions);</span>
+<span class="source-line-no">269</span><span id="line.269">    }</span>
+<span class="source-line-no">270</span><span id="line.270"></span>
+<span class="source-line-no">271</span><span id="line.271">    public static StateBuilder of() {</span>
+<span class="source-line-no">272</span><span id="line.272">        return new StateBuilder();</span>
+<span class="source-line-no">273</span><span id="line.273">    }</span>
+<span class="source-line-no">274</span><span id="line.274"></span>
+<span class="source-line-no">275</span><span id="line.275">    public static StateBuilder of(final State template) {</span>
+<span class="source-line-no">276</span><span id="line.276">        StateBuilder builder = new StateBuilder();</span>
+<span class="source-line-no">277</span><span id="line.277">        builder.id = template.getId();</span>
+<span class="source-line-no">278</span><span id="line.278">        builder.version = template.getVersion();</span>
+<span class="source-line-no">279</span><span id="line.279">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">280</span><span id="line.280">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">281</span><span id="line.281">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">282</span><span id="line.282">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">283</span><span id="line.283">        builder.key = template.getKey();</span>
+<span class="source-line-no">284</span><span id="line.284">        builder.type = template.getType();</span>
+<span class="source-line-no">285</span><span id="line.285">        builder.name = template.getName();</span>
+<span class="source-line-no">286</span><span id="line.286">        builder.description = template.getDescription();</span>
+<span class="source-line-no">287</span><span id="line.287">        builder.initial = template.getInitial();</span>
+<span class="source-line-no">288</span><span id="line.288">        builder.builtIn = template.getBuiltIn();</span>
+<span class="source-line-no">289</span><span id="line.289">        builder.roles = template.getRoles();</span>
+<span class="source-line-no">290</span><span id="line.290">        builder.transitions = template.getTransitions();</span>
+<span class="source-line-no">291</span><span id="line.291">        return builder;</span>
+<span class="source-line-no">292</span><span id="line.292">    }</span>
+<span class="source-line-no">293</span><span id="line.293"></span>
+<span class="source-line-no">294</span><span id="line.294">}</span>
 
 
 

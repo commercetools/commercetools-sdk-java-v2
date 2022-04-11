@@ -60,51 +60,59 @@
 <span class="source-line-no">047</span><span id="line.47">        return this;</span>
 <span class="source-line-no">048</span><span id="line.48">    }</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    @Nullable</span>
-<span class="source-line-no">051</span><span id="line.51">    public Long getVariantId() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return this.variantId;</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    @Nullable</span>
-<span class="source-line-no">056</span><span id="line.56">    public String getSku() {</span>
-<span class="source-line-no">057</span><span id="line.57">        return this.sku;</span>
-<span class="source-line-no">058</span><span id="line.58">    }</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    @Nullable</span>
-<span class="source-line-no">061</span><span id="line.61">    public Boolean getStaged() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return this.staged;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public java.util.List&lt;String&gt; getAssetOrder() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return this.assetOrder;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public ProductChangeAssetOrderAction build() {</span>
-<span class="source-line-no">070</span><span id="line.70">        Objects.requireNonNull(assetOrder, ProductChangeAssetOrderAction.class + ": assetOrder is missing");</span>
-<span class="source-line-no">071</span><span id="line.71">        return new ProductChangeAssetOrderActionImpl(variantId, sku, staged, assetOrder);</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    /**</span>
-<span class="source-line-no">075</span><span id="line.75">     * builds ProductChangeAssetOrderAction without checking for non null required values</span>
-<span class="source-line-no">076</span><span id="line.76">     */</span>
-<span class="source-line-no">077</span><span id="line.77">    public ProductChangeAssetOrderAction buildUnchecked() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return new ProductChangeAssetOrderActionImpl(variantId, sku, staged, assetOrder);</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public static ProductChangeAssetOrderActionBuilder of() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return new ProductChangeAssetOrderActionBuilder();</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public static ProductChangeAssetOrderActionBuilder of(final ProductChangeAssetOrderAction template) {</span>
-<span class="source-line-no">086</span><span id="line.86">        ProductChangeAssetOrderActionBuilder builder = new ProductChangeAssetOrderActionBuilder();</span>
-<span class="source-line-no">087</span><span id="line.87">        builder.variantId = template.getVariantId();</span>
-<span class="source-line-no">088</span><span id="line.88">        builder.sku = template.getSku();</span>
-<span class="source-line-no">089</span><span id="line.89">        builder.staged = template.getStaged();</span>
-<span class="source-line-no">090</span><span id="line.90">        builder.assetOrder = template.getAssetOrder();</span>
-<span class="source-line-no">091</span><span id="line.91">        return builder;</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">}</span>
+<span class="source-line-no">050</span><span id="line.50">    public ProductChangeAssetOrderActionBuilder plusAssetOrder(final String... assetOrder) {</span>
+<span class="source-line-no">051</span><span id="line.51">        if (this.assetOrder == null) {</span>
+<span class="source-line-no">052</span><span id="line.52">            this.assetOrder = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">053</span><span id="line.53">        }</span>
+<span class="source-line-no">054</span><span id="line.54">        this.assetOrder.addAll(Arrays.asList(assetOrder));</span>
+<span class="source-line-no">055</span><span id="line.55">        return this;</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    @Nullable</span>
+<span class="source-line-no">059</span><span id="line.59">    public Long getVariantId() {</span>
+<span class="source-line-no">060</span><span id="line.60">        return this.variantId;</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    @Nullable</span>
+<span class="source-line-no">064</span><span id="line.64">    public String getSku() {</span>
+<span class="source-line-no">065</span><span id="line.65">        return this.sku;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    @Nullable</span>
+<span class="source-line-no">069</span><span id="line.69">    public Boolean getStaged() {</span>
+<span class="source-line-no">070</span><span id="line.70">        return this.staged;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public java.util.List&lt;String&gt; getAssetOrder() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return this.assetOrder;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public ProductChangeAssetOrderAction build() {</span>
+<span class="source-line-no">078</span><span id="line.78">        Objects.requireNonNull(assetOrder, ProductChangeAssetOrderAction.class + ": assetOrder is missing");</span>
+<span class="source-line-no">079</span><span id="line.79">        return new ProductChangeAssetOrderActionImpl(variantId, sku, staged, assetOrder);</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    /**</span>
+<span class="source-line-no">083</span><span id="line.83">     * builds ProductChangeAssetOrderAction without checking for non null required values</span>
+<span class="source-line-no">084</span><span id="line.84">     */</span>
+<span class="source-line-no">085</span><span id="line.85">    public ProductChangeAssetOrderAction buildUnchecked() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return new ProductChangeAssetOrderActionImpl(variantId, sku, staged, assetOrder);</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public static ProductChangeAssetOrderActionBuilder of() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return new ProductChangeAssetOrderActionBuilder();</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public static ProductChangeAssetOrderActionBuilder of(final ProductChangeAssetOrderAction template) {</span>
+<span class="source-line-no">094</span><span id="line.94">        ProductChangeAssetOrderActionBuilder builder = new ProductChangeAssetOrderActionBuilder();</span>
+<span class="source-line-no">095</span><span id="line.95">        builder.variantId = template.getVariantId();</span>
+<span class="source-line-no">096</span><span id="line.96">        builder.sku = template.getSku();</span>
+<span class="source-line-no">097</span><span id="line.97">        builder.staged = template.getStaged();</span>
+<span class="source-line-no">098</span><span id="line.98">        builder.assetOrder = template.getAssetOrder();</span>
+<span class="source-line-no">099</span><span id="line.99">        return builder;</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">}</span>
 
 
 

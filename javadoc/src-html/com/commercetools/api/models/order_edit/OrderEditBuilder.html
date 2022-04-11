@@ -125,122 +125,155 @@
 <span class="source-line-no">112</span><span id="line.112">        return this;</span>
 <span class="source-line-no">113</span><span id="line.113">    }</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public OrderEditBuilder custom(</span>
-<span class="source-line-no">116</span><span id="line.116">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
-<span class="source-line-no">117</span><span id="line.117">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
-<span class="source-line-no">118</span><span id="line.118">        return this;</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public OrderEditBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
-<span class="source-line-no">122</span><span id="line.122">        this.custom = custom;</span>
-<span class="source-line-no">123</span><span id="line.123">        return this;</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public OrderEditBuilder result(final com.commercetools.api.models.order_edit.OrderEditResult result) {</span>
-<span class="source-line-no">127</span><span id="line.127">        this.result = result;</span>
-<span class="source-line-no">128</span><span id="line.128">        return this;</span>
-<span class="source-line-no">129</span><span id="line.129">    }</span>
-<span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    public OrderEditBuilder comment(@Nullable final String comment) {</span>
-<span class="source-line-no">132</span><span id="line.132">        this.comment = comment;</span>
-<span class="source-line-no">133</span><span id="line.133">        return this;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public String getId() {</span>
-<span class="source-line-no">137</span><span id="line.137">        return this.id;</span>
-<span class="source-line-no">138</span><span id="line.138">    }</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public Long getVersion() {</span>
-<span class="source-line-no">141</span><span id="line.141">        return this.version;</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">145</span><span id="line.145">        return this.createdAt;</span>
+<span class="source-line-no">115</span><span id="line.115">    public OrderEditBuilder plusStagedActions(</span>
+<span class="source-line-no">116</span><span id="line.116">            final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {</span>
+<span class="source-line-no">117</span><span id="line.117">        if (this.stagedActions == null) {</span>
+<span class="source-line-no">118</span><span id="line.118">            this.stagedActions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">119</span><span id="line.119">        }</span>
+<span class="source-line-no">120</span><span id="line.120">        this.stagedActions.addAll(Arrays.asList(stagedActions));</span>
+<span class="source-line-no">121</span><span id="line.121">        return this;</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    public OrderEditBuilder plusStagedActions(</span>
+<span class="source-line-no">125</span><span id="line.125">            Function&lt;com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder&lt;? extends com.commercetools.api.models.order.StagedOrderUpdateAction&gt;&gt; builder) {</span>
+<span class="source-line-no">126</span><span id="line.126">        if (this.stagedActions == null) {</span>
+<span class="source-line-no">127</span><span id="line.127">            this.stagedActions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">128</span><span id="line.128">        }</span>
+<span class="source-line-no">129</span><span id="line.129">        this.stagedActions</span>
+<span class="source-line-no">130</span><span id="line.130">                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());</span>
+<span class="source-line-no">131</span><span id="line.131">        return this;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    public OrderEditBuilder withStagedActions(</span>
+<span class="source-line-no">135</span><span id="line.135">            Function&lt;com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder&lt;? extends com.commercetools.api.models.order.StagedOrderUpdateAction&gt;&gt; builder) {</span>
+<span class="source-line-no">136</span><span id="line.136">        this.stagedActions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">137</span><span id="line.137">        this.stagedActions</span>
+<span class="source-line-no">138</span><span id="line.138">                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());</span>
+<span class="source-line-no">139</span><span id="line.139">        return this;</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    public OrderEditBuilder custom(</span>
+<span class="source-line-no">143</span><span id="line.143">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
+<span class="source-line-no">144</span><span id="line.144">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
+<span class="source-line-no">145</span><span id="line.145">        return this;</span>
 <span class="source-line-no">146</span><span id="line.146">    }</span>
 <span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">149</span><span id="line.149">        return this.lastModifiedAt;</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    @Nullable</span>
-<span class="source-line-no">153</span><span id="line.153">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">154</span><span id="line.154">        return this.lastModifiedBy;</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    @Nullable</span>
-<span class="source-line-no">158</span><span id="line.158">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">159</span><span id="line.159">        return this.createdBy;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    @Nullable</span>
-<span class="source-line-no">163</span><span id="line.163">    public String getKey() {</span>
-<span class="source-line-no">164</span><span id="line.164">        return this.key;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public com.commercetools.api.models.order.OrderReference getResource() {</span>
-<span class="source-line-no">168</span><span id="line.168">        return this.resource;</span>
-<span class="source-line-no">169</span><span id="line.169">    }</span>
-<span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    public java.util.List&lt;com.commercetools.api.models.order.StagedOrderUpdateAction&gt; getStagedActions() {</span>
-<span class="source-line-no">172</span><span id="line.172">        return this.stagedActions;</span>
-<span class="source-line-no">173</span><span id="line.173">    }</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    @Nullable</span>
-<span class="source-line-no">176</span><span id="line.176">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
-<span class="source-line-no">177</span><span id="line.177">        return this.custom;</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public com.commercetools.api.models.order_edit.OrderEditResult getResult() {</span>
-<span class="source-line-no">181</span><span id="line.181">        return this.result;</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    @Nullable</span>
-<span class="source-line-no">185</span><span id="line.185">    public String getComment() {</span>
-<span class="source-line-no">186</span><span id="line.186">        return this.comment;</span>
-<span class="source-line-no">187</span><span id="line.187">    }</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    public OrderEdit build() {</span>
-<span class="source-line-no">190</span><span id="line.190">        Objects.requireNonNull(id, OrderEdit.class + ": id is missing");</span>
-<span class="source-line-no">191</span><span id="line.191">        Objects.requireNonNull(version, OrderEdit.class + ": version is missing");</span>
-<span class="source-line-no">192</span><span id="line.192">        Objects.requireNonNull(createdAt, OrderEdit.class + ": createdAt is missing");</span>
-<span class="source-line-no">193</span><span id="line.193">        Objects.requireNonNull(lastModifiedAt, OrderEdit.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">194</span><span id="line.194">        Objects.requireNonNull(resource, OrderEdit.class + ": resource is missing");</span>
-<span class="source-line-no">195</span><span id="line.195">        Objects.requireNonNull(stagedActions, OrderEdit.class + ": stagedActions is missing");</span>
-<span class="source-line-no">196</span><span id="line.196">        Objects.requireNonNull(result, OrderEdit.class + ": result is missing");</span>
-<span class="source-line-no">197</span><span id="line.197">        return new OrderEditImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, resource,</span>
-<span class="source-line-no">198</span><span id="line.198">            stagedActions, custom, result, comment);</span>
-<span class="source-line-no">199</span><span id="line.199">    }</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    /**</span>
-<span class="source-line-no">202</span><span id="line.202">     * builds OrderEdit without checking for non null required values</span>
-<span class="source-line-no">203</span><span id="line.203">     */</span>
-<span class="source-line-no">204</span><span id="line.204">    public OrderEdit buildUnchecked() {</span>
-<span class="source-line-no">205</span><span id="line.205">        return new OrderEditImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, resource,</span>
-<span class="source-line-no">206</span><span id="line.206">            stagedActions, custom, result, comment);</span>
-<span class="source-line-no">207</span><span id="line.207">    }</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public static OrderEditBuilder of() {</span>
-<span class="source-line-no">210</span><span id="line.210">        return new OrderEditBuilder();</span>
+<span class="source-line-no">148</span><span id="line.148">    public OrderEditBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
+<span class="source-line-no">149</span><span id="line.149">        this.custom = custom;</span>
+<span class="source-line-no">150</span><span id="line.150">        return this;</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public OrderEditBuilder result(final com.commercetools.api.models.order_edit.OrderEditResult result) {</span>
+<span class="source-line-no">154</span><span id="line.154">        this.result = result;</span>
+<span class="source-line-no">155</span><span id="line.155">        return this;</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    public OrderEditBuilder result(</span>
+<span class="source-line-no">159</span><span id="line.159">            Function&lt;com.commercetools.api.models.order_edit.OrderEditResultBuilder, Builder&lt;? extends com.commercetools.api.models.order_edit.OrderEditResult&gt;&gt; builder) {</span>
+<span class="source-line-no">160</span><span id="line.160">        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditResultBuilder.of()).build();</span>
+<span class="source-line-no">161</span><span id="line.161">        return this;</span>
+<span class="source-line-no">162</span><span id="line.162">    }</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">    public OrderEditBuilder comment(@Nullable final String comment) {</span>
+<span class="source-line-no">165</span><span id="line.165">        this.comment = comment;</span>
+<span class="source-line-no">166</span><span id="line.166">        return this;</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    public String getId() {</span>
+<span class="source-line-no">170</span><span id="line.170">        return this.id;</span>
+<span class="source-line-no">171</span><span id="line.171">    }</span>
+<span class="source-line-no">172</span><span id="line.172"></span>
+<span class="source-line-no">173</span><span id="line.173">    public Long getVersion() {</span>
+<span class="source-line-no">174</span><span id="line.174">        return this.version;</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">178</span><span id="line.178">        return this.createdAt;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">182</span><span id="line.182">        return this.lastModifiedAt;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    @Nullable</span>
+<span class="source-line-no">186</span><span id="line.186">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">187</span><span id="line.187">        return this.lastModifiedBy;</span>
+<span class="source-line-no">188</span><span id="line.188">    }</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    @Nullable</span>
+<span class="source-line-no">191</span><span id="line.191">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">192</span><span id="line.192">        return this.createdBy;</span>
+<span class="source-line-no">193</span><span id="line.193">    }</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    @Nullable</span>
+<span class="source-line-no">196</span><span id="line.196">    public String getKey() {</span>
+<span class="source-line-no">197</span><span id="line.197">        return this.key;</span>
+<span class="source-line-no">198</span><span id="line.198">    }</span>
+<span class="source-line-no">199</span><span id="line.199"></span>
+<span class="source-line-no">200</span><span id="line.200">    public com.commercetools.api.models.order.OrderReference getResource() {</span>
+<span class="source-line-no">201</span><span id="line.201">        return this.resource;</span>
+<span class="source-line-no">202</span><span id="line.202">    }</span>
+<span class="source-line-no">203</span><span id="line.203"></span>
+<span class="source-line-no">204</span><span id="line.204">    public java.util.List&lt;com.commercetools.api.models.order.StagedOrderUpdateAction&gt; getStagedActions() {</span>
+<span class="source-line-no">205</span><span id="line.205">        return this.stagedActions;</span>
+<span class="source-line-no">206</span><span id="line.206">    }</span>
+<span class="source-line-no">207</span><span id="line.207"></span>
+<span class="source-line-no">208</span><span id="line.208">    @Nullable</span>
+<span class="source-line-no">209</span><span id="line.209">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
+<span class="source-line-no">210</span><span id="line.210">        return this.custom;</span>
 <span class="source-line-no">211</span><span id="line.211">    }</span>
 <span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    public static OrderEditBuilder of(final OrderEdit template) {</span>
-<span class="source-line-no">214</span><span id="line.214">        OrderEditBuilder builder = new OrderEditBuilder();</span>
-<span class="source-line-no">215</span><span id="line.215">        builder.id = template.getId();</span>
-<span class="source-line-no">216</span><span id="line.216">        builder.version = template.getVersion();</span>
-<span class="source-line-no">217</span><span id="line.217">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">218</span><span id="line.218">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">219</span><span id="line.219">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">220</span><span id="line.220">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">221</span><span id="line.221">        builder.key = template.getKey();</span>
-<span class="source-line-no">222</span><span id="line.222">        builder.resource = template.getResource();</span>
-<span class="source-line-no">223</span><span id="line.223">        builder.stagedActions = template.getStagedActions();</span>
-<span class="source-line-no">224</span><span id="line.224">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">225</span><span id="line.225">        builder.result = template.getResult();</span>
-<span class="source-line-no">226</span><span id="line.226">        builder.comment = template.getComment();</span>
-<span class="source-line-no">227</span><span id="line.227">        return builder;</span>
-<span class="source-line-no">228</span><span id="line.228">    }</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">}</span>
+<span class="source-line-no">213</span><span id="line.213">    public com.commercetools.api.models.order_edit.OrderEditResult getResult() {</span>
+<span class="source-line-no">214</span><span id="line.214">        return this.result;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    @Nullable</span>
+<span class="source-line-no">218</span><span id="line.218">    public String getComment() {</span>
+<span class="source-line-no">219</span><span id="line.219">        return this.comment;</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    public OrderEdit build() {</span>
+<span class="source-line-no">223</span><span id="line.223">        Objects.requireNonNull(id, OrderEdit.class + ": id is missing");</span>
+<span class="source-line-no">224</span><span id="line.224">        Objects.requireNonNull(version, OrderEdit.class + ": version is missing");</span>
+<span class="source-line-no">225</span><span id="line.225">        Objects.requireNonNull(createdAt, OrderEdit.class + ": createdAt is missing");</span>
+<span class="source-line-no">226</span><span id="line.226">        Objects.requireNonNull(lastModifiedAt, OrderEdit.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">227</span><span id="line.227">        Objects.requireNonNull(resource, OrderEdit.class + ": resource is missing");</span>
+<span class="source-line-no">228</span><span id="line.228">        Objects.requireNonNull(stagedActions, OrderEdit.class + ": stagedActions is missing");</span>
+<span class="source-line-no">229</span><span id="line.229">        Objects.requireNonNull(result, OrderEdit.class + ": result is missing");</span>
+<span class="source-line-no">230</span><span id="line.230">        return new OrderEditImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, resource,</span>
+<span class="source-line-no">231</span><span id="line.231">            stagedActions, custom, result, comment);</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    /**</span>
+<span class="source-line-no">235</span><span id="line.235">     * builds OrderEdit without checking for non null required values</span>
+<span class="source-line-no">236</span><span id="line.236">     */</span>
+<span class="source-line-no">237</span><span id="line.237">    public OrderEdit buildUnchecked() {</span>
+<span class="source-line-no">238</span><span id="line.238">        return new OrderEditImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, resource,</span>
+<span class="source-line-no">239</span><span id="line.239">            stagedActions, custom, result, comment);</span>
+<span class="source-line-no">240</span><span id="line.240">    }</span>
+<span class="source-line-no">241</span><span id="line.241"></span>
+<span class="source-line-no">242</span><span id="line.242">    public static OrderEditBuilder of() {</span>
+<span class="source-line-no">243</span><span id="line.243">        return new OrderEditBuilder();</span>
+<span class="source-line-no">244</span><span id="line.244">    }</span>
+<span class="source-line-no">245</span><span id="line.245"></span>
+<span class="source-line-no">246</span><span id="line.246">    public static OrderEditBuilder of(final OrderEdit template) {</span>
+<span class="source-line-no">247</span><span id="line.247">        OrderEditBuilder builder = new OrderEditBuilder();</span>
+<span class="source-line-no">248</span><span id="line.248">        builder.id = template.getId();</span>
+<span class="source-line-no">249</span><span id="line.249">        builder.version = template.getVersion();</span>
+<span class="source-line-no">250</span><span id="line.250">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">251</span><span id="line.251">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">252</span><span id="line.252">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">253</span><span id="line.253">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">254</span><span id="line.254">        builder.key = template.getKey();</span>
+<span class="source-line-no">255</span><span id="line.255">        builder.resource = template.getResource();</span>
+<span class="source-line-no">256</span><span id="line.256">        builder.stagedActions = template.getStagedActions();</span>
+<span class="source-line-no">257</span><span id="line.257">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">258</span><span id="line.258">        builder.result = template.getResult();</span>
+<span class="source-line-no">259</span><span id="line.259">        builder.comment = template.getComment();</span>
+<span class="source-line-no">260</span><span id="line.260">        return builder;</span>
+<span class="source-line-no">261</span><span id="line.261">    }</span>
+<span class="source-line-no">262</span><span id="line.262"></span>
+<span class="source-line-no">263</span><span id="line.263">}</span>
 
 
 

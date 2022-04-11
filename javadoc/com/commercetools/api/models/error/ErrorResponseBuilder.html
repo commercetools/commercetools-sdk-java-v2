@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.11">ErrorResponseBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.12">ErrorResponseBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a>&gt;</span></div>
 </section>
@@ -158,8 +158,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.error.ErrorResponse)">of</a></span>&#8203;(<a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusErrors(com.commercetools.api.models.error.ErrorObject...)">plusErrors</a></span>&#8203;(<a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>...&nbsp;errors)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusErrors(java.util.function.Function)">plusErrors</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#statusCode(java.lang.Integer)">statusCode</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;statusCode)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#withErrors(java.util.function.Function)">withErrors</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -180,7 +189,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ErrorResponseBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.12">ErrorResponseBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.13">ErrorResponseBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -194,80 +203,99 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="statusCode(java.lang.Integer)">
 <h3>statusCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.27">statusCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;statusCode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.28">statusCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;statusCode)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="message(java.lang.String)">
 <h3>message</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.32">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.33">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="error(java.lang.String)">
 <h3>error</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.37">error</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.38">error</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;error)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="error_description(java.lang.String)">
 <h3>error_description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.42">error_description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.43">error_description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;error_description)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="errors(com.commercetools.api.models.error.ErrorObject...)">
 <h3>errors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.47">errors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.48">errors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>...&nbsp;errors)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="errors(java.util.List)">
 <h3>errors</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.52">errors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.53">errors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>&gt;&nbsp;errors)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusErrors(com.commercetools.api.models.error.ErrorObject...)">
+<h3>plusErrors</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.59">plusErrors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>...&nbsp;errors)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusErrors(java.util.function.Function)">
+<h3>plusErrors</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.67">plusErrors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>&gt;&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withErrors(java.util.function.Function)">
+<h3>withErrors</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.76">withErrors</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">ErrorObjectBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>&gt;&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStatusCode()">
 <h3>getStatusCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.58">getStatusCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.83">getStatusCode</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessage()">
 <h3>getMessage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.62">getMessage</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.87">getMessage</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getError()">
 <h3>getError</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.66">getError</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.91">getError</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getError_description()">
 <h3>getError_description</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.71">getError_description</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.96">getError_description</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getErrors()">
 <h3>getErrors</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.76">getErrors</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.101">getErrors</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.81">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.106">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a>&gt;</code></dd>
@@ -277,20 +305,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.90">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.115">buildUnchecked</a></span>()</div>
 <div class="block">builds ErrorResponse without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.94">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.119">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.ErrorResponse)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.98">of</a></span>&#8203;<span class="parameters">(<a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">ErrorResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/ErrorResponseBuilder.html#line.123">of</a></span>&#8203;<span class="parameters">(<a href="ErrorResponse.html" title="interface in com.commercetools.api.models.error">ErrorResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

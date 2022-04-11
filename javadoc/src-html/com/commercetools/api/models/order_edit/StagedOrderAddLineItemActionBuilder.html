@@ -44,7 +44,7 @@
 <span class="source-line-no">031</span><span id="line.31">    private String sku;</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
 <span class="source-line-no">033</span><span id="line.33">    @Nullable</span>
-<span class="source-line-no">034</span><span id="line.34">    private Double quantity;</span>
+<span class="source-line-no">034</span><span id="line.34">    private Long quantity;</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    @Nullable</span>
 <span class="source-line-no">037</span><span id="line.37">    private java.time.ZonedDateTime addedAt;</span>
@@ -115,7 +115,7 @@
 <span class="source-line-no">102</span><span id="line.102">        return this;</span>
 <span class="source-line-no">103</span><span id="line.103">    }</span>
 <span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Double quantity) {</span>
+<span class="source-line-no">105</span><span id="line.105">    public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Long quantity) {</span>
 <span class="source-line-no">106</span><span id="line.106">        this.quantity = quantity;</span>
 <span class="source-line-no">107</span><span id="line.107">        return this;</span>
 <span class="source-line-no">108</span><span id="line.108">    }</span>
@@ -208,7 +208,7 @@
 <span class="source-line-no">195</span><span id="line.195">    }</span>
 <span class="source-line-no">196</span><span id="line.196"></span>
 <span class="source-line-no">197</span><span id="line.197">    @Nullable</span>
-<span class="source-line-no">198</span><span id="line.198">    public Double getQuantity() {</span>
+<span class="source-line-no">198</span><span id="line.198">    public Long getQuantity() {</span>
 <span class="source-line-no">199</span><span id="line.199">        return this.quantity;</span>
 <span class="source-line-no">200</span><span id="line.200">    }</span>
 <span class="source-line-no">201</span><span id="line.201"></span>

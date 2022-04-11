@@ -46,72 +46,88 @@
 <span class="source-line-no">033</span><span id="line.33">        return this;</span>
 <span class="source-line-no">034</span><span id="line.34">    }</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public RemoveBillingAddressIdChangeBuilder previousValue(final String... previousValue) {</span>
-<span class="source-line-no">037</span><span id="line.37">        this.previousValue = new ArrayList&lt;&gt;(Arrays.asList(previousValue));</span>
-<span class="source-line-no">038</span><span id="line.38">        return this;</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public RemoveBillingAddressIdChangeBuilder previousValue(final java.util.List&lt;String&gt; previousValue) {</span>
-<span class="source-line-no">042</span><span id="line.42">        this.previousValue = previousValue;</span>
-<span class="source-line-no">043</span><span id="line.43">        return this;</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public RemoveBillingAddressIdChangeBuilder address(</span>
-<span class="source-line-no">047</span><span id="line.47">            Function&lt;com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder&gt; builder) {</span>
-<span class="source-line-no">048</span><span id="line.48">        this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();</span>
-<span class="source-line-no">049</span><span id="line.49">        return this;</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public RemoveBillingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {</span>
-<span class="source-line-no">053</span><span id="line.53">        this.address = address;</span>
-<span class="source-line-no">054</span><span id="line.54">        return this;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public String getChange() {</span>
-<span class="source-line-no">058</span><span id="line.58">        return this.change;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public java.util.List&lt;String&gt; getNextValue() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return this.nextValue;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public java.util.List&lt;String&gt; getPreviousValue() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return this.previousValue;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public com.commercetools.history.models.common.Address getAddress() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return this.address;</span>
+<span class="source-line-no">036</span><span id="line.36">    public RemoveBillingAddressIdChangeBuilder plusNextValue(final String... nextValue) {</span>
+<span class="source-line-no">037</span><span id="line.37">        if (this.nextValue == null) {</span>
+<span class="source-line-no">038</span><span id="line.38">            this.nextValue = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">039</span><span id="line.39">        }</span>
+<span class="source-line-no">040</span><span id="line.40">        this.nextValue.addAll(Arrays.asList(nextValue));</span>
+<span class="source-line-no">041</span><span id="line.41">        return this;</span>
+<span class="source-line-no">042</span><span id="line.42">    }</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    public RemoveBillingAddressIdChangeBuilder previousValue(final String... previousValue) {</span>
+<span class="source-line-no">045</span><span id="line.45">        this.previousValue = new ArrayList&lt;&gt;(Arrays.asList(previousValue));</span>
+<span class="source-line-no">046</span><span id="line.46">        return this;</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public RemoveBillingAddressIdChangeBuilder previousValue(final java.util.List&lt;String&gt; previousValue) {</span>
+<span class="source-line-no">050</span><span id="line.50">        this.previousValue = previousValue;</span>
+<span class="source-line-no">051</span><span id="line.51">        return this;</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public RemoveBillingAddressIdChangeBuilder plusPreviousValue(final String... previousValue) {</span>
+<span class="source-line-no">055</span><span id="line.55">        if (this.previousValue == null) {</span>
+<span class="source-line-no">056</span><span id="line.56">            this.previousValue = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">057</span><span id="line.57">        }</span>
+<span class="source-line-no">058</span><span id="line.58">        this.previousValue.addAll(Arrays.asList(previousValue));</span>
+<span class="source-line-no">059</span><span id="line.59">        return this;</span>
+<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public RemoveBillingAddressIdChangeBuilder address(</span>
+<span class="source-line-no">063</span><span id="line.63">            Function&lt;com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder&gt; builder) {</span>
+<span class="source-line-no">064</span><span id="line.64">        this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();</span>
+<span class="source-line-no">065</span><span id="line.65">        return this;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public RemoveBillingAddressIdChangeBuilder address(final com.commercetools.history.models.common.Address address) {</span>
+<span class="source-line-no">069</span><span id="line.69">        this.address = address;</span>
+<span class="source-line-no">070</span><span id="line.70">        return this;</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public RemoveBillingAddressIdChange build() {</span>
-<span class="source-line-no">074</span><span id="line.74">        Objects.requireNonNull(change, RemoveBillingAddressIdChange.class + ": change is missing");</span>
-<span class="source-line-no">075</span><span id="line.75">        Objects.requireNonNull(nextValue, RemoveBillingAddressIdChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">076</span><span id="line.76">        Objects.requireNonNull(previousValue, RemoveBillingAddressIdChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">077</span><span id="line.77">        Objects.requireNonNull(address, RemoveBillingAddressIdChange.class + ": address is missing");</span>
-<span class="source-line-no">078</span><span id="line.78">        return new RemoveBillingAddressIdChangeImpl(change, nextValue, previousValue, address);</span>
+<span class="source-line-no">073</span><span id="line.73">    public String getChange() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return this.change;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public java.util.List&lt;String&gt; getNextValue() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return this.nextValue;</span>
 <span class="source-line-no">079</span><span id="line.79">    }</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    /**</span>
-<span class="source-line-no">082</span><span id="line.82">     * builds RemoveBillingAddressIdChange without checking for non null required values</span>
-<span class="source-line-no">083</span><span id="line.83">     */</span>
-<span class="source-line-no">084</span><span id="line.84">    public RemoveBillingAddressIdChange buildUnchecked() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return new RemoveBillingAddressIdChangeImpl(change, nextValue, previousValue, address);</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public static RemoveBillingAddressIdChangeBuilder of() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return new RemoveBillingAddressIdChangeBuilder();</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public static RemoveBillingAddressIdChangeBuilder of(final RemoveBillingAddressIdChange template) {</span>
-<span class="source-line-no">093</span><span id="line.93">        RemoveBillingAddressIdChangeBuilder builder = new RemoveBillingAddressIdChangeBuilder();</span>
-<span class="source-line-no">094</span><span id="line.94">        builder.change = template.getChange();</span>
-<span class="source-line-no">095</span><span id="line.95">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">096</span><span id="line.96">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">097</span><span id="line.97">        builder.address = template.getAddress();</span>
-<span class="source-line-no">098</span><span id="line.98">        return builder;</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">}</span>
+<span class="source-line-no">081</span><span id="line.81">    public java.util.List&lt;String&gt; getPreviousValue() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return this.previousValue;</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public com.commercetools.history.models.common.Address getAddress() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return this.address;</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public RemoveBillingAddressIdChange build() {</span>
+<span class="source-line-no">090</span><span id="line.90">        Objects.requireNonNull(change, RemoveBillingAddressIdChange.class + ": change is missing");</span>
+<span class="source-line-no">091</span><span id="line.91">        Objects.requireNonNull(nextValue, RemoveBillingAddressIdChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">092</span><span id="line.92">        Objects.requireNonNull(previousValue, RemoveBillingAddressIdChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">093</span><span id="line.93">        Objects.requireNonNull(address, RemoveBillingAddressIdChange.class + ": address is missing");</span>
+<span class="source-line-no">094</span><span id="line.94">        return new RemoveBillingAddressIdChangeImpl(change, nextValue, previousValue, address);</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    /**</span>
+<span class="source-line-no">098</span><span id="line.98">     * builds RemoveBillingAddressIdChange without checking for non null required values</span>
+<span class="source-line-no">099</span><span id="line.99">     */</span>
+<span class="source-line-no">100</span><span id="line.100">    public RemoveBillingAddressIdChange buildUnchecked() {</span>
+<span class="source-line-no">101</span><span id="line.101">        return new RemoveBillingAddressIdChangeImpl(change, nextValue, previousValue, address);</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    public static RemoveBillingAddressIdChangeBuilder of() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return new RemoveBillingAddressIdChangeBuilder();</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public static RemoveBillingAddressIdChangeBuilder of(final RemoveBillingAddressIdChange template) {</span>
+<span class="source-line-no">109</span><span id="line.109">        RemoveBillingAddressIdChangeBuilder builder = new RemoveBillingAddressIdChangeBuilder();</span>
+<span class="source-line-no">110</span><span id="line.110">        builder.change = template.getChange();</span>
+<span class="source-line-no">111</span><span id="line.111">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">112</span><span id="line.112">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">113</span><span id="line.113">        builder.address = template.getAddress();</span>
+<span class="source-line-no">114</span><span id="line.114">        return builder;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">}</span>
 
 
 

@@ -98,18 +98,63 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAction()">getAction</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withTypeUpdateAction(java.util.function.Function)">withTypeUpdateAction</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#addEnumValueBuilder()">addEnumValueBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#addFieldDefinitionBuilder()">addFieldDefinitionBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeAddLocalizedEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddLocalizedEnumValueActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#addLocalizedEnumValueBuilder()">addLocalizedEnumValueBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueLabelActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeEnumValueLabelBuilder()">changeEnumValueLabelBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueOrderActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeEnumValueOrderBuilder()">changeEnumValueOrderBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeFieldDefinitionLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionLabelActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeFieldDefinitionLabelBuilder()">changeFieldDefinitionLabelBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeFieldDefinitionOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeFieldDefinitionOrderBuilder()">changeFieldDefinitionOrderBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeInputHintBuilder()">changeInputHintBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeKeyActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeKeyActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeKeyBuilder()">changeKeyBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeLabelBuilder()">changeLabelBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeLocalizedEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeLocalizedEnumValueLabelBuilder()">changeLocalizedEnumValueLabelBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueOrderActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeLocalizedEnumValueOrderBuilder()">changeLocalizedEnumValueOrderBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeChangeNameActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeNameActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#changeNameBuilder()">changeNameBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAction()">getAction</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeRemoveFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveFieldDefinitionActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#removeFieldDefinitionBuilder()">removeFieldDefinitionBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="TypeSetDescriptionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeSetDescriptionActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setDescriptionBuilder()">setDescriptionBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withTypeUpdateAction(java.util.function.Function)">withTypeUpdateAction</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -139,9 +184,99 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 </section>
 </li>
 <li>
+<section class="detail" id="addEnumValueBuilder()">
+<h3>addEnumValueBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeAddEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.40">addEnumValueBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addFieldDefinitionBuilder()">
+<h3>addFieldDefinitionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeAddFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.44">addFieldDefinitionBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="addLocalizedEnumValueBuilder()">
+<h3>addLocalizedEnumValueBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeAddLocalizedEnumValueActionBuilder.html" title="class in com.commercetools.api.models.type">TypeAddLocalizedEnumValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.48">addLocalizedEnumValueBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeEnumValueLabelBuilder()">
+<h3>changeEnumValueLabelBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.52">changeEnumValueLabelBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeEnumValueOrderBuilder()">
+<h3>changeEnumValueOrderBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.56">changeEnumValueOrderBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeFieldDefinitionLabelBuilder()">
+<h3>changeFieldDefinitionLabelBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.60">changeFieldDefinitionLabelBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeFieldDefinitionOrderBuilder()">
+<h3>changeFieldDefinitionOrderBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeFieldDefinitionOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeFieldDefinitionOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.64">changeFieldDefinitionOrderBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeInputHintBuilder()">
+<h3>changeInputHintBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeInputHintActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeInputHintActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.68">changeInputHintBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeKeyBuilder()">
+<h3>changeKeyBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeKeyActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.72">changeKeyBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeLabelBuilder()">
+<h3>changeLabelBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.76">changeLabelBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeLocalizedEnumValueLabelBuilder()">
+<h3>changeLocalizedEnumValueLabelBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLocalizedEnumValueLabelActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.80">changeLocalizedEnumValueLabelBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeLocalizedEnumValueOrderBuilder()">
+<h3>changeLocalizedEnumValueOrderBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeLocalizedEnumValueOrderActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueOrderActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.84">changeLocalizedEnumValueOrderBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="changeNameBuilder()">
+<h3>changeNameBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeChangeNameActionBuilder.html" title="class in com.commercetools.api.models.type">TypeChangeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.88">changeNameBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="removeFieldDefinitionBuilder()">
+<h3>removeFieldDefinitionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeRemoveFieldDefinitionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeRemoveFieldDefinitionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.92">removeFieldDefinitionBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setDescriptionBuilder()">
+<h3>setDescriptionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TypeSetDescriptionActionBuilder.html" title="class in com.commercetools.api.models.type">TypeSetDescriptionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.96">setDescriptionBuilder</a></span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="withTypeUpdateAction(java.util.function.Function)">
 <h3>withTypeUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.40">withTypeUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/TypeUpdateAction.html#line.100">withTypeUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

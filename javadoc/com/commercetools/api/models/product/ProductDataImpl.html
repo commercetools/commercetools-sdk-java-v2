@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
+<dd><code><a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></code>, <code><a href="../common/WithLocalizedSlug.html" title="interface in com.commercetools.api.models.common">WithLocalizedSlug</a></code>, <code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code>, <code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code>, <code><a href="../../../../../io/vrap/rmf/base/client/ModelBase.html" title="interface in io.vrap.rmf.base.client">ModelBase</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataImpl.html#line.17">ProductDataImpl</a></span>
@@ -136,7 +136,9 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getMasterVariant()">getMasterVariant</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Returns the master variant.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getMetaDescription()">getMetaDescription</a></span>()</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -157,7 +159,9 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#getVariants()">getVariants</a></span>()</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
+<div class="block">Gets the variants which are not identical to the master variant.</div>
+</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#hashCode()">hashCode</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
@@ -212,6 +216,9 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.product.ProductData">Methods inherited from interface&nbsp;com.commercetools.api.models.product.<a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></h3>
 <code><a href="ProductData.html#withProductData(java.util.function.Function)">withProductData</a></code></div>
+<div class="inherited-list">
+<h3 id="methods.inherited.from.class.com.commercetools.api.models.product.ProductDataLike">Methods inherited from interface&nbsp;com.commercetools.api.models.product.<a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></h3>
+<code><a href="ProductDataLike.html#getAllVariants()">getAllVariants</a>, <a href="ProductDataLike.html#getVariant(long)">getVariant</a>, <a href="ProductDataLike.html#getVariantOrMaster(long)">getVariantOrMaster</a></code></div>
 </section>
 </li>
 </ul>
@@ -244,6 +251,8 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
 </dl>
 </section>
 </li>
@@ -254,6 +263,8 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getCategories()">getCategories</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getCategories()">getCategories</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
 </dl>
 </section>
 </li>
@@ -264,6 +275,8 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getCategoryOrderHints()">getCategoryOrderHints</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getCategoryOrderHints()">getCategoryOrderHints</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
 </dl>
 </section>
 </li>
@@ -274,6 +287,8 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getDescription()">getDescription</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getDescription()">getDescription</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
 </dl>
 </section>
 </li>
@@ -284,6 +299,10 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getSlug()">getSlug</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getSlug()">getSlug</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="../common/WithLocalizedSlug.html#getSlug()">getSlug</a></code>&nbsp;in interface&nbsp;<code><a href="../common/WithLocalizedSlug.html" title="interface in com.commercetools.api.models.common">WithLocalizedSlug</a></code></dd>
 </dl>
 </section>
 </li>
@@ -293,7 +312,11 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataImpl.html#line.90">getMetaTitle</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
+<dd><code><a href="../common/MetaAttributes.html#getMetaTitle()">getMetaTitle</a></code>&nbsp;in interface&nbsp;<code><a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></code></dd>
+<dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getMetaTitle()">getMetaTitle</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getMetaTitle()">getMetaTitle</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
 </dl>
 </section>
 </li>
@@ -303,7 +326,11 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataImpl.html#line.94">getMetaDescription</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
+<dd><code><a href="../common/MetaAttributes.html#getMetaDescription()">getMetaDescription</a></code>&nbsp;in interface&nbsp;<code><a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></code></dd>
+<dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getMetaDescription()">getMetaDescription</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getMetaDescription()">getMetaDescription</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
 </dl>
 </section>
 </li>
@@ -313,7 +340,11 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataImpl.html#line.98">getMetaKeywords</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
+<dd><code><a href="../common/MetaAttributes.html#getMetaKeywords()">getMetaKeywords</a></code>&nbsp;in interface&nbsp;<code><a href="../common/MetaAttributes.html" title="interface in com.commercetools.api.models.common">MetaAttributes</a></code></dd>
+<dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getMetaKeywords()">getMetaKeywords</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getMetaKeywords()">getMetaKeywords</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
 </dl>
 </section>
 </li>
@@ -321,9 +352,18 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <section class="detail" id="getMasterVariant()">
 <h3>getMasterVariant</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataImpl.html#line.102">getMasterVariant</a></span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ProductDataLike.html#getMasterVariant()">ProductDataLike</a></code></span></div>
+<div class="block">Returns the master variant. Every product as 1 to n variants, so this is always present.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getMasterVariant()">getMasterVariant</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getMasterVariant()">getMasterVariant</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
+<dt>Returns:</dt>
+<dd>the main variant in the product</dd>
+<dt>See Also:</dt>
+<dd><a href="ProductDataLike.html#getAllVariants()"><code>ProductDataLike.getAllVariants()</code></a>, 
+<a href="ProductDataLike.html#getVariants()"><code>ProductDataLike.getVariants()</code></a></dd>
 </dl>
 </section>
 </li>
@@ -331,9 +371,18 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <section class="detail" id="getVariants()">
 <h3>getVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataImpl.html#line.106">getVariants</a></span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="ProductDataLike.html#getVariants()">ProductDataLike</a></code></span></div>
+<div class="block">Gets the variants which are not identical to the master variant. This list can be empty.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getVariants()">getVariants</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getVariants()">getVariants</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
+<dt>Returns:</dt>
+<dd>all variants except the one in <a href="ProductDataLike.html#getMasterVariant()"><code>ProductDataLike.getMasterVariant()</code></a></dd>
+<dt>See Also:</dt>
+<dd><a href="ProductDataLike.html#getAllVariants()"><code>ProductDataLike.getAllVariants()</code></a>, 
+<a href="ProductDataLike.html#getMasterVariant()"><code>ProductDataLike.getMasterVariant()</code></a></dd>
 </dl>
 </section>
 </li>
@@ -344,6 +393,8 @@ implements <a href="ProductData.html" title="interface in com.commercetools.api.
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ProductData.html#getSearchKeywords()">getSearchKeywords</a></code>&nbsp;in interface&nbsp;<code><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="ProductDataLike.html#getSearchKeywords()">getSearchKeywords</a></code>&nbsp;in interface&nbsp;<code><a href="ProductDataLike.html" title="interface in com.commercetools.api.models.product">ProductDataLike</a></code></dd>
 </dl>
 </section>
 </li>

@@ -42,93 +42,109 @@
 <span class="source-line-no">029</span><span id="line.29">        return this;</span>
 <span class="source-line-no">030</span><span id="line.30">    }</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    public VariantValuesBuilder withPrices(</span>
-<span class="source-line-no">033</span><span id="line.33">            Function&lt;com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">034</span><span id="line.34">        this.prices = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">035</span><span id="line.35">        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());</span>
-<span class="source-line-no">036</span><span id="line.36">        return this;</span>
-<span class="source-line-no">037</span><span id="line.37">    }</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public VariantValuesBuilder plusPrices(</span>
-<span class="source-line-no">040</span><span id="line.40">            Function&lt;com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">041</span><span id="line.41">        if (this.prices == null) {</span>
-<span class="source-line-no">042</span><span id="line.42">            this.prices = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">043</span><span id="line.43">        }</span>
-<span class="source-line-no">044</span><span id="line.44">        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());</span>
-<span class="source-line-no">045</span><span id="line.45">        return this;</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public VariantValuesBuilder prices(final java.util.List&lt;com.commercetools.api.models.common.PriceDraft&gt; prices) {</span>
-<span class="source-line-no">049</span><span id="line.49">        this.prices = prices;</span>
-<span class="source-line-no">050</span><span id="line.50">        return this;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public VariantValuesBuilder attributes(final com.commercetools.api.models.product.Attribute... attributes) {</span>
-<span class="source-line-no">054</span><span id="line.54">        this.attributes = new ArrayList&lt;&gt;(Arrays.asList(attributes));</span>
-<span class="source-line-no">055</span><span id="line.55">        return this;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public VariantValuesBuilder withAttributes(</span>
-<span class="source-line-no">059</span><span id="line.59">            Function&lt;com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder&gt; builder) {</span>
-<span class="source-line-no">060</span><span id="line.60">        this.attributes = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">061</span><span id="line.61">        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());</span>
-<span class="source-line-no">062</span><span id="line.62">        return this;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public VariantValuesBuilder plusAttributes(</span>
-<span class="source-line-no">066</span><span id="line.66">            Function&lt;com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder&gt; builder) {</span>
-<span class="source-line-no">067</span><span id="line.67">        if (this.attributes == null) {</span>
-<span class="source-line-no">068</span><span id="line.68">            this.attributes = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">069</span><span id="line.69">        }</span>
-<span class="source-line-no">070</span><span id="line.70">        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());</span>
-<span class="source-line-no">071</span><span id="line.71">        return this;</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public VariantValuesBuilder attributes(</span>
-<span class="source-line-no">075</span><span id="line.75">            final java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; attributes) {</span>
-<span class="source-line-no">076</span><span id="line.76">        this.attributes = attributes;</span>
+<span class="source-line-no">032</span><span id="line.32">    public VariantValuesBuilder prices(final java.util.List&lt;com.commercetools.api.models.common.PriceDraft&gt; prices) {</span>
+<span class="source-line-no">033</span><span id="line.33">        this.prices = prices;</span>
+<span class="source-line-no">034</span><span id="line.34">        return this;</span>
+<span class="source-line-no">035</span><span id="line.35">    }</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public VariantValuesBuilder plusPrices(final com.commercetools.api.models.common.PriceDraft... prices) {</span>
+<span class="source-line-no">038</span><span id="line.38">        if (this.prices == null) {</span>
+<span class="source-line-no">039</span><span id="line.39">            this.prices = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">040</span><span id="line.40">        }</span>
+<span class="source-line-no">041</span><span id="line.41">        this.prices.addAll(Arrays.asList(prices));</span>
+<span class="source-line-no">042</span><span id="line.42">        return this;</span>
+<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    public VariantValuesBuilder plusPrices(</span>
+<span class="source-line-no">046</span><span id="line.46">            Function&lt;com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">047</span><span id="line.47">        if (this.prices == null) {</span>
+<span class="source-line-no">048</span><span id="line.48">            this.prices = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">049</span><span id="line.49">        }</span>
+<span class="source-line-no">050</span><span id="line.50">        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());</span>
+<span class="source-line-no">051</span><span id="line.51">        return this;</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public VariantValuesBuilder withPrices(</span>
+<span class="source-line-no">055</span><span id="line.55">            Function&lt;com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">056</span><span id="line.56">        this.prices = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">057</span><span id="line.57">        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());</span>
+<span class="source-line-no">058</span><span id="line.58">        return this;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public VariantValuesBuilder attributes(final com.commercetools.api.models.product.Attribute... attributes) {</span>
+<span class="source-line-no">062</span><span id="line.62">        this.attributes = new ArrayList&lt;&gt;(Arrays.asList(attributes));</span>
+<span class="source-line-no">063</span><span id="line.63">        return this;</span>
+<span class="source-line-no">064</span><span id="line.64">    }</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public VariantValuesBuilder attributes(</span>
+<span class="source-line-no">067</span><span id="line.67">            final java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; attributes) {</span>
+<span class="source-line-no">068</span><span id="line.68">        this.attributes = attributes;</span>
+<span class="source-line-no">069</span><span id="line.69">        return this;</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public VariantValuesBuilder plusAttributes(final com.commercetools.api.models.product.Attribute... attributes) {</span>
+<span class="source-line-no">073</span><span id="line.73">        if (this.attributes == null) {</span>
+<span class="source-line-no">074</span><span id="line.74">            this.attributes = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">075</span><span id="line.75">        }</span>
+<span class="source-line-no">076</span><span id="line.76">        this.attributes.addAll(Arrays.asList(attributes));</span>
 <span class="source-line-no">077</span><span id="line.77">        return this;</span>
 <span class="source-line-no">078</span><span id="line.78">    }</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    @Nullable</span>
-<span class="source-line-no">081</span><span id="line.81">    public String getSku() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return this.sku;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public java.util.List&lt;com.commercetools.api.models.common.PriceDraft&gt; getPrices() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return this.prices;</span>
+<span class="source-line-no">080</span><span id="line.80">    public VariantValuesBuilder plusAttributes(</span>
+<span class="source-line-no">081</span><span id="line.81">            Function&lt;com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder&gt; builder) {</span>
+<span class="source-line-no">082</span><span id="line.82">        if (this.attributes == null) {</span>
+<span class="source-line-no">083</span><span id="line.83">            this.attributes = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">084</span><span id="line.84">        }</span>
+<span class="source-line-no">085</span><span id="line.85">        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());</span>
+<span class="source-line-no">086</span><span id="line.86">        return this;</span>
 <span class="source-line-no">087</span><span id="line.87">    }</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; getAttributes() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return this.attributes;</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public VariantValues build() {</span>
-<span class="source-line-no">094</span><span id="line.94">        Objects.requireNonNull(prices, VariantValues.class + ": prices is missing");</span>
-<span class="source-line-no">095</span><span id="line.95">        Objects.requireNonNull(attributes, VariantValues.class + ": attributes is missing");</span>
-<span class="source-line-no">096</span><span id="line.96">        return new VariantValuesImpl(sku, prices, attributes);</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    /**</span>
-<span class="source-line-no">100</span><span id="line.100">     * builds VariantValues without checking for non null required values</span>
-<span class="source-line-no">101</span><span id="line.101">     */</span>
-<span class="source-line-no">102</span><span id="line.102">    public VariantValues buildUnchecked() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return new VariantValuesImpl(sku, prices, attributes);</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    public static VariantValuesBuilder of() {</span>
-<span class="source-line-no">107</span><span id="line.107">        return new VariantValuesBuilder();</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public static VariantValuesBuilder of(final VariantValues template) {</span>
-<span class="source-line-no">111</span><span id="line.111">        VariantValuesBuilder builder = new VariantValuesBuilder();</span>
-<span class="source-line-no">112</span><span id="line.112">        builder.sku = template.getSku();</span>
-<span class="source-line-no">113</span><span id="line.113">        builder.prices = template.getPrices();</span>
-<span class="source-line-no">114</span><span id="line.114">        builder.attributes = template.getAttributes();</span>
-<span class="source-line-no">115</span><span id="line.115">        return builder;</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">}</span>
+<span class="source-line-no">089</span><span id="line.89">    public VariantValuesBuilder withAttributes(</span>
+<span class="source-line-no">090</span><span id="line.90">            Function&lt;com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder&gt; builder) {</span>
+<span class="source-line-no">091</span><span id="line.91">        this.attributes = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">092</span><span id="line.92">        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());</span>
+<span class="source-line-no">093</span><span id="line.93">        return this;</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    @Nullable</span>
+<span class="source-line-no">097</span><span id="line.97">    public String getSku() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.sku;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public java.util.List&lt;com.commercetools.api.models.common.PriceDraft&gt; getPrices() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return this.prices;</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public java.util.List&lt;com.commercetools.api.models.product.Attribute&gt; getAttributes() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return this.attributes;</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public VariantValues build() {</span>
+<span class="source-line-no">110</span><span id="line.110">        Objects.requireNonNull(prices, VariantValues.class + ": prices is missing");</span>
+<span class="source-line-no">111</span><span id="line.111">        Objects.requireNonNull(attributes, VariantValues.class + ": attributes is missing");</span>
+<span class="source-line-no">112</span><span id="line.112">        return new VariantValuesImpl(sku, prices, attributes);</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    /**</span>
+<span class="source-line-no">116</span><span id="line.116">     * builds VariantValues without checking for non null required values</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
+<span class="source-line-no">118</span><span id="line.118">    public VariantValues buildUnchecked() {</span>
+<span class="source-line-no">119</span><span id="line.119">        return new VariantValuesImpl(sku, prices, attributes);</span>
+<span class="source-line-no">120</span><span id="line.120">    }</span>
+<span class="source-line-no">121</span><span id="line.121"></span>
+<span class="source-line-no">122</span><span id="line.122">    public static VariantValuesBuilder of() {</span>
+<span class="source-line-no">123</span><span id="line.123">        return new VariantValuesBuilder();</span>
+<span class="source-line-no">124</span><span id="line.124">    }</span>
+<span class="source-line-no">125</span><span id="line.125"></span>
+<span class="source-line-no">126</span><span id="line.126">    public static VariantValuesBuilder of(final VariantValues template) {</span>
+<span class="source-line-no">127</span><span id="line.127">        VariantValuesBuilder builder = new VariantValuesBuilder();</span>
+<span class="source-line-no">128</span><span id="line.128">        builder.sku = template.getSku();</span>
+<span class="source-line-no">129</span><span id="line.129">        builder.prices = template.getPrices();</span>
+<span class="source-line-no">130</span><span id="line.130">        builder.attributes = template.getAttributes();</span>
+<span class="source-line-no">131</span><span id="line.131">        return builder;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">}</span>
 
 
 

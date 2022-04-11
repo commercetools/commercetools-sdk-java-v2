@@ -182,10 +182,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.message.OrderReturnInfoSetMessage)">of</a></span>&#8203;(<a href="OrderReturnInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoSetMessage</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusReturnInfo(java.util.function.Function)">plusReturnInfo</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,&#8203;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusReturnInfo(com.commercetools.api.models.order.ReturnInfo...)">plusReturnInfo</a></span>&#8203;(<a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>...&nbsp;returnInfo)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(com.commercetools.api.models.common.Reference)">resource</a></span>&#8203;(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusReturnInfo(java.util.function.Function)">plusReturnInfo</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,&#8203;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(com.commercetools.api.models.common.Reference)">resource</a></span>&#8203;(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resource(java.util.function.Function)">resource</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">resourceUserProvidedIdentifiers</a></span>&#8203;(<a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
@@ -305,124 +311,137 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="resource(java.util.function.Function)">
+<h3>resource</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.95">resource</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="resourceVersion(java.lang.Long)">
 <h3>resourceVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.95">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.101">resourceVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceUserProvidedIdentifiers(java.util.function.Function)">
 <h3>resourceUserProvidedIdentifiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.100">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.106">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>,&#8203;<a href="UserProvidedIdentifiersBuilder.html" title="class in com.commercetools.api.models.message">UserProvidedIdentifiersBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">
 <h3>resourceUserProvidedIdentifiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.108">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.114">resourceUserProvidedIdentifiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="returnInfo(com.commercetools.api.models.order.ReturnInfo...)">
 <h3>returnInfo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.114">returnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.120">returnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>...&nbsp;returnInfo)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="withReturnInfo(java.util.function.Function)">
-<h3>withReturnInfo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.120">withReturnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,&#8203;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&gt;&nbsp;builder)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="plusReturnInfo(java.util.function.Function)">
-<h3>plusReturnInfo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.127">plusReturnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,&#8203;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="returnInfo(java.util.List)">
 <h3>returnInfo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.136">returnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.126">returnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&gt;&nbsp;returnInfo)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusReturnInfo(com.commercetools.api.models.order.ReturnInfo...)">
+<h3>plusReturnInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.132">plusReturnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>...&nbsp;returnInfo)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusReturnInfo(java.util.function.Function)">
+<h3>plusReturnInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.141">plusReturnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,&#8203;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withReturnInfo(java.util.function.Function)">
+<h3>withReturnInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.150">withReturnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,&#8203;<a href="../order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.142">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.157">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.146">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.161">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.150">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.165">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.154">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.169">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.158">getLastModifiedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.173">getLastModifiedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.163">getCreatedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.178">getCreatedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSequenceNumber()">
 <h3>getSequenceNumber</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.168">getSequenceNumber</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.183">getSequenceNumber</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResource()">
 <h3>getResource</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.172">getResource</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.187">getResource</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceVersion()">
 <h3>getResourceVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.176">getResourceVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.191">getResourceVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceUserProvidedIdentifiers()">
 <h3>getResourceUserProvidedIdentifiers</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.180">getResourceUserProvidedIdentifiers</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.195">getResourceUserProvidedIdentifiers</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getReturnInfo()">
 <h3>getReturnInfo</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.185">getReturnInfo</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.200">getReturnInfo</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.190">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.205">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderReturnInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoSetMessage</a>&gt;</code></dd>
@@ -432,20 +451,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.205">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.220">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderReturnInfoSetMessage without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.210">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.225">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderReturnInfoSetMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.214">of</a></span>&#8203;<span class="parameters">(<a href="OrderReturnInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoSetMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderReturnInfoSetMessageBuilder.html#line.229">of</a></span>&#8203;<span class="parameters">(<a href="OrderReturnInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderReturnInfoSetMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

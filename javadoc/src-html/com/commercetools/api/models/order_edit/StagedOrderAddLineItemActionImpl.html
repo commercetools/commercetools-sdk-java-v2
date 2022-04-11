@@ -44,7 +44,7 @@
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    private String sku;</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    private Double quantity;</span>
+<span class="source-line-no">034</span><span id="line.34">    private Long quantity;</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    private java.time.ZonedDateTime addedAt;</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
@@ -62,7 +62,7 @@
 <span class="source-line-no">049</span><span id="line.49">            @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,</span>
 <span class="source-line-no">050</span><span id="line.50">            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,</span>
 <span class="source-line-no">051</span><span id="line.51">            @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,</span>
-<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Double quantity,</span>
+<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Long quantity,</span>
 <span class="source-line-no">053</span><span id="line.53">            @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,</span>
 <span class="source-line-no">054</span><span id="line.54">            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,</span>
 <span class="source-line-no">055</span><span id="line.55">            @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,</span>
@@ -121,7 +121,7 @@
 <span class="source-line-no">108</span><span id="line.108">        return this.sku;</span>
 <span class="source-line-no">109</span><span id="line.109">    }</span>
 <span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public Double getQuantity() {</span>
+<span class="source-line-no">111</span><span id="line.111">    public Long getQuantity() {</span>
 <span class="source-line-no">112</span><span id="line.112">        return this.quantity;</span>
 <span class="source-line-no">113</span><span id="line.113">    }</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
@@ -137,7 +137,7 @@
 <span class="source-line-no">124</span><span id="line.124">    }</span>
 <span class="source-line-no">125</span><span id="line.125"></span>
 <span class="source-line-no">126</span><span id="line.126">    /**</span>
-<span class="source-line-no">127</span><span id="line.127">    *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;br /&gt;</span>
+<span class="source-line-no">127</span><span id="line.127">    *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.</span>
 <span class="source-line-no">128</span><span id="line.128">    *  For storing money values in fractions of the minor unit in a currency, use &lt;a href="ctp:api:type:HighPrecisionMoneyDraft"&gt;HighPrecisionMoneyDraft&lt;/a&gt; instead.&lt;/p&gt;</span>
 <span class="source-line-no">129</span><span id="line.129">    */</span>
 <span class="source-line-no">130</span><span id="line.130">    public com.commercetools.api.models.common.Money getExternalPrice() {</span>
@@ -177,7 +177,7 @@
 <span class="source-line-no">164</span><span id="line.164">        this.sku = sku;</span>
 <span class="source-line-no">165</span><span id="line.165">    }</span>
 <span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public void setQuantity(final Double quantity) {</span>
+<span class="source-line-no">167</span><span id="line.167">    public void setQuantity(final Long quantity) {</span>
 <span class="source-line-no">168</span><span id="line.168">        this.quantity = quantity;</span>
 <span class="source-line-no">169</span><span id="line.169">    }</span>
 <span class="source-line-no">170</span><span id="line.170"></span>

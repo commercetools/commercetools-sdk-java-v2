@@ -162,134 +162,142 @@
 <span class="source-line-no">149</span><span id="line.149">        return this;</span>
 <span class="source-line-no">150</span><span id="line.150">    }</span>
 <span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    public CategoryImportBuilder withAssets(</span>
-<span class="source-line-no">153</span><span id="line.153">            Function&lt;com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder&gt; builder) {</span>
-<span class="source-line-no">154</span><span id="line.154">        this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">155</span><span id="line.155">        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());</span>
-<span class="source-line-no">156</span><span id="line.156">        return this;</span>
-<span class="source-line-no">157</span><span id="line.157">    }</span>
-<span class="source-line-no">158</span><span id="line.158"></span>
-<span class="source-line-no">159</span><span id="line.159">    public CategoryImportBuilder plusAssets(</span>
-<span class="source-line-no">160</span><span id="line.160">            Function&lt;com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder&gt; builder) {</span>
-<span class="source-line-no">161</span><span id="line.161">        if (this.assets == null) {</span>
-<span class="source-line-no">162</span><span id="line.162">            this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">163</span><span id="line.163">        }</span>
-<span class="source-line-no">164</span><span id="line.164">        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());</span>
-<span class="source-line-no">165</span><span id="line.165">        return this;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public CategoryImportBuilder assets(</span>
-<span class="source-line-no">169</span><span id="line.169">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; assets) {</span>
-<span class="source-line-no">170</span><span id="line.170">        this.assets = assets;</span>
-<span class="source-line-no">171</span><span id="line.171">        return this;</span>
-<span class="source-line-no">172</span><span id="line.172">    }</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">    public CategoryImportBuilder custom(</span>
-<span class="source-line-no">175</span><span id="line.175">            Function&lt;com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder&gt; builder) {</span>
-<span class="source-line-no">176</span><span id="line.176">        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();</span>
-<span class="source-line-no">177</span><span id="line.177">        return this;</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public CategoryImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {</span>
-<span class="source-line-no">181</span><span id="line.181">        this.custom = custom;</span>
-<span class="source-line-no">182</span><span id="line.182">        return this;</span>
-<span class="source-line-no">183</span><span id="line.183">    }</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    public String getKey() {</span>
-<span class="source-line-no">186</span><span id="line.186">        return this.key;</span>
-<span class="source-line-no">187</span><span id="line.187">    }</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    public com.commercetools.importapi.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">190</span><span id="line.190">        return this.name;</span>
+<span class="source-line-no">152</span><span id="line.152">    public CategoryImportBuilder assets(</span>
+<span class="source-line-no">153</span><span id="line.153">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; assets) {</span>
+<span class="source-line-no">154</span><span id="line.154">        this.assets = assets;</span>
+<span class="source-line-no">155</span><span id="line.155">        return this;</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    public CategoryImportBuilder plusAssets(@Nullable final com.commercetools.importapi.models.common.Asset... assets) {</span>
+<span class="source-line-no">159</span><span id="line.159">        if (this.assets == null) {</span>
+<span class="source-line-no">160</span><span id="line.160">            this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">161</span><span id="line.161">        }</span>
+<span class="source-line-no">162</span><span id="line.162">        this.assets.addAll(Arrays.asList(assets));</span>
+<span class="source-line-no">163</span><span id="line.163">        return this;</span>
+<span class="source-line-no">164</span><span id="line.164">    }</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    public CategoryImportBuilder plusAssets(</span>
+<span class="source-line-no">167</span><span id="line.167">            Function&lt;com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder&gt; builder) {</span>
+<span class="source-line-no">168</span><span id="line.168">        if (this.assets == null) {</span>
+<span class="source-line-no">169</span><span id="line.169">            this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">170</span><span id="line.170">        }</span>
+<span class="source-line-no">171</span><span id="line.171">        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());</span>
+<span class="source-line-no">172</span><span id="line.172">        return this;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    public CategoryImportBuilder withAssets(</span>
+<span class="source-line-no">176</span><span id="line.176">            Function&lt;com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder&gt; builder) {</span>
+<span class="source-line-no">177</span><span id="line.177">        this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">178</span><span id="line.178">        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());</span>
+<span class="source-line-no">179</span><span id="line.179">        return this;</span>
+<span class="source-line-no">180</span><span id="line.180">    }</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    public CategoryImportBuilder custom(</span>
+<span class="source-line-no">183</span><span id="line.183">            Function&lt;com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder&gt; builder) {</span>
+<span class="source-line-no">184</span><span id="line.184">        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();</span>
+<span class="source-line-no">185</span><span id="line.185">        return this;</span>
+<span class="source-line-no">186</span><span id="line.186">    }</span>
+<span class="source-line-no">187</span><span id="line.187"></span>
+<span class="source-line-no">188</span><span id="line.188">    public CategoryImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {</span>
+<span class="source-line-no">189</span><span id="line.189">        this.custom = custom;</span>
+<span class="source-line-no">190</span><span id="line.190">        return this;</span>
 <span class="source-line-no">191</span><span id="line.191">    }</span>
 <span class="source-line-no">192</span><span id="line.192"></span>
-<span class="source-line-no">193</span><span id="line.193">    public com.commercetools.importapi.models.common.LocalizedString getSlug() {</span>
-<span class="source-line-no">194</span><span id="line.194">        return this.slug;</span>
+<span class="source-line-no">193</span><span id="line.193">    public String getKey() {</span>
+<span class="source-line-no">194</span><span id="line.194">        return this.key;</span>
 <span class="source-line-no">195</span><span id="line.195">    }</span>
 <span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">    @Nullable</span>
-<span class="source-line-no">198</span><span id="line.198">    public com.commercetools.importapi.models.common.LocalizedString getDescription() {</span>
-<span class="source-line-no">199</span><span id="line.199">        return this.description;</span>
-<span class="source-line-no">200</span><span id="line.200">    }</span>
-<span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    @Nullable</span>
-<span class="source-line-no">203</span><span id="line.203">    public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {</span>
-<span class="source-line-no">204</span><span id="line.204">        return this.parent;</span>
-<span class="source-line-no">205</span><span id="line.205">    }</span>
-<span class="source-line-no">206</span><span id="line.206"></span>
-<span class="source-line-no">207</span><span id="line.207">    @Nullable</span>
-<span class="source-line-no">208</span><span id="line.208">    public String getOrderHint() {</span>
-<span class="source-line-no">209</span><span id="line.209">        return this.orderHint;</span>
-<span class="source-line-no">210</span><span id="line.210">    }</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    @Nullable</span>
-<span class="source-line-no">213</span><span id="line.213">    public String getExternalId() {</span>
-<span class="source-line-no">214</span><span id="line.214">        return this.externalId;</span>
-<span class="source-line-no">215</span><span id="line.215">    }</span>
-<span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">    @Nullable</span>
-<span class="source-line-no">218</span><span id="line.218">    public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {</span>
-<span class="source-line-no">219</span><span id="line.219">        return this.metaTitle;</span>
-<span class="source-line-no">220</span><span id="line.220">    }</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">    @Nullable</span>
-<span class="source-line-no">223</span><span id="line.223">    public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {</span>
-<span class="source-line-no">224</span><span id="line.224">        return this.metaDescription;</span>
-<span class="source-line-no">225</span><span id="line.225">    }</span>
-<span class="source-line-no">226</span><span id="line.226"></span>
-<span class="source-line-no">227</span><span id="line.227">    @Nullable</span>
-<span class="source-line-no">228</span><span id="line.228">    public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {</span>
-<span class="source-line-no">229</span><span id="line.229">        return this.metaKeywords;</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    @Nullable</span>
-<span class="source-line-no">233</span><span id="line.233">    public java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; getAssets() {</span>
-<span class="source-line-no">234</span><span id="line.234">        return this.assets;</span>
-<span class="source-line-no">235</span><span id="line.235">    }</span>
-<span class="source-line-no">236</span><span id="line.236"></span>
-<span class="source-line-no">237</span><span id="line.237">    @Nullable</span>
-<span class="source-line-no">238</span><span id="line.238">    public com.commercetools.importapi.models.customfields.Custom getCustom() {</span>
-<span class="source-line-no">239</span><span id="line.239">        return this.custom;</span>
-<span class="source-line-no">240</span><span id="line.240">    }</span>
-<span class="source-line-no">241</span><span id="line.241"></span>
-<span class="source-line-no">242</span><span id="line.242">    public CategoryImport build() {</span>
-<span class="source-line-no">243</span><span id="line.243">        Objects.requireNonNull(key, CategoryImport.class + ": key is missing");</span>
-<span class="source-line-no">244</span><span id="line.244">        Objects.requireNonNull(name, CategoryImport.class + ": name is missing");</span>
-<span class="source-line-no">245</span><span id="line.245">        Objects.requireNonNull(slug, CategoryImport.class + ": slug is missing");</span>
-<span class="source-line-no">246</span><span id="line.246">        return new CategoryImportImpl(key, name, slug, description, parent, orderHint, externalId, metaTitle,</span>
-<span class="source-line-no">247</span><span id="line.247">            metaDescription, metaKeywords, assets, custom);</span>
+<span class="source-line-no">197</span><span id="line.197">    public com.commercetools.importapi.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">198</span><span id="line.198">        return this.name;</span>
+<span class="source-line-no">199</span><span id="line.199">    }</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    public com.commercetools.importapi.models.common.LocalizedString getSlug() {</span>
+<span class="source-line-no">202</span><span id="line.202">        return this.slug;</span>
+<span class="source-line-no">203</span><span id="line.203">    }</span>
+<span class="source-line-no">204</span><span id="line.204"></span>
+<span class="source-line-no">205</span><span id="line.205">    @Nullable</span>
+<span class="source-line-no">206</span><span id="line.206">    public com.commercetools.importapi.models.common.LocalizedString getDescription() {</span>
+<span class="source-line-no">207</span><span id="line.207">        return this.description;</span>
+<span class="source-line-no">208</span><span id="line.208">    }</span>
+<span class="source-line-no">209</span><span id="line.209"></span>
+<span class="source-line-no">210</span><span id="line.210">    @Nullable</span>
+<span class="source-line-no">211</span><span id="line.211">    public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {</span>
+<span class="source-line-no">212</span><span id="line.212">        return this.parent;</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    @Nullable</span>
+<span class="source-line-no">216</span><span id="line.216">    public String getOrderHint() {</span>
+<span class="source-line-no">217</span><span id="line.217">        return this.orderHint;</span>
+<span class="source-line-no">218</span><span id="line.218">    }</span>
+<span class="source-line-no">219</span><span id="line.219"></span>
+<span class="source-line-no">220</span><span id="line.220">    @Nullable</span>
+<span class="source-line-no">221</span><span id="line.221">    public String getExternalId() {</span>
+<span class="source-line-no">222</span><span id="line.222">        return this.externalId;</span>
+<span class="source-line-no">223</span><span id="line.223">    }</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">    @Nullable</span>
+<span class="source-line-no">226</span><span id="line.226">    public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {</span>
+<span class="source-line-no">227</span><span id="line.227">        return this.metaTitle;</span>
+<span class="source-line-no">228</span><span id="line.228">    }</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">    @Nullable</span>
+<span class="source-line-no">231</span><span id="line.231">    public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {</span>
+<span class="source-line-no">232</span><span id="line.232">        return this.metaDescription;</span>
+<span class="source-line-no">233</span><span id="line.233">    }</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">    @Nullable</span>
+<span class="source-line-no">236</span><span id="line.236">    public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {</span>
+<span class="source-line-no">237</span><span id="line.237">        return this.metaKeywords;</span>
+<span class="source-line-no">238</span><span id="line.238">    }</span>
+<span class="source-line-no">239</span><span id="line.239"></span>
+<span class="source-line-no">240</span><span id="line.240">    @Nullable</span>
+<span class="source-line-no">241</span><span id="line.241">    public java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; getAssets() {</span>
+<span class="source-line-no">242</span><span id="line.242">        return this.assets;</span>
+<span class="source-line-no">243</span><span id="line.243">    }</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">    @Nullable</span>
+<span class="source-line-no">246</span><span id="line.246">    public com.commercetools.importapi.models.customfields.Custom getCustom() {</span>
+<span class="source-line-no">247</span><span id="line.247">        return this.custom;</span>
 <span class="source-line-no">248</span><span id="line.248">    }</span>
 <span class="source-line-no">249</span><span id="line.249"></span>
-<span class="source-line-no">250</span><span id="line.250">    /**</span>
-<span class="source-line-no">251</span><span id="line.251">     * builds CategoryImport without checking for non null required values</span>
-<span class="source-line-no">252</span><span id="line.252">     */</span>
-<span class="source-line-no">253</span><span id="line.253">    public CategoryImport buildUnchecked() {</span>
+<span class="source-line-no">250</span><span id="line.250">    public CategoryImport build() {</span>
+<span class="source-line-no">251</span><span id="line.251">        Objects.requireNonNull(key, CategoryImport.class + ": key is missing");</span>
+<span class="source-line-no">252</span><span id="line.252">        Objects.requireNonNull(name, CategoryImport.class + ": name is missing");</span>
+<span class="source-line-no">253</span><span id="line.253">        Objects.requireNonNull(slug, CategoryImport.class + ": slug is missing");</span>
 <span class="source-line-no">254</span><span id="line.254">        return new CategoryImportImpl(key, name, slug, description, parent, orderHint, externalId, metaTitle,</span>
 <span class="source-line-no">255</span><span id="line.255">            metaDescription, metaKeywords, assets, custom);</span>
 <span class="source-line-no">256</span><span id="line.256">    }</span>
 <span class="source-line-no">257</span><span id="line.257"></span>
-<span class="source-line-no">258</span><span id="line.258">    public static CategoryImportBuilder of() {</span>
-<span class="source-line-no">259</span><span id="line.259">        return new CategoryImportBuilder();</span>
-<span class="source-line-no">260</span><span id="line.260">    }</span>
-<span class="source-line-no">261</span><span id="line.261"></span>
-<span class="source-line-no">262</span><span id="line.262">    public static CategoryImportBuilder of(final CategoryImport template) {</span>
-<span class="source-line-no">263</span><span id="line.263">        CategoryImportBuilder builder = new CategoryImportBuilder();</span>
-<span class="source-line-no">264</span><span id="line.264">        builder.key = template.getKey();</span>
-<span class="source-line-no">265</span><span id="line.265">        builder.name = template.getName();</span>
-<span class="source-line-no">266</span><span id="line.266">        builder.slug = template.getSlug();</span>
-<span class="source-line-no">267</span><span id="line.267">        builder.description = template.getDescription();</span>
-<span class="source-line-no">268</span><span id="line.268">        builder.parent = template.getParent();</span>
-<span class="source-line-no">269</span><span id="line.269">        builder.orderHint = template.getOrderHint();</span>
-<span class="source-line-no">270</span><span id="line.270">        builder.externalId = template.getExternalId();</span>
-<span class="source-line-no">271</span><span id="line.271">        builder.metaTitle = template.getMetaTitle();</span>
-<span class="source-line-no">272</span><span id="line.272">        builder.metaDescription = template.getMetaDescription();</span>
-<span class="source-line-no">273</span><span id="line.273">        builder.metaKeywords = template.getMetaKeywords();</span>
-<span class="source-line-no">274</span><span id="line.274">        builder.assets = template.getAssets();</span>
-<span class="source-line-no">275</span><span id="line.275">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">276</span><span id="line.276">        return builder;</span>
-<span class="source-line-no">277</span><span id="line.277">    }</span>
-<span class="source-line-no">278</span><span id="line.278"></span>
-<span class="source-line-no">279</span><span id="line.279">}</span>
+<span class="source-line-no">258</span><span id="line.258">    /**</span>
+<span class="source-line-no">259</span><span id="line.259">     * builds CategoryImport without checking for non null required values</span>
+<span class="source-line-no">260</span><span id="line.260">     */</span>
+<span class="source-line-no">261</span><span id="line.261">    public CategoryImport buildUnchecked() {</span>
+<span class="source-line-no">262</span><span id="line.262">        return new CategoryImportImpl(key, name, slug, description, parent, orderHint, externalId, metaTitle,</span>
+<span class="source-line-no">263</span><span id="line.263">            metaDescription, metaKeywords, assets, custom);</span>
+<span class="source-line-no">264</span><span id="line.264">    }</span>
+<span class="source-line-no">265</span><span id="line.265"></span>
+<span class="source-line-no">266</span><span id="line.266">    public static CategoryImportBuilder of() {</span>
+<span class="source-line-no">267</span><span id="line.267">        return new CategoryImportBuilder();</span>
+<span class="source-line-no">268</span><span id="line.268">    }</span>
+<span class="source-line-no">269</span><span id="line.269"></span>
+<span class="source-line-no">270</span><span id="line.270">    public static CategoryImportBuilder of(final CategoryImport template) {</span>
+<span class="source-line-no">271</span><span id="line.271">        CategoryImportBuilder builder = new CategoryImportBuilder();</span>
+<span class="source-line-no">272</span><span id="line.272">        builder.key = template.getKey();</span>
+<span class="source-line-no">273</span><span id="line.273">        builder.name = template.getName();</span>
+<span class="source-line-no">274</span><span id="line.274">        builder.slug = template.getSlug();</span>
+<span class="source-line-no">275</span><span id="line.275">        builder.description = template.getDescription();</span>
+<span class="source-line-no">276</span><span id="line.276">        builder.parent = template.getParent();</span>
+<span class="source-line-no">277</span><span id="line.277">        builder.orderHint = template.getOrderHint();</span>
+<span class="source-line-no">278</span><span id="line.278">        builder.externalId = template.getExternalId();</span>
+<span class="source-line-no">279</span><span id="line.279">        builder.metaTitle = template.getMetaTitle();</span>
+<span class="source-line-no">280</span><span id="line.280">        builder.metaDescription = template.getMetaDescription();</span>
+<span class="source-line-no">281</span><span id="line.281">        builder.metaKeywords = template.getMetaKeywords();</span>
+<span class="source-line-no">282</span><span id="line.282">        builder.assets = template.getAssets();</span>
+<span class="source-line-no">283</span><span id="line.283">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">284</span><span id="line.284">        return builder;</span>
+<span class="source-line-no">285</span><span id="line.285">    }</span>
+<span class="source-line-no">286</span><span id="line.286"></span>
+<span class="source-line-no">287</span><span id="line.287">}</span>
 
 
 

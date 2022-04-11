@@ -42,40 +42,48 @@
 <span class="source-line-no">029</span><span id="line.29">        return this;</span>
 <span class="source-line-no">030</span><span id="line.30">    }</span>
 <span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    public String getFieldName() {</span>
-<span class="source-line-no">033</span><span id="line.33">        return this.fieldName;</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public java.util.List&lt;String&gt; getKeys() {</span>
-<span class="source-line-no">037</span><span id="line.37">        return this.keys;</span>
+<span class="source-line-no">032</span><span id="line.32">    public TypeChangeLocalizedEnumValueOrderActionBuilder plusKeys(final String... keys) {</span>
+<span class="source-line-no">033</span><span id="line.33">        if (this.keys == null) {</span>
+<span class="source-line-no">034</span><span id="line.34">            this.keys = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">035</span><span id="line.35">        }</span>
+<span class="source-line-no">036</span><span id="line.36">        this.keys.addAll(Arrays.asList(keys));</span>
+<span class="source-line-no">037</span><span id="line.37">        return this;</span>
 <span class="source-line-no">038</span><span id="line.38">    }</span>
 <span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public TypeChangeLocalizedEnumValueOrderAction build() {</span>
-<span class="source-line-no">041</span><span id="line.41">        Objects.requireNonNull(fieldName, TypeChangeLocalizedEnumValueOrderAction.class + ": fieldName is missing");</span>
-<span class="source-line-no">042</span><span id="line.42">        Objects.requireNonNull(keys, TypeChangeLocalizedEnumValueOrderAction.class + ": keys is missing");</span>
-<span class="source-line-no">043</span><span id="line.43">        return new TypeChangeLocalizedEnumValueOrderActionImpl(fieldName, keys);</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">     * builds TypeChangeLocalizedEnumValueOrderAction without checking for non null required values</span>
-<span class="source-line-no">048</span><span id="line.48">     */</span>
-<span class="source-line-no">049</span><span id="line.49">    public TypeChangeLocalizedEnumValueOrderAction buildUnchecked() {</span>
-<span class="source-line-no">050</span><span id="line.50">        return new TypeChangeLocalizedEnumValueOrderActionImpl(fieldName, keys);</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public static TypeChangeLocalizedEnumValueOrderActionBuilder of() {</span>
-<span class="source-line-no">054</span><span id="line.54">        return new TypeChangeLocalizedEnumValueOrderActionBuilder();</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public static TypeChangeLocalizedEnumValueOrderActionBuilder of(</span>
-<span class="source-line-no">058</span><span id="line.58">            final TypeChangeLocalizedEnumValueOrderAction template) {</span>
-<span class="source-line-no">059</span><span id="line.59">        TypeChangeLocalizedEnumValueOrderActionBuilder builder = new TypeChangeLocalizedEnumValueOrderActionBuilder();</span>
-<span class="source-line-no">060</span><span id="line.60">        builder.fieldName = template.getFieldName();</span>
-<span class="source-line-no">061</span><span id="line.61">        builder.keys = template.getKeys();</span>
-<span class="source-line-no">062</span><span id="line.62">        return builder;</span>
+<span class="source-line-no">040</span><span id="line.40">    public String getFieldName() {</span>
+<span class="source-line-no">041</span><span id="line.41">        return this.fieldName;</span>
+<span class="source-line-no">042</span><span id="line.42">    }</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    public java.util.List&lt;String&gt; getKeys() {</span>
+<span class="source-line-no">045</span><span id="line.45">        return this.keys;</span>
+<span class="source-line-no">046</span><span id="line.46">    }</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    public TypeChangeLocalizedEnumValueOrderAction build() {</span>
+<span class="source-line-no">049</span><span id="line.49">        Objects.requireNonNull(fieldName, TypeChangeLocalizedEnumValueOrderAction.class + ": fieldName is missing");</span>
+<span class="source-line-no">050</span><span id="line.50">        Objects.requireNonNull(keys, TypeChangeLocalizedEnumValueOrderAction.class + ": keys is missing");</span>
+<span class="source-line-no">051</span><span id="line.51">        return new TypeChangeLocalizedEnumValueOrderActionImpl(fieldName, keys);</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">     * builds TypeChangeLocalizedEnumValueOrderAction without checking for non null required values</span>
+<span class="source-line-no">056</span><span id="line.56">     */</span>
+<span class="source-line-no">057</span><span id="line.57">    public TypeChangeLocalizedEnumValueOrderAction buildUnchecked() {</span>
+<span class="source-line-no">058</span><span id="line.58">        return new TypeChangeLocalizedEnumValueOrderActionImpl(fieldName, keys);</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public static TypeChangeLocalizedEnumValueOrderActionBuilder of() {</span>
+<span class="source-line-no">062</span><span id="line.62">        return new TypeChangeLocalizedEnumValueOrderActionBuilder();</span>
 <span class="source-line-no">063</span><span id="line.63">    }</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">}</span>
+<span class="source-line-no">065</span><span id="line.65">    public static TypeChangeLocalizedEnumValueOrderActionBuilder of(</span>
+<span class="source-line-no">066</span><span id="line.66">            final TypeChangeLocalizedEnumValueOrderAction template) {</span>
+<span class="source-line-no">067</span><span id="line.67">        TypeChangeLocalizedEnumValueOrderActionBuilder builder = new TypeChangeLocalizedEnumValueOrderActionBuilder();</span>
+<span class="source-line-no">068</span><span id="line.68">        builder.fieldName = template.getFieldName();</span>
+<span class="source-line-no">069</span><span id="line.69">        builder.keys = template.getKeys();</span>
+<span class="source-line-no">070</span><span id="line.70">        return builder;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">}</span>
 
 
 

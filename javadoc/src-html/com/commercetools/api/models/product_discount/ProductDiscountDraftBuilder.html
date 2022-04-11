@@ -81,108 +81,115 @@
 <span class="source-line-no">068</span><span id="line.68">        return this;</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public ProductDiscountDraftBuilder predicate(final String predicate) {</span>
-<span class="source-line-no">072</span><span id="line.72">        this.predicate = predicate;</span>
-<span class="source-line-no">073</span><span id="line.73">        return this;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public ProductDiscountDraftBuilder sortOrder(final String sortOrder) {</span>
-<span class="source-line-no">077</span><span id="line.77">        this.sortOrder = sortOrder;</span>
-<span class="source-line-no">078</span><span id="line.78">        return this;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public ProductDiscountDraftBuilder isActive(final Boolean isActive) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.isActive = isActive;</span>
-<span class="source-line-no">083</span><span id="line.83">        return this;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public ProductDiscountDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {</span>
-<span class="source-line-no">087</span><span id="line.87">        this.validFrom = validFrom;</span>
-<span class="source-line-no">088</span><span id="line.88">        return this;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public ProductDiscountDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {</span>
-<span class="source-line-no">092</span><span id="line.92">        this.validUntil = validUntil;</span>
-<span class="source-line-no">093</span><span id="line.93">        return this;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return this.name;</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    @Nullable</span>
-<span class="source-line-no">101</span><span id="line.101">    public String getKey() {</span>
-<span class="source-line-no">102</span><span id="line.102">        return this.key;</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    @Nullable</span>
-<span class="source-line-no">106</span><span id="line.106">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
-<span class="source-line-no">107</span><span id="line.107">        return this.description;</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {</span>
-<span class="source-line-no">111</span><span id="line.111">        return this.value;</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public String getPredicate() {</span>
-<span class="source-line-no">115</span><span id="line.115">        return this.predicate;</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    public String getSortOrder() {</span>
-<span class="source-line-no">119</span><span id="line.119">        return this.sortOrder;</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public Boolean getIsActive() {</span>
-<span class="source-line-no">123</span><span id="line.123">        return this.isActive;</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    @Nullable</span>
-<span class="source-line-no">127</span><span id="line.127">    public java.time.ZonedDateTime getValidFrom() {</span>
-<span class="source-line-no">128</span><span id="line.128">        return this.validFrom;</span>
-<span class="source-line-no">129</span><span id="line.129">    }</span>
-<span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    @Nullable</span>
-<span class="source-line-no">132</span><span id="line.132">    public java.time.ZonedDateTime getValidUntil() {</span>
-<span class="source-line-no">133</span><span id="line.133">        return this.validUntil;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public ProductDiscountDraft build() {</span>
-<span class="source-line-no">137</span><span id="line.137">        Objects.requireNonNull(name, ProductDiscountDraft.class + ": name is missing");</span>
-<span class="source-line-no">138</span><span id="line.138">        Objects.requireNonNull(value, ProductDiscountDraft.class + ": value is missing");</span>
-<span class="source-line-no">139</span><span id="line.139">        Objects.requireNonNull(predicate, ProductDiscountDraft.class + ": predicate is missing");</span>
-<span class="source-line-no">140</span><span id="line.140">        Objects.requireNonNull(sortOrder, ProductDiscountDraft.class + ": sortOrder is missing");</span>
-<span class="source-line-no">141</span><span id="line.141">        Objects.requireNonNull(isActive, ProductDiscountDraft.class + ": isActive is missing");</span>
-<span class="source-line-no">142</span><span id="line.142">        return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom,</span>
-<span class="source-line-no">143</span><span id="line.143">            validUntil);</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    /**</span>
-<span class="source-line-no">147</span><span id="line.147">     * builds ProductDiscountDraft without checking for non null required values</span>
-<span class="source-line-no">148</span><span id="line.148">     */</span>
-<span class="source-line-no">149</span><span id="line.149">    public ProductDiscountDraft buildUnchecked() {</span>
-<span class="source-line-no">150</span><span id="line.150">        return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom,</span>
-<span class="source-line-no">151</span><span id="line.151">            validUntil);</span>
-<span class="source-line-no">152</span><span id="line.152">    }</span>
-<span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    public static ProductDiscountDraftBuilder of() {</span>
-<span class="source-line-no">155</span><span id="line.155">        return new ProductDiscountDraftBuilder();</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public static ProductDiscountDraftBuilder of(final ProductDiscountDraft template) {</span>
-<span class="source-line-no">159</span><span id="line.159">        ProductDiscountDraftBuilder builder = new ProductDiscountDraftBuilder();</span>
-<span class="source-line-no">160</span><span id="line.160">        builder.name = template.getName();</span>
-<span class="source-line-no">161</span><span id="line.161">        builder.key = template.getKey();</span>
-<span class="source-line-no">162</span><span id="line.162">        builder.description = template.getDescription();</span>
-<span class="source-line-no">163</span><span id="line.163">        builder.value = template.getValue();</span>
-<span class="source-line-no">164</span><span id="line.164">        builder.predicate = template.getPredicate();</span>
-<span class="source-line-no">165</span><span id="line.165">        builder.sortOrder = template.getSortOrder();</span>
-<span class="source-line-no">166</span><span id="line.166">        builder.isActive = template.getIsActive();</span>
-<span class="source-line-no">167</span><span id="line.167">        builder.validFrom = template.getValidFrom();</span>
-<span class="source-line-no">168</span><span id="line.168">        builder.validUntil = template.getValidUntil();</span>
-<span class="source-line-no">169</span><span id="line.169">        return builder;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">}</span>
+<span class="source-line-no">071</span><span id="line.71">    public ProductDiscountDraftBuilder value(</span>
+<span class="source-line-no">072</span><span id="line.72">            Function&lt;com.commercetools.api.models.product_discount.ProductDiscountValueDraftBuilder, Builder&lt;? extends com.commercetools.api.models.product_discount.ProductDiscountValueDraft&gt;&gt; builder) {</span>
+<span class="source-line-no">073</span><span id="line.73">        this.value = builder.apply(com.commercetools.api.models.product_discount.ProductDiscountValueDraftBuilder.of())</span>
+<span class="source-line-no">074</span><span id="line.74">                .build();</span>
+<span class="source-line-no">075</span><span id="line.75">        return this;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public ProductDiscountDraftBuilder predicate(final String predicate) {</span>
+<span class="source-line-no">079</span><span id="line.79">        this.predicate = predicate;</span>
+<span class="source-line-no">080</span><span id="line.80">        return this;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public ProductDiscountDraftBuilder sortOrder(final String sortOrder) {</span>
+<span class="source-line-no">084</span><span id="line.84">        this.sortOrder = sortOrder;</span>
+<span class="source-line-no">085</span><span id="line.85">        return this;</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public ProductDiscountDraftBuilder isActive(final Boolean isActive) {</span>
+<span class="source-line-no">089</span><span id="line.89">        this.isActive = isActive;</span>
+<span class="source-line-no">090</span><span id="line.90">        return this;</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public ProductDiscountDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {</span>
+<span class="source-line-no">094</span><span id="line.94">        this.validFrom = validFrom;</span>
+<span class="source-line-no">095</span><span id="line.95">        return this;</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public ProductDiscountDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {</span>
+<span class="source-line-no">099</span><span id="line.99">        this.validUntil = validUntil;</span>
+<span class="source-line-no">100</span><span id="line.100">        return this;</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">104</span><span id="line.104">        return this.name;</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    @Nullable</span>
+<span class="source-line-no">108</span><span id="line.108">    public String getKey() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return this.key;</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    @Nullable</span>
+<span class="source-line-no">113</span><span id="line.113">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return this.description;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {</span>
+<span class="source-line-no">118</span><span id="line.118">        return this.value;</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    public String getPredicate() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return this.predicate;</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    public String getSortOrder() {</span>
+<span class="source-line-no">126</span><span id="line.126">        return this.sortOrder;</span>
+<span class="source-line-no">127</span><span id="line.127">    }</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public Boolean getIsActive() {</span>
+<span class="source-line-no">130</span><span id="line.130">        return this.isActive;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    @Nullable</span>
+<span class="source-line-no">134</span><span id="line.134">    public java.time.ZonedDateTime getValidFrom() {</span>
+<span class="source-line-no">135</span><span id="line.135">        return this.validFrom;</span>
+<span class="source-line-no">136</span><span id="line.136">    }</span>
+<span class="source-line-no">137</span><span id="line.137"></span>
+<span class="source-line-no">138</span><span id="line.138">    @Nullable</span>
+<span class="source-line-no">139</span><span id="line.139">    public java.time.ZonedDateTime getValidUntil() {</span>
+<span class="source-line-no">140</span><span id="line.140">        return this.validUntil;</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public ProductDiscountDraft build() {</span>
+<span class="source-line-no">144</span><span id="line.144">        Objects.requireNonNull(name, ProductDiscountDraft.class + ": name is missing");</span>
+<span class="source-line-no">145</span><span id="line.145">        Objects.requireNonNull(value, ProductDiscountDraft.class + ": value is missing");</span>
+<span class="source-line-no">146</span><span id="line.146">        Objects.requireNonNull(predicate, ProductDiscountDraft.class + ": predicate is missing");</span>
+<span class="source-line-no">147</span><span id="line.147">        Objects.requireNonNull(sortOrder, ProductDiscountDraft.class + ": sortOrder is missing");</span>
+<span class="source-line-no">148</span><span id="line.148">        Objects.requireNonNull(isActive, ProductDiscountDraft.class + ": isActive is missing");</span>
+<span class="source-line-no">149</span><span id="line.149">        return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom,</span>
+<span class="source-line-no">150</span><span id="line.150">            validUntil);</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    /**</span>
+<span class="source-line-no">154</span><span id="line.154">     * builds ProductDiscountDraft without checking for non null required values</span>
+<span class="source-line-no">155</span><span id="line.155">     */</span>
+<span class="source-line-no">156</span><span id="line.156">    public ProductDiscountDraft buildUnchecked() {</span>
+<span class="source-line-no">157</span><span id="line.157">        return new ProductDiscountDraftImpl(name, key, description, value, predicate, sortOrder, isActive, validFrom,</span>
+<span class="source-line-no">158</span><span id="line.158">            validUntil);</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public static ProductDiscountDraftBuilder of() {</span>
+<span class="source-line-no">162</span><span id="line.162">        return new ProductDiscountDraftBuilder();</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public static ProductDiscountDraftBuilder of(final ProductDiscountDraft template) {</span>
+<span class="source-line-no">166</span><span id="line.166">        ProductDiscountDraftBuilder builder = new ProductDiscountDraftBuilder();</span>
+<span class="source-line-no">167</span><span id="line.167">        builder.name = template.getName();</span>
+<span class="source-line-no">168</span><span id="line.168">        builder.key = template.getKey();</span>
+<span class="source-line-no">169</span><span id="line.169">        builder.description = template.getDescription();</span>
+<span class="source-line-no">170</span><span id="line.170">        builder.value = template.getValue();</span>
+<span class="source-line-no">171</span><span id="line.171">        builder.predicate = template.getPredicate();</span>
+<span class="source-line-no">172</span><span id="line.172">        builder.sortOrder = template.getSortOrder();</span>
+<span class="source-line-no">173</span><span id="line.173">        builder.isActive = template.getIsActive();</span>
+<span class="source-line-no">174</span><span id="line.174">        builder.validFrom = template.getValidFrom();</span>
+<span class="source-line-no">175</span><span id="line.175">        builder.validUntil = template.getValidUntil();</span>
+<span class="source-line-no">176</span><span id="line.176">        return builder;</span>
+<span class="source-line-no">177</span><span id="line.177">    }</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">}</span>
 
 
 

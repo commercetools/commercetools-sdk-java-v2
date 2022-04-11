@@ -209,7 +209,13 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#of(com.commercetools.api.models.product.ProductData)">of</a></span>&#8203;(<a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a>&nbsp;template)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusCategories(java.util.function.Function)">plusCategories</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,&#8203;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusCategories(com.commercetools.api.models.category.CategoryReference...)">plusCategories</a></span>&#8203;(<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>...&nbsp;categories)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusCategories(java.util.function.Function)">plusCategories</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,&#8203;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusVariants(com.commercetools.api.models.product.ProductVariant...)">plusVariants</a></span>&#8203;(<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>...&nbsp;variants)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#plusVariants(java.util.function.Function)">plusVariants</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,&#8203;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>&gt;&nbsp;builder)</code></div>
@@ -288,223 +294,235 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="withCategories(java.util.function.Function)">
-<h3>withCategories</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.58">withCategories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,&#8203;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<section class="detail" id="categories(java.util.List)">
+<h3>categories</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.58">categories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;categories)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusCategories(com.commercetools.api.models.category.CategoryReference...)">
+<h3>plusCategories</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.64">plusCategories</a></span>&#8203;<span class="parameters">(<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>...&nbsp;categories)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusCategories(java.util.function.Function)">
 <h3>plusCategories</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.65">plusCategories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,&#8203;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.73">plusCategories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,&#8203;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="categories(java.util.List)">
-<h3>categories</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.74">categories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;categories)</span></div>
+<section class="detail" id="withCategories(java.util.function.Function)">
+<h3>withCategories</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.82">withCategories</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,&#8203;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="categoryOrderHints(java.util.function.Function)">
 <h3>categoryOrderHints</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.80">categoryOrderHints</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryOrderHintsBuilder.html" title="class in com.commercetools.api.models.product">CategoryOrderHintsBuilder</a>,&#8203;<a href="CategoryOrderHintsBuilder.html" title="class in com.commercetools.api.models.product">CategoryOrderHintsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.89">categoryOrderHints</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryOrderHintsBuilder.html" title="class in com.commercetools.api.models.product">CategoryOrderHintsBuilder</a>,&#8203;<a href="CategoryOrderHintsBuilder.html" title="class in com.commercetools.api.models.product">CategoryOrderHintsBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="categoryOrderHints(com.commercetools.api.models.product.CategoryOrderHints)">
 <h3>categoryOrderHints</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.87">categoryOrderHints</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.96">categoryOrderHints</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a>&nbsp;categoryOrderHints)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="description(java.util.function.Function)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.93">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.102">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="description(com.commercetools.api.models.common.LocalizedString)">
 <h3>description</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.99">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.108">description</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="slug(java.util.function.Function)">
 <h3>slug</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.105">slug</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.114">slug</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="slug(com.commercetools.api.models.common.LocalizedString)">
 <h3>slug</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.111">slug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.120">slug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="metaTitle(java.util.function.Function)">
 <h3>metaTitle</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.116">metaTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.125">metaTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="metaTitle(com.commercetools.api.models.common.LocalizedString)">
 <h3>metaTitle</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.122">metaTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.131">metaTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaTitle)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="metaDescription(java.util.function.Function)">
 <h3>metaDescription</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.127">metaDescription</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.136">metaDescription</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="metaDescription(com.commercetools.api.models.common.LocalizedString)">
 <h3>metaDescription</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.133">metaDescription</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.142">metaDescription</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="metaKeywords(java.util.function.Function)">
 <h3>metaKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.139">metaKeywords</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.148">metaKeywords</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="metaKeywords(com.commercetools.api.models.common.LocalizedString)">
 <h3>metaKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.145">metaKeywords</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.154">metaKeywords</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaKeywords)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="masterVariant(java.util.function.Function)">
 <h3>masterVariant</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.151">masterVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,&#8203;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.160">masterVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,&#8203;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="masterVariant(com.commercetools.api.models.product.ProductVariant)">
 <h3>masterVariant</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.157">masterVariant</a></span>&#8203;<span class="parameters">(<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;masterVariant)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.166">masterVariant</a></span>&#8203;<span class="parameters">(<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;masterVariant)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variants(com.commercetools.api.models.product.ProductVariant...)">
 <h3>variants</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.162">variants</a></span>&#8203;<span class="parameters">(<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>...&nbsp;variants)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="withVariants(java.util.function.Function)">
-<h3>withVariants</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.167">withVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,&#8203;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>&gt;&nbsp;builder)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="plusVariants(java.util.function.Function)">
-<h3>plusVariants</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.174">plusVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,&#8203;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.171">variants</a></span>&#8203;<span class="parameters">(<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>...&nbsp;variants)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variants(java.util.List)">
 <h3>variants</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.183">variants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;&nbsp;variants)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.176">variants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;&nbsp;variants)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusVariants(com.commercetools.api.models.product.ProductVariant...)">
+<h3>plusVariants</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.182">plusVariants</a></span>&#8203;<span class="parameters">(<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>...&nbsp;variants)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="plusVariants(java.util.function.Function)">
+<h3>plusVariants</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.190">plusVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,&#8203;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>&gt;&nbsp;builder)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withVariants(java.util.function.Function)">
+<h3>withVariants</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.199">withVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,&#8203;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="searchKeywords(java.util.function.Function)">
 <h3>searchKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.189">searchKeywords</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>,&#8203;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.206">searchKeywords</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>,&#8203;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="searchKeywords(com.commercetools.api.models.product.SearchKeywords)">
 <h3>searchKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.195">searchKeywords</a></span>&#8203;<span class="parameters">(<a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.212">searchKeywords</a></span>&#8203;<span class="parameters">(<a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.200">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.217">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCategories()">
 <h3>getCategories</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.204">getCategories</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.221">getCategories</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCategoryOrderHints()">
 <h3>getCategoryOrderHints</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.208">getCategoryOrderHints</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.225">getCategoryOrderHints</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.213">getDescription</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.230">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSlug()">
 <h3>getSlug</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.218">getSlug</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.235">getSlug</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMetaTitle()">
 <h3>getMetaTitle</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.222">getMetaTitle</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.239">getMetaTitle</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMetaDescription()">
 <h3>getMetaDescription</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.227">getMetaDescription</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.244">getMetaDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMetaKeywords()">
 <h3>getMetaKeywords</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.232">getMetaKeywords</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.249">getMetaKeywords</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMasterVariant()">
 <h3>getMasterVariant</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.237">getMasterVariant</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.254">getMasterVariant</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariants()">
 <h3>getVariants</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.241">getVariants</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.258">getVariants</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSearchKeywords()">
 <h3>getSearchKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.245">getSearchKeywords</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.262">getSearchKeywords</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.249">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.266">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a>&gt;</code></dd>
@@ -514,20 +532,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.263">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.280">buildUnchecked</a></span>()</div>
 <div class="block">builds ProductData without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.268">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.285">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product.ProductData)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.272">of</a></span>&#8203;<span class="parameters">(<a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductDataBuilder.html" title="class in com.commercetools.api.models.product">ProductDataBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductDataBuilder.html#line.289">of</a></span>&#8203;<span class="parameters">(<a href="ProductData.html" title="interface in com.commercetools.api.models.product">ProductData</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

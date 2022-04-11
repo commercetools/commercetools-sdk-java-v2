@@ -98,7 +98,7 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -107,9 +107,42 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getAction()">getAction</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withReviewUpdateAction(java.util.function.Function)">withReviewUpdateAction</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewUpdateAction.html" title="interface in com.commercetools.api.models.review">ReviewUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetAuthorNameActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetAuthorNameActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setAuthorNameBuilder()">setAuthorNameBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetCustomerActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetCustomerActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setCustomerBuilder()">setCustomerBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetCustomFieldActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setCustomFieldBuilder()">setCustomFieldBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetCustomTypeActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setCustomTypeBuilder()">setCustomTypeBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetKeyActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetKeyActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setKeyBuilder()">setKeyBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetLocaleActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetLocaleActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setLocaleBuilder()">setLocaleBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetRatingActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetRatingActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setRatingBuilder()">setRatingBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetTargetActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTargetActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setTargetBuilder()">setTargetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetTextActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTextActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setTextBuilder()">setTextBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewSetTitleActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTitleActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#setTitleBuilder()">setTitleBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewTransitionStateActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#transitionStateBuilder()">transitionStateBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withReviewUpdateAction(java.util.function.Function)">withReviewUpdateAction</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewUpdateAction.html" title="interface in com.commercetools.api.models.review">ReviewUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -139,9 +172,75 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 </section>
 </li>
 <li>
+<section class="detail" id="setAuthorNameBuilder()">
+<h3>setAuthorNameBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetAuthorNameActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetAuthorNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.36">setAuthorNameBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomFieldBuilder()">
+<h3>setCustomFieldBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.40">setCustomFieldBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomTypeBuilder()">
+<h3>setCustomTypeBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.44">setCustomTypeBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomerBuilder()">
+<h3>setCustomerBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetCustomerActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetCustomerActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.48">setCustomerBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setKeyBuilder()">
+<h3>setKeyBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetKeyActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.52">setKeyBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setLocaleBuilder()">
+<h3>setLocaleBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetLocaleActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetLocaleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.56">setLocaleBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setRatingBuilder()">
+<h3>setRatingBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetRatingActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetRatingActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.60">setRatingBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setTargetBuilder()">
+<h3>setTargetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTargetActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTargetActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.64">setTargetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setTextBuilder()">
+<h3>setTextBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTextActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTextActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.68">setTextBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="setTitleBuilder()">
+<h3>setTitleBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewSetTitleActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewSetTitleActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.72">setTitleBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="transitionStateBuilder()">
+<h3>transitionStateBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.review">ReviewTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.76">transitionStateBuilder</a></span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="withReviewUpdateAction(java.util.function.Function)">
 <h3>withReviewUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.36">withReviewUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewUpdateAction.html" title="interface in com.commercetools.api.models.review">ReviewUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/review/ReviewUpdateAction.html#line.80">withReviewUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReviewUpdateAction.html" title="interface in com.commercetools.api.models.review">ReviewUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

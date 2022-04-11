@@ -40,10 +40,26 @@
 <span class="source-line-no">027</span><span id="line.27">    @JsonProperty("action")</span>
 <span class="source-line-no">028</span><span id="line.28">    public String getAction();</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    default &lt;T&gt; T withCustomerGroupUpdateAction(Function&lt;CustomerGroupUpdateAction, T&gt; helper) {</span>
-<span class="source-line-no">031</span><span id="line.31">        return helper.apply(this);</span>
+<span class="source-line-no">030</span><span id="line.30">    public static com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionBuilder changeNameBuilder() {</span>
+<span class="source-line-no">031</span><span id="line.31">        return com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionBuilder.of();</span>
 <span class="source-line-no">032</span><span id="line.32">    }</span>
-<span class="source-line-no">033</span><span id="line.33">}</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    public static com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
+<span class="source-line-no">035</span><span id="line.35">        return com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldActionBuilder.of();</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public static com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
+<span class="source-line-no">039</span><span id="line.39">        return com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeActionBuilder.of();</span>
+<span class="source-line-no">040</span><span id="line.40">    }</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    public static com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionBuilder setKeyBuilder() {</span>
+<span class="source-line-no">043</span><span id="line.43">        return com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionBuilder.of();</span>
+<span class="source-line-no">044</span><span id="line.44">    }</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    default &lt;T&gt; T withCustomerGroupUpdateAction(Function&lt;CustomerGroupUpdateAction, T&gt; helper) {</span>
+<span class="source-line-no">047</span><span id="line.47">        return helper.apply(this);</span>
+<span class="source-line-no">048</span><span id="line.48">    }</span>
+<span class="source-line-no">049</span><span id="line.49">}</span>
 
 
 

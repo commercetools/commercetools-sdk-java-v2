@@ -114,186 +114,192 @@
 <span class="source-line-no">101</span><span id="line.101">        return this;</span>
 <span class="source-line-no">102</span><span id="line.102">    }</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public OrderCustomerSetMessageBuilder resourceVersion(final Long resourceVersion) {</span>
-<span class="source-line-no">105</span><span id="line.105">        this.resourceVersion = resourceVersion;</span>
-<span class="source-line-no">106</span><span id="line.106">        return this;</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(</span>
-<span class="source-line-no">110</span><span id="line.110">            Function&lt;com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder&gt; builder) {</span>
-<span class="source-line-no">111</span><span id="line.111">        this.resourceUserProvidedIdentifiers = builder</span>
-<span class="source-line-no">112</span><span id="line.112">                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())</span>
-<span class="source-line-no">113</span><span id="line.113">                .build();</span>
-<span class="source-line-no">114</span><span id="line.114">        return this;</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(</span>
-<span class="source-line-no">118</span><span id="line.118">            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
-<span class="source-line-no">119</span><span id="line.119">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">104</span><span id="line.104">    public OrderCustomerSetMessageBuilder resource(</span>
+<span class="source-line-no">105</span><span id="line.105">            Function&lt;com.commercetools.api.models.common.ReferenceBuilder, Builder&lt;? extends com.commercetools.api.models.common.Reference&gt;&gt; builder) {</span>
+<span class="source-line-no">106</span><span id="line.106">        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();</span>
+<span class="source-line-no">107</span><span id="line.107">        return this;</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    public OrderCustomerSetMessageBuilder resourceVersion(final Long resourceVersion) {</span>
+<span class="source-line-no">111</span><span id="line.111">        this.resourceVersion = resourceVersion;</span>
+<span class="source-line-no">112</span><span id="line.112">        return this;</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(</span>
+<span class="source-line-no">116</span><span id="line.116">            Function&lt;com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder&gt; builder) {</span>
+<span class="source-line-no">117</span><span id="line.117">        this.resourceUserProvidedIdentifiers = builder</span>
+<span class="source-line-no">118</span><span id="line.118">                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())</span>
+<span class="source-line-no">119</span><span id="line.119">                .build();</span>
 <span class="source-line-no">120</span><span id="line.120">        return this;</span>
 <span class="source-line-no">121</span><span id="line.121">    }</span>
 <span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public OrderCustomerSetMessageBuilder customer(</span>
-<span class="source-line-no">124</span><span id="line.124">            Function&lt;com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">125</span><span id="line.125">        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();</span>
+<span class="source-line-no">123</span><span id="line.123">    public OrderCustomerSetMessageBuilder resourceUserProvidedIdentifiers(</span>
+<span class="source-line-no">124</span><span id="line.124">            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
+<span class="source-line-no">125</span><span id="line.125">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
 <span class="source-line-no">126</span><span id="line.126">        return this;</span>
 <span class="source-line-no">127</span><span id="line.127">    }</span>
 <span class="source-line-no">128</span><span id="line.128"></span>
 <span class="source-line-no">129</span><span id="line.129">    public OrderCustomerSetMessageBuilder customer(</span>
-<span class="source-line-no">130</span><span id="line.130">            @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {</span>
-<span class="source-line-no">131</span><span id="line.131">        this.customer = customer;</span>
+<span class="source-line-no">130</span><span id="line.130">            Function&lt;com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">131</span><span id="line.131">        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();</span>
 <span class="source-line-no">132</span><span id="line.132">        return this;</span>
 <span class="source-line-no">133</span><span id="line.133">    }</span>
 <span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    public OrderCustomerSetMessageBuilder customerGroup(</span>
-<span class="source-line-no">136</span><span id="line.136">            Function&lt;com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">137</span><span id="line.137">        this.customerGroup = builder</span>
-<span class="source-line-no">138</span><span id="line.138">                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())</span>
-<span class="source-line-no">139</span><span id="line.139">                .build();</span>
-<span class="source-line-no">140</span><span id="line.140">        return this;</span>
-<span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    public OrderCustomerSetMessageBuilder customerGroup(</span>
-<span class="source-line-no">144</span><span id="line.144">            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {</span>
-<span class="source-line-no">145</span><span id="line.145">        this.customerGroup = customerGroup;</span>
+<span class="source-line-no">135</span><span id="line.135">    public OrderCustomerSetMessageBuilder customer(</span>
+<span class="source-line-no">136</span><span id="line.136">            @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {</span>
+<span class="source-line-no">137</span><span id="line.137">        this.customer = customer;</span>
+<span class="source-line-no">138</span><span id="line.138">        return this;</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    public OrderCustomerSetMessageBuilder customerGroup(</span>
+<span class="source-line-no">142</span><span id="line.142">            Function&lt;com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">143</span><span id="line.143">        this.customerGroup = builder</span>
+<span class="source-line-no">144</span><span id="line.144">                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())</span>
+<span class="source-line-no">145</span><span id="line.145">                .build();</span>
 <span class="source-line-no">146</span><span id="line.146">        return this;</span>
 <span class="source-line-no">147</span><span id="line.147">    }</span>
 <span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    public OrderCustomerSetMessageBuilder oldCustomer(</span>
-<span class="source-line-no">150</span><span id="line.150">            Function&lt;com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">151</span><span id="line.151">        this.oldCustomer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();</span>
+<span class="source-line-no">149</span><span id="line.149">    public OrderCustomerSetMessageBuilder customerGroup(</span>
+<span class="source-line-no">150</span><span id="line.150">            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {</span>
+<span class="source-line-no">151</span><span id="line.151">        this.customerGroup = customerGroup;</span>
 <span class="source-line-no">152</span><span id="line.152">        return this;</span>
 <span class="source-line-no">153</span><span id="line.153">    }</span>
 <span class="source-line-no">154</span><span id="line.154"></span>
 <span class="source-line-no">155</span><span id="line.155">    public OrderCustomerSetMessageBuilder oldCustomer(</span>
-<span class="source-line-no">156</span><span id="line.156">            @Nullable final com.commercetools.api.models.customer.CustomerReference oldCustomer) {</span>
-<span class="source-line-no">157</span><span id="line.157">        this.oldCustomer = oldCustomer;</span>
+<span class="source-line-no">156</span><span id="line.156">            Function&lt;com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">157</span><span id="line.157">        this.oldCustomer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();</span>
 <span class="source-line-no">158</span><span id="line.158">        return this;</span>
 <span class="source-line-no">159</span><span id="line.159">    }</span>
 <span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    public OrderCustomerSetMessageBuilder oldCustomerGroup(</span>
-<span class="source-line-no">162</span><span id="line.162">            Function&lt;com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">163</span><span id="line.163">        this.oldCustomerGroup = builder</span>
-<span class="source-line-no">164</span><span id="line.164">                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())</span>
-<span class="source-line-no">165</span><span id="line.165">                .build();</span>
-<span class="source-line-no">166</span><span id="line.166">        return this;</span>
-<span class="source-line-no">167</span><span id="line.167">    }</span>
-<span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    public OrderCustomerSetMessageBuilder oldCustomerGroup(</span>
-<span class="source-line-no">170</span><span id="line.170">            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {</span>
-<span class="source-line-no">171</span><span id="line.171">        this.oldCustomerGroup = oldCustomerGroup;</span>
+<span class="source-line-no">161</span><span id="line.161">    public OrderCustomerSetMessageBuilder oldCustomer(</span>
+<span class="source-line-no">162</span><span id="line.162">            @Nullable final com.commercetools.api.models.customer.CustomerReference oldCustomer) {</span>
+<span class="source-line-no">163</span><span id="line.163">        this.oldCustomer = oldCustomer;</span>
+<span class="source-line-no">164</span><span id="line.164">        return this;</span>
+<span class="source-line-no">165</span><span id="line.165">    }</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">    public OrderCustomerSetMessageBuilder oldCustomerGroup(</span>
+<span class="source-line-no">168</span><span id="line.168">            Function&lt;com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">169</span><span id="line.169">        this.oldCustomerGroup = builder</span>
+<span class="source-line-no">170</span><span id="line.170">                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())</span>
+<span class="source-line-no">171</span><span id="line.171">                .build();</span>
 <span class="source-line-no">172</span><span id="line.172">        return this;</span>
 <span class="source-line-no">173</span><span id="line.173">    }</span>
 <span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    public String getId() {</span>
-<span class="source-line-no">176</span><span id="line.176">        return this.id;</span>
-<span class="source-line-no">177</span><span id="line.177">    }</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    public Long getVersion() {</span>
-<span class="source-line-no">180</span><span id="line.180">        return this.version;</span>
-<span class="source-line-no">181</span><span id="line.181">    }</span>
-<span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">184</span><span id="line.184">        return this.createdAt;</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">188</span><span id="line.188">        return this.lastModifiedAt;</span>
-<span class="source-line-no">189</span><span id="line.189">    }</span>
-<span class="source-line-no">190</span><span id="line.190"></span>
-<span class="source-line-no">191</span><span id="line.191">    @Nullable</span>
-<span class="source-line-no">192</span><span id="line.192">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">193</span><span id="line.193">        return this.lastModifiedBy;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    @Nullable</span>
-<span class="source-line-no">197</span><span id="line.197">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">198</span><span id="line.198">        return this.createdBy;</span>
-<span class="source-line-no">199</span><span id="line.199">    }</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    public Long getSequenceNumber() {</span>
-<span class="source-line-no">202</span><span id="line.202">        return this.sequenceNumber;</span>
-<span class="source-line-no">203</span><span id="line.203">    }</span>
-<span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    public com.commercetools.api.models.common.Reference getResource() {</span>
-<span class="source-line-no">206</span><span id="line.206">        return this.resource;</span>
-<span class="source-line-no">207</span><span id="line.207">    }</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public Long getResourceVersion() {</span>
-<span class="source-line-no">210</span><span id="line.210">        return this.resourceVersion;</span>
-<span class="source-line-no">211</span><span id="line.211">    }</span>
-<span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    @Nullable</span>
-<span class="source-line-no">214</span><span id="line.214">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
-<span class="source-line-no">215</span><span id="line.215">        return this.resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">216</span><span id="line.216">    }</span>
-<span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">    @Nullable</span>
-<span class="source-line-no">219</span><span id="line.219">    public com.commercetools.api.models.customer.CustomerReference getCustomer() {</span>
-<span class="source-line-no">220</span><span id="line.220">        return this.customer;</span>
-<span class="source-line-no">221</span><span id="line.221">    }</span>
-<span class="source-line-no">222</span><span id="line.222"></span>
-<span class="source-line-no">223</span><span id="line.223">    @Nullable</span>
-<span class="source-line-no">224</span><span id="line.224">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
-<span class="source-line-no">225</span><span id="line.225">        return this.customerGroup;</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    @Nullable</span>
-<span class="source-line-no">229</span><span id="line.229">    public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {</span>
-<span class="source-line-no">230</span><span id="line.230">        return this.oldCustomer;</span>
-<span class="source-line-no">231</span><span id="line.231">    }</span>
-<span class="source-line-no">232</span><span id="line.232"></span>
-<span class="source-line-no">233</span><span id="line.233">    @Nullable</span>
-<span class="source-line-no">234</span><span id="line.234">    public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {</span>
-<span class="source-line-no">235</span><span id="line.235">        return this.oldCustomerGroup;</span>
-<span class="source-line-no">236</span><span id="line.236">    }</span>
-<span class="source-line-no">237</span><span id="line.237"></span>
-<span class="source-line-no">238</span><span id="line.238">    public OrderCustomerSetMessage build() {</span>
-<span class="source-line-no">239</span><span id="line.239">        Objects.requireNonNull(id, OrderCustomerSetMessage.class + ": id is missing");</span>
-<span class="source-line-no">240</span><span id="line.240">        Objects.requireNonNull(version, OrderCustomerSetMessage.class + ": version is missing");</span>
-<span class="source-line-no">241</span><span id="line.241">        Objects.requireNonNull(createdAt, OrderCustomerSetMessage.class + ": createdAt is missing");</span>
-<span class="source-line-no">242</span><span id="line.242">        Objects.requireNonNull(lastModifiedAt, OrderCustomerSetMessage.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">243</span><span id="line.243">        Objects.requireNonNull(sequenceNumber, OrderCustomerSetMessage.class + ": sequenceNumber is missing");</span>
-<span class="source-line-no">244</span><span id="line.244">        Objects.requireNonNull(resource, OrderCustomerSetMessage.class + ": resource is missing");</span>
-<span class="source-line-no">245</span><span id="line.245">        Objects.requireNonNull(resourceVersion, OrderCustomerSetMessage.class + ": resourceVersion is missing");</span>
-<span class="source-line-no">246</span><span id="line.246">        return new OrderCustomerSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
-<span class="source-line-no">247</span><span id="line.247">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer, customerGroup,</span>
-<span class="source-line-no">248</span><span id="line.248">            oldCustomer, oldCustomerGroup);</span>
-<span class="source-line-no">249</span><span id="line.249">    }</span>
-<span class="source-line-no">250</span><span id="line.250"></span>
-<span class="source-line-no">251</span><span id="line.251">    /**</span>
-<span class="source-line-no">252</span><span id="line.252">     * builds OrderCustomerSetMessage without checking for non null required values</span>
-<span class="source-line-no">253</span><span id="line.253">     */</span>
-<span class="source-line-no">254</span><span id="line.254">    public OrderCustomerSetMessage buildUnchecked() {</span>
-<span class="source-line-no">255</span><span id="line.255">        return new OrderCustomerSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
-<span class="source-line-no">256</span><span id="line.256">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer, customerGroup,</span>
-<span class="source-line-no">257</span><span id="line.257">            oldCustomer, oldCustomerGroup);</span>
-<span class="source-line-no">258</span><span id="line.258">    }</span>
-<span class="source-line-no">259</span><span id="line.259"></span>
-<span class="source-line-no">260</span><span id="line.260">    public static OrderCustomerSetMessageBuilder of() {</span>
-<span class="source-line-no">261</span><span id="line.261">        return new OrderCustomerSetMessageBuilder();</span>
-<span class="source-line-no">262</span><span id="line.262">    }</span>
-<span class="source-line-no">263</span><span id="line.263"></span>
-<span class="source-line-no">264</span><span id="line.264">    public static OrderCustomerSetMessageBuilder of(final OrderCustomerSetMessage template) {</span>
-<span class="source-line-no">265</span><span id="line.265">        OrderCustomerSetMessageBuilder builder = new OrderCustomerSetMessageBuilder();</span>
-<span class="source-line-no">266</span><span id="line.266">        builder.id = template.getId();</span>
-<span class="source-line-no">267</span><span id="line.267">        builder.version = template.getVersion();</span>
-<span class="source-line-no">268</span><span id="line.268">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">269</span><span id="line.269">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">270</span><span id="line.270">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">271</span><span id="line.271">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">272</span><span id="line.272">        builder.sequenceNumber = template.getSequenceNumber();</span>
-<span class="source-line-no">273</span><span id="line.273">        builder.resource = template.getResource();</span>
-<span class="source-line-no">274</span><span id="line.274">        builder.resourceVersion = template.getResourceVersion();</span>
-<span class="source-line-no">275</span><span id="line.275">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
-<span class="source-line-no">276</span><span id="line.276">        builder.customer = template.getCustomer();</span>
-<span class="source-line-no">277</span><span id="line.277">        builder.customerGroup = template.getCustomerGroup();</span>
-<span class="source-line-no">278</span><span id="line.278">        builder.oldCustomer = template.getOldCustomer();</span>
-<span class="source-line-no">279</span><span id="line.279">        builder.oldCustomerGroup = template.getOldCustomerGroup();</span>
-<span class="source-line-no">280</span><span id="line.280">        return builder;</span>
-<span class="source-line-no">281</span><span id="line.281">    }</span>
-<span class="source-line-no">282</span><span id="line.282"></span>
-<span class="source-line-no">283</span><span id="line.283">}</span>
+<span class="source-line-no">175</span><span id="line.175">    public OrderCustomerSetMessageBuilder oldCustomerGroup(</span>
+<span class="source-line-no">176</span><span id="line.176">            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {</span>
+<span class="source-line-no">177</span><span id="line.177">        this.oldCustomerGroup = oldCustomerGroup;</span>
+<span class="source-line-no">178</span><span id="line.178">        return this;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public String getId() {</span>
+<span class="source-line-no">182</span><span id="line.182">        return this.id;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public Long getVersion() {</span>
+<span class="source-line-no">186</span><span id="line.186">        return this.version;</span>
+<span class="source-line-no">187</span><span id="line.187">    }</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">190</span><span id="line.190">        return this.createdAt;</span>
+<span class="source-line-no">191</span><span id="line.191">    }</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">194</span><span id="line.194">        return this.lastModifiedAt;</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    @Nullable</span>
+<span class="source-line-no">198</span><span id="line.198">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">199</span><span id="line.199">        return this.lastModifiedBy;</span>
+<span class="source-line-no">200</span><span id="line.200">    }</span>
+<span class="source-line-no">201</span><span id="line.201"></span>
+<span class="source-line-no">202</span><span id="line.202">    @Nullable</span>
+<span class="source-line-no">203</span><span id="line.203">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">204</span><span id="line.204">        return this.createdBy;</span>
+<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    public Long getSequenceNumber() {</span>
+<span class="source-line-no">208</span><span id="line.208">        return this.sequenceNumber;</span>
+<span class="source-line-no">209</span><span id="line.209">    }</span>
+<span class="source-line-no">210</span><span id="line.210"></span>
+<span class="source-line-no">211</span><span id="line.211">    public com.commercetools.api.models.common.Reference getResource() {</span>
+<span class="source-line-no">212</span><span id="line.212">        return this.resource;</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    public Long getResourceVersion() {</span>
+<span class="source-line-no">216</span><span id="line.216">        return this.resourceVersion;</span>
+<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">    @Nullable</span>
+<span class="source-line-no">220</span><span id="line.220">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
+<span class="source-line-no">221</span><span id="line.221">        return this.resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">222</span><span id="line.222">    }</span>
+<span class="source-line-no">223</span><span id="line.223"></span>
+<span class="source-line-no">224</span><span id="line.224">    @Nullable</span>
+<span class="source-line-no">225</span><span id="line.225">    public com.commercetools.api.models.customer.CustomerReference getCustomer() {</span>
+<span class="source-line-no">226</span><span id="line.226">        return this.customer;</span>
+<span class="source-line-no">227</span><span id="line.227">    }</span>
+<span class="source-line-no">228</span><span id="line.228"></span>
+<span class="source-line-no">229</span><span id="line.229">    @Nullable</span>
+<span class="source-line-no">230</span><span id="line.230">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
+<span class="source-line-no">231</span><span id="line.231">        return this.customerGroup;</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    @Nullable</span>
+<span class="source-line-no">235</span><span id="line.235">    public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {</span>
+<span class="source-line-no">236</span><span id="line.236">        return this.oldCustomer;</span>
+<span class="source-line-no">237</span><span id="line.237">    }</span>
+<span class="source-line-no">238</span><span id="line.238"></span>
+<span class="source-line-no">239</span><span id="line.239">    @Nullable</span>
+<span class="source-line-no">240</span><span id="line.240">    public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {</span>
+<span class="source-line-no">241</span><span id="line.241">        return this.oldCustomerGroup;</span>
+<span class="source-line-no">242</span><span id="line.242">    }</span>
+<span class="source-line-no">243</span><span id="line.243"></span>
+<span class="source-line-no">244</span><span id="line.244">    public OrderCustomerSetMessage build() {</span>
+<span class="source-line-no">245</span><span id="line.245">        Objects.requireNonNull(id, OrderCustomerSetMessage.class + ": id is missing");</span>
+<span class="source-line-no">246</span><span id="line.246">        Objects.requireNonNull(version, OrderCustomerSetMessage.class + ": version is missing");</span>
+<span class="source-line-no">247</span><span id="line.247">        Objects.requireNonNull(createdAt, OrderCustomerSetMessage.class + ": createdAt is missing");</span>
+<span class="source-line-no">248</span><span id="line.248">        Objects.requireNonNull(lastModifiedAt, OrderCustomerSetMessage.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">249</span><span id="line.249">        Objects.requireNonNull(sequenceNumber, OrderCustomerSetMessage.class + ": sequenceNumber is missing");</span>
+<span class="source-line-no">250</span><span id="line.250">        Objects.requireNonNull(resource, OrderCustomerSetMessage.class + ": resource is missing");</span>
+<span class="source-line-no">251</span><span id="line.251">        Objects.requireNonNull(resourceVersion, OrderCustomerSetMessage.class + ": resourceVersion is missing");</span>
+<span class="source-line-no">252</span><span id="line.252">        return new OrderCustomerSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
+<span class="source-line-no">253</span><span id="line.253">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer, customerGroup,</span>
+<span class="source-line-no">254</span><span id="line.254">            oldCustomer, oldCustomerGroup);</span>
+<span class="source-line-no">255</span><span id="line.255">    }</span>
+<span class="source-line-no">256</span><span id="line.256"></span>
+<span class="source-line-no">257</span><span id="line.257">    /**</span>
+<span class="source-line-no">258</span><span id="line.258">     * builds OrderCustomerSetMessage without checking for non null required values</span>
+<span class="source-line-no">259</span><span id="line.259">     */</span>
+<span class="source-line-no">260</span><span id="line.260">    public OrderCustomerSetMessage buildUnchecked() {</span>
+<span class="source-line-no">261</span><span id="line.261">        return new OrderCustomerSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
+<span class="source-line-no">262</span><span id="line.262">            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customer, customerGroup,</span>
+<span class="source-line-no">263</span><span id="line.263">            oldCustomer, oldCustomerGroup);</span>
+<span class="source-line-no">264</span><span id="line.264">    }</span>
+<span class="source-line-no">265</span><span id="line.265"></span>
+<span class="source-line-no">266</span><span id="line.266">    public static OrderCustomerSetMessageBuilder of() {</span>
+<span class="source-line-no">267</span><span id="line.267">        return new OrderCustomerSetMessageBuilder();</span>
+<span class="source-line-no">268</span><span id="line.268">    }</span>
+<span class="source-line-no">269</span><span id="line.269"></span>
+<span class="source-line-no">270</span><span id="line.270">    public static OrderCustomerSetMessageBuilder of(final OrderCustomerSetMessage template) {</span>
+<span class="source-line-no">271</span><span id="line.271">        OrderCustomerSetMessageBuilder builder = new OrderCustomerSetMessageBuilder();</span>
+<span class="source-line-no">272</span><span id="line.272">        builder.id = template.getId();</span>
+<span class="source-line-no">273</span><span id="line.273">        builder.version = template.getVersion();</span>
+<span class="source-line-no">274</span><span id="line.274">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">275</span><span id="line.275">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">276</span><span id="line.276">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">277</span><span id="line.277">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">278</span><span id="line.278">        builder.sequenceNumber = template.getSequenceNumber();</span>
+<span class="source-line-no">279</span><span id="line.279">        builder.resource = template.getResource();</span>
+<span class="source-line-no">280</span><span id="line.280">        builder.resourceVersion = template.getResourceVersion();</span>
+<span class="source-line-no">281</span><span id="line.281">        builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();</span>
+<span class="source-line-no">282</span><span id="line.282">        builder.customer = template.getCustomer();</span>
+<span class="source-line-no">283</span><span id="line.283">        builder.customerGroup = template.getCustomerGroup();</span>
+<span class="source-line-no">284</span><span id="line.284">        builder.oldCustomer = template.getOldCustomer();</span>
+<span class="source-line-no">285</span><span id="line.285">        builder.oldCustomerGroup = template.getOldCustomerGroup();</span>
+<span class="source-line-no">286</span><span id="line.286">        return builder;</span>
+<span class="source-line-no">287</span><span id="line.287">    }</span>
+<span class="source-line-no">288</span><span id="line.288"></span>
+<span class="source-line-no">289</span><span id="line.289">}</span>
 
 
 

@@ -77,63 +77,71 @@
 <span class="source-line-no">064</span><span id="line.64">        return this;</span>
 <span class="source-line-no">065</span><span id="line.65">    }</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    @Nullable</span>
-<span class="source-line-no">068</span><span id="line.68">    public Long getVariantId() {</span>
-<span class="source-line-no">069</span><span id="line.69">        return this.variantId;</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    @Nullable</span>
-<span class="source-line-no">073</span><span id="line.73">    public String getSku() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return this.sku;</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    @Nullable</span>
-<span class="source-line-no">078</span><span id="line.78">    public Boolean getStaged() {</span>
-<span class="source-line-no">079</span><span id="line.79">        return this.staged;</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    @Nullable</span>
-<span class="source-line-no">083</span><span id="line.83">    public String getAssetId() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.assetId;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    @Nullable</span>
-<span class="source-line-no">088</span><span id="line.88">    public String getAssetKey() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return this.assetKey;</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    @Nullable</span>
-<span class="source-line-no">093</span><span id="line.93">    public java.util.List&lt;String&gt; getTags() {</span>
-<span class="source-line-no">094</span><span id="line.94">        return this.tags;</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public ProductSetAssetTagsAction build() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return new ProductSetAssetTagsActionImpl(variantId, sku, staged, assetId, assetKey, tags);</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    /**</span>
-<span class="source-line-no">102</span><span id="line.102">     * builds ProductSetAssetTagsAction without checking for non null required values</span>
-<span class="source-line-no">103</span><span id="line.103">     */</span>
-<span class="source-line-no">104</span><span id="line.104">    public ProductSetAssetTagsAction buildUnchecked() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return new ProductSetAssetTagsActionImpl(variantId, sku, staged, assetId, assetKey, tags);</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public static ProductSetAssetTagsActionBuilder of() {</span>
-<span class="source-line-no">109</span><span id="line.109">        return new ProductSetAssetTagsActionBuilder();</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public static ProductSetAssetTagsActionBuilder of(final ProductSetAssetTagsAction template) {</span>
-<span class="source-line-no">113</span><span id="line.113">        ProductSetAssetTagsActionBuilder builder = new ProductSetAssetTagsActionBuilder();</span>
-<span class="source-line-no">114</span><span id="line.114">        builder.variantId = template.getVariantId();</span>
-<span class="source-line-no">115</span><span id="line.115">        builder.sku = template.getSku();</span>
-<span class="source-line-no">116</span><span id="line.116">        builder.staged = template.getStaged();</span>
-<span class="source-line-no">117</span><span id="line.117">        builder.assetId = template.getAssetId();</span>
-<span class="source-line-no">118</span><span id="line.118">        builder.assetKey = template.getAssetKey();</span>
-<span class="source-line-no">119</span><span id="line.119">        builder.tags = template.getTags();</span>
-<span class="source-line-no">120</span><span id="line.120">        return builder;</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">}</span>
+<span class="source-line-no">067</span><span id="line.67">    public ProductSetAssetTagsActionBuilder plusTags(@Nullable final String... tags) {</span>
+<span class="source-line-no">068</span><span id="line.68">        if (this.tags == null) {</span>
+<span class="source-line-no">069</span><span id="line.69">            this.tags = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">070</span><span id="line.70">        }</span>
+<span class="source-line-no">071</span><span id="line.71">        this.tags.addAll(Arrays.asList(tags));</span>
+<span class="source-line-no">072</span><span id="line.72">        return this;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    @Nullable</span>
+<span class="source-line-no">076</span><span id="line.76">    public Long getVariantId() {</span>
+<span class="source-line-no">077</span><span id="line.77">        return this.variantId;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    @Nullable</span>
+<span class="source-line-no">081</span><span id="line.81">    public String getSku() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return this.sku;</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    @Nullable</span>
+<span class="source-line-no">086</span><span id="line.86">    public Boolean getStaged() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return this.staged;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    @Nullable</span>
+<span class="source-line-no">091</span><span id="line.91">    public String getAssetId() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return this.assetId;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    @Nullable</span>
+<span class="source-line-no">096</span><span id="line.96">    public String getAssetKey() {</span>
+<span class="source-line-no">097</span><span id="line.97">        return this.assetKey;</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    @Nullable</span>
+<span class="source-line-no">101</span><span id="line.101">    public java.util.List&lt;String&gt; getTags() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return this.tags;</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public ProductSetAssetTagsAction build() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return new ProductSetAssetTagsActionImpl(variantId, sku, staged, assetId, assetKey, tags);</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    /**</span>
+<span class="source-line-no">110</span><span id="line.110">     * builds ProductSetAssetTagsAction without checking for non null required values</span>
+<span class="source-line-no">111</span><span id="line.111">     */</span>
+<span class="source-line-no">112</span><span id="line.112">    public ProductSetAssetTagsAction buildUnchecked() {</span>
+<span class="source-line-no">113</span><span id="line.113">        return new ProductSetAssetTagsActionImpl(variantId, sku, staged, assetId, assetKey, tags);</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    public static ProductSetAssetTagsActionBuilder of() {</span>
+<span class="source-line-no">117</span><span id="line.117">        return new ProductSetAssetTagsActionBuilder();</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    public static ProductSetAssetTagsActionBuilder of(final ProductSetAssetTagsAction template) {</span>
+<span class="source-line-no">121</span><span id="line.121">        ProductSetAssetTagsActionBuilder builder = new ProductSetAssetTagsActionBuilder();</span>
+<span class="source-line-no">122</span><span id="line.122">        builder.variantId = template.getVariantId();</span>
+<span class="source-line-no">123</span><span id="line.123">        builder.sku = template.getSku();</span>
+<span class="source-line-no">124</span><span id="line.124">        builder.staged = template.getStaged();</span>
+<span class="source-line-no">125</span><span id="line.125">        builder.assetId = template.getAssetId();</span>
+<span class="source-line-no">126</span><span id="line.126">        builder.assetKey = template.getAssetKey();</span>
+<span class="source-line-no">127</span><span id="line.127">        builder.tags = template.getTags();</span>
+<span class="source-line-no">128</span><span id="line.128">        return builder;</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">}</span>
 
 
 

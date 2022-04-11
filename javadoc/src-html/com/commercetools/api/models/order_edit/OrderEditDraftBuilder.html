@@ -70,84 +70,111 @@
 <span class="source-line-no">057</span><span id="line.57">        return this;</span>
 <span class="source-line-no">058</span><span id="line.58">    }</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    public OrderEditDraftBuilder custom(</span>
-<span class="source-line-no">061</span><span id="line.61">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">062</span><span id="line.62">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
-<span class="source-line-no">063</span><span id="line.63">        return this;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public OrderEditDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.custom = custom;</span>
-<span class="source-line-no">068</span><span id="line.68">        return this;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public OrderEditDraftBuilder comment(@Nullable final String comment) {</span>
-<span class="source-line-no">072</span><span id="line.72">        this.comment = comment;</span>
-<span class="source-line-no">073</span><span id="line.73">        return this;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public OrderEditDraftBuilder dryRun(@Nullable final Boolean dryRun) {</span>
-<span class="source-line-no">077</span><span id="line.77">        this.dryRun = dryRun;</span>
-<span class="source-line-no">078</span><span id="line.78">        return this;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    @Nullable</span>
-<span class="source-line-no">082</span><span id="line.82">    public String getKey() {</span>
-<span class="source-line-no">083</span><span id="line.83">        return this.key;</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public com.commercetools.api.models.order.OrderReference getResource() {</span>
-<span class="source-line-no">087</span><span id="line.87">        return this.resource;</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    @Nullable</span>
-<span class="source-line-no">091</span><span id="line.91">    public java.util.List&lt;com.commercetools.api.models.order.StagedOrderUpdateAction&gt; getStagedActions() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return this.stagedActions;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    @Nullable</span>
-<span class="source-line-no">096</span><span id="line.96">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return this.custom;</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    @Nullable</span>
-<span class="source-line-no">101</span><span id="line.101">    public String getComment() {</span>
-<span class="source-line-no">102</span><span id="line.102">        return this.comment;</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    @Nullable</span>
-<span class="source-line-no">106</span><span id="line.106">    public Boolean getDryRun() {</span>
-<span class="source-line-no">107</span><span id="line.107">        return this.dryRun;</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public OrderEditDraft build() {</span>
-<span class="source-line-no">111</span><span id="line.111">        Objects.requireNonNull(resource, OrderEditDraft.class + ": resource is missing");</span>
-<span class="source-line-no">112</span><span id="line.112">        return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">     * builds OrderEditDraft without checking for non null required values</span>
-<span class="source-line-no">117</span><span id="line.117">     */</span>
-<span class="source-line-no">118</span><span id="line.118">    public OrderEditDraft buildUnchecked() {</span>
-<span class="source-line-no">119</span><span id="line.119">        return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);</span>
+<span class="source-line-no">060</span><span id="line.60">    public OrderEditDraftBuilder plusStagedActions(</span>
+<span class="source-line-no">061</span><span id="line.61">            @Nullable final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {</span>
+<span class="source-line-no">062</span><span id="line.62">        if (this.stagedActions == null) {</span>
+<span class="source-line-no">063</span><span id="line.63">            this.stagedActions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">064</span><span id="line.64">        }</span>
+<span class="source-line-no">065</span><span id="line.65">        this.stagedActions.addAll(Arrays.asList(stagedActions));</span>
+<span class="source-line-no">066</span><span id="line.66">        return this;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public OrderEditDraftBuilder plusStagedActions(</span>
+<span class="source-line-no">070</span><span id="line.70">            Function&lt;com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder&lt;? extends com.commercetools.api.models.order.StagedOrderUpdateAction&gt;&gt; builder) {</span>
+<span class="source-line-no">071</span><span id="line.71">        if (this.stagedActions == null) {</span>
+<span class="source-line-no">072</span><span id="line.72">            this.stagedActions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">073</span><span id="line.73">        }</span>
+<span class="source-line-no">074</span><span id="line.74">        this.stagedActions</span>
+<span class="source-line-no">075</span><span id="line.75">                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());</span>
+<span class="source-line-no">076</span><span id="line.76">        return this;</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public OrderEditDraftBuilder withStagedActions(</span>
+<span class="source-line-no">080</span><span id="line.80">            Function&lt;com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder&lt;? extends com.commercetools.api.models.order.StagedOrderUpdateAction&gt;&gt; builder) {</span>
+<span class="source-line-no">081</span><span id="line.81">        this.stagedActions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">082</span><span id="line.82">        this.stagedActions</span>
+<span class="source-line-no">083</span><span id="line.83">                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());</span>
+<span class="source-line-no">084</span><span id="line.84">        return this;</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public OrderEditDraftBuilder custom(</span>
+<span class="source-line-no">088</span><span id="line.88">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">089</span><span id="line.89">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
+<span class="source-line-no">090</span><span id="line.90">        return this;</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public OrderEditDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">094</span><span id="line.94">        this.custom = custom;</span>
+<span class="source-line-no">095</span><span id="line.95">        return this;</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public OrderEditDraftBuilder comment(@Nullable final String comment) {</span>
+<span class="source-line-no">099</span><span id="line.99">        this.comment = comment;</span>
+<span class="source-line-no">100</span><span id="line.100">        return this;</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public OrderEditDraftBuilder dryRun(@Nullable final Boolean dryRun) {</span>
+<span class="source-line-no">104</span><span id="line.104">        this.dryRun = dryRun;</span>
+<span class="source-line-no">105</span><span id="line.105">        return this;</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    @Nullable</span>
+<span class="source-line-no">109</span><span id="line.109">    public String getKey() {</span>
+<span class="source-line-no">110</span><span id="line.110">        return this.key;</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public com.commercetools.api.models.order.OrderReference getResource() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return this.resource;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    @Nullable</span>
+<span class="source-line-no">118</span><span id="line.118">    public java.util.List&lt;com.commercetools.api.models.order.StagedOrderUpdateAction&gt; getStagedActions() {</span>
+<span class="source-line-no">119</span><span id="line.119">        return this.stagedActions;</span>
 <span class="source-line-no">120</span><span id="line.120">    }</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public static OrderEditDraftBuilder of() {</span>
-<span class="source-line-no">123</span><span id="line.123">        return new OrderEditDraftBuilder();</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public static OrderEditDraftBuilder of(final OrderEditDraft template) {</span>
-<span class="source-line-no">127</span><span id="line.127">        OrderEditDraftBuilder builder = new OrderEditDraftBuilder();</span>
-<span class="source-line-no">128</span><span id="line.128">        builder.key = template.getKey();</span>
-<span class="source-line-no">129</span><span id="line.129">        builder.resource = template.getResource();</span>
-<span class="source-line-no">130</span><span id="line.130">        builder.stagedActions = template.getStagedActions();</span>
-<span class="source-line-no">131</span><span id="line.131">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">132</span><span id="line.132">        builder.comment = template.getComment();</span>
-<span class="source-line-no">133</span><span id="line.133">        builder.dryRun = template.getDryRun();</span>
-<span class="source-line-no">134</span><span id="line.134">        return builder;</span>
+<span class="source-line-no">122</span><span id="line.122">    @Nullable</span>
+<span class="source-line-no">123</span><span id="line.123">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return this.custom;</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    @Nullable</span>
+<span class="source-line-no">128</span><span id="line.128">    public String getComment() {</span>
+<span class="source-line-no">129</span><span id="line.129">        return this.comment;</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    @Nullable</span>
+<span class="source-line-no">133</span><span id="line.133">    public Boolean getDryRun() {</span>
+<span class="source-line-no">134</span><span id="line.134">        return this.dryRun;</span>
 <span class="source-line-no">135</span><span id="line.135">    }</span>
 <span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">}</span>
+<span class="source-line-no">137</span><span id="line.137">    public OrderEditDraft build() {</span>
+<span class="source-line-no">138</span><span id="line.138">        Objects.requireNonNull(resource, OrderEditDraft.class + ": resource is missing");</span>
+<span class="source-line-no">139</span><span id="line.139">        return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    /**</span>
+<span class="source-line-no">143</span><span id="line.143">     * builds OrderEditDraft without checking for non null required values</span>
+<span class="source-line-no">144</span><span id="line.144">     */</span>
+<span class="source-line-no">145</span><span id="line.145">    public OrderEditDraft buildUnchecked() {</span>
+<span class="source-line-no">146</span><span id="line.146">        return new OrderEditDraftImpl(key, resource, stagedActions, custom, comment, dryRun);</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    public static OrderEditDraftBuilder of() {</span>
+<span class="source-line-no">150</span><span id="line.150">        return new OrderEditDraftBuilder();</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public static OrderEditDraftBuilder of(final OrderEditDraft template) {</span>
+<span class="source-line-no">154</span><span id="line.154">        OrderEditDraftBuilder builder = new OrderEditDraftBuilder();</span>
+<span class="source-line-no">155</span><span id="line.155">        builder.key = template.getKey();</span>
+<span class="source-line-no">156</span><span id="line.156">        builder.resource = template.getResource();</span>
+<span class="source-line-no">157</span><span id="line.157">        builder.stagedActions = template.getStagedActions();</span>
+<span class="source-line-no">158</span><span id="line.158">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">159</span><span id="line.159">        builder.comment = template.getComment();</span>
+<span class="source-line-no">160</span><span id="line.160">        builder.dryRun = template.getDryRun();</span>
+<span class="source-line-no">161</span><span id="line.161">        return builder;</span>
+<span class="source-line-no">162</span><span id="line.162">    }</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">}</span>
 
 
 

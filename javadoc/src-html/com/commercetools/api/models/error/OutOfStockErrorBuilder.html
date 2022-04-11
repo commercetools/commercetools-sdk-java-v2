@@ -58,61 +58,77 @@
 <span class="source-line-no">045</span><span id="line.45">        return this;</span>
 <span class="source-line-no">046</span><span id="line.46">    }</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public OutOfStockErrorBuilder skus(final String... skus) {</span>
-<span class="source-line-no">049</span><span id="line.49">        this.skus = new ArrayList&lt;&gt;(Arrays.asList(skus));</span>
-<span class="source-line-no">050</span><span id="line.50">        return this;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public OutOfStockErrorBuilder skus(final java.util.List&lt;String&gt; skus) {</span>
-<span class="source-line-no">054</span><span id="line.54">        this.skus = skus;</span>
-<span class="source-line-no">055</span><span id="line.55">        return this;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public String getMessage() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return this.message;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public Map&lt;String, java.lang.Object&gt; getValues() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return this.values;</span>
+<span class="source-line-no">048</span><span id="line.48">    public OutOfStockErrorBuilder plusLineItems(final String... lineItems) {</span>
+<span class="source-line-no">049</span><span id="line.49">        if (this.lineItems == null) {</span>
+<span class="source-line-no">050</span><span id="line.50">            this.lineItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">051</span><span id="line.51">        }</span>
+<span class="source-line-no">052</span><span id="line.52">        this.lineItems.addAll(Arrays.asList(lineItems));</span>
+<span class="source-line-no">053</span><span id="line.53">        return this;</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public OutOfStockErrorBuilder skus(final String... skus) {</span>
+<span class="source-line-no">057</span><span id="line.57">        this.skus = new ArrayList&lt;&gt;(Arrays.asList(skus));</span>
+<span class="source-line-no">058</span><span id="line.58">        return this;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public OutOfStockErrorBuilder skus(final java.util.List&lt;String&gt; skus) {</span>
+<span class="source-line-no">062</span><span id="line.62">        this.skus = skus;</span>
+<span class="source-line-no">063</span><span id="line.63">        return this;</span>
 <span class="source-line-no">064</span><span id="line.64">    }</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public java.util.List&lt;String&gt; getLineItems() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return this.lineItems;</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public java.util.List&lt;String&gt; getSkus() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return this.skus;</span>
+<span class="source-line-no">066</span><span id="line.66">    public OutOfStockErrorBuilder plusSkus(final String... skus) {</span>
+<span class="source-line-no">067</span><span id="line.67">        if (this.skus == null) {</span>
+<span class="source-line-no">068</span><span id="line.68">            this.skus = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">069</span><span id="line.69">        }</span>
+<span class="source-line-no">070</span><span id="line.70">        this.skus.addAll(Arrays.asList(skus));</span>
+<span class="source-line-no">071</span><span id="line.71">        return this;</span>
 <span class="source-line-no">072</span><span id="line.72">    }</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public OutOfStockError build() {</span>
-<span class="source-line-no">075</span><span id="line.75">        Objects.requireNonNull(message, OutOfStockError.class + ": message is missing");</span>
-<span class="source-line-no">076</span><span id="line.76">        Objects.requireNonNull(values, OutOfStockError.class + ": values are missing");</span>
-<span class="source-line-no">077</span><span id="line.77">        Objects.requireNonNull(lineItems, OutOfStockError.class + ": lineItems is missing");</span>
-<span class="source-line-no">078</span><span id="line.78">        Objects.requireNonNull(skus, OutOfStockError.class + ": skus is missing");</span>
-<span class="source-line-no">079</span><span id="line.79">        return new OutOfStockErrorImpl(message, values, lineItems, skus);</span>
+<span class="source-line-no">074</span><span id="line.74">    public String getMessage() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return this.message;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public Map&lt;String, java.lang.Object&gt; getValues() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return this.values;</span>
 <span class="source-line-no">080</span><span id="line.80">    }</span>
 <span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    /**</span>
-<span class="source-line-no">083</span><span id="line.83">     * builds OutOfStockError without checking for non null required values</span>
-<span class="source-line-no">084</span><span id="line.84">     */</span>
-<span class="source-line-no">085</span><span id="line.85">    public OutOfStockError buildUnchecked() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return new OutOfStockErrorImpl(message, values, lineItems, skus);</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public static OutOfStockErrorBuilder of() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return new OutOfStockErrorBuilder();</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public static OutOfStockErrorBuilder of(final OutOfStockError template) {</span>
-<span class="source-line-no">094</span><span id="line.94">        OutOfStockErrorBuilder builder = new OutOfStockErrorBuilder();</span>
-<span class="source-line-no">095</span><span id="line.95">        builder.message = template.getMessage();</span>
-<span class="source-line-no">096</span><span id="line.96">        builder.values = template.values();</span>
-<span class="source-line-no">097</span><span id="line.97">        builder.lineItems = template.getLineItems();</span>
-<span class="source-line-no">098</span><span id="line.98">        builder.skus = template.getSkus();</span>
-<span class="source-line-no">099</span><span id="line.99">        return builder;</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">}</span>
+<span class="source-line-no">082</span><span id="line.82">    public java.util.List&lt;String&gt; getLineItems() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.lineItems;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public java.util.List&lt;String&gt; getSkus() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return this.skus;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public OutOfStockError build() {</span>
+<span class="source-line-no">091</span><span id="line.91">        Objects.requireNonNull(message, OutOfStockError.class + ": message is missing");</span>
+<span class="source-line-no">092</span><span id="line.92">        Objects.requireNonNull(values, OutOfStockError.class + ": values are missing");</span>
+<span class="source-line-no">093</span><span id="line.93">        Objects.requireNonNull(lineItems, OutOfStockError.class + ": lineItems is missing");</span>
+<span class="source-line-no">094</span><span id="line.94">        Objects.requireNonNull(skus, OutOfStockError.class + ": skus is missing");</span>
+<span class="source-line-no">095</span><span id="line.95">        return new OutOfStockErrorImpl(message, values, lineItems, skus);</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    /**</span>
+<span class="source-line-no">099</span><span id="line.99">     * builds OutOfStockError without checking for non null required values</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
+<span class="source-line-no">101</span><span id="line.101">    public OutOfStockError buildUnchecked() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return new OutOfStockErrorImpl(message, values, lineItems, skus);</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public static OutOfStockErrorBuilder of() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return new OutOfStockErrorBuilder();</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public static OutOfStockErrorBuilder of(final OutOfStockError template) {</span>
+<span class="source-line-no">110</span><span id="line.110">        OutOfStockErrorBuilder builder = new OutOfStockErrorBuilder();</span>
+<span class="source-line-no">111</span><span id="line.111">        builder.message = template.getMessage();</span>
+<span class="source-line-no">112</span><span id="line.112">        builder.values = template.values();</span>
+<span class="source-line-no">113</span><span id="line.113">        builder.lineItems = template.getLineItems();</span>
+<span class="source-line-no">114</span><span id="line.114">        builder.skus = template.getSkus();</span>
+<span class="source-line-no">115</span><span id="line.115">        return builder;</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">}</span>
 
 
 

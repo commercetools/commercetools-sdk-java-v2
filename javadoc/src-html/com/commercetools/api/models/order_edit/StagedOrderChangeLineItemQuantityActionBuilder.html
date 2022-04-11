@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">    private String lineItemId;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    private Double quantity;</span>
+<span class="source-line-no">018</span><span id="line.18">    private Long quantity;</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    @Nullable</span>
 <span class="source-line-no">021</span><span id="line.21">    private com.commercetools.api.models.common.Money externalPrice;</span>
@@ -41,7 +41,7 @@
 <span class="source-line-no">028</span><span id="line.28">        return this;</span>
 <span class="source-line-no">029</span><span id="line.29">    }</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    public StagedOrderChangeLineItemQuantityActionBuilder quantity(final Double quantity) {</span>
+<span class="source-line-no">031</span><span id="line.31">    public StagedOrderChangeLineItemQuantityActionBuilder quantity(final Long quantity) {</span>
 <span class="source-line-no">032</span><span id="line.32">        this.quantity = quantity;</span>
 <span class="source-line-no">033</span><span id="line.33">        return this;</span>
 <span class="source-line-no">034</span><span id="line.34">    }</span>
@@ -76,7 +76,7 @@
 <span class="source-line-no">063</span><span id="line.63">        return this.lineItemId;</span>
 <span class="source-line-no">064</span><span id="line.64">    }</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public Double getQuantity() {</span>
+<span class="source-line-no">066</span><span id="line.66">    public Long getQuantity() {</span>
 <span class="source-line-no">067</span><span id="line.67">        return this.quantity;</span>
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>

@@ -44,33 +44,43 @@
 <span class="source-line-no">031</span><span id="line.31">    @JsonProperty("totalGross")</span>
 <span class="source-line-no">032</span><span id="line.32">    public TypedMoney getTotalGross();</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    public void setTotalNet(final TypedMoney totalNet);</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public void setTotalGross(final TypedMoney totalGross);</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    public static TaxedItemPrice of() {</span>
-<span class="source-line-no">039</span><span id="line.39">        return new TaxedItemPriceImpl();</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public static TaxedItemPrice of(final TaxedItemPrice template) {</span>
-<span class="source-line-no">043</span><span id="line.43">        TaxedItemPriceImpl instance = new TaxedItemPriceImpl();</span>
-<span class="source-line-no">044</span><span id="line.44">        instance.setTotalNet(template.getTotalNet());</span>
-<span class="source-line-no">045</span><span id="line.45">        instance.setTotalGross(template.getTotalGross());</span>
-<span class="source-line-no">046</span><span id="line.46">        return instance;</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public static TaxedItemPriceBuilder builder() {</span>
-<span class="source-line-no">050</span><span id="line.50">        return TaxedItemPriceBuilder.of();</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public static TaxedItemPriceBuilder builder(final TaxedItemPrice template) {</span>
-<span class="source-line-no">054</span><span id="line.54">        return TaxedItemPriceBuilder.of(template);</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    default &lt;T&gt; T withTaxedItemPrice(Function&lt;TaxedItemPrice, T&gt; helper) {</span>
-<span class="source-line-no">058</span><span id="line.58">        return helper.apply(this);</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60">}</span>
+<span class="source-line-no">034</span><span id="line.34">    /**</span>
+<span class="source-line-no">035</span><span id="line.35">    *  &lt;p&gt;Platform-calculated value as subtraction of &lt;code&gt;totalGross&lt;/code&gt; - &lt;code&gt;totalNet&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">036</span><span id="line.36">    */</span>
+<span class="source-line-no">037</span><span id="line.37">    @Valid</span>
+<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("totalTax")</span>
+<span class="source-line-no">039</span><span id="line.39">    public TypedMoney getTotalTax();</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    public void setTotalNet(final TypedMoney totalNet);</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public void setTotalGross(final TypedMoney totalGross);</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    public void setTotalTax(final TypedMoney totalTax);</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public static TaxedItemPrice of() {</span>
+<span class="source-line-no">048</span><span id="line.48">        return new TaxedItemPriceImpl();</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public static TaxedItemPrice of(final TaxedItemPrice template) {</span>
+<span class="source-line-no">052</span><span id="line.52">        TaxedItemPriceImpl instance = new TaxedItemPriceImpl();</span>
+<span class="source-line-no">053</span><span id="line.53">        instance.setTotalNet(template.getTotalNet());</span>
+<span class="source-line-no">054</span><span id="line.54">        instance.setTotalGross(template.getTotalGross());</span>
+<span class="source-line-no">055</span><span id="line.55">        instance.setTotalTax(template.getTotalTax());</span>
+<span class="source-line-no">056</span><span id="line.56">        return instance;</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public static TaxedItemPriceBuilder builder() {</span>
+<span class="source-line-no">060</span><span id="line.60">        return TaxedItemPriceBuilder.of();</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public static TaxedItemPriceBuilder builder(final TaxedItemPrice template) {</span>
+<span class="source-line-no">064</span><span id="line.64">        return TaxedItemPriceBuilder.of(template);</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    default &lt;T&gt; T withTaxedItemPrice(Function&lt;TaxedItemPrice, T&gt; helper) {</span>
+<span class="source-line-no">068</span><span id="line.68">        return helper.apply(this);</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70">}</span>
 
 
 

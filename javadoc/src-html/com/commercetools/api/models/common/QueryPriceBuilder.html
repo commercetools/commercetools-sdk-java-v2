@@ -137,111 +137,119 @@
 <span class="source-line-no">124</span><span id="line.124">        return this;</span>
 <span class="source-line-no">125</span><span id="line.125">    }</span>
 <span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    public QueryPriceBuilder withTiers(</span>
-<span class="source-line-no">128</span><span id="line.128">            Function&lt;com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">129</span><span id="line.129">        this.tiers = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">130</span><span id="line.130">        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());</span>
-<span class="source-line-no">131</span><span id="line.131">        return this;</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    public QueryPriceBuilder plusTiers(</span>
-<span class="source-line-no">135</span><span id="line.135">            Function&lt;com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">136</span><span id="line.136">        if (this.tiers == null) {</span>
-<span class="source-line-no">137</span><span id="line.137">            this.tiers = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">138</span><span id="line.138">        }</span>
-<span class="source-line-no">139</span><span id="line.139">        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());</span>
-<span class="source-line-no">140</span><span id="line.140">        return this;</span>
-<span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    public QueryPriceBuilder tiers(</span>
-<span class="source-line-no">144</span><span id="line.144">            @Nullable final java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; tiers) {</span>
-<span class="source-line-no">145</span><span id="line.145">        this.tiers = tiers;</span>
-<span class="source-line-no">146</span><span id="line.146">        return this;</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    public String getId() {</span>
-<span class="source-line-no">150</span><span id="line.150">        return this.id;</span>
-<span class="source-line-no">151</span><span id="line.151">    }</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    public com.commercetools.api.models.common.Money getValue() {</span>
-<span class="source-line-no">154</span><span id="line.154">        return this.value;</span>
+<span class="source-line-no">127</span><span id="line.127">    public QueryPriceBuilder tiers(</span>
+<span class="source-line-no">128</span><span id="line.128">            @Nullable final java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; tiers) {</span>
+<span class="source-line-no">129</span><span id="line.129">        this.tiers = tiers;</span>
+<span class="source-line-no">130</span><span id="line.130">        return this;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    public QueryPriceBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {</span>
+<span class="source-line-no">134</span><span id="line.134">        if (this.tiers == null) {</span>
+<span class="source-line-no">135</span><span id="line.135">            this.tiers = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">136</span><span id="line.136">        }</span>
+<span class="source-line-no">137</span><span id="line.137">        this.tiers.addAll(Arrays.asList(tiers));</span>
+<span class="source-line-no">138</span><span id="line.138">        return this;</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    public QueryPriceBuilder plusTiers(</span>
+<span class="source-line-no">142</span><span id="line.142">            Function&lt;com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">143</span><span id="line.143">        if (this.tiers == null) {</span>
+<span class="source-line-no">144</span><span id="line.144">            this.tiers = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">145</span><span id="line.145">        }</span>
+<span class="source-line-no">146</span><span id="line.146">        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());</span>
+<span class="source-line-no">147</span><span id="line.147">        return this;</span>
+<span class="source-line-no">148</span><span id="line.148">    }</span>
+<span class="source-line-no">149</span><span id="line.149"></span>
+<span class="source-line-no">150</span><span id="line.150">    public QueryPriceBuilder withTiers(</span>
+<span class="source-line-no">151</span><span id="line.151">            Function&lt;com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">152</span><span id="line.152">        this.tiers = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">153</span><span id="line.153">        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());</span>
+<span class="source-line-no">154</span><span id="line.154">        return this;</span>
 <span class="source-line-no">155</span><span id="line.155">    }</span>
 <span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    @Nullable</span>
-<span class="source-line-no">158</span><span id="line.158">    public String getCountry() {</span>
-<span class="source-line-no">159</span><span id="line.159">        return this.country;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    @Nullable</span>
-<span class="source-line-no">163</span><span id="line.163">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
-<span class="source-line-no">164</span><span id="line.164">        return this.customerGroup;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    @Nullable</span>
-<span class="source-line-no">168</span><span id="line.168">    public com.commercetools.api.models.channel.ChannelReference getChannel() {</span>
-<span class="source-line-no">169</span><span id="line.169">        return this.channel;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    @Nullable</span>
-<span class="source-line-no">173</span><span id="line.173">    public java.time.ZonedDateTime getValidFrom() {</span>
-<span class="source-line-no">174</span><span id="line.174">        return this.validFrom;</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    @Nullable</span>
-<span class="source-line-no">178</span><span id="line.178">    public java.time.ZonedDateTime getValidUntil() {</span>
-<span class="source-line-no">179</span><span id="line.179">        return this.validUntil;</span>
-<span class="source-line-no">180</span><span id="line.180">    }</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    @Nullable</span>
-<span class="source-line-no">183</span><span id="line.183">    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {</span>
-<span class="source-line-no">184</span><span id="line.184">        return this.discounted;</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    @Nullable</span>
-<span class="source-line-no">188</span><span id="line.188">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
-<span class="source-line-no">189</span><span id="line.189">        return this.custom;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    @Nullable</span>
-<span class="source-line-no">193</span><span id="line.193">    public java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; getTiers() {</span>
-<span class="source-line-no">194</span><span id="line.194">        return this.tiers;</span>
-<span class="source-line-no">195</span><span id="line.195">    }</span>
-<span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">    public QueryPrice build() {</span>
-<span class="source-line-no">198</span><span id="line.198">        Objects.requireNonNull(id, QueryPrice.class + ": id is missing");</span>
-<span class="source-line-no">199</span><span id="line.199">        Objects.requireNonNull(value, QueryPrice.class + ": value is missing");</span>
-<span class="source-line-no">200</span><span id="line.200">        return new QueryPriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,</span>
-<span class="source-line-no">201</span><span id="line.201">            tiers);</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    /**</span>
-<span class="source-line-no">205</span><span id="line.205">     * builds QueryPrice without checking for non null required values</span>
-<span class="source-line-no">206</span><span id="line.206">     */</span>
-<span class="source-line-no">207</span><span id="line.207">    public QueryPrice buildUnchecked() {</span>
+<span class="source-line-no">157</span><span id="line.157">    public String getId() {</span>
+<span class="source-line-no">158</span><span id="line.158">        return this.id;</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public com.commercetools.api.models.common.Money getValue() {</span>
+<span class="source-line-no">162</span><span id="line.162">        return this.value;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    @Nullable</span>
+<span class="source-line-no">166</span><span id="line.166">    public String getCountry() {</span>
+<span class="source-line-no">167</span><span id="line.167">        return this.country;</span>
+<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    @Nullable</span>
+<span class="source-line-no">171</span><span id="line.171">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
+<span class="source-line-no">172</span><span id="line.172">        return this.customerGroup;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    @Nullable</span>
+<span class="source-line-no">176</span><span id="line.176">    public com.commercetools.api.models.channel.ChannelReference getChannel() {</span>
+<span class="source-line-no">177</span><span id="line.177">        return this.channel;</span>
+<span class="source-line-no">178</span><span id="line.178">    }</span>
+<span class="source-line-no">179</span><span id="line.179"></span>
+<span class="source-line-no">180</span><span id="line.180">    @Nullable</span>
+<span class="source-line-no">181</span><span id="line.181">    public java.time.ZonedDateTime getValidFrom() {</span>
+<span class="source-line-no">182</span><span id="line.182">        return this.validFrom;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    @Nullable</span>
+<span class="source-line-no">186</span><span id="line.186">    public java.time.ZonedDateTime getValidUntil() {</span>
+<span class="source-line-no">187</span><span id="line.187">        return this.validUntil;</span>
+<span class="source-line-no">188</span><span id="line.188">    }</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    @Nullable</span>
+<span class="source-line-no">191</span><span id="line.191">    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {</span>
+<span class="source-line-no">192</span><span id="line.192">        return this.discounted;</span>
+<span class="source-line-no">193</span><span id="line.193">    }</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    @Nullable</span>
+<span class="source-line-no">196</span><span id="line.196">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
+<span class="source-line-no">197</span><span id="line.197">        return this.custom;</span>
+<span class="source-line-no">198</span><span id="line.198">    }</span>
+<span class="source-line-no">199</span><span id="line.199"></span>
+<span class="source-line-no">200</span><span id="line.200">    @Nullable</span>
+<span class="source-line-no">201</span><span id="line.201">    public java.util.List&lt;com.commercetools.api.models.common.PriceTierDraft&gt; getTiers() {</span>
+<span class="source-line-no">202</span><span id="line.202">        return this.tiers;</span>
+<span class="source-line-no">203</span><span id="line.203">    }</span>
+<span class="source-line-no">204</span><span id="line.204"></span>
+<span class="source-line-no">205</span><span id="line.205">    public QueryPrice build() {</span>
+<span class="source-line-no">206</span><span id="line.206">        Objects.requireNonNull(id, QueryPrice.class + ": id is missing");</span>
+<span class="source-line-no">207</span><span id="line.207">        Objects.requireNonNull(value, QueryPrice.class + ": value is missing");</span>
 <span class="source-line-no">208</span><span id="line.208">        return new QueryPriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,</span>
 <span class="source-line-no">209</span><span id="line.209">            tiers);</span>
 <span class="source-line-no">210</span><span id="line.210">    }</span>
 <span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    public static QueryPriceBuilder of() {</span>
-<span class="source-line-no">213</span><span id="line.213">        return new QueryPriceBuilder();</span>
-<span class="source-line-no">214</span><span id="line.214">    }</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">    public static QueryPriceBuilder of(final QueryPrice template) {</span>
-<span class="source-line-no">217</span><span id="line.217">        QueryPriceBuilder builder = new QueryPriceBuilder();</span>
-<span class="source-line-no">218</span><span id="line.218">        builder.id = template.getId();</span>
-<span class="source-line-no">219</span><span id="line.219">        builder.value = template.getValue();</span>
-<span class="source-line-no">220</span><span id="line.220">        builder.country = template.getCountry();</span>
-<span class="source-line-no">221</span><span id="line.221">        builder.customerGroup = template.getCustomerGroup();</span>
-<span class="source-line-no">222</span><span id="line.222">        builder.channel = template.getChannel();</span>
-<span class="source-line-no">223</span><span id="line.223">        builder.validFrom = template.getValidFrom();</span>
-<span class="source-line-no">224</span><span id="line.224">        builder.validUntil = template.getValidUntil();</span>
-<span class="source-line-no">225</span><span id="line.225">        builder.discounted = template.getDiscounted();</span>
-<span class="source-line-no">226</span><span id="line.226">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">227</span><span id="line.227">        builder.tiers = template.getTiers();</span>
-<span class="source-line-no">228</span><span id="line.228">        return builder;</span>
-<span class="source-line-no">229</span><span id="line.229">    }</span>
-<span class="source-line-no">230</span><span id="line.230"></span>
-<span class="source-line-no">231</span><span id="line.231">}</span>
+<span class="source-line-no">212</span><span id="line.212">    /**</span>
+<span class="source-line-no">213</span><span id="line.213">     * builds QueryPrice without checking for non null required values</span>
+<span class="source-line-no">214</span><span id="line.214">     */</span>
+<span class="source-line-no">215</span><span id="line.215">    public QueryPrice buildUnchecked() {</span>
+<span class="source-line-no">216</span><span id="line.216">        return new QueryPriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,</span>
+<span class="source-line-no">217</span><span id="line.217">            tiers);</span>
+<span class="source-line-no">218</span><span id="line.218">    }</span>
+<span class="source-line-no">219</span><span id="line.219"></span>
+<span class="source-line-no">220</span><span id="line.220">    public static QueryPriceBuilder of() {</span>
+<span class="source-line-no">221</span><span id="line.221">        return new QueryPriceBuilder();</span>
+<span class="source-line-no">222</span><span id="line.222">    }</span>
+<span class="source-line-no">223</span><span id="line.223"></span>
+<span class="source-line-no">224</span><span id="line.224">    public static QueryPriceBuilder of(final QueryPrice template) {</span>
+<span class="source-line-no">225</span><span id="line.225">        QueryPriceBuilder builder = new QueryPriceBuilder();</span>
+<span class="source-line-no">226</span><span id="line.226">        builder.id = template.getId();</span>
+<span class="source-line-no">227</span><span id="line.227">        builder.value = template.getValue();</span>
+<span class="source-line-no">228</span><span id="line.228">        builder.country = template.getCountry();</span>
+<span class="source-line-no">229</span><span id="line.229">        builder.customerGroup = template.getCustomerGroup();</span>
+<span class="source-line-no">230</span><span id="line.230">        builder.channel = template.getChannel();</span>
+<span class="source-line-no">231</span><span id="line.231">        builder.validFrom = template.getValidFrom();</span>
+<span class="source-line-no">232</span><span id="line.232">        builder.validUntil = template.getValidUntil();</span>
+<span class="source-line-no">233</span><span id="line.233">        builder.discounted = template.getDiscounted();</span>
+<span class="source-line-no">234</span><span id="line.234">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">235</span><span id="line.235">        builder.tiers = template.getTiers();</span>
+<span class="source-line-no">236</span><span id="line.236">        return builder;</span>
+<span class="source-line-no">237</span><span id="line.237">    }</span>
+<span class="source-line-no">238</span><span id="line.238"></span>
+<span class="source-line-no">239</span><span id="line.239">}</span>
 
 
 

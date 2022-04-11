@@ -68,237 +68,254 @@
 <span class="source-line-no">055</span><span id="line.55">        return this;</span>
 <span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public ProductDataBuilder withCategories(</span>
-<span class="source-line-no">059</span><span id="line.59">            Function&lt;com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">060</span><span id="line.60">        this.categories = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">061</span><span id="line.61">        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());</span>
-<span class="source-line-no">062</span><span id="line.62">        return this;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public ProductDataBuilder plusCategories(</span>
-<span class="source-line-no">066</span><span id="line.66">            Function&lt;com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">067</span><span id="line.67">        if (this.categories == null) {</span>
-<span class="source-line-no">068</span><span id="line.68">            this.categories = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">069</span><span id="line.69">        }</span>
-<span class="source-line-no">070</span><span id="line.70">        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());</span>
-<span class="source-line-no">071</span><span id="line.71">        return this;</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public ProductDataBuilder categories(</span>
-<span class="source-line-no">075</span><span id="line.75">            final java.util.List&lt;com.commercetools.api.models.category.CategoryReference&gt; categories) {</span>
-<span class="source-line-no">076</span><span id="line.76">        this.categories = categories;</span>
-<span class="source-line-no">077</span><span id="line.77">        return this;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public ProductDataBuilder categoryOrderHints(</span>
-<span class="source-line-no">081</span><span id="line.81">            Function&lt;com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder&gt; builder) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())</span>
-<span class="source-line-no">083</span><span id="line.83">                .build();</span>
-<span class="source-line-no">084</span><span id="line.84">        return this;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public ProductDataBuilder categoryOrderHints(</span>
-<span class="source-line-no">088</span><span id="line.88">            @Nullable final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {</span>
-<span class="source-line-no">089</span><span id="line.89">        this.categoryOrderHints = categoryOrderHints;</span>
-<span class="source-line-no">090</span><span id="line.90">        return this;</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public ProductDataBuilder description(</span>
-<span class="source-line-no">094</span><span id="line.94">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">095</span><span id="line.95">        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">096</span><span id="line.96">        return this;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public ProductDataBuilder description(</span>
-<span class="source-line-no">100</span><span id="line.100">            @Nullable final com.commercetools.api.models.common.LocalizedString description) {</span>
-<span class="source-line-no">101</span><span id="line.101">        this.description = description;</span>
-<span class="source-line-no">102</span><span id="line.102">        return this;</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public ProductDataBuilder slug(</span>
-<span class="source-line-no">106</span><span id="line.106">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">107</span><span id="line.107">        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">108</span><span id="line.108">        return this;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public ProductDataBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {</span>
-<span class="source-line-no">112</span><span id="line.112">        this.slug = slug;</span>
-<span class="source-line-no">113</span><span id="line.113">        return this;</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public ProductDataBuilder metaTitle(</span>
-<span class="source-line-no">117</span><span id="line.117">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">118</span><span id="line.118">        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">119</span><span id="line.119">        return this;</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public ProductDataBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {</span>
-<span class="source-line-no">123</span><span id="line.123">        this.metaTitle = metaTitle;</span>
-<span class="source-line-no">124</span><span id="line.124">        return this;</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    public ProductDataBuilder metaDescription(</span>
-<span class="source-line-no">128</span><span id="line.128">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">129</span><span id="line.129">        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">130</span><span id="line.130">        return this;</span>
-<span class="source-line-no">131</span><span id="line.131">    }</span>
-<span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    public ProductDataBuilder metaDescription(</span>
-<span class="source-line-no">134</span><span id="line.134">            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {</span>
-<span class="source-line-no">135</span><span id="line.135">        this.metaDescription = metaDescription;</span>
-<span class="source-line-no">136</span><span id="line.136">        return this;</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public ProductDataBuilder metaKeywords(</span>
-<span class="source-line-no">140</span><span id="line.140">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">141</span><span id="line.141">        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">142</span><span id="line.142">        return this;</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    public ProductDataBuilder metaKeywords(</span>
-<span class="source-line-no">146</span><span id="line.146">            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {</span>
-<span class="source-line-no">147</span><span id="line.147">        this.metaKeywords = metaKeywords;</span>
-<span class="source-line-no">148</span><span id="line.148">        return this;</span>
-<span class="source-line-no">149</span><span id="line.149">    }</span>
-<span class="source-line-no">150</span><span id="line.150"></span>
-<span class="source-line-no">151</span><span id="line.151">    public ProductDataBuilder masterVariant(</span>
-<span class="source-line-no">152</span><span id="line.152">            Function&lt;com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder&gt; builder) {</span>
-<span class="source-line-no">153</span><span id="line.153">        this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();</span>
-<span class="source-line-no">154</span><span id="line.154">        return this;</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    public ProductDataBuilder masterVariant(final com.commercetools.api.models.product.ProductVariant masterVariant) {</span>
-<span class="source-line-no">158</span><span id="line.158">        this.masterVariant = masterVariant;</span>
-<span class="source-line-no">159</span><span id="line.159">        return this;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    public ProductDataBuilder variants(final com.commercetools.api.models.product.ProductVariant... variants) {</span>
-<span class="source-line-no">163</span><span id="line.163">        this.variants = new ArrayList&lt;&gt;(Arrays.asList(variants));</span>
-<span class="source-line-no">164</span><span id="line.164">        return this;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public ProductDataBuilder withVariants(</span>
-<span class="source-line-no">168</span><span id="line.168">            Function&lt;com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder&gt; builder) {</span>
-<span class="source-line-no">169</span><span id="line.169">        this.variants = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">170</span><span id="line.170">        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());</span>
-<span class="source-line-no">171</span><span id="line.171">        return this;</span>
-<span class="source-line-no">172</span><span id="line.172">    }</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">    public ProductDataBuilder plusVariants(</span>
-<span class="source-line-no">175</span><span id="line.175">            Function&lt;com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder&gt; builder) {</span>
-<span class="source-line-no">176</span><span id="line.176">        if (this.variants == null) {</span>
-<span class="source-line-no">177</span><span id="line.177">            this.variants = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">178</span><span id="line.178">        }</span>
-<span class="source-line-no">179</span><span id="line.179">        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());</span>
-<span class="source-line-no">180</span><span id="line.180">        return this;</span>
-<span class="source-line-no">181</span><span id="line.181">    }</span>
-<span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    public ProductDataBuilder variants(</span>
-<span class="source-line-no">184</span><span id="line.184">            final java.util.List&lt;com.commercetools.api.models.product.ProductVariant&gt; variants) {</span>
-<span class="source-line-no">185</span><span id="line.185">        this.variants = variants;</span>
-<span class="source-line-no">186</span><span id="line.186">        return this;</span>
-<span class="source-line-no">187</span><span id="line.187">    }</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    public ProductDataBuilder searchKeywords(</span>
-<span class="source-line-no">190</span><span id="line.190">            Function&lt;com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder&gt; builder) {</span>
-<span class="source-line-no">191</span><span id="line.191">        this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();</span>
-<span class="source-line-no">192</span><span id="line.192">        return this;</span>
-<span class="source-line-no">193</span><span id="line.193">    }</span>
-<span class="source-line-no">194</span><span id="line.194"></span>
-<span class="source-line-no">195</span><span id="line.195">    public ProductDataBuilder searchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords) {</span>
-<span class="source-line-no">196</span><span id="line.196">        this.searchKeywords = searchKeywords;</span>
-<span class="source-line-no">197</span><span id="line.197">        return this;</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">201</span><span id="line.201">        return this.name;</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    public java.util.List&lt;com.commercetools.api.models.category.CategoryReference&gt; getCategories() {</span>
-<span class="source-line-no">205</span><span id="line.205">        return this.categories;</span>
-<span class="source-line-no">206</span><span id="line.206">    }</span>
-<span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    @Nullable</span>
-<span class="source-line-no">209</span><span id="line.209">    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {</span>
-<span class="source-line-no">210</span><span id="line.210">        return this.categoryOrderHints;</span>
-<span class="source-line-no">211</span><span id="line.211">    }</span>
-<span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    @Nullable</span>
-<span class="source-line-no">214</span><span id="line.214">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
-<span class="source-line-no">215</span><span id="line.215">        return this.description;</span>
-<span class="source-line-no">216</span><span id="line.216">    }</span>
-<span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">    public com.commercetools.api.models.common.LocalizedString getSlug() {</span>
-<span class="source-line-no">219</span><span id="line.219">        return this.slug;</span>
-<span class="source-line-no">220</span><span id="line.220">    }</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">    @Nullable</span>
-<span class="source-line-no">223</span><span id="line.223">    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {</span>
-<span class="source-line-no">224</span><span id="line.224">        return this.metaTitle;</span>
-<span class="source-line-no">225</span><span id="line.225">    }</span>
-<span class="source-line-no">226</span><span id="line.226"></span>
-<span class="source-line-no">227</span><span id="line.227">    @Nullable</span>
-<span class="source-line-no">228</span><span id="line.228">    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {</span>
-<span class="source-line-no">229</span><span id="line.229">        return this.metaDescription;</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    @Nullable</span>
-<span class="source-line-no">233</span><span id="line.233">    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {</span>
-<span class="source-line-no">234</span><span id="line.234">        return this.metaKeywords;</span>
-<span class="source-line-no">235</span><span id="line.235">    }</span>
-<span class="source-line-no">236</span><span id="line.236"></span>
-<span class="source-line-no">237</span><span id="line.237">    public com.commercetools.api.models.product.ProductVariant getMasterVariant() {</span>
-<span class="source-line-no">238</span><span id="line.238">        return this.masterVariant;</span>
-<span class="source-line-no">239</span><span id="line.239">    }</span>
-<span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">    public java.util.List&lt;com.commercetools.api.models.product.ProductVariant&gt; getVariants() {</span>
-<span class="source-line-no">242</span><span id="line.242">        return this.variants;</span>
-<span class="source-line-no">243</span><span id="line.243">    }</span>
-<span class="source-line-no">244</span><span id="line.244"></span>
-<span class="source-line-no">245</span><span id="line.245">    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {</span>
-<span class="source-line-no">246</span><span id="line.246">        return this.searchKeywords;</span>
+<span class="source-line-no">058</span><span id="line.58">    public ProductDataBuilder categories(</span>
+<span class="source-line-no">059</span><span id="line.59">            final java.util.List&lt;com.commercetools.api.models.category.CategoryReference&gt; categories) {</span>
+<span class="source-line-no">060</span><span id="line.60">        this.categories = categories;</span>
+<span class="source-line-no">061</span><span id="line.61">        return this;</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public ProductDataBuilder plusCategories(</span>
+<span class="source-line-no">065</span><span id="line.65">            final com.commercetools.api.models.category.CategoryReference... categories) {</span>
+<span class="source-line-no">066</span><span id="line.66">        if (this.categories == null) {</span>
+<span class="source-line-no">067</span><span id="line.67">            this.categories = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">068</span><span id="line.68">        }</span>
+<span class="source-line-no">069</span><span id="line.69">        this.categories.addAll(Arrays.asList(categories));</span>
+<span class="source-line-no">070</span><span id="line.70">        return this;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public ProductDataBuilder plusCategories(</span>
+<span class="source-line-no">074</span><span id="line.74">            Function&lt;com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">075</span><span id="line.75">        if (this.categories == null) {</span>
+<span class="source-line-no">076</span><span id="line.76">            this.categories = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">077</span><span id="line.77">        }</span>
+<span class="source-line-no">078</span><span id="line.78">        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());</span>
+<span class="source-line-no">079</span><span id="line.79">        return this;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public ProductDataBuilder withCategories(</span>
+<span class="source-line-no">083</span><span id="line.83">            Function&lt;com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">084</span><span id="line.84">        this.categories = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">085</span><span id="line.85">        this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());</span>
+<span class="source-line-no">086</span><span id="line.86">        return this;</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public ProductDataBuilder categoryOrderHints(</span>
+<span class="source-line-no">090</span><span id="line.90">            Function&lt;com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder&gt; builder) {</span>
+<span class="source-line-no">091</span><span id="line.91">        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())</span>
+<span class="source-line-no">092</span><span id="line.92">                .build();</span>
+<span class="source-line-no">093</span><span id="line.93">        return this;</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    public ProductDataBuilder categoryOrderHints(</span>
+<span class="source-line-no">097</span><span id="line.97">            @Nullable final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {</span>
+<span class="source-line-no">098</span><span id="line.98">        this.categoryOrderHints = categoryOrderHints;</span>
+<span class="source-line-no">099</span><span id="line.99">        return this;</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public ProductDataBuilder description(</span>
+<span class="source-line-no">103</span><span id="line.103">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">104</span><span id="line.104">        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">105</span><span id="line.105">        return this;</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public ProductDataBuilder description(</span>
+<span class="source-line-no">109</span><span id="line.109">            @Nullable final com.commercetools.api.models.common.LocalizedString description) {</span>
+<span class="source-line-no">110</span><span id="line.110">        this.description = description;</span>
+<span class="source-line-no">111</span><span id="line.111">        return this;</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    public ProductDataBuilder slug(</span>
+<span class="source-line-no">115</span><span id="line.115">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">116</span><span id="line.116">        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">117</span><span id="line.117">        return this;</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    public ProductDataBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {</span>
+<span class="source-line-no">121</span><span id="line.121">        this.slug = slug;</span>
+<span class="source-line-no">122</span><span id="line.122">        return this;</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    public ProductDataBuilder metaTitle(</span>
+<span class="source-line-no">126</span><span id="line.126">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">127</span><span id="line.127">        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">128</span><span id="line.128">        return this;</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    public ProductDataBuilder metaTitle(@Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {</span>
+<span class="source-line-no">132</span><span id="line.132">        this.metaTitle = metaTitle;</span>
+<span class="source-line-no">133</span><span id="line.133">        return this;</span>
+<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    public ProductDataBuilder metaDescription(</span>
+<span class="source-line-no">137</span><span id="line.137">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">138</span><span id="line.138">        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">139</span><span id="line.139">        return this;</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    public ProductDataBuilder metaDescription(</span>
+<span class="source-line-no">143</span><span id="line.143">            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {</span>
+<span class="source-line-no">144</span><span id="line.144">        this.metaDescription = metaDescription;</span>
+<span class="source-line-no">145</span><span id="line.145">        return this;</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    public ProductDataBuilder metaKeywords(</span>
+<span class="source-line-no">149</span><span id="line.149">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">150</span><span id="line.150">        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">151</span><span id="line.151">        return this;</span>
+<span class="source-line-no">152</span><span id="line.152">    }</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    public ProductDataBuilder metaKeywords(</span>
+<span class="source-line-no">155</span><span id="line.155">            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {</span>
+<span class="source-line-no">156</span><span id="line.156">        this.metaKeywords = metaKeywords;</span>
+<span class="source-line-no">157</span><span id="line.157">        return this;</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">    public ProductDataBuilder masterVariant(</span>
+<span class="source-line-no">161</span><span id="line.161">            Function&lt;com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder&gt; builder) {</span>
+<span class="source-line-no">162</span><span id="line.162">        this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();</span>
+<span class="source-line-no">163</span><span id="line.163">        return this;</span>
+<span class="source-line-no">164</span><span id="line.164">    }</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    public ProductDataBuilder masterVariant(final com.commercetools.api.models.product.ProductVariant masterVariant) {</span>
+<span class="source-line-no">167</span><span id="line.167">        this.masterVariant = masterVariant;</span>
+<span class="source-line-no">168</span><span id="line.168">        return this;</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    public ProductDataBuilder variants(final com.commercetools.api.models.product.ProductVariant... variants) {</span>
+<span class="source-line-no">172</span><span id="line.172">        this.variants = new ArrayList&lt;&gt;(Arrays.asList(variants));</span>
+<span class="source-line-no">173</span><span id="line.173">        return this;</span>
+<span class="source-line-no">174</span><span id="line.174">    }</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    public ProductDataBuilder variants(</span>
+<span class="source-line-no">177</span><span id="line.177">            final java.util.List&lt;com.commercetools.api.models.product.ProductVariant&gt; variants) {</span>
+<span class="source-line-no">178</span><span id="line.178">        this.variants = variants;</span>
+<span class="source-line-no">179</span><span id="line.179">        return this;</span>
+<span class="source-line-no">180</span><span id="line.180">    }</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    public ProductDataBuilder plusVariants(final com.commercetools.api.models.product.ProductVariant... variants) {</span>
+<span class="source-line-no">183</span><span id="line.183">        if (this.variants == null) {</span>
+<span class="source-line-no">184</span><span id="line.184">            this.variants = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">185</span><span id="line.185">        }</span>
+<span class="source-line-no">186</span><span id="line.186">        this.variants.addAll(Arrays.asList(variants));</span>
+<span class="source-line-no">187</span><span id="line.187">        return this;</span>
+<span class="source-line-no">188</span><span id="line.188">    }</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    public ProductDataBuilder plusVariants(</span>
+<span class="source-line-no">191</span><span id="line.191">            Function&lt;com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder&gt; builder) {</span>
+<span class="source-line-no">192</span><span id="line.192">        if (this.variants == null) {</span>
+<span class="source-line-no">193</span><span id="line.193">            this.variants = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">194</span><span id="line.194">        }</span>
+<span class="source-line-no">195</span><span id="line.195">        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());</span>
+<span class="source-line-no">196</span><span id="line.196">        return this;</span>
+<span class="source-line-no">197</span><span id="line.197">    }</span>
+<span class="source-line-no">198</span><span id="line.198"></span>
+<span class="source-line-no">199</span><span id="line.199">    public ProductDataBuilder withVariants(</span>
+<span class="source-line-no">200</span><span id="line.200">            Function&lt;com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder&gt; builder) {</span>
+<span class="source-line-no">201</span><span id="line.201">        this.variants = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">202</span><span id="line.202">        this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build());</span>
+<span class="source-line-no">203</span><span id="line.203">        return this;</span>
+<span class="source-line-no">204</span><span id="line.204">    }</span>
+<span class="source-line-no">205</span><span id="line.205"></span>
+<span class="source-line-no">206</span><span id="line.206">    public ProductDataBuilder searchKeywords(</span>
+<span class="source-line-no">207</span><span id="line.207">            Function&lt;com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder&gt; builder) {</span>
+<span class="source-line-no">208</span><span id="line.208">        this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();</span>
+<span class="source-line-no">209</span><span id="line.209">        return this;</span>
+<span class="source-line-no">210</span><span id="line.210">    }</span>
+<span class="source-line-no">211</span><span id="line.211"></span>
+<span class="source-line-no">212</span><span id="line.212">    public ProductDataBuilder searchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords) {</span>
+<span class="source-line-no">213</span><span id="line.213">        this.searchKeywords = searchKeywords;</span>
+<span class="source-line-no">214</span><span id="line.214">        return this;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">218</span><span id="line.218">        return this.name;</span>
+<span class="source-line-no">219</span><span id="line.219">    }</span>
+<span class="source-line-no">220</span><span id="line.220"></span>
+<span class="source-line-no">221</span><span id="line.221">    public java.util.List&lt;com.commercetools.api.models.category.CategoryReference&gt; getCategories() {</span>
+<span class="source-line-no">222</span><span id="line.222">        return this.categories;</span>
+<span class="source-line-no">223</span><span id="line.223">    }</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">    @Nullable</span>
+<span class="source-line-no">226</span><span id="line.226">    public com.commercetools.api.models.product.CategoryOrderHints getCategoryOrderHints() {</span>
+<span class="source-line-no">227</span><span id="line.227">        return this.categoryOrderHints;</span>
+<span class="source-line-no">228</span><span id="line.228">    }</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">    @Nullable</span>
+<span class="source-line-no">231</span><span id="line.231">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
+<span class="source-line-no">232</span><span id="line.232">        return this.description;</span>
+<span class="source-line-no">233</span><span id="line.233">    }</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">    public com.commercetools.api.models.common.LocalizedString getSlug() {</span>
+<span class="source-line-no">236</span><span id="line.236">        return this.slug;</span>
+<span class="source-line-no">237</span><span id="line.237">    }</span>
+<span class="source-line-no">238</span><span id="line.238"></span>
+<span class="source-line-no">239</span><span id="line.239">    @Nullable</span>
+<span class="source-line-no">240</span><span id="line.240">    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {</span>
+<span class="source-line-no">241</span><span id="line.241">        return this.metaTitle;</span>
+<span class="source-line-no">242</span><span id="line.242">    }</span>
+<span class="source-line-no">243</span><span id="line.243"></span>
+<span class="source-line-no">244</span><span id="line.244">    @Nullable</span>
+<span class="source-line-no">245</span><span id="line.245">    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {</span>
+<span class="source-line-no">246</span><span id="line.246">        return this.metaDescription;</span>
 <span class="source-line-no">247</span><span id="line.247">    }</span>
 <span class="source-line-no">248</span><span id="line.248"></span>
-<span class="source-line-no">249</span><span id="line.249">    public ProductData build() {</span>
-<span class="source-line-no">250</span><span id="line.250">        Objects.requireNonNull(name, ProductData.class + ": name is missing");</span>
-<span class="source-line-no">251</span><span id="line.251">        Objects.requireNonNull(categories, ProductData.class + ": categories is missing");</span>
-<span class="source-line-no">252</span><span id="line.252">        Objects.requireNonNull(slug, ProductData.class + ": slug is missing");</span>
-<span class="source-line-no">253</span><span id="line.253">        Objects.requireNonNull(masterVariant, ProductData.class + ": masterVariant is missing");</span>
-<span class="source-line-no">254</span><span id="line.254">        Objects.requireNonNull(variants, ProductData.class + ": variants is missing");</span>
-<span class="source-line-no">255</span><span id="line.255">        Objects.requireNonNull(searchKeywords, ProductData.class + ": searchKeywords is missing");</span>
-<span class="source-line-no">256</span><span id="line.256">        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,</span>
-<span class="source-line-no">257</span><span id="line.257">            metaKeywords, masterVariant, variants, searchKeywords);</span>
-<span class="source-line-no">258</span><span id="line.258">    }</span>
-<span class="source-line-no">259</span><span id="line.259"></span>
-<span class="source-line-no">260</span><span id="line.260">    /**</span>
-<span class="source-line-no">261</span><span id="line.261">     * builds ProductData without checking for non null required values</span>
-<span class="source-line-no">262</span><span id="line.262">     */</span>
-<span class="source-line-no">263</span><span id="line.263">    public ProductData buildUnchecked() {</span>
-<span class="source-line-no">264</span><span id="line.264">        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,</span>
-<span class="source-line-no">265</span><span id="line.265">            metaKeywords, masterVariant, variants, searchKeywords);</span>
-<span class="source-line-no">266</span><span id="line.266">    }</span>
-<span class="source-line-no">267</span><span id="line.267"></span>
-<span class="source-line-no">268</span><span id="line.268">    public static ProductDataBuilder of() {</span>
-<span class="source-line-no">269</span><span id="line.269">        return new ProductDataBuilder();</span>
-<span class="source-line-no">270</span><span id="line.270">    }</span>
-<span class="source-line-no">271</span><span id="line.271"></span>
-<span class="source-line-no">272</span><span id="line.272">    public static ProductDataBuilder of(final ProductData template) {</span>
-<span class="source-line-no">273</span><span id="line.273">        ProductDataBuilder builder = new ProductDataBuilder();</span>
-<span class="source-line-no">274</span><span id="line.274">        builder.name = template.getName();</span>
-<span class="source-line-no">275</span><span id="line.275">        builder.categories = template.getCategories();</span>
-<span class="source-line-no">276</span><span id="line.276">        builder.categoryOrderHints = template.getCategoryOrderHints();</span>
-<span class="source-line-no">277</span><span id="line.277">        builder.description = template.getDescription();</span>
-<span class="source-line-no">278</span><span id="line.278">        builder.slug = template.getSlug();</span>
-<span class="source-line-no">279</span><span id="line.279">        builder.metaTitle = template.getMetaTitle();</span>
-<span class="source-line-no">280</span><span id="line.280">        builder.metaDescription = template.getMetaDescription();</span>
-<span class="source-line-no">281</span><span id="line.281">        builder.metaKeywords = template.getMetaKeywords();</span>
-<span class="source-line-no">282</span><span id="line.282">        builder.masterVariant = template.getMasterVariant();</span>
-<span class="source-line-no">283</span><span id="line.283">        builder.variants = template.getVariants();</span>
-<span class="source-line-no">284</span><span id="line.284">        builder.searchKeywords = template.getSearchKeywords();</span>
-<span class="source-line-no">285</span><span id="line.285">        return builder;</span>
-<span class="source-line-no">286</span><span id="line.286">    }</span>
-<span class="source-line-no">287</span><span id="line.287"></span>
-<span class="source-line-no">288</span><span id="line.288">}</span>
+<span class="source-line-no">249</span><span id="line.249">    @Nullable</span>
+<span class="source-line-no">250</span><span id="line.250">    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {</span>
+<span class="source-line-no">251</span><span id="line.251">        return this.metaKeywords;</span>
+<span class="source-line-no">252</span><span id="line.252">    }</span>
+<span class="source-line-no">253</span><span id="line.253"></span>
+<span class="source-line-no">254</span><span id="line.254">    public com.commercetools.api.models.product.ProductVariant getMasterVariant() {</span>
+<span class="source-line-no">255</span><span id="line.255">        return this.masterVariant;</span>
+<span class="source-line-no">256</span><span id="line.256">    }</span>
+<span class="source-line-no">257</span><span id="line.257"></span>
+<span class="source-line-no">258</span><span id="line.258">    public java.util.List&lt;com.commercetools.api.models.product.ProductVariant&gt; getVariants() {</span>
+<span class="source-line-no">259</span><span id="line.259">        return this.variants;</span>
+<span class="source-line-no">260</span><span id="line.260">    }</span>
+<span class="source-line-no">261</span><span id="line.261"></span>
+<span class="source-line-no">262</span><span id="line.262">    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {</span>
+<span class="source-line-no">263</span><span id="line.263">        return this.searchKeywords;</span>
+<span class="source-line-no">264</span><span id="line.264">    }</span>
+<span class="source-line-no">265</span><span id="line.265"></span>
+<span class="source-line-no">266</span><span id="line.266">    public ProductData build() {</span>
+<span class="source-line-no">267</span><span id="line.267">        Objects.requireNonNull(name, ProductData.class + ": name is missing");</span>
+<span class="source-line-no">268</span><span id="line.268">        Objects.requireNonNull(categories, ProductData.class + ": categories is missing");</span>
+<span class="source-line-no">269</span><span id="line.269">        Objects.requireNonNull(slug, ProductData.class + ": slug is missing");</span>
+<span class="source-line-no">270</span><span id="line.270">        Objects.requireNonNull(masterVariant, ProductData.class + ": masterVariant is missing");</span>
+<span class="source-line-no">271</span><span id="line.271">        Objects.requireNonNull(variants, ProductData.class + ": variants is missing");</span>
+<span class="source-line-no">272</span><span id="line.272">        Objects.requireNonNull(searchKeywords, ProductData.class + ": searchKeywords is missing");</span>
+<span class="source-line-no">273</span><span id="line.273">        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,</span>
+<span class="source-line-no">274</span><span id="line.274">            metaKeywords, masterVariant, variants, searchKeywords);</span>
+<span class="source-line-no">275</span><span id="line.275">    }</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">    /**</span>
+<span class="source-line-no">278</span><span id="line.278">     * builds ProductData without checking for non null required values</span>
+<span class="source-line-no">279</span><span id="line.279">     */</span>
+<span class="source-line-no">280</span><span id="line.280">    public ProductData buildUnchecked() {</span>
+<span class="source-line-no">281</span><span id="line.281">        return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,</span>
+<span class="source-line-no">282</span><span id="line.282">            metaKeywords, masterVariant, variants, searchKeywords);</span>
+<span class="source-line-no">283</span><span id="line.283">    }</span>
+<span class="source-line-no">284</span><span id="line.284"></span>
+<span class="source-line-no">285</span><span id="line.285">    public static ProductDataBuilder of() {</span>
+<span class="source-line-no">286</span><span id="line.286">        return new ProductDataBuilder();</span>
+<span class="source-line-no">287</span><span id="line.287">    }</span>
+<span class="source-line-no">288</span><span id="line.288"></span>
+<span class="source-line-no">289</span><span id="line.289">    public static ProductDataBuilder of(final ProductData template) {</span>
+<span class="source-line-no">290</span><span id="line.290">        ProductDataBuilder builder = new ProductDataBuilder();</span>
+<span class="source-line-no">291</span><span id="line.291">        builder.name = template.getName();</span>
+<span class="source-line-no">292</span><span id="line.292">        builder.categories = template.getCategories();</span>
+<span class="source-line-no">293</span><span id="line.293">        builder.categoryOrderHints = template.getCategoryOrderHints();</span>
+<span class="source-line-no">294</span><span id="line.294">        builder.description = template.getDescription();</span>
+<span class="source-line-no">295</span><span id="line.295">        builder.slug = template.getSlug();</span>
+<span class="source-line-no">296</span><span id="line.296">        builder.metaTitle = template.getMetaTitle();</span>
+<span class="source-line-no">297</span><span id="line.297">        builder.metaDescription = template.getMetaDescription();</span>
+<span class="source-line-no">298</span><span id="line.298">        builder.metaKeywords = template.getMetaKeywords();</span>
+<span class="source-line-no">299</span><span id="line.299">        builder.masterVariant = template.getMasterVariant();</span>
+<span class="source-line-no">300</span><span id="line.300">        builder.variants = template.getVariants();</span>
+<span class="source-line-no">301</span><span id="line.301">        builder.searchKeywords = template.getSearchKeywords();</span>
+<span class="source-line-no">302</span><span id="line.302">        return builder;</span>
+<span class="source-line-no">303</span><span id="line.303">    }</span>
+<span class="source-line-no">304</span><span id="line.304"></span>
+<span class="source-line-no">305</span><span id="line.305">}</span>
 
 
 

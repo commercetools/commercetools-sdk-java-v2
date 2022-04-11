@@ -93,18 +93,285 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method.summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
-<div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withMessagePayload(java.util.function.Function)">withMessagePayload</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a>,&#8203;T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CategoryCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CategoryCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#categoryCreatedBuilder()">categoryCreatedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CategorySlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CategorySlugChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#categorySlugChangedBuilder()">categorySlugChangedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerAddressAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerAddressAddedBuilder()">customerAddressAddedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerAddressChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerAddressChangedBuilder()">customerAddressChangedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerAddressRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressRemovedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerAddressRemovedBuilder()">customerAddressRemovedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerCompanyNameSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCompanyNameSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerCompanyNameSetBuilder()">customerCompanyNameSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerCreatedBuilder()">customerCreatedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerDateOfBirthSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerDateOfBirthSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerDateOfBirthSetBuilder()">customerDateOfBirthSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerDeletedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerDeletedBuilder()">customerDeletedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerEmailChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerEmailChangedBuilder()">customerEmailChangedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerEmailVerifiedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailVerifiedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerEmailVerifiedBuilder()">customerEmailVerifiedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerFirstNameSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerFirstNameSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerFirstNameSetBuilder()">customerFirstNameSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerGroupSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerGroupSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerGroupSetBuilder()">customerGroupSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerLastNameSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerLastNameSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerLastNameSetBuilder()">customerLastNameSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerPasswordUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordUpdatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerPasswordUpdatedBuilder()">customerPasswordUpdatedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomerTitleSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerTitleSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customerTitleSetBuilder()">customerTitleSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="CustomLineItemStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#customLineItemStateTransitionBuilder()">customLineItemStateTransitionBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="DeliveryAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#deliveryAddedBuilder()">deliveryAddedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="DeliveryAddressSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#deliveryAddressSetBuilder()">deliveryAddressSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="DeliveryItemsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#deliveryItemsUpdatedBuilder()">deliveryItemsUpdatedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="DeliveryRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryRemovedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#deliveryRemovedBuilder()">deliveryRemovedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#getType()">getType</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="InventoryEntryCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#inventoryEntryCreatedBuilder()">inventoryEntryCreatedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="InventoryEntryDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryDeletedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#inventoryEntryDeletedBuilder()">inventoryEntryDeletedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="InventoryEntryQuantitySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryQuantitySetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#inventoryEntryQuantitySetBuilder()">inventoryEntryQuantitySetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="LineItemStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">LineItemStateTransitionMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#lineItemStateTransitionBuilder()">lineItemStateTransitionBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderBillingAddressSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderBillingAddressSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderBillingAddressSetBuilder()">orderBillingAddressSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderCreatedBuilder()">orderCreatedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderCustomerEmailSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerEmailSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderCustomerEmailSetBuilder()">orderCustomerEmailSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderCustomerGroupSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerGroupSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderCustomerGroupSetBuilder()">orderCustomerGroupSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderCustomerSetBuilder()">orderCustomerSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderCustomLineItemDiscountSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomLineItemDiscountSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderCustomLineItemDiscountSetBuilder()">orderCustomLineItemDiscountSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDeletedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderDeletedBuilder()">orderDeletedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderDiscountCodeAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderDiscountCodeAddedBuilder()">orderDiscountCodeAddedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderDiscountCodeRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeRemovedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderDiscountCodeRemovedBuilder()">orderDiscountCodeRemovedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderDiscountCodeStateSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderDiscountCodeStateSetBuilder()">orderDiscountCodeStateSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderEditAppliedBuilder()">orderEditAppliedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderImportedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderImportedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderImportedBuilder()">orderImportedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderLineItemAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderLineItemAddedBuilder()">orderLineItemAddedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderLineItemDiscountSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderLineItemDiscountSetBuilder()">orderLineItemDiscountSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderLineItemDistributionChannelSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderLineItemDistributionChannelSetBuilder()">orderLineItemDistributionChannelSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderLineItemRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderLineItemRemovedBuilder()">orderLineItemRemovedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderPaymentAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderPaymentAddedBuilder()">orderPaymentAddedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderPaymentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentStateChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderPaymentStateChangedBuilder()">orderPaymentStateChangedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderReturnShipmentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderReturnShipmentStateChangedBuilder()">orderReturnShipmentStateChangedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderShipmentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderShipmentStateChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderShipmentStateChangedBuilder()">orderShipmentStateChangedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderShippingAddressSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingAddressSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderShippingAddressSetBuilder()">orderShippingAddressSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderShippingInfoSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderShippingInfoSetBuilder()">orderShippingInfoSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderShippingRateInputSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingRateInputSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderShippingRateInputSetBuilder()">orderShippingRateInputSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderStateChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderStateChangedBuilder()">orderStateChangedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderStateTransitionMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderStateTransitionBuilder()">orderStateTransitionBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderStoreSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderStoreSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#orderStoreSetBuilder()">orderStoreSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ParcelAddedToDeliveryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelAddedToDeliveryMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#parcelAddedToDeliveryBuilder()">parcelAddedToDeliveryBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ParcelItemsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#parcelItemsUpdatedBuilder()">parcelItemsUpdatedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ParcelMeasurementsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelMeasurementsUpdatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#parcelMeasurementsUpdatedBuilder()">parcelMeasurementsUpdatedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ParcelRemovedFromDeliveryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#parcelRemovedFromDeliveryBuilder()">parcelRemovedFromDeliveryBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ParcelTrackingDataUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelTrackingDataUpdatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#parcelTrackingDataUpdatedBuilder()">parcelTrackingDataUpdatedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="PaymentCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#paymentCreatedBuilder()">paymentCreatedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#paymentInteractionAddedBuilder()">paymentInteractionAddedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="PaymentStatusInterfaceCodeSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentStatusInterfaceCodeSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#paymentStatusInterfaceCodeSetBuilder()">paymentStatusInterfaceCodeSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="PaymentStatusStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentStatusStateTransitionMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#paymentStatusStateTransitionBuilder()">paymentStatusStateTransitionBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="PaymentTransactionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentTransactionAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#paymentTransactionAddedBuilder()">paymentTransactionAddedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="PaymentTransactionStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentTransactionStateChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#paymentTransactionStateChangedBuilder()">paymentTransactionStateChangedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductAddedToCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductAddedToCategoryMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productAddedToCategoryBuilder()">productAddedToCategoryBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productCreatedBuilder()">productCreatedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductDeletedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productDeletedBuilder()">productDeletedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductImageAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductImageAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productImageAddedBuilder()">productImageAddedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductPriceDiscountsSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductPriceDiscountsSetMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productPriceDiscountsSetBuilder()">productPriceDiscountsSetBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductPriceExternalDiscountSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductPriceExternalDiscountSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productPriceExternalDiscountSetBuilder()">productPriceExternalDiscountSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductPublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductPublishedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productPublishedBuilder()">productPublishedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productRemovedFromCategoryBuilder()">productRemovedFromCategoryBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductRevertedStagedChangesMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRevertedStagedChangesMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productRevertedStagedChangesBuilder()">productRevertedStagedChangesBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductSelectionCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productSelectionCreatedBuilder()">productSelectionCreatedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductSelectionDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionDeletedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productSelectionDeletedBuilder()">productSelectionDeletedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductSelectionProductAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionProductAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productSelectionProductAddedBuilder()">productSelectionProductAddedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductSelectionProductRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionProductRemovedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productSelectionProductRemovedBuilder()">productSelectionProductRemovedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productSlugChangedBuilder()">productSlugChangedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductStateTransitionMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productStateTransitionBuilder()">productStateTransitionBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductUnpublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductUnpublishedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productUnpublishedBuilder()">productUnpublishedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductVariantAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productVariantAddedBuilder()">productVariantAddedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ProductVariantDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantDeletedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#productVariantDeletedBuilder()">productVariantDeletedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#returnInfoAddedBuilder()">returnInfoAddedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="OrderReturnInfoSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#returnInfoSetBuilder()">returnInfoSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#reviewCreatedBuilder()">reviewCreatedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewRatingSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewRatingSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#reviewRatingSetBuilder()">reviewRatingSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ReviewStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewStateTransitionMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#reviewStateTransitionBuilder()">reviewStateTransitionBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="ShoppingListStoreSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#shoppingListStoreSetBuilder()">shoppingListStoreSetBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StoreCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreCreatedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#storeCreatedBuilder()">storeCreatedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StoreDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreDeletedMessagePayloadBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#storeDeletedBuilder()">storeDeletedBuilder</a></span>()</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="StoreProductSelectionsChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreProductSelectionsChangedMessagePayloadBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#storeProductSelectionsChangedBuilder()">storeProductSelectionsChangedBuilder</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withMessagePayload(java.util.function.Function)">withMessagePayload</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a>,&#8203;T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -127,9 +394,543 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="categoryCreatedBuilder()">
+<h3>categoryCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CategoryCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.114">categoryCreatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="categorySlugChangedBuilder()">
+<h3>categorySlugChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategorySlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CategorySlugChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.118">categorySlugChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customLineItemStateTransitionBuilder()">
+<h3>customLineItemStateTransitionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomLineItemStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomLineItemStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.122">customLineItemStateTransitionBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerAddressAddedBuilder()">
+<h3>customerAddressAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.126">customerAddressAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerAddressChangedBuilder()">
+<h3>customerAddressChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.130">customerAddressChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerAddressRemovedBuilder()">
+<h3>customerAddressRemovedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressRemovedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.134">customerAddressRemovedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerCompanyNameSetBuilder()">
+<h3>customerCompanyNameSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerCompanyNameSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCompanyNameSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.138">customerCompanyNameSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerCreatedBuilder()">
+<h3>customerCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.142">customerCreatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerDateOfBirthSetBuilder()">
+<h3>customerDateOfBirthSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerDateOfBirthSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerDateOfBirthSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.146">customerDateOfBirthSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerDeletedBuilder()">
+<h3>customerDeletedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerDeletedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.150">customerDeletedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerEmailChangedBuilder()">
+<h3>customerEmailChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerEmailChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.154">customerEmailChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerEmailVerifiedBuilder()">
+<h3>customerEmailVerifiedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerEmailVerifiedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailVerifiedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.158">customerEmailVerifiedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerFirstNameSetBuilder()">
+<h3>customerFirstNameSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerFirstNameSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerFirstNameSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.162">customerFirstNameSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerGroupSetBuilder()">
+<h3>customerGroupSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerGroupSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerGroupSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.166">customerGroupSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerLastNameSetBuilder()">
+<h3>customerLastNameSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerLastNameSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerLastNameSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.170">customerLastNameSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerPasswordUpdatedBuilder()">
+<h3>customerPasswordUpdatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerPasswordUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordUpdatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.174">customerPasswordUpdatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="customerTitleSetBuilder()">
+<h3>customerTitleSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerTitleSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerTitleSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.178">customerTitleSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="deliveryAddedBuilder()">
+<h3>deliveryAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.182">deliveryAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="deliveryAddressSetBuilder()">
+<h3>deliveryAddressSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryAddressSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.186">deliveryAddressSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="deliveryItemsUpdatedBuilder()">
+<h3>deliveryItemsUpdatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryItemsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryItemsUpdatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.190">deliveryItemsUpdatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="deliveryRemovedBuilder()">
+<h3>deliveryRemovedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">DeliveryRemovedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.194">deliveryRemovedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="inventoryEntryCreatedBuilder()">
+<h3>inventoryEntryCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.198">inventoryEntryCreatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="inventoryEntryDeletedBuilder()">
+<h3>inventoryEntryDeletedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryDeletedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.202">inventoryEntryDeletedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="inventoryEntryQuantitySetBuilder()">
+<h3>inventoryEntryQuantitySetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="InventoryEntryQuantitySetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">InventoryEntryQuantitySetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.206">inventoryEntryQuantitySetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="lineItemStateTransitionBuilder()">
+<h3>lineItemStateTransitionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LineItemStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">LineItemStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.210">lineItemStateTransitionBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderBillingAddressSetBuilder()">
+<h3>orderBillingAddressSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderBillingAddressSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderBillingAddressSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.214">orderBillingAddressSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderCreatedBuilder()">
+<h3>orderCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.218">orderCreatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderCustomLineItemDiscountSetBuilder()">
+<h3>orderCustomLineItemDiscountSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderCustomLineItemDiscountSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomLineItemDiscountSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.222">orderCustomLineItemDiscountSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderCustomerEmailSetBuilder()">
+<h3>orderCustomerEmailSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderCustomerEmailSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerEmailSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.226">orderCustomerEmailSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderCustomerGroupSetBuilder()">
+<h3>orderCustomerGroupSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderCustomerGroupSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerGroupSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.230">orderCustomerGroupSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderCustomerSetBuilder()">
+<h3>orderCustomerSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.234">orderCustomerSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderDeletedBuilder()">
+<h3>orderDeletedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDeletedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.238">orderDeletedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderDiscountCodeAddedBuilder()">
+<h3>orderDiscountCodeAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.242">orderDiscountCodeAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderDiscountCodeRemovedBuilder()">
+<h3>orderDiscountCodeRemovedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeRemovedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.246">orderDiscountCodeRemovedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderDiscountCodeStateSetBuilder()">
+<h3>orderDiscountCodeStateSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeStateSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.250">orderDiscountCodeStateSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderEditAppliedBuilder()">
+<h3>orderEditAppliedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderEditAppliedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.254">orderEditAppliedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderImportedBuilder()">
+<h3>orderImportedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderImportedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderImportedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.258">orderImportedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderLineItemAddedBuilder()">
+<h3>orderLineItemAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.262">orderLineItemAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderLineItemDiscountSetBuilder()">
+<h3>orderLineItemDiscountSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDiscountSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.266">orderLineItemDiscountSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderLineItemDistributionChannelSetBuilder()">
+<h3>orderLineItemDistributionChannelSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDistributionChannelSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.270">orderLineItemDistributionChannelSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderLineItemRemovedBuilder()">
+<h3>orderLineItemRemovedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemRemovedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.274">orderLineItemRemovedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderPaymentAddedBuilder()">
+<h3>orderPaymentAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPaymentAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.278">orderPaymentAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderPaymentStateChangedBuilder()">
+<h3>orderPaymentStateChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderPaymentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderPaymentStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.282">orderPaymentStateChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="returnInfoAddedBuilder()">
+<h3>returnInfoAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.286">returnInfoAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="returnInfoSetBuilder()">
+<h3>returnInfoSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnInfoSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnInfoSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.290">returnInfoSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderReturnShipmentStateChangedBuilder()">
+<h3>orderReturnShipmentStateChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderReturnShipmentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderReturnShipmentStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.294">orderReturnShipmentStateChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderShipmentStateChangedBuilder()">
+<h3>orderShipmentStateChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShipmentStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderShipmentStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.298">orderShipmentStateChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderShippingAddressSetBuilder()">
+<h3>orderShippingAddressSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingAddressSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingAddressSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.302">orderShippingAddressSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderShippingInfoSetBuilder()">
+<h3>orderShippingInfoSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingInfoSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.306">orderShippingInfoSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderShippingRateInputSetBuilder()">
+<h3>orderShippingRateInputSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingRateInputSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingRateInputSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.310">orderShippingRateInputSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderStateChangedBuilder()">
+<h3>orderStateChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.314">orderStateChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderStateTransitionBuilder()">
+<h3>orderStateTransitionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.318">orderStateTransitionBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="orderStoreSetBuilder()">
+<h3>orderStoreSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderStoreSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderStoreSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.322">orderStoreSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="parcelAddedToDeliveryBuilder()">
+<h3>parcelAddedToDeliveryBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelAddedToDeliveryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelAddedToDeliveryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.326">parcelAddedToDeliveryBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="parcelItemsUpdatedBuilder()">
+<h3>parcelItemsUpdatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelItemsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelItemsUpdatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.330">parcelItemsUpdatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="parcelMeasurementsUpdatedBuilder()">
+<h3>parcelMeasurementsUpdatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelMeasurementsUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelMeasurementsUpdatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.334">parcelMeasurementsUpdatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="parcelRemovedFromDeliveryBuilder()">
+<h3>parcelRemovedFromDeliveryBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelRemovedFromDeliveryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelRemovedFromDeliveryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.338">parcelRemovedFromDeliveryBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="parcelTrackingDataUpdatedBuilder()">
+<h3>parcelTrackingDataUpdatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ParcelTrackingDataUpdatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ParcelTrackingDataUpdatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.342">parcelTrackingDataUpdatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="paymentCreatedBuilder()">
+<h3>paymentCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.346">paymentCreatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="paymentInteractionAddedBuilder()">
+<h3>paymentInteractionAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentInteractionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentInteractionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.350">paymentInteractionAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="paymentStatusInterfaceCodeSetBuilder()">
+<h3>paymentStatusInterfaceCodeSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentStatusInterfaceCodeSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentStatusInterfaceCodeSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.354">paymentStatusInterfaceCodeSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="paymentStatusStateTransitionBuilder()">
+<h3>paymentStatusStateTransitionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentStatusStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentStatusStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.358">paymentStatusStateTransitionBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="paymentTransactionAddedBuilder()">
+<h3>paymentTransactionAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentTransactionAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.362">paymentTransactionAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="paymentTransactionStateChangedBuilder()">
+<h3>paymentTransactionStateChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">PaymentTransactionStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.366">paymentTransactionStateChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productAddedToCategoryBuilder()">
+<h3>productAddedToCategoryBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductAddedToCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductAddedToCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.370">productAddedToCategoryBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productCreatedBuilder()">
+<h3>productCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.374">productCreatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productDeletedBuilder()">
+<h3>productDeletedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductDeletedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.378">productDeletedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productImageAddedBuilder()">
+<h3>productImageAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductImageAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductImageAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.382">productImageAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productPriceDiscountsSetBuilder()">
+<h3>productPriceDiscountsSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPriceDiscountsSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductPriceDiscountsSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.386">productPriceDiscountsSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productPriceExternalDiscountSetBuilder()">
+<h3>productPriceExternalDiscountSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPriceExternalDiscountSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductPriceExternalDiscountSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.390">productPriceExternalDiscountSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productPublishedBuilder()">
+<h3>productPublishedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductPublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductPublishedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.394">productPublishedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productRemovedFromCategoryBuilder()">
+<h3>productRemovedFromCategoryBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.398">productRemovedFromCategoryBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productRevertedStagedChangesBuilder()">
+<h3>productRevertedStagedChangesBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRevertedStagedChangesMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRevertedStagedChangesMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.402">productRevertedStagedChangesBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productSelectionCreatedBuilder()">
+<h3>productSelectionCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.406">productSelectionCreatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productSelectionDeletedBuilder()">
+<h3>productSelectionDeletedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionDeletedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.410">productSelectionDeletedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productSelectionProductAddedBuilder()">
+<h3>productSelectionProductAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionProductAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionProductAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.414">productSelectionProductAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productSelectionProductRemovedBuilder()">
+<h3>productSelectionProductRemovedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionProductRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSelectionProductRemovedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.418">productSelectionProductRemovedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productSlugChangedBuilder()">
+<h3>productSlugChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.422">productSlugChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productStateTransitionBuilder()">
+<h3>productStateTransitionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.426">productStateTransitionBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productUnpublishedBuilder()">
+<h3>productUnpublishedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductUnpublishedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductUnpublishedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.430">productUnpublishedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productVariantAddedBuilder()">
+<h3>productVariantAddedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantAddedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantAddedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.434">productVariantAddedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="productVariantDeletedBuilder()">
+<h3>productVariantDeletedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantDeletedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.438">productVariantDeletedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="reviewCreatedBuilder()">
+<h3>reviewCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.442">reviewCreatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="reviewRatingSetBuilder()">
+<h3>reviewRatingSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewRatingSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewRatingSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.446">reviewRatingSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="reviewStateTransitionBuilder()">
+<h3>reviewStateTransitionBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReviewStateTransitionMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ReviewStateTransitionMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.450">reviewStateTransitionBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="shoppingListStoreSetBuilder()">
+<h3>shoppingListStoreSetBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ShoppingListStoreSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ShoppingListStoreSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.454">shoppingListStoreSetBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="storeCreatedBuilder()">
+<h3>storeCreatedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.458">storeCreatedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="storeDeletedBuilder()">
+<h3>storeDeletedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreDeletedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreDeletedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.462">storeDeletedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="storeProductSelectionsChangedBuilder()">
+<h3>storeProductSelectionsChangedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreProductSelectionsChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreProductSelectionsChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.466">storeProductSelectionsChangedBuilder</a></span>()</div>
+</section>
+</li>
+<li>
 <section class="detail" id="withMessagePayload(java.util.function.Function)">
 <h3>withMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.114">withMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/MessagePayload.html#line.470">withMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 </ul>

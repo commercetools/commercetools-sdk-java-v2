@@ -86,156 +86,165 @@
 <span class="source-line-no">073</span><span id="line.73">        return this;</span>
 <span class="source-line-no">074</span><span id="line.74">    }</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public CustomLineItemImportDraftBuilder withState(</span>
-<span class="source-line-no">077</span><span id="line.77">            Function&lt;com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder&gt; builder) {</span>
-<span class="source-line-no">078</span><span id="line.78">        this.state = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">079</span><span id="line.79">        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());</span>
-<span class="source-line-no">080</span><span id="line.80">        return this;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public CustomLineItemImportDraftBuilder plusState(</span>
-<span class="source-line-no">084</span><span id="line.84">            Function&lt;com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder&gt; builder) {</span>
-<span class="source-line-no">085</span><span id="line.85">        if (this.state == null) {</span>
-<span class="source-line-no">086</span><span id="line.86">            this.state = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">087</span><span id="line.87">        }</span>
-<span class="source-line-no">088</span><span id="line.88">        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());</span>
-<span class="source-line-no">089</span><span id="line.89">        return this;</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public CustomLineItemImportDraftBuilder state(</span>
-<span class="source-line-no">093</span><span id="line.93">            @Nullable final java.util.List&lt;com.commercetools.api.models.order.ItemState&gt; state) {</span>
-<span class="source-line-no">094</span><span id="line.94">        this.state = state;</span>
-<span class="source-line-no">095</span><span id="line.95">        return this;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public CustomLineItemImportDraftBuilder taxRate(</span>
-<span class="source-line-no">099</span><span id="line.99">            Function&lt;com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder&gt; builder) {</span>
-<span class="source-line-no">100</span><span id="line.100">        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();</span>
-<span class="source-line-no">101</span><span id="line.101">        return this;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public CustomLineItemImportDraftBuilder taxRate(</span>
-<span class="source-line-no">105</span><span id="line.105">            @Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {</span>
-<span class="source-line-no">106</span><span id="line.106">        this.taxRate = taxRate;</span>
-<span class="source-line-no">107</span><span id="line.107">        return this;</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public CustomLineItemImportDraftBuilder taxCategory(</span>
-<span class="source-line-no">111</span><span id="line.111">            Function&lt;com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">112</span><span id="line.112">        this.taxCategory = builder</span>
-<span class="source-line-no">113</span><span id="line.113">                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())</span>
-<span class="source-line-no">114</span><span id="line.114">                .build();</span>
-<span class="source-line-no">115</span><span id="line.115">        return this;</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    public CustomLineItemImportDraftBuilder taxCategory(</span>
-<span class="source-line-no">119</span><span id="line.119">            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
-<span class="source-line-no">120</span><span id="line.120">        this.taxCategory = taxCategory;</span>
-<span class="source-line-no">121</span><span id="line.121">        return this;</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    public CustomLineItemImportDraftBuilder custom(</span>
-<span class="source-line-no">125</span><span id="line.125">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">126</span><span id="line.126">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
-<span class="source-line-no">127</span><span id="line.127">        return this;</span>
-<span class="source-line-no">128</span><span id="line.128">    }</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    public CustomLineItemImportDraftBuilder custom(</span>
-<span class="source-line-no">131</span><span id="line.131">            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">132</span><span id="line.132">        this.custom = custom;</span>
-<span class="source-line-no">133</span><span id="line.133">        return this;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public CustomLineItemImportDraftBuilder shippingDetails(</span>
-<span class="source-line-no">137</span><span id="line.137">            Function&lt;com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">138</span><span id="line.138">        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())</span>
-<span class="source-line-no">139</span><span id="line.139">                .build();</span>
-<span class="source-line-no">140</span><span id="line.140">        return this;</span>
-<span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    public CustomLineItemImportDraftBuilder shippingDetails(</span>
-<span class="source-line-no">144</span><span id="line.144">            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {</span>
-<span class="source-line-no">145</span><span id="line.145">        this.shippingDetails = shippingDetails;</span>
-<span class="source-line-no">146</span><span id="line.146">        return this;</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">150</span><span id="line.150">        return this.name;</span>
-<span class="source-line-no">151</span><span id="line.151">    }</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    public Long getQuantity() {</span>
-<span class="source-line-no">154</span><span id="line.154">        return this.quantity;</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    public com.commercetools.api.models.common.Money getMoney() {</span>
-<span class="source-line-no">158</span><span id="line.158">        return this.money;</span>
-<span class="source-line-no">159</span><span id="line.159">    }</span>
-<span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    public String getSlug() {</span>
-<span class="source-line-no">162</span><span id="line.162">        return this.slug;</span>
-<span class="source-line-no">163</span><span id="line.163">    }</span>
-<span class="source-line-no">164</span><span id="line.164"></span>
-<span class="source-line-no">165</span><span id="line.165">    @Nullable</span>
-<span class="source-line-no">166</span><span id="line.166">    public java.util.List&lt;com.commercetools.api.models.order.ItemState&gt; getState() {</span>
-<span class="source-line-no">167</span><span id="line.167">        return this.state;</span>
+<span class="source-line-no">076</span><span id="line.76">    public CustomLineItemImportDraftBuilder state(</span>
+<span class="source-line-no">077</span><span id="line.77">            @Nullable final java.util.List&lt;com.commercetools.api.models.order.ItemState&gt; state) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.state = state;</span>
+<span class="source-line-no">079</span><span id="line.79">        return this;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public CustomLineItemImportDraftBuilder plusState(</span>
+<span class="source-line-no">083</span><span id="line.83">            @Nullable final com.commercetools.api.models.order.ItemState... state) {</span>
+<span class="source-line-no">084</span><span id="line.84">        if (this.state == null) {</span>
+<span class="source-line-no">085</span><span id="line.85">            this.state = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">086</span><span id="line.86">        }</span>
+<span class="source-line-no">087</span><span id="line.87">        this.state.addAll(Arrays.asList(state));</span>
+<span class="source-line-no">088</span><span id="line.88">        return this;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public CustomLineItemImportDraftBuilder plusState(</span>
+<span class="source-line-no">092</span><span id="line.92">            Function&lt;com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder&gt; builder) {</span>
+<span class="source-line-no">093</span><span id="line.93">        if (this.state == null) {</span>
+<span class="source-line-no">094</span><span id="line.94">            this.state = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">095</span><span id="line.95">        }</span>
+<span class="source-line-no">096</span><span id="line.96">        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());</span>
+<span class="source-line-no">097</span><span id="line.97">        return this;</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public CustomLineItemImportDraftBuilder withState(</span>
+<span class="source-line-no">101</span><span id="line.101">            Function&lt;com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder&gt; builder) {</span>
+<span class="source-line-no">102</span><span id="line.102">        this.state = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">103</span><span id="line.103">        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());</span>
+<span class="source-line-no">104</span><span id="line.104">        return this;</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    public CustomLineItemImportDraftBuilder taxRate(</span>
+<span class="source-line-no">108</span><span id="line.108">            Function&lt;com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder&gt; builder) {</span>
+<span class="source-line-no">109</span><span id="line.109">        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();</span>
+<span class="source-line-no">110</span><span id="line.110">        return this;</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public CustomLineItemImportDraftBuilder taxRate(</span>
+<span class="source-line-no">114</span><span id="line.114">            @Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {</span>
+<span class="source-line-no">115</span><span id="line.115">        this.taxRate = taxRate;</span>
+<span class="source-line-no">116</span><span id="line.116">        return this;</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public CustomLineItemImportDraftBuilder taxCategory(</span>
+<span class="source-line-no">120</span><span id="line.120">            Function&lt;com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">121</span><span id="line.121">        this.taxCategory = builder</span>
+<span class="source-line-no">122</span><span id="line.122">                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())</span>
+<span class="source-line-no">123</span><span id="line.123">                .build();</span>
+<span class="source-line-no">124</span><span id="line.124">        return this;</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public CustomLineItemImportDraftBuilder taxCategory(</span>
+<span class="source-line-no">128</span><span id="line.128">            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
+<span class="source-line-no">129</span><span id="line.129">        this.taxCategory = taxCategory;</span>
+<span class="source-line-no">130</span><span id="line.130">        return this;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    public CustomLineItemImportDraftBuilder custom(</span>
+<span class="source-line-no">134</span><span id="line.134">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">135</span><span id="line.135">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
+<span class="source-line-no">136</span><span id="line.136">        return this;</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    public CustomLineItemImportDraftBuilder custom(</span>
+<span class="source-line-no">140</span><span id="line.140">            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">141</span><span id="line.141">        this.custom = custom;</span>
+<span class="source-line-no">142</span><span id="line.142">        return this;</span>
+<span class="source-line-no">143</span><span id="line.143">    }</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    public CustomLineItemImportDraftBuilder shippingDetails(</span>
+<span class="source-line-no">146</span><span id="line.146">            Function&lt;com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">147</span><span id="line.147">        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())</span>
+<span class="source-line-no">148</span><span id="line.148">                .build();</span>
+<span class="source-line-no">149</span><span id="line.149">        return this;</span>
+<span class="source-line-no">150</span><span id="line.150">    }</span>
+<span class="source-line-no">151</span><span id="line.151"></span>
+<span class="source-line-no">152</span><span id="line.152">    public CustomLineItemImportDraftBuilder shippingDetails(</span>
+<span class="source-line-no">153</span><span id="line.153">            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {</span>
+<span class="source-line-no">154</span><span id="line.154">        this.shippingDetails = shippingDetails;</span>
+<span class="source-line-no">155</span><span id="line.155">        return this;</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">159</span><span id="line.159">        return this.name;</span>
+<span class="source-line-no">160</span><span id="line.160">    }</span>
+<span class="source-line-no">161</span><span id="line.161"></span>
+<span class="source-line-no">162</span><span id="line.162">    public Long getQuantity() {</span>
+<span class="source-line-no">163</span><span id="line.163">        return this.quantity;</span>
+<span class="source-line-no">164</span><span id="line.164">    }</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    public com.commercetools.api.models.common.Money getMoney() {</span>
+<span class="source-line-no">167</span><span id="line.167">        return this.money;</span>
 <span class="source-line-no">168</span><span id="line.168">    }</span>
 <span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    @Nullable</span>
-<span class="source-line-no">171</span><span id="line.171">    public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {</span>
-<span class="source-line-no">172</span><span id="line.172">        return this.taxRate;</span>
-<span class="source-line-no">173</span><span id="line.173">    }</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    @Nullable</span>
-<span class="source-line-no">176</span><span id="line.176">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
-<span class="source-line-no">177</span><span id="line.177">        return this.taxCategory;</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    @Nullable</span>
-<span class="source-line-no">181</span><span id="line.181">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">182</span><span id="line.182">        return this.custom;</span>
-<span class="source-line-no">183</span><span id="line.183">    }</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    @Nullable</span>
-<span class="source-line-no">186</span><span id="line.186">    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {</span>
-<span class="source-line-no">187</span><span id="line.187">        return this.shippingDetails;</span>
-<span class="source-line-no">188</span><span id="line.188">    }</span>
-<span class="source-line-no">189</span><span id="line.189"></span>
-<span class="source-line-no">190</span><span id="line.190">    public CustomLineItemImportDraft build() {</span>
-<span class="source-line-no">191</span><span id="line.191">        Objects.requireNonNull(name, CustomLineItemImportDraft.class + ": name is missing");</span>
-<span class="source-line-no">192</span><span id="line.192">        Objects.requireNonNull(quantity, CustomLineItemImportDraft.class + ": quantity is missing");</span>
-<span class="source-line-no">193</span><span id="line.193">        Objects.requireNonNull(money, CustomLineItemImportDraft.class + ": money is missing");</span>
-<span class="source-line-no">194</span><span id="line.194">        Objects.requireNonNull(slug, CustomLineItemImportDraft.class + ": slug is missing");</span>
-<span class="source-line-no">195</span><span id="line.195">        return new CustomLineItemImportDraftImpl(name, quantity, money, slug, state, taxRate, taxCategory, custom,</span>
-<span class="source-line-no">196</span><span id="line.196">            shippingDetails);</span>
+<span class="source-line-no">170</span><span id="line.170">    public String getSlug() {</span>
+<span class="source-line-no">171</span><span id="line.171">        return this.slug;</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    @Nullable</span>
+<span class="source-line-no">175</span><span id="line.175">    public java.util.List&lt;com.commercetools.api.models.order.ItemState&gt; getState() {</span>
+<span class="source-line-no">176</span><span id="line.176">        return this.state;</span>
+<span class="source-line-no">177</span><span id="line.177">    }</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">    @Nullable</span>
+<span class="source-line-no">180</span><span id="line.180">    public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {</span>
+<span class="source-line-no">181</span><span id="line.181">        return this.taxRate;</span>
+<span class="source-line-no">182</span><span id="line.182">    }</span>
+<span class="source-line-no">183</span><span id="line.183"></span>
+<span class="source-line-no">184</span><span id="line.184">    @Nullable</span>
+<span class="source-line-no">185</span><span id="line.185">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
+<span class="source-line-no">186</span><span id="line.186">        return this.taxCategory;</span>
+<span class="source-line-no">187</span><span id="line.187">    }</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    @Nullable</span>
+<span class="source-line-no">190</span><span id="line.190">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">191</span><span id="line.191">        return this.custom;</span>
+<span class="source-line-no">192</span><span id="line.192">    }</span>
+<span class="source-line-no">193</span><span id="line.193"></span>
+<span class="source-line-no">194</span><span id="line.194">    @Nullable</span>
+<span class="source-line-no">195</span><span id="line.195">    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {</span>
+<span class="source-line-no">196</span><span id="line.196">        return this.shippingDetails;</span>
 <span class="source-line-no">197</span><span id="line.197">    }</span>
 <span class="source-line-no">198</span><span id="line.198"></span>
-<span class="source-line-no">199</span><span id="line.199">    /**</span>
-<span class="source-line-no">200</span><span id="line.200">     * builds CustomLineItemImportDraft without checking for non null required values</span>
-<span class="source-line-no">201</span><span id="line.201">     */</span>
-<span class="source-line-no">202</span><span id="line.202">    public CustomLineItemImportDraft buildUnchecked() {</span>
-<span class="source-line-no">203</span><span id="line.203">        return new CustomLineItemImportDraftImpl(name, quantity, money, slug, state, taxRate, taxCategory, custom,</span>
-<span class="source-line-no">204</span><span id="line.204">            shippingDetails);</span>
-<span class="source-line-no">205</span><span id="line.205">    }</span>
-<span class="source-line-no">206</span><span id="line.206"></span>
-<span class="source-line-no">207</span><span id="line.207">    public static CustomLineItemImportDraftBuilder of() {</span>
-<span class="source-line-no">208</span><span id="line.208">        return new CustomLineItemImportDraftBuilder();</span>
-<span class="source-line-no">209</span><span id="line.209">    }</span>
-<span class="source-line-no">210</span><span id="line.210"></span>
-<span class="source-line-no">211</span><span id="line.211">    public static CustomLineItemImportDraftBuilder of(final CustomLineItemImportDraft template) {</span>
-<span class="source-line-no">212</span><span id="line.212">        CustomLineItemImportDraftBuilder builder = new CustomLineItemImportDraftBuilder();</span>
-<span class="source-line-no">213</span><span id="line.213">        builder.name = template.getName();</span>
-<span class="source-line-no">214</span><span id="line.214">        builder.quantity = template.getQuantity();</span>
-<span class="source-line-no">215</span><span id="line.215">        builder.money = template.getMoney();</span>
-<span class="source-line-no">216</span><span id="line.216">        builder.slug = template.getSlug();</span>
-<span class="source-line-no">217</span><span id="line.217">        builder.state = template.getState();</span>
-<span class="source-line-no">218</span><span id="line.218">        builder.taxRate = template.getTaxRate();</span>
-<span class="source-line-no">219</span><span id="line.219">        builder.taxCategory = template.getTaxCategory();</span>
-<span class="source-line-no">220</span><span id="line.220">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">221</span><span id="line.221">        builder.shippingDetails = template.getShippingDetails();</span>
-<span class="source-line-no">222</span><span id="line.222">        return builder;</span>
-<span class="source-line-no">223</span><span id="line.223">    }</span>
-<span class="source-line-no">224</span><span id="line.224"></span>
-<span class="source-line-no">225</span><span id="line.225">}</span>
+<span class="source-line-no">199</span><span id="line.199">    public CustomLineItemImportDraft build() {</span>
+<span class="source-line-no">200</span><span id="line.200">        Objects.requireNonNull(name, CustomLineItemImportDraft.class + ": name is missing");</span>
+<span class="source-line-no">201</span><span id="line.201">        Objects.requireNonNull(quantity, CustomLineItemImportDraft.class + ": quantity is missing");</span>
+<span class="source-line-no">202</span><span id="line.202">        Objects.requireNonNull(money, CustomLineItemImportDraft.class + ": money is missing");</span>
+<span class="source-line-no">203</span><span id="line.203">        Objects.requireNonNull(slug, CustomLineItemImportDraft.class + ": slug is missing");</span>
+<span class="source-line-no">204</span><span id="line.204">        return new CustomLineItemImportDraftImpl(name, quantity, money, slug, state, taxRate, taxCategory, custom,</span>
+<span class="source-line-no">205</span><span id="line.205">            shippingDetails);</span>
+<span class="source-line-no">206</span><span id="line.206">    }</span>
+<span class="source-line-no">207</span><span id="line.207"></span>
+<span class="source-line-no">208</span><span id="line.208">    /**</span>
+<span class="source-line-no">209</span><span id="line.209">     * builds CustomLineItemImportDraft without checking for non null required values</span>
+<span class="source-line-no">210</span><span id="line.210">     */</span>
+<span class="source-line-no">211</span><span id="line.211">    public CustomLineItemImportDraft buildUnchecked() {</span>
+<span class="source-line-no">212</span><span id="line.212">        return new CustomLineItemImportDraftImpl(name, quantity, money, slug, state, taxRate, taxCategory, custom,</span>
+<span class="source-line-no">213</span><span id="line.213">            shippingDetails);</span>
+<span class="source-line-no">214</span><span id="line.214">    }</span>
+<span class="source-line-no">215</span><span id="line.215"></span>
+<span class="source-line-no">216</span><span id="line.216">    public static CustomLineItemImportDraftBuilder of() {</span>
+<span class="source-line-no">217</span><span id="line.217">        return new CustomLineItemImportDraftBuilder();</span>
+<span class="source-line-no">218</span><span id="line.218">    }</span>
+<span class="source-line-no">219</span><span id="line.219"></span>
+<span class="source-line-no">220</span><span id="line.220">    public static CustomLineItemImportDraftBuilder of(final CustomLineItemImportDraft template) {</span>
+<span class="source-line-no">221</span><span id="line.221">        CustomLineItemImportDraftBuilder builder = new CustomLineItemImportDraftBuilder();</span>
+<span class="source-line-no">222</span><span id="line.222">        builder.name = template.getName();</span>
+<span class="source-line-no">223</span><span id="line.223">        builder.quantity = template.getQuantity();</span>
+<span class="source-line-no">224</span><span id="line.224">        builder.money = template.getMoney();</span>
+<span class="source-line-no">225</span><span id="line.225">        builder.slug = template.getSlug();</span>
+<span class="source-line-no">226</span><span id="line.226">        builder.state = template.getState();</span>
+<span class="source-line-no">227</span><span id="line.227">        builder.taxRate = template.getTaxRate();</span>
+<span class="source-line-no">228</span><span id="line.228">        builder.taxCategory = template.getTaxCategory();</span>
+<span class="source-line-no">229</span><span id="line.229">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">230</span><span id="line.230">        builder.shippingDetails = template.getShippingDetails();</span>
+<span class="source-line-no">231</span><span id="line.231">        return builder;</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">}</span>
 
 
 

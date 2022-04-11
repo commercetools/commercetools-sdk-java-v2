@@ -49,10 +49,18 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
         return this;
     }
 
-    public ShoppingListPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()).build());
+    public ShoppingListPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.shopping_list.ShoppingList> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ShoppingListPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.shopping_list.ShoppingList... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
         return this;
     }
 
-    public ShoppingListPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.shopping_list.ShoppingList> results) {
-        this.results = results;
+    public ShoppingListPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()).build());
         return this;
     }
 

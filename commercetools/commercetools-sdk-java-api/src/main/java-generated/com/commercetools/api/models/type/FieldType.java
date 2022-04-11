@@ -34,6 +34,54 @@ public interface FieldType {
     @JsonProperty("name")
     public String getName();
 
+    public static com.commercetools.api.models.type.CustomFieldBooleanTypeBuilder booleanBuilder() {
+        return com.commercetools.api.models.type.CustomFieldBooleanTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldDateTimeTypeBuilder dateTimeBuilder() {
+        return com.commercetools.api.models.type.CustomFieldDateTimeTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldDateTypeBuilder dateBuilder() {
+        return com.commercetools.api.models.type.CustomFieldDateTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldEnumTypeBuilder enumBuilder() {
+        return com.commercetools.api.models.type.CustomFieldEnumTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldLocalizedEnumTypeBuilder localizedEnumBuilder() {
+        return com.commercetools.api.models.type.CustomFieldLocalizedEnumTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldLocalizedStringTypeBuilder localizedStringBuilder() {
+        return com.commercetools.api.models.type.CustomFieldLocalizedStringTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldMoneyTypeBuilder moneyBuilder() {
+        return com.commercetools.api.models.type.CustomFieldMoneyTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldNumberTypeBuilder numberBuilder() {
+        return com.commercetools.api.models.type.CustomFieldNumberTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldReferenceTypeBuilder referenceBuilder() {
+        return com.commercetools.api.models.type.CustomFieldReferenceTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldSetTypeBuilder setBuilder() {
+        return com.commercetools.api.models.type.CustomFieldSetTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldStringTypeBuilder stringBuilder() {
+        return com.commercetools.api.models.type.CustomFieldStringTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.CustomFieldTimeTypeBuilder timeBuilder() {
+        return com.commercetools.api.models.type.CustomFieldTimeTypeBuilder.of();
+    }
+
     default <T> T withFieldType(Function<FieldType, T> helper) {
         return helper.apply(this);
     }

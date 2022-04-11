@@ -18,11 +18,18 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
         return this;
     }
 
-    public ProductTypeImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder, com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder> builder) {
-        this.resources = new ArrayList<>();
-        this.resources.add(
-            builder.apply(com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder.of()).build());
+    public ProductTypeImportRequestBuilder resources(
+            final java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources) {
+        this.resources = resources;
+        return this;
+    }
+
+    public ProductTypeImportRequestBuilder plusResources(
+            final com.commercetools.importapi.models.producttypes.ProductTypeImport... resources) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources.addAll(Arrays.asList(resources));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
         return this;
     }
 
-    public ProductTypeImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources) {
-        this.resources = resources;
+    public ProductTypeImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder, com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources.add(
+            builder.apply(com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder.of()).build());
         return this;
     }
 

@@ -77,6 +77,14 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    public static com.commercetools.api.models.order.CustomLineItemReturnItemBuilder customLineItemReturnItemBuilder() {
+        return com.commercetools.api.models.order.CustomLineItemReturnItemBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.LineItemReturnItemBuilder lineItemReturnItemBuilder() {
+        return com.commercetools.api.models.order.LineItemReturnItemBuilder.of();
+    }
+
     default <T> T withReturnItem(Function<ReturnItem, T> helper) {
         return helper.apply(this);
     }

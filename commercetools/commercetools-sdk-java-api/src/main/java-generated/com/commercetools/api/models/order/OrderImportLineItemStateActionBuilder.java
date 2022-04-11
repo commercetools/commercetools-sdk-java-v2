@@ -24,10 +24,18 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
         return this;
     }
 
-    public OrderImportLineItemStateActionBuilder withState(
-            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
-        this.state = new ArrayList<>();
-        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+    public OrderImportLineItemStateActionBuilder state(
+            final java.util.List<com.commercetools.api.models.order.ItemState> state) {
+        this.state = state;
+        return this;
+    }
+
+    public OrderImportLineItemStateActionBuilder plusState(
+            final com.commercetools.api.models.order.ItemState... state) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.addAll(Arrays.asList(state));
         return this;
     }
 
@@ -40,9 +48,10 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
         return this;
     }
 
-    public OrderImportLineItemStateActionBuilder state(
-            final java.util.List<com.commercetools.api.models.order.ItemState> state) {
-        this.state = state;
+    public OrderImportLineItemStateActionBuilder withState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        this.state = new ArrayList<>();
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
 

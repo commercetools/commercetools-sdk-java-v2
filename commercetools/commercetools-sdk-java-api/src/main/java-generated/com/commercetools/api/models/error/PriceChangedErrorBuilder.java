@@ -45,6 +45,14 @@ public class PriceChangedErrorBuilder implements Builder<PriceChangedError> {
         return this;
     }
 
+    public PriceChangedErrorBuilder plusLineItems(final String... lineItems) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.addAll(Arrays.asList(lineItems));
+        return this;
+    }
+
     public PriceChangedErrorBuilder shipping(final Boolean shipping) {
         this.shipping = shipping;
         return this;

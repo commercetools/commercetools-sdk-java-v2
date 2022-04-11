@@ -56,6 +56,14 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
         return this;
     }
 
+    public PagedQueryResponseBuilder plusResults(final com.commercetools.api.models.common.BaseResource... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
+        return this;
+    }
+
     public PagedQueryResponseBuilder meta(@Nullable final java.lang.Object meta) {
         this.meta = meta;
         return this;

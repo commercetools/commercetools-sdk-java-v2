@@ -22,6 +22,15 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
         return this;
     }
 
+    public ChannelRemoveRolesActionBuilder plusRoles(
+            final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
+        if (this.roles == null) {
+            this.roles = new ArrayList<>();
+        }
+        this.roles.addAll(Arrays.asList(roles));
+        return this;
+    }
+
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }

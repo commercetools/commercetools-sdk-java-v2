@@ -48,10 +48,17 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
         return this;
     }
 
-    public OrderPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build());
+    public OrderPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.order.Order> results) {
+        this.results = results;
+        return this;
+    }
+
+    public OrderPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.order.Order... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +71,10 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
         return this;
     }
 
-    public OrderPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.order.Order> results) {
-        this.results = results;
+    public OrderPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build());
         return this;
     }
 

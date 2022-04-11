@@ -38,10 +38,18 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
         return this;
     }
 
-    public ImageSearchResponseBuilder withResults(
-            Function<com.commercetools.ml.models.image_search.ResultItemBuilder, com.commercetools.ml.models.image_search.ResultItemBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.ml.models.image_search.ResultItemBuilder.of()).build());
+    public ImageSearchResponseBuilder results(
+            final java.util.List<com.commercetools.ml.models.image_search.ResultItem> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ImageSearchResponseBuilder plusResults(
+            final com.commercetools.ml.models.image_search.ResultItem... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -54,9 +62,10 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
         return this;
     }
 
-    public ImageSearchResponseBuilder results(
-            final java.util.List<com.commercetools.ml.models.image_search.ResultItem> results) {
-        this.results = results;
+    public ImageSearchResponseBuilder withResults(
+            Function<com.commercetools.ml.models.image_search.ResultItemBuilder, com.commercetools.ml.models.image_search.ResultItemBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.ml.models.image_search.ResultItemBuilder.of()).build());
         return this;
     }
 

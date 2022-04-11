@@ -103,10 +103,18 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
-    public CustomerImportBuilder withStores(
-            Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReferenceBuilder> builder) {
-        this.stores = new ArrayList<>();
-        this.stores.add(builder.apply(com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of()).build());
+    public CustomerImportBuilder stores(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    public CustomerImportBuilder plusStores(
+            @Nullable final com.commercetools.importapi.models.common.StoreKeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
         return this;
     }
 
@@ -119,9 +127,10 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
-    public CustomerImportBuilder stores(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> stores) {
-        this.stores = stores;
+    public CustomerImportBuilder withStores(
+            Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of()).build());
         return this;
     }
 
@@ -195,11 +204,18 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
-    public CustomerImportBuilder withAddresses(
-            Function<com.commercetools.importapi.models.customers.CustomerAddressBuilder, com.commercetools.importapi.models.customers.CustomerAddressBuilder> builder) {
-        this.addresses = new ArrayList<>();
-        this.addresses
-                .add(builder.apply(com.commercetools.importapi.models.customers.CustomerAddressBuilder.of()).build());
+    public CustomerImportBuilder addresses(
+            final java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+
+    public CustomerImportBuilder plusAddresses(
+            final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<>();
+        }
+        this.addresses.addAll(Arrays.asList(addresses));
         return this;
     }
 
@@ -213,9 +229,11 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
-    public CustomerImportBuilder addresses(
-            final java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses) {
-        this.addresses = addresses;
+    public CustomerImportBuilder withAddresses(
+            Function<com.commercetools.importapi.models.customers.CustomerAddressBuilder, com.commercetools.importapi.models.customers.CustomerAddressBuilder> builder) {
+        this.addresses = new ArrayList<>();
+        this.addresses
+                .add(builder.apply(com.commercetools.importapi.models.customers.CustomerAddressBuilder.of()).build());
         return this;
     }
 
@@ -234,6 +252,14 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    public CustomerImportBuilder plusBillingAddresses(@Nullable final Integer... billingAddresses) {
+        if (this.billingAddresses == null) {
+            this.billingAddresses = new ArrayList<>();
+        }
+        this.billingAddresses.addAll(Arrays.asList(billingAddresses));
+        return this;
+    }
+
     public CustomerImportBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
         this.defaultShippingAddress = defaultShippingAddress;
         return this;
@@ -246,6 +272,14 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
 
     public CustomerImportBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
         this.shippingAddresses = shippingAddresses;
+        return this;
+    }
+
+    public CustomerImportBuilder plusShippingAddresses(@Nullable final Integer... shippingAddresses) {
+        if (this.shippingAddresses == null) {
+            this.shippingAddresses = new ArrayList<>();
+        }
+        this.shippingAddresses.addAll(Arrays.asList(shippingAddresses));
         return this;
     }
 

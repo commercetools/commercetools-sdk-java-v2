@@ -41,10 +41,18 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
         return this;
     }
 
-    public MissingPricesPagedQueryResultBuilder withResults(
-            Function<com.commercetools.ml.models.missing_data.MissingPricesBuilder, com.commercetools.ml.models.missing_data.MissingPricesBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingPricesBuilder.of()).build());
+    public MissingPricesPagedQueryResultBuilder results(
+            final java.util.List<com.commercetools.ml.models.missing_data.MissingPrices> results) {
+        this.results = results;
+        return this;
+    }
+
+    public MissingPricesPagedQueryResultBuilder plusResults(
+            final com.commercetools.ml.models.missing_data.MissingPrices... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -57,9 +65,10 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
         return this;
     }
 
-    public MissingPricesPagedQueryResultBuilder results(
-            final java.util.List<com.commercetools.ml.models.missing_data.MissingPrices> results) {
-        this.results = results;
+    public MissingPricesPagedQueryResultBuilder withResults(
+            Function<com.commercetools.ml.models.missing_data.MissingPricesBuilder, com.commercetools.ml.models.missing_data.MissingPricesBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingPricesBuilder.of()).build());
         return this;
     }
 

@@ -18,11 +18,18 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
         return this;
     }
 
-    public CategoryImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImportBuilder> builder) {
-        this.resources = new ArrayList<>();
-        this.resources
-                .add(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()).build());
+    public CategoryImportRequestBuilder resources(
+            final java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources) {
+        this.resources = resources;
+        return this;
+    }
+
+    public CategoryImportRequestBuilder plusResources(
+            final com.commercetools.importapi.models.categories.CategoryImport... resources) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources.addAll(Arrays.asList(resources));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
         return this;
     }
 
-    public CategoryImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources) {
-        this.resources = resources;
+    public CategoryImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources
+                .add(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()).build());
         return this;
     }
 

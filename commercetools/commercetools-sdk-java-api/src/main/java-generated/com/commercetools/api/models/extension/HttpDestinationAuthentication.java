@@ -24,6 +24,14 @@ public interface HttpDestinationAuthentication {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.extension.AuthorizationHeaderAuthenticationBuilder authorizationHeaderBuilder() {
+        return com.commercetools.api.models.extension.AuthorizationHeaderAuthenticationBuilder.of();
+    }
+
+    public static com.commercetools.api.models.extension.AzureFunctionsAuthenticationBuilder azureFunctionsBuilder() {
+        return com.commercetools.api.models.extension.AzureFunctionsAuthenticationBuilder.of();
+    }
+
     default <T> T withHttpDestinationAuthentication(Function<HttpDestinationAuthentication, T> helper) {
         return helper.apply(this);
     }

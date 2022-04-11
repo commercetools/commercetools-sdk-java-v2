@@ -23,6 +23,10 @@ public interface ShippingRatePriceTier {
     @JsonProperty("type")
     public ShippingRateTierType getType();
 
+    public static com.commercetools.importapi.models.orders.CartClassificationTierBuilder cartClassificationBuilder() {
+        return com.commercetools.importapi.models.orders.CartClassificationTierBuilder.of();
+    }
+
     default <T> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
         return helper.apply(this);
     }

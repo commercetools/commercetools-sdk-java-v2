@@ -27,10 +27,18 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this;
     }
 
-    public SetReservationsChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
+    public SetReservationsChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.Reservation> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetReservationsChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.Reservation... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -43,9 +51,10 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this;
     }
 
-    public SetReservationsChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.Reservation> nextValue) {
-        this.nextValue = nextValue;
+    public SetReservationsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
         return this;
     }
 
@@ -55,10 +64,18 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this;
     }
 
-    public SetReservationsChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
+    public SetReservationsChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.common.Reservation> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetReservationsChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.Reservation... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -71,9 +88,10 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         return this;
     }
 
-    public SetReservationsChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.Reservation> previousValue) {
-        this.previousValue = previousValue;
+    public SetReservationsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.ReservationBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
         return this;
     }
 

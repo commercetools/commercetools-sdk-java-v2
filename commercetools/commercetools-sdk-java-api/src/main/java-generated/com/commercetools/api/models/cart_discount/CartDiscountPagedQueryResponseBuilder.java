@@ -49,10 +49,18 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
         return this;
     }
 
-    public CartDiscountPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscountBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of()).build());
+    public CartDiscountPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscount> results) {
+        this.results = results;
+        return this;
+    }
+
+    public CartDiscountPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.cart_discount.CartDiscount... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
         return this;
     }
 
-    public CartDiscountPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscount> results) {
-        this.results = results;
+    public CartDiscountPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscountBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of()).build());
         return this;
     }
 

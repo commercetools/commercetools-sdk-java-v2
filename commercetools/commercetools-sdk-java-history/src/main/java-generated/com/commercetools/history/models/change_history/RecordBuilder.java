@@ -68,8 +68,20 @@ public class RecordBuilder implements Builder<Record> {
         return this;
     }
 
+    public RecordBuilder label(
+            Function<com.commercetools.history.models.label.LabelBuilder, Builder<? extends com.commercetools.history.models.label.Label>> builder) {
+        this.label = builder.apply(com.commercetools.history.models.label.LabelBuilder.of()).build();
+        return this;
+    }
+
     public RecordBuilder previousLabel(final com.commercetools.history.models.label.Label previousLabel) {
         this.previousLabel = previousLabel;
+        return this;
+    }
+
+    public RecordBuilder previousLabel(
+            Function<com.commercetools.history.models.label.LabelBuilder, Builder<? extends com.commercetools.history.models.label.Label>> builder) {
+        this.previousLabel = builder.apply(com.commercetools.history.models.label.LabelBuilder.of()).build();
         return this;
     }
 
@@ -80,6 +92,30 @@ public class RecordBuilder implements Builder<Record> {
 
     public RecordBuilder changes(final java.util.List<com.commercetools.history.models.change.Change> changes) {
         this.changes = changes;
+        return this;
+    }
+
+    public RecordBuilder plusChanges(final com.commercetools.history.models.change.Change... changes) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes.addAll(Arrays.asList(changes));
+        return this;
+    }
+
+    public RecordBuilder plusChanges(
+            Function<com.commercetools.history.models.change.ChangeBuilder, Builder<? extends com.commercetools.history.models.change.Change>> builder) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes.add(builder.apply(com.commercetools.history.models.change.ChangeBuilder.of()).build());
+        return this;
+    }
+
+    public RecordBuilder withChanges(
+            Function<com.commercetools.history.models.change.ChangeBuilder, Builder<? extends com.commercetools.history.models.change.Change>> builder) {
+        this.changes = new ArrayList<>();
+        this.changes.add(builder.apply(com.commercetools.history.models.change.ChangeBuilder.of()).build());
         return this;
     }
 
@@ -99,10 +135,16 @@ public class RecordBuilder implements Builder<Record> {
         return this;
     }
 
-    public RecordBuilder withStores(
-            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
-        this.stores = new ArrayList<>();
-        this.stores.add(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build());
+    public RecordBuilder stores(final java.util.List<com.commercetools.history.models.common.KeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    public RecordBuilder plusStores(final com.commercetools.history.models.common.KeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
         return this;
     }
 
@@ -115,8 +157,10 @@ public class RecordBuilder implements Builder<Record> {
         return this;
     }
 
-    public RecordBuilder stores(final java.util.List<com.commercetools.history.models.common.KeyReference> stores) {
-        this.stores = stores;
+    public RecordBuilder withStores(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build());
         return this;
     }
 

@@ -44,6 +44,14 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
         return this;
     }
 
+    public SetAssetTagsChangeBuilder plusNextValue(final String... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
+        return this;
+    }
+
     public SetAssetTagsChangeBuilder previousValue(final String... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
@@ -51,6 +59,14 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     public SetAssetTagsChangeBuilder previousValue(final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetAssetTagsChangeBuilder plusPreviousValue(final String... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 

@@ -26,8 +26,20 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    public TaxedPriceBuilder totalNet(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.totalNet = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public TaxedPriceBuilder totalGross(final com.commercetools.api.models.common.TypedMoney totalGross) {
         this.totalGross = totalGross;
+        return this;
+    }
+
+    public TaxedPriceBuilder totalGross(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.totalGross = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 
@@ -36,10 +48,17 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
-    public TaxedPriceBuilder withTaxPortions(
-            Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortionBuilder> builder) {
-        this.taxPortions = new ArrayList<>();
-        this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionBuilder.of()).build());
+    public TaxedPriceBuilder taxPortions(
+            final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions) {
+        this.taxPortions = taxPortions;
+        return this;
+    }
+
+    public TaxedPriceBuilder plusTaxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
+        if (this.taxPortions == null) {
+            this.taxPortions = new ArrayList<>();
+        }
+        this.taxPortions.addAll(Arrays.asList(taxPortions));
         return this;
     }
 
@@ -52,14 +71,21 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
-    public TaxedPriceBuilder taxPortions(
-            final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions) {
-        this.taxPortions = taxPortions;
+    public TaxedPriceBuilder withTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortionBuilder> builder) {
+        this.taxPortions = new ArrayList<>();
+        this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionBuilder.of()).build());
         return this;
     }
 
     public TaxedPriceBuilder totalTax(@Nullable final com.commercetools.api.models.common.TypedMoney totalTax) {
         this.totalTax = totalTax;
+        return this;
+    }
+
+    public TaxedPriceBuilder totalTax(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.totalTax = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 

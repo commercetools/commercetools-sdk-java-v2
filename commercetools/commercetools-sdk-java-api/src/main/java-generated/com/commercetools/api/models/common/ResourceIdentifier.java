@@ -83,6 +83,98 @@ public interface ResourceIdentifier {
 
     public void setKey(final String key);
 
+    public static com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder cartDiscountBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart.CartResourceIdentifierBuilder cartBuilder() {
+        return com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategoryResourceIdentifierBuilder categoryBuilder() {
+        return com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder channelBuilder() {
+        return com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder customerGroupBuilder() {
+        return com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder customerBuilder() {
+        return com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierBuilder discountCodeBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder inventoryEntryBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder orderEditBuilder() {
+        return com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderResourceIdentifierBuilder orderBuilder() {
+        return com.commercetools.api.models.order.OrderResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder paymentBuilder() {
+        return com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierBuilder productDiscountBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product.ProductResourceIdentifierBuilder productBuilder() {
+        return com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder productSelectionBuilder() {
+        return com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder productTypeBuilder() {
+        return com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewResourceIdentifierBuilder reviewBuilder() {
+        return com.commercetools.api.models.review.ReviewResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder shippingMethodBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder shoppingListBuilder() {
+        return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.state.StateResourceIdentifierBuilder stateBuilder() {
+        return com.commercetools.api.models.state.StateResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreResourceIdentifierBuilder storeBuilder() {
+        return com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder taxCategoryBuilder() {
+        return com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.type.TypeResourceIdentifierBuilder typeBuilder() {
+        return com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder zoneBuilder() {
+        return com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of();
+    }
+
     default <T> T withResourceIdentifier(Function<ResourceIdentifier, T> helper) {
         return helper.apply(this);
     }

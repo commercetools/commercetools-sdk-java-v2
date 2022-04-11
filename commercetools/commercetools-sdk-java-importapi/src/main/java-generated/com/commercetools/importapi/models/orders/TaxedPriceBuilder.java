@@ -48,10 +48,18 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
-    public TaxedPriceBuilder withTaxPortions(
-            Function<com.commercetools.importapi.models.orders.TaxPortionBuilder, com.commercetools.importapi.models.orders.TaxPortionBuilder> builder) {
-        this.taxPortions = new ArrayList<>();
-        this.taxPortions.add(builder.apply(com.commercetools.importapi.models.orders.TaxPortionBuilder.of()).build());
+    public TaxedPriceBuilder taxPortions(
+            final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions) {
+        this.taxPortions = taxPortions;
+        return this;
+    }
+
+    public TaxedPriceBuilder plusTaxPortions(
+            final com.commercetools.importapi.models.orders.TaxPortion... taxPortions) {
+        if (this.taxPortions == null) {
+            this.taxPortions = new ArrayList<>();
+        }
+        this.taxPortions.addAll(Arrays.asList(taxPortions));
         return this;
     }
 
@@ -64,9 +72,10 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
-    public TaxedPriceBuilder taxPortions(
-            final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions) {
-        this.taxPortions = taxPortions;
+    public TaxedPriceBuilder withTaxPortions(
+            Function<com.commercetools.importapi.models.orders.TaxPortionBuilder, com.commercetools.importapi.models.orders.TaxPortionBuilder> builder) {
+        this.taxPortions = new ArrayList<>();
+        this.taxPortions.add(builder.apply(com.commercetools.importapi.models.orders.TaxPortionBuilder.of()).build());
         return this;
     }
 

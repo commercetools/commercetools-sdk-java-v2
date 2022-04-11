@@ -23,6 +23,14 @@ public class ProductTypeChangeAttributeOrderByNameActionBuilder
         return this;
     }
 
+    public ProductTypeChangeAttributeOrderByNameActionBuilder plusAttributeNames(final String... attributeNames) {
+        if (this.attributeNames == null) {
+            this.attributeNames = new ArrayList<>();
+        }
+        this.attributeNames.addAll(Arrays.asList(attributeNames));
+        return this;
+    }
+
     public java.util.List<String> getAttributeNames() {
         return this.attributeNames;
     }

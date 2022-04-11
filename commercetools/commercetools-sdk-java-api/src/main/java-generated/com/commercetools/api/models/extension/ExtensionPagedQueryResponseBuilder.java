@@ -49,10 +49,18 @@ public class ExtensionPagedQueryResponseBuilder implements Builder<ExtensionPage
         return this;
     }
 
-    public ExtensionPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.extension.ExtensionBuilder, com.commercetools.api.models.extension.ExtensionBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.extension.ExtensionBuilder.of()).build());
+    public ExtensionPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.extension.Extension> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ExtensionPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.extension.Extension... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class ExtensionPagedQueryResponseBuilder implements Builder<ExtensionPage
         return this;
     }
 
-    public ExtensionPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.extension.Extension> results) {
-        this.results = results;
+    public ExtensionPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.extension.ExtensionBuilder, com.commercetools.api.models.extension.ExtensionBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.extension.ExtensionBuilder.of()).build());
         return this;
     }
 

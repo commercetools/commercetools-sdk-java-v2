@@ -2,6 +2,7 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -24,6 +25,14 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     public HttpDestinationBuilder authentication(
             @Nullable final com.commercetools.api.models.extension.HttpDestinationAuthentication authentication) {
         this.authentication = authentication;
+        return this;
+    }
+
+    public HttpDestinationBuilder authentication(
+            Function<com.commercetools.api.models.extension.HttpDestinationAuthenticationBuilder, Builder<? extends com.commercetools.api.models.extension.HttpDestinationAuthentication>> builder) {
+        this.authentication = builder
+                .apply(com.commercetools.api.models.extension.HttpDestinationAuthenticationBuilder.of())
+                .build();
         return this;
     }
 

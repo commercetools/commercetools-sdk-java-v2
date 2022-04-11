@@ -36,6 +36,14 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
         return this;
     }
 
+    public ProductVariantDeletedMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
+        if (this.removedImageUrls == null) {
+            this.removedImageUrls = new ArrayList<>();
+        }
+        this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));
+        return this;
+    }
+
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }

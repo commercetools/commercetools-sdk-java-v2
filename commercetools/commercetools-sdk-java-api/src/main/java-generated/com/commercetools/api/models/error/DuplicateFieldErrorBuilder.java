@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -55,6 +56,12 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     public DuplicateFieldErrorBuilder conflictingResource(
             @Nullable final com.commercetools.api.models.common.Reference conflictingResource) {
         this.conflictingResource = conflictingResource;
+        return this;
+    }
+
+    public DuplicateFieldErrorBuilder conflictingResource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.conflictingResource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

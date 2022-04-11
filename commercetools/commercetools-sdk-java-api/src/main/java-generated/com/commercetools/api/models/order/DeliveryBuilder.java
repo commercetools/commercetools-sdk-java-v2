@@ -41,10 +41,16 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
-    public DeliveryBuilder withItems(
-            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+    public DeliveryBuilder items(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public DeliveryBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -57,8 +63,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
-    public DeliveryBuilder items(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-        this.items = items;
+    public DeliveryBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -67,10 +75,16 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
-    public DeliveryBuilder withParcels(
-            Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.ParcelBuilder> builder) {
-        this.parcels = new ArrayList<>();
-        this.parcels.add(builder.apply(com.commercetools.api.models.order.ParcelBuilder.of()).build());
+    public DeliveryBuilder parcels(final java.util.List<com.commercetools.api.models.order.Parcel> parcels) {
+        this.parcels = parcels;
+        return this;
+    }
+
+    public DeliveryBuilder plusParcels(final com.commercetools.api.models.order.Parcel... parcels) {
+        if (this.parcels == null) {
+            this.parcels = new ArrayList<>();
+        }
+        this.parcels.addAll(Arrays.asList(parcels));
         return this;
     }
 
@@ -83,8 +97,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
-    public DeliveryBuilder parcels(final java.util.List<com.commercetools.api.models.order.Parcel> parcels) {
-        this.parcels = parcels;
+    public DeliveryBuilder withParcels(
+            Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.ParcelBuilder> builder) {
+        this.parcels = new ArrayList<>();
+        this.parcels.add(builder.apply(com.commercetools.api.models.order.ParcelBuilder.of()).build());
         return this;
     }
 

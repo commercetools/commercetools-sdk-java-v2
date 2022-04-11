@@ -44,6 +44,14 @@ public interface TypedMoney {
 
     public void setCurrencyCode(final String currencyCode);
 
+    public static com.commercetools.importapi.models.common.HighPrecisionMoneyBuilder highPrecisionBuilder() {
+        return com.commercetools.importapi.models.common.HighPrecisionMoneyBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.common.MoneyBuilder centPrecisionBuilder() {
+        return com.commercetools.importapi.models.common.MoneyBuilder.of();
+    }
+
     default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
     }

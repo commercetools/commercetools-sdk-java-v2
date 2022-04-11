@@ -41,10 +41,18 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
         return this;
     }
 
-    public MissingImagesPagedQueryResultBuilder withResults(
-            Function<com.commercetools.ml.models.missing_data.MissingImagesBuilder, com.commercetools.ml.models.missing_data.MissingImagesBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingImagesBuilder.of()).build());
+    public MissingImagesPagedQueryResultBuilder results(
+            final java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results) {
+        this.results = results;
+        return this;
+    }
+
+    public MissingImagesPagedQueryResultBuilder plusResults(
+            final com.commercetools.ml.models.missing_data.MissingImages... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -57,9 +65,10 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
         return this;
     }
 
-    public MissingImagesPagedQueryResultBuilder results(
-            final java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results) {
-        this.results = results;
+    public MissingImagesPagedQueryResultBuilder withResults(
+            Function<com.commercetools.ml.models.missing_data.MissingImagesBuilder, com.commercetools.ml.models.missing_data.MissingImagesBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingImagesBuilder.of()).build());
         return this;
     }
 

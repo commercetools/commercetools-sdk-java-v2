@@ -32,11 +32,18 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
-    public OrderLineItemDiscountSetMessagePayloadBuilder withDiscountedPricePerQuantity(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
-        this.discountedPricePerQuantity = new ArrayList<>();
-        this.discountedPricePerQuantity.add(
-            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
+    public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
+            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+        this.discountedPricePerQuantity = discountedPricePerQuantity;
+        return this;
+    }
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder plusDiscountedPricePerQuantity(
+            final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
+        if (this.discountedPricePerQuantity == null) {
+            this.discountedPricePerQuantity = new ArrayList<>();
+        }
+        this.discountedPricePerQuantity.addAll(Arrays.asList(discountedPricePerQuantity));
         return this;
     }
 
@@ -50,9 +57,11 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         return this;
     }
 
-    public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
-            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
-        this.discountedPricePerQuantity = discountedPricePerQuantity;
+    public OrderLineItemDiscountSetMessagePayloadBuilder withDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        this.discountedPricePerQuantity = new ArrayList<>();
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
         return this;
     }
 

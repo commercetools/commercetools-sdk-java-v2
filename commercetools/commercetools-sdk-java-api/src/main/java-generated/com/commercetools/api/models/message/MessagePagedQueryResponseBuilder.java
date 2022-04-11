@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -50,6 +51,30 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
     public MessagePagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.message.Message> results) {
         this.results = results;
+        return this;
+    }
+
+    public MessagePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.message.Message... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
+        return this;
+    }
+
+    public MessagePagedQueryResponseBuilder plusResults(
+            Function<com.commercetools.api.models.message.MessageBuilder, Builder<? extends com.commercetools.api.models.message.Message>> builder) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(builder.apply(com.commercetools.api.models.message.MessageBuilder.of()).build());
+        return this;
+    }
+
+    public MessagePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.message.MessageBuilder, Builder<? extends com.commercetools.api.models.message.Message>> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.message.MessageBuilder.of()).build());
         return this;
     }
 

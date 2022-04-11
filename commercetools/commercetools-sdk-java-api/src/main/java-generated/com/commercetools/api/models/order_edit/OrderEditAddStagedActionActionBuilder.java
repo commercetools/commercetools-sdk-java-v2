@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,13 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
     public OrderEditAddStagedActionActionBuilder stagedAction(
             final com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction) {
         this.stagedAction = stagedAction;
+        return this;
+    }
+
+    public OrderEditAddStagedActionActionBuilder stagedAction(
+            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+        this.stagedAction = builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of())
+                .build();
         return this;
     }
 

@@ -23,6 +23,10 @@ public interface ImageSearchConfigUpdateAction {
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionBuilder changeStatusBuilder() {
+        return com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionBuilder.of();
+    }
+
     default <T> T withImageSearchConfigUpdateAction(Function<ImageSearchConfigUpdateAction, T> helper) {
         return helper.apply(this);
     }

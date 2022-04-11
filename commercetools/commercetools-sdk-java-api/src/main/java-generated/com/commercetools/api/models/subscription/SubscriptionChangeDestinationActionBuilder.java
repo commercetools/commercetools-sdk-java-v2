@@ -2,6 +2,7 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,12 @@ public class SubscriptionChangeDestinationActionBuilder implements Builder<Subsc
     public SubscriptionChangeDestinationActionBuilder destination(
             final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
+        return this;
+    }
+
+    public SubscriptionChangeDestinationActionBuilder destination(
+            Function<com.commercetools.api.models.subscription.DestinationBuilder, Builder<? extends com.commercetools.api.models.subscription.Destination>> builder) {
+        this.destination = builder.apply(com.commercetools.api.models.subscription.DestinationBuilder.of()).build();
         return this;
     }
 

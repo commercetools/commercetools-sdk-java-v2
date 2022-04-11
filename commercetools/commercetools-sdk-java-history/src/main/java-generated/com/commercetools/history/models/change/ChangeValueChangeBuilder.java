@@ -2,6 +2,7 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,9 +27,24 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
         return this;
     }
 
+    public ChangeValueChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeValueChangeValue>> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
     public ChangeValueChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public ChangeValueChangeBuilder previousValue(
+            Function<com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeValueChangeValue>> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.ChangeValueChangeValueBuilder.of())
+                .build();
         return this;
     }
 

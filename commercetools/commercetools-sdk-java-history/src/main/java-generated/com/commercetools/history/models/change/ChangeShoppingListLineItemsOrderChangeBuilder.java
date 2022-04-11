@@ -27,11 +27,18 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
         return this;
     }
 
-    public ChangeShoppingListLineItemsOrderChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(
-            builder.apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of()).build());
+    public ChangeShoppingListLineItemsOrderChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public ChangeShoppingListLineItemsOrderChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.change_value.ShoppingListLineItemValue... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -45,9 +52,11 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
         return this;
     }
 
-    public ChangeShoppingListLineItemsOrderChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> previousValue) {
-        this.previousValue = previousValue;
+    public ChangeShoppingListLineItemsOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(
+            builder.apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of()).build());
         return this;
     }
 
@@ -57,11 +66,18 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
         return this;
     }
 
-    public ChangeShoppingListLineItemsOrderChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(
-            builder.apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of()).build());
+    public ChangeShoppingListLineItemsOrderChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeShoppingListLineItemsOrderChangeBuilder plusNextValue(
+            final com.commercetools.history.models.change_value.ShoppingListLineItemValue... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -75,9 +91,11 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
         return this;
     }
 
-    public ChangeShoppingListLineItemsOrderChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> nextValue) {
-        this.nextValue = nextValue;
+    public ChangeShoppingListLineItemsOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(
+            builder.apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of()).build());
         return this;
     }
 

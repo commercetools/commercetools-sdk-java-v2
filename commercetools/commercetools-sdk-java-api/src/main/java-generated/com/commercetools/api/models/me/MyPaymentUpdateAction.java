@@ -30,6 +30,34 @@ public interface MyPaymentUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.me.MyPaymentAddTransactionActionBuilder addTransactionBuilder() {
+        return com.commercetools.api.models.me.MyPaymentAddTransactionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyPaymentChangeAmountPlannedActionBuilder changeAmountPlannedBuilder() {
+        return com.commercetools.api.models.me.MyPaymentChangeAmountPlannedActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyPaymentSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceActionBuilder setMethodInfoInterfaceBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodActionBuilder setMethodInfoMethodBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyPaymentSetMethodInfoNameActionBuilder setMethodInfoNameBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldActionBuilder setTransactionCustomFieldBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldActionBuilder.of();
+    }
+
     default <T> T withMyPaymentUpdateAction(Function<MyPaymentUpdateAction, T> helper) {
         return helper.apply(this);
     }

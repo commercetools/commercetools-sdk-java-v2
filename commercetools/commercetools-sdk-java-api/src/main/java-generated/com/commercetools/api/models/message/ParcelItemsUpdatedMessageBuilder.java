@@ -98,6 +98,12 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
+    public ParcelItemsUpdatedMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ParcelItemsUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -132,10 +138,17 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
-    public ParcelItemsUpdatedMessageBuilder withItems(
-            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+    public ParcelItemsUpdatedMessageBuilder items(
+            final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public ParcelItemsUpdatedMessageBuilder plusItems(final com.commercetools.api.models.order.DeliveryItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -148,9 +161,10 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
-    public ParcelItemsUpdatedMessageBuilder items(
-            final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-        this.items = items;
+    public ParcelItemsUpdatedMessageBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -160,10 +174,18 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
-    public ParcelItemsUpdatedMessageBuilder withOldItems(
-            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
-        this.oldItems = new ArrayList<>();
-        this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+    public ParcelItemsUpdatedMessageBuilder oldItems(
+            final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
+        this.oldItems = oldItems;
+        return this;
+    }
+
+    public ParcelItemsUpdatedMessageBuilder plusOldItems(
+            final com.commercetools.api.models.order.DeliveryItem... oldItems) {
+        if (this.oldItems == null) {
+            this.oldItems = new ArrayList<>();
+        }
+        this.oldItems.addAll(Arrays.asList(oldItems));
         return this;
     }
 
@@ -176,9 +198,10 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         return this;
     }
 
-    public ParcelItemsUpdatedMessageBuilder oldItems(
-            final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
-        this.oldItems = oldItems;
+    public ParcelItemsUpdatedMessageBuilder withOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.oldItems = new ArrayList<>();
+        this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 

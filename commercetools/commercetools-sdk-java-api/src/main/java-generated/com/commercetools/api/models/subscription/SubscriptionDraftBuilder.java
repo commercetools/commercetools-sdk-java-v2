@@ -32,11 +32,18 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
-    public SubscriptionDraftBuilder withChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
-        this.changes = new ArrayList<>();
-        this.changes
-                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+    public SubscriptionDraftBuilder changes(
+            @Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
+        this.changes = changes;
+        return this;
+    }
+
+    public SubscriptionDraftBuilder plusChanges(
+            @Nullable final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes.addAll(Arrays.asList(changes));
         return this;
     }
 
@@ -50,15 +57,23 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
-    public SubscriptionDraftBuilder changes(
-            @Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
-        this.changes = changes;
+    public SubscriptionDraftBuilder withChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        this.changes = new ArrayList<>();
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
         return this;
     }
 
     public SubscriptionDraftBuilder destination(
             final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
+        return this;
+    }
+
+    public SubscriptionDraftBuilder destination(
+            Function<com.commercetools.api.models.subscription.DestinationBuilder, Builder<? extends com.commercetools.api.models.subscription.Destination>> builder) {
+        this.destination = builder.apply(com.commercetools.api.models.subscription.DestinationBuilder.of()).build();
         return this;
     }
 
@@ -73,11 +88,18 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
-    public SubscriptionDraftBuilder withMessages(
-            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
-        this.messages = new ArrayList<>();
-        this.messages
-                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
+    public SubscriptionDraftBuilder messages(
+            @Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
+        this.messages = messages;
+        return this;
+    }
+
+    public SubscriptionDraftBuilder plusMessages(
+            @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
+        if (this.messages == null) {
+            this.messages = new ArrayList<>();
+        }
+        this.messages.addAll(Arrays.asList(messages));
         return this;
     }
 
@@ -91,15 +113,23 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
-    public SubscriptionDraftBuilder messages(
-            @Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
-        this.messages = messages;
+    public SubscriptionDraftBuilder withMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+        this.messages = new ArrayList<>();
+        this.messages
+                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
     }
 
     public SubscriptionDraftBuilder format(
             @Nullable final com.commercetools.api.models.subscription.DeliveryFormat format) {
         this.format = format;
+        return this;
+    }
+
+    public SubscriptionDraftBuilder format(
+            Function<com.commercetools.api.models.subscription.DeliveryFormatBuilder, Builder<? extends com.commercetools.api.models.subscription.DeliveryFormat>> builder) {
+        this.format = builder.apply(com.commercetools.api.models.subscription.DeliveryFormatBuilder.of()).build();
         return this;
     }
 

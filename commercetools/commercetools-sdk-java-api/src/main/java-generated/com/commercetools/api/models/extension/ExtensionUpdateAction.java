@@ -27,6 +27,22 @@ public interface ExtensionUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.extension.ExtensionChangeDestinationActionBuilder changeDestinationBuilder() {
+        return com.commercetools.api.models.extension.ExtensionChangeDestinationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.extension.ExtensionChangeTriggersActionBuilder changeTriggersBuilder() {
+        return com.commercetools.api.models.extension.ExtensionChangeTriggersActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.extension.ExtensionSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.extension.ExtensionSetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionBuilder setTimeoutInMsBuilder() {
+        return com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionBuilder.of();
+    }
+
     default <T> T withExtensionUpdateAction(Function<ExtensionUpdateAction, T> helper) {
         return helper.apply(this);
     }

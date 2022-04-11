@@ -64,6 +64,14 @@ public class ProductSetAssetTagsActionBuilder implements Builder<ProductSetAsset
         return this;
     }
 
+    public ProductSetAssetTagsActionBuilder plusTags(@Nullable final String... tags) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.addAll(Arrays.asList(tags));
+        return this;
+    }
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;

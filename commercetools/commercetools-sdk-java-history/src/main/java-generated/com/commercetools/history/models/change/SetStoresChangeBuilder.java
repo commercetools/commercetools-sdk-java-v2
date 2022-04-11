@@ -27,10 +27,18 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
         return this;
     }
 
-    public SetStoresChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+    public SetStoresChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetStoresChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.Reference... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -43,9 +51,10 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
         return this;
     }
 
-    public SetStoresChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.Reference> previousValue) {
-        this.previousValue = previousValue;
+    public SetStoresChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 
@@ -54,10 +63,17 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
         return this;
     }
 
-    public SetStoresChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
+    public SetStoresChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.Reference> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetStoresChangeBuilder plusNextValue(final com.commercetools.history.models.common.Reference... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -70,9 +86,10 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
         return this;
     }
 
-    public SetStoresChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.Reference> nextValue) {
-        this.nextValue = nextValue;
+    public SetStoresChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 

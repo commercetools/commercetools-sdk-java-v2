@@ -30,6 +30,14 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
         return this;
     }
 
+    public ChangeGroupsChangeBuilder plusPreviousValue(final String... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
+        return this;
+    }
+
     public ChangeGroupsChangeBuilder nextValue(final String... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
@@ -37,6 +45,14 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     public ChangeGroupsChangeBuilder nextValue(final java.util.List<String> nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeGroupsChangeBuilder plusNextValue(final String... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 

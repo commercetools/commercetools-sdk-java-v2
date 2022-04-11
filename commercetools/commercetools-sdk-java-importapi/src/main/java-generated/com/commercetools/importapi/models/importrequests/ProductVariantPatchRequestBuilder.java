@@ -18,11 +18,18 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
         return this;
     }
 
-    public ProductVariantPatchRequestBuilder withPatches(
-            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
-        this.patches = new ArrayList<>();
-        this.patches.add(
-            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
+    public ProductVariantPatchRequestBuilder patches(
+            final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
+        this.patches = patches;
+        return this;
+    }
+
+    public ProductVariantPatchRequestBuilder plusPatches(
+            final com.commercetools.importapi.models.productvariants.ProductVariantPatch... patches) {
+        if (this.patches == null) {
+            this.patches = new ArrayList<>();
+        }
+        this.patches.addAll(Arrays.asList(patches));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
         return this;
     }
 
-    public ProductVariantPatchRequestBuilder patches(
-            final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
-        this.patches = patches;
+    public ProductVariantPatchRequestBuilder withPatches(
+            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
+        this.patches = new ArrayList<>();
+        this.patches.add(
+            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
         return this;
     }
 

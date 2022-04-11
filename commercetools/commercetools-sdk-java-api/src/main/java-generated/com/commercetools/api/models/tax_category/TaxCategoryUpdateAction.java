@@ -29,6 +29,30 @@ public interface TaxCategoryUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateActionBuilder addTaxRateBuilder() {
+        return com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.tax_category.TaxCategoryChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.tax_category.TaxCategoryChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateActionBuilder removeTaxRateBuilder() {
+        return com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateActionBuilder replaceTaxRateBuilder() {
+        return com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.tax_category.TaxCategorySetDescriptionActionBuilder setDescriptionBuilder() {
+        return com.commercetools.api.models.tax_category.TaxCategorySetDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.tax_category.TaxCategorySetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.tax_category.TaxCategorySetKeyActionBuilder.of();
+    }
+
     default <T> T withTaxCategoryUpdateAction(Function<TaxCategoryUpdateAction, T> helper) {
         return helper.apply(this);
     }

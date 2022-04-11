@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,13 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
     public StoreRemoveProductSelectionActionBuilder productSelection(
             final com.commercetools.api.models.common.ResourceIdentifier productSelection) {
         this.productSelection = productSelection;
+        return this;
+    }
+
+    public StoreRemoveProductSelectionActionBuilder productSelection(
+            Function<com.commercetools.api.models.common.ResourceIdentifierBuilder, Builder<? extends com.commercetools.api.models.common.ResourceIdentifier>> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.common.ResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 

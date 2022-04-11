@@ -46,6 +46,14 @@ public class ProjectNotConfiguredForLanguagesErrorBuilder implements Builder<Pro
         return this;
     }
 
+    public ProjectNotConfiguredForLanguagesErrorBuilder plusLanguages(@Nullable final String... languages) {
+        if (this.languages == null) {
+            this.languages = new ArrayList<>();
+        }
+        this.languages.addAll(Arrays.asList(languages));
+        return this;
+    }
+
     public String getMessage() {
         return this.message;
     }

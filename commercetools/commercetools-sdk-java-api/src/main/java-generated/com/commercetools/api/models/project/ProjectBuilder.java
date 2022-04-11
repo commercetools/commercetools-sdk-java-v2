@@ -70,6 +70,14 @@ public class ProjectBuilder implements Builder<Project> {
         return this;
     }
 
+    public ProjectBuilder plusCountries(final String... countries) {
+        if (this.countries == null) {
+            this.countries = new ArrayList<>();
+        }
+        this.countries.addAll(Arrays.asList(countries));
+        return this;
+    }
+
     public ProjectBuilder currencies(final String... currencies) {
         this.currencies = new ArrayList<>(Arrays.asList(currencies));
         return this;
@@ -80,6 +88,14 @@ public class ProjectBuilder implements Builder<Project> {
         return this;
     }
 
+    public ProjectBuilder plusCurrencies(final String... currencies) {
+        if (this.currencies == null) {
+            this.currencies = new ArrayList<>();
+        }
+        this.currencies.addAll(Arrays.asList(currencies));
+        return this;
+    }
+
     public ProjectBuilder languages(final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
@@ -87,6 +103,14 @@ public class ProjectBuilder implements Builder<Project> {
 
     public ProjectBuilder languages(final java.util.List<String> languages) {
         this.languages = languages;
+        return this;
+    }
+
+    public ProjectBuilder plusLanguages(final String... languages) {
+        if (this.languages == null) {
+            this.languages = new ArrayList<>();
+        }
+        this.languages.addAll(Arrays.asList(languages));
         return this;
     }
 
@@ -138,6 +162,14 @@ public class ProjectBuilder implements Builder<Project> {
     public ProjectBuilder shippingRateInputType(
             @Nullable final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
         this.shippingRateInputType = shippingRateInputType;
+        return this;
+    }
+
+    public ProjectBuilder shippingRateInputType(
+            Function<com.commercetools.api.models.project.ShippingRateInputTypeBuilder, Builder<? extends com.commercetools.api.models.project.ShippingRateInputType>> builder) {
+        this.shippingRateInputType = builder
+                .apply(com.commercetools.api.models.project.ShippingRateInputTypeBuilder.of())
+                .build();
         return this;
     }
 

@@ -27,11 +27,18 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
-    public ChangeFieldDefinitionOrderChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(
-            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
+    public ChangeFieldDefinitionOrderChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public ChangeFieldDefinitionOrderChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.change_value.FieldDefinitionOrderValue... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -45,9 +52,11 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
-    public ChangeFieldDefinitionOrderChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> previousValue) {
-        this.previousValue = previousValue;
+    public ChangeFieldDefinitionOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
         return this;
     }
 
@@ -57,11 +66,18 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
-    public ChangeFieldDefinitionOrderChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(
-            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
+    public ChangeFieldDefinitionOrderChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeFieldDefinitionOrderChangeBuilder plusNextValue(
+            final com.commercetools.history.models.change_value.FieldDefinitionOrderValue... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -75,9 +91,11 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         return this;
     }
 
-    public ChangeFieldDefinitionOrderChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> nextValue) {
-        this.nextValue = nextValue;
+    public ChangeFieldDefinitionOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
         return this;
     }
 

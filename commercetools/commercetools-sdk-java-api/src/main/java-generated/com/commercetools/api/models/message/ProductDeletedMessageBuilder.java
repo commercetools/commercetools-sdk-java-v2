@@ -93,6 +93,12 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
         return this;
     }
 
+    public ProductDeletedMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ProductDeletedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -119,6 +125,14 @@ public class ProductDeletedMessageBuilder implements Builder<ProductDeletedMessa
 
     public ProductDeletedMessageBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
+        return this;
+    }
+
+    public ProductDeletedMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {
+        if (this.removedImageUrls == null) {
+            this.removedImageUrls = new ArrayList<>();
+        }
+        this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));
         return this;
     }
 

@@ -31,11 +31,18 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
         return this;
     }
 
-    public DiscountedLineItemPriceBuilder withIncludedDiscounts(
-            Function<com.commercetools.history.models.common.DiscountedLineItemPortionBuilder, com.commercetools.history.models.common.DiscountedLineItemPortionBuilder> builder) {
-        this.includedDiscounts = new ArrayList<>();
-        this.includedDiscounts.add(
-            builder.apply(com.commercetools.history.models.common.DiscountedLineItemPortionBuilder.of()).build());
+    public DiscountedLineItemPriceBuilder includedDiscounts(
+            final java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts) {
+        this.includedDiscounts = includedDiscounts;
+        return this;
+    }
+
+    public DiscountedLineItemPriceBuilder plusIncludedDiscounts(
+            final com.commercetools.history.models.common.DiscountedLineItemPortion... includedDiscounts) {
+        if (this.includedDiscounts == null) {
+            this.includedDiscounts = new ArrayList<>();
+        }
+        this.includedDiscounts.addAll(Arrays.asList(includedDiscounts));
         return this;
     }
 
@@ -49,9 +56,11 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
         return this;
     }
 
-    public DiscountedLineItemPriceBuilder includedDiscounts(
-            final java.util.List<com.commercetools.history.models.common.DiscountedLineItemPortion> includedDiscounts) {
-        this.includedDiscounts = includedDiscounts;
+    public DiscountedLineItemPriceBuilder withIncludedDiscounts(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPortionBuilder, com.commercetools.history.models.common.DiscountedLineItemPortionBuilder> builder) {
+        this.includedDiscounts = new ArrayList<>();
+        this.includedDiscounts.add(
+            builder.apply(com.commercetools.history.models.common.DiscountedLineItemPortionBuilder.of()).build());
         return this;
     }
 

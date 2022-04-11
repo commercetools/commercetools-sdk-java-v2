@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -40,6 +41,12 @@ public class ReviewRatingSetMessagePayloadBuilder implements Builder<ReviewRatin
     public ReviewRatingSetMessagePayloadBuilder target(
             @Nullable final com.commercetools.api.models.common.Reference target) {
         this.target = target;
+        return this;
+    }
+
+    public ReviewRatingSetMessagePayloadBuilder target(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.target = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

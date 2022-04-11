@@ -2,6 +2,7 @@
 package com.commercetools.api.models.customer;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,6 +27,31 @@ public class CustomerUpdateBuilder implements Builder<CustomerUpdate> {
     public CustomerUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.customer.CustomerUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public CustomerUpdateBuilder plusActions(
+            final com.commercetools.api.models.customer.CustomerUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public CustomerUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.customer.CustomerUpdateActionBuilder, Builder<? extends com.commercetools.api.models.customer.CustomerUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(builder.apply(com.commercetools.api.models.customer.CustomerUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerUpdateBuilder withActions(
+            Function<com.commercetools.api.models.customer.CustomerUpdateActionBuilder, Builder<? extends com.commercetools.api.models.customer.CustomerUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(builder.apply(com.commercetools.api.models.customer.CustomerUpdateActionBuilder.of()).build());
         return this;
     }
 

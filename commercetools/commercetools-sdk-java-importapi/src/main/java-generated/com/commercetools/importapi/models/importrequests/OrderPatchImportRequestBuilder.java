@@ -18,11 +18,18 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
         return this;
     }
 
-    public OrderPatchImportRequestBuilder withPatches(
-            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
-        this.patches = new ArrayList<>();
-        this.patches.add(
-            builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()).build());
+    public OrderPatchImportRequestBuilder patches(
+            final java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches) {
+        this.patches = patches;
+        return this;
+    }
+
+    public OrderPatchImportRequestBuilder plusPatches(
+            final com.commercetools.importapi.models.order_patches.OrderPatchImport... patches) {
+        if (this.patches == null) {
+            this.patches = new ArrayList<>();
+        }
+        this.patches.addAll(Arrays.asList(patches));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
         return this;
     }
 
-    public OrderPatchImportRequestBuilder patches(
-            final java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches) {
-        this.patches = patches;
+    public OrderPatchImportRequestBuilder withPatches(
+            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
+        this.patches = new ArrayList<>();
+        this.patches.add(
+            builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()).build());
         return this;
     }
 

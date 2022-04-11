@@ -50,6 +50,12 @@ public class TransactionBuilder implements Builder<Transaction> {
         return this;
     }
 
+    public TransactionBuilder amount(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public TransactionBuilder interactionId(@Nullable final String interactionId) {
         this.interactionId = interactionId;
         return this;

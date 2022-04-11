@@ -50,6 +50,12 @@ public class PriceBuilder implements Builder<Price> {
         return this;
     }
 
+    public PriceBuilder value(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public PriceBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
@@ -117,10 +123,16 @@ public class PriceBuilder implements Builder<Price> {
         return this;
     }
 
-    public PriceBuilder withTiers(
-            Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTierBuilder> builder) {
-        this.tiers = new ArrayList<>();
-        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierBuilder.of()).build());
+    public PriceBuilder tiers(@Nullable final java.util.List<com.commercetools.api.models.common.PriceTier> tiers) {
+        this.tiers = tiers;
+        return this;
+    }
+
+    public PriceBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.addAll(Arrays.asList(tiers));
         return this;
     }
 
@@ -133,8 +145,10 @@ public class PriceBuilder implements Builder<Price> {
         return this;
     }
 
-    public PriceBuilder tiers(@Nullable final java.util.List<com.commercetools.api.models.common.PriceTier> tiers) {
-        this.tiers = tiers;
+    public PriceBuilder withTiers(
+            Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTierBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierBuilder.of()).build());
         return this;
     }
 

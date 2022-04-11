@@ -193,10 +193,16 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder withAddresses(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
-        this.addresses = new ArrayList<>();
-        this.addresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
+    public CustomerBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+
+    public CustomerBuilder plusAddresses(final com.commercetools.api.models.common.Address... addresses) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<>();
+        }
+        this.addresses.addAll(Arrays.asList(addresses));
         return this;
     }
 
@@ -209,8 +215,10 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
-        this.addresses = addresses;
+    public CustomerBuilder withAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.addresses = new ArrayList<>();
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
         return this;
     }
 
@@ -229,6 +237,14 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
+    public CustomerBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
+        if (this.shippingAddressIds == null) {
+            this.shippingAddressIds = new ArrayList<>();
+        }
+        this.shippingAddressIds.addAll(Arrays.asList(shippingAddressIds));
+        return this;
+    }
+
     public CustomerBuilder defaultBillingAddressId(@Nullable final String defaultBillingAddressId) {
         this.defaultBillingAddressId = defaultBillingAddressId;
         return this;
@@ -241,6 +257,14 @@ public class CustomerBuilder implements Builder<Customer> {
 
     public CustomerBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
         this.billingAddressIds = billingAddressIds;
+        return this;
+    }
+
+    public CustomerBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
+        if (this.billingAddressIds == null) {
+            this.billingAddressIds = new ArrayList<>();
+        }
+        this.billingAddressIds.addAll(Arrays.asList(billingAddressIds));
         return this;
     }
 
@@ -299,10 +323,17 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder withStores(
-            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
-        this.stores = new ArrayList<>();
-        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+    public CustomerBuilder stores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    public CustomerBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
         return this;
     }
 
@@ -315,9 +346,10 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder stores(
-            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
-        this.stores = stores;
+    public CustomerBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
         return this;
     }
 

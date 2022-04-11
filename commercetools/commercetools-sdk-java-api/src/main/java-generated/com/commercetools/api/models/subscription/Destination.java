@@ -29,6 +29,34 @@ public interface Destination {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.subscription.AzureEventGridDestinationBuilder eventGridBuilder() {
+        return com.commercetools.api.models.subscription.AzureEventGridDestinationBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder azureServiceBusBuilder() {
+        return com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.EventBridgeDestinationBuilder eventBridgeBuilder() {
+        return com.commercetools.api.models.subscription.EventBridgeDestinationBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationBuilder googleCloudPubSubBuilder() {
+        return com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.IronMqDestinationBuilder ironMqBuilder() {
+        return com.commercetools.api.models.subscription.IronMqDestinationBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.SnsDestinationBuilder snsBuilder() {
+        return com.commercetools.api.models.subscription.SnsDestinationBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.SqsDestinationBuilder sqsBuilder() {
+        return com.commercetools.api.models.subscription.SqsDestinationBuilder.of();
+    }
+
     default <T> T withDestination(Function<Destination, T> helper) {
         return helper.apply(this);
     }

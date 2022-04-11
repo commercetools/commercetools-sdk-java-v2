@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shipping_method;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,33 @@ public class ShippingMethodUpdateBuilder implements Builder<ShippingMethodUpdate
     public ShippingMethodUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public ShippingMethodUpdateBuilder plusActions(
+            final com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public ShippingMethodUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder, Builder<? extends com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public ShippingMethodUpdateBuilder withActions(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder, Builder<? extends com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodUpdateActionBuilder.of()).build());
         return this;
     }
 

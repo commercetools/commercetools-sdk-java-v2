@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,6 +27,30 @@ public class ProductUpdateBuilder implements Builder<ProductUpdate> {
     public ProductUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.product.ProductUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public ProductUpdateBuilder plusActions(final com.commercetools.api.models.product.ProductUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public ProductUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.product.ProductUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product.ProductUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(builder.apply(com.commercetools.api.models.product.ProductUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public ProductUpdateBuilder withActions(
+            Function<com.commercetools.api.models.product.ProductUpdateActionBuilder, Builder<? extends com.commercetools.api.models.product.ProductUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(builder.apply(com.commercetools.api.models.product.ProductUpdateActionBuilder.of()).build());
         return this;
     }
 

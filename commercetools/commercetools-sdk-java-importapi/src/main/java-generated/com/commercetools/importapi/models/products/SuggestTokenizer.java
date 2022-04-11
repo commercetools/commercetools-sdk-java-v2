@@ -27,6 +27,14 @@ public interface SuggestTokenizer {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.importapi.models.products.CustomTokenizerBuilder customBuilder() {
+        return com.commercetools.importapi.models.products.CustomTokenizerBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.products.WhitespaceTokenizerBuilder whitespaceBuilder() {
+        return com.commercetools.importapi.models.products.WhitespaceTokenizerBuilder.of();
+    }
+
     default <T> T withSuggestTokenizer(Function<SuggestTokenizer, T> helper) {
         return helper.apply(this);
     }

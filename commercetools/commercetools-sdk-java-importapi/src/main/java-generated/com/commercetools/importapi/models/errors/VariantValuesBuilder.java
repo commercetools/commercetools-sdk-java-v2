@@ -29,10 +29,17 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
-    public VariantValuesBuilder withPrices(
-            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
-        this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
+    public VariantValuesBuilder prices(
+            final java.util.List<com.commercetools.importapi.models.prices.PriceImport> prices) {
+        this.prices = prices;
+        return this;
+    }
+
+    public VariantValuesBuilder plusPrices(final com.commercetools.importapi.models.prices.PriceImport... prices) {
+        if (this.prices == null) {
+            this.prices = new ArrayList<>();
+        }
+        this.prices.addAll(Arrays.asList(prices));
         return this;
     }
 
@@ -45,9 +52,10 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
-    public VariantValuesBuilder prices(
-            final java.util.List<com.commercetools.importapi.models.prices.PriceImport> prices) {
-        this.prices = prices;
+    public VariantValuesBuilder withPrices(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
+        this.prices = new ArrayList<>();
+        this.prices.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
         return this;
     }
 
@@ -60,6 +68,33 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     public VariantValuesBuilder attributes(
             final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
+        return this;
+    }
+
+    public VariantValuesBuilder plusAttributes(
+            final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    public VariantValuesBuilder plusAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    public VariantValuesBuilder withAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
         return this;
     }
 

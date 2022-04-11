@@ -28,6 +28,14 @@ public class GeoLocationBuilder implements Builder<GeoLocation> {
         return this;
     }
 
+    public GeoLocationBuilder plusCoordinates(final Integer... coordinates) {
+        if (this.coordinates == null) {
+            this.coordinates = new ArrayList<>();
+        }
+        this.coordinates.addAll(Arrays.asList(coordinates));
+        return this;
+    }
+
     public String getType() {
         return this.type;
     }

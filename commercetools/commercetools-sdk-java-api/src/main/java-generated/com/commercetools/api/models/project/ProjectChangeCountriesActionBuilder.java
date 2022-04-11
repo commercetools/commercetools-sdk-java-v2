@@ -21,6 +21,14 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
         return this;
     }
 
+    public ProjectChangeCountriesActionBuilder plusCountries(final String... countries) {
+        if (this.countries == null) {
+            this.countries = new ArrayList<>();
+        }
+        this.countries.addAll(Arrays.asList(countries));
+        return this;
+    }
+
     public java.util.List<String> getCountries() {
         return this.countries;
     }

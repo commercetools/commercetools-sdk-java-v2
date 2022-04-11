@@ -58,10 +58,16 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
-    public ParcelBuilder withItems(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+    public ParcelBuilder items(final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public ParcelBuilder plusItems(final com.commercetools.history.models.common.DeliveryItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -74,8 +80,10 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
-    public ParcelBuilder items(final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
-        this.items = items;
+    public ParcelBuilder withItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 

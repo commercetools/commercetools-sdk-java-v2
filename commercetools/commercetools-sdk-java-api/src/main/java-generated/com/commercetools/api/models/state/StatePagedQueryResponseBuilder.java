@@ -48,10 +48,17 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
         return this;
     }
 
-    public StatePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.state.StateBuilder.of()).build());
+    public StatePagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.state.State> results) {
+        this.results = results;
+        return this;
+    }
+
+    public StatePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.state.State... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +71,10 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
         return this;
     }
 
-    public StatePagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.state.State> results) {
-        this.results = results;
+    public StatePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.state.StateBuilder.of()).build());
         return this;
     }
 

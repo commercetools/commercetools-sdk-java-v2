@@ -48,10 +48,16 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
         return this;
     }
 
-    public ZonePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.ZoneBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()).build());
+    public ZonePagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.zone.Zone> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ZonePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.zone.Zone... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,8 +70,10 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
         return this;
     }
 
-    public ZonePagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.zone.Zone> results) {
-        this.results = results;
+    public ZonePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.ZoneBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()).build());
         return this;
     }
 

@@ -44,6 +44,90 @@ public interface MyCustomerUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.me.MyCustomerAddAddressActionBuilder addAddressBuilder() {
+        return com.commercetools.api.models.me.MyCustomerAddAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionBuilder addBillingAddressIdBuilder() {
+        return com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerAddShippingAddressIdActionBuilder addShippingAddressIdBuilder() {
+        return com.commercetools.api.models.me.MyCustomerAddShippingAddressIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerChangeAddressActionBuilder changeAddressBuilder() {
+        return com.commercetools.api.models.me.MyCustomerChangeAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerChangeEmailActionBuilder changeEmailBuilder() {
+        return com.commercetools.api.models.me.MyCustomerChangeEmailActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerRemoveAddressActionBuilder removeAddressBuilder() {
+        return com.commercetools.api.models.me.MyCustomerRemoveAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionBuilder removeBillingAddressIdBuilder() {
+        return com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdActionBuilder removeShippingAddressIdBuilder() {
+        return com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetCompanyNameActionBuilder setCompanyNameBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetCompanyNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetDateOfBirthActionBuilder setDateOfBirthBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetDateOfBirthActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionBuilder setDefaultBillingAddressBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionBuilder setDefaultShippingAddressBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetFirstNameActionBuilder setFirstNameBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetFirstNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetLastNameActionBuilder setLastNameBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetLastNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetLocaleActionBuilder setLocaleBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetLocaleActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetMiddleNameActionBuilder setMiddleNameBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetMiddleNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetSalutationActionBuilder setSalutationBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetSalutationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetTitleActionBuilder setTitleBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetTitleActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.me.MyCustomerSetVatIdActionBuilder setVatIdBuilder() {
+        return com.commercetools.api.models.me.MyCustomerSetVatIdActionBuilder.of();
+    }
+
     default <T> T withMyCustomerUpdateAction(Function<MyCustomerUpdateAction, T> helper) {
         return helper.apply(this);
     }

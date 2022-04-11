@@ -27,6 +27,26 @@ public interface CartDiscountTarget {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetBuilder customLineItemsBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder lineItemsBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder shippingBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetBuilder multiBuyCustomLineItemsBuilder() {
+        return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetBuilder multiBuyLineItemsBuilder() {
+        return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetBuilder.of();
+    }
+
     default <T> T withCartDiscountTarget(Function<CartDiscountTarget, T> helper) {
         return helper.apply(this);
     }

@@ -17,10 +17,18 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
         return this;
     }
 
-    public CustomFieldEnumTypeBuilder withValues(
-            Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValueBuilder> builder) {
-        this.values = new ArrayList<>();
-        this.values.add(builder.apply(com.commercetools.api.models.type.CustomFieldEnumValueBuilder.of()).build());
+    public CustomFieldEnumTypeBuilder values(
+            final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values) {
+        this.values = values;
+        return this;
+    }
+
+    public CustomFieldEnumTypeBuilder plusValues(
+            final com.commercetools.api.models.type.CustomFieldEnumValue... values) {
+        if (this.values == null) {
+            this.values = new ArrayList<>();
+        }
+        this.values.addAll(Arrays.asList(values));
         return this;
     }
 
@@ -33,9 +41,10 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
         return this;
     }
 
-    public CustomFieldEnumTypeBuilder values(
-            final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values) {
-        this.values = values;
+    public CustomFieldEnumTypeBuilder withValues(
+            Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValueBuilder> builder) {
+        this.values = new ArrayList<>();
+        this.values.add(builder.apply(com.commercetools.api.models.type.CustomFieldEnumValueBuilder.of()).build());
         return this;
     }
 

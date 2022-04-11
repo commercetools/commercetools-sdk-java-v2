@@ -21,10 +21,18 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
         return this;
     }
 
-    public OrderReturnInfoSetMessagePayloadBuilder withReturnInfo(
-            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
-        this.returnInfo = new ArrayList<>();
-        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
+    public OrderReturnInfoSetMessagePayloadBuilder returnInfo(
+            @Nullable final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
+        this.returnInfo = returnInfo;
+        return this;
+    }
+
+    public OrderReturnInfoSetMessagePayloadBuilder plusReturnInfo(
+            @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
+        if (this.returnInfo == null) {
+            this.returnInfo = new ArrayList<>();
+        }
+        this.returnInfo.addAll(Arrays.asList(returnInfo));
         return this;
     }
 
@@ -37,9 +45,10 @@ public class OrderReturnInfoSetMessagePayloadBuilder implements Builder<OrderRet
         return this;
     }
 
-    public OrderReturnInfoSetMessagePayloadBuilder returnInfo(
-            @Nullable final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
-        this.returnInfo = returnInfo;
+    public OrderReturnInfoSetMessagePayloadBuilder withReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
+        this.returnInfo = new ArrayList<>();
+        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
         return this;
     }
 

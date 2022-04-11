@@ -92,6 +92,12 @@ public class ProductRevertedStagedChangesMessageBuilder implements Builder<Produ
         return this;
     }
 
+    public ProductRevertedStagedChangesMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ProductRevertedStagedChangesMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -118,6 +124,14 @@ public class ProductRevertedStagedChangesMessageBuilder implements Builder<Produ
 
     public ProductRevertedStagedChangesMessageBuilder removedImageUrls(final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
+        return this;
+    }
+
+    public ProductRevertedStagedChangesMessageBuilder plusRemovedImageUrls(final String... removedImageUrls) {
+        if (this.removedImageUrls == null) {
+            this.removedImageUrls = new ArrayList<>();
+        }
+        this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));
         return this;
     }
 

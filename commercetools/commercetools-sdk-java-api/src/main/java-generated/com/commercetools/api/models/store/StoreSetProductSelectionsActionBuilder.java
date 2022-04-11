@@ -18,11 +18,18 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
         return this;
     }
 
-    public StoreSetProductSelectionsActionBuilder withProductSelections(
-            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder> builder) {
-        this.productSelections = new ArrayList<>();
-        this.productSelections.add(
-            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()).build());
+    public StoreSetProductSelectionsActionBuilder productSelections(
+            final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections) {
+        this.productSelections = productSelections;
+        return this;
+    }
+
+    public StoreSetProductSelectionsActionBuilder plusProductSelections(
+            final com.commercetools.api.models.store.ProductSelectionSettingDraft... productSelections) {
+        if (this.productSelections == null) {
+            this.productSelections = new ArrayList<>();
+        }
+        this.productSelections.addAll(Arrays.asList(productSelections));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
         return this;
     }
 
-    public StoreSetProductSelectionsActionBuilder productSelections(
-            final java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> productSelections) {
-        this.productSelections = productSelections;
+    public StoreSetProductSelectionsActionBuilder withProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder> builder) {
+        this.productSelections = new ArrayList<>();
+        this.productSelections.add(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()).build());
         return this;
     }
 

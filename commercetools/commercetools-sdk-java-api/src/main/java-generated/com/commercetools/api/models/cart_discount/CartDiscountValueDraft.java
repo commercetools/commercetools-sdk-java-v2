@@ -26,6 +26,22 @@ public interface CartDiscountValueDraft {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftBuilder absoluteBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraftBuilder fixedBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraftBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftBuilder giftLineItemBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftBuilder.of();
+    }
+
+    public static com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftBuilder relativeBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftBuilder.of();
+    }
+
     default <T> T withCartDiscountValueDraft(Function<CartDiscountValueDraft, T> helper) {
         return helper.apply(this);
     }

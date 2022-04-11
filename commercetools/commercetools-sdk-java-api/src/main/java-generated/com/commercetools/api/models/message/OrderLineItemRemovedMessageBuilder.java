@@ -108,6 +108,12 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
+    public OrderLineItemRemovedMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderLineItemRemovedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -147,10 +153,18 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
-    public OrderLineItemRemovedMessageBuilder withNewState(
-            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
-        this.newState = new ArrayList<>();
-        this.newState.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+    public OrderLineItemRemovedMessageBuilder newState(
+            final java.util.List<com.commercetools.api.models.order.ItemState> newState) {
+        this.newState = newState;
+        return this;
+    }
+
+    public OrderLineItemRemovedMessageBuilder plusNewState(
+            final com.commercetools.api.models.order.ItemState... newState) {
+        if (this.newState == null) {
+            this.newState = new ArrayList<>();
+        }
+        this.newState.addAll(Arrays.asList(newState));
         return this;
     }
 
@@ -163,15 +177,22 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         return this;
     }
 
-    public OrderLineItemRemovedMessageBuilder newState(
-            final java.util.List<com.commercetools.api.models.order.ItemState> newState) {
-        this.newState = newState;
+    public OrderLineItemRemovedMessageBuilder withNewState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        this.newState = new ArrayList<>();
+        this.newState.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
 
     public OrderLineItemRemovedMessageBuilder newTotalPrice(
             final com.commercetools.api.models.common.TypedMoney newTotalPrice) {
         this.newTotalPrice = newTotalPrice;
+        return this;
+    }
+
+    public OrderLineItemRemovedMessageBuilder newTotalPrice(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.newTotalPrice = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 

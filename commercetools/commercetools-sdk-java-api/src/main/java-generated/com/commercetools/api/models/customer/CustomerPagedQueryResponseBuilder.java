@@ -48,10 +48,18 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
         return this;
     }
 
-    public CustomerPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.CustomerBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()).build());
+    public CustomerPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.customer.Customer> results) {
+        this.results = results;
+        return this;
+    }
+
+    public CustomerPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.customer.Customer... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +72,10 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
         return this;
     }
 
-    public CustomerPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.customer.Customer> results) {
-        this.results = results;
+    public CustomerPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.CustomerBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()).build());
         return this;
     }
 

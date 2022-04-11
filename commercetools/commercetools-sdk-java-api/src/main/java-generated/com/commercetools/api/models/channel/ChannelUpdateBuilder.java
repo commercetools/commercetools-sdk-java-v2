@@ -2,6 +2,7 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,6 +27,30 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
     public ChannelUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public ChannelUpdateBuilder plusActions(final com.commercetools.api.models.channel.ChannelUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public ChannelUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.channel.ChannelUpdateActionBuilder, Builder<? extends com.commercetools.api.models.channel.ChannelUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(builder.apply(com.commercetools.api.models.channel.ChannelUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public ChannelUpdateBuilder withActions(
+            Function<com.commercetools.api.models.channel.ChannelUpdateActionBuilder, Builder<? extends com.commercetools.api.models.channel.ChannelUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(builder.apply(com.commercetools.api.models.channel.ChannelUpdateActionBuilder.of()).build());
         return this;
     }
 

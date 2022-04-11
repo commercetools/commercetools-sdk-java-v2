@@ -31,6 +31,18 @@ public interface Reference {
 
     public void setId(final String id);
 
+    public static com.commercetools.ml.models.common.CategoryReferenceBuilder categoryBuilder() {
+        return com.commercetools.ml.models.common.CategoryReferenceBuilder.of();
+    }
+
+    public static com.commercetools.ml.models.common.ProductReferenceBuilder productBuilder() {
+        return com.commercetools.ml.models.common.ProductReferenceBuilder.of();
+    }
+
+    public static com.commercetools.ml.models.common.ProductTypeReferenceBuilder productTypeBuilder() {
+        return com.commercetools.ml.models.common.ProductTypeReferenceBuilder.of();
+    }
+
     default <T> T withReference(Function<Reference, T> helper) {
         return helper.apply(this);
     }

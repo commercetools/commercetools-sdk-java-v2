@@ -101,6 +101,12 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this;
     }
 
+    public ReviewStateTransitionMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ReviewStateTransitionMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -156,6 +162,12 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     public ReviewStateTransitionMessageBuilder target(final com.commercetools.api.models.common.Reference target) {
         this.target = target;
+        return this;
+    }
+
+    public ReviewStateTransitionMessageBuilder target(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.target = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

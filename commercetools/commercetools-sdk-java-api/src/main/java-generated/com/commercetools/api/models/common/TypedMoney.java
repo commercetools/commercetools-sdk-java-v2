@@ -43,6 +43,14 @@ public interface TypedMoney extends Money {
 
     public void setFractionDigits(final Integer fractionDigits);
 
+    public static com.commercetools.api.models.common.CentPrecisionMoneyBuilder centPrecisionBuilder() {
+        return com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of();
+    }
+
+    public static com.commercetools.api.models.common.HighPrecisionMoneyBuilder highPrecisionBuilder() {
+        return com.commercetools.api.models.common.HighPrecisionMoneyBuilder.of();
+    }
+
     default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
     }

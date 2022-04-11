@@ -24,6 +24,14 @@ public interface DeliveryFormat {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.subscription.CloudEventsFormatBuilder cloudEventsBuilder() {
+        return com.commercetools.api.models.subscription.CloudEventsFormatBuilder.of();
+    }
+
+    public static com.commercetools.api.models.subscription.PlatformFormatBuilder platformBuilder() {
+        return com.commercetools.api.models.subscription.PlatformFormatBuilder.of();
+    }
+
     default <T> T withDeliveryFormat(Function<DeliveryFormat, T> helper) {
         return helper.apply(this);
     }

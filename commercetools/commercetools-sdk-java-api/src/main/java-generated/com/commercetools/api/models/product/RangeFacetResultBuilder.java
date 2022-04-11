@@ -17,10 +17,17 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
         return this;
     }
 
-    public RangeFacetResultBuilder withRanges(
-            Function<com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRangeBuilder> builder) {
-        this.ranges = new ArrayList<>();
-        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()).build());
+    public RangeFacetResultBuilder ranges(
+            final java.util.List<com.commercetools.api.models.product.FacetRange> ranges) {
+        this.ranges = ranges;
+        return this;
+    }
+
+    public RangeFacetResultBuilder plusRanges(final com.commercetools.api.models.product.FacetRange... ranges) {
+        if (this.ranges == null) {
+            this.ranges = new ArrayList<>();
+        }
+        this.ranges.addAll(Arrays.asList(ranges));
         return this;
     }
 
@@ -33,9 +40,10 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
         return this;
     }
 
-    public RangeFacetResultBuilder ranges(
-            final java.util.List<com.commercetools.api.models.product.FacetRange> ranges) {
-        this.ranges = ranges;
+    public RangeFacetResultBuilder withRanges(
+            Function<com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRangeBuilder> builder) {
+        this.ranges = new ArrayList<>();
+        this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()).build());
         return this;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -19,6 +20,13 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     public StoreChangeProductSelectionActionBuilder productSelection(
             final com.commercetools.api.models.common.ResourceIdentifier productSelection) {
         this.productSelection = productSelection;
+        return this;
+    }
+
+    public StoreChangeProductSelectionActionBuilder productSelection(
+            Function<com.commercetools.api.models.common.ResourceIdentifierBuilder, Builder<? extends com.commercetools.api.models.common.ResourceIdentifier>> builder) {
+        this.productSelection = builder.apply(com.commercetools.api.models.common.ResourceIdentifierBuilder.of())
+                .build();
         return this;
     }
 

@@ -21,6 +21,14 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
         return this;
     }
 
+    public DateSetFieldBuilder plusValue(final java.time.LocalDate... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     public java.util.List<java.time.LocalDate> getValue() {
         return this.value;
     }

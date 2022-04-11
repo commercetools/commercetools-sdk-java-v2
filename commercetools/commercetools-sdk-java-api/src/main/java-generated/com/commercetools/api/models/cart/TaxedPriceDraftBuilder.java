@@ -43,10 +43,18 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         return this;
     }
 
-    public TaxedPriceDraftBuilder withTaxPortions(
-            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
-        this.taxPortions = new ArrayList<>();
-        this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
+    public TaxedPriceDraftBuilder taxPortions(
+            final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions) {
+        this.taxPortions = taxPortions;
+        return this;
+    }
+
+    public TaxedPriceDraftBuilder plusTaxPortions(
+            final com.commercetools.api.models.cart.TaxPortionDraft... taxPortions) {
+        if (this.taxPortions == null) {
+            this.taxPortions = new ArrayList<>();
+        }
+        this.taxPortions.addAll(Arrays.asList(taxPortions));
         return this;
     }
 
@@ -59,9 +67,10 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         return this;
     }
 
-    public TaxedPriceDraftBuilder taxPortions(
-            final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions) {
-        this.taxPortions = taxPortions;
+    public TaxedPriceDraftBuilder withTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
+        this.taxPortions = new ArrayList<>();
+        this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
     }
 

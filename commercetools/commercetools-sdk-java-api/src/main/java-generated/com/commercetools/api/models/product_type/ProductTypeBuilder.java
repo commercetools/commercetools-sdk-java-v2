@@ -100,11 +100,18 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this;
     }
 
-    public ProductTypeBuilder withAttributes(
-            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
-        this.attributes = new ArrayList<>();
-        this.attributes
-                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
+    public ProductTypeBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    public ProductTypeBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product_type.AttributeDefinition... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
 
@@ -118,9 +125,11 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this;
     }
 
-    public ProductTypeBuilder attributes(
-            @Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
-        this.attributes = attributes;
+    public ProductTypeBuilder withAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
         return this;
     }
 

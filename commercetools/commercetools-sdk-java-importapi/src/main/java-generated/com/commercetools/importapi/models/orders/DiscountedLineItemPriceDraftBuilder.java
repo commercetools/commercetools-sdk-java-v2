@@ -31,11 +31,18 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
-    public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(
-            Function<com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder> builder) {
-        this.includedDiscounts = new ArrayList<>();
-        this.includedDiscounts.add(
-            builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder.of()).build());
+    public DiscountedLineItemPriceDraftBuilder includedDiscounts(
+            final java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> includedDiscounts) {
+        this.includedDiscounts = includedDiscounts;
+        return this;
+    }
+
+    public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
+            final com.commercetools.importapi.models.orders.DiscountedLineItemPortion... includedDiscounts) {
+        if (this.includedDiscounts == null) {
+            this.includedDiscounts = new ArrayList<>();
+        }
+        this.includedDiscounts.addAll(Arrays.asList(includedDiscounts));
         return this;
     }
 
@@ -49,9 +56,11 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
-    public DiscountedLineItemPriceDraftBuilder includedDiscounts(
-            final java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> includedDiscounts) {
-        this.includedDiscounts = includedDiscounts;
+    public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(
+            Function<com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder> builder) {
+        this.includedDiscounts = new ArrayList<>();
+        this.includedDiscounts.add(
+            builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder.of()).build());
         return this;
     }
 

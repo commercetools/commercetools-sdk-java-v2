@@ -57,6 +57,12 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
+    public PriceImportBuilder value(
+            Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public PriceImportBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
@@ -120,10 +126,17 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
-    public PriceImportBuilder withTiers(
-            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
-        this.tiers = new ArrayList<>();
-        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
+    public PriceImportBuilder tiers(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
+        this.tiers = tiers;
+        return this;
+    }
+
+    public PriceImportBuilder plusTiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.addAll(Arrays.asList(tiers));
         return this;
     }
 
@@ -136,9 +149,10 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
-    public PriceImportBuilder tiers(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
-        this.tiers = tiers;
+    public PriceImportBuilder withTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());
         return this;
     }
 

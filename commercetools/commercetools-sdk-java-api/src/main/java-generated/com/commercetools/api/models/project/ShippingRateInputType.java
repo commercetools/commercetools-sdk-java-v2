@@ -29,6 +29,18 @@ public interface ShippingRateInputType {
     @JsonProperty("type")
     public ShippingRateTierType getType();
 
+    public static com.commercetools.api.models.project.CartClassificationTypeBuilder cartClassificationBuilder() {
+        return com.commercetools.api.models.project.CartClassificationTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.CartScoreTypeBuilder cartScoreBuilder() {
+        return com.commercetools.api.models.project.CartScoreTypeBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.CartValueTypeBuilder cartValueBuilder() {
+        return com.commercetools.api.models.project.CartValueTypeBuilder.of();
+    }
+
     default <T> T withShippingRateInputType(Function<ShippingRateInputType, T> helper) {
         return helper.apply(this);
     }

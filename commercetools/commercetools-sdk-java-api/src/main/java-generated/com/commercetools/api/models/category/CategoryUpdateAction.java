@@ -44,6 +44,94 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.category.CategoryAddAssetActionBuilder addAssetBuilder() {
+        return com.commercetools.api.models.category.CategoryAddAssetActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategoryChangeAssetNameActionBuilder changeAssetNameBuilder() {
+        return com.commercetools.api.models.category.CategoryChangeAssetNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategoryChangeAssetOrderActionBuilder changeAssetOrderBuilder() {
+        return com.commercetools.api.models.category.CategoryChangeAssetOrderActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategoryChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.category.CategoryChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategoryChangeOrderHintActionBuilder changeOrderHintBuilder() {
+        return com.commercetools.api.models.category.CategoryChangeOrderHintActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategoryChangeParentActionBuilder changeParentBuilder() {
+        return com.commercetools.api.models.category.CategoryChangeParentActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategoryChangeSlugActionBuilder changeSlugBuilder() {
+        return com.commercetools.api.models.category.CategoryChangeSlugActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategoryRemoveAssetActionBuilder removeAssetBuilder() {
+        return com.commercetools.api.models.category.CategoryRemoveAssetActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetAssetCustomFieldActionBuilder setAssetCustomFieldBuilder() {
+        return com.commercetools.api.models.category.CategorySetAssetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetAssetCustomTypeActionBuilder setAssetCustomTypeBuilder() {
+        return com.commercetools.api.models.category.CategorySetAssetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetAssetDescriptionActionBuilder setAssetDescriptionBuilder() {
+        return com.commercetools.api.models.category.CategorySetAssetDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetAssetKeyActionBuilder setAssetKeyBuilder() {
+        return com.commercetools.api.models.category.CategorySetAssetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetAssetSourcesActionBuilder setAssetSourcesBuilder() {
+        return com.commercetools.api.models.category.CategorySetAssetSourcesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetAssetTagsActionBuilder setAssetTagsBuilder() {
+        return com.commercetools.api.models.category.CategorySetAssetTagsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.category.CategorySetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.category.CategorySetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetDescriptionActionBuilder setDescriptionBuilder() {
+        return com.commercetools.api.models.category.CategorySetDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetExternalIdActionBuilder setExternalIdBuilder() {
+        return com.commercetools.api.models.category.CategorySetExternalIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.category.CategorySetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetMetaDescriptionActionBuilder setMetaDescriptionBuilder() {
+        return com.commercetools.api.models.category.CategorySetMetaDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetMetaKeywordsActionBuilder setMetaKeywordsBuilder() {
+        return com.commercetools.api.models.category.CategorySetMetaKeywordsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.category.CategorySetMetaTitleActionBuilder setMetaTitleBuilder() {
+        return com.commercetools.api.models.category.CategorySetMetaTitleActionBuilder.of();
+    }
+
     default <T> T withCategoryUpdateAction(Function<CategoryUpdateAction, T> helper) {
         return helper.apply(this);
     }

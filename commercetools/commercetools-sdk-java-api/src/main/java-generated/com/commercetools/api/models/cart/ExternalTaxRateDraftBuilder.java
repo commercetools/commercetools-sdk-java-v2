@@ -54,10 +54,18 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return this;
     }
 
-    public ExternalTaxRateDraftBuilder withSubRates(
-            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
-        this.subRates = new ArrayList<>();
-        this.subRates.add(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()).build());
+    public ExternalTaxRateDraftBuilder subRates(
+            @Nullable final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+        this.subRates = subRates;
+        return this;
+    }
+
+    public ExternalTaxRateDraftBuilder plusSubRates(
+            @Nullable final com.commercetools.api.models.tax_category.SubRate... subRates) {
+        if (this.subRates == null) {
+            this.subRates = new ArrayList<>();
+        }
+        this.subRates.addAll(Arrays.asList(subRates));
         return this;
     }
 
@@ -70,9 +78,10 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return this;
     }
 
-    public ExternalTaxRateDraftBuilder subRates(
-            @Nullable final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
-        this.subRates = subRates;
+    public ExternalTaxRateDraftBuilder withSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
+        this.subRates = new ArrayList<>();
+        this.subRates.add(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()).build());
         return this;
     }
 

@@ -28,10 +28,18 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
         return this;
     }
 
-    public LocalizableTextSetAttributeBuilder withValue(
-            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
-        this.value = new ArrayList<>();
-        this.value.add(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build());
+    public LocalizableTextSetAttributeBuilder value(
+            final java.util.List<com.commercetools.importapi.models.common.LocalizedString> value) {
+        this.value = value;
+        return this;
+    }
+
+    public LocalizableTextSetAttributeBuilder plusValue(
+            final com.commercetools.importapi.models.common.LocalizedString... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
         return this;
     }
 
@@ -44,9 +52,10 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
         return this;
     }
 
-    public LocalizableTextSetAttributeBuilder value(
-            final java.util.List<com.commercetools.importapi.models.common.LocalizedString> value) {
-        this.value = value;
+    public LocalizableTextSetAttributeBuilder withValue(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
+        this.value = new ArrayList<>();
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
 

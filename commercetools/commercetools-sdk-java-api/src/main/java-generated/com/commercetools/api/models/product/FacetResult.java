@@ -25,6 +25,18 @@ public interface FacetResult {
     @JsonProperty("type")
     public FacetTypes getType();
 
+    public static com.commercetools.api.models.product.FilteredFacetResultBuilder filterBuilder() {
+        return com.commercetools.api.models.product.FilteredFacetResultBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product.RangeFacetResultBuilder rangeBuilder() {
+        return com.commercetools.api.models.product.RangeFacetResultBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product.TermFacetResultBuilder termsBuilder() {
+        return com.commercetools.api.models.product.TermFacetResultBuilder.of();
+    }
+
     default <T> T withFacetResult(Function<FacetResult, T> helper) {
         return helper.apply(this);
     }

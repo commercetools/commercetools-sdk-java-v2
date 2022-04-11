@@ -21,6 +21,14 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
         return this;
     }
 
+    public DiscountCodeChangeGroupsActionBuilder plusGroups(final String... groups) {
+        if (this.groups == null) {
+            this.groups = new ArrayList<>();
+        }
+        this.groups.addAll(Arrays.asList(groups));
+        return this;
+    }
+
     public java.util.List<String> getGroups() {
         return this.groups;
     }

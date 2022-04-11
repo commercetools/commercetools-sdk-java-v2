@@ -97,6 +97,12 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
         return this;
     }
 
+    public OrderCustomLineItemDiscountSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderCustomLineItemDiscountSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -127,11 +133,18 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
         return this;
     }
 
-    public OrderCustomLineItemDiscountSetMessageBuilder withDiscountedPricePerQuantity(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
-        this.discountedPricePerQuantity = new ArrayList<>();
-        this.discountedPricePerQuantity.add(
-            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
+    public OrderCustomLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
+            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+        this.discountedPricePerQuantity = discountedPricePerQuantity;
+        return this;
+    }
+
+    public OrderCustomLineItemDiscountSetMessageBuilder plusDiscountedPricePerQuantity(
+            final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
+        if (this.discountedPricePerQuantity == null) {
+            this.discountedPricePerQuantity = new ArrayList<>();
+        }
+        this.discountedPricePerQuantity.addAll(Arrays.asList(discountedPricePerQuantity));
         return this;
     }
 
@@ -145,9 +158,11 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
         return this;
     }
 
-    public OrderCustomLineItemDiscountSetMessageBuilder discountedPricePerQuantity(
-            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
-        this.discountedPricePerQuantity = discountedPricePerQuantity;
+    public OrderCustomLineItemDiscountSetMessageBuilder withDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        this.discountedPricePerQuantity = new ArrayList<>();
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
         return this;
     }
 

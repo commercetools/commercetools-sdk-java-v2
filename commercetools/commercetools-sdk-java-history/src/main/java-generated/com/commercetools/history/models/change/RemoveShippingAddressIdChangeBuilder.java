@@ -33,6 +33,14 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
         return this;
     }
 
+    public RemoveShippingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
+        return this;
+    }
+
     public RemoveShippingAddressIdChangeBuilder previousValue(final String... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
@@ -40,6 +48,14 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     public RemoveShippingAddressIdChangeBuilder previousValue(final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    public RemoveShippingAddressIdChangeBuilder plusPreviousValue(final String... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 

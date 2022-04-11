@@ -43,6 +43,14 @@ public class DuplicateEnumValuesErrorBuilder implements Builder<DuplicateEnumVal
         return this;
     }
 
+    public DuplicateEnumValuesErrorBuilder plusDuplicates(final String... duplicates) {
+        if (this.duplicates == null) {
+            this.duplicates = new ArrayList<>();
+        }
+        this.duplicates.addAll(Arrays.asList(duplicates));
+        return this;
+    }
+
     public String getMessage() {
         return this.message;
     }

@@ -25,6 +25,18 @@ public interface ProductDiscountValue {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteBuilder absoluteBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountValueExternalBuilder externalBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountValueExternalBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product_discount.ProductDiscountValueRelativeBuilder relativeBuilder() {
+        return com.commercetools.api.models.product_discount.ProductDiscountValueRelativeBuilder.of();
+    }
+
     default <T> T withProductDiscountValue(Function<ProductDiscountValue, T> helper) {
         return helper.apply(this);
     }

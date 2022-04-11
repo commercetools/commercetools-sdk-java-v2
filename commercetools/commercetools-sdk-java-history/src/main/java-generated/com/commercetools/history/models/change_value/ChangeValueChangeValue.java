@@ -26,6 +26,22 @@ public interface ChangeValueChangeValue {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder absoluteBuilder() {
+        return com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder externalBuilder() {
+        return com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder giftLineItemBuilder() {
+        return com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder relativeBuilder() {
+        return com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder.of();
+    }
+
     default <T> T withChangeValueChangeValue(Function<ChangeValueChangeValue, T> helper) {
         return helper.apply(this);
     }

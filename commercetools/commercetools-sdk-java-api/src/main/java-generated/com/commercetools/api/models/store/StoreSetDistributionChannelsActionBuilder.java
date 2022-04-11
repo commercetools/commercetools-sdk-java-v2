@@ -21,11 +21,18 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
         return this;
     }
 
-    public StoreSetDistributionChannelsActionBuilder withDistributionChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.distributionChannels = new ArrayList<>();
-        this.distributionChannels
-                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+    public StoreSetDistributionChannelsActionBuilder distributionChannels(
+            @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
+        this.distributionChannels = distributionChannels;
+        return this;
+    }
+
+    public StoreSetDistributionChannelsActionBuilder plusDistributionChannels(
+            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... distributionChannels) {
+        if (this.distributionChannels == null) {
+            this.distributionChannels = new ArrayList<>();
+        }
+        this.distributionChannels.addAll(Arrays.asList(distributionChannels));
         return this;
     }
 
@@ -39,9 +46,11 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
         return this;
     }
 
-    public StoreSetDistributionChannelsActionBuilder distributionChannels(
-            @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
-        this.distributionChannels = distributionChannels;
+    public StoreSetDistributionChannelsActionBuilder withDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.distributionChannels = new ArrayList<>();
+        this.distributionChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
     }
 

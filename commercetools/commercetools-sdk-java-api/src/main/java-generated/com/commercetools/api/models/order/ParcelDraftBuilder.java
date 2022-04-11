@@ -53,10 +53,17 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         return this;
     }
 
-    public ParcelDraftBuilder withItems(
-            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+    public ParcelDraftBuilder items(
+            @Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public ParcelDraftBuilder plusItems(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -69,9 +76,10 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         return this;
     }
 
-    public ParcelDraftBuilder items(
-            @Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-        this.items = items;
+    public ParcelDraftBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 

@@ -36,10 +36,18 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
         return this;
     }
 
-    public CategorySetAssetSourcesActionBuilder withSources(
-            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
-        this.sources = new ArrayList<>();
-        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
+    public CategorySetAssetSourcesActionBuilder sources(
+            final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
+        this.sources = sources;
+        return this;
+    }
+
+    public CategorySetAssetSourcesActionBuilder plusSources(
+            final com.commercetools.api.models.common.AssetSource... sources) {
+        if (this.sources == null) {
+            this.sources = new ArrayList<>();
+        }
+        this.sources.addAll(Arrays.asList(sources));
         return this;
     }
 
@@ -52,9 +60,10 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
         return this;
     }
 
-    public CategorySetAssetSourcesActionBuilder sources(
-            final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
-        this.sources = sources;
+    public CategorySetAssetSourcesActionBuilder withSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSourceBuilder> builder) {
+        this.sources = new ArrayList<>();
+        this.sources.add(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()).build());
         return this;
     }
 

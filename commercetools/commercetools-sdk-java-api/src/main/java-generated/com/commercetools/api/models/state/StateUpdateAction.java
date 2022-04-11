@@ -31,6 +31,42 @@ public interface StateUpdateAction extends com.commercetools.api.models.Resource
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.state.StateAddRolesActionBuilder addRolesBuilder() {
+        return com.commercetools.api.models.state.StateAddRolesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.state.StateChangeInitialActionBuilder changeInitialBuilder() {
+        return com.commercetools.api.models.state.StateChangeInitialActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.state.StateChangeKeyActionBuilder changeKeyBuilder() {
+        return com.commercetools.api.models.state.StateChangeKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.state.StateChangeTypeActionBuilder changeTypeBuilder() {
+        return com.commercetools.api.models.state.StateChangeTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.state.StateRemoveRolesActionBuilder removeRolesBuilder() {
+        return com.commercetools.api.models.state.StateRemoveRolesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.state.StateSetDescriptionActionBuilder setDescriptionBuilder() {
+        return com.commercetools.api.models.state.StateSetDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.state.StateSetNameActionBuilder setNameBuilder() {
+        return com.commercetools.api.models.state.StateSetNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.state.StateSetRolesActionBuilder setRolesBuilder() {
+        return com.commercetools.api.models.state.StateSetRolesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.state.StateSetTransitionsActionBuilder setTransitionsBuilder() {
+        return com.commercetools.api.models.state.StateSetTransitionsActionBuilder.of();
+    }
+
     default <T> T withStateUpdateAction(Function<StateUpdateAction, T> helper) {
         return helper.apply(this);
     }

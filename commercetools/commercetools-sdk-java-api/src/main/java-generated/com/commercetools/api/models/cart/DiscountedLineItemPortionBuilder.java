@@ -33,6 +33,12 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
         return this;
     }
 
+    public DiscountedLineItemPortionBuilder discountedAmount(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.discountedAmount = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public com.commercetools.api.models.cart_discount.CartDiscountReference getDiscount() {
         return this.discount;
     }

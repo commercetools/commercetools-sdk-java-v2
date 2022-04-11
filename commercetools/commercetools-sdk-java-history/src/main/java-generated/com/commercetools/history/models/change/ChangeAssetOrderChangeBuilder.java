@@ -27,11 +27,18 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this;
     }
 
-    public ChangeAssetOrderChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue
-                .add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
+    public ChangeAssetOrderChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public ChangeAssetOrderChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.LocalizedString... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -45,9 +52,11 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this;
     }
 
-    public ChangeAssetOrderChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue) {
-        this.previousValue = previousValue;
+    public ChangeAssetOrderChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue
+                .add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
 
@@ -57,10 +66,18 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this;
     }
 
-    public ChangeAssetOrderChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
+    public ChangeAssetOrderChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public ChangeAssetOrderChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.LocalizedString... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -73,9 +90,10 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         return this;
     }
 
-    public ChangeAssetOrderChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue) {
-        this.nextValue = nextValue;
+    public ChangeAssetOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
 

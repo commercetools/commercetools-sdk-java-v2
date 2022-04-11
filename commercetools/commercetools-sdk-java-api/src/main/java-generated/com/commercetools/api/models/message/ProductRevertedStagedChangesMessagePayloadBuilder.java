@@ -23,6 +23,14 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
         return this;
     }
 
+    public ProductRevertedStagedChangesMessagePayloadBuilder plusRemovedImageUrls(final String... removedImageUrls) {
+        if (this.removedImageUrls == null) {
+            this.removedImageUrls = new ArrayList<>();
+        }
+        this.removedImageUrls.addAll(Arrays.asList(removedImageUrls));
+        return this;
+    }
+
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
     }

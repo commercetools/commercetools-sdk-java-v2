@@ -18,11 +18,18 @@ public class ProductTypeChangeAttributeOrderActionBuilder implements Builder<Pro
         return this;
     }
 
-    public ProductTypeChangeAttributeOrderActionBuilder withAttributes(
-            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
-        this.attributes = new ArrayList<>();
-        this.attributes
-                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
+    public ProductTypeChangeAttributeOrderActionBuilder attributes(
+            final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    public ProductTypeChangeAttributeOrderActionBuilder plusAttributes(
+            final com.commercetools.api.models.product_type.AttributeDefinition... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class ProductTypeChangeAttributeOrderActionBuilder implements Builder<Pro
         return this;
     }
 
-    public ProductTypeChangeAttributeOrderActionBuilder attributes(
-            final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
-        this.attributes = attributes;
+    public ProductTypeChangeAttributeOrderActionBuilder withAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinitionBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
         return this;
     }
 

@@ -28,6 +28,12 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         return this;
     }
 
+    public FieldDefinitionBuilder type(
+            Function<com.commercetools.api.models.type.FieldTypeBuilder, Builder<? extends com.commercetools.api.models.type.FieldType>> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.FieldTypeBuilder.of()).build();
+        return this;
+    }
+
     public FieldDefinitionBuilder name(final String name) {
         this.name = name;
         return this;

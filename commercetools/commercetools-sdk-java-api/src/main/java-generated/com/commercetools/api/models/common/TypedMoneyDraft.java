@@ -36,6 +36,14 @@ public interface TypedMoneyDraft extends Money {
 
     public void setFractionDigits(final Integer fractionDigits);
 
+    public static com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder centPrecisionBuilder() {
+        return com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder.of();
+    }
+
+    public static com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder highPrecisionBuilder() {
+        return com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder.of();
+    }
+
     default <T> T withTypedMoneyDraft(Function<TypedMoneyDraft, T> helper) {
         return helper.apply(this);
     }

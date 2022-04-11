@@ -112,6 +112,33 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this;
     }
 
+    public OrderEditBuilder plusStagedActions(
+            final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
+        if (this.stagedActions == null) {
+            this.stagedActions = new ArrayList<>();
+        }
+        this.stagedActions.addAll(Arrays.asList(stagedActions));
+        return this;
+    }
+
+    public OrderEditBuilder plusStagedActions(
+            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+        if (this.stagedActions == null) {
+            this.stagedActions = new ArrayList<>();
+        }
+        this.stagedActions
+                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public OrderEditBuilder withStagedActions(
+            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+        this.stagedActions = new ArrayList<>();
+        this.stagedActions
+                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
+        return this;
+    }
+
     public OrderEditBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
@@ -125,6 +152,12 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
 
     public OrderEditBuilder result(final com.commercetools.api.models.order_edit.OrderEditResult result) {
         this.result = result;
+        return this;
+    }
+
+    public OrderEditBuilder result(
+            Function<com.commercetools.api.models.order_edit.OrderEditResultBuilder, Builder<? extends com.commercetools.api.models.order_edit.OrderEditResult>> builder) {
+        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditResultBuilder.of()).build();
         return this;
     }
 

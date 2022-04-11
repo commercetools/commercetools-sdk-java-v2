@@ -26,6 +26,22 @@ public interface OrderEditResult {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.order_edit.OrderEditAppliedBuilder appliedBuilder() {
+        return com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order_edit.OrderEditNotProcessedBuilder notProcessedBuilder() {
+        return com.commercetools.api.models.order_edit.OrderEditNotProcessedBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder previewFailureBuilder() {
+        return com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order_edit.OrderEditPreviewSuccessBuilder previewSuccessBuilder() {
+        return com.commercetools.api.models.order_edit.OrderEditPreviewSuccessBuilder.of();
+    }
+
     default <T> T withOrderEditResult(Function<OrderEditResult, T> helper) {
         return helper.apply(this);
     }

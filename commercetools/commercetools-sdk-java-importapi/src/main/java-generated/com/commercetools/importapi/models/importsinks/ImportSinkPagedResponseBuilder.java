@@ -46,10 +46,18 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
         return this;
     }
 
-    public ImportSinkPagedResponseBuilder withResults(
-            Function<com.commercetools.importapi.models.importsinks.ImportSinkBuilder, com.commercetools.importapi.models.importsinks.ImportSinkBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.importapi.models.importsinks.ImportSinkBuilder.of()).build());
+    public ImportSinkPagedResponseBuilder results(
+            final java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ImportSinkPagedResponseBuilder plusResults(
+            final com.commercetools.importapi.models.importsinks.ImportSink... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -62,9 +70,10 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
         return this;
     }
 
-    public ImportSinkPagedResponseBuilder results(
-            final java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results) {
-        this.results = results;
+    public ImportSinkPagedResponseBuilder withResults(
+            Function<com.commercetools.importapi.models.importsinks.ImportSinkBuilder, com.commercetools.importapi.models.importsinks.ImportSinkBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.importapi.models.importsinks.ImportSinkBuilder.of()).build());
         return this;
     }
 

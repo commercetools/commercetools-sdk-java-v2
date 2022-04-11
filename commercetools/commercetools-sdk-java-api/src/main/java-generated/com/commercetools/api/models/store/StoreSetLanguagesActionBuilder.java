@@ -24,6 +24,14 @@ public class StoreSetLanguagesActionBuilder implements Builder<StoreSetLanguages
         return this;
     }
 
+    public StoreSetLanguagesActionBuilder plusLanguages(@Nullable final String... languages) {
+        if (this.languages == null) {
+            this.languages = new ArrayList<>();
+        }
+        this.languages.addAll(Arrays.asList(languages));
+        return this;
+    }
+
     @Nullable
     public java.util.List<String> getLanguages() {
         return this.languages;

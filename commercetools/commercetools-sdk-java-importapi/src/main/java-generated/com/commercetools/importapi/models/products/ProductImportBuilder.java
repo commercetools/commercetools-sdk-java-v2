@@ -105,11 +105,18 @@ public class ProductImportBuilder implements Builder<ProductImport> {
         return this;
     }
 
-    public ProductImportBuilder withCategories(
-            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
-        this.categories = new ArrayList<>();
-        this.categories
-                .add(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()).build());
+    public ProductImportBuilder categories(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
+        this.categories = categories;
+        return this;
+    }
+
+    public ProductImportBuilder plusCategories(
+            @Nullable final com.commercetools.importapi.models.common.CategoryKeyReference... categories) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories.addAll(Arrays.asList(categories));
         return this;
     }
 
@@ -123,9 +130,11 @@ public class ProductImportBuilder implements Builder<ProductImport> {
         return this;
     }
 
-    public ProductImportBuilder categories(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
-        this.categories = categories;
+    public ProductImportBuilder withCategories(
+            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
+        this.categories = new ArrayList<>();
+        this.categories
+                .add(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()).build());
         return this;
     }
 

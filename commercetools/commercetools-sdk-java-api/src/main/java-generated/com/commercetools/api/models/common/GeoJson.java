@@ -23,6 +23,10 @@ public interface GeoJson {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.api.models.common.GeoJsonPointBuilder pointBuilder() {
+        return com.commercetools.api.models.common.GeoJsonPointBuilder.of();
+    }
+
     default <T> T withGeoJson(Function<GeoJson, T> helper) {
         return helper.apply(this);
     }

@@ -48,6 +48,15 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
         return this;
     }
 
+    public ChannelDraftBuilder plusRoles(
+            @Nullable final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
+        if (this.roles == null) {
+            this.roles = new ArrayList<>();
+        }
+        this.roles.addAll(Arrays.asList(roles));
+        return this;
+    }
+
     public ChannelDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
@@ -95,6 +104,12 @@ public class ChannelDraftBuilder implements Builder<ChannelDraft> {
 
     public ChannelDraftBuilder geoLocation(@Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
         this.geoLocation = geoLocation;
+        return this;
+    }
+
+    public ChannelDraftBuilder geoLocation(
+            Function<com.commercetools.api.models.common.GeoJsonBuilder, Builder<? extends com.commercetools.api.models.common.GeoJson>> builder) {
+        this.geoLocation = builder.apply(com.commercetools.api.models.common.GeoJsonBuilder.of()).build();
         return this;
     }
 

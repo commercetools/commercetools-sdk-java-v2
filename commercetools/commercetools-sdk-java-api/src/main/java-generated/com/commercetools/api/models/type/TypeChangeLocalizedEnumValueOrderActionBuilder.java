@@ -29,6 +29,14 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
         return this;
     }
 
+    public TypeChangeLocalizedEnumValueOrderActionBuilder plusKeys(final String... keys) {
+        if (this.keys == null) {
+            this.keys = new ArrayList<>();
+        }
+        this.keys.addAll(Arrays.asList(keys));
+        return this;
+    }
+
     public String getFieldName() {
         return this.fieldName;
     }

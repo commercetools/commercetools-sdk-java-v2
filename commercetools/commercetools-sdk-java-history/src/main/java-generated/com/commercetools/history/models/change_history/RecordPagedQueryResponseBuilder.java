@@ -46,10 +46,18 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         return this;
     }
 
-    public RecordPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()).build());
+    public RecordPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.history.models.change_history.Record> results) {
+        this.results = results;
+        return this;
+    }
+
+    public RecordPagedQueryResponseBuilder plusResults(
+            final com.commercetools.history.models.change_history.Record... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -62,9 +70,10 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         return this;
     }
 
-    public RecordPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.history.models.change_history.Record> results) {
-        this.results = results;
+    public RecordPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.RecordBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()).build());
         return this;
     }
 

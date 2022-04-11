@@ -80,12 +80,18 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
-    public DiscountCodeDraftBuilder withCartDiscounts(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
-        this.cartDiscounts = new ArrayList<>();
-        this.cartDiscounts.add(
-            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
-                    .build());
+    public DiscountCodeDraftBuilder cartDiscounts(
+            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
+        this.cartDiscounts = cartDiscounts;
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder plusCartDiscounts(
+            final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
+        if (this.cartDiscounts == null) {
+            this.cartDiscounts = new ArrayList<>();
+        }
+        this.cartDiscounts.addAll(Arrays.asList(cartDiscounts));
         return this;
     }
 
@@ -100,9 +106,12 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
-    public DiscountCodeDraftBuilder cartDiscounts(
-            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
-        this.cartDiscounts = cartDiscounts;
+    public DiscountCodeDraftBuilder withCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+        this.cartDiscounts = new ArrayList<>();
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
+                    .build());
         return this;
     }
 
@@ -144,6 +153,14 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     public DiscountCodeDraftBuilder groups(@Nullable final java.util.List<String> groups) {
         this.groups = groups;
+        return this;
+    }
+
+    public DiscountCodeDraftBuilder plusGroups(@Nullable final String... groups) {
+        if (this.groups == null) {
+            this.groups = new ArrayList<>();
+        }
+        this.groups.addAll(Arrays.asList(groups));
         return this;
     }
 

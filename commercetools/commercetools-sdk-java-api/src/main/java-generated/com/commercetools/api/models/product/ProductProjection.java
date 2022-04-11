@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductProjectionImpl.class)
 public interface ProductProjection
-        extends BaseResource, com.commercetools.api.models.DomainResource<ProductProjection>, ProductDataLike {
+        extends BaseResource, ProductDataLike, com.commercetools.api.models.DomainResource<ProductProjection> {
 
     /**
     *  <p>The unique ID of the Product.</p>

@@ -27,6 +27,7 @@ import com.commercetools.api.models.customer_group.*;
 import com.commercetools.api.models.product.AttributesAccessor;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.product.ProductVariantBuilder;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
@@ -357,7 +358,10 @@ public class ExamplesTest {
 
     @Test
     public void accessorTest() {
-        ProductVariant variant = ProductVariant.of();
+        ProductVariant variant = ProductVariantBuilder.of()
+                .id(1L)
+                .attributes(Collections.emptyList())
+                .build();
         AttributesAccessor attributes = variant.withProductVariant(AttributesAccessor::of);
         AttributeLocalizedEnumValue color = attributes.asLocalizedEnum("color");
     }

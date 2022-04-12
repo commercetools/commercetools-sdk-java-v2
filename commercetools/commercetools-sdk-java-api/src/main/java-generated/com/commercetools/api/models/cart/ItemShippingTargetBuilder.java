@@ -11,14 +11,14 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     private String addressKey;
 
-    private Double quantity;
+    private Long quantity;
 
     public ItemShippingTargetBuilder addressKey(final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
 
-    public ItemShippingTargetBuilder quantity(final Double quantity) {
+    public ItemShippingTargetBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -27,7 +27,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return this.addressKey;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

@@ -15,24 +15,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ParcelMeasurements {
 
     @JsonProperty("heightInMillimeter")
-    public Double getHeightInMillimeter();
+    public Integer getHeightInMillimeter();
 
     @JsonProperty("lengthInMillimeter")
-    public Double getLengthInMillimeter();
+    public Integer getLengthInMillimeter();
 
     @JsonProperty("widthInMillimeter")
-    public Double getWidthInMillimeter();
+    public Integer getWidthInMillimeter();
 
     @JsonProperty("weightInGram")
-    public Double getWeightInGram();
+    public Integer getWeightInGram();
 
-    public void setHeightInMillimeter(final Double heightInMillimeter);
+    public void setHeightInMillimeter(final Integer heightInMillimeter);
 
-    public void setLengthInMillimeter(final Double lengthInMillimeter);
+    public void setLengthInMillimeter(final Integer lengthInMillimeter);
 
-    public void setWidthInMillimeter(final Double widthInMillimeter);
+    public void setWidthInMillimeter(final Integer widthInMillimeter);
 
-    public void setWeightInGram(final Double weightInGram);
+    public void setWeightInGram(final Integer weightInGram);
 
     public static ParcelMeasurements of() {
         return new ParcelMeasurementsImpl();

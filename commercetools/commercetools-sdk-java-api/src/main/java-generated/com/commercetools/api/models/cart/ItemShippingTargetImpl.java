@@ -19,11 +19,11 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
 
     private String addressKey;
 
-    private Double quantity;
+    private Long quantity;
 
     @JsonCreator
     ItemShippingTargetImpl(@JsonProperty("addressKey") final String addressKey,
-            @JsonProperty("quantity") final Double quantity) {
+            @JsonProperty("quantity") final Long quantity) {
         this.addressKey = addressKey;
         this.quantity = quantity;
     }
@@ -43,7 +43,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
     *  Only positive values are allowed.
     *  Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
     */
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -51,7 +51,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
         this.addressKey = addressKey;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

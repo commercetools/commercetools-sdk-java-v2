@@ -75,7 +75,7 @@ public class AttributesTest {
         assertThat(attributes.get("nested")).asList()
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
-                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
         assertThat(attributes.get("set-text")).asList().first().isInstanceOf(String.class);
         assertThat(attributes.get("set-ltext")).asList().first().isInstanceOf(LocalizedString.class);
         assertThat(attributes.get("set-enum")).asList().first().isInstanceOf(AttributePlainEnumValue.class);
@@ -97,7 +97,7 @@ public class AttributesTest {
                 .asList()
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
-                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
 
         assertThat(attributes.get("localizedNotes")).asList().first().isInstanceOf(LocalizedString.class);
     }
@@ -204,7 +204,7 @@ public class AttributesTest {
         assertThat(attributes.get("nested").getValue()).asList()
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
-                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
         assertThat(attributes.get("set-text").getValue()).asList().first().isInstanceOf(String.class);
         assertThat(attributes.get("set-ltext").getValue()).asList().first().isInstanceOf(LocalizedString.class);
         assertThat(attributes.get("set-enum").getValue()).asList().first().isInstanceOf(AttributePlainEnumValue.class);
@@ -239,7 +239,7 @@ public class AttributesTest {
                 .asList()
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
-                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
         assertThat(attributes.get("localizedNotes").getValue()).asList().first().isInstanceOf(LocalizedString.class);
 
     }
@@ -279,7 +279,7 @@ public class AttributesTest {
         assertThat(attributes.get("nested").getValue()).asList()
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
-                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
         assertThat(attributes.get("set-text").withAttribute(AttributeAccessor::asSetString)).asList()
                 .first()
                 .isInstanceOf(String.class);
@@ -321,7 +321,7 @@ public class AttributesTest {
                 .asList()
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
-                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
         assertThat(attributes.get("localizedNotes").withAttribute(AttributeAccessor::asSetLocalizedString)).asList()
                 .first()
                 .isInstanceOf(LocalizedString.class);
@@ -363,7 +363,7 @@ public class AttributesTest {
         assertThat(attributes.get("nested").getValue()).asList()
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
-                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
         assertThat(attributes.asSetString("set-text")).asList().first().isInstanceOf(String.class);
         assertThat(attributes.asSetLocalizedString("set-ltext")).asList().first().isInstanceOf(LocalizedString.class);
         assertThat(attributes.asSetEnum("set-enum")).asList().first().isInstanceOf(AttributePlainEnumValue.class);
@@ -387,7 +387,7 @@ public class AttributesTest {
                 .asList()
                 .first()
                 .isInstanceOfSatisfying(Attribute.class,
-                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
         assertThat(attributes.asSetLocalizedString("localizedNotes")).asList()
                 .first()
                 .isInstanceOf(LocalizedString.class);

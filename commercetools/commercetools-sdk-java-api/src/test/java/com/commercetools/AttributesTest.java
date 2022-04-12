@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
+import java.util.List;
 import java.util.Map;
 
 import com.commercetools.api.json.ApiModuleOptions;
@@ -390,5 +391,33 @@ public class AttributesTest {
         assertThat(attributes.asSetLocalizedString("localizedNotes")).asList()
                 .first()
                 .isInstanceOf(LocalizedString.class);
+    }
+
+    @Test
+    public void nestedAttributesTypedAccessor() throws IOException {
+        ProductVariant variant = JsonUtils.fromJsonString(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttributes()).isNotEmpty();
+
+        AttributesAccessor attributes = variant.withProductVariant(AttributesAccessor::of);
+        final AttributesAccessor nested = attributes.asNested("nested");
+
+        assertThat(nested).isNotNull();
+        assertThat(nested.asEnum("nested-enum")).isInstanceOf(AttributePlainEnumValue.class);
+        assertThat(nested.asString("nested-string")).isInstanceOf(String.class);
+    }
+
+    @Test
+    public void setNestedAttributesTypedAccessor() throws IOException {
+        ProductVariant variant = JsonUtils.fromJsonString(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttributes()).isNotEmpty();
+
+        AttributesAccessor attributes = variant.withProductVariant(AttributesAccessor::of);
+        final List<AttributesAccessor> nested = attributes.asSetNested("set-nested");
+
+        assertThat(nested).hasSize(1);
+        assertThat(nested.get(0).asEnum("set-nested-enum")).isInstanceOf(AttributePlainEnumValue.class);
+        assertThat(nested.get(0).asString("set-nested-string")).isInstanceOf(String.class);
     }
 }

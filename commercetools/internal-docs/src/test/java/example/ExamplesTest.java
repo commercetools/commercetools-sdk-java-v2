@@ -20,7 +20,6 @@ import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.AddressDraft;
-import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.customer.*;
 import com.commercetools.api.models.customer_group.*;
@@ -350,38 +349,30 @@ public class ExamplesTest {
 
     @Test
     public void builderMethod() {
-        CustomerDraftBuilder builder = CustomerDraft.builder()
-                .email("john.doe@example.com");
+        CustomerDraftBuilder builder = CustomerDraft.builder().email("john.doe@example.com");
         CustomerDraft customerDraft = builder.build();
         CustomerDraft newCustomerDraft = CustomerDraft.builder(customerDraft).build();
     }
 
     @Test
     public void accessorTest() {
-        ProductVariant variant = ProductVariantBuilder.of()
-                .id(1L)
-                .attributes(Collections.emptyList())
-                .build();
+        ProductVariant variant = ProductVariantBuilder.of().id(1L).attributes(Collections.emptyList()).build();
         AttributesAccessor attributes = variant.withProductVariant(AttributesAccessor::of);
         AttributeLocalizedEnumValue color = attributes.asLocalizedEnum("color");
     }
 
     @Test
     public void reflectionString() {
-        CustomerDraft customerDraft = CustomerDraft.builder()
-                .email("john.doe@example.com")
-                .build();
+        CustomerDraft customerDraft = CustomerDraft.builder().email("john.doe@example.com").build();
 
         String draft = ModelBase.reflectionString(customerDraft);
-        String draft2 = ((ModelBase)customerDraft).reflectionString();
+        String draft2 = ((ModelBase) customerDraft).reflectionString();
         String draft3 = customerDraft.withCustomerDraft(ModelBase::reflectionString);
     }
 
     @Test
     public void builderProperty() {
-        CustomerDraft customerDraft = CustomerDraft.builder()
-                .email("john.doe@example.com")
-                .build();
+        CustomerDraft customerDraft = CustomerDraft.builder().email("john.doe@example.com").build();
     }
 
     @Test
@@ -397,12 +388,14 @@ public class ExamplesTest {
         CustomerDraft customerDraft = CustomerDraft.builder()
                 .email("john.doe@example.com")
                 .addresses(AddressDraft.builder().country("DE").build(), AddressDraft.builder().country("US").build())
-                .addresses(Arrays.asList(AddressDraft.builder().country("DE").build(), AddressDraft.builder().country("US").build()))
+                .addresses(Arrays.asList(AddressDraft.builder().country("DE").build(),
+                    AddressDraft.builder().country("US").build()))
                 .build();
 
         CustomerDraft customerDraft2 = CustomerDraft.builder()
                 .email("john.doe@example.com")
-                .addresses(Arrays.asList(AddressDraft.builder().country("DE").build(), AddressDraft.builder().country("US").build()))
+                .addresses(Arrays.asList(AddressDraft.builder().country("DE").build(),
+                    AddressDraft.builder().country("US").build()))
                 .build();
 
         CustomerDraft customerDraft3 = CustomerDraft.builder()
@@ -434,7 +427,10 @@ public class ExamplesTest {
 
     @Test
     public void polymorphicBuilder() {
-        CustomerGroupChangeNameAction action1 = CustomerGroupUpdateActionBuilder.of().changeNameBuilder().name("foo").build();
+        CustomerGroupChangeNameAction action1 = CustomerGroupUpdateActionBuilder.of()
+                .changeNameBuilder()
+                .name("foo")
+                .build();
         CustomerGroupSetKeyAction action2 = CustomerGroupUpdateActionBuilder.of().setKeyBuilder().key("foo").build();
     }
 

@@ -30,11 +30,11 @@ public interface ItemShippingTarget {
     */
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     public void setAddressKey(final String addressKey);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public static ItemShippingTarget of() {
         return new ItemShippingTargetImpl();

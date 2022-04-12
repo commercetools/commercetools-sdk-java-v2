@@ -20,14 +20,14 @@ public interface ItemState {
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @NotNull
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setState(final StateReference state);
 

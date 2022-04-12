@@ -18,6 +18,10 @@ import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 
+/**
+ * Interface to collect the common stuff between carts and orders.
+ * @param <T>
+ */
 public interface OrderLike<T extends OrderLike<T>> {
     @NotNull
     public String getId();

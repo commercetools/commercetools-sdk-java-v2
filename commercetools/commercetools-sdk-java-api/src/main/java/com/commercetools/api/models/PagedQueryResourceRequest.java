@@ -8,6 +8,11 @@ import io.vrap.rmf.base.client.ApiMethod;
 import io.vrap.rmf.base.client.ClientRequestCommand;
 import io.vrap.rmf.base.client.RequestCommand;
 
+/**
+ * Interface with common methods for query endpoints
+ * @param <T>
+ * @param <TResult>
+ */
 public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T, TResult>, TResult>
         extends RequestCommand<TResult>, ClientRequestCommand<TResult> {
     <TValue> PagedQueryResourceRequest<T, TResult> withLimit(final TValue limit);

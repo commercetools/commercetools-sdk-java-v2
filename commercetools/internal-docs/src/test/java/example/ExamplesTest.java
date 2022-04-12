@@ -19,8 +19,15 @@ import com.commercetools.api.client.QueryUtils;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
+import com.commercetools.api.models.common.AddressDraft;
+import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
+import com.commercetools.api.models.customer.*;
+import com.commercetools.api.models.customer_group.*;
+import com.commercetools.api.models.product.AttributesAccessor;
 import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.http.apachehttp.CtApacheHttpClient;
@@ -28,6 +35,7 @@ import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
@@ -331,5 +339,107 @@ public class ExamplesTest {
 
         Assertions.assertThat(taxCategoriesGet.getQueryParam("var.name").get(0)).isEqualTo("de19");
         Assertions.assertThat(taxCategoriesGet2.getQueryParam("var.name").get(0)).isEqualTo("de07");
+    }
+
+    @Test
+    public void factoryMethod() {
+        Customer customer = Customer.of();
+        Customer newCustomer = Customer.of(customer);
+    }
+
+    @Test
+    public void builderMethod() {
+        CustomerDraftBuilder builder = CustomerDraft.builder()
+                .email("john.doe@example.com");
+        CustomerDraft customerDraft = builder.build();
+        CustomerDraft newCustomerDraft = CustomerDraft.builder(customerDraft).build();
+    }
+
+    @Test
+    public void accessorTest() {
+        ProductVariant variant = ProductVariant.of();
+        AttributesAccessor attributes = variant.withProductVariant(AttributesAccessor::of);
+        AttributeLocalizedEnumValue color = attributes.asLocalizedEnum("color");
+    }
+
+    @Test
+    public void reflectionString() {
+        CustomerDraft customerDraft = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .build();
+
+        String draft = ModelBase.reflectionString(customerDraft);
+        String draft2 = ((ModelBase)customerDraft).reflectionString();
+        String draft3 = customerDraft.withCustomerDraft(ModelBase::reflectionString);
+    }
+
+    @Test
+    public void builderProperty() {
+        CustomerDraft customerDraft = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .build();
+    }
+
+    @Test
+    public void builderLambda() {
+        CustomerDraft customerDraft = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .anonymousCart(cartResourceIdentifierBuilder -> cartResourceIdentifierBuilder.key("cart-key"))
+                .build();
+    }
+
+    @Test
+    public void builderArray() {
+        CustomerDraft customerDraft = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .addresses(AddressDraft.builder().country("DE").build(), AddressDraft.builder().country("US").build())
+                .addresses(Arrays.asList(AddressDraft.builder().country("DE").build(), AddressDraft.builder().country("US").build()))
+                .build();
+
+        CustomerDraft customerDraft2 = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .addresses(Arrays.asList(AddressDraft.builder().country("DE").build(), AddressDraft.builder().country("US").build()))
+                .build();
+
+        CustomerDraft customerDraft3 = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .addresses(AddressDraft.builder().country("DE").build())
+                .plusAddresses(AddressDraft.builder().country("DE").build())
+                .build();
+
+        CustomerDraft customerDraft4 = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .withAddresses(addressBuilder -> addressBuilder.country("DE"))
+                .plusAddresses(addressBuilder -> addressBuilder.country("US"))
+                .build();
+    }
+
+    @Test
+    public void polymorphicInterface() {
+        CustomerGroupChangeNameAction action1 = CustomerGroupUpdateAction.changeNameBuilder().name("foo").build();
+        CustomerGroupSetKeyAction action2 = CustomerGroupUpdateAction.setKeyBuilder().key("foo").build();
+    }
+
+    @Test
+    public void updateBodyInterface() {
+        CustomerGroupUpdate customerGroupUpdate = CustomerGroupUpdate.builder()
+                .version(1L)
+                .actions(CustomerGroupUpdateAction.changeNameBuilder().name("foo").build())
+                .build();
+    }
+
+    @Test
+    public void polymorphicBuilder() {
+        CustomerGroupChangeNameAction action1 = CustomerGroupUpdateActionBuilder.of().changeNameBuilder().name("foo").build();
+        CustomerGroupSetKeyAction action2 = CustomerGroupUpdateActionBuilder.of().setKeyBuilder().key("foo").build();
+    }
+
+    @Test
+    public void updateBodyBuilder() {
+        CustomerGroupUpdate customerGroupUpdate = CustomerGroupUpdate.builder()
+                .version(1L)
+                .withActions(builder -> builder.changeNameBuilder().name("foo"))
+                .plusActions(builder -> builder.setKeyBuilder().key("foo"))
+                .build();
     }
 }

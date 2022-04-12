@@ -30,19 +30,19 @@
 <span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    private Double heightInMillimeter;</span>
+<span class="source-line-no">020</span><span id="line.20">    private Integer heightInMillimeter;</span>
 <span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    private Double lengthInMillimeter;</span>
+<span class="source-line-no">022</span><span id="line.22">    private Integer lengthInMillimeter;</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    private Double widthInMillimeter;</span>
+<span class="source-line-no">024</span><span id="line.24">    private Integer widthInMillimeter;</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    private Double weightInGram;</span>
+<span class="source-line-no">026</span><span id="line.26">    private Integer weightInGram;</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
 <span class="source-line-no">028</span><span id="line.28">    @JsonCreator</span>
-<span class="source-line-no">029</span><span id="line.29">    ParcelMeasurementsImpl(@JsonProperty("heightInMillimeter") final Double heightInMillimeter,</span>
-<span class="source-line-no">030</span><span id="line.30">            @JsonProperty("lengthInMillimeter") final Double lengthInMillimeter,</span>
-<span class="source-line-no">031</span><span id="line.31">            @JsonProperty("widthInMillimeter") final Double widthInMillimeter,</span>
-<span class="source-line-no">032</span><span id="line.32">            @JsonProperty("weightInGram") final Double weightInGram) {</span>
+<span class="source-line-no">029</span><span id="line.29">    ParcelMeasurementsImpl(@JsonProperty("heightInMillimeter") final Integer heightInMillimeter,</span>
+<span class="source-line-no">030</span><span id="line.30">            @JsonProperty("lengthInMillimeter") final Integer lengthInMillimeter,</span>
+<span class="source-line-no">031</span><span id="line.31">            @JsonProperty("widthInMillimeter") final Integer widthInMillimeter,</span>
+<span class="source-line-no">032</span><span id="line.32">            @JsonProperty("weightInGram") final Integer weightInGram) {</span>
 <span class="source-line-no">033</span><span id="line.33">        this.heightInMillimeter = heightInMillimeter;</span>
 <span class="source-line-no">034</span><span id="line.34">        this.lengthInMillimeter = lengthInMillimeter;</span>
 <span class="source-line-no">035</span><span id="line.35">        this.widthInMillimeter = widthInMillimeter;</span>
@@ -52,35 +52,35 @@
 <span class="source-line-no">039</span><span id="line.39">    public ParcelMeasurementsImpl() {</span>
 <span class="source-line-no">040</span><span id="line.40">    }</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public Double getHeightInMillimeter() {</span>
+<span class="source-line-no">042</span><span id="line.42">    public Integer getHeightInMillimeter() {</span>
 <span class="source-line-no">043</span><span id="line.43">        return this.heightInMillimeter;</span>
 <span class="source-line-no">044</span><span id="line.44">    }</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public Double getLengthInMillimeter() {</span>
+<span class="source-line-no">046</span><span id="line.46">    public Integer getLengthInMillimeter() {</span>
 <span class="source-line-no">047</span><span id="line.47">        return this.lengthInMillimeter;</span>
 <span class="source-line-no">048</span><span id="line.48">    }</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public Double getWidthInMillimeter() {</span>
+<span class="source-line-no">050</span><span id="line.50">    public Integer getWidthInMillimeter() {</span>
 <span class="source-line-no">051</span><span id="line.51">        return this.widthInMillimeter;</span>
 <span class="source-line-no">052</span><span id="line.52">    }</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public Double getWeightInGram() {</span>
+<span class="source-line-no">054</span><span id="line.54">    public Integer getWeightInGram() {</span>
 <span class="source-line-no">055</span><span id="line.55">        return this.weightInGram;</span>
 <span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public void setHeightInMillimeter(final Double heightInMillimeter) {</span>
+<span class="source-line-no">058</span><span id="line.58">    public void setHeightInMillimeter(final Integer heightInMillimeter) {</span>
 <span class="source-line-no">059</span><span id="line.59">        this.heightInMillimeter = heightInMillimeter;</span>
 <span class="source-line-no">060</span><span id="line.60">    }</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public void setLengthInMillimeter(final Double lengthInMillimeter) {</span>
+<span class="source-line-no">062</span><span id="line.62">    public void setLengthInMillimeter(final Integer lengthInMillimeter) {</span>
 <span class="source-line-no">063</span><span id="line.63">        this.lengthInMillimeter = lengthInMillimeter;</span>
 <span class="source-line-no">064</span><span id="line.64">    }</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public void setWidthInMillimeter(final Double widthInMillimeter) {</span>
+<span class="source-line-no">066</span><span id="line.66">    public void setWidthInMillimeter(final Integer widthInMillimeter) {</span>
 <span class="source-line-no">067</span><span id="line.67">        this.widthInMillimeter = widthInMillimeter;</span>
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public void setWeightInGram(final Double weightInGram) {</span>
+<span class="source-line-no">070</span><span id="line.70">    public void setWeightInGram(final Integer weightInGram) {</span>
 <span class="source-line-no">071</span><span id="line.71">        this.weightInGram = weightInGram;</span>
 <span class="source-line-no">072</span><span id="line.72">    }</span>
 <span class="source-line-no">073</span><span id="line.73"></span>

@@ -28,24 +28,24 @@
 <span class="source-line-no">015</span><span id="line.15">public interface ParcelMeasurements {</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">    @JsonProperty("heightInMillimeter")</span>
-<span class="source-line-no">018</span><span id="line.18">    public Double getHeightInMillimeter();</span>
+<span class="source-line-no">018</span><span id="line.18">    public Integer getHeightInMillimeter();</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    @JsonProperty("lengthInMillimeter")</span>
-<span class="source-line-no">021</span><span id="line.21">    public Double getLengthInMillimeter();</span>
+<span class="source-line-no">021</span><span id="line.21">    public Integer getLengthInMillimeter();</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    @JsonProperty("widthInMillimeter")</span>
-<span class="source-line-no">024</span><span id="line.24">    public Double getWidthInMillimeter();</span>
+<span class="source-line-no">024</span><span id="line.24">    public Integer getWidthInMillimeter();</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
 <span class="source-line-no">026</span><span id="line.26">    @JsonProperty("weightInGram")</span>
-<span class="source-line-no">027</span><span id="line.27">    public Double getWeightInGram();</span>
+<span class="source-line-no">027</span><span id="line.27">    public Integer getWeightInGram();</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    public void setHeightInMillimeter(final Double heightInMillimeter);</span>
+<span class="source-line-no">029</span><span id="line.29">    public void setHeightInMillimeter(final Integer heightInMillimeter);</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    public void setLengthInMillimeter(final Double lengthInMillimeter);</span>
+<span class="source-line-no">031</span><span id="line.31">    public void setLengthInMillimeter(final Integer lengthInMillimeter);</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public void setWidthInMillimeter(final Double widthInMillimeter);</span>
+<span class="source-line-no">033</span><span id="line.33">    public void setWidthInMillimeter(final Integer widthInMillimeter);</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    public void setWeightInGram(final Double weightInGram);</span>
+<span class="source-line-no">035</span><span id="line.35">    public void setWeightInGram(final Integer weightInGram);</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
 <span class="source-line-no">037</span><span id="line.37">    public static ParcelMeasurements of() {</span>
 <span class="source-line-no">038</span><span id="line.38">        return new ParcelMeasurementsImpl();</span>

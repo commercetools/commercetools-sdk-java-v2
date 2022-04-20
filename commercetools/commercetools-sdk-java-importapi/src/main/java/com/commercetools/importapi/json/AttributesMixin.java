@@ -7,6 +7,6 @@ import com.commercetools.importapi.models.productvariants.Attribute;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 public interface AttributesMixin {
-    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+    @JsonInclude
     public Map<String, Attribute> values();
 }

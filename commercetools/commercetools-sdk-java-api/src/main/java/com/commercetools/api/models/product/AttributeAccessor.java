@@ -20,7 +20,11 @@ public class AttributeAccessor {
     }
 
     public static Map<String, Attribute> asMap(final ProductVariant variant) {
-        return variant.getAttributes().stream().collect(Collectors.toMap(Attribute::getName, attribute -> attribute));
+        return asMap(variant.getAttributes());
+    }
+
+    public static Map<String, Attribute> asMap(final List<Attribute> attributes) {
+        return attributes.stream().collect(Collectors.toMap(Attribute::getName, attribute -> attribute));
     }
 
     public static LocalDate asDate(final Attribute attribute) {
@@ -156,5 +160,15 @@ public class AttributeAccessor {
     @SuppressWarnings("unchecked")
     public static List<TypedMoney> asSetMoney(final Attribute attribute) {
         return (List<TypedMoney>) attribute.getValue();
+    }
+
+    @SuppressWarnings("unchecked")
+    public static List<Attribute> asNested(final Attribute attribute) {
+        return (List<Attribute>) attribute.getValue();
+    }
+
+    @SuppressWarnings("unchecked")
+    public static List<List<Attribute>> asSetNested(final Attribute attribute) {
+        return (List<List<Attribute>>) attribute.getValue();
     }
 }

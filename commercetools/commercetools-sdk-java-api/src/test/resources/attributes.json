@@ -132,6 +132,10 @@
             "name": "nested",
             "value": [
                 {
+                    "name": "nested-string",
+                    "value": "foo"
+                },
+                {
                     "name": "nested-enum",
                     "value": {
                         "key": "foo",
@@ -144,6 +148,10 @@
             "name": "set-nested",
             "value": [
                 [
+                    {
+                        "name": "set-nested-string",
+                        "value": "foo"
+                    },
                     {
                         "name": "set-nested-enum",
                         "value": {

@@ -30,4 +30,8 @@ public class ByProjectKeyMeCartsRequestBuilder {
     public ByProjectKeyMeCartsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyMeCartsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+
+    public ByProjectKeyMeCartsReplicateRequestBuilder replicate() {
+        return new ByProjectKeyMeCartsReplicateRequestBuilder(apiHttpClient, projectKey);
+    }
 }

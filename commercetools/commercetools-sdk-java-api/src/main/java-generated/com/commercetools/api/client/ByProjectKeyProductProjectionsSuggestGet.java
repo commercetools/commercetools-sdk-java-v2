@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyProductProjectionsSuggestGet
-        extends ApiMethod<ByProjectKeyProductProjectionsSuggestGet, java.lang.Object>
+public class ByProjectKeyProductProjectionsSuggestGet extends
+        ApiMethod<ByProjectKeyProductProjectionsSuggestGet, com.commercetools.api.models.product.SuggestionResult>
         implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>,
@@ -47,13 +47,15 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     @Override
-    public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, final Duration timeout) {
-        return executeBlocking(client, timeout, java.lang.Object.class);
+    public ApiHttpResponse<com.commercetools.api.models.product.SuggestionResult> executeBlocking(
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.api.models.product.SuggestionResult.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(final ApiHttpClient client) {
-        return execute(client, java.lang.Object.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.SuggestionResult>> execute(
+            final ApiHttpClient client) {
+        return execute(client, com.commercetools.api.models.product.SuggestionResult.class);
     }
 
     public String getProjectKey() {

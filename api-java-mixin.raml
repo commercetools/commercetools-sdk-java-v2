@@ -1,0 +1,177 @@
+#%RAML 1.0 Extension
+usage: Adds JavaSDK extended functionality
+extends: api.raml
+annotationTypes:
+  java-mixin:
+    type: string
+    allowedTargets: TypeDeclaration
+
+types:
+  Cart:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.cart.CartResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.cart.CartReference.builder().id(getId()).build();
+      }
+  CartDiscount:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.cart_discount.CartDiscountReference.builder().id(getId()).build();
+      }
+  Category:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.category.CategoryResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.category.CategoryReference.builder().id(getId()).build();
+      }
+  Channel:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.channel.ChannelResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.channel.ChannelReference.builder().id(getId()).build();
+      }
+  Customer:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.customer.CustomerResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.customer.CustomerReference.builder().id(getId()).build();
+      }
+  CustomerGroup:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.customer_group.CustomerGroupReference.builder().id(getId()).build();
+      }
+  DiscountCode:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.discount_code.DiscountCodeReference.builder().id(getId()).build();
+      }
+  Order:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.order.OrderResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.order.OrderReference.builder().id(getId()).build();
+      }
+  OrderEdit:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.order_edit.OrderEditResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.order_edit.OrderEditReference.builder().id(getId()).build();
+      }
+  Payment:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.payment.PaymentResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.payment.PaymentReference.builder().id(getId()).build();
+      }
+  Product:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.product.ProductResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.product.ProductReference.builder().id(getId()).build();
+      }
+  ProductDiscount:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.product_discount.ProductDiscountReference.builder().id(getId()).build();
+      }
+  ProductType:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.product_type.ProductTypeResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.product_type.ProductTypeReference.builder().id(getId()).build();
+      }
+  Review:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.review.ReviewResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.review.ReviewReference.builder().id(getId()).build();
+      }
+  ShippingMethod:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.shipping_method.ShippingMethodReference.builder().id(getId()).build();
+      }
+  ShoppingList:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.shopping_list.ShoppingListReference.builder().id(getId()).build();
+      }
+  State:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.state.StateResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.state.StateReference.builder().id(getId()).build();
+      }
+  Store:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.store.StoreResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.store.StoreReference.builder().id(getId()).build();
+      }
+  TaxCategory:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.tax_category.TaxCategoryReference.builder().id(getId()).build();
+      }
+  Type:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.type.TypeResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.type.TypeReference.builder().id(getId()).build();
+      }
+  Zone:
+    (java-mixin): |
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.zone.ZoneResourceIdentifier.builder().id(getId()).build();
+      }
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.zone.ZoneReference.builder().id(getId()).build();
+      }

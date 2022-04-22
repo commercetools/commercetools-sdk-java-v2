@@ -21,7 +21,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountImpl.class)
-public interface ProductDiscount extends BaseResource, com.commercetools.api.models.DomainResource<ProductDiscount> {
+public interface ProductDiscount extends BaseResource, com.commercetools.api.models.DomainResource<ProductDiscount>,
+        com.commercetools.api.models.Referencable<ProductDiscount>,
+        com.commercetools.api.models.ResourceIdentifiable<ProductDiscount> {
 
     /**
     *  <p>The unique ID of the product discount</p>
@@ -200,4 +202,17 @@ public interface ProductDiscount extends BaseResource, com.commercetools.api.mod
     default <T> T withProductDiscount(Function<ProductDiscount, T> helper) {
         return helper.apply(this);
     }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier.builder()
+                .id(getId())
+                .build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.product_discount.ProductDiscountReference.builder().id(getId()).build();
+    }
+
 }

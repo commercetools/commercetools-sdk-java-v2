@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartDiscountImpl.class)
 public interface CartDiscount extends BaseResource, com.commercetools.api.models.DomainResource<CartDiscount>,
+        com.commercetools.api.models.Referencable<CartDiscount>,
+        com.commercetools.api.models.ResourceIdentifiable<CartDiscount>,
         com.commercetools.api.models.Customizable<CartDiscount> {
 
     /**
@@ -231,4 +233,15 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     default <T> T withCartDiscount(Function<CartDiscount, T> helper) {
         return helper.apply(this);
     }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.cart_discount.CartDiscountReference.builder().id(getId()).build();
+    }
+
 }

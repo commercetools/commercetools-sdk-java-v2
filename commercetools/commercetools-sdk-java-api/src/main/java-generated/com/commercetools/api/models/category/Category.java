@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategoryImpl.class)
 public interface Category extends BaseResource, com.commercetools.api.models.DomainResource<Category>,
+        com.commercetools.api.models.Referencable<Category>,
+        com.commercetools.api.models.ResourceIdentifiable<Category>,
         com.commercetools.api.models.Customizable<Category> {
 
     /**
@@ -217,4 +219,15 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     default <T> T withCategory(Function<Category, T> helper) {
         return helper.apply(this);
     }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.category.CategoryResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.category.CategoryReference.builder().id(getId()).build();
+    }
+
 }

@@ -20,7 +20,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeImpl.class)
-public interface Type extends BaseResource, com.commercetools.api.models.DomainResource<Type> {
+public interface Type extends BaseResource, com.commercetools.api.models.DomainResource<Type>,
+        com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type> {
 
     /**
     *  <p>Unique ID of the Type.</p>
@@ -160,4 +161,15 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
     default <T> T withType(Function<Type, T> helper) {
         return helper.apply(this);
     }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.type.TypeResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.type.TypeReference.builder().id(getId()).build();
+    }
+
 }

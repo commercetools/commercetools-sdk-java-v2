@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodImpl.class)
 public interface ShippingMethod extends BaseResource, com.commercetools.api.models.DomainResource<ShippingMethod>,
+        com.commercetools.api.models.Referencable<ShippingMethod>,
+        com.commercetools.api.models.ResourceIdentifiable<ShippingMethod>,
         com.commercetools.api.models.Customizable<ShippingMethod> {
 
     /**
@@ -182,4 +184,17 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
     default <T> T withShippingMethod(Function<ShippingMethod, T> helper) {
         return helper.apply(this);
     }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier.builder()
+                .id(getId())
+                .build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodReference.builder().id(getId()).build();
+    }
+
 }

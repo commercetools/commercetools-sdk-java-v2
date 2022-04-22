@@ -19,7 +19,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryImpl.class)
-public interface TaxCategory extends BaseResource, com.commercetools.api.models.DomainResource<TaxCategory> {
+public interface TaxCategory extends BaseResource, com.commercetools.api.models.DomainResource<TaxCategory>,
+        com.commercetools.api.models.Referencable<TaxCategory>,
+        com.commercetools.api.models.ResourceIdentifiable<TaxCategory> {
 
     /**
     *  <p>Unique ID of the TaxCategory.</p>
@@ -145,4 +147,15 @@ public interface TaxCategory extends BaseResource, com.commercetools.api.models.
     default <T> T withTaxCategory(Function<TaxCategory, T> helper) {
         return helper.apply(this);
     }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.tax_category.TaxCategoryReference.builder().id(getId()).build();
+    }
+
 }

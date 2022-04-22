@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerImpl.class)
 public interface Customer extends BaseResource, com.commercetools.api.models.DomainResource<Customer>,
+        com.commercetools.api.models.Referencable<Customer>,
+        com.commercetools.api.models.ResourceIdentifiable<Customer>,
         com.commercetools.api.models.Customizable<Customer> {
 
     /**
@@ -313,4 +315,15 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     default <T> T withCustomer(Function<Customer, T> helper) {
         return helper.apply(this);
     }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.customer.CustomerResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.customer.CustomerReference.builder().id(getId()).build();
+    }
+
 }

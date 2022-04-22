@@ -27,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartImpl.class)
 public interface Cart extends BaseResource, com.commercetools.api.models.DomainResource<Cart>,
+        com.commercetools.api.models.Referencable<Cart>, com.commercetools.api.models.ResourceIdentifiable<Cart>,
         com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart> {
 
     /**
@@ -379,4 +380,15 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     default <T> T withCart(Function<Cart, T> helper) {
         return helper.apply(this);
     }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.cart.CartResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.cart.CartReference.builder().id(getId()).build();
+    }
+
 }

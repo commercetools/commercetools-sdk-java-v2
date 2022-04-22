@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -20,14 +21,23 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
     String ADD_PRODUCT_SELECTION = "addProductSelection";
 
     /**
-    *  <p>A Product Selection to be added to the current Product Selections of this Store.</p>
+    *  <p>Resource Identifier of a Product Selection</p>
     */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
-    public ProductSelectionSettingDraft getProductSelection();
+    public ProductSelectionResourceIdentifier getProductSelection();
 
-    public void setProductSelection(final ProductSelectionSettingDraft productSelection);
+    /**
+    *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+    */
+
+    @JsonProperty("active")
+    public Boolean getActive();
+
+    public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);
+
+    public void setActive(final Boolean active);
 
     public static StoreAddProductSelectionAction of() {
         return new StoreAddProductSelectionActionImpl();
@@ -36,6 +46,7 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
     public static StoreAddProductSelectionAction of(final StoreAddProductSelectionAction template) {
         StoreAddProductSelectionActionImpl instance = new StoreAddProductSelectionActionImpl();
         instance.setProductSelection(template.getProductSelection());
+        instance.setActive(template.getActive());
         return instance;
     }
 

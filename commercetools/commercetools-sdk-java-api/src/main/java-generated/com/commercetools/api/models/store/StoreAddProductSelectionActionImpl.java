@@ -19,12 +19,16 @@ public class StoreAddProductSelectionActionImpl implements StoreAddProductSelect
 
     private String action;
 
-    private com.commercetools.api.models.store.ProductSelectionSettingDraft productSelection;
+    private com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection;
+
+    private Boolean active;
 
     @JsonCreator
     StoreAddProductSelectionActionImpl(
-            @JsonProperty("productSelection") final com.commercetools.api.models.store.ProductSelectionSettingDraft productSelection) {
+            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection,
+            @JsonProperty("active") final Boolean active) {
         this.productSelection = productSelection;
+        this.active = active;
         this.action = ADD_PRODUCT_SELECTION;
     }
 
@@ -37,15 +41,26 @@ public class StoreAddProductSelectionActionImpl implements StoreAddProductSelect
     }
 
     /**
-    *  <p>A Product Selection to be added to the current Product Selections of this Store.</p>
+    *  <p>Resource Identifier of a Product Selection</p>
     */
-    public com.commercetools.api.models.store.ProductSelectionSettingDraft getProductSelection() {
+    public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
         return this.productSelection;
     }
 
+    /**
+    *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+    */
+    public Boolean getActive() {
+        return this.active;
+    }
+
     public void setProductSelection(
-            final com.commercetools.api.models.store.ProductSelectionSettingDraft productSelection) {
+            final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
         this.productSelection = productSelection;
+    }
+
+    public void setActive(final Boolean active) {
+        this.active = active;
     }
 
     @Override
@@ -60,12 +75,13 @@ public class StoreAddProductSelectionActionImpl implements StoreAddProductSelect
 
         return new EqualsBuilder().append(action, that.action)
                 .append(productSelection, that.productSelection)
+                .append(active, that.active)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(productSelection).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(productSelection).append(active).toHashCode();
     }
 
 }

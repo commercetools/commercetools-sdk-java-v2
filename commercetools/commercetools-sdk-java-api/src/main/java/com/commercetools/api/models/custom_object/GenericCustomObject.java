@@ -8,14 +8,14 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.Referencable;
-import com.commercetools.api.models.ResourceIdentifiable;
 import com.commercetools.api.models.common.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(as = GenericCustomObjectImpl.class)
 public interface GenericCustomObject<TValue>
-        extends BaseResource, com.commercetools.api.models.DomainResource<GenericCustomObject<TValue>>, Referencable<GenericCustomObject<TValue>> {
+        extends BaseResource, com.commercetools.api.models.DomainResource<GenericCustomObject<TValue>>,
+        Referencable<GenericCustomObject<TValue>> {
 
     @NotNull
     @JsonProperty("id")

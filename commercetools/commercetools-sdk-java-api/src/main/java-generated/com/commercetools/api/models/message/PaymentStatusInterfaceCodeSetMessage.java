@@ -63,4 +63,13 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     default <T> T withPaymentStatusInterfaceCodeSetMessage(Function<PaymentStatusInterfaceCodeSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentStatusInterfaceCodeSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentStatusInterfaceCodeSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentStatusInterfaceCodeSetMessage>";
+            }
+        };
+    }
 }

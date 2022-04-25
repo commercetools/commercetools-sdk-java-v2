@@ -49,4 +49,13 @@ public interface StringLabel extends Label {
     default <T> T withStringLabel(Function<StringLabel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StringLabel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StringLabel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StringLabel>";
+            }
+        };
+    }
 }

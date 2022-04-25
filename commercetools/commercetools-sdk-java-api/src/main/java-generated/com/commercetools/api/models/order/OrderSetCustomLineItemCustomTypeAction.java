@@ -71,4 +71,13 @@ public interface OrderSetCustomLineItemCustomTypeAction extends OrderUpdateActio
             Function<OrderSetCustomLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomLineItemCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomLineItemCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetCustomLineItemCustomTypeAction>";
+            }
+        };
+    }
 }

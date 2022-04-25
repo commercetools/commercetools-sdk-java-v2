@@ -66,4 +66,13 @@ public interface SetCartClassificationShippingRateInputValue {
             Function<SetCartClassificationShippingRateInputValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCartClassificationShippingRateInputValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCartClassificationShippingRateInputValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCartClassificationShippingRateInputValue>";
+            }
+        };
+    }
 }

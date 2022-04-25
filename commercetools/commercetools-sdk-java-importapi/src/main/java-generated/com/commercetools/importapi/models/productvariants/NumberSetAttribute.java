@@ -52,4 +52,13 @@ public interface NumberSetAttribute extends Attribute {
     default <T> T withNumberSetAttribute(Function<NumberSetAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<NumberSetAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<NumberSetAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<NumberSetAttribute>";
+            }
+        };
+    }
 }

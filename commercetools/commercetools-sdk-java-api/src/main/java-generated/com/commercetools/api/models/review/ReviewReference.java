@@ -47,4 +47,13 @@ public interface ReviewReference extends Reference, com.commercetools.api.models
     default <T> T withReviewReference(Function<ReviewReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewReference>";
+            }
+        };
+    }
 }

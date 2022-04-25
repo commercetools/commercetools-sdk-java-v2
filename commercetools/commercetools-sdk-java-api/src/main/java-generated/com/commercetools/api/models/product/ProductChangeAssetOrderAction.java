@@ -66,4 +66,13 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
     default <T> T withProductChangeAssetOrderAction(Function<ProductChangeAssetOrderAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeAssetOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeAssetOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductChangeAssetOrderAction>";
+            }
+        };
+    }
 }

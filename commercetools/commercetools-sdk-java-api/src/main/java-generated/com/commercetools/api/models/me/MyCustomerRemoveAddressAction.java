@@ -48,4 +48,13 @@ public interface MyCustomerRemoveAddressAction extends MyCustomerUpdateAction {
     default <T> T withMyCustomerRemoveAddressAction(Function<MyCustomerRemoveAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerRemoveAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerRemoveAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerRemoveAddressAction>";
+            }
+        };
+    }
 }

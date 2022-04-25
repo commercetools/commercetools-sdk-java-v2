@@ -34,4 +34,13 @@ public interface OrderSearchQuery {
     default <T> T withOrderSearchQuery(Function<OrderSearchQuery, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSearchQuery> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSearchQuery>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSearchQuery>";
+            }
+        };
+    }
 }

@@ -61,4 +61,13 @@ public interface TaxCategoryResourceIdentifier
     default <T> T withTaxCategoryResourceIdentifier(Function<TaxCategoryResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryResourceIdentifier>";
+            }
+        };
+    }
 }

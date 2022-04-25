@@ -59,4 +59,13 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
     default <T> T withProductStateTransitionMessagePayload(Function<ProductStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductStateTransitionMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductStateTransitionMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductStateTransitionMessagePayload>";
+            }
+        };
+    }
 }

@@ -84,4 +84,13 @@ public interface SetShippingMethodTaxRateChange extends Change {
     default <T> T withSetShippingMethodTaxRateChange(Function<SetShippingMethodTaxRateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetShippingMethodTaxRateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetShippingMethodTaxRateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetShippingMethodTaxRateChange>";
+            }
+        };
+    }
 }

@@ -45,4 +45,13 @@ public interface ProjectChangeMessagesEnabledAction extends ProjectUpdateAction 
     default <T> T withProjectChangeMessagesEnabledAction(Function<ProjectChangeMessagesEnabledAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesEnabledAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesEnabledAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeMessagesEnabledAction>";
+            }
+        };
+    }
 }

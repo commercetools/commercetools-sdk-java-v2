@@ -53,4 +53,13 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     default <T> T withOrderSetParcelTrackingDataAction(Function<OrderSetParcelTrackingDataAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelTrackingDataAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelTrackingDataAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetParcelTrackingDataAction>";
+            }
+        };
+    }
 }

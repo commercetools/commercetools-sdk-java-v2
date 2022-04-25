@@ -59,4 +59,13 @@ public interface ProductSelectionSettingDraft {
     default <T> T withProductSelectionSettingDraft(Function<ProductSelectionSettingDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSettingDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSettingDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionSettingDraft>";
+            }
+        };
+    }
 }

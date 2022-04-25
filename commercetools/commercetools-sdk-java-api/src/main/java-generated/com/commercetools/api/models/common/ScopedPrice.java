@@ -129,4 +129,13 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     default <T> T withScopedPrice(Function<ScopedPrice, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ScopedPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ScopedPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ScopedPrice>";
+            }
+        };
+    }
 }

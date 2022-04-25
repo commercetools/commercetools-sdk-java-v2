@@ -36,4 +36,13 @@ public interface AttributeLocalizableTextType extends AttributeType {
     default <T> T withAttributeLocalizableTextType(Function<AttributeLocalizableTextType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizableTextType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizableTextType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeLocalizableTextType>";
+            }
+        };
+    }
 }

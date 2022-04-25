@@ -72,4 +72,13 @@ public interface StoreProductSelectionsChangedMessagePayload extends MessagePayl
             Function<StoreProductSelectionsChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreProductSelectionsChangedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreProductSelectionsChangedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreProductSelectionsChangedMessagePayload>";
+            }
+        };
+    }
 }

@@ -149,4 +149,13 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     default <T> T withCategoryDraft(Function<CategoryDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryDraft>";
+            }
+        };
+    }
 }

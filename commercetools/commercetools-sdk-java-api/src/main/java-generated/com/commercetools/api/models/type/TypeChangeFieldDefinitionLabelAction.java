@@ -63,4 +63,13 @@ public interface TypeChangeFieldDefinitionLabelAction extends TypeUpdateAction {
     default <T> T withTypeChangeFieldDefinitionLabelAction(Function<TypeChangeFieldDefinitionLabelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeFieldDefinitionLabelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeFieldDefinitionLabelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeFieldDefinitionLabelAction>";
+            }
+        };
+    }
 }

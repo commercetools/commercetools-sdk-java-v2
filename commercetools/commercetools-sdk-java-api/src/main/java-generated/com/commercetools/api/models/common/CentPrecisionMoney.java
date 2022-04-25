@@ -39,4 +39,13 @@ public interface CentPrecisionMoney extends TypedMoney {
     default <T> T withCentPrecisionMoney(Function<CentPrecisionMoney, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoney> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoney>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CentPrecisionMoney>";
+            }
+        };
+    }
 }

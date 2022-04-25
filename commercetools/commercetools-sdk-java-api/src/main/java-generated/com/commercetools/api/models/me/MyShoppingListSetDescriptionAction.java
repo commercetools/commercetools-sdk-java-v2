@@ -46,4 +46,13 @@ public interface MyShoppingListSetDescriptionAction extends MyShoppingListUpdate
     default <T> T withMyShoppingListSetDescriptionAction(Function<MyShoppingListSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyShoppingListSetDescriptionAction>";
+            }
+        };
+    }
 }

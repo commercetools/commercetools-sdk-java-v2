@@ -46,4 +46,13 @@ public interface CustomerSetVatIdAction extends CustomerUpdateAction {
     default <T> T withCustomerSetVatIdAction(Function<CustomerSetVatIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetVatIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetVatIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetVatIdAction>";
+            }
+        };
+    }
 }

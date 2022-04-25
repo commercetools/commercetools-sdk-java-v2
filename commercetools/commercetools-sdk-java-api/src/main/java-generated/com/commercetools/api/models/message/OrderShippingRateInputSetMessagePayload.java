@@ -55,4 +55,13 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
             Function<OrderShippingRateInputSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderShippingRateInputSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderShippingRateInputSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderShippingRateInputSetMessagePayload>";
+            }
+        };
+    }
 }

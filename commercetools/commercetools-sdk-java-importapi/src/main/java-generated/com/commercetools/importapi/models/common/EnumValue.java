@@ -50,4 +50,13 @@ public interface EnumValue {
     default <T> T withEnumValue(Function<EnumValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<EnumValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<EnumValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<EnumValue>";
+            }
+        };
+    }
 }

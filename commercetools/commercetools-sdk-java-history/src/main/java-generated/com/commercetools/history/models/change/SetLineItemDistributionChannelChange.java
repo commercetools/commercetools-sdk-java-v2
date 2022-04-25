@@ -87,4 +87,13 @@ public interface SetLineItemDistributionChannelChange extends Change {
     default <T> T withSetLineItemDistributionChannelChange(Function<SetLineItemDistributionChannelChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemDistributionChannelChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemDistributionChannelChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetLineItemDistributionChannelChange>";
+            }
+        };
+    }
 }

@@ -92,4 +92,13 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
             Function<ProductPriceExternalDiscountSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceExternalDiscountSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceExternalDiscountSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductPriceExternalDiscountSetMessage>";
+            }
+        };
+    }
 }

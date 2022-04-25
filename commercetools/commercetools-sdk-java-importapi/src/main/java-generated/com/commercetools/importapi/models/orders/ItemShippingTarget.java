@@ -59,4 +59,13 @@ public interface ItemShippingTarget {
     default <T> T withItemShippingTarget(Function<ItemShippingTarget, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ItemShippingTarget> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ItemShippingTarget>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ItemShippingTarget>";
+            }
+        };
+    }
 }

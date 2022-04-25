@@ -49,4 +49,13 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
     default <T> T withChannelSetAddressAction(Function<ChannelSetAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelSetAddressAction>";
+            }
+        };
+    }
 }

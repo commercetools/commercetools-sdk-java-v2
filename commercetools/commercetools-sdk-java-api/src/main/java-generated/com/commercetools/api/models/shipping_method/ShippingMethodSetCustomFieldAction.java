@@ -60,4 +60,13 @@ public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdate
     default <T> T withShippingMethodSetCustomFieldAction(Function<ShippingMethodSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodSetCustomFieldAction>";
+            }
+        };
+    }
 }

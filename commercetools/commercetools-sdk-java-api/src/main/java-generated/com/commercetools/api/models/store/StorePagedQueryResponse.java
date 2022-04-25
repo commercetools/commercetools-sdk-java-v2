@@ -75,4 +75,13 @@ public interface StorePagedQueryResponse extends com.commercetools.api.models.Re
     default <T> T withStorePagedQueryResponse(Function<StorePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StorePagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StorePagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StorePagedQueryResponse>";
+            }
+        };
+    }
 }

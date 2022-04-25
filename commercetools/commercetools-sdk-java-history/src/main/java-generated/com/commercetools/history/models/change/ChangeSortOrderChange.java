@@ -66,4 +66,13 @@ public interface ChangeSortOrderChange extends Change {
     default <T> T withChangeSortOrderChange(Function<ChangeSortOrderChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeSortOrderChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeSortOrderChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeSortOrderChange>";
+            }
+        };
+    }
 }

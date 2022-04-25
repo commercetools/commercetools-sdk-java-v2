@@ -53,4 +53,13 @@ public interface GeoLocation {
     default <T> T withGeoLocation(Function<GeoLocation, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GeoLocation> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GeoLocation>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GeoLocation>";
+            }
+        };
+    }
 }

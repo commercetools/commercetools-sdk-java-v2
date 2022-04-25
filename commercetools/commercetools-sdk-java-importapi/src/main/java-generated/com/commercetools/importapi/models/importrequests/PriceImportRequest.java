@@ -57,4 +57,13 @@ public interface PriceImportRequest extends ImportRequest {
     default <T> T withPriceImportRequest(Function<PriceImportRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceImportRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceImportRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PriceImportRequest>";
+            }
+        };
+    }
 }

@@ -50,4 +50,13 @@ public interface MissingPricesProductCount {
     default <T> T withMissingPricesProductCount(Function<MissingPricesProductCount, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingPricesProductCount> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingPricesProductCount>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingPricesProductCount>";
+            }
+        };
+    }
 }

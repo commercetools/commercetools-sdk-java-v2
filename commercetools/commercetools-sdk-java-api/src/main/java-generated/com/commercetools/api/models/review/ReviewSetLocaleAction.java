@@ -46,4 +46,13 @@ public interface ReviewSetLocaleAction extends ReviewUpdateAction {
     default <T> T withReviewSetLocaleAction(Function<ReviewSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetLocaleAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetLocaleAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewSetLocaleAction>";
+            }
+        };
+    }
 }

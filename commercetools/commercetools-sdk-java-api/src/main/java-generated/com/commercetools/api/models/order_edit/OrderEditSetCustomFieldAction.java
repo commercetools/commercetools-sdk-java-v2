@@ -60,4 +60,13 @@ public interface OrderEditSetCustomFieldAction extends OrderEditUpdateAction {
     default <T> T withOrderEditSetCustomFieldAction(Function<OrderEditSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditSetCustomFieldAction>";
+            }
+        };
+    }
 }

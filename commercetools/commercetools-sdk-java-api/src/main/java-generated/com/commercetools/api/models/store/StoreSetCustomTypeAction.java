@@ -61,4 +61,13 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
     default <T> T withStoreSetCustomTypeAction(Function<StoreSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreSetCustomTypeAction>";
+            }
+        };
+    }
 }

@@ -59,4 +59,13 @@ public interface ExtensionInput {
     default <T> T withExtensionInput(Function<ExtensionInput, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionInput> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionInput>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionInput>";
+            }
+        };
+    }
 }

@@ -71,4 +71,13 @@ public interface StagedOrderSetDeliveryAddressCustomFieldAction extends StagedOr
             Function<StagedOrderSetDeliveryAddressCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryAddressCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryAddressCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetDeliveryAddressCustomFieldAction>";
+            }
+        };
+    }
 }

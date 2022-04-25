@@ -56,4 +56,13 @@ public interface MissingImagesProductLevel extends MissingImagesCount {
     default <T> T withMissingImagesProductLevel(Function<MissingImagesProductLevel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingImagesProductLevel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingImagesProductLevel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingImagesProductLevel>";
+            }
+        };
+    }
 }

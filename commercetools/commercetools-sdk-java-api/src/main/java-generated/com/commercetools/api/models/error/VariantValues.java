@@ -67,4 +67,13 @@ public interface VariantValues {
     default <T> T withVariantValues(Function<VariantValues, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<VariantValues> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<VariantValues>() {
+            @Override
+            public String toString() {
+                return "TypeReference<VariantValues>";
+            }
+        };
+    }
 }

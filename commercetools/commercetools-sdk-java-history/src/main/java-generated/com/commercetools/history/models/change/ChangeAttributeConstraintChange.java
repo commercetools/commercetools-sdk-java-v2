@@ -74,4 +74,13 @@ public interface ChangeAttributeConstraintChange extends Change {
     default <T> T withChangeAttributeConstraintChange(Function<ChangeAttributeConstraintChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeAttributeConstraintChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeAttributeConstraintChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeAttributeConstraintChange>";
+            }
+        };
+    }
 }

@@ -72,4 +72,13 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
     default <T> T withRemoveLocalizedEnumValuesChange(Function<RemoveLocalizedEnumValuesChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveLocalizedEnumValuesChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveLocalizedEnumValuesChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveLocalizedEnumValuesChange>";
+            }
+        };
+    }
 }

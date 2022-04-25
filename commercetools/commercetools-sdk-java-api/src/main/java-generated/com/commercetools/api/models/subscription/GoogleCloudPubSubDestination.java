@@ -52,4 +52,13 @@ public interface GoogleCloudPubSubDestination extends Destination {
     default <T> T withGoogleCloudPubSubDestination(Function<GoogleCloudPubSubDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GoogleCloudPubSubDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GoogleCloudPubSubDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GoogleCloudPubSubDestination>";
+            }
+        };
+    }
 }

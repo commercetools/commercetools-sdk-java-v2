@@ -51,4 +51,13 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
     default <T> T withProjectChangeCountriesAction(Function<ProjectChangeCountriesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountriesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountriesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeCountriesAction>";
+            }
+        };
+    }
 }

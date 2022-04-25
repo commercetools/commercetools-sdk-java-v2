@@ -46,4 +46,13 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     default <T> T withShoppingListSetSlugAction(Function<ShoppingListSetSlugAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetSlugAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetSlugAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListSetSlugAction>";
+            }
+        };
+    }
 }

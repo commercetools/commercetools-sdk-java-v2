@@ -86,4 +86,13 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     default <T> T withMultiBuyCustomLineItemsTarget(Function<MultiBuyCustomLineItemsTarget, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MultiBuyCustomLineItemsTarget> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MultiBuyCustomLineItemsTarget>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MultiBuyCustomLineItemsTarget>";
+            }
+        };
+    }
 }

@@ -538,4 +538,13 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     default <T> T withMessage(Function<Message, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Message> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Message>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Message>";
+            }
+        };
+    }
 }

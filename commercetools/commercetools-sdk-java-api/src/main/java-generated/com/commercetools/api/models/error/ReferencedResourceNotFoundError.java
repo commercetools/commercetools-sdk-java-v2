@@ -60,4 +60,13 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     default <T> T withReferencedResourceNotFoundError(Function<ReferencedResourceNotFoundError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReferencedResourceNotFoundError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReferencedResourceNotFoundError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReferencedResourceNotFoundError>";
+            }
+        };
+    }
 }

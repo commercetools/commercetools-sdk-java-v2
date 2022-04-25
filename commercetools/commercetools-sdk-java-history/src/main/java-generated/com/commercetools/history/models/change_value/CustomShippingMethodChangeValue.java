@@ -43,4 +43,13 @@ public interface CustomShippingMethodChangeValue {
     default <T> T withCustomShippingMethodChangeValue(Function<CustomShippingMethodChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomShippingMethodChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomShippingMethodChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomShippingMethodChangeValue>";
+            }
+        };
+    }
 }

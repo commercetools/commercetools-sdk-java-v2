@@ -55,4 +55,13 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
             Function<ProductTypeChangeAttributeConstraintAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeAttributeConstraintAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeAttributeConstraintAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeChangeAttributeConstraintAction>";
+            }
+        };
+    }
 }

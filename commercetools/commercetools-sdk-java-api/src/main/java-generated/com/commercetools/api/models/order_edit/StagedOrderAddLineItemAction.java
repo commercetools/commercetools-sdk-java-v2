@@ -139,4 +139,13 @@ public interface StagedOrderAddLineItemAction
     default <T> T withStagedOrderAddLineItemAction(Function<StagedOrderAddLineItemAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderAddLineItemAction>";
+            }
+        };
+    }
 }

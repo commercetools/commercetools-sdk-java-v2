@@ -49,4 +49,13 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     default <T> T withProductDiscountChangePredicateAction(Function<ProductDiscountChangePredicateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangePredicateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangePredicateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountChangePredicateAction>";
+            }
+        };
+    }
 }

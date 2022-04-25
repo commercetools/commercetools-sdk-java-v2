@@ -108,4 +108,13 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     default <T> T withOrderLineItemRemovedMessagePayload(Function<OrderLineItemRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemRemovedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemRemovedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderLineItemRemovedMessagePayload>";
+            }
+        };
+    }
 }

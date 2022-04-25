@@ -46,4 +46,13 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
     default <T> T withCartSetAnonymousIdAction(Function<CartSetAnonymousIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetAnonymousIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetAnonymousIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetAnonymousIdAction>";
+            }
+        };
+    }
 }

@@ -70,4 +70,13 @@ public interface ChangeSlugChange extends Change {
     default <T> T withChangeSlugChange(Function<ChangeSlugChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeSlugChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeSlugChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeSlugChange>";
+            }
+        };
+    }
 }

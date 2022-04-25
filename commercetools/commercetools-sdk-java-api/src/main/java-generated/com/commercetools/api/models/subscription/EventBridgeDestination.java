@@ -61,4 +61,13 @@ public interface EventBridgeDestination extends Destination {
     default <T> T withEventBridgeDestination(Function<EventBridgeDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<EventBridgeDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<EventBridgeDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<EventBridgeDestination>";
+            }
+        };
+    }
 }

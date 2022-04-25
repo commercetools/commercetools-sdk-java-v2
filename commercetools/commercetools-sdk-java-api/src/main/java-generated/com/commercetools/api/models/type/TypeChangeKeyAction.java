@@ -49,4 +49,13 @@ public interface TypeChangeKeyAction extends TypeUpdateAction {
     default <T> T withTypeChangeKeyAction(Function<TypeChangeKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeKeyAction>";
+            }
+        };
+    }
 }

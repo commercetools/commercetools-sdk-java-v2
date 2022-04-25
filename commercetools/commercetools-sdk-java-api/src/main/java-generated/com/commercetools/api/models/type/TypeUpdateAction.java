@@ -100,4 +100,13 @@ public interface TypeUpdateAction extends com.commercetools.api.models.ResourceU
     default <T> T withTypeUpdateAction(Function<TypeUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeUpdateAction>";
+            }
+        };
+    }
 }

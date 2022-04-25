@@ -56,4 +56,13 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     default <T> T withProductAddedToCategoryMessagePayload(Function<ProductAddedToCategoryMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductAddedToCategoryMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductAddedToCategoryMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductAddedToCategoryMessagePayload>";
+            }
+        };
+    }
 }

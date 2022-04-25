@@ -70,4 +70,13 @@ public interface ChangeLocalizedDescriptionChange extends Change {
     default <T> T withChangeLocalizedDescriptionChange(Function<ChangeLocalizedDescriptionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedDescriptionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedDescriptionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeLocalizedDescriptionChange>";
+            }
+        };
+    }
 }

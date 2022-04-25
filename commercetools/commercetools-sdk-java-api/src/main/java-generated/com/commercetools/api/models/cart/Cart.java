@@ -391,4 +391,12 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
         return com.commercetools.api.models.cart.CartReference.builder().id(getId()).build();
     }
 
+    public static com.fasterxml.jackson.core.type.TypeReference<Cart> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Cart>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Cart>";
+            }
+        };
+    }
 }

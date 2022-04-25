@@ -158,4 +158,13 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     default <T> T withMyCustomerDraft(Function<MyCustomerDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerDraft>";
+            }
+        };
+    }
 }

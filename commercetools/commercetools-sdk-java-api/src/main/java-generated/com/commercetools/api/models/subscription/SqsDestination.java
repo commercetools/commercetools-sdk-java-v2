@@ -66,4 +66,13 @@ public interface SqsDestination extends Destination {
     default <T> T withSqsDestination(Function<SqsDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SqsDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SqsDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SqsDestination>";
+            }
+        };
+    }
 }

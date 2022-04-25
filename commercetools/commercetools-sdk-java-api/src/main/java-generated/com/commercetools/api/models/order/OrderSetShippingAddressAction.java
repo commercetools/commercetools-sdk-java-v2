@@ -46,4 +46,13 @@ public interface OrderSetShippingAddressAction extends OrderUpdateAction {
     default <T> T withOrderSetShippingAddressAction(Function<OrderSetShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetShippingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetShippingAddressAction>";
+            }
+        };
+    }
 }

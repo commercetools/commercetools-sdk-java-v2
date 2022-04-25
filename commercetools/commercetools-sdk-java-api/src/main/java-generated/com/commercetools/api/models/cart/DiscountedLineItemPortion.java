@@ -55,4 +55,13 @@ public interface DiscountedLineItemPortion {
     default <T> T withDiscountedLineItemPortion(Function<DiscountedLineItemPortion, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortion> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortion>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountedLineItemPortion>";
+            }
+        };
+    }
 }

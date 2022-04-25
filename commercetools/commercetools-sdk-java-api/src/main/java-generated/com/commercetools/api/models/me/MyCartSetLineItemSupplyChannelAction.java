@@ -58,4 +58,13 @@ public interface MyCartSetLineItemSupplyChannelAction extends MyCartUpdateAction
     default <T> T withMyCartSetLineItemSupplyChannelAction(Function<MyCartSetLineItemSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemSupplyChannelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemSupplyChannelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartSetLineItemSupplyChannelAction>";
+            }
+        };
+    }
 }

@@ -43,4 +43,13 @@ public interface SuggestTokenizer {
     default <T> T withSuggestTokenizer(Function<SuggestTokenizer, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SuggestTokenizer>";
+            }
+        };
+    }
 }

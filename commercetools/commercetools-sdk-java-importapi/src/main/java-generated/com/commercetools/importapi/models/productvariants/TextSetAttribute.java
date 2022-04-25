@@ -52,4 +52,13 @@ public interface TextSetAttribute extends Attribute {
     default <T> T withTextSetAttribute(Function<TextSetAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TextSetAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TextSetAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TextSetAttribute>";
+            }
+        };
+    }
 }

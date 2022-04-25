@@ -70,4 +70,13 @@ public interface ChangeParentChange extends Change {
     default <T> T withChangeParentChange(Function<ChangeParentChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeParentChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeParentChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeParentChange>";
+            }
+        };
+    }
 }

@@ -90,4 +90,13 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
     default <T> T withProductSetAssetCustomFieldAction(Function<ProductSetAssetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetAssetCustomFieldAction>";
+            }
+        };
+    }
 }

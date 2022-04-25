@@ -78,4 +78,13 @@ public interface SimilarProductMeta {
     default <T> T withSimilarProductMeta(Function<SimilarProductMeta, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SimilarProductMeta> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SimilarProductMeta>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SimilarProductMeta>";
+            }
+        };
+    }
 }

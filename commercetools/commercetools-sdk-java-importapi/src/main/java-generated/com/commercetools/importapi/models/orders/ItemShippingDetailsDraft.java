@@ -51,4 +51,13 @@ public interface ItemShippingDetailsDraft {
     default <T> T withItemShippingDetailsDraft(Function<ItemShippingDetailsDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetailsDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetailsDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ItemShippingDetailsDraft>";
+            }
+        };
+    }
 }

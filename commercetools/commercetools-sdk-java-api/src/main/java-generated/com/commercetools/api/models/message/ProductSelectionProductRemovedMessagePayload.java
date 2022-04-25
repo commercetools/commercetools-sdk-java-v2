@@ -51,4 +51,13 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
             Function<ProductSelectionProductRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductRemovedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionProductRemovedMessagePayload>";
+            }
+        };
+    }
 }

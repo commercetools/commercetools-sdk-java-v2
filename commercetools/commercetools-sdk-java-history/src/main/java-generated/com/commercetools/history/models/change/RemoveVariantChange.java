@@ -77,4 +77,13 @@ public interface RemoveVariantChange extends Change {
     default <T> T withRemoveVariantChange(Function<RemoveVariantChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveVariantChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveVariantChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveVariantChange>";
+            }
+        };
+    }
 }

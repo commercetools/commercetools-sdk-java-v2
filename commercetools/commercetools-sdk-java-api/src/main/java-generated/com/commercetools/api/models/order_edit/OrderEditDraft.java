@@ -104,4 +104,13 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     default <T> T withOrderEditDraft(Function<OrderEditDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditDraft>";
+            }
+        };
+    }
 }

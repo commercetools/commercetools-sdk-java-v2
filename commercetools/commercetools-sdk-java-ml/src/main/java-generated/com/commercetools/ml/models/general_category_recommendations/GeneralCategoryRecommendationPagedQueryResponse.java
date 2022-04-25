@@ -72,4 +72,13 @@ public interface GeneralCategoryRecommendationPagedQueryResponse {
             Function<GeneralCategoryRecommendationPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GeneralCategoryRecommendationPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GeneralCategoryRecommendationPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GeneralCategoryRecommendationPagedQueryResponse>";
+            }
+        };
+    }
 }

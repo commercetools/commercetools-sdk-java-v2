@@ -47,4 +47,13 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
     default <T> T withShoppingListReference(Function<ShoppingListReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListReference>";
+            }
+        };
+    }
 }

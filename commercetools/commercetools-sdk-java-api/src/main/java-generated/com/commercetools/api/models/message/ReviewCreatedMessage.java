@@ -58,4 +58,13 @@ public interface ReviewCreatedMessage extends Message {
     default <T> T withReviewCreatedMessage(Function<ReviewCreatedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewCreatedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewCreatedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewCreatedMessage>";
+            }
+        };
+    }
 }

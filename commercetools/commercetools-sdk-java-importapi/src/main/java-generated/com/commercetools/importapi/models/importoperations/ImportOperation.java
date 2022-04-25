@@ -160,4 +160,13 @@ public interface ImportOperation {
     default <T> T withImportOperation(Function<ImportOperation, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportOperation> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportOperation>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportOperation>";
+            }
+        };
+    }
 }

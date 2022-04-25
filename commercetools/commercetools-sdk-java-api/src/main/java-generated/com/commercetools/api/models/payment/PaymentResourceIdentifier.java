@@ -40,4 +40,13 @@ public interface PaymentResourceIdentifier
     default <T> T withPaymentResourceIdentifier(Function<PaymentResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentResourceIdentifier>";
+            }
+        };
+    }
 }

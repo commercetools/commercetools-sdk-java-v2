@@ -62,4 +62,13 @@ public interface TaxCategoryUpdate extends
     default <T> T withTaxCategoryUpdate(Function<TaxCategoryUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryUpdate>";
+            }
+        };
+    }
 }

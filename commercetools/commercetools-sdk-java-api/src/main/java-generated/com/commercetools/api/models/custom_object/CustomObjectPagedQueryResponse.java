@@ -76,4 +76,13 @@ public interface CustomObjectPagedQueryResponse
     default <T> T withCustomObjectPagedQueryResponse(Function<CustomObjectPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomObjectPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomObjectPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomObjectPagedQueryResponse>";
+            }
+        };
+    }
 }

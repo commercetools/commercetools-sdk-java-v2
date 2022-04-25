@@ -69,4 +69,13 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
     default <T> T withCustomerSetAddressCustomTypeAction(Function<CustomerSetAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetAddressCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetAddressCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetAddressCustomTypeAction>";
+            }
+        };
+    }
 }

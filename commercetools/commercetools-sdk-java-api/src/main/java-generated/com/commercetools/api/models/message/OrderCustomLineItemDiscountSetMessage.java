@@ -78,4 +78,13 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
     default <T> T withOrderCustomLineItemDiscountSetMessage(Function<OrderCustomLineItemDiscountSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemDiscountSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemDiscountSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderCustomLineItemDiscountSetMessage>";
+            }
+        };
+    }
 }

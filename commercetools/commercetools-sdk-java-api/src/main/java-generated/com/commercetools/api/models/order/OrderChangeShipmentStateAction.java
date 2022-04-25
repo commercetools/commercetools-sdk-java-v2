@@ -42,4 +42,13 @@ public interface OrderChangeShipmentStateAction extends OrderUpdateAction {
     default <T> T withOrderChangeShipmentStateAction(Function<OrderChangeShipmentStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderChangeShipmentStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderChangeShipmentStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderChangeShipmentStateAction>";
+            }
+        };
+    }
 }

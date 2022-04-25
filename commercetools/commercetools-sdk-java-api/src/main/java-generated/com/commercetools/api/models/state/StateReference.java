@@ -63,4 +63,13 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     default <T> T withStateReference(Function<StateReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateReference>";
+            }
+        };
+    }
 }

@@ -54,4 +54,13 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
     default <T> T withProductTypeAddPlainEnumValueAction(Function<ProductTypeAddPlainEnumValueAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddPlainEnumValueAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddPlainEnumValueAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeAddPlainEnumValueAction>";
+            }
+        };
+    }
 }

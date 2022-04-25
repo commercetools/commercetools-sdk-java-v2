@@ -36,4 +36,13 @@ public interface AttributeTimeType extends AttributeType {
     default <T> T withAttributeTimeType(Function<AttributeTimeType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeTimeType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeTimeType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeTimeType>";
+            }
+        };
+    }
 }

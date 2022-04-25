@@ -62,4 +62,13 @@ public interface MyPaymentSetTransactionCustomFieldAction extends MyPaymentUpdat
             Function<MyPaymentSetTransactionCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetTransactionCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetTransactionCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyPaymentSetTransactionCustomFieldAction>";
+            }
+        };
+    }
 }

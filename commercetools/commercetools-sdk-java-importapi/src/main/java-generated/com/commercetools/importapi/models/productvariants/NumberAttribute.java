@@ -49,4 +49,13 @@ public interface NumberAttribute extends Attribute {
     default <T> T withNumberAttribute(Function<NumberAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<NumberAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<NumberAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<NumberAttribute>";
+            }
+        };
+    }
 }

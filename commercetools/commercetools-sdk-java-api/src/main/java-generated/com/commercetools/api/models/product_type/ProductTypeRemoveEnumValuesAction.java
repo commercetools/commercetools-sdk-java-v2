@@ -55,4 +55,13 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
     default <T> T withProductTypeRemoveEnumValuesAction(Function<ProductTypeRemoveEnumValuesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveEnumValuesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveEnumValuesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeRemoveEnumValuesAction>";
+            }
+        };
+    }
 }

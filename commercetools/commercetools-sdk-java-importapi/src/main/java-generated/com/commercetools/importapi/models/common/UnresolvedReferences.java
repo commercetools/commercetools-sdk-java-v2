@@ -53,4 +53,13 @@ public interface UnresolvedReferences {
     default <T> T withUnresolvedReferences(Function<UnresolvedReferences, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<UnresolvedReferences> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<UnresolvedReferences>() {
+            @Override
+            public String toString() {
+                return "TypeReference<UnresolvedReferences>";
+            }
+        };
+    }
 }

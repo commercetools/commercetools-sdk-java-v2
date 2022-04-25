@@ -50,4 +50,13 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
     default <T> T withStagedOrderSetCustomerGroupAction(Function<StagedOrderSetCustomerGroupAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerGroupAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerGroupAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetCustomerGroupAction>";
+            }
+        };
+    }
 }

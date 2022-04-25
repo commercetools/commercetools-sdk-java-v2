@@ -56,4 +56,13 @@ public interface MyCustomerUpdate extends
     default <T> T withMyCustomerUpdate(Function<MyCustomerUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerUpdate>";
+            }
+        };
+    }
 }

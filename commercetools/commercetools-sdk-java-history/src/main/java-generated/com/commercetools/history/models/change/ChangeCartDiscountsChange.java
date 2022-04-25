@@ -76,4 +76,13 @@ public interface ChangeCartDiscountsChange extends Change {
     default <T> T withChangeCartDiscountsChange(Function<ChangeCartDiscountsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeCartDiscountsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeCartDiscountsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeCartDiscountsChange>";
+            }
+        };
+    }
 }

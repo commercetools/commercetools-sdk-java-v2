@@ -45,4 +45,13 @@ public interface ReferenceExistsError extends ErrorObject {
     default <T> T withReferenceExistsError(Function<ReferenceExistsError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReferenceExistsError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReferenceExistsError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReferenceExistsError>";
+            }
+        };
+    }
 }

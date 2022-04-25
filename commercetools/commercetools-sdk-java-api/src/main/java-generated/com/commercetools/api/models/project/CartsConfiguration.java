@@ -54,4 +54,13 @@ public interface CartsConfiguration {
     default <T> T withCartsConfiguration(Function<CartsConfiguration, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartsConfiguration> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartsConfiguration>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartsConfiguration>";
+            }
+        };
+    }
 }

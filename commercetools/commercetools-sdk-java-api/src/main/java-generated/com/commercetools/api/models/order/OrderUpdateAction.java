@@ -305,4 +305,13 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
     default <T> T withOrderUpdateAction(Function<OrderUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderUpdateAction>";
+            }
+        };
+    }
 }

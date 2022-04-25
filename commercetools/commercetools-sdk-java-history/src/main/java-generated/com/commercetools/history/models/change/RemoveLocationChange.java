@@ -76,4 +76,13 @@ public interface RemoveLocationChange extends Change {
     default <T> T withRemoveLocationChange(Function<RemoveLocationChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveLocationChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveLocationChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveLocationChange>";
+            }
+        };
+    }
 }

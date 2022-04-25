@@ -64,4 +64,13 @@ public interface OrderDiscountCodeStateSetMessagePayload extends OrderMessagePay
             Function<OrderDiscountCodeStateSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderDiscountCodeStateSetMessagePayload>";
+            }
+        };
+    }
 }

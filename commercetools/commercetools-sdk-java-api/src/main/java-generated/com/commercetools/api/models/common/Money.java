@@ -64,4 +64,13 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
     default <T> T withMoney(Function<Money, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Money> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Money>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Money>";
+            }
+        };
+    }
 }

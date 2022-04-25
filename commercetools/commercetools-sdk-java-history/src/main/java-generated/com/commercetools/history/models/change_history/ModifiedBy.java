@@ -110,4 +110,13 @@ public interface ModifiedBy {
     default <T> T withModifiedBy(Function<ModifiedBy, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ModifiedBy> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ModifiedBy>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ModifiedBy>";
+            }
+        };
+    }
 }

@@ -48,4 +48,13 @@ public interface OrderReturnInfoAddedMessagePayload extends OrderMessagePayload 
     default <T> T withOrderReturnInfoAddedMessagePayload(Function<OrderReturnInfoAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderReturnInfoAddedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderReturnInfoAddedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderReturnInfoAddedMessagePayload>";
+            }
+        };
+    }
 }

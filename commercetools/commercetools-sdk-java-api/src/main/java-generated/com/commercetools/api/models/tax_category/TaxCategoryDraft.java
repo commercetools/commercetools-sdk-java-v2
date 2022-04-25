@@ -80,4 +80,13 @@ public interface TaxCategoryDraft {
     default <T> T withTaxCategoryDraft(Function<TaxCategoryDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryDraft>";
+            }
+        };
+    }
 }

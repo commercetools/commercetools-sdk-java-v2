@@ -45,4 +45,13 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
     default <T> T withCartSetCustomerEmailAction(Function<CartSetCustomerEmailAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerEmailAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerEmailAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetCustomerEmailAction>";
+            }
+        };
+    }
 }

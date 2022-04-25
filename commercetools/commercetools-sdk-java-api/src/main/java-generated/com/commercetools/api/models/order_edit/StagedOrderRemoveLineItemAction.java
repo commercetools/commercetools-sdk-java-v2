@@ -81,4 +81,13 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     default <T> T withStagedOrderRemoveLineItemAction(Function<StagedOrderRemoveLineItemAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderRemoveLineItemAction>";
+            }
+        };
+    }
 }

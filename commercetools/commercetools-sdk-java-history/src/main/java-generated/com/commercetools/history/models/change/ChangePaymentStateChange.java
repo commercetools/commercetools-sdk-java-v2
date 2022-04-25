@@ -67,4 +67,13 @@ public interface ChangePaymentStateChange extends Change {
     default <T> T withChangePaymentStateChange(Function<ChangePaymentStateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangePaymentStateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangePaymentStateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangePaymentStateChange>";
+            }
+        };
+    }
 }

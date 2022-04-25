@@ -58,4 +58,13 @@ public interface DeliveryRemovedMessage extends OrderMessage {
     default <T> T withDeliveryRemovedMessage(Function<DeliveryRemovedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryRemovedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryRemovedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DeliveryRemovedMessage>";
+            }
+        };
+    }
 }

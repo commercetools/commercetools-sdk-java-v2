@@ -49,4 +49,13 @@ public interface ErrorByExtension {
     default <T> T withErrorByExtension(Function<ErrorByExtension, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ErrorByExtension> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ErrorByExtension>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ErrorByExtension>";
+            }
+        };
+    }
 }

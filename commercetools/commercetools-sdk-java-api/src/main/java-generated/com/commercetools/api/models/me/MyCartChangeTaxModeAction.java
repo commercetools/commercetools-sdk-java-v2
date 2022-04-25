@@ -46,4 +46,13 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
     default <T> T withMyCartChangeTaxModeAction(Function<MyCartChangeTaxModeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartChangeTaxModeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartChangeTaxModeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartChangeTaxModeAction>";
+            }
+        };
+    }
 }

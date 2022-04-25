@@ -190,4 +190,13 @@ public interface Project {
     default <T> T withProject(Function<Project, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Project> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Project>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Project>";
+            }
+        };
+    }
 }

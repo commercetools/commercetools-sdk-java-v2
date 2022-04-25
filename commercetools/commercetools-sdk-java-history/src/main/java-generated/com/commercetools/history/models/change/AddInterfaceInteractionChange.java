@@ -65,4 +65,13 @@ public interface AddInterfaceInteractionChange extends Change {
     default <T> T withAddInterfaceInteractionChange(Function<AddInterfaceInteractionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddInterfaceInteractionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddInterfaceInteractionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddInterfaceInteractionChange>";
+            }
+        };
+    }
 }

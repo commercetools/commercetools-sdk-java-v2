@@ -90,4 +90,13 @@ public interface ChangeLabelChange extends Change {
     default <T> T withChangeLabelChange(Function<ChangeLabelChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeLabelChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeLabelChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeLabelChange>";
+            }
+        };
+    }
 }

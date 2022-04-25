@@ -54,4 +54,13 @@ public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
     default <T> T withOrderEditSetStagedActionsAction(Function<OrderEditSetStagedActionsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditSetStagedActionsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditSetStagedActionsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditSetStagedActionsAction>";
+            }
+        };
+    }
 }

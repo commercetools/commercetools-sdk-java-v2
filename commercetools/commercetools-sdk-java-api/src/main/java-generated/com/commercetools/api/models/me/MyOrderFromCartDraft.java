@@ -53,4 +53,13 @@ public interface MyOrderFromCartDraft {
     default <T> T withMyOrderFromCartDraft(Function<MyOrderFromCartDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyOrderFromCartDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyOrderFromCartDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyOrderFromCartDraft>";
+            }
+        };
+    }
 }

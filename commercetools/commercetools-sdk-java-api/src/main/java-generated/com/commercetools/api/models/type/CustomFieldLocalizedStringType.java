@@ -39,4 +39,13 @@ public interface CustomFieldLocalizedStringType extends FieldType {
     default <T> T withCustomFieldLocalizedStringType(Function<CustomFieldLocalizedStringType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldLocalizedStringType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldLocalizedStringType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldLocalizedStringType>";
+            }
+        };
+    }
 }

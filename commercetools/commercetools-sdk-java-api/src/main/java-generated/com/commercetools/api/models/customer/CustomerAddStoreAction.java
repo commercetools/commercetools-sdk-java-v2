@@ -48,4 +48,13 @@ public interface CustomerAddStoreAction extends CustomerUpdateAction {
     default <T> T withCustomerAddStoreAction(Function<CustomerAddStoreAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddStoreAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddStoreAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerAddStoreAction>";
+            }
+        };
+    }
 }

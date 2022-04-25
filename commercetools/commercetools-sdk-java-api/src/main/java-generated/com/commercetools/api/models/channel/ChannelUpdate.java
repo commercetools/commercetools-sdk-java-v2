@@ -62,4 +62,13 @@ public interface ChannelUpdate
     default <T> T withChannelUpdate(Function<ChannelUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelUpdate>";
+            }
+        };
+    }
 }

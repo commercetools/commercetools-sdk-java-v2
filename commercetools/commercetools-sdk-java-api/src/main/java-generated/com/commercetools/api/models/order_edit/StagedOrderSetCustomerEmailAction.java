@@ -43,4 +43,13 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
     default <T> T withStagedOrderSetCustomerEmailAction(Function<StagedOrderSetCustomerEmailAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerEmailAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerEmailAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetCustomerEmailAction>";
+            }
+        };
+    }
 }

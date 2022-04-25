@@ -64,4 +64,13 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     default <T> T withProductChangePriceAction(Function<ProductChangePriceAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangePriceAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangePriceAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductChangePriceAction>";
+            }
+        };
+    }
 }

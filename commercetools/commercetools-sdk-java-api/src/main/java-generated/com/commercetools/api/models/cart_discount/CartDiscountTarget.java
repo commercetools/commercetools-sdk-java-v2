@@ -50,4 +50,13 @@ public interface CartDiscountTarget {
     default <T> T withCartDiscountTarget(Function<CartDiscountTarget, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountTarget> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountTarget>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountTarget>";
+            }
+        };
+    }
 }

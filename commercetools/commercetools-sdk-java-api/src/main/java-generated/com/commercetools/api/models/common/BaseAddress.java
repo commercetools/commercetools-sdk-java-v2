@@ -190,4 +190,13 @@ public interface BaseAddress {
     default <T> T withBaseAddress(Function<BaseAddress, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<BaseAddress> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<BaseAddress>() {
+            @Override
+            public String toString() {
+                return "TypeReference<BaseAddress>";
+            }
+        };
+    }
 }

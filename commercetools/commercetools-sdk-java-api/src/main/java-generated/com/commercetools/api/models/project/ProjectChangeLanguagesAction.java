@@ -54,4 +54,13 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     default <T> T withProjectChangeLanguagesAction(Function<ProjectChangeLanguagesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeLanguagesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeLanguagesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeLanguagesAction>";
+            }
+        };
+    }
 }

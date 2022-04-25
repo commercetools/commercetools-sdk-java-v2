@@ -47,4 +47,13 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     default <T> T withShippingMethodReference(Function<ShippingMethodReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodReference>";
+            }
+        };
+    }
 }

@@ -100,4 +100,13 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     default <T> T withTransactionDraft(Function<TransactionDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TransactionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TransactionDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TransactionDraft>";
+            }
+        };
+    }
 }

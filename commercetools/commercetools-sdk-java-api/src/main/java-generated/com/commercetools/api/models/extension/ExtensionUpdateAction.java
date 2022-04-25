@@ -46,4 +46,13 @@ public interface ExtensionUpdateAction
     default <T> T withExtensionUpdateAction(Function<ExtensionUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionUpdateAction>";
+            }
+        };
+    }
 }

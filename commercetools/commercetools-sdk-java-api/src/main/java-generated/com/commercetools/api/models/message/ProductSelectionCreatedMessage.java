@@ -58,4 +58,13 @@ public interface ProductSelectionCreatedMessage extends Message {
     default <T> T withProductSelectionCreatedMessage(Function<ProductSelectionCreatedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionCreatedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionCreatedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionCreatedMessage>";
+            }
+        };
+    }
 }

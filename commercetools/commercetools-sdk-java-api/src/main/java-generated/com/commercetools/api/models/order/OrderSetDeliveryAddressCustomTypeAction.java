@@ -71,4 +71,13 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
             Function<OrderSetDeliveryAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryAddressCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryAddressCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetDeliveryAddressCustomTypeAction>";
+            }
+        };
+    }
 }

@@ -48,4 +48,13 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
     default <T> T withCategoryRemoveAssetAction(Function<CategoryRemoveAssetAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryRemoveAssetAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryRemoveAssetAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryRemoveAssetAction>";
+            }
+        };
+    }
 }

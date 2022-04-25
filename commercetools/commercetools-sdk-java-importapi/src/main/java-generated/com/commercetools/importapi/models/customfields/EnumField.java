@@ -48,4 +48,13 @@ public interface EnumField extends CustomField {
     default <T> T withEnumField(Function<EnumField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<EnumField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<EnumField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<EnumField>";
+            }
+        };
+    }
 }

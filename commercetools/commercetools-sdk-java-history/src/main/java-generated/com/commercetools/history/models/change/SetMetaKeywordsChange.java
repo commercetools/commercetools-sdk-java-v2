@@ -70,4 +70,13 @@ public interface SetMetaKeywordsChange extends Change {
     default <T> T withSetMetaKeywordsChange(Function<SetMetaKeywordsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetMetaKeywordsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetMetaKeywordsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetMetaKeywordsChange>";
+            }
+        };
+    }
 }

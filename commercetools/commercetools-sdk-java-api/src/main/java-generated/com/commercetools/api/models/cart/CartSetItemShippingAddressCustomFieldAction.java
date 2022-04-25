@@ -70,4 +70,13 @@ public interface CartSetItemShippingAddressCustomFieldAction extends CartUpdateA
             Function<CartSetItemShippingAddressCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetItemShippingAddressCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetItemShippingAddressCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetItemShippingAddressCustomFieldAction>";
+            }
+        };
+    }
 }

@@ -40,4 +40,13 @@ public interface ProductDiscountResourceIdentifier
     default <T> T withProductDiscountResourceIdentifier(Function<ProductDiscountResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountResourceIdentifier>";
+            }
+        };
+    }
 }

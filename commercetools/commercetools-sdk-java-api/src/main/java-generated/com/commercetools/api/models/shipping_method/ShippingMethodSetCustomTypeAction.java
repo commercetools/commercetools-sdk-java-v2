@@ -61,4 +61,13 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
     default <T> T withShippingMethodSetCustomTypeAction(Function<ShippingMethodSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodSetCustomTypeAction>";
+            }
+        };
+    }
 }

@@ -62,4 +62,13 @@ public interface ClientLogging {
     default <T> T withClientLogging(Function<ClientLogging, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ClientLogging> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ClientLogging>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ClientLogging>";
+            }
+        };
+    }
 }

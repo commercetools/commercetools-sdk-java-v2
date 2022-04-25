@@ -51,4 +51,13 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     default <T> T withChannelSetRolesAction(Function<ChannelSetRolesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetRolesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetRolesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelSetRolesAction>";
+            }
+        };
+    }
 }

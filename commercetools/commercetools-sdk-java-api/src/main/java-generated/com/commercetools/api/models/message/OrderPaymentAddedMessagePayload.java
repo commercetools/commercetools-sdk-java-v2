@@ -48,4 +48,13 @@ public interface OrderPaymentAddedMessagePayload extends MessagePayload {
     default <T> T withOrderPaymentAddedMessagePayload(Function<OrderPaymentAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderPaymentAddedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderPaymentAddedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderPaymentAddedMessagePayload>";
+            }
+        };
+    }
 }

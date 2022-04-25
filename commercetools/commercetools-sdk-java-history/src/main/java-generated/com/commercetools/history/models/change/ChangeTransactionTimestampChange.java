@@ -76,4 +76,13 @@ public interface ChangeTransactionTimestampChange extends Change {
     default <T> T withChangeTransactionTimestampChange(Function<ChangeTransactionTimestampChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTransactionTimestampChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTransactionTimestampChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTransactionTimestampChange>";
+            }
+        };
+    }
 }

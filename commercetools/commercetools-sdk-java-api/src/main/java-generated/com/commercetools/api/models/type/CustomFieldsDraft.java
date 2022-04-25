@@ -61,4 +61,13 @@ public interface CustomFieldsDraft {
     default <T> T withCustomFieldsDraft(Function<CustomFieldsDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldsDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldsDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldsDraft>";
+            }
+        };
+    }
 }

@@ -56,4 +56,13 @@ public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
     default <T> T withCategorySetAssetKeyAction(Function<CategorySetAssetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetAssetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetAssetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySetAssetKeyAction>";
+            }
+        };
+    }
 }

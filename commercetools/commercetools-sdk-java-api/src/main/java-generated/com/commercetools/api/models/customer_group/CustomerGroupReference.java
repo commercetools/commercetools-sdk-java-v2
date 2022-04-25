@@ -63,4 +63,13 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
     default <T> T withCustomerGroupReference(Function<CustomerGroupReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupReference>";
+            }
+        };
+    }
 }

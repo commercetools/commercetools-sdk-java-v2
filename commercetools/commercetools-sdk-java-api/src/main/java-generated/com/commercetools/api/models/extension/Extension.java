@@ -149,4 +149,13 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     default <T> T withExtension(Function<Extension, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Extension> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Extension>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Extension>";
+            }
+        };
+    }
 }

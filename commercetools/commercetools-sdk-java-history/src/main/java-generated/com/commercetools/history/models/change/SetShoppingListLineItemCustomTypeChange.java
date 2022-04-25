@@ -81,4 +81,13 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
             Function<SetShoppingListLineItemCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetShoppingListLineItemCustomTypeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetShoppingListLineItemCustomTypeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetShoppingListLineItemCustomTypeChange>";
+            }
+        };
+    }
 }

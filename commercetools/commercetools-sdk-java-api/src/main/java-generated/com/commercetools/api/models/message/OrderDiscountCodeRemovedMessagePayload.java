@@ -50,4 +50,13 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
             Function<OrderDiscountCodeRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderDiscountCodeRemovedMessagePayload>";
+            }
+        };
+    }
 }

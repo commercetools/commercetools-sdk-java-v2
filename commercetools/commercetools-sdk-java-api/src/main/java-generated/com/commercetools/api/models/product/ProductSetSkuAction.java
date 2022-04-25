@@ -62,4 +62,13 @@ public interface ProductSetSkuAction extends ProductUpdateAction {
     default <T> T withProductSetSkuAction(Function<ProductSetSkuAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetSkuAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetSkuAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetSkuAction>";
+            }
+        };
+    }
 }

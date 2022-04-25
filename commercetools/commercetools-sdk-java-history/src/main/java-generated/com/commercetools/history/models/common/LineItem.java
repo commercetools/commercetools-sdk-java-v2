@@ -112,4 +112,13 @@ public interface LineItem {
     default <T> T withLineItem(Function<LineItem, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LineItem> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LineItem>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LineItem>";
+            }
+        };
+    }
 }

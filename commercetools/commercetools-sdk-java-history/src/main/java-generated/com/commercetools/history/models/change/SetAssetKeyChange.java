@@ -76,4 +76,13 @@ public interface SetAssetKeyChange extends Change {
     default <T> T withSetAssetKeyChange(Function<SetAssetKeyChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAssetKeyChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAssetKeyChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAssetKeyChange>";
+            }
+        };
+    }
 }

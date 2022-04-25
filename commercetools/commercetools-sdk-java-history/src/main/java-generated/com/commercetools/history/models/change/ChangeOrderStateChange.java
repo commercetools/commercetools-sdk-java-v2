@@ -67,4 +67,13 @@ public interface ChangeOrderStateChange extends Change {
     default <T> T withChangeOrderStateChange(Function<ChangeOrderStateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeOrderStateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeOrderStateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeOrderStateChange>";
+            }
+        };
+    }
 }

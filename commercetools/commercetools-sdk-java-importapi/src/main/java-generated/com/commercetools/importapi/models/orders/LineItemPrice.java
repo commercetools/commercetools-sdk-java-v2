@@ -138,4 +138,13 @@ public interface LineItemPrice {
     default <T> T withLineItemPrice(Function<LineItemPrice, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LineItemPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LineItemPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LineItemPrice>";
+            }
+        };
+    }
 }

@@ -46,4 +46,13 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
     default <T> T withStoreAddSupplyChannelAction(Function<StoreAddSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreAddSupplyChannelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreAddSupplyChannelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreAddSupplyChannelAction>";
+            }
+        };
+    }
 }

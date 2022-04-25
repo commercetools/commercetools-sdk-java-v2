@@ -66,4 +66,13 @@ public interface SetExternalIdChange extends Change {
     default <T> T withSetExternalIdChange(Function<SetExternalIdChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetExternalIdChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetExternalIdChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetExternalIdChange>";
+            }
+        };
+    }
 }

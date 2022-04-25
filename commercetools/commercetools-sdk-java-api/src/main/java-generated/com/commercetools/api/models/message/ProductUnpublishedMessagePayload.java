@@ -36,4 +36,13 @@ public interface ProductUnpublishedMessagePayload extends MessagePayload {
     default <T> T withProductUnpublishedMessagePayload(Function<ProductUnpublishedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductUnpublishedMessagePayload>";
+            }
+        };
+    }
 }

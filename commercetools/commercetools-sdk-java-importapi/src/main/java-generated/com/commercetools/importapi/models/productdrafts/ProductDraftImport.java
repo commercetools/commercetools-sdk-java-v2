@@ -235,4 +235,13 @@ public interface ProductDraftImport extends ImportResource {
     default <T> T withProductDraftImport(Function<ProductDraftImport, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDraftImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDraftImport>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDraftImport>";
+            }
+        };
+    }
 }

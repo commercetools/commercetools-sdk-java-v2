@@ -51,4 +51,13 @@ public interface NumberSetField extends CustomField {
     default <T> T withNumberSetField(Function<NumberSetField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<NumberSetField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<NumberSetField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<NumberSetField>";
+            }
+        };
+    }
 }

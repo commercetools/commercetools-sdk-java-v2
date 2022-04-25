@@ -62,4 +62,13 @@ public interface AddFieldDefinitionChange extends Change {
     default <T> T withAddFieldDefinitionChange(Function<AddFieldDefinitionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddFieldDefinitionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddFieldDefinitionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddFieldDefinitionChange>";
+            }
+        };
+    }
 }

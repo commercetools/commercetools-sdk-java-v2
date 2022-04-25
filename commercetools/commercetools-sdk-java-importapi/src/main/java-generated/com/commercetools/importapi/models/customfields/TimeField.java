@@ -49,4 +49,13 @@ public interface TimeField extends CustomField {
     default <T> T withTimeField(Function<TimeField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TimeField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TimeField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TimeField>";
+            }
+        };
+    }
 }

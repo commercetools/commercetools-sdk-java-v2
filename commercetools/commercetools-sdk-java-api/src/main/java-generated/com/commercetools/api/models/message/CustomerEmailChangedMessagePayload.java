@@ -45,4 +45,13 @@ public interface CustomerEmailChangedMessagePayload extends MessagePayload {
     default <T> T withCustomerEmailChangedMessagePayload(Function<CustomerEmailChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerEmailChangedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerEmailChangedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerEmailChangedMessagePayload>";
+            }
+        };
+    }
 }

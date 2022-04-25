@@ -59,4 +59,13 @@ public interface DiscountCodeSetValidFromAndUntilAction extends DiscountCodeUpda
             Function<DiscountCodeSetValidFromAndUntilAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidFromAndUntilAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidFromAndUntilAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeSetValidFromAndUntilAction>";
+            }
+        };
+    }
 }

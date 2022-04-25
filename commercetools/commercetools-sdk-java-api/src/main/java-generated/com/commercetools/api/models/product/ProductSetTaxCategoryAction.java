@@ -49,4 +49,13 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
     default <T> T withProductSetTaxCategoryAction(Function<ProductSetTaxCategoryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetTaxCategoryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetTaxCategoryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetTaxCategoryAction>";
+            }
+        };
+    }
 }

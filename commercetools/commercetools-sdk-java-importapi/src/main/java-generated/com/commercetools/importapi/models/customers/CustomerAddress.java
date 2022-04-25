@@ -192,4 +192,13 @@ public interface CustomerAddress {
     default <T> T withCustomerAddress(Function<CustomerAddress, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddress> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddress>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerAddress>";
+            }
+        };
+    }
 }

@@ -49,4 +49,13 @@ public interface PublishChange extends Change {
     default <T> T withPublishChange(Function<PublishChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PublishChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PublishChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PublishChange>";
+            }
+        };
+    }
 }

@@ -67,4 +67,13 @@ public interface ChangeStackingModeChange extends Change {
     default <T> T withChangeStackingModeChange(Function<ChangeStackingModeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeStackingModeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeStackingModeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeStackingModeChange>";
+            }
+        };
+    }
 }

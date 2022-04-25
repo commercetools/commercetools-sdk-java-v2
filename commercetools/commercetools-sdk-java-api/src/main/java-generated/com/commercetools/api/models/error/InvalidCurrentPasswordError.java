@@ -38,4 +38,13 @@ public interface InvalidCurrentPasswordError extends ErrorObject {
     default <T> T withInvalidCurrentPasswordError(Function<InvalidCurrentPasswordError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidCurrentPasswordError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidCurrentPasswordError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidCurrentPasswordError>";
+            }
+        };
+    }
 }

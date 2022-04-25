@@ -83,4 +83,13 @@ public interface SetCustomFieldChange extends Change {
     default <T> T withSetCustomFieldChange(Function<SetCustomFieldChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomFieldChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomFieldChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomFieldChange>";
+            }
+        };
+    }
 }

@@ -68,4 +68,13 @@ public interface ProductStateTransitionMessage extends Message {
     default <T> T withProductStateTransitionMessage(Function<ProductStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductStateTransitionMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductStateTransitionMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductStateTransitionMessage>";
+            }
+        };
+    }
 }

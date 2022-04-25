@@ -62,4 +62,13 @@ public interface ImportSummary {
     default <T> T withImportSummary(Function<ImportSummary, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportSummary> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportSummary>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportSummary>";
+            }
+        };
+    }
 }

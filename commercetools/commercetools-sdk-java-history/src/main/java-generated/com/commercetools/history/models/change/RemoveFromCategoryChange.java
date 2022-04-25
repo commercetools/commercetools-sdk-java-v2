@@ -84,4 +84,13 @@ public interface RemoveFromCategoryChange extends Change {
     default <T> T withRemoveFromCategoryChange(Function<RemoveFromCategoryChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveFromCategoryChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveFromCategoryChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveFromCategoryChange>";
+            }
+        };
+    }
 }

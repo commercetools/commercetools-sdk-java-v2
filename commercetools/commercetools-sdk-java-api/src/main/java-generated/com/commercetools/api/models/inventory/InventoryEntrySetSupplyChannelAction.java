@@ -51,4 +51,13 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
     default <T> T withInventoryEntrySetSupplyChannelAction(Function<InventoryEntrySetSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetSupplyChannelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetSupplyChannelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntrySetSupplyChannelAction>";
+            }
+        };
+    }
 }

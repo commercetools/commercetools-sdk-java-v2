@@ -52,4 +52,13 @@ public interface DiscountCodeChangeCartDiscountsAction extends DiscountCodeUpdat
     default <T> T withDiscountCodeChangeCartDiscountsAction(Function<DiscountCodeChangeCartDiscountsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeCartDiscountsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeCartDiscountsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeChangeCartDiscountsAction>";
+            }
+        };
+    }
 }

@@ -65,4 +65,13 @@ public interface OrderReturnShipmentStateChangedMessage extends OrderMessage {
             Function<OrderReturnShipmentStateChangedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderReturnShipmentStateChangedMessage>";
+            }
+        };
+    }
 }

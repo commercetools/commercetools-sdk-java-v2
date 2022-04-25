@@ -51,4 +51,13 @@ public interface EnumSetField extends CustomField {
     default <T> T withEnumSetField(Function<EnumSetField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<EnumSetField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<EnumSetField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<EnumSetField>";
+            }
+        };
+    }
 }

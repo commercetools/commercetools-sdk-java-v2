@@ -53,4 +53,13 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     default <T> T withProductSetSearchKeywordsAction(Function<ProductSetSearchKeywordsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetSearchKeywordsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetSearchKeywordsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetSearchKeywordsAction>";
+            }
+        };
+    }
 }

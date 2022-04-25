@@ -85,4 +85,13 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     default <T> T withLineItemStateTransitionMessagePayload(Function<LineItemStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LineItemStateTransitionMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LineItemStateTransitionMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LineItemStateTransitionMessagePayload>";
+            }
+        };
+    }
 }

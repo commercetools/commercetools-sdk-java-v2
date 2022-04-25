@@ -51,4 +51,13 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
             Function<MyCustomerSetDefaultShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDefaultShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDefaultShippingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerSetDefaultShippingAddressAction>";
+            }
+        };
+    }
 }

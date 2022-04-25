@@ -96,4 +96,13 @@ public interface ShippingMethodUpdateAction
     default <T> T withShippingMethodUpdateAction(Function<ShippingMethodUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodUpdateAction>";
+            }
+        };
+    }
 }

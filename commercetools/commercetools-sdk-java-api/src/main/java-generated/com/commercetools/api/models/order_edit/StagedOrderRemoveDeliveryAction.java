@@ -46,4 +46,13 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
     default <T> T withStagedOrderRemoveDeliveryAction(Function<StagedOrderRemoveDeliveryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveDeliveryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveDeliveryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderRemoveDeliveryAction>";
+            }
+        };
+    }
 }

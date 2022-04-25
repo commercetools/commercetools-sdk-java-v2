@@ -197,4 +197,12 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
         return com.commercetools.api.models.shipping_method.ShippingMethodReference.builder().id(getId()).build();
     }
 
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethod> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethod>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethod>";
+            }
+        };
+    }
 }

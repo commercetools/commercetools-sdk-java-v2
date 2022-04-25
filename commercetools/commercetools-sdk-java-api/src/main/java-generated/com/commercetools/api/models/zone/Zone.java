@@ -157,4 +157,12 @@ public interface Zone extends BaseResource, com.commercetools.api.models.DomainR
         return com.commercetools.api.models.zone.ZoneReference.builder().id(getId()).build();
     }
 
+    public static com.fasterxml.jackson.core.type.TypeReference<Zone> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Zone>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Zone>";
+            }
+        };
+    }
 }

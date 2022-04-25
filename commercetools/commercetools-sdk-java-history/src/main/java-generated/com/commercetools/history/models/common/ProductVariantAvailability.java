@@ -66,4 +66,13 @@ public interface ProductVariantAvailability {
     default <T> T withProductVariantAvailability(Function<ProductVariantAvailability, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantAvailability> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantAvailability>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductVariantAvailability>";
+            }
+        };
+    }
 }

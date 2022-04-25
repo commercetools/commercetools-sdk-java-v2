@@ -61,4 +61,13 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
     default <T> T withMyShoppingListSetCustomTypeAction(Function<MyShoppingListSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyShoppingListSetCustomTypeAction>";
+            }
+        };
+    }
 }

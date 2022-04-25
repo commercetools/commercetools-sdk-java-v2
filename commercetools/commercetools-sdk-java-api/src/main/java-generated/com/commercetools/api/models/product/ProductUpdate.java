@@ -56,4 +56,13 @@ public interface ProductUpdate
     default <T> T withProductUpdate(Function<ProductUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductUpdate>";
+            }
+        };
+    }
 }

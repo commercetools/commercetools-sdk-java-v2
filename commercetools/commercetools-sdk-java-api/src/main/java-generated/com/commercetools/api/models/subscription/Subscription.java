@@ -140,4 +140,13 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     default <T> T withSubscription(Function<Subscription, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Subscription> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Subscription>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Subscription>";
+            }
+        };
+    }
 }

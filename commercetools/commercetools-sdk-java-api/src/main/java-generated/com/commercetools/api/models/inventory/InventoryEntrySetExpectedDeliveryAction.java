@@ -45,4 +45,13 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
             Function<InventoryEntrySetExpectedDeliveryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetExpectedDeliveryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetExpectedDeliveryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntrySetExpectedDeliveryAction>";
+            }
+        };
+    }
 }

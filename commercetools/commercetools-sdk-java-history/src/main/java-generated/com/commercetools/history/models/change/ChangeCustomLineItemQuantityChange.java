@@ -83,4 +83,13 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     default <T> T withChangeCustomLineItemQuantityChange(Function<ChangeCustomLineItemQuantityChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeCustomLineItemQuantityChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeCustomLineItemQuantityChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeCustomLineItemQuantityChange>";
+            }
+        };
+    }
 }

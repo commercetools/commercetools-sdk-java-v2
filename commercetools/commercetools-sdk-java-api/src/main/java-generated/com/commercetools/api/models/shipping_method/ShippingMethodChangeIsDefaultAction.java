@@ -49,4 +49,13 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
     default <T> T withShippingMethodChangeIsDefaultAction(Function<ShippingMethodChangeIsDefaultAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeIsDefaultAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeIsDefaultAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodChangeIsDefaultAction>";
+            }
+        };
+    }
 }

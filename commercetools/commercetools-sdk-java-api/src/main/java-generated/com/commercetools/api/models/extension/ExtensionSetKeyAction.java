@@ -46,4 +46,13 @@ public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
     default <T> T withExtensionSetKeyAction(Function<ExtensionSetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionSetKeyAction>";
+            }
+        };
+    }
 }

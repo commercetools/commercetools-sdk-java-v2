@@ -54,4 +54,13 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     default <T> T withReviewTransitionStateAction(Function<ReviewTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewTransitionStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewTransitionStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewTransitionStateAction>";
+            }
+        };
+    }
 }

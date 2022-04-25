@@ -40,4 +40,13 @@ public interface ChannelKeyReference extends KeyReference {
     default <T> T withChannelKeyReference(Function<ChannelKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelKeyReference>";
+            }
+        };
+    }
 }

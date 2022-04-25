@@ -47,4 +47,13 @@ public interface ProductReference extends Reference, com.commercetools.api.model
     default <T> T withProductReference(Function<ProductReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductReference>";
+            }
+        };
+    }
 }

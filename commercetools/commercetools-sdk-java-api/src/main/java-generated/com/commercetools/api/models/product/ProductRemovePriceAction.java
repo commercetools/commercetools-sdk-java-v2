@@ -54,4 +54,13 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     default <T> T withProductRemovePriceAction(Function<ProductRemovePriceAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemovePriceAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemovePriceAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductRemovePriceAction>";
+            }
+        };
+    }
 }

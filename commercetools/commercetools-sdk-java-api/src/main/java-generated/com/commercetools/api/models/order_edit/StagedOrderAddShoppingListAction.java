@@ -70,4 +70,13 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     default <T> T withStagedOrderAddShoppingListAction(Function<StagedOrderAddShoppingListAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddShoppingListAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddShoppingListAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderAddShoppingListAction>";
+            }
+        };
+    }
 }

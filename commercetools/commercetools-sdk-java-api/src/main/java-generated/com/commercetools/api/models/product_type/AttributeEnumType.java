@@ -50,4 +50,13 @@ public interface AttributeEnumType extends AttributeType {
     default <T> T withAttributeEnumType(Function<AttributeEnumType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeEnumType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeEnumType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeEnumType>";
+            }
+        };
+    }
 }

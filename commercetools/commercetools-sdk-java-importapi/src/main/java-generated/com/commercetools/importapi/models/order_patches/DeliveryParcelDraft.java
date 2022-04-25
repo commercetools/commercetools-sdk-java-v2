@@ -63,4 +63,13 @@ public interface DeliveryParcelDraft {
     default <T> T withDeliveryParcelDraft(Function<DeliveryParcelDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryParcelDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryParcelDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DeliveryParcelDraft>";
+            }
+        };
+    }
 }

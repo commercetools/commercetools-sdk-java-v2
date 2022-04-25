@@ -66,4 +66,13 @@ public interface SetCustomerNumberChange extends Change {
     default <T> T withSetCustomerNumberChange(Function<SetCustomerNumberChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomerNumberChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomerNumberChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomerNumberChange>";
+            }
+        };
+    }
 }

@@ -52,4 +52,13 @@ public interface StateSetNameAction extends StateUpdateAction {
     default <T> T withStateSetNameAction(Function<StateSetNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateSetNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateSetNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateSetNameAction>";
+            }
+        };
+    }
 }

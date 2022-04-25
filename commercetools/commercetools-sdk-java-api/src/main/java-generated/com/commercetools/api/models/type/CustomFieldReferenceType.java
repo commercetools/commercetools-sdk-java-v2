@@ -51,4 +51,13 @@ public interface CustomFieldReferenceType extends FieldType {
     default <T> T withCustomFieldReferenceType(Function<CustomFieldReferenceType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldReferenceType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldReferenceType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldReferenceType>";
+            }
+        };
+    }
 }

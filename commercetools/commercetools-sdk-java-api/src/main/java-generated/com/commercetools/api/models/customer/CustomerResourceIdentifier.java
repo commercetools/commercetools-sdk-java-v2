@@ -40,4 +40,13 @@ public interface CustomerResourceIdentifier
     default <T> T withCustomerResourceIdentifier(Function<CustomerResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerResourceIdentifier>";
+            }
+        };
+    }
 }

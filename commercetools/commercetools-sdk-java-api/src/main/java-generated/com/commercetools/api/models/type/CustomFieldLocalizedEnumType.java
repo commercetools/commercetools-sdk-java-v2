@@ -56,4 +56,13 @@ public interface CustomFieldLocalizedEnumType extends FieldType {
     default <T> T withCustomFieldLocalizedEnumType(Function<CustomFieldLocalizedEnumType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldLocalizedEnumType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldLocalizedEnumType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldLocalizedEnumType>";
+            }
+        };
+    }
 }

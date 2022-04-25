@@ -157,4 +157,13 @@ public interface ProductSelection extends BaseResource, com.commercetools.api.mo
     default <T> T withProductSelection(Function<ProductSelection, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelection> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelection>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelection>";
+            }
+        };
+    }
 }

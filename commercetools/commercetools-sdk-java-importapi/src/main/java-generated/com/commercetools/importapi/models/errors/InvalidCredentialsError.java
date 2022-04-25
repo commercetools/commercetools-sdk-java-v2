@@ -37,4 +37,13 @@ public interface InvalidCredentialsError extends ErrorObject {
     default <T> T withInvalidCredentialsError(Function<InvalidCredentialsError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidCredentialsError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidCredentialsError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidCredentialsError>";
+            }
+        };
+    }
 }

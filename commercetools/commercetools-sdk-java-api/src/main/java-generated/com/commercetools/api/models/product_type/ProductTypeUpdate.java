@@ -56,4 +56,13 @@ public interface ProductTypeUpdate extends
     default <T> T withProductTypeUpdate(Function<ProductTypeUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeUpdate>";
+            }
+        };
+    }
 }

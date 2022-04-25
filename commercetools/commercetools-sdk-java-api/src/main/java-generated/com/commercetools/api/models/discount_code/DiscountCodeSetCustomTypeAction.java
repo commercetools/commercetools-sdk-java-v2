@@ -61,4 +61,13 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     default <T> T withDiscountCodeSetCustomTypeAction(Function<DiscountCodeSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeSetCustomTypeAction>";
+            }
+        };
+    }
 }

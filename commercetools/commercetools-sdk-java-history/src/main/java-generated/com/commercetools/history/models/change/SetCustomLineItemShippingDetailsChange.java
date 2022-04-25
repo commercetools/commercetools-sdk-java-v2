@@ -79,4 +79,13 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
             Function<SetCustomLineItemShippingDetailsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemShippingDetailsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemShippingDetailsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomLineItemShippingDetailsChange>";
+            }
+        };
+    }
 }

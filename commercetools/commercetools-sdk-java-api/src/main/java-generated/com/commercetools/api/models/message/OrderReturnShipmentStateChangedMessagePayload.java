@@ -56,4 +56,13 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
             Function<OrderReturnShipmentStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderReturnShipmentStateChangedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderReturnShipmentStateChangedMessagePayload>";
+            }
+        };
+    }
 }

@@ -49,4 +49,13 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
     default <T> T withStoreRemoveDistributionChannelAction(Function<StoreRemoveDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreRemoveDistributionChannelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreRemoveDistributionChannelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreRemoveDistributionChannelAction>";
+            }
+        };
+    }
 }

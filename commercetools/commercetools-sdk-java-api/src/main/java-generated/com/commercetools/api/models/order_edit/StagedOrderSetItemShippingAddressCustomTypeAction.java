@@ -73,4 +73,13 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
             Function<StagedOrderSetItemShippingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction>";
+            }
+        };
+    }
 }

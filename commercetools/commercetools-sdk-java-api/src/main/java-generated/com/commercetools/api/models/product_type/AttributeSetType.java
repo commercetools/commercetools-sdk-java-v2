@@ -47,4 +47,13 @@ public interface AttributeSetType extends AttributeType {
     default <T> T withAttributeSetType(Function<AttributeSetType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeSetType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeSetType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeSetType>";
+            }
+        };
+    }
 }

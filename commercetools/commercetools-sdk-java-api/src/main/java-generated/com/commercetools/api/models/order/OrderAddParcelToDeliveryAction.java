@@ -70,4 +70,13 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     default <T> T withOrderAddParcelToDeliveryAction(Function<OrderAddParcelToDeliveryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderAddParcelToDeliveryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderAddParcelToDeliveryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderAddParcelToDeliveryAction>";
+            }
+        };
+    }
 }

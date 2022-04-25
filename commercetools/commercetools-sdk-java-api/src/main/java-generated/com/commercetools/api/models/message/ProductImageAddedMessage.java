@@ -72,4 +72,13 @@ public interface ProductImageAddedMessage extends Message {
     default <T> T withProductImageAddedMessage(Function<ProductImageAddedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductImageAddedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductImageAddedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductImageAddedMessage>";
+            }
+        };
+    }
 }

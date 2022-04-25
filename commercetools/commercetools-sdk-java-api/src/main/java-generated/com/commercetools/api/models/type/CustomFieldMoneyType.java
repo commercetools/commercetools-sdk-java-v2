@@ -39,4 +39,13 @@ public interface CustomFieldMoneyType extends FieldType {
     default <T> T withCustomFieldMoneyType(Function<CustomFieldMoneyType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldMoneyType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldMoneyType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldMoneyType>";
+            }
+        };
+    }
 }

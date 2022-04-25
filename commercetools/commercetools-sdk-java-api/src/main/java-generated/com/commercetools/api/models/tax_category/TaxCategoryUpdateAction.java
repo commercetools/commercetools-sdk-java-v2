@@ -56,4 +56,13 @@ public interface TaxCategoryUpdateAction
     default <T> T withTaxCategoryUpdateAction(Function<TaxCategoryUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryUpdateAction>";
+            }
+        };
+    }
 }

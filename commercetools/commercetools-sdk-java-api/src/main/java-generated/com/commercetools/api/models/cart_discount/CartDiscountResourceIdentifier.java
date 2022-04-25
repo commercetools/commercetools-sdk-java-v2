@@ -40,4 +40,13 @@ public interface CartDiscountResourceIdentifier
     default <T> T withCartDiscountResourceIdentifier(Function<CartDiscountResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountResourceIdentifier>";
+            }
+        };
+    }
 }

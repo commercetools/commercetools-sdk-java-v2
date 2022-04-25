@@ -66,4 +66,13 @@ public interface CustomFieldExpandedValue {
     default <T> T withCustomFieldExpandedValue(Function<CustomFieldExpandedValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldExpandedValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldExpandedValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldExpandedValue>";
+            }
+        };
+    }
 }

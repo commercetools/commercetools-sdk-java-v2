@@ -76,4 +76,13 @@ public interface SetSupplyChannelsChange extends Change {
     default <T> T withSetSupplyChannelsChange(Function<SetSupplyChannelsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetSupplyChannelsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetSupplyChannelsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetSupplyChannelsChange>";
+            }
+        };
+    }
 }

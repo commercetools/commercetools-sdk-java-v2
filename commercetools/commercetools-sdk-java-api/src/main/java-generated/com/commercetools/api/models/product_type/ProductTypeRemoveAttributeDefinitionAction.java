@@ -51,4 +51,13 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
             Function<ProductTypeRemoveAttributeDefinitionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveAttributeDefinitionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveAttributeDefinitionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeRemoveAttributeDefinitionAction>";
+            }
+        };
+    }
 }

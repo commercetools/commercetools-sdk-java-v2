@@ -92,4 +92,13 @@ public interface RecordPagedQueryResponse {
     default <T> T withRecordPagedQueryResponse(Function<RecordPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RecordPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RecordPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RecordPagedQueryResponse>";
+            }
+        };
+    }
 }

@@ -51,4 +51,13 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
     default <T> T withProjectChangeCurrenciesAction(Function<ProjectChangeCurrenciesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCurrenciesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCurrenciesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeCurrenciesAction>";
+            }
+        };
+    }
 }

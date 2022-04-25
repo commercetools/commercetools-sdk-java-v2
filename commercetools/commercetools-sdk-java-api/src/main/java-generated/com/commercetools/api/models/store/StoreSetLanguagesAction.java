@@ -45,4 +45,13 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     default <T> T withStoreSetLanguagesAction(Function<StoreSetLanguagesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreSetLanguagesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreSetLanguagesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreSetLanguagesAction>";
+            }
+        };
+    }
 }

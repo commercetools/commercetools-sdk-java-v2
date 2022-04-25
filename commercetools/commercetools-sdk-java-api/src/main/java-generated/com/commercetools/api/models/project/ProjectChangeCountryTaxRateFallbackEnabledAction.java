@@ -51,4 +51,13 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
             Function<ProjectChangeCountryTaxRateFallbackEnabledAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction>";
+            }
+        };
+    }
 }

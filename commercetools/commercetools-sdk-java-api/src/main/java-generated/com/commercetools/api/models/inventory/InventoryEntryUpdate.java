@@ -56,4 +56,13 @@ public interface InventoryEntryUpdate extends
     default <T> T withInventoryEntryUpdate(Function<InventoryEntryUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryUpdate>";
+            }
+        };
+    }
 }

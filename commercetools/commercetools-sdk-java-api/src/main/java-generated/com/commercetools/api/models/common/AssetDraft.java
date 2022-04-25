@@ -89,4 +89,13 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     default <T> T withAssetDraft(Function<AssetDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AssetDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AssetDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AssetDraft>";
+            }
+        };
+    }
 }

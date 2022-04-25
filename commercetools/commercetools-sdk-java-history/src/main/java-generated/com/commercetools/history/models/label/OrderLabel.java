@@ -56,4 +56,13 @@ public interface OrderLabel extends Label {
     default <T> T withOrderLabel(Function<OrderLabel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderLabel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderLabel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderLabel>";
+            }
+        };
+    }
 }

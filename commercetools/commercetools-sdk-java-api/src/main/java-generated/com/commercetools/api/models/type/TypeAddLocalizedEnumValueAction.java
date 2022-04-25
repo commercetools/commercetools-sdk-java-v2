@@ -64,4 +64,13 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
     default <T> T withTypeAddLocalizedEnumValueAction(Function<TypeAddLocalizedEnumValueAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeAddLocalizedEnumValueAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeAddLocalizedEnumValueAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeAddLocalizedEnumValueAction>";
+            }
+        };
+    }
 }

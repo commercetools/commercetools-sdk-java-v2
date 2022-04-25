@@ -118,4 +118,13 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     default <T> T withOrderLineItemRemovedMessage(Function<OrderLineItemRemovedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemRemovedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemRemovedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderLineItemRemovedMessage>";
+            }
+        };
+    }
 }

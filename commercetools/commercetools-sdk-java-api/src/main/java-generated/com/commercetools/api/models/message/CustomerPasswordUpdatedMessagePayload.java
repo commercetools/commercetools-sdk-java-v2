@@ -49,4 +49,13 @@ public interface CustomerPasswordUpdatedMessagePayload extends MessagePayload {
     default <T> T withCustomerPasswordUpdatedMessagePayload(Function<CustomerPasswordUpdatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerPasswordUpdatedMessagePayload>";
+            }
+        };
+    }
 }

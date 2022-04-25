@@ -63,4 +63,13 @@ public interface TypeUpdate
     default <T> T withTypeUpdate(Function<TypeUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeUpdate>";
+            }
+        };
+    }
 }

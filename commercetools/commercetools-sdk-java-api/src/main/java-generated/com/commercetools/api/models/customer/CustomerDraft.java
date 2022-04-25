@@ -296,4 +296,13 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     default <T> T withCustomerDraft(Function<CustomerDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerDraft>";
+            }
+        };
+    }
 }

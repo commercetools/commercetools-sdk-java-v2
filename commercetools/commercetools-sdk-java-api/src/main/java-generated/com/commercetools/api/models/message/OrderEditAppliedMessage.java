@@ -67,4 +67,13 @@ public interface OrderEditAppliedMessage extends OrderMessage {
     default <T> T withOrderEditAppliedMessage(Function<OrderEditAppliedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditAppliedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditAppliedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditAppliedMessage>";
+            }
+        };
+    }
 }

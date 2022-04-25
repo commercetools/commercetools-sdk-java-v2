@@ -47,4 +47,13 @@ public interface CustomerSetCustomerNumberAction extends CustomerUpdateAction {
     default <T> T withCustomerSetCustomerNumberAction(Function<CustomerSetCustomerNumberAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomerNumberAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomerNumberAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetCustomerNumberAction>";
+            }
+        };
+    }
 }

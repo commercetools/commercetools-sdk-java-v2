@@ -83,4 +83,13 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     default <T> T withOrderTransitionLineItemStateAction(Function<OrderTransitionLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderTransitionLineItemStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderTransitionLineItemStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderTransitionLineItemStateAction>";
+            }
+        };
+    }
 }

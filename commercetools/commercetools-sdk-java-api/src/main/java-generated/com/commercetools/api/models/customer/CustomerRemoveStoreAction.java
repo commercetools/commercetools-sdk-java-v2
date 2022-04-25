@@ -48,4 +48,13 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
     default <T> T withCustomerRemoveStoreAction(Function<CustomerRemoveStoreAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveStoreAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveStoreAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerRemoveStoreAction>";
+            }
+        };
+    }
 }

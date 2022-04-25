@@ -77,4 +77,13 @@ public interface SetLineItemShippingDetailsChange extends Change {
     default <T> T withSetLineItemShippingDetailsChange(Function<SetLineItemShippingDetailsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemShippingDetailsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemShippingDetailsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetLineItemShippingDetailsChange>";
+            }
+        };
+    }
 }

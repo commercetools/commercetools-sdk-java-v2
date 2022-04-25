@@ -56,4 +56,13 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
     default <T> T withCustomerSetAuthenticationModeAction(Function<CustomerSetAuthenticationModeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetAuthenticationModeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetAuthenticationModeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetAuthenticationModeAction>";
+            }
+        };
+    }
 }

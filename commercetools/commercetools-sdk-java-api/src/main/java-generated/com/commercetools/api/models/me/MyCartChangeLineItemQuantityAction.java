@@ -73,4 +73,13 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     default <T> T withMyCartChangeLineItemQuantityAction(Function<MyCartChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartChangeLineItemQuantityAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartChangeLineItemQuantityAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartChangeLineItemQuantityAction>";
+            }
+        };
+    }
 }

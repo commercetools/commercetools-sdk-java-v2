@@ -49,4 +49,13 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
             Function<StagedOrderRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveItemShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveItemShippingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderRemoveItemShippingAddressAction>";
+            }
+        };
+    }
 }

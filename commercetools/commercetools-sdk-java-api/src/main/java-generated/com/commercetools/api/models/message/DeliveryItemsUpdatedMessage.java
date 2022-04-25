@@ -79,4 +79,13 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
     default <T> T withDeliveryItemsUpdatedMessage(Function<DeliveryItemsUpdatedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryItemsUpdatedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryItemsUpdatedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DeliveryItemsUpdatedMessage>";
+            }
+        };
+    }
 }

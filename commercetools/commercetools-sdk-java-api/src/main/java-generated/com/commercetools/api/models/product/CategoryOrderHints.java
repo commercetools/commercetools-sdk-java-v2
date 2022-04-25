@@ -43,4 +43,13 @@ public interface CategoryOrderHints {
     default <T> T withCategoryOrderHints(Function<CategoryOrderHints, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryOrderHints> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryOrderHints>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryOrderHints>";
+            }
+        };
+    }
 }

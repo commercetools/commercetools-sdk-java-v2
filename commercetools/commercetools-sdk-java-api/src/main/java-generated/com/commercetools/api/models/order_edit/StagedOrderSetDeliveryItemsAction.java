@@ -59,4 +59,13 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
     default <T> T withStagedOrderSetDeliveryItemsAction(Function<StagedOrderSetDeliveryItemsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryItemsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryItemsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetDeliveryItemsAction>";
+            }
+        };
+    }
 }

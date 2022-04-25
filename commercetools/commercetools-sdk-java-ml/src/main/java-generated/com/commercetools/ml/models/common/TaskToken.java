@@ -59,4 +59,13 @@ public interface TaskToken {
     default <T> T withTaskToken(Function<TaskToken, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaskToken> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaskToken>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaskToken>";
+            }
+        };
+    }
 }

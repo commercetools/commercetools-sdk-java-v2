@@ -46,4 +46,13 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
     default <T> T withPaymentSetStatusInterfaceTextAction(Function<PaymentSetStatusInterfaceTextAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetStatusInterfaceTextAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetStatusInterfaceTextAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentSetStatusInterfaceTextAction>";
+            }
+        };
+    }
 }

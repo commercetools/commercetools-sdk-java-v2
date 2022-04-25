@@ -66,4 +66,13 @@ public interface SetValueChange extends Change {
     default <T> T withSetValueChange(Function<SetValueChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetValueChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetValueChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetValueChange>";
+            }
+        };
+    }
 }

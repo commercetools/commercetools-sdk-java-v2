@@ -63,4 +63,13 @@ public interface UnknownChange extends Change {
     default <T> T withUnknownChange(Function<UnknownChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<UnknownChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<UnknownChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<UnknownChange>";
+            }
+        };
+    }
 }

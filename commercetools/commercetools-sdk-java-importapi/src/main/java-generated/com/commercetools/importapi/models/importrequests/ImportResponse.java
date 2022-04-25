@@ -53,4 +53,13 @@ public interface ImportResponse {
     default <T> T withImportResponse(Function<ImportResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportResponse>";
+            }
+        };
+    }
 }

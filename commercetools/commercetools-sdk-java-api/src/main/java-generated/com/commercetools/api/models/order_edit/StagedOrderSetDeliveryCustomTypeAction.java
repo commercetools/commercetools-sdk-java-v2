@@ -72,4 +72,13 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
             Function<StagedOrderSetDeliveryCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetDeliveryCustomTypeAction>";
+            }
+        };
+    }
 }

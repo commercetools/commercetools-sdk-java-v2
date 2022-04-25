@@ -40,4 +40,13 @@ public interface TaxCategoryKeyReference extends KeyReference {
     default <T> T withTaxCategoryKeyReference(Function<TaxCategoryKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryKeyReference>";
+            }
+        };
+    }
 }

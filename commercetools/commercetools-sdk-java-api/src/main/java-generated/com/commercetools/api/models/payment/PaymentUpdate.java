@@ -56,4 +56,13 @@ public interface PaymentUpdate
     default <T> T withPaymentUpdate(Function<PaymentUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentUpdate>";
+            }
+        };
+    }
 }

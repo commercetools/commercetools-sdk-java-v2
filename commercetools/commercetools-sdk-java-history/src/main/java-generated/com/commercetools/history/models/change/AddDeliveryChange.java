@@ -70,4 +70,13 @@ public interface AddDeliveryChange extends Change {
     default <T> T withAddDeliveryChange(Function<AddDeliveryChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddDeliveryChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddDeliveryChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddDeliveryChange>";
+            }
+        };
+    }
 }

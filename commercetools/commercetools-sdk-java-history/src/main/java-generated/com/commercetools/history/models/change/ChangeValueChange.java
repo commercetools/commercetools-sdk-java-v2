@@ -70,4 +70,13 @@ public interface ChangeValueChange extends Change {
     default <T> T withChangeValueChange(Function<ChangeValueChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeValueChange>";
+            }
+        };
+    }
 }

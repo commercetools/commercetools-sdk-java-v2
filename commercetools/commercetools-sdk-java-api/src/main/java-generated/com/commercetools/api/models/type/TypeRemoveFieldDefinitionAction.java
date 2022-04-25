@@ -49,4 +49,13 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     default <T> T withTypeRemoveFieldDefinitionAction(Function<TypeRemoveFieldDefinitionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeRemoveFieldDefinitionAction>";
+            }
+        };
+    }
 }

@@ -47,4 +47,13 @@ public interface PaymentSetAnonymousIdAction extends PaymentUpdateAction {
     default <T> T withPaymentSetAnonymousIdAction(Function<PaymentSetAnonymousIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetAnonymousIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetAnonymousIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentSetAnonymousIdAction>";
+            }
+        };
+    }
 }

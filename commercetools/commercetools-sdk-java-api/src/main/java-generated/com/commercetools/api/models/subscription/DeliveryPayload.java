@@ -67,4 +67,13 @@ public interface DeliveryPayload {
     default <T> T withDeliveryPayload(Function<DeliveryPayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryPayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryPayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DeliveryPayload>";
+            }
+        };
+    }
 }

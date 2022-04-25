@@ -81,4 +81,13 @@ public interface StagedOrderAddDeliveryAction
     default <T> T withStagedOrderAddDeliveryAction(Function<StagedOrderAddDeliveryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderAddDeliveryAction>";
+            }
+        };
+    }
 }

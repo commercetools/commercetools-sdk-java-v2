@@ -69,4 +69,13 @@ public interface PaymentStatusStateTransitionMessage extends Message {
     default <T> T withPaymentStatusStateTransitionMessage(Function<PaymentStatusStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentStatusStateTransitionMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentStatusStateTransitionMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentStatusStateTransitionMessage>";
+            }
+        };
+    }
 }

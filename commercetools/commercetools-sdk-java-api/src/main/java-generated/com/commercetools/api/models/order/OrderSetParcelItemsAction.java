@@ -57,4 +57,13 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     default <T> T withOrderSetParcelItemsAction(Function<OrderSetParcelItemsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelItemsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelItemsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetParcelItemsAction>";
+            }
+        };
+    }
 }

@@ -66,4 +66,13 @@ public interface SetFirstNameChange extends Change {
     default <T> T withSetFirstNameChange(Function<SetFirstNameChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetFirstNameChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetFirstNameChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetFirstNameChange>";
+            }
+        };
+    }
 }

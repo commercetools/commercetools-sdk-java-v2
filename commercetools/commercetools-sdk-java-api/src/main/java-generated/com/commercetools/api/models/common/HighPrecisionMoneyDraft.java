@@ -59,4 +59,13 @@ public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
     default <T> T withHighPrecisionMoneyDraft(Function<HighPrecisionMoneyDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<HighPrecisionMoneyDraft>";
+            }
+        };
+    }
 }

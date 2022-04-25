@@ -38,4 +38,13 @@ public interface SyntaxErrorError extends ErrorObject {
     default <T> T withSyntaxErrorError(Function<SyntaxErrorError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SyntaxErrorError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SyntaxErrorError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SyntaxErrorError>";
+            }
+        };
+    }
 }

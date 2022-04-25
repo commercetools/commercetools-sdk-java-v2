@@ -54,4 +54,13 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     default <T> T withProductRemoveFromCategoryAction(Function<ProductRemoveFromCategoryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemoveFromCategoryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemoveFromCategoryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductRemoveFromCategoryAction>";
+            }
+        };
+    }
 }

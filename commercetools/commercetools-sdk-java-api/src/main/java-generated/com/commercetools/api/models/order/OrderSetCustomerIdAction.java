@@ -42,4 +42,13 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
     default <T> T withOrderSetCustomerIdAction(Function<OrderSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomerIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomerIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetCustomerIdAction>";
+            }
+        };
+    }
 }

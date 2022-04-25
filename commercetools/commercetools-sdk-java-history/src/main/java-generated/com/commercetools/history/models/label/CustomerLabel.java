@@ -63,4 +63,13 @@ public interface CustomerLabel extends Label {
     default <T> T withCustomerLabel(Function<CustomerLabel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerLabel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerLabel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerLabel>";
+            }
+        };
+    }
 }

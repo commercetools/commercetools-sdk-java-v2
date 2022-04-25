@@ -38,4 +38,13 @@ public interface ExtensionDestination {
     default <T> T withExtensionDestination(Function<ExtensionDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionDestination>";
+            }
+        };
+    }
 }

@@ -53,4 +53,13 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
     default <T> T withAzureFunctionsAuthentication(Function<AzureFunctionsAuthentication, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AzureFunctionsAuthentication> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AzureFunctionsAuthentication>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AzureFunctionsAuthentication>";
+            }
+        };
+    }
 }

@@ -52,4 +52,13 @@ public interface StagedOrderUpdateItemShippingAddressAction extends StagedOrderU
             Function<StagedOrderUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderUpdateItemShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderUpdateItemShippingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderUpdateItemShippingAddressAction>";
+            }
+        };
+    }
 }

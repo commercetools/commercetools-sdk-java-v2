@@ -53,4 +53,13 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
             Function<ProjectChangeMessagesConfigurationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeMessagesConfigurationAction>";
+            }
+        };
+    }
 }

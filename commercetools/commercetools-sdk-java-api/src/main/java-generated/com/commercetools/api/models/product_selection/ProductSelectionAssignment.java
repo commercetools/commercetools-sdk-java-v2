@@ -63,4 +63,13 @@ public interface ProductSelectionAssignment {
     default <T> T withProductSelectionAssignment(Function<ProductSelectionAssignment, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionAssignment> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionAssignment>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionAssignment>";
+            }
+        };
+    }
 }

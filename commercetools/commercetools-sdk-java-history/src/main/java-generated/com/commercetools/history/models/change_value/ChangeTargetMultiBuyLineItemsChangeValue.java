@@ -92,4 +92,13 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
             Function<ChangeTargetMultiBuyLineItemsChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetMultiBuyLineItemsChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetMultiBuyLineItemsChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTargetMultiBuyLineItemsChangeValue>";
+            }
+        };
+    }
 }

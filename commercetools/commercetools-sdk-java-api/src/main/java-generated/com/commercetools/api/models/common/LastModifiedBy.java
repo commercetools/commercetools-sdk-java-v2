@@ -38,4 +38,13 @@ public interface LastModifiedBy extends ClientLogging {
     default <T> T withLastModifiedBy(Function<LastModifiedBy, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LastModifiedBy> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LastModifiedBy>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LastModifiedBy>";
+            }
+        };
+    }
 }

@@ -72,4 +72,13 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     default <T> T withCategorySetAssetCustomTypeAction(Function<CategorySetAssetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetAssetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetAssetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySetAssetCustomTypeAction>";
+            }
+        };
+    }
 }

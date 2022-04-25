@@ -79,4 +79,13 @@ public interface ChangeAssetNameChange extends Change {
     default <T> T withChangeAssetNameChange(Function<ChangeAssetNameChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeAssetNameChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeAssetNameChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeAssetNameChange>";
+            }
+        };
+    }
 }

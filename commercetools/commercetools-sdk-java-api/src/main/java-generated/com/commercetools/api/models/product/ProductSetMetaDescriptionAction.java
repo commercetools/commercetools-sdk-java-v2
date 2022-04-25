@@ -52,4 +52,13 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
     default <T> T withProductSetMetaDescriptionAction(Function<ProductSetMetaDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetMetaDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetMetaDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetMetaDescriptionAction>";
+            }
+        };
+    }
 }

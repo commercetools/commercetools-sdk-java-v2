@@ -66,4 +66,13 @@ public interface SetCartPredicateChange extends Change {
     default <T> T withSetCartPredicateChange(Function<SetCartPredicateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCartPredicateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCartPredicateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCartPredicateChange>";
+            }
+        };
+    }
 }

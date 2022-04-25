@@ -58,4 +58,13 @@ public interface ProductSelectionDeletedMessage extends Message {
     default <T> T withProductSelectionDeletedMessage(Function<ProductSelectionDeletedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionDeletedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionDeletedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionDeletedMessage>";
+            }
+        };
+    }
 }

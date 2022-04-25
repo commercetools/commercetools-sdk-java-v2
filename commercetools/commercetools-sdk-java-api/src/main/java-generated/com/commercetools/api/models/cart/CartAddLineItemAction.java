@@ -128,4 +128,13 @@ public interface CartAddLineItemAction
     default <T> T withCartAddLineItemAction(Function<CartAddLineItemAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartAddLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartAddLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartAddLineItemAction>";
+            }
+        };
+    }
 }

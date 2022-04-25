@@ -61,4 +61,13 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
     default <T> T withOrderEditSetCustomTypeAction(Function<OrderEditSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditSetCustomTypeAction>";
+            }
+        };
+    }
 }

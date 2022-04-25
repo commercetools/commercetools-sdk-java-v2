@@ -70,4 +70,13 @@ public interface RemoveCustomLineItemChange extends Change {
     default <T> T withRemoveCustomLineItemChange(Function<RemoveCustomLineItemChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveCustomLineItemChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveCustomLineItemChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveCustomLineItemChange>";
+            }
+        };
+    }
 }

@@ -61,4 +61,13 @@ public interface ChannelResourceIdentifier
     default <T> T withChannelResourceIdentifier(Function<ChannelResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelResourceIdentifier>";
+            }
+        };
+    }
 }

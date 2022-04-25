@@ -113,4 +113,13 @@ public interface StoreCreatedMessage extends Message {
     default <T> T withStoreCreatedMessage(Function<StoreCreatedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreCreatedMessage>";
+            }
+        };
+    }
 }

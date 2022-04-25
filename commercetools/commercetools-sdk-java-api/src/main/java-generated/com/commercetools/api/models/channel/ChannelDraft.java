@@ -117,4 +117,13 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     default <T> T withChannelDraft(Function<ChannelDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelDraft>";
+            }
+        };
+    }
 }

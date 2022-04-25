@@ -96,4 +96,13 @@ public interface ErrorResponse {
     default <T> T withErrorResponse(Function<ErrorResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ErrorResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ErrorResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ErrorResponse>";
+            }
+        };
+    }
 }

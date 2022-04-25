@@ -50,4 +50,13 @@ public interface RangeFacetResult extends FacetResult {
     default <T> T withRangeFacetResult(Function<RangeFacetResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RangeFacetResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RangeFacetResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RangeFacetResult>";
+            }
+        };
+    }
 }

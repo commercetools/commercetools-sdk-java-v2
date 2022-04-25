@@ -84,4 +84,13 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     default <T> T withOrderCustomerSetMessage(Function<OrderCustomerSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderCustomerSetMessage>";
+            }
+        };
+    }
 }

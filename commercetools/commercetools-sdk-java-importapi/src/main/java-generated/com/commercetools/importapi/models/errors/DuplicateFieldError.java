@@ -60,4 +60,13 @@ public interface DuplicateFieldError extends ErrorObject {
     default <T> T withDuplicateFieldError(Function<DuplicateFieldError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DuplicateFieldError>";
+            }
+        };
+    }
 }

@@ -38,4 +38,13 @@ public interface SearchExecutionFailureError extends ErrorObject {
     default <T> T withSearchExecutionFailureError(Function<SearchExecutionFailureError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SearchExecutionFailureError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SearchExecutionFailureError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SearchExecutionFailureError>";
+            }
+        };
+    }
 }

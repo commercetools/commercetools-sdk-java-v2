@@ -56,4 +56,13 @@ public interface MyCartUpdate
     default <T> T withMyCartUpdate(Function<MyCartUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartUpdate>";
+            }
+        };
+    }
 }

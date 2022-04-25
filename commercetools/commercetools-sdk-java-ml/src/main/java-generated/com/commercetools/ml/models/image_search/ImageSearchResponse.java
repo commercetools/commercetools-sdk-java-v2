@@ -84,4 +84,13 @@ public interface ImageSearchResponse {
     default <T> T withImageSearchResponse(Function<ImageSearchResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImageSearchResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImageSearchResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImageSearchResponse>";
+            }
+        };
+    }
 }

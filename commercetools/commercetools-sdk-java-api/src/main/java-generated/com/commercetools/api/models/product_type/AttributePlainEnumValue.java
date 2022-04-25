@@ -50,4 +50,13 @@ public interface AttributePlainEnumValue {
     default <T> T withAttributePlainEnumValue(Function<AttributePlainEnumValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributePlainEnumValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributePlainEnumValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributePlainEnumValue>";
+            }
+        };
+    }
 }

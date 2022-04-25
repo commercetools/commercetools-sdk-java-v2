@@ -59,4 +59,13 @@ public interface MessagesConfigurationDraft {
     default <T> T withMessagesConfigurationDraft(Function<MessagesConfigurationDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MessagesConfigurationDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MessagesConfigurationDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MessagesConfigurationDraft>";
+            }
+        };
+    }
 }

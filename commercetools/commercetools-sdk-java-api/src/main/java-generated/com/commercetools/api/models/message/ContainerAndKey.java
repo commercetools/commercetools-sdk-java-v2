@@ -59,4 +59,13 @@ public interface ContainerAndKey {
     default <T> T withContainerAndKey(Function<ContainerAndKey, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ContainerAndKey> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ContainerAndKey>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ContainerAndKey>";
+            }
+        };
+    }
 }

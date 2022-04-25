@@ -244,4 +244,12 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
         return com.commercetools.api.models.cart_discount.CartDiscountReference.builder().id(getId()).build();
     }
 
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscount> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscount>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscount>";
+            }
+        };
+    }
 }

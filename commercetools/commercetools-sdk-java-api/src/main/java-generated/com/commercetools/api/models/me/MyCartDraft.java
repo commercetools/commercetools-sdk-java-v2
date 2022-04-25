@@ -179,4 +179,13 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     default <T> T withMyCartDraft(Function<MyCartDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartDraft>";
+            }
+        };
+    }
 }

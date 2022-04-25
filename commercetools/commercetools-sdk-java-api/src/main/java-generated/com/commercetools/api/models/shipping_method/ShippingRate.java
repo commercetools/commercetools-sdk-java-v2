@@ -82,4 +82,13 @@ public interface ShippingRate {
     default <T> T withShippingRate(Function<ShippingRate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingRate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingRate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingRate>";
+            }
+        };
+    }
 }

@@ -75,4 +75,13 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     default <T> T withOrderPagedQueryResponse(Function<OrderPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderPagedQueryResponse>";
+            }
+        };
+    }
 }

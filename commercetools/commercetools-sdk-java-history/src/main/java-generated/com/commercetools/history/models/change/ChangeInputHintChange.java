@@ -87,4 +87,13 @@ public interface ChangeInputHintChange extends Change {
     default <T> T withChangeInputHintChange(Function<ChangeInputHintChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeInputHintChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeInputHintChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeInputHintChange>";
+            }
+        };
+    }
 }

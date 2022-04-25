@@ -154,4 +154,13 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     default <T> T withLineItemDraft(Function<LineItemDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LineItemDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LineItemDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LineItemDraft>";
+            }
+        };
+    }
 }

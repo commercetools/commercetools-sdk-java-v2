@@ -52,4 +52,13 @@ public interface CategoryChangeSlugAction extends CategoryUpdateAction {
     default <T> T withCategoryChangeSlugAction(Function<CategoryChangeSlugAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeSlugAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeSlugAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryChangeSlugAction>";
+            }
+        };
+    }
 }

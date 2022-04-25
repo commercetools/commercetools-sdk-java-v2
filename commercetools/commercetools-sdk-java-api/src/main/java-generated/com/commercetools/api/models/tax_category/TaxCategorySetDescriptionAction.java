@@ -46,4 +46,13 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
     default <T> T withTaxCategorySetDescriptionAction(Function<TaxCategorySetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategorySetDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategorySetDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategorySetDescriptionAction>";
+            }
+        };
+    }
 }

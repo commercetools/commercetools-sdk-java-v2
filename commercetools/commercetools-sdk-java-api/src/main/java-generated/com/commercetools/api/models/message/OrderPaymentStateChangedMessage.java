@@ -62,4 +62,13 @@ public interface OrderPaymentStateChangedMessage extends OrderMessage {
     default <T> T withOrderPaymentStateChangedMessage(Function<OrderPaymentStateChangedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderPaymentStateChangedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderPaymentStateChangedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderPaymentStateChangedMessage>";
+            }
+        };
+    }
 }

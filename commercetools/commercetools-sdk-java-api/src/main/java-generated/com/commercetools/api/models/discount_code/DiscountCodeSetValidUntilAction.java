@@ -47,4 +47,13 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
     default <T> T withDiscountCodeSetValidUntilAction(Function<DiscountCodeSetValidUntilAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidUntilAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeSetValidUntilAction>";
+            }
+        };
+    }
 }

@@ -48,4 +48,13 @@ public interface MyCartRemovePaymentAction extends MyCartUpdateAction {
     default <T> T withMyCartRemovePaymentAction(Function<MyCartRemovePaymentAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartRemovePaymentAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartRemovePaymentAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartRemovePaymentAction>";
+            }
+        };
+    }
 }

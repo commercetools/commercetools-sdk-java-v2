@@ -62,4 +62,13 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
     default <T> T withCartSetBillingAddressCustomTypeAction(Function<CartSetBillingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetBillingAddressCustomTypeAction>";
+            }
+        };
+    }
 }

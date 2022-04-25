@@ -71,7 +71,7 @@ public interface ResourceTypeId {
     */
     ResourceTypeId LINE_ITEM = ResourceTypeIdEnum.LINE_ITEM;
     /**
-    	<p><a href="ctp:api:type:Cart">Cart</a>, <a href="ctp:api:type:Order">Order</a>, and <a href="ctp:api:type:ReturnItem">ReturnItem</a>.
+    	<p><a href="ctp:api:type:Cart">Cart</a> and <a href="ctp:api:type:Order">Order</a>.
     	When a <a href="ctp:api:type:Cart">Cart</a> is ordered, the <a href="ctp:api:type:CustomFields">CustomFields</a> need to be copied to the <a href="ctp:api:type:Order">Order</a>.
     	For this reason, the Types for a Cart are also valid for an Order, and both Cart and Order are referenced by the same string <code>order</code>.</p>
 
@@ -87,6 +87,16 @@ public interface ResourceTypeId {
 
     */
     ResourceTypeId ORDER_DELIVERY = ResourceTypeIdEnum.ORDER_DELIVERY;
+    /**
+    	<p><a href="ctp:api:type:Parcel">Parcel</a></p>
+
+    */
+    ResourceTypeId ORDER_PARCEL = ResourceTypeIdEnum.ORDER_PARCEL;
+    /**
+    	<p><a href="ctp:api:type:ReturnItem">ReturnItem</a></p>
+
+    */
+    ResourceTypeId ORDER_RETURN_ITEM = ResourceTypeIdEnum.ORDER_RETURN_ITEM;
     /**
     	<p><a href="ctp:api:type:Payment">Payment</a></p>
 
@@ -166,6 +176,10 @@ public interface ResourceTypeId {
         ORDER_EDIT("order-edit"),
 
         ORDER_DELIVERY("order-delivery"),
+
+        ORDER_PARCEL("order-parcel"),
+
+        ORDER_RETURN_ITEM("order-return-item"),
 
         PAYMENT("payment"),
 

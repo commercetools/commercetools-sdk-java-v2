@@ -52,4 +52,13 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
     default <T> T withDiscountCodeChangeGroupsAction(Function<DiscountCodeChangeGroupsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeGroupsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeGroupsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeChangeGroupsAction>";
+            }
+        };
+    }
 }

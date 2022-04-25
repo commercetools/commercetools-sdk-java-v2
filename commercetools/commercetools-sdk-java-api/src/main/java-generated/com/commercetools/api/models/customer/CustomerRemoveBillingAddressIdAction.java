@@ -49,4 +49,13 @@ public interface CustomerRemoveBillingAddressIdAction extends CustomerUpdateActi
     default <T> T withCustomerRemoveBillingAddressIdAction(Function<CustomerRemoveBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveBillingAddressIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerRemoveBillingAddressIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerRemoveBillingAddressIdAction>";
+            }
+        };
+    }
 }

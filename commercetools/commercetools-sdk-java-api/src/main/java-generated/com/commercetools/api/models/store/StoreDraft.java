@@ -119,4 +119,13 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
     default <T> T withStoreDraft(Function<StoreDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreDraft>";
+            }
+        };
+    }
 }

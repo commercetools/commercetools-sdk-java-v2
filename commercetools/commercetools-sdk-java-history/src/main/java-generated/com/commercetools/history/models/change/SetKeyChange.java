@@ -66,4 +66,13 @@ public interface SetKeyChange extends Change {
     default <T> T withSetKeyChange(Function<SetKeyChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetKeyChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetKeyChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetKeyChange>";
+            }
+        };
+    }
 }

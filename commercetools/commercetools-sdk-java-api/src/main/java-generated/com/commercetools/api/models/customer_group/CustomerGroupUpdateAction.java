@@ -46,4 +46,13 @@ public interface CustomerGroupUpdateAction
     default <T> T withCustomerGroupUpdateAction(Function<CustomerGroupUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupUpdateAction>";
+            }
+        };
+    }
 }

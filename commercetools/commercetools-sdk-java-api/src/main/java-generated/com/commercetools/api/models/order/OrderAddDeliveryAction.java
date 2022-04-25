@@ -78,4 +78,13 @@ public interface OrderAddDeliveryAction
     default <T> T withOrderAddDeliveryAction(Function<OrderAddDeliveryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderAddDeliveryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderAddDeliveryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderAddDeliveryAction>";
+            }
+        };
+    }
 }

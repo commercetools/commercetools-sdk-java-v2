@@ -43,4 +43,13 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
     default <T> T withStagedOrderSetCountryAction(Function<StagedOrderSetCountryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCountryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCountryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetCountryAction>";
+            }
+        };
+    }
 }

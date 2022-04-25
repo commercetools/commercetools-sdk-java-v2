@@ -61,4 +61,13 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     default <T> T withCartDiscountSetCustomTypeAction(Function<CartDiscountSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountSetCustomTypeAction>";
+            }
+        };
+    }
 }

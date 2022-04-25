@@ -50,4 +50,13 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
     default <T> T withExtensionSetTimeoutInMsAction(Function<ExtensionSetTimeoutInMsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionSetTimeoutInMsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionSetTimeoutInMsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionSetTimeoutInMsAction>";
+            }
+        };
+    }
 }

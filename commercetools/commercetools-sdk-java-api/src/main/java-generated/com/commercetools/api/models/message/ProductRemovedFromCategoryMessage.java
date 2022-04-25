@@ -65,4 +65,13 @@ public interface ProductRemovedFromCategoryMessage extends Message {
     default <T> T withProductRemovedFromCategoryMessage(Function<ProductRemovedFromCategoryMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemovedFromCategoryMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemovedFromCategoryMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductRemovedFromCategoryMessage>";
+            }
+        };
+    }
 }

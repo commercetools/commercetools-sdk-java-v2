@@ -73,4 +73,13 @@ public interface SetProductVariantKeyChange extends Change {
     default <T> T withSetProductVariantKeyChange(Function<SetProductVariantKeyChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetProductVariantKeyChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetProductVariantKeyChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetProductVariantKeyChange>";
+            }
+        };
+    }
 }

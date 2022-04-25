@@ -49,4 +49,13 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
     default <T> T withShippingMethodChangeTaxCategoryAction(Function<ShippingMethodChangeTaxCategoryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeTaxCategoryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeTaxCategoryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodChangeTaxCategoryAction>";
+            }
+        };
+    }
 }

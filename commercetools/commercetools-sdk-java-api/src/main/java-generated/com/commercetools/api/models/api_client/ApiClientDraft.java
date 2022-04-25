@@ -86,4 +86,13 @@ public interface ApiClientDraft {
     default <T> T withApiClientDraft(Function<ApiClientDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ApiClientDraft>";
+            }
+        };
+    }
 }

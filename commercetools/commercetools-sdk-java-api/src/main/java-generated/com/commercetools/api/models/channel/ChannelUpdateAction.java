@@ -85,4 +85,13 @@ public interface ChannelUpdateAction extends com.commercetools.api.models.Resour
     default <T> T withChannelUpdateAction(Function<ChannelUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelUpdateAction>";
+            }
+        };
+    }
 }

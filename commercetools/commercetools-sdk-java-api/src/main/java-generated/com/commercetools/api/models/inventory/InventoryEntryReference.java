@@ -47,4 +47,13 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     default <T> T withInventoryEntryReference(Function<InventoryEntryReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryReference>";
+            }
+        };
+    }
 }

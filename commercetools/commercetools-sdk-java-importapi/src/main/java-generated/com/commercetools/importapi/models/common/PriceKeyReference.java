@@ -40,4 +40,13 @@ public interface PriceKeyReference extends KeyReference {
     default <T> T withPriceKeyReference(Function<PriceKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PriceKeyReference>";
+            }
+        };
+    }
 }

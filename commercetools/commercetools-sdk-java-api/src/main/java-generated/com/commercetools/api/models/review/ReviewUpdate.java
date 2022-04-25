@@ -56,4 +56,13 @@ public interface ReviewUpdate
     default <T> T withReviewUpdate(Function<ReviewUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewUpdate>";
+            }
+        };
+    }
 }

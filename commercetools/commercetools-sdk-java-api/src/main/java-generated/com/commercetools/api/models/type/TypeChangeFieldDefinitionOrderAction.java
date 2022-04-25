@@ -52,4 +52,13 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
     default <T> T withTypeChangeFieldDefinitionOrderAction(Function<TypeChangeFieldDefinitionOrderAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeFieldDefinitionOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeFieldDefinitionOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeFieldDefinitionOrderAction>";
+            }
+        };
+    }
 }

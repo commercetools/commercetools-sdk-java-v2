@@ -54,4 +54,13 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     default <T> T withProductChangeNameAction(Function<ProductChangeNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductChangeNameAction>";
+            }
+        };
+    }
 }

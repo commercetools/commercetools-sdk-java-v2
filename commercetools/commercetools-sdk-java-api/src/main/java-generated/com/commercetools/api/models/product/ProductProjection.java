@@ -212,4 +212,13 @@ public interface ProductProjection
     default <T> T withProductProjection(Function<ProductProjection, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductProjection> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductProjection>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductProjection>";
+            }
+        };
+    }
 }

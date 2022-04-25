@@ -76,4 +76,13 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
             Function<StagedOrderChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeLineItemQuantityAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeLineItemQuantityAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderChangeLineItemQuantityAction>";
+            }
+        };
+    }
 }

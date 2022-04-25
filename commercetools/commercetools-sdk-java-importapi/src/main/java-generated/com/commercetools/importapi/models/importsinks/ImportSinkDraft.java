@@ -62,4 +62,13 @@ public interface ImportSinkDraft {
     default <T> T withImportSinkDraft(Function<ImportSinkDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportSinkDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportSinkDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportSinkDraft>";
+            }
+        };
+    }
 }

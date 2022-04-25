@@ -43,4 +43,13 @@ public interface GraphQLVariablesMap {
     default <T> T withGraphQLVariablesMap(Function<GraphQLVariablesMap, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLVariablesMap> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLVariablesMap>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GraphQLVariablesMap>";
+            }
+        };
+    }
 }

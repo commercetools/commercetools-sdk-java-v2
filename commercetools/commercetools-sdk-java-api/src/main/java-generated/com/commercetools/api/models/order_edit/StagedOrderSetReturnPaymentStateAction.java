@@ -56,4 +56,13 @@ public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdat
             Function<StagedOrderSetReturnPaymentStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnPaymentStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnPaymentStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetReturnPaymentStateAction>";
+            }
+        };
+    }
 }

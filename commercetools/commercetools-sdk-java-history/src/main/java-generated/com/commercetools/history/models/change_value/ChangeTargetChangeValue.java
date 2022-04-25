@@ -50,4 +50,13 @@ public interface ChangeTargetChangeValue {
     default <T> T withChangeTargetChangeValue(Function<ChangeTargetChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTargetChangeValue>";
+            }
+        };
+    }
 }

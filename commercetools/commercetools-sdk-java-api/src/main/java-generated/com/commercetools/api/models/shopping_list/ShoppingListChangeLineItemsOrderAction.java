@@ -50,4 +50,13 @@ public interface ShoppingListChangeLineItemsOrderAction extends ShoppingListUpda
             Function<ShoppingListChangeLineItemsOrderAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeLineItemsOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeLineItemsOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListChangeLineItemsOrderAction>";
+            }
+        };
+    }
 }

@@ -59,4 +59,13 @@ public interface ProductRevertedStagedChangesMessage extends Message {
     default <T> T withProductRevertedStagedChangesMessage(Function<ProductRevertedStagedChangesMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductRevertedStagedChangesMessage>";
+            }
+        };
+    }
 }

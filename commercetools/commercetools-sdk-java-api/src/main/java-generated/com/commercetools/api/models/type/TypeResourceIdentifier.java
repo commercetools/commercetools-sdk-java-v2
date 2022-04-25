@@ -60,4 +60,13 @@ public interface TypeResourceIdentifier extends ResourceIdentifier, com.commerce
     default <T> T withTypeResourceIdentifier(Function<TypeResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeResourceIdentifier>";
+            }
+        };
+    }
 }

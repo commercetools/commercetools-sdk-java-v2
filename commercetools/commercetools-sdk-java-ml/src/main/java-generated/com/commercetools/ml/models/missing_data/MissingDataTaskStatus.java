@@ -70,4 +70,13 @@ public interface MissingDataTaskStatus {
     default <T> T withMissingDataTaskStatus(Function<MissingDataTaskStatus, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingDataTaskStatus> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingDataTaskStatus>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingDataTaskStatus>";
+            }
+        };
+    }
 }

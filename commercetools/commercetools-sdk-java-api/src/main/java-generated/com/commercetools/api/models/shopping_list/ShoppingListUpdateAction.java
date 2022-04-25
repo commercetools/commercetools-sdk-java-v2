@@ -147,4 +147,13 @@ public interface ShoppingListUpdateAction
     default <T> T withShoppingListUpdateAction(Function<ShoppingListUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListUpdateAction>";
+            }
+        };
+    }
 }

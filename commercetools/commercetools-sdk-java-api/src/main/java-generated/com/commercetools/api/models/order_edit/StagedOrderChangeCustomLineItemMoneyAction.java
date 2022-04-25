@@ -63,4 +63,13 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
             Function<StagedOrderChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeCustomLineItemMoneyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeCustomLineItemMoneyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderChangeCustomLineItemMoneyAction>";
+            }
+        };
+    }
 }

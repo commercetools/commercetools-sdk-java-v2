@@ -60,4 +60,13 @@ public interface ExternalOAuth {
     default <T> T withExternalOAuth(Function<ExternalOAuth, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExternalOAuth> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExternalOAuth>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExternalOAuth>";
+            }
+        };
+    }
 }

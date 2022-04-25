@@ -54,4 +54,13 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
             Function<OrderShipmentStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderShipmentStateChangedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderShipmentStateChangedMessagePayload>";
+            }
+        };
+    }
 }

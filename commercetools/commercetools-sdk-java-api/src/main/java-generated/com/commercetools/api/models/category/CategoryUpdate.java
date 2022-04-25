@@ -56,4 +56,13 @@ public interface CategoryUpdate extends
     default <T> T withCategoryUpdate(Function<CategoryUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryUpdate>";
+            }
+        };
+    }
 }

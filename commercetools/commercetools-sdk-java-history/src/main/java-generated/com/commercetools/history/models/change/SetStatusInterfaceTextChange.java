@@ -66,4 +66,13 @@ public interface SetStatusInterfaceTextChange extends Change {
     default <T> T withSetStatusInterfaceTextChange(Function<SetStatusInterfaceTextChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetStatusInterfaceTextChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetStatusInterfaceTextChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetStatusInterfaceTextChange>";
+            }
+        };
+    }
 }

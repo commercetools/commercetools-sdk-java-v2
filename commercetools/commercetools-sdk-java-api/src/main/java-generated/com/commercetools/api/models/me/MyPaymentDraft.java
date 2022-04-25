@@ -77,4 +77,13 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     default <T> T withMyPaymentDraft(Function<MyPaymentDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyPaymentDraft>";
+            }
+        };
+    }
 }

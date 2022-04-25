@@ -46,4 +46,13 @@ public interface CartSetBillingAddressAction extends CartUpdateAction {
     default <T> T withCartSetBillingAddressAction(Function<CartSetBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetBillingAddressAction>";
+            }
+        };
+    }
 }

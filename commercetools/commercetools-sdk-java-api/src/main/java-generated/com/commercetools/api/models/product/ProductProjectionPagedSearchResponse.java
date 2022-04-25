@@ -85,4 +85,13 @@ public interface ProductProjectionPagedSearchResponse
     default <T> T withProductProjectionPagedSearchResponse(Function<ProductProjectionPagedSearchResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductProjectionPagedSearchResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductProjectionPagedSearchResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductProjectionPagedSearchResponse>";
+            }
+        };
+    }
 }

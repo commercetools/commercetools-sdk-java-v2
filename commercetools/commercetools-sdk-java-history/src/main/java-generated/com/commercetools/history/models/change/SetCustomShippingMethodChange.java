@@ -70,4 +70,13 @@ public interface SetCustomShippingMethodChange extends Change {
     default <T> T withSetCustomShippingMethodChange(Function<SetCustomShippingMethodChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomShippingMethodChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomShippingMethodChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomShippingMethodChange>";
+            }
+        };
+    }
 }

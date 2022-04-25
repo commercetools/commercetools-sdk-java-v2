@@ -64,4 +64,13 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     default <T> T withTypeReference(Function<TypeReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeReference>";
+            }
+        };
+    }
 }

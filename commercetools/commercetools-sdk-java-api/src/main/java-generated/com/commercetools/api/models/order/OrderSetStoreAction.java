@@ -46,4 +46,13 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
     default <T> T withOrderSetStoreAction(Function<OrderSetStoreAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetStoreAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetStoreAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetStoreAction>";
+            }
+        };
+    }
 }

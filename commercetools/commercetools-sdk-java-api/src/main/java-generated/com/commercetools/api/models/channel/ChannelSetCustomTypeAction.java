@@ -61,4 +61,13 @@ public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
     default <T> T withChannelSetCustomTypeAction(Function<ChannelSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelSetCustomTypeAction>";
+            }
+        };
+    }
 }

@@ -82,4 +82,13 @@ public interface SetAssetTagsChange extends Change {
     default <T> T withSetAssetTagsChange(Function<SetAssetTagsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAssetTagsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAssetTagsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAssetTagsChange>";
+            }
+        };
+    }
 }

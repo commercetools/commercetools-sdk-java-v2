@@ -85,4 +85,13 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
     default <T> T withTextLineItemDraft(Function<TextLineItemDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TextLineItemDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TextLineItemDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TextLineItemDraft>";
+            }
+        };
+    }
 }

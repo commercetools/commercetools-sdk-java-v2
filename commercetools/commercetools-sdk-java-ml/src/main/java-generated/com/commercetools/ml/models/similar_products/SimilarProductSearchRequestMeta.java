@@ -48,4 +48,13 @@ public interface SimilarProductSearchRequestMeta {
     default <T> T withSimilarProductSearchRequestMeta(Function<SimilarProductSearchRequestMeta, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SimilarProductSearchRequestMeta> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SimilarProductSearchRequestMeta>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SimilarProductSearchRequestMeta>";
+            }
+        };
+    }
 }

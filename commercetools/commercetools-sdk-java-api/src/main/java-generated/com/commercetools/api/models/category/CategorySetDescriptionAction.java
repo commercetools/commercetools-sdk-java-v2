@@ -46,4 +46,13 @@ public interface CategorySetDescriptionAction extends CategoryUpdateAction {
     default <T> T withCategorySetDescriptionAction(Function<CategorySetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySetDescriptionAction>";
+            }
+        };
+    }
 }

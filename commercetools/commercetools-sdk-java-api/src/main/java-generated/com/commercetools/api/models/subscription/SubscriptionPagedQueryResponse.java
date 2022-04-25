@@ -76,4 +76,13 @@ public interface SubscriptionPagedQueryResponse
     default <T> T withSubscriptionPagedQueryResponse(Function<SubscriptionPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SubscriptionPagedQueryResponse>";
+            }
+        };
+    }
 }

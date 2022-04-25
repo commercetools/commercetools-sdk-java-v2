@@ -52,4 +52,13 @@ public interface ChangeValueRelativeChangeValue extends ChangeValueChangeValue {
     default <T> T withChangeValueRelativeChangeValue(Function<ChangeValueRelativeChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueRelativeChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueRelativeChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeValueRelativeChangeValue>";
+            }
+        };
+    }
 }

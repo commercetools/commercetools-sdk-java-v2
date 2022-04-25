@@ -50,4 +50,13 @@ public interface AttributeValue {
     default <T> T withAttributeValue(Function<AttributeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeValue>";
+            }
+        };
+    }
 }

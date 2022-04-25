@@ -48,4 +48,13 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
     default <T> T withProductDiscountSetValidUntilAction(Function<ProductDiscountSetValidUntilAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidUntilAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidUntilAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountSetValidUntilAction>";
+            }
+        };
+    }
 }

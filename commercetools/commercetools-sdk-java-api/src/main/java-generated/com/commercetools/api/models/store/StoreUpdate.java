@@ -56,4 +56,13 @@ public interface StoreUpdate
     default <T> T withStoreUpdate(Function<StoreUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreUpdate>";
+            }
+        };
+    }
 }

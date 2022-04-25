@@ -50,4 +50,13 @@ public interface DateAttribute extends Attribute {
     default <T> T withDateAttribute(Function<DateAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DateAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DateAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DateAttribute>";
+            }
+        };
+    }
 }

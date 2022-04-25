@@ -49,4 +49,13 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
     default <T> T withProjectChangeOrderSearchStatusAction(Function<ProjectChangeOrderSearchStatusAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeOrderSearchStatusAction>";
+            }
+        };
+    }
 }

@@ -92,4 +92,13 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
             Function<SetShoppingListLineItemCustomFieldChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetShoppingListLineItemCustomFieldChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetShoppingListLineItemCustomFieldChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetShoppingListLineItemCustomFieldChange>";
+            }
+        };
+    }
 }

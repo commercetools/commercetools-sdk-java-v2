@@ -60,4 +60,13 @@ public interface CustomerSetCustomFieldAction extends CustomerUpdateAction {
     default <T> T withCustomerSetCustomFieldAction(Function<CustomerSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetCustomFieldAction>";
+            }
+        };
+    }
 }

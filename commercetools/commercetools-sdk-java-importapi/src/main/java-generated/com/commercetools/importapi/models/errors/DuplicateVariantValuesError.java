@@ -55,4 +55,13 @@ public interface DuplicateVariantValuesError extends ErrorObject {
     default <T> T withDuplicateVariantValuesError(Function<DuplicateVariantValuesError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DuplicateVariantValuesError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DuplicateVariantValuesError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DuplicateVariantValuesError>";
+            }
+        };
+    }
 }

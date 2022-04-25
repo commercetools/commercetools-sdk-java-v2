@@ -49,4 +49,13 @@ public interface UnpublishChange extends Change {
     default <T> T withUnpublishChange(Function<UnpublishChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<UnpublishChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<UnpublishChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<UnpublishChange>";
+            }
+        };
+    }
 }

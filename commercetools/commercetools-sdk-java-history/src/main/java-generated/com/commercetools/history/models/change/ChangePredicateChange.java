@@ -66,4 +66,13 @@ public interface ChangePredicateChange extends Change {
     default <T> T withChangePredicateChange(Function<ChangePredicateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangePredicateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangePredicateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangePredicateChange>";
+            }
+        };
+    }
 }

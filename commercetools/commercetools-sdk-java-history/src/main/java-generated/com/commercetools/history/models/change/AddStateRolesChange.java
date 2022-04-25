@@ -70,4 +70,13 @@ public interface AddStateRolesChange extends Change {
     default <T> T withAddStateRolesChange(Function<AddStateRolesChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddStateRolesChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddStateRolesChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddStateRolesChange>";
+            }
+        };
+    }
 }

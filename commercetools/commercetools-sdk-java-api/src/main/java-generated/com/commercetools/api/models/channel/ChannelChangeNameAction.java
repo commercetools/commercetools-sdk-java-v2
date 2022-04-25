@@ -51,4 +51,13 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
     default <T> T withChannelChangeNameAction(Function<ChannelChangeNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelChangeNameAction>";
+            }
+        };
+    }
 }

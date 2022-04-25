@@ -48,4 +48,13 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     default <T> T withProductDiscountSetValidFromAction(Function<ProductDiscountSetValidFromAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidFromAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidFromAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountSetValidFromAction>";
+            }
+        };
+    }
 }

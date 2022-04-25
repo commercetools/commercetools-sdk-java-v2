@@ -46,4 +46,13 @@ public interface SubscriptionSetKeyAction extends SubscriptionUpdateAction {
     default <T> T withSubscriptionSetKeyAction(Function<SubscriptionSetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SubscriptionSetKeyAction>";
+            }
+        };
+    }
 }

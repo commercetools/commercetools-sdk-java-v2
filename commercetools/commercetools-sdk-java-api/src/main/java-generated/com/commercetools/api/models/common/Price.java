@@ -128,4 +128,13 @@ public interface Price extends com.commercetools.api.models.Customizable<Price> 
     default <T> T withPrice(Function<Price, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Price> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Price>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Price>";
+            }
+        };
+    }
 }

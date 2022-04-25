@@ -138,4 +138,13 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     default <T> T withReviewDraft(Function<ReviewDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewDraft>";
+            }
+        };
+    }
 }

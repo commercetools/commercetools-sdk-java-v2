@@ -67,4 +67,13 @@ public interface ChangeTaxRoundingModeChange extends Change {
     default <T> T withChangeTaxRoundingModeChange(Function<ChangeTaxRoundingModeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTaxRoundingModeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTaxRoundingModeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTaxRoundingModeChange>";
+            }
+        };
+    }
 }

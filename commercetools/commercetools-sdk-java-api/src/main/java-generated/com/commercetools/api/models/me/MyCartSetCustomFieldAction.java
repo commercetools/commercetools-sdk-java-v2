@@ -60,4 +60,13 @@ public interface MyCartSetCustomFieldAction extends MyCartUpdateAction {
     default <T> T withMyCartSetCustomFieldAction(Function<MyCartSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartSetCustomFieldAction>";
+            }
+        };
+    }
 }

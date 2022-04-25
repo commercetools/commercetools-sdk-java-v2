@@ -84,4 +84,13 @@ public interface AddToCategoryChange extends Change {
     default <T> T withAddToCategoryChange(Function<AddToCategoryChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddToCategoryChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddToCategoryChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddToCategoryChange>";
+            }
+        };
+    }
 }

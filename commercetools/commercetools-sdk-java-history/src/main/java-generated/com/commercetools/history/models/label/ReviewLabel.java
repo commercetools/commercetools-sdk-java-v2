@@ -56,4 +56,13 @@ public interface ReviewLabel extends Label {
     default <T> T withReviewLabel(Function<ReviewLabel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewLabel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewLabel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewLabel>";
+            }
+        };
+    }
 }

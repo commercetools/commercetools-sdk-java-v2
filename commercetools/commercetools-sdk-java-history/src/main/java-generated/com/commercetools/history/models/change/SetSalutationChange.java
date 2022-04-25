@@ -66,4 +66,13 @@ public interface SetSalutationChange extends Change {
     default <T> T withSetSalutationChange(Function<SetSalutationChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetSalutationChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetSalutationChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetSalutationChange>";
+            }
+        };
+    }
 }

@@ -70,4 +70,13 @@ public interface RemoveStateRolesChange extends Change {
     default <T> T withRemoveStateRolesChange(Function<RemoveStateRolesChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveStateRolesChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveStateRolesChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveStateRolesChange>";
+            }
+        };
+    }
 }

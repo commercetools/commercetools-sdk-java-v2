@@ -36,4 +36,13 @@ public interface WhitespaceTokenizer extends SuggestTokenizer {
     default <T> T withWhitespaceTokenizer(Function<WhitespaceTokenizer, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<WhitespaceTokenizer> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<WhitespaceTokenizer>() {
+            @Override
+            public String toString() {
+                return "TypeReference<WhitespaceTokenizer>";
+            }
+        };
+    }
 }

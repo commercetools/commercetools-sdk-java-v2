@@ -66,4 +66,13 @@ public interface SetRestockableInDaysChange extends Change {
     default <T> T withSetRestockableInDaysChange(Function<SetRestockableInDaysChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetRestockableInDaysChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetRestockableInDaysChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetRestockableInDaysChange>";
+            }
+        };
+    }
 }

@@ -99,4 +99,13 @@ public interface ChannelPagedQueryResponse extends com.commercetools.api.models.
     default <T> T withChannelPagedQueryResponse(Function<ChannelPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelPagedQueryResponse>";
+            }
+        };
+    }
 }

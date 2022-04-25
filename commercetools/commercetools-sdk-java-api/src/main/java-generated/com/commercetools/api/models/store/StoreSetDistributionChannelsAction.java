@@ -49,4 +49,13 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
     default <T> T withStoreSetDistributionChannelsAction(Function<StoreSetDistributionChannelsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreSetDistributionChannelsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreSetDistributionChannelsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreSetDistributionChannelsAction>";
+            }
+        };
+    }
 }

@@ -65,4 +65,13 @@ public interface GraphQLError {
     default <T> T withGraphQLError(Function<GraphQLError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GraphQLError>";
+            }
+        };
+    }
 }

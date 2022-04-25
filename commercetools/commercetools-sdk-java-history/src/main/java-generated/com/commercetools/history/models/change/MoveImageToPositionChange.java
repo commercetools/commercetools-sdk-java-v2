@@ -83,4 +83,13 @@ public interface MoveImageToPositionChange extends Change {
     default <T> T withMoveImageToPositionChange(Function<MoveImageToPositionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MoveImageToPositionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MoveImageToPositionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MoveImageToPositionChange>";
+            }
+        };
+    }
 }

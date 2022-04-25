@@ -72,4 +72,13 @@ public interface SetLocaleChange extends Change {
     default <T> T withSetLocaleChange(Function<SetLocaleChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetLocaleChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetLocaleChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetLocaleChange>";
+            }
+        };
+    }
 }

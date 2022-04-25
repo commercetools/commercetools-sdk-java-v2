@@ -47,4 +47,13 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
     default <T> T withProductDiscountSetDescriptionAction(Function<ProductDiscountSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountSetDescriptionAction>";
+            }
+        };
+    }
 }

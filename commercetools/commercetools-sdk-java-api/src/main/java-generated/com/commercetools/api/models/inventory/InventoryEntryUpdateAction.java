@@ -71,4 +71,13 @@ public interface InventoryEntryUpdateAction
     default <T> T withInventoryEntryUpdateAction(Function<InventoryEntryUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryUpdateAction>";
+            }
+        };
+    }
 }

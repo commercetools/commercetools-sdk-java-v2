@@ -120,4 +120,13 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     default <T> T withMyLineItemDraft(Function<MyLineItemDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyLineItemDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyLineItemDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyLineItemDraft>";
+            }
+        };
+    }
 }

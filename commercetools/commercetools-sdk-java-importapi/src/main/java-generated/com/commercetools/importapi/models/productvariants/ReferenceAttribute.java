@@ -55,4 +55,13 @@ public interface ReferenceAttribute extends Attribute {
     default <T> T withReferenceAttribute(Function<ReferenceAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReferenceAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReferenceAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReferenceAttribute>";
+            }
+        };
+    }
 }

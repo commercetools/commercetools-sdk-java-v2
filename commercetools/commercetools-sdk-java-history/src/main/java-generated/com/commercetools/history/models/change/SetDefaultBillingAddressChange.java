@@ -70,4 +70,13 @@ public interface SetDefaultBillingAddressChange extends Change {
     default <T> T withSetDefaultBillingAddressChange(Function<SetDefaultBillingAddressChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetDefaultBillingAddressChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetDefaultBillingAddressChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetDefaultBillingAddressChange>";
+            }
+        };
+    }
 }

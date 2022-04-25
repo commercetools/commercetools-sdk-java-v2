@@ -60,4 +60,13 @@ public interface StoreSetCustomFieldAction extends StoreUpdateAction {
     default <T> T withStoreSetCustomFieldAction(Function<StoreSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreSetCustomFieldAction>";
+            }
+        };
+    }
 }

@@ -43,4 +43,13 @@ public interface ResourceUpdateError extends ErrorObject {
     default <T> T withResourceUpdateError(Function<ResourceUpdateError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ResourceUpdateError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ResourceUpdateError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ResourceUpdateError>";
+            }
+        };
+    }
 }

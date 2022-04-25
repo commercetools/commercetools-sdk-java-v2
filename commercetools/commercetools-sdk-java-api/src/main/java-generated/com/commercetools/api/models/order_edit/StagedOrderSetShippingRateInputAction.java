@@ -48,4 +48,13 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
     default <T> T withStagedOrderSetShippingRateInputAction(Function<StagedOrderSetShippingRateInputAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingRateInputAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingRateInputAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetShippingRateInputAction>";
+            }
+        };
+    }
 }

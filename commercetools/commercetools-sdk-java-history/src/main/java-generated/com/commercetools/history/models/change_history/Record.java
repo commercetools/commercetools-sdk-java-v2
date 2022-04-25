@@ -169,4 +169,13 @@ public interface Record {
     default <T> T withRecord(Function<Record, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Record> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Record>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Record>";
+            }
+        };
+    }
 }

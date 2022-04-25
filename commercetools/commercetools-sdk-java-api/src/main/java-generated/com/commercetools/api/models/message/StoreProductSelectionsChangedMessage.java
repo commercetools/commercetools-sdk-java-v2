@@ -80,4 +80,13 @@ public interface StoreProductSelectionsChangedMessage extends Message {
     default <T> T withStoreProductSelectionsChangedMessage(Function<StoreProductSelectionsChangedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreProductSelectionsChangedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreProductSelectionsChangedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreProductSelectionsChangedMessage>";
+            }
+        };
+    }
 }

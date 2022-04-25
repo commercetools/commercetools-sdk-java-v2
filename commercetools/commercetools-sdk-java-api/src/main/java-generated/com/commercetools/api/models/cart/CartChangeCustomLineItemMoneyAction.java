@@ -60,4 +60,13 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
     default <T> T withCartChangeCustomLineItemMoneyAction(Function<CartChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemMoneyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemMoneyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartChangeCustomLineItemMoneyAction>";
+            }
+        };
+    }
 }

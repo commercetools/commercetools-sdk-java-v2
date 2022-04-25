@@ -141,4 +141,13 @@ public interface ErrorObject {
     default <T> T withErrorObject(Function<ErrorObject, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ErrorObject> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ErrorObject>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ErrorObject>";
+            }
+        };
+    }
 }

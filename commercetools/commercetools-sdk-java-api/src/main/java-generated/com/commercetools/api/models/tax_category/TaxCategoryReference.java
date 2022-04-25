@@ -63,4 +63,13 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     default <T> T withTaxCategoryReference(Function<TaxCategoryReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryReference>";
+            }
+        };
+    }
 }

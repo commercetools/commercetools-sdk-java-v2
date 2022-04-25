@@ -38,4 +38,13 @@ public interface QueryTimedOutError extends ErrorObject {
     default <T> T withQueryTimedOutError(Function<QueryTimedOutError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<QueryTimedOutError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<QueryTimedOutError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<QueryTimedOutError>";
+            }
+        };
+    }
 }

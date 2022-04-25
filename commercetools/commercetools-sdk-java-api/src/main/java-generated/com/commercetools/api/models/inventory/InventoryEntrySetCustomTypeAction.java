@@ -61,4 +61,13 @@ public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateA
     default <T> T withInventoryEntrySetCustomTypeAction(Function<InventoryEntrySetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntrySetCustomTypeAction>";
+            }
+        };
+    }
 }

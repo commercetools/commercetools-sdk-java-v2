@@ -47,4 +47,13 @@ public interface DiscountCodeReference extends Reference, com.commercetools.api.
     default <T> T withDiscountCodeReference(Function<DiscountCodeReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeReference>";
+            }
+        };
+    }
 }

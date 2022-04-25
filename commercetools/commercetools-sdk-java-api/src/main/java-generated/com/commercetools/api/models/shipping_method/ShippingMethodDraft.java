@@ -119,4 +119,13 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     default <T> T withShippingMethodDraft(Function<ShippingMethodDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodDraft>";
+            }
+        };
+    }
 }

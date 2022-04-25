@@ -59,4 +59,13 @@ public interface AddTextLineItemChange extends Change {
     default <T> T withAddTextLineItemChange(Function<AddTextLineItemChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddTextLineItemChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddTextLineItemChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddTextLineItemChange>";
+            }
+        };
+    }
 }

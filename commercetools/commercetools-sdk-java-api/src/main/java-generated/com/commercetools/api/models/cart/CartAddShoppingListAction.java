@@ -69,4 +69,13 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     default <T> T withCartAddShoppingListAction(Function<CartAddShoppingListAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartAddShoppingListAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartAddShoppingListAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartAddShoppingListAction>";
+            }
+        };
+    }
 }

@@ -60,4 +60,13 @@ public interface ShoppingListLineItemValue {
     default <T> T withShoppingListLineItemValue(Function<ShoppingListLineItemValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListLineItemValue>";
+            }
+        };
+    }
 }

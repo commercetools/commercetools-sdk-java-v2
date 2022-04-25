@@ -57,4 +57,13 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
             Function<ProductDiscountSetValidFromAndUntilAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidFromAndUntilAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidFromAndUntilAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountSetValidFromAndUntilAction>";
+            }
+        };
+    }
 }

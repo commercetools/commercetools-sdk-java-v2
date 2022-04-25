@@ -54,4 +54,13 @@ public interface ReferenceSetField extends CustomField {
     default <T> T withReferenceSetField(Function<ReferenceSetField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReferenceSetField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReferenceSetField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReferenceSetField>";
+            }
+        };
+    }
 }

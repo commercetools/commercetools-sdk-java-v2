@@ -42,4 +42,13 @@ public interface CustomerSetLocaleAction extends CustomerUpdateAction {
     default <T> T withCustomerSetLocaleAction(Function<CustomerSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetLocaleAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetLocaleAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetLocaleAction>";
+            }
+        };
+    }
 }

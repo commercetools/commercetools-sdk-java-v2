@@ -65,4 +65,13 @@ public interface AddTaxRateChange extends Change {
     default <T> T withAddTaxRateChange(Function<AddTaxRateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddTaxRateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddTaxRateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddTaxRateChange>";
+            }
+        };
+    }
 }

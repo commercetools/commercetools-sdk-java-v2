@@ -63,4 +63,13 @@ public interface OrderEditApplied extends OrderEditResult {
     default <T> T withOrderEditApplied(Function<OrderEditApplied, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditApplied> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditApplied>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditApplied>";
+            }
+        };
+    }
 }

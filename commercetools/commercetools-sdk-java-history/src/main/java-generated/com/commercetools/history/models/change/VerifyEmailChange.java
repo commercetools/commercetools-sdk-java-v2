@@ -49,4 +49,13 @@ public interface VerifyEmailChange extends Change {
     default <T> T withVerifyEmailChange(Function<VerifyEmailChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<VerifyEmailChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<VerifyEmailChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<VerifyEmailChange>";
+            }
+        };
+    }
 }

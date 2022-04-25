@@ -67,4 +67,13 @@ public interface RemoveOrderLineItemChange extends Change {
     default <T> T withRemoveOrderLineItemChange(Function<RemoveOrderLineItemChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveOrderLineItemChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveOrderLineItemChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveOrderLineItemChange>";
+            }
+        };
+    }
 }

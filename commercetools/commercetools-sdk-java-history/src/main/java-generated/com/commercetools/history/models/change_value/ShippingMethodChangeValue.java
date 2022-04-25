@@ -50,4 +50,13 @@ public interface ShippingMethodChangeValue {
     default <T> T withShippingMethodChangeValue(Function<ShippingMethodChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodChangeValue>";
+            }
+        };
+    }
 }

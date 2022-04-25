@@ -85,4 +85,13 @@ public interface FieldType {
     default <T> T withFieldType(Function<FieldType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<FieldType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<FieldType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<FieldType>";
+            }
+        };
+    }
 }

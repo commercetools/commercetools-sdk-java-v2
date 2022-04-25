@@ -66,4 +66,13 @@ public interface ChangeKeyChange extends Change {
     default <T> T withChangeKeyChange(Function<ChangeKeyChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeKeyChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeKeyChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeKeyChange>";
+            }
+        };
+    }
 }

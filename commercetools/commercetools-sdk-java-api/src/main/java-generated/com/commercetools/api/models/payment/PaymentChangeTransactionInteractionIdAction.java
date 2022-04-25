@@ -55,4 +55,13 @@ public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpda
             Function<PaymentChangeTransactionInteractionIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentChangeTransactionInteractionIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentChangeTransactionInteractionIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentChangeTransactionInteractionIdAction>";
+            }
+        };
+    }
 }

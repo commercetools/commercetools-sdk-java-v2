@@ -40,4 +40,13 @@ public interface CustomerKeyReference extends KeyReference {
     default <T> T withCustomerKeyReference(Function<CustomerKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerKeyReference>";
+            }
+        };
+    }
 }

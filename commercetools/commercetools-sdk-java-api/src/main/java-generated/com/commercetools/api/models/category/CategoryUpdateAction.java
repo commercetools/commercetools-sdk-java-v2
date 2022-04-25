@@ -135,4 +135,13 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
     default <T> T withCategoryUpdateAction(Function<CategoryUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryUpdateAction>";
+            }
+        };
+    }
 }

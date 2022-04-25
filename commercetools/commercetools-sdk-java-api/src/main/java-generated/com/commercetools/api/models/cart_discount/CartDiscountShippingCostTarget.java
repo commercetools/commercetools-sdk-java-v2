@@ -36,4 +36,13 @@ public interface CartDiscountShippingCostTarget extends CartDiscountTarget {
     default <T> T withCartDiscountShippingCostTarget(Function<CartDiscountShippingCostTarget, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountShippingCostTarget> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountShippingCostTarget>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountShippingCostTarget>";
+            }
+        };
+    }
 }

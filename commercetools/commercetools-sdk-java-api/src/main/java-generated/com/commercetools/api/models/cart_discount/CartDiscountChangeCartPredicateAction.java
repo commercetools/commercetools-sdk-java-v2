@@ -49,4 +49,13 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
     default <T> T withCartDiscountChangeCartPredicateAction(Function<CartDiscountChangeCartPredicateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeCartPredicateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeCartPredicateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountChangeCartPredicateAction>";
+            }
+        };
+    }
 }

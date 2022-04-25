@@ -42,4 +42,13 @@ public interface PaymentSetExternalIdAction extends PaymentUpdateAction {
     default <T> T withPaymentSetExternalIdAction(Function<PaymentSetExternalIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetExternalIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetExternalIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentSetExternalIdAction>";
+            }
+        };
+    }
 }

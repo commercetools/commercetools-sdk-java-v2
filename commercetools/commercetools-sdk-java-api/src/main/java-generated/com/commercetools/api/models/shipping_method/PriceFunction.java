@@ -53,4 +53,13 @@ public interface PriceFunction {
     default <T> T withPriceFunction(Function<PriceFunction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceFunction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceFunction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PriceFunction>";
+            }
+        };
+    }
 }

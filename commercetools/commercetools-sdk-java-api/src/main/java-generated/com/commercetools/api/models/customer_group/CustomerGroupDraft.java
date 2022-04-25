@@ -70,4 +70,13 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     default <T> T withCustomerGroupDraft(Function<CustomerGroupDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupDraft>";
+            }
+        };
+    }
 }

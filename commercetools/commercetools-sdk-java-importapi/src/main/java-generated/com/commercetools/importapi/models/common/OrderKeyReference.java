@@ -40,4 +40,13 @@ public interface OrderKeyReference extends KeyReference {
     default <T> T withOrderKeyReference(Function<OrderKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderKeyReference>";
+            }
+        };
+    }
 }

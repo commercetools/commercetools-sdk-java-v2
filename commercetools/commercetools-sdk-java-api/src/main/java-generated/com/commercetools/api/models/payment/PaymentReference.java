@@ -47,4 +47,13 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     default <T> T withPaymentReference(Function<PaymentReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentReference>";
+            }
+        };
+    }
 }

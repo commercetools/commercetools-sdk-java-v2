@@ -52,4 +52,13 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
             Function<ProjectChangeProductSearchIndexingEnabledAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeProductSearchIndexingEnabledAction>";
+            }
+        };
+    }
 }

@@ -74,4 +74,13 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     default <T> T withOrderCustomerSetMessagePayload(Function<OrderCustomerSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderCustomerSetMessagePayload>";
+            }
+        };
+    }
 }

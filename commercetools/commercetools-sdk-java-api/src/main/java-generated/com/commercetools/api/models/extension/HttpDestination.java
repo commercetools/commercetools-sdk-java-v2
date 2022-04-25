@@ -62,4 +62,13 @@ public interface HttpDestination extends ExtensionDestination {
     default <T> T withHttpDestination(Function<HttpDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<HttpDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<HttpDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<HttpDestination>";
+            }
+        };
+    }
 }

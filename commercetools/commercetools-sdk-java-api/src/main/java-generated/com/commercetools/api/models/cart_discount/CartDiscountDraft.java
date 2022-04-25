@@ -159,4 +159,13 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     default <T> T withCartDiscountDraft(Function<CartDiscountDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountDraft>";
+            }
+        };
+    }
 }

@@ -60,4 +60,13 @@ public interface DiscountCodeSetCustomFieldAction extends DiscountCodeUpdateActi
     default <T> T withDiscountCodeSetCustomFieldAction(Function<DiscountCodeSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeSetCustomFieldAction>";
+            }
+        };
+    }
 }

@@ -74,4 +74,13 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
     default <T> T withProductSetAssetKeyAction(Function<ProductSetAssetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetAssetKeyAction>";
+            }
+        };
+    }
 }

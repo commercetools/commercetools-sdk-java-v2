@@ -60,4 +60,13 @@ public interface ReviewSetCustomFieldAction extends ReviewUpdateAction {
     default <T> T withReviewSetCustomFieldAction(Function<ReviewSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewSetCustomFieldAction>";
+            }
+        };
+    }
 }

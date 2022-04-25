@@ -50,4 +50,13 @@ public interface PaymentSetAmountRefundedAction extends PaymentUpdateAction {
     default <T> T withPaymentSetAmountRefundedAction(Function<PaymentSetAmountRefundedAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetAmountRefundedAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetAmountRefundedAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentSetAmountRefundedAction>";
+            }
+        };
+    }
 }

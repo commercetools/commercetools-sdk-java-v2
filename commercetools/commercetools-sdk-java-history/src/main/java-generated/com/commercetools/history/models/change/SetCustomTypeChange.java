@@ -70,4 +70,13 @@ public interface SetCustomTypeChange extends Change {
     default <T> T withSetCustomTypeChange(Function<SetCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomTypeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomTypeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomTypeChange>";
+            }
+        };
+    }
 }

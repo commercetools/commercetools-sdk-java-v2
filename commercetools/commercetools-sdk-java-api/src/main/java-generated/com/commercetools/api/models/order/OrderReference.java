@@ -47,4 +47,13 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     default <T> T withOrderReference(Function<OrderReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderReference>";
+            }
+        };
+    }
 }

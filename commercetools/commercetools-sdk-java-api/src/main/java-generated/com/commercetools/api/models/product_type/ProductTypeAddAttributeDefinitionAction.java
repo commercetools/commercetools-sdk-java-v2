@@ -49,4 +49,13 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
             Function<ProductTypeAddAttributeDefinitionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddAttributeDefinitionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddAttributeDefinitionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeAddAttributeDefinitionAction>";
+            }
+        };
+    }
 }

@@ -161,4 +161,13 @@ public interface CategoryImport extends ImportResource {
     default <T> T withCategoryImport(Function<CategoryImport, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryImport>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryImport>";
+            }
+        };
+    }
 }

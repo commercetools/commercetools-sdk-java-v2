@@ -67,4 +67,13 @@ public interface SyncInfo {
     default <T> T withSyncInfo(Function<SyncInfo, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SyncInfo> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SyncInfo>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SyncInfo>";
+            }
+        };
+    }
 }

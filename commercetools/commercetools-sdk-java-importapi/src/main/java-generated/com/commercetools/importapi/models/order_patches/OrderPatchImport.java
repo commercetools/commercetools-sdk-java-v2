@@ -62,4 +62,13 @@ public interface OrderPatchImport {
     default <T> T withOrderPatchImport(Function<OrderPatchImport, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderPatchImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderPatchImport>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderPatchImport>";
+            }
+        };
+    }
 }

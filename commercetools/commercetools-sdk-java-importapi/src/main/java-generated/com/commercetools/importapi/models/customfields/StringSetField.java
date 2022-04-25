@@ -51,4 +51,13 @@ public interface StringSetField extends CustomField {
     default <T> T withStringSetField(Function<StringSetField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StringSetField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StringSetField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StringSetField>";
+            }
+        };
+    }
 }

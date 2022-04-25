@@ -51,4 +51,13 @@ public interface AttributeNestedType extends AttributeType {
     default <T> T withAttributeNestedType(Function<AttributeNestedType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeNestedType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeNestedType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeNestedType>";
+            }
+        };
+    }
 }

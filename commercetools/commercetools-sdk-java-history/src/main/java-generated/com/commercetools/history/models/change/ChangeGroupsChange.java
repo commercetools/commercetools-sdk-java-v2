@@ -72,4 +72,13 @@ public interface ChangeGroupsChange extends Change {
     default <T> T withChangeGroupsChange(Function<ChangeGroupsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeGroupsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeGroupsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeGroupsChange>";
+            }
+        };
+    }
 }

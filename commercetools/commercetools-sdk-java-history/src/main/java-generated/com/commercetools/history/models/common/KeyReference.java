@@ -50,4 +50,13 @@ public interface KeyReference {
     default <T> T withKeyReference(Function<KeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<KeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<KeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<KeyReference>";
+            }
+        };
+    }
 }

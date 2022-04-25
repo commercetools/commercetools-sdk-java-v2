@@ -63,4 +63,13 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
     default <T> T withZoneReference(Function<ZoneReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneReference>";
+            }
+        };
+    }
 }

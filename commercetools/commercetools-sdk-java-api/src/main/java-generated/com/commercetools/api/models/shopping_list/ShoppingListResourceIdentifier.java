@@ -40,4 +40,13 @@ public interface ShoppingListResourceIdentifier
     default <T> T withShoppingListResourceIdentifier(Function<ShoppingListResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListResourceIdentifier>";
+            }
+        };
+    }
 }

@@ -57,4 +57,13 @@ public interface PriceChangedError extends ErrorObject {
     default <T> T withPriceChangedError(Function<PriceChangedError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceChangedError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceChangedError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PriceChangedError>";
+            }
+        };
+    }
 }

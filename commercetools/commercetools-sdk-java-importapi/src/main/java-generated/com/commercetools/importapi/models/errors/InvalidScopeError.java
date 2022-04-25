@@ -40,4 +40,13 @@ public interface InvalidScopeError extends ErrorObject {
     default <T> T withInvalidScopeError(Function<InvalidScopeError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidScopeError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidScopeError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidScopeError>";
+            }
+        };
+    }
 }

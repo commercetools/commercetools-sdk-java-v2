@@ -43,4 +43,13 @@ public interface ChangeSubscription {
     default <T> T withChangeSubscription(Function<ChangeSubscription, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeSubscription> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeSubscription>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeSubscription>";
+            }
+        };
+    }
 }

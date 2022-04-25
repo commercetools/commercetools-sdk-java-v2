@@ -152,4 +152,13 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
     default <T> T withDiscountCodeDraft(Function<DiscountCodeDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeDraft>";
+            }
+        };
+    }
 }

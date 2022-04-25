@@ -55,4 +55,13 @@ public interface MoneySetAttribute extends Attribute {
     default <T> T withMoneySetAttribute(Function<MoneySetAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MoneySetAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MoneySetAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MoneySetAttribute>";
+            }
+        };
+    }
 }

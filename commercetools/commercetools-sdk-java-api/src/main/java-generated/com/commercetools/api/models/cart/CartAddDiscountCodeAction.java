@@ -45,4 +45,13 @@ public interface CartAddDiscountCodeAction extends CartUpdateAction {
     default <T> T withCartAddDiscountCodeAction(Function<CartAddDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartAddDiscountCodeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartAddDiscountCodeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartAddDiscountCodeAction>";
+            }
+        };
+    }
 }

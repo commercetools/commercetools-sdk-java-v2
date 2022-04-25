@@ -62,4 +62,13 @@ public interface ProductSelectionSetCustomTypeAction extends ProductSelectionUpd
     default <T> T withProductSelectionSetCustomTypeAction(Function<ProductSelectionSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionSetCustomTypeAction>";
+            }
+        };
+    }
 }

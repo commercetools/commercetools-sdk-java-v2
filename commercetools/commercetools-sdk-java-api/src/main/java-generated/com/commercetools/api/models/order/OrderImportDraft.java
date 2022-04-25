@@ -277,4 +277,13 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     default <T> T withOrderImportDraft(Function<OrderImportDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderImportDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderImportDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderImportDraft>";
+            }
+        };
+    }
 }

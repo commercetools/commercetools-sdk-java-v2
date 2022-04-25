@@ -65,4 +65,13 @@ public interface ParcelRemovedFromDeliveryMessage extends OrderMessage {
     default <T> T withParcelRemovedFromDeliveryMessage(Function<ParcelRemovedFromDeliveryMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelRemovedFromDeliveryMessage>";
+            }
+        };
+    }
 }

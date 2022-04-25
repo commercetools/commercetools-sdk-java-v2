@@ -94,4 +94,13 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     default <T> T withMyTransactionDraft(Function<MyTransactionDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyTransactionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyTransactionDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyTransactionDraft>";
+            }
+        };
+    }
 }

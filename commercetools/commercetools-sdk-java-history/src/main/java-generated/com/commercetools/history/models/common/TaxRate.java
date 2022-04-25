@@ -105,4 +105,13 @@ public interface TaxRate {
     default <T> T withTaxRate(Function<TaxRate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxRate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxRate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxRate>";
+            }
+        };
+    }
 }

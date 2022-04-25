@@ -93,4 +93,13 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
             Function<ChangeTargetMultiBuyCustomLineItemsChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue>";
+            }
+        };
+    }
 }

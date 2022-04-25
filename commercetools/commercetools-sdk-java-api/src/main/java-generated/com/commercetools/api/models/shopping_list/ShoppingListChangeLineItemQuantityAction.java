@@ -54,4 +54,13 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
             Function<ShoppingListChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeLineItemQuantityAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeLineItemQuantityAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListChangeLineItemQuantityAction>";
+            }
+        };
+    }
 }

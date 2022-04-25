@@ -72,4 +72,13 @@ public interface AddEnumValueChange extends Change {
     default <T> T withAddEnumValueChange(Function<AddEnumValueChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddEnumValueChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddEnumValueChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddEnumValueChange>";
+            }
+        };
+    }
 }

@@ -76,4 +76,13 @@ public interface ProductDiscountPagedQueryResponse
     default <T> T withProductDiscountPagedQueryResponse(Function<ProductDiscountPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountPagedQueryResponse>";
+            }
+        };
+    }
 }

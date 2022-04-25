@@ -86,4 +86,13 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     default <T> T withSetOrderLineItemCustomTypeChange(Function<SetOrderLineItemCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetOrderLineItemCustomTypeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetOrderLineItemCustomTypeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetOrderLineItemCustomTypeChange>";
+            }
+        };
+    }
 }

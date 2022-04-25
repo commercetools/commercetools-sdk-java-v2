@@ -101,4 +101,13 @@ public interface CartDiscountUpdateAction
     default <T> T withCartDiscountUpdateAction(Function<CartDiscountUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountUpdateAction>";
+            }
+        };
+    }
 }

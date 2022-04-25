@@ -75,4 +75,13 @@ public interface CategoryPagedQueryResponse extends com.commercetools.api.models
     default <T> T withCategoryPagedQueryResponse(Function<CategoryPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryPagedQueryResponse>";
+            }
+        };
+    }
 }

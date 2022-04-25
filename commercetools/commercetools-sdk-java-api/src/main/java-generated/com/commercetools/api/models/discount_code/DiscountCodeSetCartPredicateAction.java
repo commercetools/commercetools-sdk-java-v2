@@ -46,4 +46,13 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
     default <T> T withDiscountCodeSetCartPredicateAction(Function<DiscountCodeSetCartPredicateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetCartPredicateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeSetCartPredicateAction>";
+            }
+        };
+    }
 }

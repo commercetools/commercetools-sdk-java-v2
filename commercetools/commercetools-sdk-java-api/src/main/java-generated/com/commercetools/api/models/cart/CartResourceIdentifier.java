@@ -39,4 +39,13 @@ public interface CartResourceIdentifier extends ResourceIdentifier, com.commerce
     default <T> T withCartResourceIdentifier(Function<CartResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartResourceIdentifier>";
+            }
+        };
+    }
 }

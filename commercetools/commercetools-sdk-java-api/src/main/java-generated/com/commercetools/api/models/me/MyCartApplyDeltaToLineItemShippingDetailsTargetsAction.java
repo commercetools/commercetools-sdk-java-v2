@@ -61,4 +61,13 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
             Function<MyCartApplyDeltaToLineItemShippingDetailsTargetsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartApplyDeltaToLineItemShippingDetailsTargetsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartApplyDeltaToLineItemShippingDetailsTargetsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartApplyDeltaToLineItemShippingDetailsTargetsAction>";
+            }
+        };
+    }
 }

@@ -60,4 +60,13 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
     default <T> T withZoneResourceIdentifier(Function<ZoneResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneResourceIdentifier>";
+            }
+        };
+    }
 }

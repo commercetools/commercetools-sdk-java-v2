@@ -58,4 +58,13 @@ public interface ReplicaCartDraft {
     default <T> T withReplicaCartDraft(Function<ReplicaCartDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReplicaCartDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReplicaCartDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReplicaCartDraft>";
+            }
+        };
+    }
 }

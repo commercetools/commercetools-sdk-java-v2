@@ -69,4 +69,13 @@ public interface AddParcelToDeliveryChange extends Change {
     default <T> T withAddParcelToDeliveryChange(Function<AddParcelToDeliveryChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddParcelToDeliveryChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddParcelToDeliveryChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddParcelToDeliveryChange>";
+            }
+        };
+    }
 }

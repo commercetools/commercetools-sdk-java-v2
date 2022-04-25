@@ -57,4 +57,13 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
             Function<StagedOrderSetLineItemTotalPriceAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemTotalPriceAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemTotalPriceAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetLineItemTotalPriceAction>";
+            }
+        };
+    }
 }

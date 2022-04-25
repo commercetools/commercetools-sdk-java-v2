@@ -62,4 +62,13 @@ public interface StateUpdate
     default <T> T withStateUpdate(Function<StateUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateUpdate>";
+            }
+        };
+    }
 }

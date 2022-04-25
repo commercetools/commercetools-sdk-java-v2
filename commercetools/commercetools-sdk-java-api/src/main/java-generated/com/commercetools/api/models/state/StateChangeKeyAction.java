@@ -49,4 +49,13 @@ public interface StateChangeKeyAction extends StateUpdateAction {
     default <T> T withStateChangeKeyAction(Function<StateChangeKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateChangeKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateChangeKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateChangeKeyAction>";
+            }
+        };
+    }
 }

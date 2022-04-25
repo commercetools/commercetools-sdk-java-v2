@@ -49,4 +49,13 @@ public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
     default <T> T withCartUpdateItemShippingAddressAction(Function<CartUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartUpdateItemShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartUpdateItemShippingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartUpdateItemShippingAddressAction>";
+            }
+        };
+    }
 }

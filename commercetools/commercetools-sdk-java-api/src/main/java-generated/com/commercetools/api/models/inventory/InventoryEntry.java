@@ -172,4 +172,13 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     default <T> T withInventoryEntry(Function<InventoryEntry, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntry> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntry>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntry>";
+            }
+        };
+    }
 }

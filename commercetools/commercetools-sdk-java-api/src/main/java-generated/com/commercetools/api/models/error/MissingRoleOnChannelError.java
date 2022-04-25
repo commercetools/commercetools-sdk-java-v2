@@ -63,4 +63,13 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     default <T> T withMissingRoleOnChannelError(Function<MissingRoleOnChannelError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingRoleOnChannelError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingRoleOnChannelError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingRoleOnChannelError>";
+            }
+        };
+    }
 }

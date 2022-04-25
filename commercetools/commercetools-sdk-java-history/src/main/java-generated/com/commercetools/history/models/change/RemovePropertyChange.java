@@ -69,4 +69,13 @@ public interface RemovePropertyChange extends Change {
     default <T> T withRemovePropertyChange(Function<RemovePropertyChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemovePropertyChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemovePropertyChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemovePropertyChange>";
+            }
+        };
+    }
 }

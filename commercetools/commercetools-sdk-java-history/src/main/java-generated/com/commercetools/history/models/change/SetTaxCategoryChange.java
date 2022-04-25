@@ -70,4 +70,13 @@ public interface SetTaxCategoryChange extends Change {
     default <T> T withSetTaxCategoryChange(Function<SetTaxCategoryChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetTaxCategoryChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetTaxCategoryChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetTaxCategoryChange>";
+            }
+        };
+    }
 }

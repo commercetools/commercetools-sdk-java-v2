@@ -101,4 +101,13 @@ public interface ChangeLocalizedEnumValueLabelChange extends Change {
     default <T> T withChangeLocalizedEnumValueLabelChange(Function<ChangeLocalizedEnumValueLabelChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedEnumValueLabelChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedEnumValueLabelChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeLocalizedEnumValueLabelChange>";
+            }
+        };
+    }
 }

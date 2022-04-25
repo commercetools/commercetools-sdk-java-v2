@@ -70,4 +70,13 @@ public interface SetAddressChange extends Change {
     default <T> T withSetAddressChange(Function<SetAddressChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAddressChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAddressChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAddressChange>";
+            }
+        };
+    }
 }

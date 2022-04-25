@@ -60,4 +60,13 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
     default <T> T withStateResourceIdentifier(Function<StateResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateResourceIdentifier>";
+            }
+        };
+    }
 }

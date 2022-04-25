@@ -143,4 +143,13 @@ public interface MissingPricesSearchRequest {
     default <T> T withMissingPricesSearchRequest(Function<MissingPricesSearchRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingPricesSearchRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingPricesSearchRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingPricesSearchRequest>";
+            }
+        };
+    }
 }

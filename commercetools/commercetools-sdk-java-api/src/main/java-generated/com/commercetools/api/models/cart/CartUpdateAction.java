@@ -330,4 +330,13 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     default <T> T withCartUpdateAction(Function<CartUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartUpdateAction>";
+            }
+        };
+    }
 }

@@ -60,4 +60,13 @@ public interface ShoppingListSetCustomFieldAction extends ShoppingListUpdateActi
     default <T> T withShoppingListSetCustomFieldAction(Function<ShoppingListSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListSetCustomFieldAction>";
+            }
+        };
+    }
 }

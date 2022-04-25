@@ -66,4 +66,13 @@ public interface SetTextChange extends Change {
     default <T> T withSetTextChange(Function<SetTextChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetTextChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetTextChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetTextChange>";
+            }
+        };
+    }
 }

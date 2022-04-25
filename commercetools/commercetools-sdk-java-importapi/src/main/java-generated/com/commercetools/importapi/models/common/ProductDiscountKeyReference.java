@@ -40,4 +40,13 @@ public interface ProductDiscountKeyReference extends KeyReference {
     default <T> T withProductDiscountKeyReference(Function<ProductDiscountKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountKeyReference>";
+            }
+        };
+    }
 }

@@ -94,4 +94,13 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     default <T> T withLineItemStateTransitionMessage(Function<LineItemStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LineItemStateTransitionMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LineItemStateTransitionMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LineItemStateTransitionMessage>";
+            }
+        };
+    }
 }

@@ -96,4 +96,13 @@ public interface ImportContainerPagedResponse {
     default <T> T withImportContainerPagedResponse(Function<ImportContainerPagedResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportContainerPagedResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportContainerPagedResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportContainerPagedResponse>";
+            }
+        };
+    }
 }

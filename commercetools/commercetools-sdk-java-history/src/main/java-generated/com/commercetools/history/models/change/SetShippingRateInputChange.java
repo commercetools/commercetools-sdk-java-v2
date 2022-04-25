@@ -76,4 +76,13 @@ public interface SetShippingRateInputChange extends Change {
     default <T> T withSetShippingRateInputChange(Function<SetShippingRateInputChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetShippingRateInputChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetShippingRateInputChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetShippingRateInputChange>";
+            }
+        };
+    }
 }

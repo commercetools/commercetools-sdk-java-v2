@@ -30,4 +30,13 @@ public interface ImageSearchConfigUpdateAction {
     default <T> T withImageSearchConfigUpdateAction(Function<ImageSearchConfigUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImageSearchConfigUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImageSearchConfigUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImageSearchConfigUpdateAction>";
+            }
+        };
+    }
 }

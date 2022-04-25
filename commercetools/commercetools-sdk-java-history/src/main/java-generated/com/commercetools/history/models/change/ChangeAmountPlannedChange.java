@@ -67,4 +67,13 @@ public interface ChangeAmountPlannedChange extends Change {
     default <T> T withChangeAmountPlannedChange(Function<ChangeAmountPlannedChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeAmountPlannedChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeAmountPlannedChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeAmountPlannedChange>";
+            }
+        };
+    }
 }

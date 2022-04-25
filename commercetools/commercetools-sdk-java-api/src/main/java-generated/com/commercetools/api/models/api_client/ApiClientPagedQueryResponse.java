@@ -100,4 +100,13 @@ public interface ApiClientPagedQueryResponse
     default <T> T withApiClientPagedQueryResponse(Function<ApiClientPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ApiClientPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ApiClientPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ApiClientPagedQueryResponse>";
+            }
+        };
+    }
 }

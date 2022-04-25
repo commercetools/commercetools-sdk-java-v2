@@ -67,4 +67,13 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     default <T> T withParcelAddedToDeliveryMessage(Function<ParcelAddedToDeliveryMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelAddedToDeliveryMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelAddedToDeliveryMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelAddedToDeliveryMessage>";
+            }
+        };
+    }
 }

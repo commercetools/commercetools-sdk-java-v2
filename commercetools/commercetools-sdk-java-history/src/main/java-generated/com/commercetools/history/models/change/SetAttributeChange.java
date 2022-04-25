@@ -77,4 +77,13 @@ public interface SetAttributeChange extends Change {
     default <T> T withSetAttributeChange(Function<SetAttributeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAttributeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAttributeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAttributeChange>";
+            }
+        };
+    }
 }

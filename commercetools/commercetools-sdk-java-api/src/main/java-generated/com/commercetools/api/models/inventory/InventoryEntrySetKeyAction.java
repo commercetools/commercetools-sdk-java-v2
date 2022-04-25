@@ -46,4 +46,13 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
     default <T> T withInventoryEntrySetKeyAction(Function<InventoryEntrySetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntrySetKeyAction>";
+            }
+        };
+    }
 }

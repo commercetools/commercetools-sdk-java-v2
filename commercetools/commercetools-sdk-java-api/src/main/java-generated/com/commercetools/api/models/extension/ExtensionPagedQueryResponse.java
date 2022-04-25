@@ -99,4 +99,13 @@ public interface ExtensionPagedQueryResponse
     default <T> T withExtensionPagedQueryResponse(Function<ExtensionPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionPagedQueryResponse>";
+            }
+        };
+    }
 }

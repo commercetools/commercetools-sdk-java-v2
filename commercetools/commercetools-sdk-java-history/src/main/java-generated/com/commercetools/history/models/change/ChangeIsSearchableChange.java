@@ -76,4 +76,13 @@ public interface ChangeIsSearchableChange extends Change {
     default <T> T withChangeIsSearchableChange(Function<ChangeIsSearchableChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeIsSearchableChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeIsSearchableChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeIsSearchableChange>";
+            }
+        };
+    }
 }

@@ -60,4 +60,13 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     default <T> T withProductAddToCategoryAction(Function<ProductAddToCategoryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductAddToCategoryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductAddToCategoryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductAddToCategoryAction>";
+            }
+        };
+    }
 }

@@ -470,4 +470,13 @@ public interface MessagePayload {
     default <T> T withMessagePayload(Function<MessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MessagePayload>";
+            }
+        };
+    }
 }

@@ -71,4 +71,13 @@ public interface ReturnItemDraft {
     default <T> T withReturnItemDraft(Function<ReturnItemDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReturnItemDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReturnItemDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReturnItemDraft>";
+            }
+        };
+    }
 }

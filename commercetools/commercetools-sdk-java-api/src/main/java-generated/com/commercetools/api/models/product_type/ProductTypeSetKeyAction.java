@@ -46,4 +46,13 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
     default <T> T withProductTypeSetKeyAction(Function<ProductTypeSetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeSetKeyAction>";
+            }
+        };
+    }
 }

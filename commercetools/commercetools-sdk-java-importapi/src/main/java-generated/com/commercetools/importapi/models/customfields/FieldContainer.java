@@ -51,4 +51,13 @@ public interface FieldContainer {
     default <T> T withFieldContainer(Function<FieldContainer, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<FieldContainer> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<FieldContainer>() {
+            @Override
+            public String toString() {
+                return "TypeReference<FieldContainer>";
+            }
+        };
+    }
 }

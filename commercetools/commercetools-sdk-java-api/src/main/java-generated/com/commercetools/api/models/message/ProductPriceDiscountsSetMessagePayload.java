@@ -52,4 +52,13 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
             Function<ProductPriceDiscountsSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductPriceDiscountsSetMessagePayload>";
+            }
+        };
+    }
 }

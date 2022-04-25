@@ -69,4 +69,13 @@ public interface AddPropertyChange extends Change {
     default <T> T withAddPropertyChange(Function<AddPropertyChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddPropertyChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddPropertyChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddPropertyChange>";
+            }
+        };
+    }
 }

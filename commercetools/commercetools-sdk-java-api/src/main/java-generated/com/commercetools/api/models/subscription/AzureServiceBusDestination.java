@@ -45,4 +45,13 @@ public interface AzureServiceBusDestination extends Destination {
     default <T> T withAzureServiceBusDestination(Function<AzureServiceBusDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AzureServiceBusDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AzureServiceBusDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AzureServiceBusDestination>";
+            }
+        };
+    }
 }

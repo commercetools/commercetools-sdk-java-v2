@@ -57,4 +57,13 @@ public interface ExternalTaxAmountDraft {
     default <T> T withExternalTaxAmountDraft(Function<ExternalTaxAmountDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExternalTaxAmountDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExternalTaxAmountDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExternalTaxAmountDraft>";
+            }
+        };
+    }
 }

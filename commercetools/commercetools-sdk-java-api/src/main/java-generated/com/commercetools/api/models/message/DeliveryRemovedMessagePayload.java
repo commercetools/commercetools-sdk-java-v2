@@ -48,4 +48,13 @@ public interface DeliveryRemovedMessagePayload extends OrderMessagePayload {
     default <T> T withDeliveryRemovedMessagePayload(Function<DeliveryRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryRemovedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryRemovedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DeliveryRemovedMessagePayload>";
+            }
+        };
+    }
 }

@@ -72,4 +72,13 @@ public interface PaymentMethodInfo {
     default <T> T withPaymentMethodInfo(Function<PaymentMethodInfo, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfo> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentMethodInfo>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentMethodInfo>";
+            }
+        };
+    }
 }

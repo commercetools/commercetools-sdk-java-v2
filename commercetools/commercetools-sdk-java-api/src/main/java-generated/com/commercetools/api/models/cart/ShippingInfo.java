@@ -140,4 +140,13 @@ public interface ShippingInfo {
     default <T> T withShippingInfo(Function<ShippingInfo, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingInfo> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingInfo>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingInfo>";
+            }
+        };
+    }
 }

@@ -59,4 +59,13 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
     default <T> T withMissingTaxRateForCountryError(Function<MissingTaxRateForCountryError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingTaxRateForCountryError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingTaxRateForCountryError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingTaxRateForCountryError>";
+            }
+        };
+    }
 }

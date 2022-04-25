@@ -56,4 +56,13 @@ public interface CustomerResetPassword {
     default <T> T withCustomerResetPassword(Function<CustomerResetPassword, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerResetPassword> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerResetPassword>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerResetPassword>";
+            }
+        };
+    }
 }

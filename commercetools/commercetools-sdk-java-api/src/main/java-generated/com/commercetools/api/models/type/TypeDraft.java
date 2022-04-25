@@ -95,4 +95,13 @@ public interface TypeDraft {
     default <T> T withTypeDraft(Function<TypeDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeDraft>";
+            }
+        };
+    }
 }

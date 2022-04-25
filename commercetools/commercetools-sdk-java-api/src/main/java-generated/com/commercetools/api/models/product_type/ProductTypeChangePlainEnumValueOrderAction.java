@@ -60,4 +60,13 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
             Function<ProductTypeChangePlainEnumValueOrderAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangePlainEnumValueOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangePlainEnumValueOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeChangePlainEnumValueOrderAction>";
+            }
+        };
+    }
 }

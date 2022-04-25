@@ -60,4 +60,13 @@ public interface ProductPriceDiscountsSetMessage extends Message {
     default <T> T withProductPriceDiscountsSetMessage(Function<ProductPriceDiscountsSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductPriceDiscountsSetMessage>";
+            }
+        };
+    }
 }

@@ -47,4 +47,13 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
     default <T> T withStagedOrderChangeOrderStateAction(Function<StagedOrderChangeOrderStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeOrderStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeOrderStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderChangeOrderStateAction>";
+            }
+        };
+    }
 }

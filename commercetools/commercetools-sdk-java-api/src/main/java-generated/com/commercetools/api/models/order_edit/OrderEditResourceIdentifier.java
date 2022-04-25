@@ -40,4 +40,13 @@ public interface OrderEditResourceIdentifier
     default <T> T withOrderEditResourceIdentifier(Function<OrderEditResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditResourceIdentifier>";
+            }
+        };
+    }
 }

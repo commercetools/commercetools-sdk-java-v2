@@ -45,4 +45,13 @@ public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAct
     default <T> T withInventoryEntryAddQuantityAction(Function<InventoryEntryAddQuantityAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryAddQuantityAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryAddQuantityAction>";
+            }
+        };
+    }
 }

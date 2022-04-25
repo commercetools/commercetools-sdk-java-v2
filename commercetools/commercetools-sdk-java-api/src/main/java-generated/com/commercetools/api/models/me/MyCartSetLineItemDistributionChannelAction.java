@@ -60,4 +60,13 @@ public interface MyCartSetLineItemDistributionChannelAction extends MyCartUpdate
             Function<MyCartSetLineItemDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemDistributionChannelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemDistributionChannelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartSetLineItemDistributionChannelAction>";
+            }
+        };
+    }
 }

@@ -50,4 +50,13 @@ public interface ZoneAddLocationAction extends ZoneUpdateAction {
     default <T> T withZoneAddLocationAction(Function<ZoneAddLocationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneAddLocationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneAddLocationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneAddLocationAction>";
+            }
+        };
+    }
 }

@@ -72,4 +72,13 @@ public interface SetCountryChange extends Change {
     default <T> T withSetCountryChange(Function<SetCountryChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCountryChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCountryChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCountryChange>";
+            }
+        };
+    }
 }

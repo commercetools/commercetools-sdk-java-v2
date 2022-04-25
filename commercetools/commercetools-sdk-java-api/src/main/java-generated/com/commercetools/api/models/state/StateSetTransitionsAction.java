@@ -57,4 +57,13 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
     default <T> T withStateSetTransitionsAction(Function<StateSetTransitionsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateSetTransitionsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateSetTransitionsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateSetTransitionsAction>";
+            }
+        };
+    }
 }

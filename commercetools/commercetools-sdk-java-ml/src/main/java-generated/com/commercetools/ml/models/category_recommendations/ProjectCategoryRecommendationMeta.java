@@ -69,4 +69,13 @@ public interface ProjectCategoryRecommendationMeta {
     default <T> T withProjectCategoryRecommendationMeta(Function<ProjectCategoryRecommendationMeta, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendationMeta> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendationMeta>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectCategoryRecommendationMeta>";
+            }
+        };
+    }
 }

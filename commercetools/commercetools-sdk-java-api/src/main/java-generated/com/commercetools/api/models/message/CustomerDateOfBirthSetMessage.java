@@ -53,4 +53,13 @@ public interface CustomerDateOfBirthSetMessage extends Message {
     default <T> T withCustomerDateOfBirthSetMessage(Function<CustomerDateOfBirthSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerDateOfBirthSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerDateOfBirthSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerDateOfBirthSetMessage>";
+            }
+        };
+    }
 }

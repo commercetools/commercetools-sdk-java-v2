@@ -55,4 +55,13 @@ public interface OrderSetLineItemShippingDetailsAction extends OrderUpdateAction
     default <T> T withOrderSetLineItemShippingDetailsAction(Function<OrderSetLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetLineItemShippingDetailsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetLineItemShippingDetailsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetLineItemShippingDetailsAction>";
+            }
+        };
+    }
 }

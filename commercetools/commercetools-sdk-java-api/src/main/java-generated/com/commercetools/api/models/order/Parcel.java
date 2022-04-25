@@ -90,4 +90,13 @@ public interface Parcel extends com.commercetools.api.models.Customizable<Parcel
     default <T> T withParcel(Function<Parcel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Parcel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Parcel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Parcel>";
+            }
+        };
+    }
 }

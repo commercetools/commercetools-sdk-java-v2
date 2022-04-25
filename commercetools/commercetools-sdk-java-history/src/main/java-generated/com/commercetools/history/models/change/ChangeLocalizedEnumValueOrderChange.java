@@ -97,4 +97,13 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     default <T> T withChangeLocalizedEnumValueOrderChange(Function<ChangeLocalizedEnumValueOrderChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedEnumValueOrderChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeLocalizedEnumValueOrderChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeLocalizedEnumValueOrderChange>";
+            }
+        };
+    }
 }

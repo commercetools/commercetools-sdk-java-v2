@@ -90,4 +90,13 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     default <T> T withSetCustomLineItemCustomFieldChange(Function<SetCustomLineItemCustomFieldChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemCustomFieldChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemCustomFieldChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomLineItemCustomFieldChange>";
+            }
+        };
+    }
 }

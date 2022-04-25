@@ -36,4 +36,13 @@ public interface AttributeMoneyType extends AttributeType {
     default <T> T withAttributeMoneyType(Function<AttributeMoneyType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeMoneyType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeMoneyType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeMoneyType>";
+            }
+        };
+    }
 }

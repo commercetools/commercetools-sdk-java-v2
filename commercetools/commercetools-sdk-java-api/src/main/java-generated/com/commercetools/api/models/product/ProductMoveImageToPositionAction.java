@@ -73,4 +73,13 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     default <T> T withProductMoveImageToPositionAction(Function<ProductMoveImageToPositionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductMoveImageToPositionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductMoveImageToPositionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductMoveImageToPositionAction>";
+            }
+        };
+    }
 }

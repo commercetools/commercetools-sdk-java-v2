@@ -49,4 +49,13 @@ public interface BooleanAttribute extends Attribute {
     default <T> T withBooleanAttribute(Function<BooleanAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<BooleanAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<BooleanAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<BooleanAttribute>";
+            }
+        };
+    }
 }

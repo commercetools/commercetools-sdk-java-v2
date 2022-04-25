@@ -62,4 +62,13 @@ public interface CartSetBillingAddressCustomFieldAction extends CartUpdateAction
             Function<CartSetBillingAddressCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetBillingAddressCustomFieldAction>";
+            }
+        };
+    }
 }

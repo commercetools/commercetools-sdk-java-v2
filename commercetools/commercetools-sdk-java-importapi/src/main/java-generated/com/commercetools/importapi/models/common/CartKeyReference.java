@@ -40,4 +40,13 @@ public interface CartKeyReference extends KeyReference {
     default <T> T withCartKeyReference(Function<CartKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartKeyReference>";
+            }
+        };
+    }
 }

@@ -50,4 +50,13 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
     default <T> T withStagedOrderRemoveDiscountCodeAction(Function<StagedOrderRemoveDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveDiscountCodeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveDiscountCodeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderRemoveDiscountCodeAction>";
+            }
+        };
+    }
 }

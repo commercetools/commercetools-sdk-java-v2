@@ -103,4 +103,13 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     default <T> T withStoreCreatedMessagePayload(Function<StoreCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreCreatedMessagePayload>";
+            }
+        };
+    }
 }

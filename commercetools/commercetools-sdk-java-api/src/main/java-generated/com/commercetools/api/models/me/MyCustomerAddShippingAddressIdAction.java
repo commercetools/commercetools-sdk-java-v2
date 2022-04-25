@@ -49,4 +49,13 @@ public interface MyCustomerAddShippingAddressIdAction extends MyCustomerUpdateAc
     default <T> T withMyCustomerAddShippingAddressIdAction(Function<MyCustomerAddShippingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddShippingAddressIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddShippingAddressIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerAddShippingAddressIdAction>";
+            }
+        };
+    }
 }

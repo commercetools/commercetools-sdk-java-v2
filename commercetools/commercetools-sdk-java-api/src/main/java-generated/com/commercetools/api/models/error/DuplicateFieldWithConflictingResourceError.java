@@ -67,4 +67,13 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
             Function<DuplicateFieldWithConflictingResourceError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldWithConflictingResourceError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldWithConflictingResourceError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DuplicateFieldWithConflictingResourceError>";
+            }
+        };
+    }
 }

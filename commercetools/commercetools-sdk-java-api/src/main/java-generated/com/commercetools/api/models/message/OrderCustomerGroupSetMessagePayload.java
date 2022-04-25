@@ -60,4 +60,13 @@ public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload
     default <T> T withOrderCustomerGroupSetMessagePayload(Function<OrderCustomerGroupSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerGroupSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerGroupSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderCustomerGroupSetMessagePayload>";
+            }
+        };
+    }
 }

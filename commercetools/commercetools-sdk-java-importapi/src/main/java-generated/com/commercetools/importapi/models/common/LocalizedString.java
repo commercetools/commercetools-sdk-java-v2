@@ -51,4 +51,13 @@ public interface LocalizedString {
     default <T> T withLocalizedString(Function<LocalizedString, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LocalizedString> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LocalizedString>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LocalizedString>";
+            }
+        };
+    }
 }

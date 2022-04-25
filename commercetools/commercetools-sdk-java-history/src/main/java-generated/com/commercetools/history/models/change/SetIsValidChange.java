@@ -66,4 +66,13 @@ public interface SetIsValidChange extends Change {
     default <T> T withSetIsValidChange(Function<SetIsValidChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetIsValidChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetIsValidChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetIsValidChange>";
+            }
+        };
+    }
 }

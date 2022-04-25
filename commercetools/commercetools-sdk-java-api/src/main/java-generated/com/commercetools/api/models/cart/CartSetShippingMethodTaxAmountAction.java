@@ -46,4 +46,13 @@ public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
     default <T> T withCartSetShippingMethodTaxAmountAction(Function<CartSetShippingMethodTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetShippingMethodTaxAmountAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetShippingMethodTaxAmountAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetShippingMethodTaxAmountAction>";
+            }
+        };
+    }
 }

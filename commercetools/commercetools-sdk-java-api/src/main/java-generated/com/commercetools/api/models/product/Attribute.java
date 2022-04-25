@@ -53,4 +53,13 @@ public interface Attribute {
     default <T> T withAttribute(Function<Attribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Attribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Attribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Attribute>";
+            }
+        };
+    }
 }

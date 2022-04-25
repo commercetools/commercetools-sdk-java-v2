@@ -56,4 +56,13 @@ public interface OrderUpdate
     default <T> T withOrderUpdate(Function<OrderUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderUpdate>";
+            }
+        };
+    }
 }

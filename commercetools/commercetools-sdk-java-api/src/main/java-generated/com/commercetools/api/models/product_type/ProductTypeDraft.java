@@ -73,4 +73,13 @@ public interface ProductTypeDraft {
     default <T> T withProductTypeDraft(Function<ProductTypeDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeDraft>";
+            }
+        };
+    }
 }

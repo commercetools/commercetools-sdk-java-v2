@@ -60,4 +60,13 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
             Function<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction>";
+            }
+        };
+    }
 }

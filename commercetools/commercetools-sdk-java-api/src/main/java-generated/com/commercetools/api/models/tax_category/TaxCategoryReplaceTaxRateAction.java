@@ -60,4 +60,13 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     default <T> T withTaxCategoryReplaceTaxRateAction(Function<TaxCategoryReplaceTaxRateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReplaceTaxRateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReplaceTaxRateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryReplaceTaxRateAction>";
+            }
+        };
+    }
 }

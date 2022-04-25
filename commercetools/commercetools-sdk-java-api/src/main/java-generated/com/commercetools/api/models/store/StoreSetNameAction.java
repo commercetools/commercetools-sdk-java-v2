@@ -49,4 +49,13 @@ public interface StoreSetNameAction extends StoreUpdateAction {
     default <T> T withStoreSetNameAction(Function<StoreSetNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreSetNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreSetNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreSetNameAction>";
+            }
+        };
+    }
 }

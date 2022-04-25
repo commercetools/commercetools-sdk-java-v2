@@ -38,4 +38,13 @@ public interface StoreKeyReference extends KeyReference {
     default <T> T withStoreKeyReference(Function<StoreKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreKeyReference>";
+            }
+        };
+    }
 }

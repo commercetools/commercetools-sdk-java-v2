@@ -50,4 +50,13 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
     default <T> T withZoneRemoveLocationAction(Function<ZoneRemoveLocationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneRemoveLocationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneRemoveLocationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneRemoveLocationAction>";
+            }
+        };
+    }
 }

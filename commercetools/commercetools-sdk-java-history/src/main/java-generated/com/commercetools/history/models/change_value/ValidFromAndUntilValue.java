@@ -53,4 +53,13 @@ public interface ValidFromAndUntilValue {
     default <T> T withValidFromAndUntilValue(Function<ValidFromAndUntilValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ValidFromAndUntilValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ValidFromAndUntilValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ValidFromAndUntilValue>";
+            }
+        };
+    }
 }

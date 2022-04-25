@@ -44,4 +44,13 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
             Function<InventoryEntrySetRestockableInDaysAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetRestockableInDaysAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetRestockableInDaysAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntrySetRestockableInDaysAction>";
+            }
+        };
+    }
 }

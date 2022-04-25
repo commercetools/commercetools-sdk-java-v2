@@ -55,4 +55,13 @@ public interface TypedMoney {
     default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypedMoney> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypedMoney>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypedMoney>";
+            }
+        };
+    }
 }

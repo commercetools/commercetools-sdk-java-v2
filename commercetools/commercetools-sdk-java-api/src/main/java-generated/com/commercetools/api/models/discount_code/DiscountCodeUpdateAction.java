@@ -91,4 +91,13 @@ public interface DiscountCodeUpdateAction
     default <T> T withDiscountCodeUpdateAction(Function<DiscountCodeUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeUpdateAction>";
+            }
+        };
+    }
 }

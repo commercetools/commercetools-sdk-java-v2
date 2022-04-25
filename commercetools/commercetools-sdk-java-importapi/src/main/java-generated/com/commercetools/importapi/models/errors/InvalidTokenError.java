@@ -37,4 +37,13 @@ public interface InvalidTokenError extends ErrorObject {
     default <T> T withInvalidTokenError(Function<InvalidTokenError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidTokenError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidTokenError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidTokenError>";
+            }
+        };
+    }
 }

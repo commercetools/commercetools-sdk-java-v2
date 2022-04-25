@@ -49,4 +49,13 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
     default <T> T withChannelSetGeoLocationAction(Function<ChannelSetGeoLocationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetGeoLocationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetGeoLocationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelSetGeoLocationAction>";
+            }
+        };
+    }
 }

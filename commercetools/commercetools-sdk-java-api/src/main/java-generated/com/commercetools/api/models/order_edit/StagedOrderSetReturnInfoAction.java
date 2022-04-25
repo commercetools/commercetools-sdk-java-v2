@@ -50,4 +50,13 @@ public interface StagedOrderSetReturnInfoAction extends StagedOrderUpdateAction 
     default <T> T withStagedOrderSetReturnInfoAction(Function<StagedOrderSetReturnInfoAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnInfoAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnInfoAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetReturnInfoAction>";
+            }
+        };
+    }
 }

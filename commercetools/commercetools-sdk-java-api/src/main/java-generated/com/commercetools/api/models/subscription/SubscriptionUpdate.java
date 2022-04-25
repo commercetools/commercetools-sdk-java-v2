@@ -56,4 +56,13 @@ public interface SubscriptionUpdate extends
     default <T> T withSubscriptionUpdate(Function<SubscriptionUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SubscriptionUpdate>";
+            }
+        };
+    }
 }

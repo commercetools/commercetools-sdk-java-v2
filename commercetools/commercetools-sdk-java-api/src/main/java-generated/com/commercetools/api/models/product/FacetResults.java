@@ -45,4 +45,13 @@ public interface FacetResults {
     default <T> T withFacetResults(Function<FacetResults, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<FacetResults> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<FacetResults>() {
+            @Override
+            public String toString() {
+                return "TypeReference<FacetResults>";
+            }
+        };
+    }
 }

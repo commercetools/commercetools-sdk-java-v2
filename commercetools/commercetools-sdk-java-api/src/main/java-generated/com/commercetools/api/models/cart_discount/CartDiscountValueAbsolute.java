@@ -51,4 +51,13 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue {
     default <T> T withCartDiscountValueAbsolute(Function<CartDiscountValueAbsolute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueAbsolute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueAbsolute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountValueAbsolute>";
+            }
+        };
+    }
 }

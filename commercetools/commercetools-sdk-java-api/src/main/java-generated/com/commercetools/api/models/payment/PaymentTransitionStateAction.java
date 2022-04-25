@@ -54,4 +54,13 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     default <T> T withPaymentTransitionStateAction(Function<PaymentTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentTransitionStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentTransitionStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentTransitionStateAction>";
+            }
+        };
+    }
 }

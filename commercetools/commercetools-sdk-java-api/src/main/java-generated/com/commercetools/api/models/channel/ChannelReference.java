@@ -64,4 +64,13 @@ public interface ChannelReference extends Reference, com.commercetools.api.model
     default <T> T withChannelReference(Function<ChannelReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelReference>";
+            }
+        };
+    }
 }

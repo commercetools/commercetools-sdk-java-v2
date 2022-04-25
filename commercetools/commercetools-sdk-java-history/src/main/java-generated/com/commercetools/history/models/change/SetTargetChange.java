@@ -70,4 +70,13 @@ public interface SetTargetChange extends Change {
     default <T> T withSetTargetChange(Function<SetTargetChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetTargetChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetTargetChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetTargetChange>";
+            }
+        };
+    }
 }

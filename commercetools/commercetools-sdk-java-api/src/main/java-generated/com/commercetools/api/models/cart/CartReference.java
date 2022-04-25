@@ -47,4 +47,13 @@ public interface CartReference extends Reference, com.commercetools.api.models.I
     default <T> T withCartReference(Function<CartReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartReference>";
+            }
+        };
+    }
 }

@@ -93,4 +93,13 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     default <T> T withReviewStateTransitionMessagePayload(Function<ReviewStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewStateTransitionMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewStateTransitionMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewStateTransitionMessagePayload>";
+            }
+        };
+    }
 }

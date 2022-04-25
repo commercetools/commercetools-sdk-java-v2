@@ -36,4 +36,13 @@ public interface AttributeBooleanType extends AttributeType {
     default <T> T withAttributeBooleanType(Function<AttributeBooleanType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeBooleanType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeBooleanType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeBooleanType>";
+            }
+        };
+    }
 }

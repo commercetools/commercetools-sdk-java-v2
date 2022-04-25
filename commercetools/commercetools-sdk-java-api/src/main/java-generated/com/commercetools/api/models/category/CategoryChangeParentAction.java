@@ -47,4 +47,13 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
     default <T> T withCategoryChangeParentAction(Function<CategoryChangeParentAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeParentAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeParentAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryChangeParentAction>";
+            }
+        };
+    }
 }

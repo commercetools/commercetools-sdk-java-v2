@@ -122,4 +122,13 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     default <T> T withPriceDraft(Function<PriceDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PriceDraft>";
+            }
+        };
+    }
 }

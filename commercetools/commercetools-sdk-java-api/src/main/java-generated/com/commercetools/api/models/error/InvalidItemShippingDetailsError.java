@@ -54,4 +54,13 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     default <T> T withInvalidItemShippingDetailsError(Function<InvalidItemShippingDetailsError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidItemShippingDetailsError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidItemShippingDetailsError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidItemShippingDetailsError>";
+            }
+        };
+    }
 }

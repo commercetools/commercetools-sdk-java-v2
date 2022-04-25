@@ -47,4 +47,13 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
     default <T> T withStagedOrderRemoveCustomLineItemAction(Function<StagedOrderRemoveCustomLineItemAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveCustomLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveCustomLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderRemoveCustomLineItemAction>";
+            }
+        };
+    }
 }

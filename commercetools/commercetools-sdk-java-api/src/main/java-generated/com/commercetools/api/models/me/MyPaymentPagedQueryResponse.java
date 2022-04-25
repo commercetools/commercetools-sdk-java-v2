@@ -76,4 +76,13 @@ public interface MyPaymentPagedQueryResponse
     default <T> T withMyPaymentPagedQueryResponse(Function<MyPaymentPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyPaymentPagedQueryResponse>";
+            }
+        };
+    }
 }

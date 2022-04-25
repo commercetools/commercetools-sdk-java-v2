@@ -36,4 +36,13 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
     default <T> T withProductUnpublishAction(Function<ProductUnpublishAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductUnpublishAction>";
+            }
+        };
+    }
 }

@@ -57,4 +57,13 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
             Function<StagedOrderSetParcelMeasurementsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelMeasurementsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelMeasurementsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetParcelMeasurementsAction>";
+            }
+        };
+    }
 }

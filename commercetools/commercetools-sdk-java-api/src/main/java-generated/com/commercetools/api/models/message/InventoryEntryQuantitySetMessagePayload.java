@@ -80,4 +80,13 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
             Function<InventoryEntryQuantitySetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryQuantitySetMessagePayload>";
+            }
+        };
+    }
 }

@@ -45,4 +45,13 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
             Function<MyCartSetDeleteDaysAfterLastModificationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetDeleteDaysAfterLastModificationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetDeleteDaysAfterLastModificationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartSetDeleteDaysAfterLastModificationAction>";
+            }
+        };
+    }
 }

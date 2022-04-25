@@ -59,4 +59,13 @@ public interface ExtensionTrigger {
     default <T> T withExtensionTrigger(Function<ExtensionTrigger, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionTrigger> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionTrigger>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionTrigger>";
+            }
+        };
+    }
 }

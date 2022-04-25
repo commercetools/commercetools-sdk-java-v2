@@ -76,4 +76,13 @@ public interface ProductDiscountUpdateAction
     default <T> T withProductDiscountUpdateAction(Function<ProductDiscountUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountUpdateAction>";
+            }
+        };
+    }
 }

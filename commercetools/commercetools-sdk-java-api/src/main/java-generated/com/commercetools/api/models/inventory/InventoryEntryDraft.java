@@ -94,4 +94,13 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     default <T> T withInventoryEntryDraft(Function<InventoryEntryDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryDraft>";
+            }
+        };
+    }
 }

@@ -129,4 +129,13 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     default <T> T withQueryPrice(Function<QueryPrice, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<QueryPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<QueryPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<QueryPrice>";
+            }
+        };
+    }
 }

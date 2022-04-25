@@ -67,4 +67,13 @@ public interface ProductCatalogData {
     default <T> T withProductCatalogData(Function<ProductCatalogData, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductCatalogData> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductCatalogData>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductCatalogData>";
+            }
+        };
+    }
 }

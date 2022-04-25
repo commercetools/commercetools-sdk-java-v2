@@ -57,4 +57,13 @@ public interface ProductImportRequest extends ImportRequest {
     default <T> T withProductImportRequest(Function<ProductImportRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductImportRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductImportRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductImportRequest>";
+            }
+        };
+    }
 }

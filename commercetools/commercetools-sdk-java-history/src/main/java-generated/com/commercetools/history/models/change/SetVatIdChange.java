@@ -66,4 +66,13 @@ public interface SetVatIdChange extends Change {
     default <T> T withSetVatIdChange(Function<SetVatIdChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetVatIdChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetVatIdChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetVatIdChange>";
+            }
+        };
+    }
 }

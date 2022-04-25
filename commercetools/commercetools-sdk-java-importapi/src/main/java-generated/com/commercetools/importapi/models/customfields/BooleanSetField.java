@@ -51,4 +51,13 @@ public interface BooleanSetField extends CustomField {
     default <T> T withBooleanSetField(Function<BooleanSetField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<BooleanSetField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<BooleanSetField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<BooleanSetField>";
+            }
+        };
+    }
 }

@@ -45,4 +45,13 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
     default <T> T withCartRemoveCustomLineItemAction(Function<CartRemoveCustomLineItemAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartRemoveCustomLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartRemoveCustomLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartRemoveCustomLineItemAction>";
+            }
+        };
+    }
 }

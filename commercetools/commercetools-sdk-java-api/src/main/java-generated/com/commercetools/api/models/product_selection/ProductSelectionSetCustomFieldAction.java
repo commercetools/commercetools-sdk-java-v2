@@ -61,4 +61,13 @@ public interface ProductSelectionSetCustomFieldAction extends ProductSelectionUp
     default <T> T withProductSelectionSetCustomFieldAction(Function<ProductSelectionSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionSetCustomFieldAction>";
+            }
+        };
+    }
 }

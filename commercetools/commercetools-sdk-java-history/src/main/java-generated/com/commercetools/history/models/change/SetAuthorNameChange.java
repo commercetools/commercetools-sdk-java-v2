@@ -66,4 +66,13 @@ public interface SetAuthorNameChange extends Change {
     default <T> T withSetAuthorNameChange(Function<SetAuthorNameChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAuthorNameChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAuthorNameChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAuthorNameChange>";
+            }
+        };
+    }
 }

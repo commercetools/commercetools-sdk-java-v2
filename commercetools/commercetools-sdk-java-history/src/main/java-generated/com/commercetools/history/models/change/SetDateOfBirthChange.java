@@ -66,4 +66,13 @@ public interface SetDateOfBirthChange extends Change {
     default <T> T withSetDateOfBirthChange(Function<SetDateOfBirthChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetDateOfBirthChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetDateOfBirthChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetDateOfBirthChange>";
+            }
+        };
+    }
 }

@@ -48,4 +48,13 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     default <T> T withProjectSetExternalOAuthAction(Function<ProjectSetExternalOAuthAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectSetExternalOAuthAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectSetExternalOAuthAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectSetExternalOAuthAction>";
+            }
+        };
+    }
 }

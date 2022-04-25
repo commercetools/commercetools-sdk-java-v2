@@ -50,4 +50,13 @@ public interface MyCustomerRemoveShippingAddressIdAction extends MyCustomerUpdat
             Function<MyCustomerRemoveShippingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerRemoveShippingAddressIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerRemoveShippingAddressIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerRemoveShippingAddressIdAction>";
+            }
+        };
+    }
 }

@@ -70,4 +70,13 @@ public interface TransitionStateChange extends Change {
     default <T> T withTransitionStateChange(Function<TransitionStateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TransitionStateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TransitionStateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TransitionStateChange>";
+            }
+        };
+    }
 }

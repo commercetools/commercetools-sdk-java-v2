@@ -61,4 +61,13 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
     default <T> T withStoreChangeProductSelectionAction(Function<StoreChangeProductSelectionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreChangeProductSelectionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreChangeProductSelectionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreChangeProductSelectionAction>";
+            }
+        };
+    }
 }

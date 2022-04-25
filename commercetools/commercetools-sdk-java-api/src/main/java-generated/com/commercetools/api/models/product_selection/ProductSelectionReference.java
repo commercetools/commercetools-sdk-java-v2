@@ -61,4 +61,13 @@ public interface ProductSelectionReference
     default <T> T withProductSelectionReference(Function<ProductSelectionReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionReference>";
+            }
+        };
+    }
 }

@@ -1296,4 +1296,13 @@ public interface Change {
     default <T> T withChange(Function<Change, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Change> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Change>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Change>";
+            }
+        };
+    }
 }

@@ -52,4 +52,13 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
     default <T> T withProductSetDescriptionAction(Function<ProductSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetDescriptionAction>";
+            }
+        };
+    }
 }

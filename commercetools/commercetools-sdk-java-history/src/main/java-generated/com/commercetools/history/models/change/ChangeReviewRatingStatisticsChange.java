@@ -70,4 +70,13 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     default <T> T withChangeReviewRatingStatisticsChange(Function<ChangeReviewRatingStatisticsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeReviewRatingStatisticsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeReviewRatingStatisticsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeReviewRatingStatisticsChange>";
+            }
+        };
+    }
 }

@@ -41,4 +41,13 @@ public interface InvalidOperation extends ErrorObject {
     default <T> T withInvalidOperation(Function<InvalidOperation, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidOperation> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidOperation>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidOperation>";
+            }
+        };
+    }
 }

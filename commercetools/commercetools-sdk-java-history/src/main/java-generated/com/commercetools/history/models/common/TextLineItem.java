@@ -82,4 +82,13 @@ public interface TextLineItem {
     default <T> T withTextLineItem(Function<TextLineItem, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TextLineItem> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TextLineItem>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TextLineItem>";
+            }
+        };
+    }
 }

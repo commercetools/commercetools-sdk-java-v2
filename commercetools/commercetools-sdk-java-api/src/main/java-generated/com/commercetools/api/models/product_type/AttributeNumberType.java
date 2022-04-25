@@ -36,4 +36,13 @@ public interface AttributeNumberType extends AttributeType {
     default <T> T withAttributeNumberType(Function<AttributeNumberType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeNumberType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeNumberType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeNumberType>";
+            }
+        };
+    }
 }

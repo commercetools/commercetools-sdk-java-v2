@@ -72,4 +72,13 @@ public interface ImportOperationStatus {
     default <T> T withImportOperationStatus(Function<ImportOperationStatus, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportOperationStatus> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportOperationStatus>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportOperationStatus>";
+            }
+        };
+    }
 }

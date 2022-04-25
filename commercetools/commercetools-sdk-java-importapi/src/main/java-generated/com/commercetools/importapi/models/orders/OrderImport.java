@@ -277,4 +277,13 @@ public interface OrderImport {
     default <T> T withOrderImport(Function<OrderImport, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderImport>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderImport>";
+            }
+        };
+    }
 }

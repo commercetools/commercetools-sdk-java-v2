@@ -51,4 +51,13 @@ public interface IndividualProductSelectionType extends ProductSelectionType {
     default <T> T withIndividualProductSelectionType(Function<IndividualProductSelectionType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<IndividualProductSelectionType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<IndividualProductSelectionType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<IndividualProductSelectionType>";
+            }
+        };
+    }
 }

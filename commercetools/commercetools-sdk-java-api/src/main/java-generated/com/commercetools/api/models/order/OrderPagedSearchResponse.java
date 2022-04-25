@@ -81,4 +81,13 @@ public interface OrderPagedSearchResponse {
     default <T> T withOrderPagedSearchResponse(Function<OrderPagedSearchResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderPagedSearchResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderPagedSearchResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderPagedSearchResponse>";
+            }
+        };
+    }
 }

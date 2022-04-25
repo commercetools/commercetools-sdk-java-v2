@@ -78,4 +78,13 @@ public interface CustomerToken {
     default <T> T withCustomerToken(Function<CustomerToken, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerToken> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerToken>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerToken>";
+            }
+        };
+    }
 }

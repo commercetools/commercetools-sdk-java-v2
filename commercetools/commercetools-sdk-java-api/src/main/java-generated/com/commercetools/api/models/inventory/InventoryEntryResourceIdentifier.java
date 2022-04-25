@@ -40,4 +40,13 @@ public interface InventoryEntryResourceIdentifier
     default <T> T withInventoryEntryResourceIdentifier(Function<InventoryEntryResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryResourceIdentifier>";
+            }
+        };
+    }
 }

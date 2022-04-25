@@ -96,4 +96,13 @@ public interface ImportSinkPagedResponse {
     default <T> T withImportSinkPagedResponse(Function<ImportSinkPagedResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportSinkPagedResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportSinkPagedResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportSinkPagedResponse>";
+            }
+        };
+    }
 }

@@ -66,4 +66,13 @@ public interface SetStatusInterfaceCodeChange extends Change {
     default <T> T withSetStatusInterfaceCodeChange(Function<SetStatusInterfaceCodeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetStatusInterfaceCodeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetStatusInterfaceCodeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetStatusInterfaceCodeChange>";
+            }
+        };
+    }
 }

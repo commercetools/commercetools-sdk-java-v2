@@ -47,4 +47,13 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
     default <T> T withCartDiscountSetValidUntilAction(Function<CartDiscountSetValidUntilAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidUntilAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidUntilAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountSetValidUntilAction>";
+            }
+        };
+    }
 }

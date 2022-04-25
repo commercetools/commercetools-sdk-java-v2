@@ -55,4 +55,13 @@ public interface ParcelItems {
     default <T> T withParcelItems(Function<ParcelItems, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelItems> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelItems>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelItems>";
+            }
+        };
+    }
 }

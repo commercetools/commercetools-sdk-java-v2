@@ -100,4 +100,13 @@ public interface CustomerGroupPagedQueryResponse
     default <T> T withCustomerGroupPagedQueryResponse(Function<CustomerGroupPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupPagedQueryResponse>";
+            }
+        };
+    }
 }

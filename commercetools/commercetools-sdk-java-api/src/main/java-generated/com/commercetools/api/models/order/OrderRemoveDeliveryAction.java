@@ -45,4 +45,13 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     default <T> T withOrderRemoveDeliveryAction(Function<OrderRemoveDeliveryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderRemoveDeliveryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderRemoveDeliveryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderRemoveDeliveryAction>";
+            }
+        };
+    }
 }

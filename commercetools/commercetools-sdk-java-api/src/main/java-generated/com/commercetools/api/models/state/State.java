@@ -204,4 +204,12 @@ public interface State extends BaseResource, com.commercetools.api.models.Domain
         return com.commercetools.api.models.state.StateReference.builder().id(getId()).build();
     }
 
+    public static com.fasterxml.jackson.core.type.TypeReference<State> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<State>() {
+            @Override
+            public String toString() {
+                return "TypeReference<State>";
+            }
+        };
+    }
 }

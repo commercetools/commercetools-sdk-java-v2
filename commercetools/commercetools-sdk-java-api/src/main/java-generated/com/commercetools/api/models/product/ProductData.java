@@ -128,4 +128,13 @@ public interface ProductData extends ProductDataLike {
     default <T> T withProductData(Function<ProductData, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductData> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductData>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductData>";
+            }
+        };
+    }
 }

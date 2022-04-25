@@ -40,4 +40,13 @@ public interface PaymentKeyReference extends KeyReference {
     default <T> T withPaymentKeyReference(Function<PaymentKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentKeyReference>";
+            }
+        };
+    }
 }

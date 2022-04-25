@@ -56,4 +56,13 @@ public interface MissingImagesVariantLevel extends MissingImagesCount {
     default <T> T withMissingImagesVariantLevel(Function<MissingImagesVariantLevel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingImagesVariantLevel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingImagesVariantLevel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingImagesVariantLevel>";
+            }
+        };
+    }
 }

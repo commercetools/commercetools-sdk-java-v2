@@ -42,4 +42,13 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
     default <T> T withOrderEditSetCommentAction(Function<OrderEditSetCommentAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditSetCommentAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditSetCommentAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditSetCommentAction>";
+            }
+        };
+    }
 }

@@ -49,4 +49,13 @@ public interface ImportResource {
     default <T> T withImportResource(Function<ImportResource, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportResource> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportResource>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportResource>";
+            }
+        };
+    }
 }

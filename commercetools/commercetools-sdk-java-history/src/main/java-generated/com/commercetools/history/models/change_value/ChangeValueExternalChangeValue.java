@@ -45,4 +45,13 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
     default <T> T withChangeValueExternalChangeValue(Function<ChangeValueExternalChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueExternalChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueExternalChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeValueExternalChangeValue>";
+            }
+        };
+    }
 }

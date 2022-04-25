@@ -125,4 +125,13 @@ public interface AttributeDefinitionDraft {
     default <T> T withAttributeDefinitionDraft(Function<AttributeDefinitionDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeDefinitionDraft>";
+            }
+        };
+    }
 }

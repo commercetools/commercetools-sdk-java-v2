@@ -40,4 +40,13 @@ public interface CategoryResourceIdentifier
     default <T> T withCategoryResourceIdentifier(Function<CategoryResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryResourceIdentifier>";
+            }
+        };
+    }
 }

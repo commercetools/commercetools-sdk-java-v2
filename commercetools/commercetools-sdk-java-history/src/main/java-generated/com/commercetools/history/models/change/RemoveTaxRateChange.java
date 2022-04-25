@@ -76,4 +76,13 @@ public interface RemoveTaxRateChange extends Change {
     default <T> T withRemoveTaxRateChange(Function<RemoveTaxRateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveTaxRateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveTaxRateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveTaxRateChange>";
+            }
+        };
+    }
 }

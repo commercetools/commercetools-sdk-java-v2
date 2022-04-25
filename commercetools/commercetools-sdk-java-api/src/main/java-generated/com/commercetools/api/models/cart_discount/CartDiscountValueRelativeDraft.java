@@ -45,4 +45,13 @@ public interface CartDiscountValueRelativeDraft extends CartDiscountValueDraft {
     default <T> T withCartDiscountValueRelativeDraft(Function<CartDiscountValueRelativeDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueRelativeDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueRelativeDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountValueRelativeDraft>";
+            }
+        };
+    }
 }

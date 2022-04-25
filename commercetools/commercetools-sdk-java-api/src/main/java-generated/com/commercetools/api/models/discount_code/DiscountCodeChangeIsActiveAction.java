@@ -45,4 +45,13 @@ public interface DiscountCodeChangeIsActiveAction extends DiscountCodeUpdateActi
     default <T> T withDiscountCodeChangeIsActiveAction(Function<DiscountCodeChangeIsActiveAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeIsActiveAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeChangeIsActiveAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeChangeIsActiveAction>";
+            }
+        };
+    }
 }

@@ -63,4 +63,13 @@ public interface TaxPortionDraft {
     default <T> T withTaxPortionDraft(Function<TaxPortionDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxPortionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxPortionDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxPortionDraft>";
+            }
+        };
+    }
 }

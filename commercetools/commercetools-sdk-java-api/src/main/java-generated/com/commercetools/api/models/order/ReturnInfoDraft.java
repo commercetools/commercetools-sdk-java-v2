@@ -65,4 +65,13 @@ public interface ReturnInfoDraft {
     default <T> T withReturnInfoDraft(Function<ReturnInfoDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfoDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfoDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReturnInfoDraft>";
+            }
+        };
+    }
 }

@@ -62,4 +62,13 @@ public interface ZoneUpdate
     default <T> T withZoneUpdate(Function<ZoneUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneUpdate>";
+            }
+        };
+    }
 }

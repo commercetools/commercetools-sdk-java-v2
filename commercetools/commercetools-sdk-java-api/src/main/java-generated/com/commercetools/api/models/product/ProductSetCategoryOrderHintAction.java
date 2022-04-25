@@ -57,4 +57,13 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     default <T> T withProductSetCategoryOrderHintAction(Function<ProductSetCategoryOrderHintAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetCategoryOrderHintAction>";
+            }
+        };
+    }
 }

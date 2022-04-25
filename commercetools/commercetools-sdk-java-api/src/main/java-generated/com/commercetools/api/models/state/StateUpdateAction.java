@@ -70,4 +70,13 @@ public interface StateUpdateAction extends com.commercetools.api.models.Resource
     default <T> T withStateUpdateAction(Function<StateUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateUpdateAction>";
+            }
+        };
+    }
 }

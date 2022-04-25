@@ -90,4 +90,13 @@ public interface TransitionLineItemStateChange extends Change {
     default <T> T withTransitionLineItemStateChange(Function<TransitionLineItemStateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TransitionLineItemStateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TransitionLineItemStateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TransitionLineItemStateChange>";
+            }
+        };
+    }
 }

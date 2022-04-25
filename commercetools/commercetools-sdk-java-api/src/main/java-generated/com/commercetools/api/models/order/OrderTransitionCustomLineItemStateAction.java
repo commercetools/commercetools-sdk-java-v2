@@ -85,4 +85,13 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
             Function<OrderTransitionCustomLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderTransitionCustomLineItemStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderTransitionCustomLineItemStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderTransitionCustomLineItemStateAction>";
+            }
+        };
+    }
 }

@@ -64,4 +64,13 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
     default <T> T withTypeAddEnumValueAction(Function<TypeAddEnumValueAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeAddEnumValueAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeAddEnumValueAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeAddEnumValueAction>";
+            }
+        };
+    }
 }

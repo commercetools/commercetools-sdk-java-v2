@@ -131,4 +131,13 @@ public interface MyCustomerUpdateAction
     default <T> T withMyCustomerUpdateAction(Function<MyCustomerUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerUpdateAction>";
+            }
+        };
+    }
 }

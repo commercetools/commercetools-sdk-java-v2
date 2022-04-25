@@ -70,4 +70,13 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
     default <T> T withProductSelectionDraft(Function<ProductSelectionDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionDraft>";
+            }
+        };
+    }
 }

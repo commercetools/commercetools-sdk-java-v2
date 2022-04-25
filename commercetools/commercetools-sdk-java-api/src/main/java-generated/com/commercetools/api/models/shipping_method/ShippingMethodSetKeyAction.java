@@ -46,4 +46,13 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
     default <T> T withShippingMethodSetKeyAction(Function<ShippingMethodSetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodSetKeyAction>";
+            }
+        };
+    }
 }

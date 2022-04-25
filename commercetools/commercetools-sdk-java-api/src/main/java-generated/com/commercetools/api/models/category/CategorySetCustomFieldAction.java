@@ -60,4 +60,13 @@ public interface CategorySetCustomFieldAction extends CategoryUpdateAction {
     default <T> T withCategorySetCustomFieldAction(Function<CategorySetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySetCustomFieldAction>";
+            }
+        };
+    }
 }

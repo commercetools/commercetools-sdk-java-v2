@@ -62,4 +62,13 @@ public interface Custom {
     default <T> T withCustom(Function<Custom, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Custom> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Custom>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Custom>";
+            }
+        };
+    }
 }

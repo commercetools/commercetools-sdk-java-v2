@@ -65,4 +65,13 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     default <T> T withTypeChangeEnumValueOrderAction(Function<TypeChangeEnumValueOrderAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeEnumValueOrderAction>";
+            }
+        };
+    }
 }

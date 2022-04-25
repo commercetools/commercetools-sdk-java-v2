@@ -77,4 +77,13 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
             Function<ProductSetProductPriceCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetProductPriceCustomTypeAction>";
+            }
+        };
+    }
 }

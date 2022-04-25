@@ -56,4 +56,13 @@ public interface ShoppingListUpdate extends
     default <T> T withShoppingListUpdate(Function<ShoppingListUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListUpdate>";
+            }
+        };
+    }
 }

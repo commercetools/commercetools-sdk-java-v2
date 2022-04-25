@@ -46,4 +46,13 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
     default <T> T withCartDiscountChangeStackingModeAction(Function<CartDiscountChangeStackingModeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeStackingModeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeStackingModeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountChangeStackingModeAction>";
+            }
+        };
+    }
 }

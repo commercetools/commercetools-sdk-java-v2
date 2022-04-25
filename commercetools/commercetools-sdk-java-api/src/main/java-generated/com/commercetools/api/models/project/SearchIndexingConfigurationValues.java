@@ -68,4 +68,13 @@ public interface SearchIndexingConfigurationValues {
     default <T> T withSearchIndexingConfigurationValues(Function<SearchIndexingConfigurationValues, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SearchIndexingConfigurationValues> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SearchIndexingConfigurationValues>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SearchIndexingConfigurationValues>";
+            }
+        };
+    }
 }

@@ -49,4 +49,13 @@ public interface TextAttribute extends Attribute {
     default <T> T withTextAttribute(Function<TextAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TextAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TextAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TextAttribute>";
+            }
+        };
+    }
 }

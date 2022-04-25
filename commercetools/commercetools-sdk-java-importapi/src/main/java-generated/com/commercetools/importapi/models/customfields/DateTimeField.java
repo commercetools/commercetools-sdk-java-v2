@@ -49,4 +49,13 @@ public interface DateTimeField extends CustomField {
     default <T> T withDateTimeField(Function<DateTimeField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DateTimeField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DateTimeField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DateTimeField>";
+            }
+        };
+    }
 }

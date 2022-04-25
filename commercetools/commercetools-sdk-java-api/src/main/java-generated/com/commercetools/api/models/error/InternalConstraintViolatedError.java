@@ -38,4 +38,13 @@ public interface InternalConstraintViolatedError extends ErrorObject {
     default <T> T withInternalConstraintViolatedError(Function<InternalConstraintViolatedError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InternalConstraintViolatedError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InternalConstraintViolatedError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InternalConstraintViolatedError>";
+            }
+        };
+    }
 }

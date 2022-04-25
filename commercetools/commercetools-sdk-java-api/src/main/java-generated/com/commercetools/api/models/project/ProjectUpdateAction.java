@@ -90,4 +90,13 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     default <T> T withProjectUpdateAction(Function<ProjectUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectUpdateAction>";
+            }
+        };
+    }
 }

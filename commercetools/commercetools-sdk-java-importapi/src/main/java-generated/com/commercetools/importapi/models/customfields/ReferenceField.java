@@ -54,4 +54,13 @@ public interface ReferenceField extends CustomField {
     default <T> T withReferenceField(Function<ReferenceField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReferenceField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReferenceField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReferenceField>";
+            }
+        };
+    }
 }

@@ -122,4 +122,13 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     default <T> T withShoppingListLineItem(Function<ShoppingListLineItem, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItem> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItem>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListLineItem>";
+            }
+        };
+    }
 }

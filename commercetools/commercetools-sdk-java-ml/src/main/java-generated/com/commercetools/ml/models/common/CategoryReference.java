@@ -37,4 +37,13 @@ public interface CategoryReference extends Reference {
     default <T> T withCategoryReference(Function<CategoryReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryReference>";
+            }
+        };
+    }
 }

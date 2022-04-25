@@ -80,4 +80,13 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
     default <T> T withMyCartRemoveLineItemAction(Function<MyCartRemoveLineItemAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartRemoveLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartRemoveLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartRemoveLineItemAction>";
+            }
+        };
+    }
 }

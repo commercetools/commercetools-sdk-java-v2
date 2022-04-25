@@ -66,4 +66,13 @@ public interface Hit {
     default <T> T withHit(Function<Hit, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Hit> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Hit>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Hit>";
+            }
+        };
+    }
 }

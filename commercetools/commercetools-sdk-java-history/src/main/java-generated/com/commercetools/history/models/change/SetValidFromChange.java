@@ -66,4 +66,13 @@ public interface SetValidFromChange extends Change {
     default <T> T withSetValidFromChange(Function<SetValidFromChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetValidFromChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetValidFromChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetValidFromChange>";
+            }
+        };
+    }
 }

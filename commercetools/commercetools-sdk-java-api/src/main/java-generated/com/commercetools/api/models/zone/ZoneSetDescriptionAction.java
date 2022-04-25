@@ -46,4 +46,13 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
     default <T> T withZoneSetDescriptionAction(Function<ZoneSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneSetDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneSetDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneSetDescriptionAction>";
+            }
+        };
+    }
 }

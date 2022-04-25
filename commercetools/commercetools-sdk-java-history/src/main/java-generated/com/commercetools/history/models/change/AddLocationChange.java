@@ -76,4 +76,13 @@ public interface AddLocationChange extends Change {
     default <T> T withAddLocationChange(Function<AddLocationChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddLocationChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddLocationChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddLocationChange>";
+            }
+        };
+    }
 }

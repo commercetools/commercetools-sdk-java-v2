@@ -51,4 +51,13 @@ public interface ProductDiscountValueAbsoluteDraft extends ProductDiscountValueD
     default <T> T withProductDiscountValueAbsoluteDraft(Function<ProductDiscountValueAbsoluteDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueAbsoluteDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountValueAbsoluteDraft>";
+            }
+        };
+    }
 }

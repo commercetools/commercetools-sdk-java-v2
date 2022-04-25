@@ -100,4 +100,13 @@ public interface TaxCategoryPagedQueryResponse
     default <T> T withTaxCategoryPagedQueryResponse(Function<TaxCategoryPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryPagedQueryResponse>";
+            }
+        };
+    }
 }

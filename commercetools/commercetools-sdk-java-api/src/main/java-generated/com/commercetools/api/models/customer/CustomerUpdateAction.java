@@ -180,4 +180,13 @@ public interface CustomerUpdateAction extends com.commercetools.api.models.Resou
     default <T> T withCustomerUpdateAction(Function<CustomerUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerUpdateAction>";
+            }
+        };
+    }
 }

@@ -59,4 +59,13 @@ public interface CustomFieldEnumValue {
     default <T> T withCustomFieldEnumValue(Function<CustomFieldEnumValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldEnumValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldEnumValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldEnumValue>";
+            }
+        };
+    }
 }

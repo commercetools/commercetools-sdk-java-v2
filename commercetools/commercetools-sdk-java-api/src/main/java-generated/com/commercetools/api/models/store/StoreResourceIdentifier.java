@@ -39,4 +39,13 @@ public interface StoreResourceIdentifier extends ResourceIdentifier, com.commerc
     default <T> T withStoreResourceIdentifier(Function<StoreResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreResourceIdentifier>";
+            }
+        };
+    }
 }

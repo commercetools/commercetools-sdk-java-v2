@@ -54,4 +54,13 @@ public interface ExternalLineItemTotalPrice {
     default <T> T withExternalLineItemTotalPrice(Function<ExternalLineItemTotalPrice, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExternalLineItemTotalPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExternalLineItemTotalPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExternalLineItemTotalPrice>";
+            }
+        };
+    }
 }

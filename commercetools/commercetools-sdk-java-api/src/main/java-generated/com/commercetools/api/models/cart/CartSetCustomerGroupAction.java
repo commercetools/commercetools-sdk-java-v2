@@ -49,4 +49,13 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
     default <T> T withCartSetCustomerGroupAction(Function<CartSetCustomerGroupAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerGroupAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerGroupAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetCustomerGroupAction>";
+            }
+        };
+    }
 }

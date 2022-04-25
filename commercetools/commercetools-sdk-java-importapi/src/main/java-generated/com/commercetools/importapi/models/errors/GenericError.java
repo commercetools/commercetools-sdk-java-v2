@@ -37,4 +37,13 @@ public interface GenericError extends ErrorObject {
     default <T> T withGenericError(Function<GenericError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GenericError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GenericError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GenericError>";
+            }
+        };
+    }
 }

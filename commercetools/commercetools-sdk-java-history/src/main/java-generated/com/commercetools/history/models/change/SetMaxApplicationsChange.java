@@ -66,4 +66,13 @@ public interface SetMaxApplicationsChange extends Change {
     default <T> T withSetMaxApplicationsChange(Function<SetMaxApplicationsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetMaxApplicationsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetMaxApplicationsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetMaxApplicationsChange>";
+            }
+        };
+    }
 }

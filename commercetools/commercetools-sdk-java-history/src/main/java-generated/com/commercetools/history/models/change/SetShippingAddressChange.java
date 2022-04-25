@@ -70,4 +70,13 @@ public interface SetShippingAddressChange extends Change {
     default <T> T withSetShippingAddressChange(Function<SetShippingAddressChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetShippingAddressChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetShippingAddressChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetShippingAddressChange>";
+            }
+        };
+    }
 }

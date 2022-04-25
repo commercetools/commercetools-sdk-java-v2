@@ -66,4 +66,13 @@ public interface ChangeInitialChange extends Change {
     default <T> T withChangeInitialChange(Function<ChangeInitialChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeInitialChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeInitialChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeInitialChange>";
+            }
+        };
+    }
 }

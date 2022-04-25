@@ -47,4 +47,13 @@ public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction 
     default <T> T withStagedOrderChangeTaxModeAction(Function<StagedOrderChangeTaxModeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeTaxModeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeTaxModeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderChangeTaxModeAction>";
+            }
+        };
+    }
 }

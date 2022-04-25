@@ -53,4 +53,13 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
             Function<ProjectChangeShoppingListsConfigurationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeShoppingListsConfigurationAction>";
+            }
+        };
+    }
 }

@@ -76,4 +76,13 @@ public interface InventoryPagedQueryResponse
     default <T> T withInventoryPagedQueryResponse(Function<InventoryPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryPagedQueryResponse>";
+            }
+        };
+    }
 }

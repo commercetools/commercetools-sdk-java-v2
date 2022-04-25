@@ -77,4 +77,13 @@ public interface MissingImagesPagedQueryResult {
     default <T> T withMissingImagesPagedQueryResult(Function<MissingImagesPagedQueryResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingImagesPagedQueryResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingImagesPagedQueryResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingImagesPagedQueryResult>";
+            }
+        };
+    }
 }

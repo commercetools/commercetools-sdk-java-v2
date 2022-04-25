@@ -42,4 +42,13 @@ public interface CartSetLocaleAction extends CartUpdateAction {
     default <T> T withCartSetLocaleAction(Function<CartSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetLocaleAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetLocaleAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetLocaleAction>";
+            }
+        };
+    }
 }

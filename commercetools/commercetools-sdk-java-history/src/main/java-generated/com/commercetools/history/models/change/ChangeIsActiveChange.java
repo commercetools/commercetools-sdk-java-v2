@@ -66,4 +66,13 @@ public interface ChangeIsActiveChange extends Change {
     default <T> T withChangeIsActiveChange(Function<ChangeIsActiveChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeIsActiveChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeIsActiveChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeIsActiveChange>";
+            }
+        };
+    }
 }

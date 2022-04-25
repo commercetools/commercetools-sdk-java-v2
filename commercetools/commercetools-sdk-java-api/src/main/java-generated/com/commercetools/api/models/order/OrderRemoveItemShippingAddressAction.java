@@ -46,4 +46,13 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
     default <T> T withOrderRemoveItemShippingAddressAction(Function<OrderRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderRemoveItemShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderRemoveItemShippingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderRemoveItemShippingAddressAction>";
+            }
+        };
+    }
 }

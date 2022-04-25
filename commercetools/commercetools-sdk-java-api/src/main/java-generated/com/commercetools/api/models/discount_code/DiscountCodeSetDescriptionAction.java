@@ -49,4 +49,13 @@ public interface DiscountCodeSetDescriptionAction extends DiscountCodeUpdateActi
     default <T> T withDiscountCodeSetDescriptionAction(Function<DiscountCodeSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeSetDescriptionAction>";
+            }
+        };
+    }
 }

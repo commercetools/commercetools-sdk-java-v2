@@ -77,4 +77,13 @@ public interface ChangeTransactionInteractionIdChange extends Change {
     default <T> T withChangeTransactionInteractionIdChange(Function<ChangeTransactionInteractionIdChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTransactionInteractionIdChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTransactionInteractionIdChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTransactionInteractionIdChange>";
+            }
+        };
+    }
 }

@@ -45,4 +45,13 @@ public interface OrderEditResult {
     default <T> T withOrderEditResult(Function<OrderEditResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditResult>";
+            }
+        };
+    }
 }

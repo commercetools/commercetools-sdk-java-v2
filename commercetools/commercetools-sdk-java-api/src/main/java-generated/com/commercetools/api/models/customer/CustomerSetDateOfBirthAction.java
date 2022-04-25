@@ -47,4 +47,13 @@ public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
     default <T> T withCustomerSetDateOfBirthAction(Function<CustomerSetDateOfBirthAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetDateOfBirthAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetDateOfBirthAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetDateOfBirthAction>";
+            }
+        };
+    }
 }

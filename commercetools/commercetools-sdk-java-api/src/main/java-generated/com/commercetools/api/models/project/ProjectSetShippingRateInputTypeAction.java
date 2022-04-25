@@ -49,4 +49,13 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     default <T> T withProjectSetShippingRateInputTypeAction(Function<ProjectSetShippingRateInputTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectSetShippingRateInputTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectSetShippingRateInputTypeAction>";
+            }
+        };
+    }
 }

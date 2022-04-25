@@ -62,4 +62,13 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
     default <T> T withTypeChangeInputHintAction(Function<TypeChangeInputHintAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeInputHintAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeInputHintAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeInputHintAction>";
+            }
+        };
+    }
 }

@@ -72,4 +72,13 @@ public interface ChangeAttributeOrderByNameChange extends Change {
     default <T> T withChangeAttributeOrderByNameChange(Function<ChangeAttributeOrderByNameChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeAttributeOrderByNameChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeAttributeOrderByNameChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeAttributeOrderByNameChange>";
+            }
+        };
+    }
 }

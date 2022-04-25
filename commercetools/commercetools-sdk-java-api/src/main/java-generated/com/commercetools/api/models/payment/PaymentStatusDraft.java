@@ -59,4 +59,13 @@ public interface PaymentStatusDraft {
     default <T> T withPaymentStatusDraft(Function<PaymentStatusDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentStatusDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentStatusDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentStatusDraft>";
+            }
+        };
+    }
 }

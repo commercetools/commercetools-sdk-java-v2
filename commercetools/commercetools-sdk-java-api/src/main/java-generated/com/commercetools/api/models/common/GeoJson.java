@@ -30,4 +30,13 @@ public interface GeoJson {
     default <T> T withGeoJson(Function<GeoJson, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GeoJson> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GeoJson>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GeoJson>";
+            }
+        };
+    }
 }

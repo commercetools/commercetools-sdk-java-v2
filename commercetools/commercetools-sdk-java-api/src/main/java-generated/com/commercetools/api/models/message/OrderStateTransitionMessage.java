@@ -78,4 +78,13 @@ public interface OrderStateTransitionMessage extends OrderMessage {
     default <T> T withOrderStateTransitionMessage(Function<OrderStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderStateTransitionMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderStateTransitionMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderStateTransitionMessage>";
+            }
+        };
+    }
 }

@@ -58,4 +58,13 @@ public interface OrderStoreSetMessage extends OrderMessage {
     default <T> T withOrderStoreSetMessage(Function<OrderStoreSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderStoreSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderStoreSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderStoreSetMessage>";
+            }
+        };
+    }
 }

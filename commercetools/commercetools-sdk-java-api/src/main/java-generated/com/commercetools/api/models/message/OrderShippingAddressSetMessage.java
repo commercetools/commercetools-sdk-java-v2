@@ -63,4 +63,13 @@ public interface OrderShippingAddressSetMessage extends OrderMessage {
     default <T> T withOrderShippingAddressSetMessage(Function<OrderShippingAddressSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderShippingAddressSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderShippingAddressSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderShippingAddressSetMessage>";
+            }
+        };
+    }
 }

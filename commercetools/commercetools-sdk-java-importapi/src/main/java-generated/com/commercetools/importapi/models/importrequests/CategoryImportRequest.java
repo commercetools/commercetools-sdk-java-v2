@@ -57,4 +57,13 @@ public interface CategoryImportRequest extends ImportRequest {
     default <T> T withCategoryImportRequest(Function<CategoryImportRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryImportRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryImportRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryImportRequest>";
+            }
+        };
+    }
 }

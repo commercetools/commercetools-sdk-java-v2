@@ -53,4 +53,13 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     default <T> T withProductTypeChangeIsSearchableAction(Function<ProductTypeChangeIsSearchableAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeIsSearchableAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeIsSearchableAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeChangeIsSearchableAction>";
+            }
+        };
+    }
 }

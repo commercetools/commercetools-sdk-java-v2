@@ -53,4 +53,13 @@ public interface TextLineItemValue {
     default <T> T withTextLineItemValue(Function<TextLineItemValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TextLineItemValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TextLineItemValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TextLineItemValue>";
+            }
+        };
+    }
 }

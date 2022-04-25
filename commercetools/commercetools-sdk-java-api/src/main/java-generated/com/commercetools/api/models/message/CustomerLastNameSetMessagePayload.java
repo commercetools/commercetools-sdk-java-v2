@@ -42,4 +42,13 @@ public interface CustomerLastNameSetMessagePayload extends MessagePayload {
     default <T> T withCustomerLastNameSetMessagePayload(Function<CustomerLastNameSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerLastNameSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerLastNameSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerLastNameSetMessagePayload>";
+            }
+        };
+    }
 }

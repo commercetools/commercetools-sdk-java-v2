@@ -46,4 +46,13 @@ public interface Suggestion {
     default <T> T withSuggestion(Function<Suggestion, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Suggestion> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Suggestion>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Suggestion>";
+            }
+        };
+    }
 }

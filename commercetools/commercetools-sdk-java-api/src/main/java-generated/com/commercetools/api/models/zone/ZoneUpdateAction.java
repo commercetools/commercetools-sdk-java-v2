@@ -50,4 +50,13 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
     default <T> T withZoneUpdateAction(Function<ZoneUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneUpdateAction>";
+            }
+        };
+    }
 }

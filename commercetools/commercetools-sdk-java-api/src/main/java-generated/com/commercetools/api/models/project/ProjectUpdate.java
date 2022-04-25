@@ -62,4 +62,13 @@ public interface ProjectUpdate
     default <T> T withProjectUpdate(Function<ProjectUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectUpdate>";
+            }
+        };
+    }
 }

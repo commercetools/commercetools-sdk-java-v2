@@ -66,4 +66,13 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
             Function<TypeChangeLocalizedEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueLabelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueLabelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeLocalizedEnumValueLabelAction>";
+            }
+        };
+    }
 }

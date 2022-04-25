@@ -48,4 +48,13 @@ public interface ProjectChangeNameAction extends ProjectUpdateAction {
     default <T> T withProjectChangeNameAction(Function<ProjectChangeNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeNameAction>";
+            }
+        };
+    }
 }

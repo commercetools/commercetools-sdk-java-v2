@@ -48,4 +48,13 @@ public interface ZoneChangeNameAction extends ZoneUpdateAction {
     default <T> T withZoneChangeNameAction(Function<ZoneChangeNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneChangeNameAction>";
+            }
+        };
+    }
 }

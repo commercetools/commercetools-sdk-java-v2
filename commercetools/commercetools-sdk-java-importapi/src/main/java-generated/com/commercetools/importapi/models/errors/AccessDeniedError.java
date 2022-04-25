@@ -40,4 +40,13 @@ public interface AccessDeniedError extends ErrorObject {
     default <T> T withAccessDeniedError(Function<AccessDeniedError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AccessDeniedError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AccessDeniedError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AccessDeniedError>";
+            }
+        };
+    }
 }

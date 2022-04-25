@@ -67,4 +67,13 @@ public interface CartSetLineItemCustomFieldAction extends CartUpdateAction {
     default <T> T withCartSetLineItemCustomFieldAction(Function<CartSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetLineItemCustomFieldAction>";
+            }
+        };
+    }
 }

@@ -45,4 +45,13 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
     default <T> T withCartChangeTaxRoundingModeAction(Function<CartChangeTaxRoundingModeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartChangeTaxRoundingModeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartChangeTaxRoundingModeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartChangeTaxRoundingModeAction>";
+            }
+        };
+    }
 }

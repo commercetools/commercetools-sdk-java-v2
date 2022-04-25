@@ -37,4 +37,13 @@ public interface ContentionError extends ErrorObject {
     default <T> T withContentionError(Function<ContentionError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ContentionError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ContentionError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ContentionError>";
+            }
+        };
+    }
 }

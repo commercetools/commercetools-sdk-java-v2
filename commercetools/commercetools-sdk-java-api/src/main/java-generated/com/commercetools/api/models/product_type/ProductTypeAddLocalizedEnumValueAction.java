@@ -56,4 +56,13 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
             Function<ProductTypeAddLocalizedEnumValueAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddLocalizedEnumValueAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddLocalizedEnumValueAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeAddLocalizedEnumValueAction>";
+            }
+        };
+    }
 }

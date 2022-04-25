@@ -52,4 +52,13 @@ public interface MyPaymentChangeAmountPlannedAction extends MyPaymentUpdateActio
     default <T> T withMyPaymentChangeAmountPlannedAction(Function<MyPaymentChangeAmountPlannedAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentChangeAmountPlannedAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentChangeAmountPlannedAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyPaymentChangeAmountPlannedAction>";
+            }
+        };
+    }
 }

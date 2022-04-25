@@ -67,4 +67,13 @@ public interface RemoveTextLineItemChange extends Change {
     default <T> T withRemoveTextLineItemChange(Function<RemoveTextLineItemChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveTextLineItemChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveTextLineItemChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveTextLineItemChange>";
+            }
+        };
+    }
 }

@@ -48,4 +48,13 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
     default <T> T withCategoryChangeAssetOrderAction(Function<CategoryChangeAssetOrderAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeAssetOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeAssetOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryChangeAssetOrderAction>";
+            }
+        };
+    }
 }

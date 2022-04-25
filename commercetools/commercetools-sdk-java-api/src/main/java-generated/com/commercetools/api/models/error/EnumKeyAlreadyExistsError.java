@@ -54,4 +54,13 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
     default <T> T withEnumKeyAlreadyExistsError(Function<EnumKeyAlreadyExistsError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<EnumKeyAlreadyExistsError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<EnumKeyAlreadyExistsError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<EnumKeyAlreadyExistsError>";
+            }
+        };
+    }
 }

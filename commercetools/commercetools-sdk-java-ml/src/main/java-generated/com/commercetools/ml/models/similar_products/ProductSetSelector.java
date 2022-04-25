@@ -105,4 +105,13 @@ public interface ProductSetSelector {
     default <T> T withProductSetSelector(Function<ProductSetSelector, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetSelector> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetSelector>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetSelector>";
+            }
+        };
+    }
 }

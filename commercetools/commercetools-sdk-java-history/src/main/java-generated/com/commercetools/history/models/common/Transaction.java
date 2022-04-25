@@ -89,4 +89,13 @@ public interface Transaction {
     default <T> T withTransaction(Function<Transaction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Transaction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Transaction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Transaction>";
+            }
+        };
+    }
 }

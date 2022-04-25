@@ -47,4 +47,13 @@ public interface TypedMoneyDraft extends Money {
     default <T> T withTypedMoneyDraft(Function<TypedMoneyDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypedMoneyDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypedMoneyDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypedMoneyDraft>";
+            }
+        };
+    }
 }

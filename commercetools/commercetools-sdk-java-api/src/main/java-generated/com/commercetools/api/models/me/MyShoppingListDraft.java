@@ -104,4 +104,13 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     default <T> T withMyShoppingListDraft(Function<MyShoppingListDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyShoppingListDraft>";
+            }
+        };
+    }
 }

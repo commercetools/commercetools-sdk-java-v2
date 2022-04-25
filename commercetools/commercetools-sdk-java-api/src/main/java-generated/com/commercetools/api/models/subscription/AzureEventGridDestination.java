@@ -52,4 +52,13 @@ public interface AzureEventGridDestination extends Destination {
     default <T> T withAzureEventGridDestination(Function<AzureEventGridDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AzureEventGridDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AzureEventGridDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AzureEventGridDestination>";
+            }
+        };
+    }
 }

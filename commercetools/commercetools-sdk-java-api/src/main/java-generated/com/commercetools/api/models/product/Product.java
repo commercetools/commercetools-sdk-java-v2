@@ -165,4 +165,12 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
         return com.commercetools.api.models.product.ProductReference.builder().id(getId()).build();
     }
 
+    public static com.fasterxml.jackson.core.type.TypeReference<Product> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Product>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Product>";
+            }
+        };
+    }
 }

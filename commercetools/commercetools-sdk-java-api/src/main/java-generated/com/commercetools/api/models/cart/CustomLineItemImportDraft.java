@@ -122,4 +122,13 @@ public interface CustomLineItemImportDraft
     default <T> T withCustomLineItemImportDraft(Function<CustomLineItemImportDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomLineItemImportDraft>";
+            }
+        };
+    }
 }

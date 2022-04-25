@@ -52,4 +52,13 @@ public interface ProductSelectionRemoveProductAction extends ProductSelectionUpd
     default <T> T withProductSelectionRemoveProductAction(Function<ProductSelectionRemoveProductAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionRemoveProductAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionRemoveProductAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionRemoveProductAction>";
+            }
+        };
+    }
 }

@@ -60,4 +60,13 @@ public interface ChannelSetCustomFieldAction extends ChannelUpdateAction {
     default <T> T withChannelSetCustomFieldAction(Function<ChannelSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelSetCustomFieldAction>";
+            }
+        };
+    }
 }

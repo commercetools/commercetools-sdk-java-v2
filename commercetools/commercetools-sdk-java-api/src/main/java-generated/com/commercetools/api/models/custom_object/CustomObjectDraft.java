@@ -69,4 +69,13 @@ public interface CustomObjectDraft {
     default <T> T withCustomObjectDraft(Function<CustomObjectDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomObjectDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomObjectDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomObjectDraft>";
+            }
+        };
+    }
 }

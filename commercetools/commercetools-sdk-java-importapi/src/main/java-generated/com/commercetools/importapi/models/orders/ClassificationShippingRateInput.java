@@ -63,4 +63,13 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     default <T> T withClassificationShippingRateInput(Function<ClassificationShippingRateInput, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ClassificationShippingRateInput> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ClassificationShippingRateInput>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ClassificationShippingRateInput>";
+            }
+        };
+    }
 }

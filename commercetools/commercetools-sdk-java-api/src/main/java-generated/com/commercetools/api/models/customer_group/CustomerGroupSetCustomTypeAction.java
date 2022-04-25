@@ -65,4 +65,13 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
     default <T> T withCustomerGroupSetCustomTypeAction(Function<CustomerGroupSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupSetCustomTypeAction>";
+            }
+        };
+    }
 }

@@ -70,4 +70,13 @@ public interface AddChannelRolesChange extends Change {
     default <T> T withAddChannelRolesChange(Function<AddChannelRolesChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddChannelRolesChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddChannelRolesChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddChannelRolesChange>";
+            }
+        };
+    }
 }

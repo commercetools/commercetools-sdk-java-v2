@@ -39,4 +39,13 @@ public interface OrderResourceIdentifier extends ResourceIdentifier, com.commerc
     default <T> T withOrderResourceIdentifier(Function<OrderResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderResourceIdentifier>";
+            }
+        };
+    }
 }

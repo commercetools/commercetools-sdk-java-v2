@@ -51,4 +51,13 @@ public interface LocalizedEnumSetField extends CustomField {
     default <T> T withLocalizedEnumSetField(Function<LocalizedEnumSetField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LocalizedEnumSetField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LocalizedEnumSetField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LocalizedEnumSetField>";
+            }
+        };
+    }
 }

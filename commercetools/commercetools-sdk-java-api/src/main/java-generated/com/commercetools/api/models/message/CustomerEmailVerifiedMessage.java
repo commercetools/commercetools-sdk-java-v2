@@ -46,4 +46,13 @@ public interface CustomerEmailVerifiedMessage extends Message {
     default <T> T withCustomerEmailVerifiedMessage(Function<CustomerEmailVerifiedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerEmailVerifiedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerEmailVerifiedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerEmailVerifiedMessage>";
+            }
+        };
+    }
 }

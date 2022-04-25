@@ -61,4 +61,13 @@ public interface OrderExcerpt {
     default <T> T withOrderExcerpt(Function<OrderExcerpt, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderExcerpt> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderExcerpt>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderExcerpt>";
+            }
+        };
+    }
 }

@@ -62,4 +62,13 @@ public interface ImportContainerDraft {
     default <T> T withImportContainerDraft(Function<ImportContainerDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportContainerDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportContainerDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportContainerDraft>";
+            }
+        };
+    }
 }

@@ -52,4 +52,13 @@ public interface BooleanSetAttribute extends Attribute {
     default <T> T withBooleanSetAttribute(Function<BooleanSetAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<BooleanSetAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<BooleanSetAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<BooleanSetAttribute>";
+            }
+        };
+    }
 }

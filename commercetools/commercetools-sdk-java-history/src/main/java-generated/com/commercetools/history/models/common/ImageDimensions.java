@@ -50,4 +50,13 @@ public interface ImageDimensions {
     default <T> T withImageDimensions(Function<ImageDimensions, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImageDimensions> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImageDimensions>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImageDimensions>";
+            }
+        };
+    }
 }

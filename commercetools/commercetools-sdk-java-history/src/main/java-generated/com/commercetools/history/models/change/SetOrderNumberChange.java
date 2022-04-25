@@ -66,4 +66,13 @@ public interface SetOrderNumberChange extends Change {
     default <T> T withSetOrderNumberChange(Function<SetOrderNumberChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetOrderNumberChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetOrderNumberChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetOrderNumberChange>";
+            }
+        };
+    }
 }

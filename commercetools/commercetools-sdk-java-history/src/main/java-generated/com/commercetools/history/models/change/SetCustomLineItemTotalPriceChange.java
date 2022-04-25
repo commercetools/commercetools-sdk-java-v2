@@ -86,4 +86,13 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     default <T> T withSetCustomLineItemTotalPriceChange(Function<SetCustomLineItemTotalPriceChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemTotalPriceChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemTotalPriceChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomLineItemTotalPriceChange>";
+            }
+        };
+    }
 }

@@ -280,4 +280,13 @@ public interface CustomerImport extends ImportResource {
     default <T> T withCustomerImport(Function<CustomerImport, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerImport>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerImport>";
+            }
+        };
+    }
 }

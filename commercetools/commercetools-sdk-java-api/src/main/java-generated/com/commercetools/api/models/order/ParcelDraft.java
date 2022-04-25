@@ -74,4 +74,13 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     default <T> T withParcelDraft(Function<ParcelDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelDraft>";
+            }
+        };
+    }
 }

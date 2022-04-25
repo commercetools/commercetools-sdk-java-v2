@@ -71,4 +71,13 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     default <T> T withDeliveryAddressSetMessage(Function<DeliveryAddressSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryAddressSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryAddressSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DeliveryAddressSetMessage>";
+            }
+        };
+    }
 }

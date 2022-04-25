@@ -119,4 +119,13 @@ public interface StateDraft {
     default <T> T withStateDraft(Function<StateDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateDraft>";
+            }
+        };
+    }
 }

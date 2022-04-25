@@ -46,4 +46,13 @@ public interface StoreDeletedMessage extends Message {
     default <T> T withStoreDeletedMessage(Function<StoreDeletedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreDeletedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreDeletedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreDeletedMessage>";
+            }
+        };
+    }
 }

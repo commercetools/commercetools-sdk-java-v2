@@ -66,4 +66,13 @@ public interface SetExpectedDeliveryChange extends Change {
     default <T> T withSetExpectedDeliveryChange(Function<SetExpectedDeliveryChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetExpectedDeliveryChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetExpectedDeliveryChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetExpectedDeliveryChange>";
+            }
+        };
+    }
 }

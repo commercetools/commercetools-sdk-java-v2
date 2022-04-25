@@ -82,4 +82,13 @@ public interface ImportRequest {
     default <T> T withImportRequest(Function<ImportRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportRequest>";
+            }
+        };
+    }
 }

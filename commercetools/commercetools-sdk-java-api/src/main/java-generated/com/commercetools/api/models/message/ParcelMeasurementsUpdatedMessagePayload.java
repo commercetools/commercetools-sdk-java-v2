@@ -63,4 +63,13 @@ public interface ParcelMeasurementsUpdatedMessagePayload extends OrderMessagePay
             Function<ParcelMeasurementsUpdatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementsUpdatedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementsUpdatedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelMeasurementsUpdatedMessagePayload>";
+            }
+        };
+    }
 }

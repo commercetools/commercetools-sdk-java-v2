@@ -51,4 +51,13 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
             Function<ProductRevertedStagedChangesMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductRevertedStagedChangesMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductRevertedStagedChangesMessagePayload>";
+            }
+        };
+    }
 }

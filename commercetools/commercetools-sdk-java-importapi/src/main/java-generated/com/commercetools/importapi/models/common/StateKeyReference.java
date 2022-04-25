@@ -40,4 +40,13 @@ public interface StateKeyReference extends KeyReference {
     default <T> T withStateKeyReference(Function<StateKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateKeyReference>";
+            }
+        };
+    }
 }

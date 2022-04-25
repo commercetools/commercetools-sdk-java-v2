@@ -50,4 +50,13 @@ public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdate
             Function<MyCustomerRemoveBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerRemoveBillingAddressIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerRemoveBillingAddressIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerRemoveBillingAddressIdAction>";
+            }
+        };
+    }
 }

@@ -76,4 +76,13 @@ public interface SetReservationsChange extends Change {
     default <T> T withSetReservationsChange(Function<SetReservationsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetReservationsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetReservationsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetReservationsChange>";
+            }
+        };
+    }
 }

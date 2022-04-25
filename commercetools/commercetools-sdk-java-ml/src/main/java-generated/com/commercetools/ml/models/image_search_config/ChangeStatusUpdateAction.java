@@ -45,4 +45,13 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
     default <T> T withChangeStatusUpdateAction(Function<ChangeStatusUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeStatusUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeStatusUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeStatusUpdateAction>";
+            }
+        };
+    }
 }

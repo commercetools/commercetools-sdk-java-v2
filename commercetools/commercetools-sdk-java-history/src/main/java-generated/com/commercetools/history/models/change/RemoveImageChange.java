@@ -83,4 +83,13 @@ public interface RemoveImageChange extends Change {
     default <T> T withRemoveImageChange(Function<RemoveImageChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveImageChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveImageChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveImageChange>";
+            }
+        };
+    }
 }

@@ -67,4 +67,13 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
     default <T> T withOrderSetLineItemCustomFieldAction(Function<OrderSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetLineItemCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetLineItemCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetLineItemCustomFieldAction>";
+            }
+        };
+    }
 }

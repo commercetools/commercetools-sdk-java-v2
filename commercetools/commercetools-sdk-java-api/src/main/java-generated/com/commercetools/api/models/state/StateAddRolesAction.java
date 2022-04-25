@@ -51,4 +51,13 @@ public interface StateAddRolesAction extends StateUpdateAction {
     default <T> T withStateAddRolesAction(Function<StateAddRolesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateAddRolesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateAddRolesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateAddRolesAction>";
+            }
+        };
+    }
 }

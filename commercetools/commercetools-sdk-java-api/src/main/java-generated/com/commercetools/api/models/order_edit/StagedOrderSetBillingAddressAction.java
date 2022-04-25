@@ -47,4 +47,13 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
     default <T> T withStagedOrderSetBillingAddressAction(Function<StagedOrderSetBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetBillingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetBillingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetBillingAddressAction>";
+            }
+        };
+    }
 }

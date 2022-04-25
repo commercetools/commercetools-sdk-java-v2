@@ -69,4 +69,13 @@ public interface ReturnInfo {
     default <T> T withReturnInfo(Function<ReturnInfo, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfo> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfo>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReturnInfo>";
+            }
+        };
+    }
 }

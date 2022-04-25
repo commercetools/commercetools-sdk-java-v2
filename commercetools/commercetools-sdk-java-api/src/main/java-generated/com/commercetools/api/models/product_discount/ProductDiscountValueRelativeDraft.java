@@ -45,4 +45,13 @@ public interface ProductDiscountValueRelativeDraft extends ProductDiscountValueD
     default <T> T withProductDiscountValueRelativeDraft(Function<ProductDiscountValueRelativeDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueRelativeDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueRelativeDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountValueRelativeDraft>";
+            }
+        };
+    }
 }

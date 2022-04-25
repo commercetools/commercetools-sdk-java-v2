@@ -88,4 +88,13 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     default <T> T withReturnItem(Function<ReturnItem, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReturnItem> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReturnItem>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReturnItem>";
+            }
+        };
+    }
 }

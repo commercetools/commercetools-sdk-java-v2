@@ -53,4 +53,13 @@ public interface AssetChangeValue {
     default <T> T withAssetChangeValue(Function<AssetChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AssetChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AssetChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AssetChangeValue>";
+            }
+        };
+    }
 }

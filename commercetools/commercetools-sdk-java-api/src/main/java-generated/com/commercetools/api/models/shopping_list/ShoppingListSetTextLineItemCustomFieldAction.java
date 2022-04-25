@@ -70,4 +70,13 @@ public interface ShoppingListSetTextLineItemCustomFieldAction extends ShoppingLi
             Function<ShoppingListSetTextLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetTextLineItemCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetTextLineItemCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListSetTextLineItemCustomFieldAction>";
+            }
+        };
+    }
 }

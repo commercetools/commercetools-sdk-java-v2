@@ -51,4 +51,13 @@ public interface CartDiscountValueFixedDraft extends CartDiscountValueDraft {
     default <T> T withCartDiscountValueFixedDraft(Function<CartDiscountValueFixedDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueFixedDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueFixedDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountValueFixedDraft>";
+            }
+        };
+    }
 }

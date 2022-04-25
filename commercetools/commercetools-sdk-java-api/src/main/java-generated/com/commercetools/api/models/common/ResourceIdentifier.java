@@ -178,4 +178,13 @@ public interface ResourceIdentifier {
     default <T> T withResourceIdentifier(Function<ResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ResourceIdentifier>";
+            }
+        };
+    }
 }

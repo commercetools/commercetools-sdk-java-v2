@@ -57,4 +57,13 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
             Function<ParcelRemovedFromDeliveryMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelRemovedFromDeliveryMessagePayload>";
+            }
+        };
+    }
 }

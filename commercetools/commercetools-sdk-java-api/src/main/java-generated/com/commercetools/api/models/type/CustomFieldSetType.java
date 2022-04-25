@@ -53,4 +53,13 @@ public interface CustomFieldSetType extends FieldType {
     default <T> T withCustomFieldSetType(Function<CustomFieldSetType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldSetType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldSetType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldSetType>";
+            }
+        };
+    }
 }

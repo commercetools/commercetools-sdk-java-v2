@@ -54,4 +54,13 @@ public interface SearchKeyword {
     default <T> T withSearchKeyword(Function<SearchKeyword, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SearchKeyword> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SearchKeyword>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SearchKeyword>";
+            }
+        };
+    }
 }

@@ -87,4 +87,13 @@ public interface SimilarityMeasures {
     default <T> T withSimilarityMeasures(Function<SimilarityMeasures, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SimilarityMeasures> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SimilarityMeasures>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SimilarityMeasures>";
+            }
+        };
+    }
 }

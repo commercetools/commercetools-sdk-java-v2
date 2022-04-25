@@ -70,4 +70,13 @@ public interface SimilarProduct {
     default <T> T withSimilarProduct(Function<SimilarProduct, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SimilarProduct> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SimilarProduct>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SimilarProduct>";
+            }
+        };
+    }
 }

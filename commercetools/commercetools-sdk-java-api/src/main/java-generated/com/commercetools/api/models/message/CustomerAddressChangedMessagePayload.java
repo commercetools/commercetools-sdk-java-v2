@@ -49,4 +49,13 @@ public interface CustomerAddressChangedMessagePayload extends MessagePayload {
     default <T> T withCustomerAddressChangedMessagePayload(Function<CustomerAddressChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddressChangedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddressChangedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerAddressChangedMessagePayload>";
+            }
+        };
+    }
 }

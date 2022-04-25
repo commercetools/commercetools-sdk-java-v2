@@ -66,4 +66,13 @@ public interface SetApplicationVersionChange extends Change {
     default <T> T withSetApplicationVersionChange(Function<SetApplicationVersionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetApplicationVersionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetApplicationVersionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetApplicationVersionChange>";
+            }
+        };
+    }
 }

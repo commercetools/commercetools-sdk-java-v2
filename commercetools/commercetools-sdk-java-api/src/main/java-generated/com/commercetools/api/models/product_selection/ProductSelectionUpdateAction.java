@@ -56,4 +56,13 @@ public interface ProductSelectionUpdateAction
     default <T> T withProductSelectionUpdateAction(Function<ProductSelectionUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionUpdateAction>";
+            }
+        };
+    }
 }

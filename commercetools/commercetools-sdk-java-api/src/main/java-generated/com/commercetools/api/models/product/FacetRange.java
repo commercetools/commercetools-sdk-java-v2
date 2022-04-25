@@ -105,4 +105,13 @@ public interface FacetRange {
     default <T> T withFacetRange(Function<FacetRange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<FacetRange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<FacetRange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<FacetRange>";
+            }
+        };
+    }
 }

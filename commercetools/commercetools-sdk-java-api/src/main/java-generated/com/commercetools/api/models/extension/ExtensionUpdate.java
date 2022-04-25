@@ -62,4 +62,13 @@ public interface ExtensionUpdate extends
     default <T> T withExtensionUpdate(Function<ExtensionUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionUpdate>";
+            }
+        };
+    }
 }

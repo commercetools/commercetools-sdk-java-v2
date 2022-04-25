@@ -46,4 +46,13 @@ public interface MyCartRemoveItemShippingAddressAction extends MyCartUpdateActio
     default <T> T withMyCartRemoveItemShippingAddressAction(Function<MyCartRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartRemoveItemShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartRemoveItemShippingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartRemoveItemShippingAddressAction>";
+            }
+        };
+    }
 }

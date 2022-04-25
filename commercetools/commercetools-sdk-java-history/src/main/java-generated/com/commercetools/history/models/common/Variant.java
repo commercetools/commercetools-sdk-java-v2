@@ -57,4 +57,13 @@ public interface Variant {
     default <T> T withVariant(Function<Variant, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Variant> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Variant>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Variant>";
+            }
+        };
+    }
 }

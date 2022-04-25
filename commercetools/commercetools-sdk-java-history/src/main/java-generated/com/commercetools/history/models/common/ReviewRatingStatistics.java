@@ -88,4 +88,13 @@ public interface ReviewRatingStatistics {
     default <T> T withReviewRatingStatistics(Function<ReviewRatingStatistics, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewRatingStatistics> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewRatingStatistics>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewRatingStatistics>";
+            }
+        };
+    }
 }

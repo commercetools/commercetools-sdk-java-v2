@@ -38,4 +38,13 @@ public interface NotEnabledError extends ErrorObject {
     default <T> T withNotEnabledError(Function<NotEnabledError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<NotEnabledError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<NotEnabledError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<NotEnabledError>";
+            }
+        };
+    }
 }

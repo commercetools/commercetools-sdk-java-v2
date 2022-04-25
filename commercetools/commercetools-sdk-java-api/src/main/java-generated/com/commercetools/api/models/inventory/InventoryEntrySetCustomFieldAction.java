@@ -60,4 +60,13 @@ public interface InventoryEntrySetCustomFieldAction extends InventoryEntryUpdate
     default <T> T withInventoryEntrySetCustomFieldAction(Function<InventoryEntrySetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntrySetCustomFieldAction>";
+            }
+        };
+    }
 }

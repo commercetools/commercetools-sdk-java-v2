@@ -39,4 +39,13 @@ public interface CustomFieldDateTimeType extends FieldType {
     default <T> T withCustomFieldDateTimeType(Function<CustomFieldDateTimeType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldDateTimeType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldDateTimeType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldDateTimeType>";
+            }
+        };
+    }
 }

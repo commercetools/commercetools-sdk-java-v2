@@ -78,4 +78,13 @@ public interface TermFacetResult extends FacetResult {
     default <T> T withTermFacetResult(Function<TermFacetResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TermFacetResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TermFacetResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TermFacetResult>";
+            }
+        };
+    }
 }

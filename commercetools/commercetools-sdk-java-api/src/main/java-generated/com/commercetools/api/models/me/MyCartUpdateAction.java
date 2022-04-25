@@ -160,4 +160,13 @@ public interface MyCartUpdateAction extends com.commercetools.api.models.Resourc
     default <T> T withMyCartUpdateAction(Function<MyCartUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartUpdateAction>";
+            }
+        };
+    }
 }

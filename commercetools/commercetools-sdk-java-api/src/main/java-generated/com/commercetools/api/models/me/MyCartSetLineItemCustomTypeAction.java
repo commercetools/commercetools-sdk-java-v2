@@ -69,4 +69,13 @@ public interface MyCartSetLineItemCustomTypeAction extends MyCartUpdateAction {
     default <T> T withMyCartSetLineItemCustomTypeAction(Function<MyCartSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartSetLineItemCustomTypeAction>";
+            }
+        };
+    }
 }

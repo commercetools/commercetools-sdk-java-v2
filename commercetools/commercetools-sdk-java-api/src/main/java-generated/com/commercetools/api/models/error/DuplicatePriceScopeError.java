@@ -53,4 +53,13 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     default <T> T withDuplicatePriceScopeError(Function<DuplicatePriceScopeError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DuplicatePriceScopeError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DuplicatePriceScopeError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DuplicatePriceScopeError>";
+            }
+        };
+    }
 }

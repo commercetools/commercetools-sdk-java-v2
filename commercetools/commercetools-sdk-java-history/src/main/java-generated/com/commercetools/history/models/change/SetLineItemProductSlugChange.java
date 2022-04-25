@@ -85,4 +85,13 @@ public interface SetLineItemProductSlugChange extends Change {
     default <T> T withSetLineItemProductSlugChange(Function<SetLineItemProductSlugChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemProductSlugChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemProductSlugChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetLineItemProductSlugChange>";
+            }
+        };
+    }
 }

@@ -70,4 +70,13 @@ public interface SimilarProductsTaskStatus {
     default <T> T withSimilarProductsTaskStatus(Function<SimilarProductsTaskStatus, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SimilarProductsTaskStatus> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SimilarProductsTaskStatus>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SimilarProductsTaskStatus>";
+            }
+        };
+    }
 }

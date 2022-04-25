@@ -130,4 +130,13 @@ public interface ApiClient {
     default <T> T withApiClient(Function<ApiClient, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ApiClient> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ApiClient>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ApiClient>";
+            }
+        };
+    }
 }

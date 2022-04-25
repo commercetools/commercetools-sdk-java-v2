@@ -57,4 +57,13 @@ public interface PaymentSetAuthorizationAction extends PaymentUpdateAction {
     default <T> T withPaymentSetAuthorizationAction(Function<PaymentSetAuthorizationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetAuthorizationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetAuthorizationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentSetAuthorizationAction>";
+            }
+        };
+    }
 }

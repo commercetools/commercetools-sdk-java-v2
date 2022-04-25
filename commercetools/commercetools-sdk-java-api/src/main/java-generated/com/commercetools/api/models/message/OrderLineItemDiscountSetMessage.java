@@ -90,4 +90,13 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     default <T> T withOrderLineItemDiscountSetMessage(Function<OrderLineItemDiscountSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderLineItemDiscountSetMessage>";
+            }
+        };
+    }
 }

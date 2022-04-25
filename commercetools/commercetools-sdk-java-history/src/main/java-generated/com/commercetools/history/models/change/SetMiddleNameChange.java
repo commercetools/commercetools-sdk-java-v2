@@ -66,4 +66,13 @@ public interface SetMiddleNameChange extends Change {
     default <T> T withSetMiddleNameChange(Function<SetMiddleNameChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetMiddleNameChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetMiddleNameChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetMiddleNameChange>";
+            }
+        };
+    }
 }

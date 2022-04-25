@@ -56,4 +56,13 @@ public interface DiscountedLineItemPrice {
     default <T> T withDiscountedLineItemPrice(Function<DiscountedLineItemPrice, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountedLineItemPrice>";
+            }
+        };
+    }
 }

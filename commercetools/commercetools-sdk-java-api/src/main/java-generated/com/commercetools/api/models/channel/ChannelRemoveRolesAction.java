@@ -51,4 +51,13 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
     default <T> T withChannelRemoveRolesAction(Function<ChannelRemoveRolesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelRemoveRolesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelRemoveRolesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelRemoveRolesAction>";
+            }
+        };
+    }
 }

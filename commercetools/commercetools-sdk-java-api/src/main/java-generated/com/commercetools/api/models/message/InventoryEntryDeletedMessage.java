@@ -67,4 +67,13 @@ public interface InventoryEntryDeletedMessage extends Message {
     default <T> T withInventoryEntryDeletedMessage(Function<InventoryEntryDeletedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryDeletedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryDeletedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryDeletedMessage>";
+            }
+        };
+    }
 }

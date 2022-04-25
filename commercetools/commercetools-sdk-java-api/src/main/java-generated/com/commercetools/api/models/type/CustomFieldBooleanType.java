@@ -39,4 +39,13 @@ public interface CustomFieldBooleanType extends FieldType {
     default <T> T withCustomFieldBooleanType(Function<CustomFieldBooleanType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldBooleanType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldBooleanType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldBooleanType>";
+            }
+        };
+    }
 }

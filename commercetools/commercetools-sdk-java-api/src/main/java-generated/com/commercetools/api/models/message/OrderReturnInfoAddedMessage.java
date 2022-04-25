@@ -58,4 +58,13 @@ public interface OrderReturnInfoAddedMessage extends OrderMessage {
     default <T> T withOrderReturnInfoAddedMessage(Function<OrderReturnInfoAddedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderReturnInfoAddedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderReturnInfoAddedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderReturnInfoAddedMessage>";
+            }
+        };
+    }
 }

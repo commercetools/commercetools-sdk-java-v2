@@ -38,4 +38,13 @@ public interface FeatureRemovedError extends ErrorObject {
     default <T> T withFeatureRemovedError(Function<FeatureRemovedError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<FeatureRemovedError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<FeatureRemovedError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<FeatureRemovedError>";
+            }
+        };
+    }
 }

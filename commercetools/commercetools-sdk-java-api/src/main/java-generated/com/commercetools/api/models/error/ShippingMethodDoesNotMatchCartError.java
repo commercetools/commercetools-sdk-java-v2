@@ -39,4 +39,13 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
     default <T> T withShippingMethodDoesNotMatchCartError(Function<ShippingMethodDoesNotMatchCartError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDoesNotMatchCartError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDoesNotMatchCartError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodDoesNotMatchCartError>";
+            }
+        };
+    }
 }

@@ -42,4 +42,13 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
     default <T> T withShippingMethodSetDescriptionAction(Function<ShippingMethodSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodSetDescriptionAction>";
+            }
+        };
+    }
 }

@@ -49,4 +49,13 @@ public interface AssignedProductReference {
     default <T> T withAssignedProductReference(Function<AssignedProductReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AssignedProductReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AssignedProductReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AssignedProductReference>";
+            }
+        };
+    }
 }

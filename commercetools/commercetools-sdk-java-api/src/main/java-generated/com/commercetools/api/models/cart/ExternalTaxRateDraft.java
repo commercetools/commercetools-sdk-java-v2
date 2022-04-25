@@ -103,4 +103,13 @@ public interface ExternalTaxRateDraft {
     default <T> T withExternalTaxRateDraft(Function<ExternalTaxRateDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExternalTaxRateDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExternalTaxRateDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExternalTaxRateDraft>";
+            }
+        };
+    }
 }

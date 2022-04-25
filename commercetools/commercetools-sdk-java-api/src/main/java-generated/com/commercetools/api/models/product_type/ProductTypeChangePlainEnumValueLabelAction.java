@@ -57,4 +57,13 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
             Function<ProductTypeChangePlainEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangePlainEnumValueLabelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangePlainEnumValueLabelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeChangePlainEnumValueLabelAction>";
+            }
+        };
+    }
 }

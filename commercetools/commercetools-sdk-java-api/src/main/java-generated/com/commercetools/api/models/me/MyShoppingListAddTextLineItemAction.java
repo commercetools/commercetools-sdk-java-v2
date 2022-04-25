@@ -81,4 +81,13 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
     default <T> T withMyShoppingListAddTextLineItemAction(Function<MyShoppingListAddTextLineItemAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListAddTextLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListAddTextLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyShoppingListAddTextLineItemAction>";
+            }
+        };
+    }
 }

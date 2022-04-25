@@ -39,4 +39,13 @@ public interface CustomFieldStringType extends FieldType {
     default <T> T withCustomFieldStringType(Function<CustomFieldStringType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldStringType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldStringType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldStringType>";
+            }
+        };
+    }
 }

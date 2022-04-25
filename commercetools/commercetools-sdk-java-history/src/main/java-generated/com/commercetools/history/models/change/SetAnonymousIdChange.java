@@ -66,4 +66,13 @@ public interface SetAnonymousIdChange extends Change {
     default <T> T withSetAnonymousIdChange(Function<SetAnonymousIdChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAnonymousIdChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAnonymousIdChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAnonymousIdChange>";
+            }
+        };
+    }
 }

@@ -52,4 +52,13 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
     default <T> T withAuthorizationHeaderAuthentication(Function<AuthorizationHeaderAuthentication, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AuthorizationHeaderAuthentication> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AuthorizationHeaderAuthentication>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AuthorizationHeaderAuthentication>";
+            }
+        };
+    }
 }

@@ -48,4 +48,13 @@ public interface CartAddPaymentAction extends CartUpdateAction {
     default <T> T withCartAddPaymentAction(Function<CartAddPaymentAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartAddPaymentAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartAddPaymentAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartAddPaymentAction>";
+            }
+        };
+    }
 }

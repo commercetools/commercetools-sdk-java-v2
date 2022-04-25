@@ -38,4 +38,13 @@ public interface InvalidSubjectError extends ErrorObject {
     default <T> T withInvalidSubjectError(Function<InvalidSubjectError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidSubjectError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidSubjectError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidSubjectError>";
+            }
+        };
+    }
 }

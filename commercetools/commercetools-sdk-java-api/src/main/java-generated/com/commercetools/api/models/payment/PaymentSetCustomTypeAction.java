@@ -61,4 +61,13 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
     default <T> T withPaymentSetCustomTypeAction(Function<PaymentSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentSetCustomTypeAction>";
+            }
+        };
+    }
 }

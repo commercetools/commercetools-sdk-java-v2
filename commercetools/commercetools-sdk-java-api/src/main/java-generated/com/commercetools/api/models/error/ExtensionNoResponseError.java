@@ -53,4 +53,13 @@ public interface ExtensionNoResponseError extends ErrorObject {
     default <T> T withExtensionNoResponseError(Function<ExtensionNoResponseError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionNoResponseError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionNoResponseError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionNoResponseError>";
+            }
+        };
+    }
 }

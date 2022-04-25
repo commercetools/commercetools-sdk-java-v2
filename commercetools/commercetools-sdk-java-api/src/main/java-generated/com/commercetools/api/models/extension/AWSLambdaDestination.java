@@ -71,4 +71,13 @@ public interface AWSLambdaDestination extends ExtensionDestination {
     default <T> T withAWSLambdaDestination(Function<AWSLambdaDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AWSLambdaDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AWSLambdaDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AWSLambdaDestination>";
+            }
+        };
+    }
 }

@@ -66,4 +66,13 @@ public interface ChangeOrderHintChange extends Change {
     default <T> T withChangeOrderHintChange(Function<ChangeOrderHintChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeOrderHintChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeOrderHintChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeOrderHintChange>";
+            }
+        };
+    }
 }

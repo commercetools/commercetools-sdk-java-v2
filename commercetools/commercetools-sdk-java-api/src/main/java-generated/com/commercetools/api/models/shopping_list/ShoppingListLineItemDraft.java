@@ -79,4 +79,13 @@ public interface ShoppingListLineItemDraft
     default <T> T withShoppingListLineItemDraft(Function<ShoppingListLineItemDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItemDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListLineItemDraft>";
+            }
+        };
+    }
 }

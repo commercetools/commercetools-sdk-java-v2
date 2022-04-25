@@ -58,4 +58,13 @@ public interface CustomerAddressAddedMessage extends Message {
     default <T> T withCustomerAddressAddedMessage(Function<CustomerAddressAddedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddressAddedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddressAddedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerAddressAddedMessage>";
+            }
+        };
+    }
 }

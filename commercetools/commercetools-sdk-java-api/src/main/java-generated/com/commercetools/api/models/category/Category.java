@@ -230,4 +230,12 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
         return com.commercetools.api.models.category.CategoryReference.builder().id(getId()).build();
     }
 
+    public static com.fasterxml.jackson.core.type.TypeReference<Category> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Category>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Category>";
+            }
+        };
+    }
 }

@@ -66,4 +66,13 @@ public interface SetValidUntilChange extends Change {
     default <T> T withSetValidUntilChange(Function<SetValidUntilChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetValidUntilChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetValidUntilChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetValidUntilChange>";
+            }
+        };
+    }
 }

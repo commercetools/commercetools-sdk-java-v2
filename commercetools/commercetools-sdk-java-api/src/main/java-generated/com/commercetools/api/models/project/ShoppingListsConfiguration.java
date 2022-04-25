@@ -45,4 +45,13 @@ public interface ShoppingListsConfiguration {
     default <T> T withShoppingListsConfiguration(Function<ShoppingListsConfiguration, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListsConfiguration> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListsConfiguration>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListsConfiguration>";
+            }
+        };
+    }
 }

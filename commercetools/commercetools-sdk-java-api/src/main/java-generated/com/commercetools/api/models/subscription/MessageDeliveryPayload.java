@@ -93,4 +93,13 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
     default <T> T withMessageDeliveryPayload(Function<MessageDeliveryPayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MessageDeliveryPayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MessageDeliveryPayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MessageDeliveryPayload>";
+            }
+        };
+    }
 }

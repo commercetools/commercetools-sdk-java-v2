@@ -79,4 +79,13 @@ public interface SetAssetCustomTypeChange extends Change {
     default <T> T withSetAssetCustomTypeChange(Function<SetAssetCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAssetCustomTypeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAssetCustomTypeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAssetCustomTypeChange>";
+            }
+        };
+    }
 }

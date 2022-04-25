@@ -50,4 +50,13 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
             Function<StagedOrderSetShippingMethodTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxAmountAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodTaxAmountAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetShippingMethodTaxAmountAction>";
+            }
+        };
+    }
 }

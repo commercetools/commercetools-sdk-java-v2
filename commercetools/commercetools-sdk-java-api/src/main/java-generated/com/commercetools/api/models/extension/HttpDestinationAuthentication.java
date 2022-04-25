@@ -35,4 +35,13 @@ public interface HttpDestinationAuthentication {
     default <T> T withHttpDestinationAuthentication(Function<HttpDestinationAuthentication, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<HttpDestinationAuthentication> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<HttpDestinationAuthentication>() {
+            @Override
+            public String toString() {
+                return "TypeReference<HttpDestinationAuthentication>";
+            }
+        };
+    }
 }

@@ -99,4 +99,13 @@ public interface ZonePagedQueryResponse extends com.commercetools.api.models.Res
     default <T> T withZonePagedQueryResponse(Function<ZonePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZonePagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZonePagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZonePagedQueryResponse>";
+            }
+        };
+    }
 }

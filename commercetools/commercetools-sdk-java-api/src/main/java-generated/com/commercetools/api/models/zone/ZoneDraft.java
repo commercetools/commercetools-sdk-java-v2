@@ -80,4 +80,13 @@ public interface ZoneDraft {
     default <T> T withZoneDraft(Function<ZoneDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneDraft>";
+            }
+        };
+    }
 }

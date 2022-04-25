@@ -75,4 +75,13 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     default <T> T withReviewPagedQueryResponse(Function<ReviewPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewPagedQueryResponse>";
+            }
+        };
+    }
 }

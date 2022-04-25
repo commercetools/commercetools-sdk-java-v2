@@ -68,4 +68,13 @@ public interface Label {
     default <T> T withLabel(Function<Label, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Label> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Label>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Label>";
+            }
+        };
+    }
 }

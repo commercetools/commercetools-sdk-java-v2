@@ -75,4 +75,13 @@ public interface PaymentPagedQueryResponse extends com.commercetools.api.models.
     default <T> T withPaymentPagedQueryResponse(Function<PaymentPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentPagedQueryResponse>";
+            }
+        };
+    }
 }

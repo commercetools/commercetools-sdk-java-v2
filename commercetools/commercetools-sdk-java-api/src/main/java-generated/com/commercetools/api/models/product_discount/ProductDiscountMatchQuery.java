@@ -67,4 +67,13 @@ public interface ProductDiscountMatchQuery {
     default <T> T withProductDiscountMatchQuery(Function<ProductDiscountMatchQuery, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountMatchQuery> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountMatchQuery>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountMatchQuery>";
+            }
+        };
+    }
 }

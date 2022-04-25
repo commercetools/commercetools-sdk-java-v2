@@ -56,4 +56,13 @@ public interface DiscountCodeUpdate extends
     default <T> T withDiscountCodeUpdate(Function<DiscountCodeUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeUpdate>";
+            }
+        };
+    }
 }

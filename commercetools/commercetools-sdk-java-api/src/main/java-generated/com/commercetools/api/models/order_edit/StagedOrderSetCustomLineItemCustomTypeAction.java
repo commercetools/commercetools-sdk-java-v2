@@ -73,4 +73,13 @@ public interface StagedOrderSetCustomLineItemCustomTypeAction extends StagedOrde
             Function<StagedOrderSetCustomLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetCustomLineItemCustomTypeAction>";
+            }
+        };
+    }
 }

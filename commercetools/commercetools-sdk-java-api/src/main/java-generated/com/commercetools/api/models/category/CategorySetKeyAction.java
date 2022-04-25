@@ -48,4 +48,13 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
     default <T> T withCategorySetKeyAction(Function<CategorySetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySetKeyAction>";
+            }
+        };
+    }
 }

@@ -52,4 +52,13 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
     default <T> T withProductTypeChangeInputHintAction(Function<ProductTypeChangeInputHintAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeInputHintAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeChangeInputHintAction>";
+            }
+        };
+    }
 }

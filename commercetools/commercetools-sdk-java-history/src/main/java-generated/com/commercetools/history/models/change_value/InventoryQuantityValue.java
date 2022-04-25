@@ -50,4 +50,13 @@ public interface InventoryQuantityValue {
     default <T> T withInventoryQuantityValue(Function<InventoryQuantityValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryQuantityValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryQuantityValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryQuantityValue>";
+            }
+        };
+    }
 }

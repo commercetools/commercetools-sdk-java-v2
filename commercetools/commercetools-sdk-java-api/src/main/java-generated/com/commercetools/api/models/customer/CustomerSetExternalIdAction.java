@@ -46,4 +46,13 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
     default <T> T withCustomerSetExternalIdAction(Function<CustomerSetExternalIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetExternalIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetExternalIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetExternalIdAction>";
+            }
+        };
+    }
 }

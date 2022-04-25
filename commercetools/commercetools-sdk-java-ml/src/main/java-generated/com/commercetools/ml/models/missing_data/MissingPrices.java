@@ -56,4 +56,13 @@ public interface MissingPrices {
     default <T> T withMissingPrices(Function<MissingPrices, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingPrices> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingPrices>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingPrices>";
+            }
+        };
+    }
 }

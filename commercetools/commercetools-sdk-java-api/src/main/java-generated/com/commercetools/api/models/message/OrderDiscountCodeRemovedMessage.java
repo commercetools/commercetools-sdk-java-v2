@@ -58,4 +58,13 @@ public interface OrderDiscountCodeRemovedMessage extends OrderMessage {
     default <T> T withOrderDiscountCodeRemovedMessage(Function<OrderDiscountCodeRemovedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderDiscountCodeRemovedMessage>";
+            }
+        };
+    }
 }

@@ -35,4 +35,13 @@ public interface DeliveryFormat {
     default <T> T withDeliveryFormat(Function<DeliveryFormat, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryFormat> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryFormat>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DeliveryFormat>";
+            }
+        };
+    }
 }

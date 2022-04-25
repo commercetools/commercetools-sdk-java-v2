@@ -51,4 +51,13 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     default <T> T withProjectChangeCartsConfigurationAction(Function<ProjectChangeCartsConfigurationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCartsConfigurationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCartsConfigurationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeCartsConfigurationAction>";
+            }
+        };
+    }
 }

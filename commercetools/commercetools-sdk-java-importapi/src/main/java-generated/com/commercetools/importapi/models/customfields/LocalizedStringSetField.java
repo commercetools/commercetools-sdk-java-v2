@@ -54,4 +54,13 @@ public interface LocalizedStringSetField extends CustomField {
     default <T> T withLocalizedStringSetField(Function<LocalizedStringSetField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LocalizedStringSetField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LocalizedStringSetField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LocalizedStringSetField>";
+            }
+        };
+    }
 }

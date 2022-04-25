@@ -70,4 +70,13 @@ public interface DeliveryChangeValue {
     default <T> T withDeliveryChangeValue(Function<DeliveryChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DeliveryChangeValue>";
+            }
+        };
+    }
 }

@@ -66,4 +66,13 @@ public interface Reservation {
     default <T> T withReservation(Function<Reservation, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Reservation> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Reservation>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Reservation>";
+            }
+        };
+    }
 }

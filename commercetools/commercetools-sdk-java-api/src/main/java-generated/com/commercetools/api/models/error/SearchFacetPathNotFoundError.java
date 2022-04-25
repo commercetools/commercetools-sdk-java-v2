@@ -38,4 +38,13 @@ public interface SearchFacetPathNotFoundError extends ErrorObject {
     default <T> T withSearchFacetPathNotFoundError(Function<SearchFacetPathNotFoundError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SearchFacetPathNotFoundError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SearchFacetPathNotFoundError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SearchFacetPathNotFoundError>";
+            }
+        };
+    }
 }

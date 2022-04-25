@@ -76,4 +76,13 @@ public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDra
     default <T> T withCartDiscountValueGiftLineItemDraft(Function<CartDiscountValueGiftLineItemDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueGiftLineItemDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueGiftLineItemDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountValueGiftLineItemDraft>";
+            }
+        };
+    }
 }

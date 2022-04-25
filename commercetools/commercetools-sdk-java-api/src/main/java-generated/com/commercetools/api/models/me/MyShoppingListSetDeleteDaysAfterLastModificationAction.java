@@ -45,4 +45,13 @@ public interface MyShoppingListSetDeleteDaysAfterLastModificationAction extends 
             Function<MyShoppingListSetDeleteDaysAfterLastModificationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetDeleteDaysAfterLastModificationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetDeleteDaysAfterLastModificationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyShoppingListSetDeleteDaysAfterLastModificationAction>";
+            }
+        };
+    }
 }

@@ -58,4 +58,13 @@ public interface ShippingMethodTaxAmountChangeValue {
     default <T> T withShippingMethodTaxAmountChangeValue(Function<ShippingMethodTaxAmountChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodTaxAmountChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodTaxAmountChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodTaxAmountChangeValue>";
+            }
+        };
+    }
 }

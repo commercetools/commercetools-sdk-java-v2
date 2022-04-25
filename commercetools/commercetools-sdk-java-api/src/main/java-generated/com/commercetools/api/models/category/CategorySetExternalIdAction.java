@@ -46,4 +46,13 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
     default <T> T withCategorySetExternalIdAction(Function<CategorySetExternalIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetExternalIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetExternalIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySetExternalIdAction>";
+            }
+        };
+    }
 }

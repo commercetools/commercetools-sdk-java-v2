@@ -46,4 +46,13 @@ public interface CartSetCountryAction extends CartUpdateAction {
     default <T> T withCartSetCountryAction(Function<CartSetCountryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetCountryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetCountryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetCountryAction>";
+            }
+        };
+    }
 }

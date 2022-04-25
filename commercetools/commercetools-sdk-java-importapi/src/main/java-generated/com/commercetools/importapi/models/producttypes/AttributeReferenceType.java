@@ -49,4 +49,13 @@ public interface AttributeReferenceType extends AttributeType {
     default <T> T withAttributeReferenceType(Function<AttributeReferenceType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeReferenceType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeReferenceType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeReferenceType>";
+            }
+        };
+    }
 }

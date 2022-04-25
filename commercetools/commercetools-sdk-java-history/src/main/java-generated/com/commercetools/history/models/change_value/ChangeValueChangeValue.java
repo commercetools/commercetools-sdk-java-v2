@@ -45,4 +45,13 @@ public interface ChangeValueChangeValue {
     default <T> T withChangeValueChangeValue(Function<ChangeValueChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeValueChangeValue>";
+            }
+        };
+    }
 }

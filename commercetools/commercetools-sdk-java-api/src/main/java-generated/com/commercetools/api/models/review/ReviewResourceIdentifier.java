@@ -40,4 +40,13 @@ public interface ReviewResourceIdentifier
     default <T> T withReviewResourceIdentifier(Function<ReviewResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewResourceIdentifier>";
+            }
+        };
+    }
 }

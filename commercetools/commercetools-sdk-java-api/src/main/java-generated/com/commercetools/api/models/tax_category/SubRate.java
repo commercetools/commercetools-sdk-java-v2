@@ -56,4 +56,13 @@ public interface SubRate {
     default <T> T withSubRate(Function<SubRate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SubRate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SubRate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SubRate>";
+            }
+        };
+    }
 }

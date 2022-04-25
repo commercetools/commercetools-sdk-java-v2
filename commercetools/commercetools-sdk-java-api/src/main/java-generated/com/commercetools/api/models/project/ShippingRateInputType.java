@@ -44,4 +44,13 @@ public interface ShippingRateInputType {
     default <T> T withShippingRateInputType(Function<ShippingRateInputType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingRateInputType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingRateInputType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingRateInputType>";
+            }
+        };
+    }
 }

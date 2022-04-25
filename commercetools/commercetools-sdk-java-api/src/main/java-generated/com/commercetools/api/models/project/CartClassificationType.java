@@ -54,4 +54,13 @@ public interface CartClassificationType extends ShippingRateInputType {
     default <T> T withCartClassificationType(Function<CartClassificationType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartClassificationType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartClassificationType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartClassificationType>";
+            }
+        };
+    }
 }

@@ -74,4 +74,13 @@ public interface ShippingMethodPagedQueryResponse
     default <T> T withShippingMethodPagedQueryResponse(Function<ShippingMethodPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodPagedQueryResponse>";
+            }
+        };
+    }
 }

@@ -95,4 +95,13 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
     default <T> T withStoreUpdateAction(Function<StoreUpdateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreUpdateAction>";
+            }
+        };
+    }
 }

@@ -62,4 +62,13 @@ public interface RemoveDiscountCodeChange extends Change {
     default <T> T withRemoveDiscountCodeChange(Function<RemoveDiscountCodeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveDiscountCodeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveDiscountCodeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveDiscountCodeChange>";
+            }
+        };
+    }
 }

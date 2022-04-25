@@ -67,4 +67,13 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
             Function<TypeChangeLocalizedEnumValueOrderAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeLocalizedEnumValueOrderAction>";
+            }
+        };
+    }
 }

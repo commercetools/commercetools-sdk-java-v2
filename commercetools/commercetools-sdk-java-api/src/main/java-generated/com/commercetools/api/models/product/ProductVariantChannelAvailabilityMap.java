@@ -46,4 +46,13 @@ public interface ProductVariantChannelAvailabilityMap {
     default <T> T withProductVariantChannelAvailabilityMap(Function<ProductVariantChannelAvailabilityMap, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantChannelAvailabilityMap> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantChannelAvailabilityMap>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductVariantChannelAvailabilityMap>";
+            }
+        };
+    }
 }

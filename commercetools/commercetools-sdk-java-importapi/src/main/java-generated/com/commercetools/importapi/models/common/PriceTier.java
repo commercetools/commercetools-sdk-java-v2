@@ -61,4 +61,13 @@ public interface PriceTier {
     default <T> T withPriceTier(Function<PriceTier, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceTier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceTier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PriceTier>";
+            }
+        };
+    }
 }

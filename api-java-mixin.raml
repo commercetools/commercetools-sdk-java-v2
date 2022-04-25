@@ -245,3 +245,55 @@ types:
       public default com.commercetools.api.models.common.Reference toReference() {
           return com.commercetools.api.models.zone.ZoneReference.builder().id(getId()).build();
       }
+  CentPrecisionMoney:
+    (java-mixin): |
+      public static CentPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount) {
+          return MoneyUtil.of(monetaryAmount);
+      }
+      public default CentPrecisionMoneyDraft toDraft() {
+          return CentPrecisionMoneyDraft.of(this);
+      }
+  CentPrecisionMoneyDraft:
+    (java-mixin): |
+      public static CentPrecisionMoneyDraft of(final javax.money.MonetaryAmount monetaryAmount) {
+          return MoneyUtil.draftOf(monetaryAmount);
+      }
+      public static CentPrecisionMoneyDraft of(final CentPrecisionMoney template) {
+          CentPrecisionMoneyDraftImpl instance = new CentPrecisionMoneyDraftImpl();
+          instance.setCentAmount(template.getCentAmount());
+          instance.setCurrencyCode(template.getCurrencyCode());
+          instance.setFractionDigits(template.getFractionDigits());
+          return instance;
+      }
+  HighPrecisionMoney:
+    (java-mixin): |
+      public static HighPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
+          return MoneyUtil.of(monetaryAmount, fractionDigits);
+      }
+      public default HighPrecisionMoneyDraft toDraft() {
+          return HighPrecisionMoneyDraft.of(this);
+      }
+  HighPrecisionMoneyDraft:
+    (java-mixin): |
+      public static HighPrecisionMoneyDraft of(javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
+          return MoneyUtil.draftOf(monetaryAmount, fractionDigits);
+      }
+      public static HighPrecisionMoneyDraft of(final HighPrecisionMoney template) {
+          HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
+          instance.setCentAmount(template.getCentAmount());
+          instance.setCurrencyCode(template.getCurrencyCode());
+          instance.setFractionDigits(template.getFractionDigits());
+          instance.setPreciseAmount(template.getPreciseAmount());
+          return instance;
+      }
+  Money:
+    (java-mixin): |
+      public default TypedMoneyDraft toDraft() {
+          if (this instanceof TypedMoneyDraft) {
+              return (TypedMoneyDraft) this;
+          }
+          return TypedMoneyDraft.centPrecisionBuilder()
+                  .centAmount(this.getCentAmount())
+                  .currencyCode(this.getCurrencyCode())
+                  .build();
+      }

@@ -55,6 +55,14 @@ public interface HighPrecisionMoney extends TypedMoney {
         return helper.apply(this);
     }
 
+    public static HighPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
+        return MoneyUtil.of(monetaryAmount, fractionDigits);
+    }
+
+    public default HighPrecisionMoneyDraft toDraft() {
+        return HighPrecisionMoneyDraft.of(this);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney>() {
             @Override

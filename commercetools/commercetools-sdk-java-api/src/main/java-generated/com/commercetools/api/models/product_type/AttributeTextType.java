@@ -36,4 +36,13 @@ public interface AttributeTextType extends AttributeType {
     default <T> T withAttributeTextType(Function<AttributeTextType, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeTextType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeTextType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeTextType>";
+            }
+        };
+    }
 }

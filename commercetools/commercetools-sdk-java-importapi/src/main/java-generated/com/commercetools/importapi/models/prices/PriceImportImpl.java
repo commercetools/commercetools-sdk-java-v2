@@ -83,7 +83,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>Price.value</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    *  <p>Maps to <code>Price.value</code>.</p>
     */
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;

@@ -79,4 +79,13 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     default <T> T withProductPriceDiscountsSetUpdatedPrice(Function<ProductPriceDiscountsSetUpdatedPrice, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetUpdatedPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetUpdatedPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductPriceDiscountsSetUpdatedPrice>";
+            }
+        };
+    }
 }

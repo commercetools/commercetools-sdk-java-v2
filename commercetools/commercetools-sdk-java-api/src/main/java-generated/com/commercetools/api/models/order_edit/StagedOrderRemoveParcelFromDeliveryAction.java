@@ -49,4 +49,13 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
             Function<StagedOrderRemoveParcelFromDeliveryAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveParcelFromDeliveryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveParcelFromDeliveryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderRemoveParcelFromDeliveryAction>";
+            }
+        };
+    }
 }

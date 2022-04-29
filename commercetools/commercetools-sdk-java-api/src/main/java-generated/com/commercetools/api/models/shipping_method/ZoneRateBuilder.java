@@ -31,11 +31,18 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return this;
     }
 
-    public ZoneRateBuilder withShippingRates(
-            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
-        this.shippingRates = new ArrayList<>();
-        this.shippingRates
-                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()).build());
+    public ZoneRateBuilder shippingRates(
+            final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates) {
+        this.shippingRates = shippingRates;
+        return this;
+    }
+
+    public ZoneRateBuilder plusShippingRates(
+            final com.commercetools.api.models.shipping_method.ShippingRate... shippingRates) {
+        if (this.shippingRates == null) {
+            this.shippingRates = new ArrayList<>();
+        }
+        this.shippingRates.addAll(Arrays.asList(shippingRates));
         return this;
     }
 
@@ -49,9 +56,11 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return this;
     }
 
-    public ZoneRateBuilder shippingRates(
-            final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates) {
-        this.shippingRates = shippingRates;
+    public ZoneRateBuilder withShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
+        this.shippingRates = new ArrayList<>();
+        this.shippingRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()).build());
         return this;
     }
 

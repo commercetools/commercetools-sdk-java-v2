@@ -48,4 +48,13 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     default <T> T withSubscriptionSetMessagesAction(Function<SubscriptionSetMessagesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetMessagesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetMessagesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SubscriptionSetMessagesAction>";
+            }
+        };
+    }
 }

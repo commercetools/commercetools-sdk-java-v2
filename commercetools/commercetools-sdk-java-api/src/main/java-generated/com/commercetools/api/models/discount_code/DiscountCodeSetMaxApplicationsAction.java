@@ -47,4 +47,13 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     default <T> T withDiscountCodeSetMaxApplicationsAction(Function<DiscountCodeSetMaxApplicationsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeSetMaxApplicationsAction>";
+            }
+        };
+    }
 }

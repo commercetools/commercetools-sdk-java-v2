@@ -29,9 +29,6 @@ public interface ShippingInfoImportDraft {
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("price")
@@ -123,5 +120,14 @@ public interface ShippingInfoImportDraft {
 
     default <T> T withShippingInfoImportDraft(Function<ShippingInfoImportDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingInfoImportDraft>";
+            }
+        };
     }
 }

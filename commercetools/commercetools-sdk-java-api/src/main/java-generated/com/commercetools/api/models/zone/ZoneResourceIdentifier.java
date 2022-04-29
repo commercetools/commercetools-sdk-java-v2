@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ZoneResourceIdentifierImpl.class)
-public interface ZoneResourceIdentifier extends ResourceIdentifier {
+public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Zone> {
 
     String ZONE = "zone";
 
@@ -59,5 +59,14 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withZoneResourceIdentifier(Function<ZoneResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneResourceIdentifier>";
+            }
+        };
     }
 }

@@ -55,4 +55,13 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
             Function<PaymentChangeTransactionTimestampAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentChangeTransactionTimestampAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentChangeTransactionTimestampAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentChangeTransactionTimestampAction>";
+            }
+        };
+    }
 }

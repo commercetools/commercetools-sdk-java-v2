@@ -66,9 +66,6 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
     public PriceDraftImportImpl() {
     }
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }

@@ -17,10 +17,18 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
         return this;
     }
 
-    public ChangeValueAbsoluteChangeValueBuilder withMoney(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.money = new ArrayList<>();
-        this.money.add(builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build());
+    public ChangeValueAbsoluteChangeValueBuilder money(
+            final java.util.List<com.commercetools.history.models.common.Money> money) {
+        this.money = money;
+        return this;
+    }
+
+    public ChangeValueAbsoluteChangeValueBuilder plusMoney(
+            final com.commercetools.history.models.common.Money... money) {
+        if (this.money == null) {
+            this.money = new ArrayList<>();
+        }
+        this.money.addAll(Arrays.asList(money));
         return this;
     }
 
@@ -33,9 +41,10 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
         return this;
     }
 
-    public ChangeValueAbsoluteChangeValueBuilder money(
-            final java.util.List<com.commercetools.history.models.common.Money> money) {
-        this.money = money;
+    public ChangeValueAbsoluteChangeValueBuilder withMoney(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.money = new ArrayList<>();
+        this.money.add(builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build());
         return this;
     }
 

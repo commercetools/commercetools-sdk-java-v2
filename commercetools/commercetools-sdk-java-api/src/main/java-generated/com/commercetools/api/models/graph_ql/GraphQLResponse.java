@@ -52,4 +52,13 @@ public interface GraphQLResponse {
     default <T> T withGraphQLResponse(Function<GraphQLResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GraphQLResponse>";
+            }
+        };
+    }
 }

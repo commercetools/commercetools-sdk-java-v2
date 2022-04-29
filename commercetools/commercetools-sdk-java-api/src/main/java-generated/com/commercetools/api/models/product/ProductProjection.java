@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductProjectionImpl.class)
 public interface ProductProjection
-        extends BaseResource, com.commercetools.api.models.DomainResource<ProductProjection> {
+        extends BaseResource, ProductDataLike, com.commercetools.api.models.DomainResource<ProductProjection> {
 
     /**
     *  <p>The unique ID of the Product.</p>
@@ -211,5 +211,14 @@ public interface ProductProjection
 
     default <T> T withProductProjection(Function<ProductProjection, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductProjection> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductProjection>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductProjection>";
+            }
+        };
     }
 }

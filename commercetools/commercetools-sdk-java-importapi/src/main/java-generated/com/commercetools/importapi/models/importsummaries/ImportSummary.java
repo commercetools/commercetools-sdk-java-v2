@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Describes the status of an <a href="/import-container#importcontainer">ImportContainer</a> by the number of resources in each <a href="/processing-state#processingState">Processing State</a>.
+*  <p>Describes the status of an <a href="/import-container#importcontainer">ImportContainer</a> by the number of resources in each <a href="/processing-state#processingstate">Processing State</a>.
 *  Can be used to monitor the import progress per <a href="/import-container">Import Container</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportSummary {
 
     /**
-    *  <p>The import status of an <a href="/import-container#importcontainer">ImportContainer</a> given by the number of resources in each <a href="/processing-state#processingState">Processing State</a>.</p>
+    *  <p>The import status of an <a href="/import-container#importcontainer">ImportContainer</a> given by the number of resources in each <a href="/processing-state#processingstate">Processing State</a>.</p>
     */
     @NotNull
     @Valid
@@ -61,5 +61,14 @@ public interface ImportSummary {
 
     default <T> T withImportSummary(Function<ImportSummary, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportSummary> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportSummary>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportSummary>";
+            }
+        };
     }
 }

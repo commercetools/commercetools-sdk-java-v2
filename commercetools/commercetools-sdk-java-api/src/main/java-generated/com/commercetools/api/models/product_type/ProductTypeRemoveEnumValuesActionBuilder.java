@@ -28,6 +28,14 @@ public class ProductTypeRemoveEnumValuesActionBuilder implements Builder<Product
         return this;
     }
 
+    public ProductTypeRemoveEnumValuesActionBuilder plusKeys(final String... keys) {
+        if (this.keys == null) {
+            this.keys = new ArrayList<>();
+        }
+        this.keys.addAll(Arrays.asList(keys));
+        return this;
+    }
+
     public String getAttributeName() {
         return this.attributeName;
     }

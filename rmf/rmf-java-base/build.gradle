@@ -6,7 +6,8 @@ dependencies {
     api "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${versions.jackson}"
     api commons.lang3
     api "org.slf4j:slf4j-api:${versions.slf4j}"
-    api "net.jodah:failsafe:${versions.failsafe}"
+    api "dev.failsafe:failsafe:${versions.failsafe}"
+    api "com.spotify:completable-futures:${versions.completableFutures}"
 }
 
 

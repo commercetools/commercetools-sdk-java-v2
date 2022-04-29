@@ -132,6 +132,10 @@
             "name": "nested",
             "value": [
                 {
+                    "name": "nested-string",
+                    "value": "foo"
+                },
+                {
                     "name": "nested-enum",
                     "value": {
                         "key": "foo",
@@ -145,6 +149,10 @@
             "value": [
                 [
                     {
+                        "name": "set-nested-string",
+                        "value": "foo"
+                    },
+                    {
                         "name": "set-nested-enum",
                         "value": {
                             "key": "foo",
@@ -157,6 +165,26 @@
         {
             "name": "set-empty",
             "value": []
+        },
+        {
+            "name": "localizedNotes",
+            "value": [
+                {
+                    "de-DE": "Foo",
+                    "en": "Foo",
+                    "key": "FOO"
+                },
+                {
+                    "de-DE": "Bar",
+                    "en": "Bar",
+                    "key": "BAR"
+                },
+                {
+                    "de-DE": "Baz",
+                    "en": "Baz",
+                    "key": "BAZ"
+                }
+            ]
         }
     ]
 }

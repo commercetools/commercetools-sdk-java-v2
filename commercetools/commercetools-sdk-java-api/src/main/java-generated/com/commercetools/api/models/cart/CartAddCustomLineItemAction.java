@@ -19,10 +19,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartAddCustomLineItemActionImpl.class)
-public interface CartAddCustomLineItemAction extends CartUpdateAction {
+public interface CartAddCustomLineItemAction
+        extends CartUpdateAction, com.commercetools.api.models.CustomizableDraft<CartAddCustomLineItemAction> {
 
     String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("money")
@@ -48,6 +53,9 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
+    /**
+    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
@@ -96,5 +104,14 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
 
     default <T> T withCartAddCustomLineItemAction(Function<CartAddCustomLineItemAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartAddCustomLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartAddCustomLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartAddCustomLineItemAction>";
+            }
+        };
     }
 }

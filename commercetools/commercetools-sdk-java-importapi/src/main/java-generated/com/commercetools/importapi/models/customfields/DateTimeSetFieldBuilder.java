@@ -21,6 +21,14 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
         return this;
     }
 
+    public DateTimeSetFieldBuilder plusValue(final java.time.ZonedDateTime... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     public java.util.List<java.time.ZonedDateTime> getValue() {
         return this.value;
     }

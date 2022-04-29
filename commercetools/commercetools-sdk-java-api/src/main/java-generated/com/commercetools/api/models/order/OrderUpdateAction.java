@@ -70,6 +70,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderUpdateItemShippingAddressActionImpl.class, name = OrderUpdateItemShippingAddressAction.UPDATE_ITEM_SHIPPING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderUpdateSyncInfoActionImpl.class, name = OrderUpdateSyncInfoAction.UPDATE_SYNC_INFO) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = OrderUpdateActionImpl.class, visible = true)
+@JsonDeserialize(as = OrderUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface OrderUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<OrderUpdateAction> {
 
@@ -77,7 +78,240 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.order.OrderAddDeliveryActionBuilder addDeliveryBuilder() {
+        return com.commercetools.api.models.order.OrderAddDeliveryActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderAddItemShippingAddressActionBuilder addItemShippingAddressBuilder() {
+        return com.commercetools.api.models.order.OrderAddItemShippingAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderAddParcelToDeliveryActionBuilder addParcelToDeliveryBuilder() {
+        return com.commercetools.api.models.order.OrderAddParcelToDeliveryActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderAddPaymentActionBuilder addPaymentBuilder() {
+        return com.commercetools.api.models.order.OrderAddPaymentActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderAddReturnInfoActionBuilder addReturnInfoBuilder() {
+        return com.commercetools.api.models.order.OrderAddReturnInfoActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderChangeOrderStateActionBuilder changeOrderStateBuilder() {
+        return com.commercetools.api.models.order.OrderChangeOrderStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderChangePaymentStateActionBuilder changePaymentStateBuilder() {
+        return com.commercetools.api.models.order.OrderChangePaymentStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderChangeShipmentStateActionBuilder changeShipmentStateBuilder() {
+        return com.commercetools.api.models.order.OrderChangeShipmentStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderImportCustomLineItemStateActionBuilder importCustomLineItemStateBuilder() {
+        return com.commercetools.api.models.order.OrderImportCustomLineItemStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderImportLineItemStateActionBuilder importLineItemStateBuilder() {
+        return com.commercetools.api.models.order.OrderImportLineItemStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderRemoveDeliveryActionBuilder removeDeliveryBuilder() {
+        return com.commercetools.api.models.order.OrderRemoveDeliveryActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderRemoveItemShippingAddressActionBuilder removeItemShippingAddressBuilder() {
+        return com.commercetools.api.models.order.OrderRemoveItemShippingAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderRemoveParcelFromDeliveryActionBuilder removeParcelFromDeliveryBuilder() {
+        return com.commercetools.api.models.order.OrderRemoveParcelFromDeliveryActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderRemovePaymentActionBuilder removePaymentBuilder() {
+        return com.commercetools.api.models.order.OrderRemovePaymentActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetBillingAddressActionBuilder setBillingAddressBuilder() {
+        return com.commercetools.api.models.order.OrderSetBillingAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetBillingAddressCustomFieldActionBuilder setBillingAddressCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetBillingAddressCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeActionBuilder setBillingAddressCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetCustomLineItemCustomFieldActionBuilder setCustomLineItemCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetCustomLineItemCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetCustomLineItemCustomTypeActionBuilder setCustomLineItemCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetCustomLineItemCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetCustomLineItemShippingDetailsActionBuilder setCustomLineItemShippingDetailsBuilder() {
+        return com.commercetools.api.models.order.OrderSetCustomLineItemShippingDetailsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetCustomerEmailActionBuilder setCustomerEmailBuilder() {
+        return com.commercetools.api.models.order.OrderSetCustomerEmailActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetCustomerIdActionBuilder setCustomerIdBuilder() {
+        return com.commercetools.api.models.order.OrderSetCustomerIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetDeliveryAddressActionBuilder setDeliveryAddressBuilder() {
+        return com.commercetools.api.models.order.OrderSetDeliveryAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetDeliveryAddressCustomFieldActionBuilder setDeliveryAddressCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetDeliveryAddressCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetDeliveryAddressCustomTypeActionBuilder setDeliveryAddressCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetDeliveryAddressCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetDeliveryCustomFieldActionBuilder setDeliveryCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetDeliveryCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetDeliveryCustomTypeActionBuilder setDeliveryCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetDeliveryCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetDeliveryItemsActionBuilder setDeliveryItemsBuilder() {
+        return com.commercetools.api.models.order.OrderSetDeliveryItemsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldActionBuilder setItemShippingAddressCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetItemShippingAddressCustomTypeActionBuilder setItemShippingAddressCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetItemShippingAddressCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetLineItemCustomFieldActionBuilder setLineItemCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetLineItemCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetLineItemCustomTypeActionBuilder setLineItemCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetLineItemCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetLineItemShippingDetailsActionBuilder setLineItemShippingDetailsBuilder() {
+        return com.commercetools.api.models.order.OrderSetLineItemShippingDetailsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetLocaleActionBuilder setLocaleBuilder() {
+        return com.commercetools.api.models.order.OrderSetLocaleActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetOrderNumberActionBuilder setOrderNumberBuilder() {
+        return com.commercetools.api.models.order.OrderSetOrderNumberActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetParcelCustomFieldActionBuilder setParcelCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetParcelCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetParcelCustomTypeActionBuilder setParcelCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetParcelCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetParcelItemsActionBuilder setParcelItemsBuilder() {
+        return com.commercetools.api.models.order.OrderSetParcelItemsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetParcelMeasurementsActionBuilder setParcelMeasurementsBuilder() {
+        return com.commercetools.api.models.order.OrderSetParcelMeasurementsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetParcelTrackingDataActionBuilder setParcelTrackingDataBuilder() {
+        return com.commercetools.api.models.order.OrderSetParcelTrackingDataActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetReturnInfoActionBuilder setReturnInfoBuilder() {
+        return com.commercetools.api.models.order.OrderSetReturnInfoActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetReturnItemCustomFieldActionBuilder setReturnItemCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetReturnItemCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetReturnItemCustomTypeActionBuilder setReturnItemCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetReturnItemCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetReturnPaymentStateActionBuilder setReturnPaymentStateBuilder() {
+        return com.commercetools.api.models.order.OrderSetReturnPaymentStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetReturnShipmentStateActionBuilder setReturnShipmentStateBuilder() {
+        return com.commercetools.api.models.order.OrderSetReturnShipmentStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetShippingAddressActionBuilder setShippingAddressBuilder() {
+        return com.commercetools.api.models.order.OrderSetShippingAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetShippingAddressCustomFieldActionBuilder setShippingAddressCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetShippingAddressCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeActionBuilder setShippingAddressCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderSetStoreActionBuilder setStoreBuilder() {
+        return com.commercetools.api.models.order.OrderSetStoreActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderTransitionCustomLineItemStateActionBuilder transitionCustomLineItemStateBuilder() {
+        return com.commercetools.api.models.order.OrderTransitionCustomLineItemStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderTransitionLineItemStateActionBuilder transitionLineItemStateBuilder() {
+        return com.commercetools.api.models.order.OrderTransitionLineItemStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderTransitionStateActionBuilder transitionStateBuilder() {
+        return com.commercetools.api.models.order.OrderTransitionStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderUpdateItemShippingAddressActionBuilder updateItemShippingAddressBuilder() {
+        return com.commercetools.api.models.order.OrderUpdateItemShippingAddressActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.OrderUpdateSyncInfoActionBuilder updateSyncInfoBuilder() {
+        return com.commercetools.api.models.order.OrderUpdateSyncInfoActionBuilder.of();
+    }
+
     default <T> T withOrderUpdateAction(Function<OrderUpdateAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderUpdateAction>";
+            }
+        };
     }
 }

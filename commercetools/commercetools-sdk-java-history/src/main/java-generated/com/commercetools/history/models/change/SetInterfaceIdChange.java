@@ -66,4 +66,13 @@ public interface SetInterfaceIdChange extends Change {
     default <T> T withSetInterfaceIdChange(Function<SetInterfaceIdChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetInterfaceIdChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetInterfaceIdChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetInterfaceIdChange>";
+            }
+        };
+    }
 }

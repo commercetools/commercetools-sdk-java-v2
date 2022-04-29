@@ -19,12 +19,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = QueryPriceImpl.class)
-public interface QueryPrice {
+public interface QueryPrice extends com.commercetools.api.models.Customizable<QueryPrice> {
 
     @NotNull
     @JsonProperty("id")
     public String getId();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -61,6 +65,9 @@ public interface QueryPrice {
     @JsonProperty("discounted")
     public DiscountedPriceDraft getDiscounted();
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
@@ -121,5 +128,14 @@ public interface QueryPrice {
 
     default <T> T withQueryPrice(Function<QueryPrice, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<QueryPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<QueryPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<QueryPrice>";
+            }
+        };
     }
 }

@@ -29,6 +29,10 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
@@ -68,5 +72,14 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
 
     default <T> T withMyCartChangeLineItemQuantityAction(Function<MyCartChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartChangeLineItemQuantityAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartChangeLineItemQuantityAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartChangeLineItemQuantityAction>";
+            }
+        };
     }
 }

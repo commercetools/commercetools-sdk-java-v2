@@ -70,4 +70,13 @@ public interface SetCustomerGroupChange extends Change {
     default <T> T withSetCustomerGroupChange(Function<SetCustomerGroupChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomerGroupChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomerGroupChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomerGroupChange>";
+            }
+        };
+    }
 }

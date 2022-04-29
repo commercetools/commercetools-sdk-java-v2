@@ -18,6 +18,10 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
 
     String CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED = "changeProductSearchIndexingEnabled";
 
+    /**
+    *  <p>If <code>false</code>, the indexing of <a href="ctp:api:type:Product">Product</a> information will stop and the <a href="/../api/projects/products-search">Product Projection Search</a> as well as the <a href="/../api/projects/products-suggestions">Product Suggestions</a> endpoint will not be available anymore for this Project. The Project's <a href="ctp:api:type:SearchIndexingConfiguration">SearchIndexingConfiguration</a> <code>status</code> for <code>products</code> will be changed to <code>&quot;Deactivated&quot;</code>.</p>
+    *  <p>If <code>true</code>, the indexing of <a href="ctp:api:type:Product">Product</a> information will start and the <a href="/../api/projects/products-search">Product Projection Search</a> as well as the <a href="/../api/projects/products-suggestions">Product Suggestions</a> endpoint will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's <a href="ctp:api:type:SearchIndexingConfiguration">SearchIndexingConfiguration</a> <code>status</code> for <code>products</code> will be shown as <code>&quot;Indexing&quot;</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>&quot;Activated&quot;</code> making the aforementioned endpoints fully available for this Project.</p>
+    */
     @NotNull
     @JsonProperty("enabled")
     public Boolean getEnabled();
@@ -47,5 +51,14 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     default <T> T withProjectChangeProductSearchIndexingEnabledAction(
             Function<ProjectChangeProductSearchIndexingEnabledAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeProductSearchIndexingEnabledAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeProductSearchIndexingEnabledAction>";
+            }
+        };
     }
 }

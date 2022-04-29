@@ -21,11 +21,18 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
         return this;
     }
 
-    public StoreSetSupplyChannelsActionBuilder withSupplyChannels(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.supplyChannels = new ArrayList<>();
-        this.supplyChannels
-                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
+    public StoreSetSupplyChannelsActionBuilder supplyChannels(
+            @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
+        this.supplyChannels = supplyChannels;
+        return this;
+    }
+
+    public StoreSetSupplyChannelsActionBuilder plusSupplyChannels(
+            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier... supplyChannels) {
+        if (this.supplyChannels == null) {
+            this.supplyChannels = new ArrayList<>();
+        }
+        this.supplyChannels.addAll(Arrays.asList(supplyChannels));
         return this;
     }
 
@@ -39,9 +46,11 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
         return this;
     }
 
-    public StoreSetSupplyChannelsActionBuilder supplyChannels(
-            @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
-        this.supplyChannels = supplyChannels;
+    public StoreSetSupplyChannelsActionBuilder withSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannels = new ArrayList<>();
+        this.supplyChannels
+                .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
     }
 

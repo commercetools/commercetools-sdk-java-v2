@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeActionImpl.class, name = CustomerGroupSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionImpl.class, name = CustomerGroupSetKeyAction.SET_KEY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = CustomerGroupUpdateActionImpl.class, visible = true)
+@JsonDeserialize(as = CustomerGroupUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface CustomerGroupUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<CustomerGroupUpdateAction> {
@@ -26,7 +27,32 @@ public interface CustomerGroupUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.customer_group.CustomerGroupSetKeyActionBuilder.of();
+    }
+
     default <T> T withCustomerGroupUpdateAction(Function<CustomerGroupUpdateAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupUpdateAction>";
+            }
+        };
     }
 }

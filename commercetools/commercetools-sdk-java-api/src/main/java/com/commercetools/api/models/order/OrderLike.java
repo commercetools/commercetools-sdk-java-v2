@@ -1,22 +1,27 @@
 
 package com.commercetools.api.models.order;
 
+import static com.commercetools.api.models.common.MoneyUtil.zeroAmount;
+
 import java.time.ZonedDateTime;
 import java.util.List;
+import java.util.Optional;
 
+import javax.money.MonetaryAmount;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 
+/**
+ * Interface to collect the common stuff between carts and orders.
+ * @param <T>
+ */
 public interface OrderLike<T extends OrderLike<T>> {
     @NotNull
     public String getId();
@@ -108,4 +113,20 @@ public interface OrderLike<T extends OrderLike<T>> {
 
     @Valid
     public List<Address> getItemShippingAddresses();
+
+    default public MonetaryAmount calculateSubTotalPrice() {
+        final MonetaryAmount lineItemTotal = this.getLineItems()
+                .stream()
+                .map(LineItem::getTotalPrice)
+                .map(MonetaryAmountConvertable::toMonetaryAmount)
+                .reduce(zeroAmount(Optional.ofNullable(this.getTotalPrice()).map(Money::getCurrencyCode).orElse(null)),
+                    MonetaryAmount::add);
+        final MonetaryAmount customLineItemTotal = this.getCustomLineItems()
+                .stream()
+                .map(CustomLineItem::getTotalPrice)
+                .map(MonetaryAmountConvertable::toMonetaryAmount)
+                .reduce(zeroAmount(Optional.ofNullable(this.getTotalPrice()).map(Money::getCurrencyCode).orElse(null)),
+                    MonetaryAmount::add);
+        return lineItemTotal.add(customLineItemTotal);
+    }
 }

@@ -19,6 +19,9 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
 
     String SET_DESCRIPTION = "setDescription";
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
@@ -45,5 +48,14 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
 
     default <T> T withTypeSetDescriptionAction(Function<TypeSetDescriptionAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeSetDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeSetDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeSetDescriptionAction>";
+            }
+        };
     }
 }

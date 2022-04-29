@@ -36,6 +36,9 @@ public class ExtensionChangeDestinationActionImpl implements ExtensionChangeDest
         return this.action;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     public com.commercetools.api.models.extension.ExtensionDestination getDestination() {
         return this.destination;
     }

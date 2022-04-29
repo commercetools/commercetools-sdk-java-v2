@@ -98,4 +98,13 @@ public interface LineItemProductVariantImportDraft {
     default <T> T withLineItemProductVariantImportDraft(Function<LineItemProductVariantImportDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LineItemProductVariantImportDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LineItemProductVariantImportDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LineItemProductVariantImportDraft>";
+            }
+        };
+    }
 }

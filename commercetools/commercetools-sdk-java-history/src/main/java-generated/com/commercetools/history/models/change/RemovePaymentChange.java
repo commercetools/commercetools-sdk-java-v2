@@ -70,4 +70,13 @@ public interface RemovePaymentChange extends Change {
     default <T> T withRemovePaymentChange(Function<RemovePaymentChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemovePaymentChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemovePaymentChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemovePaymentChange>";
+            }
+        };
+    }
 }

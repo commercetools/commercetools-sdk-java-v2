@@ -75,4 +75,13 @@ public interface MessagePagedQueryResponse extends com.commercetools.api.models.
     default <T> T withMessagePagedQueryResponse(Function<MessagePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MessagePagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MessagePagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MessagePagedQueryResponse>";
+            }
+        };
+    }
 }

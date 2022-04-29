@@ -2,6 +2,7 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,33 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     public ExtensionUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public ExtensionUpdateBuilder plusActions(
+            final com.commercetools.api.models.extension.ExtensionUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public ExtensionUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.extension.ExtensionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions
+                .add(builder.apply(com.commercetools.api.models.extension.ExtensionUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public ExtensionUpdateBuilder withActions(
+            Function<com.commercetools.api.models.extension.ExtensionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions
+                .add(builder.apply(com.commercetools.api.models.extension.ExtensionUpdateActionBuilder.of()).build());
         return this;
     }
 

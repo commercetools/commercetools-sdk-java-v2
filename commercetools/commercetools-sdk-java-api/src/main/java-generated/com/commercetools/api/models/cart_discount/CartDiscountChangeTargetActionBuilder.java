@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,12 @@ public class CartDiscountChangeTargetActionBuilder implements Builder<CartDiscou
     public CartDiscountChangeTargetActionBuilder target(
             final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.target = target;
+        return this;
+    }
+
+    public CartDiscountChangeTargetActionBuilder target(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountTarget>> builder) {
+        this.target = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder.of()).build();
         return this;
     }
 

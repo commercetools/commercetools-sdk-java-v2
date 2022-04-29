@@ -14,16 +14,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>Field type for <a href="ctp:api:type:Reference">Reference</a> values.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, ModelBase {
 
     private String name;
 
-    private com.commercetools.api.models.common.ReferenceTypeId referenceTypeId;
+    private com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId;
 
     @JsonCreator
     CustomFieldReferenceTypeImpl(
-            @JsonProperty("referenceTypeId") final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
+            @JsonProperty("referenceTypeId") final com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
         this.name = REFERENCE;
     }
@@ -36,11 +39,14 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
         return this.name;
     }
 
-    public com.commercetools.api.models.common.ReferenceTypeId getReferenceTypeId() {
+    /**
+    *  <p>Resource type the Custom Field can reference.</p>
+    */
+    public com.commercetools.api.models.type.CustomFieldReferenceValue getReferenceTypeId() {
         return this.referenceTypeId;
     }
 
-    public void setReferenceTypeId(final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
+    public void setReferenceTypeId(final com.commercetools.api.models.type.CustomFieldReferenceValue referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
     }
 

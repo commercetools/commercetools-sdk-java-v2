@@ -27,9 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PriceDraftImportImpl.class)
 public interface PriceDraftImport {
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -138,5 +135,14 @@ public interface PriceDraftImport {
 
     default <T> T withPriceDraftImport(Function<PriceDraftImport, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceDraftImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceDraftImport>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PriceDraftImport>";
+            }
+        };
     }
 }

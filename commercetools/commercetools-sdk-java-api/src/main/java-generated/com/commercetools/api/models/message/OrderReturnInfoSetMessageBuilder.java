@@ -92,6 +92,12 @@ public class OrderReturnInfoSetMessageBuilder implements Builder<OrderReturnInfo
         return this;
     }
 
+    public OrderReturnInfoSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public OrderReturnInfoSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -117,10 +123,18 @@ public class OrderReturnInfoSetMessageBuilder implements Builder<OrderReturnInfo
         return this;
     }
 
-    public OrderReturnInfoSetMessageBuilder withReturnInfo(
-            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
-        this.returnInfo = new ArrayList<>();
-        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
+    public OrderReturnInfoSetMessageBuilder returnInfo(
+            @Nullable final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
+        this.returnInfo = returnInfo;
+        return this;
+    }
+
+    public OrderReturnInfoSetMessageBuilder plusReturnInfo(
+            @Nullable final com.commercetools.api.models.order.ReturnInfo... returnInfo) {
+        if (this.returnInfo == null) {
+            this.returnInfo = new ArrayList<>();
+        }
+        this.returnInfo.addAll(Arrays.asList(returnInfo));
         return this;
     }
 
@@ -133,9 +147,10 @@ public class OrderReturnInfoSetMessageBuilder implements Builder<OrderReturnInfo
         return this;
     }
 
-    public OrderReturnInfoSetMessageBuilder returnInfo(
-            @Nullable final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
-        this.returnInfo = returnInfo;
+    public OrderReturnInfoSetMessageBuilder withReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfoBuilder> builder) {
+        this.returnInfo = new ArrayList<>();
+        this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
         return this;
     }
 

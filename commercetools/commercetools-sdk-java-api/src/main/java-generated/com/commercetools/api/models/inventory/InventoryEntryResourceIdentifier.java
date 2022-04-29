@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryResourceIdentifierImpl.class)
-public interface InventoryEntryResourceIdentifier extends ResourceIdentifier {
+public interface InventoryEntryResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<InventoryEntry> {
 
     String INVENTORY_ENTRY = "inventory-entry";
 
@@ -38,5 +39,14 @@ public interface InventoryEntryResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withInventoryEntryResourceIdentifier(Function<InventoryEntryResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryResourceIdentifier>";
+            }
+        };
     }
 }

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -20,6 +21,12 @@ public class ExtensionInputBuilder implements Builder<ExtensionInput> {
 
     public ExtensionInputBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
+        return this;
+    }
+
+    public ExtensionInputBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

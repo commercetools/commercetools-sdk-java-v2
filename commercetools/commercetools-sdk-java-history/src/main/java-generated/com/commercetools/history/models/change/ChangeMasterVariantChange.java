@@ -77,4 +77,13 @@ public interface ChangeMasterVariantChange extends Change {
     default <T> T withChangeMasterVariantChange(Function<ChangeMasterVariantChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeMasterVariantChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeMasterVariantChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeMasterVariantChange>";
+            }
+        };
+    }
 }

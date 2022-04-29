@@ -127,6 +127,13 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         return this;
     }
 
+    public ProductDiscountBuilder value(
+            Function<com.commercetools.api.models.product_discount.ProductDiscountValueBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountValue>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.product_discount.ProductDiscountValueBuilder.of())
+                .build();
+        return this;
+    }
+
     public ProductDiscountBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;
@@ -150,6 +157,30 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     public ProductDiscountBuilder references(
             final java.util.List<com.commercetools.api.models.common.Reference> references) {
         this.references = references;
+        return this;
+    }
+
+    public ProductDiscountBuilder plusReferences(final com.commercetools.api.models.common.Reference... references) {
+        if (this.references == null) {
+            this.references = new ArrayList<>();
+        }
+        this.references.addAll(Arrays.asList(references));
+        return this;
+    }
+
+    public ProductDiscountBuilder plusReferences(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        if (this.references == null) {
+            this.references = new ArrayList<>();
+        }
+        this.references.add(builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public ProductDiscountBuilder withReferences(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.references = new ArrayList<>();
+        this.references.add(builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 

@@ -60,4 +60,13 @@ public interface InvalidStateTransitionError extends ErrorObject {
     default <T> T withInvalidStateTransitionError(Function<InvalidStateTransitionError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidStateTransitionError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidStateTransitionError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidStateTransitionError>";
+            }
+        };
+    }
 }

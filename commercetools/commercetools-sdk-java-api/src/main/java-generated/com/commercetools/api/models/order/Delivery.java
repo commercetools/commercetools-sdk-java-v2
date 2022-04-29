@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DeliveryImpl.class)
-public interface Delivery {
+public interface Delivery extends com.commercetools.api.models.Customizable<Delivery> {
 
     @NotNull
     @JsonProperty("id")
@@ -96,5 +96,14 @@ public interface Delivery {
 
     default <T> T withDelivery(Function<Delivery, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Delivery> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Delivery>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Delivery>";
+            }
+        };
     }
 }

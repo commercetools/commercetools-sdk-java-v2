@@ -60,4 +60,13 @@ public interface LocalizableTextAttribute extends Attribute {
     default <T> T withLocalizableTextAttribute(Function<LocalizableTextAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LocalizableTextAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LocalizableTextAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LocalizableTextAttribute>";
+            }
+        };
+    }
 }

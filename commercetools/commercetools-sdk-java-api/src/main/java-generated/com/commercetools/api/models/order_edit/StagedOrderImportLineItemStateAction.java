@@ -60,4 +60,13 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     default <T> T withStagedOrderImportLineItemStateAction(Function<StagedOrderImportLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderImportLineItemStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderImportLineItemStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderImportLineItemStateAction>";
+            }
+        };
+    }
 }

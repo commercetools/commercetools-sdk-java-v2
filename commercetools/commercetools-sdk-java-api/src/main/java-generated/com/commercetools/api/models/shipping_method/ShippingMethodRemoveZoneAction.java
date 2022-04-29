@@ -48,4 +48,13 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
     default <T> T withShippingMethodRemoveZoneAction(Function<ShippingMethodRemoveZoneAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodRemoveZoneAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodRemoveZoneAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodRemoveZoneAction>";
+            }
+        };
+    }
 }

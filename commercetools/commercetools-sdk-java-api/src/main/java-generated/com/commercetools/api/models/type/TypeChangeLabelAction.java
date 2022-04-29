@@ -20,6 +20,9 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
 
     String CHANGE_LABEL = "changeLabel";
 
+    /**
+    *  <p>Name of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
+    */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
@@ -54,5 +57,14 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
 
     default <T> T withTypeChangeLabelAction(Function<TypeChangeLabelAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeLabelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeLabelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeLabelAction>";
+            }
+        };
     }
 }

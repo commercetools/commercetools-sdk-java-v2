@@ -10,13 +10,20 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Activated indicates that the Order Search feature is active. Deactivated means that the namely feature is currently configured to be inactive.</p>
+*  <p>Specifies the status of the <a href="/../api/projects/order-search">Order Search</a> index.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface OrderSearchStatus {
 
-    OrderSearchStatus ACTIVATED = OrderSearchStatusEnum.ACTIVATED;
+    /**
+    	<p>indicates that the <a href="/../api/projects/order-search#search-orders">Search Orders</a> endpoint is fully operational.</p>
 
+    */
+    OrderSearchStatus ACTIVATED = OrderSearchStatusEnum.ACTIVATED;
+    /**
+    	<p>indicates that the Order Search feature is currently not active, but can be activated by <a href="#change-order-search-status">update action</a>.</p>
+
+    */
     OrderSearchStatus DEACTIVATED = OrderSearchStatusEnum.DEACTIVATED;
 
     enum OrderSearchStatusEnum implements OrderSearchStatus {

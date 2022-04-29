@@ -46,4 +46,13 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
     default <T> T withOrderEditSetKeyAction(Function<OrderEditSetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditSetKeyAction>";
+            }
+        };
+    }
 }

@@ -70,4 +70,13 @@ public interface SetMetaDescriptionChange extends Change {
     default <T> T withSetMetaDescriptionChange(Function<SetMetaDescriptionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetMetaDescriptionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetMetaDescriptionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetMetaDescriptionChange>";
+            }
+        };
+    }
 }

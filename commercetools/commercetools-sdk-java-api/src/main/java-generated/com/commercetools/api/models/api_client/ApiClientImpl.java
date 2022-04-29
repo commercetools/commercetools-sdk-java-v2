@@ -31,12 +31,18 @@ public class ApiClientImpl implements ApiClient, ModelBase {
 
     private java.time.ZonedDateTime createdAt;
 
+    private Integer accessTokenValiditySeconds;
+
+    private Integer refreshTokenValiditySeconds;
+
     @JsonCreator
     ApiClientImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name,
             @JsonProperty("scope") final String scope, @JsonProperty("secret") final String secret,
             @JsonProperty("lastUsedAt") final java.time.LocalDate lastUsedAt,
             @JsonProperty("deleteAt") final java.time.ZonedDateTime deleteAt,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt) {
+            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
+            @JsonProperty("accessTokenValiditySeconds") final Integer accessTokenValiditySeconds,
+            @JsonProperty("refreshTokenValiditySeconds") final Integer refreshTokenValiditySeconds) {
         this.id = id;
         this.name = name;
         this.scope = scope;
@@ -44,13 +50,15 @@ public class ApiClientImpl implements ApiClient, ModelBase {
         this.lastUsedAt = lastUsedAt;
         this.deleteAt = deleteAt;
         this.createdAt = createdAt;
+        this.accessTokenValiditySeconds = accessTokenValiditySeconds;
+        this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;
     }
 
     public ApiClientImpl() {
     }
 
     /**
-    *  <p>Unique ID of the API client.
+    *  <p>Unique ID of the API Client.
     *  This is the OAuth2 <code>client_id</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
     */
     public String getId() {
@@ -87,17 +95,31 @@ public class ApiClientImpl implements ApiClient, ModelBase {
     }
 
     /**
-    *  <p>If set, the client will be deleted on (or shortly after) this point in time.</p>
+    *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
     */
     public java.time.ZonedDateTime getDeleteAt() {
         return this.deleteAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the API Client was initially created.</p>
+    *  <p>Date and time (UTC) the API Client was initially created at.</p>
     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
+    }
+
+    /**
+    *  <p>Expiration time in seconds for each access token obtained by the API Client. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
+    */
+    public Integer getAccessTokenValiditySeconds() {
+        return this.accessTokenValiditySeconds;
+    }
+
+    /**
+    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the API Client. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
+    */
+    public Integer getRefreshTokenValiditySeconds() {
+        return this.refreshTokenValiditySeconds;
     }
 
     public void setId(final String id) {
@@ -128,6 +150,14 @@ public class ApiClientImpl implements ApiClient, ModelBase {
         this.createdAt = createdAt;
     }
 
+    public void setAccessTokenValiditySeconds(final Integer accessTokenValiditySeconds) {
+        this.accessTokenValiditySeconds = accessTokenValiditySeconds;
+    }
+
+    public void setRefreshTokenValiditySeconds(final Integer refreshTokenValiditySeconds) {
+        this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -145,6 +175,8 @@ public class ApiClientImpl implements ApiClient, ModelBase {
                 .append(lastUsedAt, that.lastUsedAt)
                 .append(deleteAt, that.deleteAt)
                 .append(createdAt, that.createdAt)
+                .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
+                .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
                 .isEquals();
     }
 
@@ -157,6 +189,8 @@ public class ApiClientImpl implements ApiClient, ModelBase {
                 .append(lastUsedAt)
                 .append(deleteAt)
                 .append(createdAt)
+                .append(accessTokenValiditySeconds)
+                .append(refreshTokenValiditySeconds)
                 .toHashCode();
     }
 

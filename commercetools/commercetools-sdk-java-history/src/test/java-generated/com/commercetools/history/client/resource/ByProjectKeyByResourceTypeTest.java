@@ -118,6 +118,11 @@ public class ByProjectKeyByResourceTypeTest {
                         .get()
                         .withChanges("changes")
                         .createHttpRequest(), "get", "/test_projectKey/test_resourceType?changes=changes", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withStores("stores")
+                        .createHttpRequest(), "get", "/test_projectKey/test_resourceType?stores=stores", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .withResourceTypeValue("test_resourceType")
@@ -125,12 +130,15 @@ public class ByProjectKeyByResourceTypeTest {
                                 .withCustomerId("customerId")
                                 .createHttpRequest(),
                         "get", "/test_projectKey/test_resourceType?customerId=customerId", },
-                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
-                        .withResourceTypeValue("test_resourceType")
-                        .get()
-                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
-                                .findEnum("excludePlatformInitiatedChanges"))
-                        .createHttpRequest(), "get",
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .withResourceTypeValue("test_resourceType")
+                                .get()
+                                .withExcludePlatformInitiatedChanges(
+                                    com.commercetools.history.models.change_history.PlatformInitiatedChange
+                                            .findEnum("excludePlatformInitiatedChanges"))
+                                .createHttpRequest(),
+                        "get",
                         "/test_projectKey/test_resourceType?excludePlatformInitiatedChanges=excludePlatformInitiatedChanges", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
@@ -189,12 +197,17 @@ public class ByProjectKeyByResourceTypeTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
+                        .withStores("stores"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
                         .withCustomerId("customerId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
-                        .withExcludePlatformInitiatedChanges(com.commercetools.history.models.PlatformInitiatedChange
-                                .findEnum("excludePlatformInitiatedChanges")), },
+                        .withExcludePlatformInitiatedChanges(
+                            com.commercetools.history.models.change_history.PlatformInitiatedChange
+                                    .findEnum("excludePlatformInitiatedChanges")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()

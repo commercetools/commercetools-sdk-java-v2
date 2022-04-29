@@ -48,4 +48,13 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
     default <T> T withSubscriptionChangeDestinationAction(Function<SubscriptionChangeDestinationAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionChangeDestinationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionChangeDestinationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SubscriptionChangeDestinationAction>";
+            }
+        };
+    }
 }

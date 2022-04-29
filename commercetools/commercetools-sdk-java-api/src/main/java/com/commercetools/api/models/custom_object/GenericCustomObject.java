@@ -7,15 +7,15 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.Referencable;
+import com.commercetools.api.models.common.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(as = GenericCustomObjectImpl.class)
 public interface GenericCustomObject<TValue>
-        extends BaseResource, com.commercetools.api.models.DomainResource<GenericCustomObject<TValue>> {
+        extends BaseResource, com.commercetools.api.models.DomainResource<GenericCustomObject<TValue>>,
+        Referencable<GenericCustomObject<TValue>> {
 
     @NotNull
     @JsonProperty("id")
@@ -108,5 +108,10 @@ public interface GenericCustomObject<TValue>
 
     default <T> T withCustomObject(Function<GenericCustomObject<TValue>, T> helper) {
         return helper.apply(this);
+    }
+
+    @Override
+    default Reference toReference() {
+        return CustomObjectReference.builder().id(getId()).build();
     }
 }

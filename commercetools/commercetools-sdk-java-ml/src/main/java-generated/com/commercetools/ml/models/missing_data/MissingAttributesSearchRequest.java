@@ -156,4 +156,13 @@ public interface MissingAttributesSearchRequest {
     default <T> T withMissingAttributesSearchRequest(Function<MissingAttributesSearchRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingAttributesSearchRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingAttributesSearchRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingAttributesSearchRequest>";
+            }
+        };
+    }
 }

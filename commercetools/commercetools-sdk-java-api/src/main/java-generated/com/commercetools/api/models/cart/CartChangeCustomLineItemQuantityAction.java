@@ -54,4 +54,13 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
             Function<CartChangeCustomLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemQuantityAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemQuantityAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartChangeCustomLineItemQuantityAction>";
+            }
+        };
+    }
 }

@@ -10,6 +10,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Field type for <a href="ctp:api:type:DateTime">DateTime</a> values.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldDateTimeTypeImpl.class)
 public interface CustomFieldDateTimeType extends FieldType {
@@ -35,5 +38,14 @@ public interface CustomFieldDateTimeType extends FieldType {
 
     default <T> T withCustomFieldDateTimeType(Function<CustomFieldDateTimeType, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldDateTimeType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldDateTimeType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldDateTimeType>";
+            }
+        };
     }
 }

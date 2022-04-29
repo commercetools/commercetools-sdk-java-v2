@@ -57,4 +57,13 @@ public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload
             Function<ProductRemovedFromCategoryMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemovedFromCategoryMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemovedFromCategoryMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductRemovedFromCategoryMessagePayload>";
+            }
+        };
+    }
 }

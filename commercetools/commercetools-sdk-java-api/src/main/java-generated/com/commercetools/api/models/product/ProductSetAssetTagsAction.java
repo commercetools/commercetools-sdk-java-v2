@@ -75,4 +75,13 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
     default <T> T withProductSetAssetTagsAction(Function<ProductSetAssetTagsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetTagsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetTagsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetAssetTagsAction>";
+            }
+        };
+    }
 }

@@ -67,4 +67,13 @@ public interface SetMaxApplicationsPerCustomerChange extends Change {
     default <T> T withSetMaxApplicationsPerCustomerChange(Function<SetMaxApplicationsPerCustomerChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetMaxApplicationsPerCustomerChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetMaxApplicationsPerCustomerChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetMaxApplicationsPerCustomerChange>";
+            }
+        };
+    }
 }

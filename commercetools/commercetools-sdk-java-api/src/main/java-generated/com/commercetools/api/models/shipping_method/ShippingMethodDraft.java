@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodDraftImpl.class)
-public interface ShippingMethodDraft {
+public interface ShippingMethodDraft extends com.commercetools.api.models.CustomizableDraft<ShippingMethodDraft> {
 
     @JsonProperty("key")
     public String getKey();
@@ -118,5 +118,14 @@ public interface ShippingMethodDraft {
 
     default <T> T withShippingMethodDraft(Function<ShippingMethodDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodDraft>";
+            }
+        };
     }
 }

@@ -36,4 +36,13 @@ public interface ProductDiscountValueExternalDraft extends ProductDiscountValueD
     default <T> T withProductDiscountValueExternalDraft(Function<ProductDiscountValueExternalDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueExternalDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueExternalDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountValueExternalDraft>";
+            }
+        };
+    }
 }

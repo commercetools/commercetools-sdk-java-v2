@@ -48,10 +48,18 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
         return this;
     }
 
-    public CategoryPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build());
+    public CategoryPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.category.Category> results) {
+        this.results = results;
+        return this;
+    }
+
+    public CategoryPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.category.Category... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +72,10 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
         return this;
     }
 
-    public CategoryPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.category.Category> results) {
-        this.results = results;
+    public CategoryPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build());
         return this;
     }
 

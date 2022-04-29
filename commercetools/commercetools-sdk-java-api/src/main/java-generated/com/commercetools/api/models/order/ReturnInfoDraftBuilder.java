@@ -25,10 +25,17 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
         return this;
     }
 
-    public ReturnInfoDraftBuilder withItems(
-            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()).build());
+    public ReturnInfoDraftBuilder items(
+            final java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items) {
+        this.items = items;
+        return this;
+    }
+
+    public ReturnInfoDraftBuilder plusItems(final com.commercetools.api.models.order.ReturnItemDraft... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -41,9 +48,10 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
         return this;
     }
 
-    public ReturnInfoDraftBuilder items(
-            final java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items) {
-        this.items = items;
+    public ReturnInfoDraftBuilder withItems(
+            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraftBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()).build());
         return this;
     }
 

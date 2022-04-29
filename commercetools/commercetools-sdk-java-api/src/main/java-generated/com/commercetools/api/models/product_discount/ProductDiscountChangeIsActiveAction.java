@@ -46,4 +46,13 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
     default <T> T withProductDiscountChangeIsActiveAction(Function<ProductDiscountChangeIsActiveAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangeIsActiveAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangeIsActiveAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountChangeIsActiveAction>";
+            }
+        };
+    }
 }

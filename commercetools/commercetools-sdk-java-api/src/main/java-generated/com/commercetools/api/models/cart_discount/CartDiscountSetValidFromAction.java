@@ -47,4 +47,13 @@ public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction
     default <T> T withCartDiscountSetValidFromAction(Function<CartDiscountSetValidFromAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidFromAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetValidFromAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountSetValidFromAction>";
+            }
+        };
+    }
 }

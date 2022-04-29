@@ -19,14 +19,14 @@ public interface DiscountedLineItemPriceForQuantity {
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @NotNull
     @Valid
     @JsonProperty("discountedPrice")
     public DiscountedLineItemPrice getDiscountedPrice();
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
 
@@ -51,5 +51,14 @@ public interface DiscountedLineItemPriceForQuantity {
 
     default <T> T withDiscountedLineItemPriceForQuantity(Function<DiscountedLineItemPriceForQuantity, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceForQuantity> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceForQuantity>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountedLineItemPriceForQuantity>";
+            }
+        };
     }
 }

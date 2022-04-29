@@ -45,4 +45,13 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
     default <T> T withScoreShippingRateInput(Function<ScoreShippingRateInput, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ScoreShippingRateInput> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ScoreShippingRateInput>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ScoreShippingRateInput>";
+            }
+        };
+    }
 }

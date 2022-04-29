@@ -1,8 +1,11 @@
 
 package example;
 
+import static io.sphere.sdk.http.HttpStatusCode.*;
+
 import java.net.InetSocketAddress;
 import java.net.Proxy;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -16,18 +19,29 @@ import com.commercetools.api.client.QueryUtils;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
+import com.commercetools.api.models.common.AddressDraft;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
+import com.commercetools.api.models.customer.*;
+import com.commercetools.api.models.customer_group.*;
+import com.commercetools.api.models.product.AttributesAccessor;
 import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.product.ProductVariant;
+import com.commercetools.api.models.product.ProductVariantBuilder;
+import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
+import com.commercetools.http.apachehttp.CtApacheHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.apache.commons.lang3.tuple.Pair;
+import org.apache.hc.client5.http.config.RequestConfig;
+import org.apache.hc.core5.util.Timeout;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -254,7 +268,7 @@ public class ExamplesTest {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
+                .withRetryMiddleware(5, Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))
                 .build("my-project");
     }
 
@@ -278,6 +292,42 @@ public class ExamplesTest {
     }
 
     @Test
+    public void okhttpConnectionsAndTimeouts() {
+        VrapHttpClient httpClient = new CtOkHttp4Client(128, 128,
+            builder -> builder.connectTimeout(Duration.ofMillis(200))
+                    .writeTimeout(Duration.ofSeconds(60))
+                    .readTimeout(Duration.ofSeconds(120)));
+
+        ProjectApiRoot apiRoot = ApiRootBuilder.of(httpClient)
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
+    }
+
+    @Test
+    public void apacheConnectionsAndTimeouts() {
+        RequestConfig config = RequestConfig.custom()
+                .setConnectTimeout(Timeout.ofMilliseconds(100))
+                .setResponseTimeout(Timeout.ofSeconds(120))
+                .build();
+        VrapHttpClient httpClient = new CtApacheHttpClient(128, 128,
+            builder -> builder.setDefaultRequestConfig(config));
+
+        ProjectApiRoot apiRoot = ApiRootBuilder.of(httpClient)
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .withScopes("your-scopes")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
+    }
+
+    @Test
     public void immutableRequest() {
         ProjectApiRoot apiRoot = createProjectClient();
         final ByProjectKeyTaxCategoriesGet taxCategoriesGet = apiRoot.taxCategories()
@@ -289,5 +339,107 @@ public class ExamplesTest {
 
         Assertions.assertThat(taxCategoriesGet.getQueryParam("var.name").get(0)).isEqualTo("de19");
         Assertions.assertThat(taxCategoriesGet2.getQueryParam("var.name").get(0)).isEqualTo("de07");
+    }
+
+    @Test
+    public void factoryMethod() {
+        Customer customer = Customer.of();
+        Customer newCustomer = Customer.of(customer);
+    }
+
+    @Test
+    public void builderMethod() {
+        CustomerDraftBuilder builder = CustomerDraft.builder().email("john.doe@example.com");
+        CustomerDraft customerDraft = builder.build();
+        CustomerDraft newCustomerDraft = CustomerDraft.builder(customerDraft).build();
+    }
+
+    @Test
+    public void accessorTest() {
+        ProductVariant variant = ProductVariantBuilder.of().id(1L).attributes(Collections.emptyList()).build();
+        AttributesAccessor attributes = variant.withProductVariant(AttributesAccessor::of);
+        AttributeLocalizedEnumValue color = attributes.asLocalizedEnum("color");
+    }
+
+    @Test
+    public void reflectionString() {
+        CustomerDraft customerDraft = CustomerDraft.builder().email("john.doe@example.com").build();
+
+        String draft = ModelBase.reflectionString(customerDraft);
+        String draft2 = ((ModelBase) customerDraft).reflectionString();
+        String draft3 = customerDraft.withCustomerDraft(ModelBase::reflectionString);
+    }
+
+    @Test
+    public void builderProperty() {
+        CustomerDraft customerDraft = CustomerDraft.builder().email("john.doe@example.com").build();
+    }
+
+    @Test
+    public void builderLambda() {
+        CustomerDraft customerDraft = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .anonymousCart(cartResourceIdentifierBuilder -> cartResourceIdentifierBuilder.key("cart-key"))
+                .build();
+    }
+
+    @Test
+    public void builderArray() {
+        CustomerDraft customerDraft = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .addresses(AddressDraft.builder().country("DE").build(), AddressDraft.builder().country("US").build())
+                .addresses(Arrays.asList(AddressDraft.builder().country("DE").build(),
+                    AddressDraft.builder().country("US").build()))
+                .build();
+
+        CustomerDraft customerDraft2 = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .addresses(Arrays.asList(AddressDraft.builder().country("DE").build(),
+                    AddressDraft.builder().country("US").build()))
+                .build();
+
+        CustomerDraft customerDraft3 = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .addresses(AddressDraft.builder().country("DE").build())
+                .plusAddresses(AddressDraft.builder().country("DE").build())
+                .build();
+
+        CustomerDraft customerDraft4 = CustomerDraft.builder()
+                .email("john.doe@example.com")
+                .withAddresses(addressBuilder -> addressBuilder.country("DE"))
+                .plusAddresses(addressBuilder -> addressBuilder.country("US"))
+                .build();
+    }
+
+    @Test
+    public void polymorphicInterface() {
+        CustomerGroupChangeNameAction action1 = CustomerGroupUpdateAction.changeNameBuilder().name("foo").build();
+        CustomerGroupSetKeyAction action2 = CustomerGroupUpdateAction.setKeyBuilder().key("foo").build();
+    }
+
+    @Test
+    public void updateBodyInterface() {
+        CustomerGroupUpdate customerGroupUpdate = CustomerGroupUpdate.builder()
+                .version(1L)
+                .actions(CustomerGroupUpdateAction.changeNameBuilder().name("foo").build())
+                .build();
+    }
+
+    @Test
+    public void polymorphicBuilder() {
+        CustomerGroupChangeNameAction action1 = CustomerGroupUpdateActionBuilder.of()
+                .changeNameBuilder()
+                .name("foo")
+                .build();
+        CustomerGroupSetKeyAction action2 = CustomerGroupUpdateActionBuilder.of().setKeyBuilder().key("foo").build();
+    }
+
+    @Test
+    public void updateBodyBuilder() {
+        CustomerGroupUpdate customerGroupUpdate = CustomerGroupUpdate.builder()
+                .version(1L)
+                .withActions(builder -> builder.changeNameBuilder().name("foo"))
+                .plusActions(builder -> builder.setKeyBuilder().key("foo"))
+                .build();
     }
 }

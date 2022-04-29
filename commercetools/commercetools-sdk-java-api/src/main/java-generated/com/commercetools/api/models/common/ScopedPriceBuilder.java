@@ -49,8 +49,20 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
         return this;
     }
 
+    public ScopedPriceBuilder value(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public ScopedPriceBuilder currentValue(final com.commercetools.api.models.common.TypedMoney currentValue) {
         this.currentValue = currentValue;
+        return this;
+    }
+
+    public ScopedPriceBuilder currentValue(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.currentValue = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 

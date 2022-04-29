@@ -3,6 +3,8 @@ package io.vrap.rmf.base.client;
 
 import java.nio.charset.StandardCharsets;
 
+import io.vrap.rmf.base.client.http.HttpStatusCode;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -14,8 +16,8 @@ public class ApiHttpResponseTest {
 
         ApiHttpResponse<byte[]> newResponse = response.withStatusCode(201);
 
-        Assertions.assertEquals(200, response.getStatusCode());
-        Assertions.assertEquals(201, newResponse.getStatusCode());
+        Assertions.assertEquals(HttpStatusCode.OK_200, response.getStatusCode());
+        Assertions.assertEquals(HttpStatusCode.CREATED_201, newResponse.getStatusCode());
         Assertions.assertNotEquals(response, newResponse);
 
     }

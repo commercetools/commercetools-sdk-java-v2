@@ -19,7 +19,7 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
     String CHANGE_ORDER_SEARCH_STATUS = "changeOrderSearchStatus";
 
     /**
-    *  <p>Activated indicates that the Order Search feature is active. Deactivated means that the namely feature is currently configured to be inactive.</p>
+    *  <p>Activates or deactivates the <a href="/../api/projects/order-search">Order Search</a> feature. Activation will trigger building a search index for the Orders in the Project.</p>
     */
     @NotNull
     @JsonProperty("status")
@@ -48,5 +48,14 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
 
     default <T> T withProjectChangeOrderSearchStatusAction(Function<ProjectChangeOrderSearchStatusAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeOrderSearchStatusAction>";
+            }
+        };
     }
 }

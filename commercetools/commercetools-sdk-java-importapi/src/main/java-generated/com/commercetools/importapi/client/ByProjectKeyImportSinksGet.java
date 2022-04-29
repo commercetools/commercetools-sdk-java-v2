@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -35,7 +37,7 @@ public class ByProjectKeyImportSinksGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/import-sinks", this.projectKey);
         if (!params.isEmpty()) {
@@ -78,23 +80,51 @@ public class ByProjectKeyImportSinksGet extends
     }
 
     /**
-     * set limit with the specificied value
+     * set limit with the specified value
      */
-    public ByProjectKeyImportSinksGet withLimit(final double limit) {
+    public <TValue> ByProjectKeyImportSinksGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
     }
 
     /**
      * add additional limit query parameter
      */
-    public ByProjectKeyImportSinksGet addLimit(final double limit) {
+    public <TValue> ByProjectKeyImportSinksGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
     }
 
     /**
-     * set limit with the specificied values
+     * set limit with the specified value
      */
-    public ByProjectKeyImportSinksGet withLimit(final List<Double> limit) {
+    public ByProjectKeyImportSinksGet withLimit(final Supplier<Double> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyImportSinksGet addLimit(final Supplier<Double> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyImportSinksGet withLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyImportSinksGet addLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
+     */
+    public <TValue> ByProjectKeyImportSinksGet withLimit(final List<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -103,29 +133,57 @@ public class ByProjectKeyImportSinksGet extends
     /**
      * add additional limit query parameters
      */
-    public ByProjectKeyImportSinksGet addLimit(final List<Double> limit) {
+    public <TValue> ByProjectKeyImportSinksGet addLimit(final List<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * set offset with the specificied value
+     * set offset with the specified value
      */
-    public ByProjectKeyImportSinksGet withOffset(final double offset) {
+    public <TValue> ByProjectKeyImportSinksGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
     }
 
     /**
      * add additional offset query parameter
      */
-    public ByProjectKeyImportSinksGet addOffset(final double offset) {
+    public <TValue> ByProjectKeyImportSinksGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
     }
 
     /**
-     * set offset with the specificied values
+     * set offset with the specified value
      */
-    public ByProjectKeyImportSinksGet withOffset(final List<Double> offset) {
+    public ByProjectKeyImportSinksGet withOffset(final Supplier<Double> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyImportSinksGet addOffset(final Supplier<Double> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyImportSinksGet withOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyImportSinksGet addOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
+     */
+    public <TValue> ByProjectKeyImportSinksGet withOffset(final List<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -134,29 +192,57 @@ public class ByProjectKeyImportSinksGet extends
     /**
      * add additional offset query parameters
      */
-    public ByProjectKeyImportSinksGet addOffset(final List<Double> offset) {
+    public <TValue> ByProjectKeyImportSinksGet addOffset(final List<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * set sort with the specificied value
+     * set sort with the specified value
      */
-    public ByProjectKeyImportSinksGet withSort(final String sort) {
+    public <TValue> ByProjectKeyImportSinksGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
     }
 
     /**
      * add additional sort query parameter
      */
-    public ByProjectKeyImportSinksGet addSort(final String sort) {
+    public <TValue> ByProjectKeyImportSinksGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
     }
 
     /**
-     * set sort with the specificied values
+     * set sort with the specified value
      */
-    public ByProjectKeyImportSinksGet withSort(final List<String> sort) {
+    public ByProjectKeyImportSinksGet withSort(final Supplier<String> supplier) {
+        return copy().withQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyImportSinksGet addSort(final Supplier<String> supplier) {
+        return copy().addQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public ByProjectKeyImportSinksGet withSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyImportSinksGet addSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set sort with the specified values
+     */
+    public <TValue> ByProjectKeyImportSinksGet withSort(final List<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -165,7 +251,7 @@ public class ByProjectKeyImportSinksGet extends
     /**
      * add additional sort query parameters
      */
-    public ByProjectKeyImportSinksGet addSort(final List<String> sort) {
+    public <TValue> ByProjectKeyImportSinksGet addSort(final List<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }

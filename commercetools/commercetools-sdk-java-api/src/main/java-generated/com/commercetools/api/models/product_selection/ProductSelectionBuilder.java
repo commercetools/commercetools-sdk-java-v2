@@ -35,6 +35,9 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
     public ProductSelectionBuilder id(final String id) {
         this.id = id;
         return this;
@@ -105,6 +108,17 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         return this;
     }
 
+    public ProductSelectionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    public ProductSelectionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -148,6 +162,11 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         return this.type;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public ProductSelection build() {
         Objects.requireNonNull(id, ProductSelection.class + ": id is missing");
         Objects.requireNonNull(version, ProductSelection.class + ": version is missing");
@@ -157,7 +176,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         Objects.requireNonNull(productCount, ProductSelection.class + ": productCount is missing");
         Objects.requireNonNull(type, ProductSelection.class + ": type is missing");
         return new ProductSelectionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            productCount, type);
+            productCount, type, custom);
     }
 
     /**
@@ -165,7 +184,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
      */
     public ProductSelection buildUnchecked() {
         return new ProductSelectionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            productCount, type);
+            productCount, type, custom);
     }
 
     public static ProductSelectionBuilder of() {
@@ -184,6 +203,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         builder.name = template.getName();
         builder.productCount = template.getProductCount();
         builder.type = template.getType();
+        builder.custom = template.getCustom();
         return builder;
     }
 

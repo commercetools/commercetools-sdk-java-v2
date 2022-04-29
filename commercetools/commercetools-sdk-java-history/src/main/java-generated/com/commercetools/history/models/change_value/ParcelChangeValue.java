@@ -50,4 +50,13 @@ public interface ParcelChangeValue {
     default <T> T withParcelChangeValue(Function<ParcelChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelChangeValue>";
+            }
+        };
+    }
 }

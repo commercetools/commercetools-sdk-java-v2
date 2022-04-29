@@ -48,4 +48,13 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
     default <T> T withStagedOrderSetShippingAddressAction(Function<StagedOrderSetShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetShippingAddressAction>";
+            }
+        };
+    }
 }

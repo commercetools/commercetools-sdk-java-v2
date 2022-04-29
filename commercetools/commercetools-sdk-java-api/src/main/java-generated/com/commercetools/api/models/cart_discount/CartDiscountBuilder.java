@@ -136,6 +136,12 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         return this;
     }
 
+    public CartDiscountBuilder value(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountValueBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountValue>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountValueBuilder.of()).build();
+        return this;
+    }
+
     public CartDiscountBuilder cartPredicate(final String cartPredicate) {
         this.cartPredicate = cartPredicate;
         return this;
@@ -144,6 +150,12 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     public CartDiscountBuilder target(
             @Nullable final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.target = target;
+        return this;
+    }
+
+    public CartDiscountBuilder target(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountTarget>> builder) {
+        this.target = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder.of()).build();
         return this;
     }
 
@@ -180,6 +192,30 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     public CartDiscountBuilder references(
             final java.util.List<com.commercetools.api.models.common.Reference> references) {
         this.references = references;
+        return this;
+    }
+
+    public CartDiscountBuilder plusReferences(final com.commercetools.api.models.common.Reference... references) {
+        if (this.references == null) {
+            this.references = new ArrayList<>();
+        }
+        this.references.addAll(Arrays.asList(references));
+        return this;
+    }
+
+    public CartDiscountBuilder plusReferences(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        if (this.references == null) {
+            this.references = new ArrayList<>();
+        }
+        this.references.add(builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public CartDiscountBuilder withReferences(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.references = new ArrayList<>();
+        this.references.add(builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 

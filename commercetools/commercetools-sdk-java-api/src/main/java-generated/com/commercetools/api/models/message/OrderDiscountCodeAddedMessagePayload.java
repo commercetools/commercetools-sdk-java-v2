@@ -49,4 +49,13 @@ public interface OrderDiscountCodeAddedMessagePayload extends OrderMessagePayloa
     default <T> T withOrderDiscountCodeAddedMessagePayload(Function<OrderDiscountCodeAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeAddedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeAddedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderDiscountCodeAddedMessagePayload>";
+            }
+        };
+    }
 }

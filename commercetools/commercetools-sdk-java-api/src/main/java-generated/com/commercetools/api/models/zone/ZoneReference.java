@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ZoneReferenceImpl.class)
-public interface ZoneReference extends Reference {
+public interface ZoneReference extends Reference, com.commercetools.api.models.Identifiable<Zone> {
 
     String ZONE = "zone";
 
@@ -62,5 +62,14 @@ public interface ZoneReference extends Reference {
 
     default <T> T withZoneReference(Function<ZoneReference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneReference>";
+            }
+        };
     }
 }

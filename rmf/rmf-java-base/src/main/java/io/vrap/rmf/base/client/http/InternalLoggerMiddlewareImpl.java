@@ -1,9 +1,7 @@
 
 package io.vrap.rmf.base.client.http;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -26,16 +24,27 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     private final InternalLoggerFactory factory;
     private final Level deprecationLogEvent;
     private final Level responseLogEvent;
+    private final Level defaultExceptionLogEvent;
+    private final Map<Class<? extends Throwable>, Level> exceptionLogEvents;
 
     public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory) {
         this(factory, Level.INFO, Level.INFO);
     }
 
-    public InternalLoggerMiddlewareImpl(InternalLoggerFactory factory, Level responseLogEvent,
+    public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory, final Level responseLogEvent,
             Level deprecationLogEvent) {
+        this(factory, responseLogEvent, deprecationLogEvent, Level.ERROR,
+            Collections.singletonMap(ConcurrentModificationException.class, Level.INFO));
+    }
+
+    public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory, final Level responseLogEvent,
+            final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents) {
         this.factory = factory;
         this.responseLogEvent = responseLogEvent;
         this.deprecationLogEvent = deprecationLogEvent;
+        this.defaultExceptionLogEvent = defaultExceptionLogEvent;
+        this.exceptionLogEvents = exceptionLogEvents;
     }
 
     @Override
@@ -78,20 +87,13 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
         return next.apply(request).whenComplete((response, throwable) -> {
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
             if (throwable != null) {
-                Throwable cause = throwable.getCause();
-                if (cause instanceof ApiHttpException) {
-                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause).getResponse();
-                    final Supplier<Object> logMessage = () -> String.format("%s %s %s", request.getMethod().name(),
-                        request.getUrl(), errorResponse.getStatusCode());
-                    if (cause instanceof NotFoundException) {
-                        responseLogger.info(logMessage);
-                    }
-                    else if (cause instanceof ApiClientException) {
-                        responseLogger.warn(logMessage);
-                    }
-                    else {
-                        responseLogger.error(logMessage);
-                    }
+                if (throwable.getCause() instanceof ApiHttpException) {
+                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause())
+                            .getResponse();
+                    final Level level = Optional.ofNullable(exceptionLogEvents.get(throwable.getCause().getClass()))
+                            .orElse(defaultExceptionLogEvent);
+                    responseLogger.log(level, () -> String.format("%s %s %s", request.getMethod().name(),
+                        request.getUrl(), errorResponse.getStatusCode()));
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()
                             .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                     if (notices != null) {
@@ -105,7 +107,9 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                                     .orElse("<no body>"));
                 }
                 else {
-                    responseLogger.error(throwable::getCause, throwable);
+                    final Level level = Optional.ofNullable(exceptionLogEvents.get(throwable.getCause().getClass()))
+                            .orElse(defaultExceptionLogEvent);
+                    responseLogger.log(level, throwable::getCause, throwable);
                 }
             }
             else {

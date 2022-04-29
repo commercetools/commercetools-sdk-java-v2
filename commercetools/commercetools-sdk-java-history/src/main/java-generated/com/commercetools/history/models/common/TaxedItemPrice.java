@@ -53,4 +53,13 @@ public interface TaxedItemPrice {
     default <T> T withTaxedItemPrice(Function<TaxedItemPrice, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxedItemPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxedItemPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxedItemPrice>";
+            }
+        };
+    }
 }

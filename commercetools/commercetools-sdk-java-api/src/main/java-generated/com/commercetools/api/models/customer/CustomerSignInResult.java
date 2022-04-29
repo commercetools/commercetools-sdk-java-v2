@@ -57,4 +57,13 @@ public interface CustomerSignInResult {
     default <T> T withCustomerSignInResult(Function<CustomerSignInResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSignInResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSignInResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSignInResult>";
+            }
+        };
+    }
 }

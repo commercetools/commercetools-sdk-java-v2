@@ -62,4 +62,13 @@ public interface RemoveFieldDefinitionChange extends Change {
     default <T> T withRemoveFieldDefinitionChange(Function<RemoveFieldDefinitionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveFieldDefinitionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveFieldDefinitionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveFieldDefinitionChange>";
+            }
+        };
+    }
 }

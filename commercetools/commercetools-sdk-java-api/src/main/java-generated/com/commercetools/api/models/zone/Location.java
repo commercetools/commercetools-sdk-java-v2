@@ -59,4 +59,13 @@ public interface Location {
     default <T> T withLocation(Function<Location, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Location> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Location>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Location>";
+            }
+        };
+    }
 }

@@ -58,4 +58,13 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     default <T> T withChangeValueAbsoluteChangeValue(Function<ChangeValueAbsoluteChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueAbsoluteChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueAbsoluteChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeValueAbsoluteChangeValue>";
+            }
+        };
+    }
 }

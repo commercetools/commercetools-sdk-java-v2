@@ -25,10 +25,17 @@ public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the LineItem with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the LineItem.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -61,5 +68,14 @@ public interface OrderSetLineItemCustomTypeAction extends OrderUpdateAction {
 
     default <T> T withOrderSetLineItemCustomTypeAction(Function<OrderSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetLineItemCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetLineItemCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetLineItemCustomTypeAction>";
+            }
+        };
     }
 }

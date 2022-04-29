@@ -69,4 +69,13 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     default <T> T withRemoveParcelFromDeliveryChange(Function<RemoveParcelFromDeliveryChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveParcelFromDeliveryChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveParcelFromDeliveryChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveParcelFromDeliveryChange>";
+            }
+        };
+    }
 }

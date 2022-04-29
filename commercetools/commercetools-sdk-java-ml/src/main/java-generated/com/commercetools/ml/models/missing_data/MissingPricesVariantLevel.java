@@ -56,4 +56,13 @@ public interface MissingPricesVariantLevel extends MissingPricesProductCount {
     default <T> T withMissingPricesVariantLevel(Function<MissingPricesVariantLevel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingPricesVariantLevel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingPricesVariantLevel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingPricesVariantLevel>";
+            }
+        };
+    }
 }

@@ -70,4 +70,13 @@ public interface ChangeAmountAuthorizedChange extends Change {
     default <T> T withChangeAmountAuthorizedChange(Function<ChangeAmountAuthorizedChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeAmountAuthorizedChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeAmountAuthorizedChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeAmountAuthorizedChange>";
+            }
+        };
+    }
 }

@@ -49,10 +49,18 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
         return this;
     }
 
-    public CustomObjectPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build());
+    public CustomObjectPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.custom_object.CustomObject> results) {
+        this.results = results;
+        return this;
+    }
+
+    public CustomObjectPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.custom_object.CustomObject... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
         return this;
     }
 
-    public CustomObjectPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.custom_object.CustomObject> results) {
-        this.results = results;
+    public CustomObjectPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build());
         return this;
     }
 

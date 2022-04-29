@@ -24,7 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ChannelImpl.class)
-public interface Channel extends BaseResource, com.commercetools.api.models.DomainResource<Channel> {
+public interface Channel extends BaseResource, com.commercetools.api.models.DomainResource<Channel>,
+        com.commercetools.api.models.Referencable<Channel>, com.commercetools.api.models.ResourceIdentifiable<Channel>,
+        com.commercetools.api.models.Customizable<Channel> {
 
     /**
     *  <p>Unique ID of the Channel.</p>
@@ -188,5 +190,24 @@ public interface Channel extends BaseResource, com.commercetools.api.models.Doma
 
     default <T> T withChannel(Function<Channel, T> helper) {
         return helper.apply(this);
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.channel.ChannelResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.channel.ChannelReference.builder().id(getId()).build();
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Channel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Channel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Channel>";
+            }
+        };
     }
 }

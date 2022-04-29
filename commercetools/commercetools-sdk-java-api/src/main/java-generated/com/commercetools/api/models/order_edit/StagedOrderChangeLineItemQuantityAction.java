@@ -28,8 +28,12 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
@@ -40,7 +44,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
 
     public void setLineItemId(final String lineItemId);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setExternalPrice(final Money externalPrice);
 
@@ -71,5 +75,14 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     default <T> T withStagedOrderChangeLineItemQuantityAction(
             Function<StagedOrderChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeLineItemQuantityAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeLineItemQuantityAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderChangeLineItemQuantityAction>";
+            }
+        };
     }
 }

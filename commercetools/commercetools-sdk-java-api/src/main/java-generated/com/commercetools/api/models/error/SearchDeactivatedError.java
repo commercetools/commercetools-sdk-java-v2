@@ -38,4 +38,13 @@ public interface SearchDeactivatedError extends ErrorObject {
     default <T> T withSearchDeactivatedError(Function<SearchDeactivatedError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SearchDeactivatedError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SearchDeactivatedError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SearchDeactivatedError>";
+            }
+        };
+    }
 }

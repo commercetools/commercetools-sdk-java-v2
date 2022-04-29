@@ -60,4 +60,13 @@ public interface OutOfStockError extends ErrorObject {
     default <T> T withOutOfStockError(Function<OutOfStockError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OutOfStockError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OutOfStockError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OutOfStockError>";
+            }
+        };
+    }
 }

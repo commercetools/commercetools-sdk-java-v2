@@ -36,6 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ResourceNotFoundErrorImpl.class, name = ResourceNotFoundError.RESOURCE_NOT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ResourceUpdateErrorImpl.class, name = ResourceUpdateError.RESOURCE_UPDATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)
+@JsonDeserialize(as = ErrorObjectImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ErrorObject {
 
@@ -49,7 +50,104 @@ public interface ErrorObject {
 
     public void setMessage(final String message);
 
+    public static com.commercetools.importapi.models.errors.AccessDeniedErrorBuilder accessDeniedBuilder() {
+        return com.commercetools.importapi.models.errors.AccessDeniedErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.ConcurrentModificationErrorBuilder concurrentModificationBuilder() {
+        return com.commercetools.importapi.models.errors.ConcurrentModificationErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.ContentionErrorBuilder contentionBuilder() {
+        return com.commercetools.importapi.models.errors.ContentionErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.DuplicateAttributeValueErrorBuilder duplicateAttributeValueBuilder() {
+        return com.commercetools.importapi.models.errors.DuplicateAttributeValueErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.DuplicateAttributeValuesErrorBuilder duplicateAttributeValuesBuilder() {
+        return com.commercetools.importapi.models.errors.DuplicateAttributeValuesErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.DuplicateFieldErrorBuilder duplicateFieldBuilder() {
+        return com.commercetools.importapi.models.errors.DuplicateFieldErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.DuplicateVariantValuesErrorBuilder duplicateVariantValuesBuilder() {
+        return com.commercetools.importapi.models.errors.DuplicateVariantValuesErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.GenericErrorBuilder genericBuilder() {
+        return com.commercetools.importapi.models.errors.GenericErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.InsufficientScopeErrorBuilder insufficientScopeBuilder() {
+        return com.commercetools.importapi.models.errors.InsufficientScopeErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.InvalidCredentialsErrorBuilder invalidCredentialsBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidCredentialsErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.InvalidFieldErrorBuilder invalidFieldBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidFieldErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.InvalidInputBuilder invalidInputBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidInputBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.InvalidJsonInputBuilder invalidJsonInputBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidJsonInputBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.InvalidOperationBuilder invalidOperationBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidOperationBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.InvalidScopeErrorBuilder invalidScopeBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidScopeErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.InvalidStateTransitionErrorBuilder invalidTransitionBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidStateTransitionErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.InvalidTokenErrorBuilder invalidTokenBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidTokenErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.RequiredFieldErrorBuilder requiredFieldBuilder() {
+        return com.commercetools.importapi.models.errors.RequiredFieldErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.ResourceCreationErrorBuilder resourceCreationBuilder() {
+        return com.commercetools.importapi.models.errors.ResourceCreationErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.ResourceDeletionErrorBuilder resourceDeletionBuilder() {
+        return com.commercetools.importapi.models.errors.ResourceDeletionErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.ResourceNotFoundErrorBuilder resourceNotFoundBuilder() {
+        return com.commercetools.importapi.models.errors.ResourceNotFoundErrorBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.errors.ResourceUpdateErrorBuilder resourceUpdateBuilder() {
+        return com.commercetools.importapi.models.errors.ResourceUpdateErrorBuilder.of();
+    }
+
     default <T> T withErrorObject(Function<ErrorObject, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ErrorObject> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ErrorObject>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ErrorObject>";
+            }
+        };
     }
 }

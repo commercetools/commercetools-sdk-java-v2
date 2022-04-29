@@ -32,10 +32,16 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     public ExtensionTriggerImpl() {
     }
 
+    /**
+    *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
+    */
     public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }
 
+    /**
+    *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+    */
     public java.util.List<com.commercetools.api.models.extension.ExtensionAction> getActions() {
         return this.actions;
     }

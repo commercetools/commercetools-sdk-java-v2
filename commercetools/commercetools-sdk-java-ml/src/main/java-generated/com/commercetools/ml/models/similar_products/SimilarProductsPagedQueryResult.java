@@ -77,4 +77,13 @@ public interface SimilarProductsPagedQueryResult {
     default <T> T withSimilarProductsPagedQueryResult(Function<SimilarProductsPagedQueryResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SimilarProductsPagedQueryResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SimilarProductsPagedQueryResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SimilarProductsPagedQueryResult>";
+            }
+        };
+    }
 }

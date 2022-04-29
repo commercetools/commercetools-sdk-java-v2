@@ -87,4 +87,13 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
             Function<CustomLineItemStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemStateTransitionMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemStateTransitionMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomLineItemStateTransitionMessagePayload>";
+            }
+        };
+    }
 }

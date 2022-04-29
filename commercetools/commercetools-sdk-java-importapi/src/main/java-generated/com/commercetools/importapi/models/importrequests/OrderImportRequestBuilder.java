@@ -18,10 +18,18 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
         return this;
     }
 
-    public OrderImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {
-        this.resources = new ArrayList<>();
-        this.resources.add(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()).build());
+    public OrderImportRequestBuilder resources(
+            final java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources) {
+        this.resources = resources;
+        return this;
+    }
+
+    public OrderImportRequestBuilder plusResources(
+            final com.commercetools.importapi.models.orders.OrderImport... resources) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources.addAll(Arrays.asList(resources));
         return this;
     }
 
@@ -34,9 +42,10 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
         return this;
     }
 
-    public OrderImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources) {
-        this.resources = resources;
+    public OrderImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources.add(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()).build());
         return this;
     }
 

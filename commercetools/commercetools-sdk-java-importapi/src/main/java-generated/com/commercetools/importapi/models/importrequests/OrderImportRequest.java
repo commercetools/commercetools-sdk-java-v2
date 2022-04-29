@@ -57,4 +57,13 @@ public interface OrderImportRequest extends ImportRequest {
     default <T> T withOrderImportRequest(Function<OrderImportRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderImportRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderImportRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderImportRequest>";
+            }
+        };
+    }
 }

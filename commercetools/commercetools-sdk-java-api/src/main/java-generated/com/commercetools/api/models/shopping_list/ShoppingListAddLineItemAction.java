@@ -16,7 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListAddLineItemActionImpl.class)
-public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction {
+public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
+        com.commercetools.api.models.CustomizableDraft<ShoppingListAddLineItemAction> {
 
     String ADD_LINE_ITEM = "addLineItem";
 
@@ -35,6 +36,9 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
+    /**
+    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
@@ -76,5 +80,14 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction 
 
     default <T> T withShoppingListAddLineItemAction(Function<ShoppingListAddLineItemAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListAddLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListAddLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListAddLineItemAction>";
+            }
+        };
     }
 }

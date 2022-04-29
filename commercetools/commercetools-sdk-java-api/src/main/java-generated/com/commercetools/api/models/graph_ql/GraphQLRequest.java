@@ -57,4 +57,13 @@ public interface GraphQLRequest {
     default <T> T withGraphQLRequest(Function<GraphQLRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GraphQLRequest>";
+            }
+        };
+    }
 }

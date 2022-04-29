@@ -62,4 +62,13 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
     default <T> T withAttributeDefinitionAlreadyExistsError(Function<AttributeDefinitionAlreadyExistsError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionAlreadyExistsError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinitionAlreadyExistsError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeDefinitionAlreadyExistsError>";
+            }
+        };
+    }
 }

@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AssetImpl.class)
-public interface Asset {
+public interface Asset extends com.commercetools.api.models.Customizable<Asset> {
 
     @NotNull
     @JsonProperty("id")
@@ -39,6 +39,9 @@ public interface Asset {
     @JsonProperty("tags")
     public List<String> getTags();
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
@@ -92,5 +95,14 @@ public interface Asset {
 
     default <T> T withAsset(Function<Asset, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Asset> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Asset>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Asset>";
+            }
+        };
     }
 }

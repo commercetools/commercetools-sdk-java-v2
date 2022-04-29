@@ -63,4 +63,13 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
             Function<ProductSetAttributeInAllVariantsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAttributeInAllVariantsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetAttributeInAllVariantsAction>";
+            }
+        };
+    }
 }

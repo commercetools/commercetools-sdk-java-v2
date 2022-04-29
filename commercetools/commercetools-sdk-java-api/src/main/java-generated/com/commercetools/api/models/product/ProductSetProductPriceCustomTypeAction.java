@@ -28,10 +28,17 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Price with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the Price.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Price.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -69,5 +76,14 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     default <T> T withProductSetProductPriceCustomTypeAction(
             Function<ProductSetProductPriceCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetProductPriceCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetProductPriceCustomTypeAction>";
+            }
+        };
     }
 }

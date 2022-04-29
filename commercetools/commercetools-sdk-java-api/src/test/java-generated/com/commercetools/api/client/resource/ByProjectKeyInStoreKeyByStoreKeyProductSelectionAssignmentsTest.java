@@ -63,20 +63,36 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .productSelectionAssignments()
-                        .get()
-                        .createHttpRequest(),
-                "get", "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments", } };
+        return new Object[][] {
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productSelectionAssignments()
+                                .get()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get",
+                        "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productSelectionAssignments()
+                                .get()
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/product-selection-assignments", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
-                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                .productSelectionAssignments()
-                .get(), } };
+        return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productSelectionAssignments()
+                        .get()
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productSelectionAssignments()
+                        .get(), } };
     }
 }

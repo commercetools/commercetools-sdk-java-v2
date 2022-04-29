@@ -53,4 +53,13 @@ public interface LineItemReturnItem extends ReturnItem {
     default <T> T withLineItemReturnItem(Function<LineItemReturnItem, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LineItemReturnItem> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LineItemReturnItem>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LineItemReturnItem>";
+            }
+        };
+    }
 }

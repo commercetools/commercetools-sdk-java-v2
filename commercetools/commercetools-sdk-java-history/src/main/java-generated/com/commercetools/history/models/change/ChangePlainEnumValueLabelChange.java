@@ -86,4 +86,13 @@ public interface ChangePlainEnumValueLabelChange extends Change {
     default <T> T withChangePlainEnumValueLabelChange(Function<ChangePlainEnumValueLabelChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangePlainEnumValueLabelChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangePlainEnumValueLabelChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangePlainEnumValueLabelChange>";
+            }
+        };
+    }
 }

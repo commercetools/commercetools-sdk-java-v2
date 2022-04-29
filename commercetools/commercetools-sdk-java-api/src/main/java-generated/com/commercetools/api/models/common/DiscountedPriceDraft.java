@@ -18,6 +18,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountedPriceDraftImpl.class)
 public interface DiscountedPriceDraft {
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -53,5 +57,14 @@ public interface DiscountedPriceDraft {
 
     default <T> T withDiscountedPriceDraft(Function<DiscountedPriceDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountedPriceDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountedPriceDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountedPriceDraft>";
+            }
+        };
     }
 }

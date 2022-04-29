@@ -14,8 +14,8 @@ import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.json.ApiModuleOptions;
 import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.product.AttributeAccessor;
 import com.commercetools.api.models.product.ProductVariant;
-import com.commercetools.api.product.AttributeAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

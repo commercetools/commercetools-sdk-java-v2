@@ -56,4 +56,13 @@ public interface ProductSelectionUpdate extends
     default <T> T withProductSelectionUpdate(Function<ProductSelectionUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionUpdate>";
+            }
+        };
+    }
 }

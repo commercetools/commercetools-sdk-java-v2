@@ -21,6 +21,9 @@ public interface PriceTier {
     @JsonProperty("minimumQuantity")
     public Long getMinimumQuantity();
 
+    /**
+    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -51,5 +54,14 @@ public interface PriceTier {
 
     default <T> T withPriceTier(Function<PriceTier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceTier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceTier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PriceTier>";
+            }
+        };
     }
 }

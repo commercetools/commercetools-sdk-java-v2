@@ -103,4 +103,13 @@ public interface SimilarProductSearchRequest {
     default <T> T withSimilarProductSearchRequest(Function<SimilarProductSearchRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SimilarProductSearchRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SimilarProductSearchRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SimilarProductSearchRequest>";
+            }
+        };
+    }
 }

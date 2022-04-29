@@ -70,4 +70,13 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
             Function<OrderCustomLineItemDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemDiscountSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemDiscountSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderCustomLineItemDiscountSetMessagePayload>";
+            }
+        };
+    }
 }

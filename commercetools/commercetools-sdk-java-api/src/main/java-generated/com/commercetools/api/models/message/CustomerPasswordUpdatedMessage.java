@@ -58,4 +58,13 @@ public interface CustomerPasswordUpdatedMessage extends Message {
     default <T> T withCustomerPasswordUpdatedMessage(Function<CustomerPasswordUpdatedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerPasswordUpdatedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerPasswordUpdatedMessage>";
+            }
+        };
+    }
 }

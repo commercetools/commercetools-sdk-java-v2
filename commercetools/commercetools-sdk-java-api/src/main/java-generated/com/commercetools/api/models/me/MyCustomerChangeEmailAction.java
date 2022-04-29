@@ -45,4 +45,13 @@ public interface MyCustomerChangeEmailAction extends MyCustomerUpdateAction {
     default <T> T withMyCustomerChangeEmailAction(Function<MyCustomerChangeEmailAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangeEmailAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerChangeEmailAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerChangeEmailAction>";
+            }
+        };
+    }
 }

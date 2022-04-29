@@ -31,7 +31,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
 
     private String sku;
 
-    private Double quantity;
+    private Long quantity;
 
     private java.time.ZonedDateTime addedAt;
 
@@ -49,7 +49,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,
-            @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Double quantity,
+            @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
@@ -78,6 +78,9 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
         return this.action;
     }
 
+    /**
+    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
@@ -105,7 +108,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
         return this.sku;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -120,6 +123,10 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
         return this.supplyChannel;
     }
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     public com.commercetools.api.models.common.Money getExternalPrice() {
         return this.externalPrice;
     }
@@ -157,7 +164,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
         this.sku = sku;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

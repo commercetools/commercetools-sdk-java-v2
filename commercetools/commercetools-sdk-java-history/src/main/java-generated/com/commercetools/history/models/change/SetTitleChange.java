@@ -66,4 +66,13 @@ public interface SetTitleChange extends Change {
     default <T> T withSetTitleChange(Function<SetTitleChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetTitleChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetTitleChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetTitleChange>";
+            }
+        };
+    }
 }

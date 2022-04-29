@@ -50,4 +50,13 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
             Function<MyCustomerSetDefaultBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDefaultBillingAddressAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetDefaultBillingAddressAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerSetDefaultBillingAddressAction>";
+            }
+        };
+    }
 }

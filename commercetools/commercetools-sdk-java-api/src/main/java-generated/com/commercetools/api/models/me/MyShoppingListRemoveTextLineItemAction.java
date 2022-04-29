@@ -53,4 +53,13 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
             Function<MyShoppingListRemoveTextLineItemAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListRemoveTextLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListRemoveTextLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyShoppingListRemoveTextLineItemAction>";
+            }
+        };
+    }
 }

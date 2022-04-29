@@ -86,4 +86,13 @@ public interface SetCustomLineItemMoneyChange extends Change {
     default <T> T withSetCustomLineItemMoneyChange(Function<SetCustomLineItemMoneyChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemMoneyChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemMoneyChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomLineItemMoneyChange>";
+            }
+        };
+    }
 }

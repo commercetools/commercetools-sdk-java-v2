@@ -41,6 +41,9 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     @JsonProperty("newState")
     public List<ItemState> getNewState();
 
+    /**
+    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("newTotalPrice")
@@ -104,5 +107,14 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
 
     default <T> T withOrderLineItemRemovedMessagePayload(Function<OrderLineItemRemovedMessagePayload, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemRemovedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemRemovedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderLineItemRemovedMessagePayload>";
+            }
+        };
     }
 }

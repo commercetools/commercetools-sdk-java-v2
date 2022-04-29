@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartDiscountReferenceImpl.class)
-public interface CartDiscountReference extends Reference {
+public interface CartDiscountReference extends Reference, com.commercetools.api.models.Identifiable<CartDiscount> {
 
     String CART_DISCOUNT = "cart-discount";
 
@@ -46,5 +46,14 @@ public interface CartDiscountReference extends Reference {
 
     default <T> T withCartDiscountReference(Function<CartDiscountReference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountReference>";
+            }
+        };
     }
 }

@@ -21,6 +21,14 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
         return this;
     }
 
+    public TypeChangeFieldDefinitionOrderActionBuilder plusFieldNames(final String... fieldNames) {
+        if (this.fieldNames == null) {
+            this.fieldNames = new ArrayList<>();
+        }
+        this.fieldNames.addAll(Arrays.asList(fieldNames));
+        return this;
+    }
+
     public java.util.List<String> getFieldNames() {
         return this.fieldNames;
     }

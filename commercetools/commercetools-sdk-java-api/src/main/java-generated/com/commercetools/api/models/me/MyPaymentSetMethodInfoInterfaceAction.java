@@ -46,4 +46,13 @@ public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAc
     default <T> T withMyPaymentSetMethodInfoInterfaceAction(Function<MyPaymentSetMethodInfoInterfaceAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoInterfaceAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoInterfaceAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyPaymentSetMethodInfoInterfaceAction>";
+            }
+        };
+    }
 }

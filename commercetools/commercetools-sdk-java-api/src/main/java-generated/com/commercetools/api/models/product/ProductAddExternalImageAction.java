@@ -66,4 +66,13 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     default <T> T withProductAddExternalImageAction(Function<ProductAddExternalImageAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductAddExternalImageAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductAddExternalImageAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductAddExternalImageAction>";
+            }
+        };
+    }
 }

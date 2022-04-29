@@ -66,4 +66,13 @@ public interface MissingAttributesMeta {
     default <T> T withMissingAttributesMeta(Function<MissingAttributesMeta, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingAttributesMeta> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingAttributesMeta>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingAttributesMeta>";
+            }
+        };
+    }
 }

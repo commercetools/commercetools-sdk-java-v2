@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -17,6 +18,13 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
     public CartSetShippingRateInputActionBuilder shippingRateInput(
             @Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
+        return this;
+    }
+
+    public CartSetShippingRateInputActionBuilder shippingRateInput(
+            Function<com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInputDraft>> builder) {
+        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputDraftBuilder.of())
+                .build();
         return this;
     }
 

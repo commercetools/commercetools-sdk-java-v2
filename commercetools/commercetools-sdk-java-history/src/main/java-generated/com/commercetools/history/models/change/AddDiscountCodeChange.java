@@ -62,4 +62,13 @@ public interface AddDiscountCodeChange extends Change {
     default <T> T withAddDiscountCodeChange(Function<AddDiscountCodeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddDiscountCodeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddDiscountCodeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddDiscountCodeChange>";
+            }
+        };
+    }
 }

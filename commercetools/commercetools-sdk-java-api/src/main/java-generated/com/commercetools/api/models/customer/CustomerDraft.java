@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerDraftImpl.class)
-public interface CustomerDraft {
+public interface CustomerDraft extends com.commercetools.api.models.CustomizableDraft<CustomerDraft> {
 
     /**
     *  <p>String that uniquely identifies a customer.
@@ -42,7 +42,10 @@ public interface CustomerDraft {
     @JsonProperty("email")
     public String getEmail();
 
-    @NotNull
+    /**
+    *  <p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p>
+    */
+
     @JsonProperty("password")
     public String getPassword();
 
@@ -172,6 +175,13 @@ public interface CustomerDraft {
     @JsonProperty("stores")
     public List<StoreResourceIdentifier> getStores();
 
+    /**
+    *  <p>Defines whether a password is required for the Customer that is used for platform-internal authentication.</p>
+    */
+
+    @JsonProperty("authenticationMode")
+    public AuthenticationMode getAuthenticationMode();
+
     public void setCustomerNumber(final String customerNumber);
 
     public void setEmail(final String email);
@@ -237,6 +247,8 @@ public interface CustomerDraft {
 
     public void setStores(final List<StoreResourceIdentifier> stores);
 
+    public void setAuthenticationMode(final AuthenticationMode authenticationMode);
+
     public static CustomerDraft of() {
         return new CustomerDraftImpl();
     }
@@ -269,6 +281,7 @@ public interface CustomerDraft {
         instance.setSalutation(template.getSalutation());
         instance.setKey(template.getKey());
         instance.setStores(template.getStores());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }
 
@@ -282,5 +295,14 @@ public interface CustomerDraft {
 
     default <T> T withCustomerDraft(Function<CustomerDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerDraft>";
+            }
+        };
     }
 }

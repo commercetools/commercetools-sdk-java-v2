@@ -46,4 +46,13 @@ public interface CategorySetMetaTitleAction extends CategoryUpdateAction {
     default <T> T withCategorySetMetaTitleAction(Function<CategorySetMetaTitleAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetMetaTitleAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetMetaTitleAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySetMetaTitleAction>";
+            }
+        };
+    }
 }

@@ -37,6 +37,9 @@ public class ProjectChangeMessagesConfigurationActionImpl
         return this.action;
     }
 
+    /**
+    *  <p>Configuration for the <a href="/../api/projects/messages">Messages Query</a> feature.</p>
+    */
     public com.commercetools.api.models.message.MessagesConfigurationDraft getMessagesConfiguration() {
         return this.messagesConfiguration;
     }

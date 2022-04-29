@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApiClient {
 
     /**
-    *  <p>Unique ID of the API client.
+    *  <p>Unique ID of the API Client.
     *  This is the OAuth2 <code>client_id</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
     */
     @NotNull
@@ -56,18 +56,32 @@ public interface ApiClient {
     public LocalDate getLastUsedAt();
 
     /**
-    *  <p>If set, the client will be deleted on (or shortly after) this point in time.</p>
+    *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
     */
 
     @JsonProperty("deleteAt")
     public ZonedDateTime getDeleteAt();
 
     /**
-    *  <p>Date and time (UTC) the API Client was initially created.</p>
+    *  <p>Date and time (UTC) the API Client was initially created at.</p>
     */
 
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
+
+    /**
+    *  <p>Expiration time in seconds for each access token obtained by the API Client. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
+    */
+
+    @JsonProperty("accessTokenValiditySeconds")
+    public Integer getAccessTokenValiditySeconds();
+
+    /**
+    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the API Client. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
+    */
+
+    @JsonProperty("refreshTokenValiditySeconds")
+    public Integer getRefreshTokenValiditySeconds();
 
     public void setId(final String id);
 
@@ -83,6 +97,10 @@ public interface ApiClient {
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    public void setAccessTokenValiditySeconds(final Integer accessTokenValiditySeconds);
+
+    public void setRefreshTokenValiditySeconds(final Integer refreshTokenValiditySeconds);
+
     public static ApiClient of() {
         return new ApiClientImpl();
     }
@@ -96,6 +114,8 @@ public interface ApiClient {
         instance.setLastUsedAt(template.getLastUsedAt());
         instance.setDeleteAt(template.getDeleteAt());
         instance.setCreatedAt(template.getCreatedAt());
+        instance.setAccessTokenValiditySeconds(template.getAccessTokenValiditySeconds());
+        instance.setRefreshTokenValiditySeconds(template.getRefreshTokenValiditySeconds());
         return instance;
     }
 
@@ -109,5 +129,14 @@ public interface ApiClient {
 
     default <T> T withApiClient(Function<ApiClient, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ApiClient> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ApiClient>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ApiClient>";
+            }
+        };
     }
 }

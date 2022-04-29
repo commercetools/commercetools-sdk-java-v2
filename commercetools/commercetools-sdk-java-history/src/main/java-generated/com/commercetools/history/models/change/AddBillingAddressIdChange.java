@@ -82,4 +82,13 @@ public interface AddBillingAddressIdChange extends Change {
     default <T> T withAddBillingAddressIdChange(Function<AddBillingAddressIdChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddBillingAddressIdChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddBillingAddressIdChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddBillingAddressIdChange>";
+            }
+        };
+    }
 }

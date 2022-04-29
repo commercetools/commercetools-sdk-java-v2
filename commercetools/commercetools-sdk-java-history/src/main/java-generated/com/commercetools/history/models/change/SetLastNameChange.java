@@ -66,4 +66,13 @@ public interface SetLastNameChange extends Change {
     default <T> T withSetLastNameChange(Function<SetLastNameChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetLastNameChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetLastNameChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetLastNameChange>";
+            }
+        };
+    }
 }

@@ -19,6 +19,9 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
 
     String CHANGE_DESTINATION = "changeDestination";
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("destination")
@@ -46,5 +49,14 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
 
     default <T> T withExtensionChangeDestinationAction(Function<ExtensionChangeDestinationAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionChangeDestinationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionChangeDestinationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionChangeDestinationAction>";
+            }
+        };
     }
 }

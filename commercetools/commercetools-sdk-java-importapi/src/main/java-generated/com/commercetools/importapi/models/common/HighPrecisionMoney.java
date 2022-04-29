@@ -48,4 +48,13 @@ public interface HighPrecisionMoney extends TypedMoney {
     default <T> T withHighPrecisionMoney(Function<HighPrecisionMoney, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney>() {
+            @Override
+            public String toString() {
+                return "TypeReference<HighPrecisionMoney>";
+            }
+        };
+    }
 }

@@ -20,7 +20,7 @@ public interface AttributeDefinition {
     @NotNull
     @Valid
     @JsonProperty("type")
-    public Object getType();
+    public AttributeType getType();
 
     /**
     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
@@ -61,7 +61,7 @@ public interface AttributeDefinition {
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();
 
-    public void setType(final Object type);
+    public void setType(final AttributeType type);
 
     public void setName(final String name);
 
@@ -104,5 +104,14 @@ public interface AttributeDefinition {
 
     default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeDefinition>";
+            }
+        };
     }
 }

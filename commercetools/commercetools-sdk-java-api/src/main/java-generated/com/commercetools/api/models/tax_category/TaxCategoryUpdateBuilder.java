@@ -2,6 +2,7 @@
 package com.commercetools.api.models.tax_category;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,33 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
     public TaxCategoryUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public TaxCategoryUpdateBuilder plusActions(
+            final com.commercetools.api.models.tax_category.TaxCategoryUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public TaxCategoryUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.tax_category.TaxCategoryUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public TaxCategoryUpdateBuilder withActions(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder, Builder<? extends com.commercetools.api.models.tax_category.TaxCategoryUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.tax_category.TaxCategoryUpdateActionBuilder.of()).build());
         return this;
     }
 

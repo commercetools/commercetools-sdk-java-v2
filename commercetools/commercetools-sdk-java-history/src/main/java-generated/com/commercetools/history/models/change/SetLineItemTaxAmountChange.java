@@ -100,4 +100,13 @@ public interface SetLineItemTaxAmountChange extends Change {
     default <T> T withSetLineItemTaxAmountChange(Function<SetLineItemTaxAmountChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemTaxAmountChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemTaxAmountChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetLineItemTaxAmountChange>";
+            }
+        };
+    }
 }

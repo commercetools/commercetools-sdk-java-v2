@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderEditResourceIdentifierImpl.class)
-public interface OrderEditResourceIdentifier extends ResourceIdentifier {
+public interface OrderEditResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<OrderEdit> {
 
     String ORDER_EDIT = "order-edit";
 
@@ -38,5 +39,14 @@ public interface OrderEditResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withOrderEditResourceIdentifier(Function<OrderEditResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditResourceIdentifier>";
+            }
+        };
     }
 }

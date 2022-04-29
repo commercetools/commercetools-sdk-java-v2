@@ -63,4 +63,13 @@ public interface OrderShippingRateInputSetMessage extends OrderMessage {
     default <T> T withOrderShippingRateInputSetMessage(Function<OrderShippingRateInputSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderShippingRateInputSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderShippingRateInputSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderShippingRateInputSetMessage>";
+            }
+        };
+    }
 }

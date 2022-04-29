@@ -84,4 +84,13 @@ public interface ChangePriceChange extends Change {
     default <T> T withChangePriceChange(Function<ChangePriceChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangePriceChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangePriceChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangePriceChange>";
+            }
+        };
+    }
 }

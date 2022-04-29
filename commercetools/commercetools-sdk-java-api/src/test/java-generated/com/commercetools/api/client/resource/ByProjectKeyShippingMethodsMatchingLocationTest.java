@@ -96,6 +96,14 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "get", "/test_projectKey/shipping-methods/matching-location?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingLocation()
+                                .get()
+                                .withSort("sort")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-location?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .matchingLocation()
@@ -126,6 +134,11 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                         .matchingLocation()
                         .get()
                         .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingLocation()
+                        .get()
+                        .withSort("sort"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingLocation().get(), } };
     }

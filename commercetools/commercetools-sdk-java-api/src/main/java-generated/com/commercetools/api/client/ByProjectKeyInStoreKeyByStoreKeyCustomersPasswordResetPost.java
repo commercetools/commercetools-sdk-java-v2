@@ -18,22 +18,22 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends
-        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerResetPassword>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.MyCustomerResetPassword>
         implements
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost> {
 
     private String projectKey;
     private String storeKey;
 
-    private com.commercetools.api.models.customer.CustomerResetPassword customerResetPassword;
+    private com.commercetools.api.models.customer.MyCustomerResetPassword myCustomerResetPassword;
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost(final ApiHttpClient apiHttpClient,
             String projectKey, String storeKey,
-            com.commercetools.api.models.customer.CustomerResetPassword customerResetPassword) {
+            com.commercetools.api.models.customer.MyCustomerResetPassword myCustomerResetPassword) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
-        this.customerResetPassword = customerResetPassword;
+        this.myCustomerResetPassword = myCustomerResetPassword;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost(
@@ -41,11 +41,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends
         super(t);
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
-        this.customerResetPassword = t.customerResetPassword;
+        this.myCustomerResetPassword = t.myCustomerResetPassword;
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/customers/password/reset", this.projectKey,
             this.storeKey);
@@ -54,7 +54,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends
         }
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
             io.vrap.rmf.base.client.utils.json.JsonUtils
-                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerResetPassword)));
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(myCustomerResetPassword)));
 
     }
 
@@ -86,14 +86,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends
         this.storeKey = storeKey;
     }
 
-    public com.commercetools.api.models.customer.CustomerResetPassword getBody() {
-        return customerResetPassword;
+    public com.commercetools.api.models.customer.MyCustomerResetPassword getBody() {
+        return myCustomerResetPassword;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost withBody(
-            com.commercetools.api.models.customer.CustomerResetPassword customerResetPassword) {
+            com.commercetools.api.models.customer.MyCustomerResetPassword myCustomerResetPassword) {
         ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost t = copy();
-        t.customerResetPassword = customerResetPassword;
+        t.myCustomerResetPassword = myCustomerResetPassword;
         return t;
     }
 
@@ -109,7 +109,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends
 
         return new EqualsBuilder().append(projectKey, that.projectKey)
                 .append(storeKey, that.storeKey)
-                .append(customerResetPassword, that.customerResetPassword)
+                .append(myCustomerResetPassword, that.myCustomerResetPassword)
                 .isEquals();
     }
 
@@ -117,7 +117,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(projectKey)
                 .append(storeKey)
-                .append(customerResetPassword)
+                .append(myCustomerResetPassword)
                 .toHashCode();
     }
 

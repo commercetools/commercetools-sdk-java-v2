@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.history.models.change_value.AttributeValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -37,20 +38,20 @@ public interface SetAttributeChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public Object getPreviousValue();
+    public AttributeValue getPreviousValue();
 
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public Object getNextValue();
+    public AttributeValue getNextValue();
 
     public void setChange(final String change);
 
     public void setCatalogData(final String catalogData);
 
-    public void setPreviousValue(final Object previousValue);
+    public void setPreviousValue(final AttributeValue previousValue);
 
-    public void setNextValue(final Object nextValue);
+    public void setNextValue(final AttributeValue nextValue);
 
     public static SetAttributeChange of() {
         return new SetAttributeChangeImpl();
@@ -75,5 +76,14 @@ public interface SetAttributeChange extends Change {
 
     default <T> T withSetAttributeChange(Function<SetAttributeChange, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAttributeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAttributeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAttributeChange>";
+            }
+        };
     }
 }

@@ -47,4 +47,13 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     default <T> T withShippingMethodSetPredicateAction(Function<ShippingMethodSetPredicateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetPredicateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetPredicateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodSetPredicateAction>";
+            }
+        };
+    }
 }

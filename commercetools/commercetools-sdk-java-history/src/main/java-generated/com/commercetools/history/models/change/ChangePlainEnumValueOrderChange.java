@@ -86,4 +86,13 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     default <T> T withChangePlainEnumValueOrderChange(Function<ChangePlainEnumValueOrderChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangePlainEnumValueOrderChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangePlainEnumValueOrderChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangePlainEnumValueOrderChange>";
+            }
+        };
+    }
 }

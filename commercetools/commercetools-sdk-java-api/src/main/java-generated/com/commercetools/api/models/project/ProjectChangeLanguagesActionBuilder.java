@@ -21,6 +21,14 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
         return this;
     }
 
+    public ProjectChangeLanguagesActionBuilder plusLanguages(final String... languages) {
+        if (this.languages == null) {
+            this.languages = new ArrayList<>();
+        }
+        this.languages.addAll(Arrays.asList(languages));
+        return this;
+    }
+
     public java.util.List<String> getLanguages() {
         return this.languages;
     }

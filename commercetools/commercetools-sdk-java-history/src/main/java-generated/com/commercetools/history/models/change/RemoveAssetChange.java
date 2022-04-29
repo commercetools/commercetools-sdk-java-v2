@@ -62,4 +62,13 @@ public interface RemoveAssetChange extends Change {
     default <T> T withRemoveAssetChange(Function<RemoveAssetChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveAssetChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveAssetChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveAssetChange>";
+            }
+        };
+    }
 }

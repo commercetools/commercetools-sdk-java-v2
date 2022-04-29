@@ -49,4 +49,13 @@ public interface CartRecalculateAction extends CartUpdateAction {
     default <T> T withCartRecalculateAction(Function<CartRecalculateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartRecalculateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartRecalculateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartRecalculateAction>";
+            }
+        };
+    }
 }

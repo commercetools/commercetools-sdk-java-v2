@@ -70,4 +70,13 @@ public interface SetGeoLocationChange extends Change {
     default <T> T withSetGeoLocationChange(Function<SetGeoLocationChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetGeoLocationChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetGeoLocationChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetGeoLocationChange>";
+            }
+        };
+    }
 }

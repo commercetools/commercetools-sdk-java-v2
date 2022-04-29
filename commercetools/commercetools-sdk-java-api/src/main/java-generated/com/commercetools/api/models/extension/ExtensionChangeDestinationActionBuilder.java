@@ -2,6 +2,7 @@
 package com.commercetools.api.models.extension;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,13 @@ public class ExtensionChangeDestinationActionBuilder implements Builder<Extensio
     public ExtensionChangeDestinationActionBuilder destination(
             final com.commercetools.api.models.extension.ExtensionDestination destination) {
         this.destination = destination;
+        return this;
+    }
+
+    public ExtensionChangeDestinationActionBuilder destination(
+            Function<com.commercetools.api.models.extension.ExtensionDestinationBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionDestination>> builder) {
+        this.destination = builder.apply(com.commercetools.api.models.extension.ExtensionDestinationBuilder.of())
+                .build();
         return this;
     }
 

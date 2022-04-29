@@ -12,14 +12,14 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
 
     private String customLineItemId;
 
-    private Double quantity;
+    private Long quantity;
 
     public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
-    public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity(final Double quantity) {
+    public StagedOrderChangeCustomLineItemQuantityActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -28,7 +28,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
         return this.customLineItemId;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

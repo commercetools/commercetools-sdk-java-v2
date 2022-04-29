@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -41,7 +43,7 @@ public class ByProjectKeyImageSearchPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/image-search", this.projectKey);
         if (!params.isEmpty()) {
@@ -87,23 +89,51 @@ public class ByProjectKeyImageSearchPost extends
     }
 
     /**
-     * set limit with the specificied value
+     * set limit with the specified value
      */
-    public ByProjectKeyImageSearchPost withLimit(final int limit) {
+    public <TValue> ByProjectKeyImageSearchPost withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
     }
 
     /**
      * add additional limit query parameter
      */
-    public ByProjectKeyImageSearchPost addLimit(final int limit) {
+    public <TValue> ByProjectKeyImageSearchPost addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
     }
 
     /**
-     * set limit with the specificied values
+     * set limit with the specified value
      */
-    public ByProjectKeyImageSearchPost withLimit(final List<Integer> limit) {
+    public ByProjectKeyImageSearchPost withLimit(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyImageSearchPost addLimit(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyImageSearchPost withLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyImageSearchPost addLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
+     */
+    public <TValue> ByProjectKeyImageSearchPost withLimit(final List<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -112,29 +142,57 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * add additional limit query parameters
      */
-    public ByProjectKeyImageSearchPost addLimit(final List<Integer> limit) {
+    public <TValue> ByProjectKeyImageSearchPost addLimit(final List<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * set offset with the specificied value
+     * set offset with the specified value
      */
-    public ByProjectKeyImageSearchPost withOffset(final int offset) {
+    public <TValue> ByProjectKeyImageSearchPost withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
     }
 
     /**
      * add additional offset query parameter
      */
-    public ByProjectKeyImageSearchPost addOffset(final int offset) {
+    public <TValue> ByProjectKeyImageSearchPost addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
     }
 
     /**
-     * set offset with the specificied values
+     * set offset with the specified value
      */
-    public ByProjectKeyImageSearchPost withOffset(final List<Integer> offset) {
+    public ByProjectKeyImageSearchPost withOffset(final Supplier<Integer> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyImageSearchPost addOffset(final Supplier<Integer> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyImageSearchPost withOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyImageSearchPost addOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
+     */
+    public <TValue> ByProjectKeyImageSearchPost withOffset(final List<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -143,7 +201,7 @@ public class ByProjectKeyImageSearchPost extends
     /**
      * add additional offset query parameters
      */
-    public ByProjectKeyImageSearchPost addOffset(final List<Integer> offset) {
+    public <TValue> ByProjectKeyImageSearchPost addOffset(final List<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }

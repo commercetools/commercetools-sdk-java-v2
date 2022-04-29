@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductDataImpl.class)
-public interface ProductData {
+public interface ProductData extends ProductDataLike {
 
     @NotNull
     @Valid
@@ -127,5 +127,14 @@ public interface ProductData {
 
     default <T> T withProductData(Function<ProductData, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductData> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductData>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductData>";
+            }
+        };
     }
 }

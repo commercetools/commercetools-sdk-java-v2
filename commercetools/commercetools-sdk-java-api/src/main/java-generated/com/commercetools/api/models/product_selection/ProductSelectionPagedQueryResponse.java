@@ -100,4 +100,13 @@ public interface ProductSelectionPagedQueryResponse
     default <T> T withProductSelectionPagedQueryResponse(Function<ProductSelectionPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionPagedQueryResponse>";
+            }
+        };
+    }
 }

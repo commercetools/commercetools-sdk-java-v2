@@ -21,15 +21,15 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-    *  <p>If set, the custom type is set to this new value.
-    *  If absent, the custom type and any existing custom fields are removed.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Payment with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the Payment.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the custom fields to this value.</p>
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Payment.</p>
     */
     @Valid
     @JsonProperty("fields")
@@ -60,5 +60,14 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
 
     default <T> T withPaymentSetCustomTypeAction(Function<PaymentSetCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentSetCustomTypeAction>";
+            }
+        };
     }
 }

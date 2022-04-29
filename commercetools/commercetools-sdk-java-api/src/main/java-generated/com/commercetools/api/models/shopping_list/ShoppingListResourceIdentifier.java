@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListResourceIdentifierImpl.class)
-public interface ShoppingListResourceIdentifier extends ResourceIdentifier {
+public interface ShoppingListResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<ShoppingList> {
 
     String SHOPPING_LIST = "shopping-list";
 
@@ -38,5 +39,14 @@ public interface ShoppingListResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withShoppingListResourceIdentifier(Function<ShoppingListResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListResourceIdentifier>";
+            }
+        };
     }
 }

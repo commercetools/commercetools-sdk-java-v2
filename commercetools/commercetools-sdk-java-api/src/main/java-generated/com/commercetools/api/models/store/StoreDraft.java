@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StoreDraftImpl.class)
-public interface StoreDraft {
+public interface StoreDraft extends com.commercetools.api.models.CustomizableDraft<StoreDraft> {
 
     /**
     *  <p>User-specific unique identifier for the store.
@@ -118,5 +118,14 @@ public interface StoreDraft {
 
     default <T> T withStoreDraft(Function<StoreDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreDraft>";
+            }
+        };
     }
 }

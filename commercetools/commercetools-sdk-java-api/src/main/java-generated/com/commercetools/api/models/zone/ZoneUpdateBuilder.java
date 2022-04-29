@@ -2,6 +2,7 @@
 package com.commercetools.api.models.zone;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -25,6 +26,30 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     public ZoneUpdateBuilder actions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public ZoneUpdateBuilder plusActions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public ZoneUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.zone.ZoneUpdateActionBuilder, Builder<? extends com.commercetools.api.models.zone.ZoneUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(builder.apply(com.commercetools.api.models.zone.ZoneUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public ZoneUpdateBuilder withActions(
+            Function<com.commercetools.api.models.zone.ZoneUpdateActionBuilder, Builder<? extends com.commercetools.api.models.zone.ZoneUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(builder.apply(com.commercetools.api.models.zone.ZoneUpdateActionBuilder.of()).build());
         return this;
     }
 

@@ -48,10 +48,17 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
         return this;
     }
 
-    public ProductPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.product.ProductBuilder, com.commercetools.api.models.product.ProductBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.product.ProductBuilder.of()).build());
+    public ProductPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.product.Product> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ProductPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.product.Product... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +71,10 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
         return this;
     }
 
-    public ProductPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.product.Product> results) {
-        this.results = results;
+    public ProductPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.product.ProductBuilder, com.commercetools.api.models.product.ProductBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.product.ProductBuilder.of()).build());
         return this;
     }
 

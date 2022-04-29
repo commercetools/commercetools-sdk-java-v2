@@ -105,4 +105,13 @@ public interface MissingAttributes {
     default <T> T withMissingAttributes(Function<MissingAttributes, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingAttributes> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingAttributes>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingAttributes>";
+            }
+        };
+    }
 }

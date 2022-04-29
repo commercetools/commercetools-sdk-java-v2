@@ -66,4 +66,13 @@ public interface SetDescriptionChange extends Change {
     default <T> T withSetDescriptionChange(Function<SetDescriptionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetDescriptionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetDescriptionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetDescriptionChange>";
+            }
+        };
+    }
 }

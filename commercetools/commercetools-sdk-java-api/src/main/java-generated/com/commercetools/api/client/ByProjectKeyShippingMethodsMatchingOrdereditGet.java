@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -33,7 +35,7 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/shipping-methods/matching-orderedit", this.projectKey);
         if (!params.isEmpty()) {
@@ -76,23 +78,53 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
     }
 
     /**
-     * set orderEditId with the specificied value
+     * set orderEditId with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final String orderEditId) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final TValue orderEditId) {
         return copy().withQueryParam("orderEditId", orderEditId);
     }
 
     /**
      * add additional orderEditId query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet addOrderEditId(final String orderEditId) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet addOrderEditId(final TValue orderEditId) {
         return copy().addQueryParam("orderEditId", orderEditId);
     }
 
     /**
-     * set orderEditId with the specificied values
+     * set orderEditId with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final List<String> orderEditId) {
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final Supplier<String> supplier) {
+        return copy().withQueryParam("orderEditId", supplier.get());
+    }
+
+    /**
+     * add additional orderEditId query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addOrderEditId(final Supplier<String> supplier) {
+        return copy().addQueryParam("orderEditId", supplier.get());
+    }
+
+    /**
+     * set orderEditId with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("orderEditId", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional orderEditId query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addOrderEditId(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("orderEditId", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set orderEditId with the specified values
+     */
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final List<TValue> orderEditId) {
         return copy().withoutQueryParam("orderEditId")
                 .addQueryParams(orderEditId.stream()
                         .map(s -> new ParamEntry<>("orderEditId", s.toString()))
@@ -102,29 +134,58 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
     /**
      * add additional orderEditId query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet addOrderEditId(final List<String> orderEditId) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet addOrderEditId(final List<TValue> orderEditId) {
         return copy().addQueryParams(
             orderEditId.stream().map(s -> new ParamEntry<>("orderEditId", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * set country with the specificied value
+     * set country with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final String country) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final TValue country) {
         return copy().withQueryParam("country", country);
     }
 
     /**
      * add additional country query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet addCountry(final String country) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet addCountry(final TValue country) {
         return copy().addQueryParam("country", country);
     }
 
     /**
-     * set country with the specificied values
+     * set country with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final List<String> country) {
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final Supplier<String> supplier) {
+        return copy().withQueryParam("country", supplier.get());
+    }
+
+    /**
+     * add additional country query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addCountry(final Supplier<String> supplier) {
+        return copy().addQueryParam("country", supplier.get());
+    }
+
+    /**
+     * set country with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("country", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional country query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addCountry(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("country", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set country with the specified values
+     */
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final List<TValue> country) {
         return copy().withoutQueryParam("country")
                 .addQueryParams(
                     country.stream().map(s -> new ParamEntry<>("country", s.toString())).collect(Collectors.toList()));
@@ -133,29 +194,57 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
     /**
      * add additional country query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet addCountry(final List<String> country) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet addCountry(final List<TValue> country) {
         return copy().addQueryParams(
             country.stream().map(s -> new ParamEntry<>("country", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * set state with the specificied value
+     * set state with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final String state) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final TValue state) {
         return copy().withQueryParam("state", state);
     }
 
     /**
      * add additional state query parameter
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final String state) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final TValue state) {
         return copy().addQueryParam("state", state);
     }
 
     /**
-     * set state with the specificied values
+     * set state with the specified value
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final List<String> state) {
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final Supplier<String> supplier) {
+        return copy().withQueryParam("state", supplier.get());
+    }
+
+    /**
+     * add additional state query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final Supplier<String> supplier) {
+        return copy().addQueryParam("state", supplier.get());
+    }
+
+    /**
+     * set state with the specified value
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("state", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional state query parameter
+     */
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("state", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set state with the specified values
+     */
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final List<TValue> state) {
         return copy().withoutQueryParam("state")
                 .addQueryParams(
                     state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
@@ -164,7 +253,7 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends
     /**
      * add additional state query parameters
      */
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final List<String> state) {
+    public <TValue> ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final List<TValue> state) {
         return copy().addQueryParams(
             state.stream().map(s -> new ParamEntry<>("state", s.toString())).collect(Collectors.toList()));
     }

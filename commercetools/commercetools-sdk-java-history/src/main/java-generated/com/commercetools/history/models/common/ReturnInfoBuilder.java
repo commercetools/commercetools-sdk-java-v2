@@ -21,10 +21,16 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
-    public ReturnInfoBuilder withItems(
-            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.history.models.common.ReturnItemBuilder.of()).build());
+    public ReturnInfoBuilder items(final java.util.List<com.commercetools.history.models.common.ReturnItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public ReturnInfoBuilder plusItems(final com.commercetools.history.models.common.ReturnItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -37,8 +43,10 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
-    public ReturnInfoBuilder items(final java.util.List<com.commercetools.history.models.common.ReturnItem> items) {
-        this.items = items;
+    public ReturnInfoBuilder withItems(
+            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.history.models.common.ReturnItemBuilder.of()).build());
         return this;
     }
 

@@ -28,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductVariantImportRequestImpl.class, name = ProductVariantImportRequest.PRODUCT_VARIANT),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestImpl.class, name = ProductVariantPatchRequest.PRODUCT_VARIANT_PATCH) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ImportRequestImpl.class, visible = true)
+@JsonDeserialize(as = ImportRequestImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ImportRequest {
 
@@ -38,7 +39,56 @@ public interface ImportRequest {
     @JsonProperty("type")
     public ImportResourceType getType();
 
+    public static com.commercetools.importapi.models.importrequests.CategoryImportRequestBuilder categoryBuilder() {
+        return com.commercetools.importapi.models.importrequests.CategoryImportRequestBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.importrequests.CustomerImportRequestBuilder customerBuilder() {
+        return com.commercetools.importapi.models.importrequests.CustomerImportRequestBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.importrequests.OrderImportRequestBuilder orderBuilder() {
+        return com.commercetools.importapi.models.importrequests.OrderImportRequestBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.importrequests.OrderPatchImportRequestBuilder orderPatchBuilder() {
+        return com.commercetools.importapi.models.importrequests.OrderPatchImportRequestBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.importrequests.PriceImportRequestBuilder priceBuilder() {
+        return com.commercetools.importapi.models.importrequests.PriceImportRequestBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.importrequests.ProductDraftImportRequestBuilder productDraftBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductDraftImportRequestBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.importrequests.ProductImportRequestBuilder productBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductImportRequestBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder productTypeBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.importrequests.ProductVariantImportRequestBuilder productVariantBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductVariantImportRequestBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder productVariantPatchBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder.of();
+    }
+
     default <T> T withImportRequest(Function<ImportRequest, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportRequest>";
+            }
+        };
     }
 }

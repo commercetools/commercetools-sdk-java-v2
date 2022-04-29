@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -18,6 +19,10 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
 
     String CHANGE_SHOPPING_LISTS_CONFIGURATION = "changeShoppingListsConfiguration";
 
+    /**
+    *  <p>Configuration for the <a href="/../api/projects/shoppingLists">Shopping Lists</a> feature.</p>
+    */
+    @NotNull
     @Valid
     @JsonProperty("shoppingListsConfiguration")
     public ShoppingListsConfiguration getShoppingListsConfiguration();
@@ -47,5 +52,14 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
     default <T> T withProjectChangeShoppingListsConfigurationAction(
             Function<ProjectChangeShoppingListsConfigurationAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeShoppingListsConfigurationAction>";
+            }
+        };
     }
 }

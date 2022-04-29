@@ -56,4 +56,13 @@ public interface AttributeCoverage {
     default <T> T withAttributeCoverage(Function<AttributeCoverage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeCoverage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeCoverage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeCoverage>";
+            }
+        };
+    }
 }

@@ -49,10 +49,18 @@ public class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCategory
         return this;
     }
 
-    public TaxCategoryPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategoryBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()).build());
+    public TaxCategoryPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.tax_category.TaxCategory> results) {
+        this.results = results;
+        return this;
+    }
+
+    public TaxCategoryPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.tax_category.TaxCategory... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCategory
         return this;
     }
 
-    public TaxCategoryPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.tax_category.TaxCategory> results) {
-        this.results = results;
+    public TaxCategoryPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategoryBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()).build());
         return this;
     }
 

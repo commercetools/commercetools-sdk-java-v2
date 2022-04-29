@@ -43,10 +43,18 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
         return this;
     }
 
-    public ProductVariantImportDraftBuilder withPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
-        this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+    public ProductVariantImportDraftBuilder prices(
+            @Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+        this.prices = prices;
+        return this;
+    }
+
+    public ProductVariantImportDraftBuilder plusPrices(
+            @Nullable final com.commercetools.api.models.common.PriceDraft... prices) {
+        if (this.prices == null) {
+            this.prices = new ArrayList<>();
+        }
+        this.prices.addAll(Arrays.asList(prices));
         return this;
     }
 
@@ -59,9 +67,10 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
         return this;
     }
 
-    public ProductVariantImportDraftBuilder prices(
-            @Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
-        this.prices = prices;
+    public ProductVariantImportDraftBuilder withPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.prices = new ArrayList<>();
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
         return this;
     }
 
@@ -71,10 +80,18 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
         return this;
     }
 
-    public ProductVariantImportDraftBuilder withAttributes(
-            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
-        this.attributes = new ArrayList<>();
-        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+    public ProductVariantImportDraftBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    public ProductVariantImportDraftBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
 
@@ -87,9 +104,10 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
         return this;
     }
 
-    public ProductVariantImportDraftBuilder attributes(
-            @Nullable final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
-        this.attributes = attributes;
+    public ProductVariantImportDraftBuilder withAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
     }
 
@@ -99,10 +117,18 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
         return this;
     }
 
-    public ProductVariantImportDraftBuilder withImages(
-            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
-        this.images = new ArrayList<>();
-        this.images.add(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build());
+    public ProductVariantImportDraftBuilder images(
+            @Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
+        this.images = images;
+        return this;
+    }
+
+    public ProductVariantImportDraftBuilder plusImages(
+            @Nullable final com.commercetools.api.models.common.Image... images) {
+        if (this.images == null) {
+            this.images = new ArrayList<>();
+        }
+        this.images.addAll(Arrays.asList(images));
         return this;
     }
 
@@ -115,9 +141,10 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
         return this;
     }
 
-    public ProductVariantImportDraftBuilder images(
-            @Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
-        this.images = images;
+    public ProductVariantImportDraftBuilder withImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.ImageBuilder> builder) {
+        this.images = new ArrayList<>();
+        this.images.add(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build());
         return this;
     }
 

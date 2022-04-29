@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderEditDraftImpl.class)
-public interface OrderEditDraft {
+public interface OrderEditDraft extends com.commercetools.api.models.CustomizableDraft<OrderEditDraft> {
 
     /**
     *  <p>Unique identifier for this edit.</p>
@@ -103,5 +103,14 @@ public interface OrderEditDraft {
 
     default <T> T withOrderEditDraft(Function<OrderEditDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditDraft>";
+            }
+        };
     }
 }

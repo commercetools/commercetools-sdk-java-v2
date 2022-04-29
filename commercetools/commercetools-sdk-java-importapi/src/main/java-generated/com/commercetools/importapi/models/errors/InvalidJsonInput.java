@@ -42,4 +42,13 @@ public interface InvalidJsonInput extends ErrorObject {
     default <T> T withInvalidJsonInput(Function<InvalidJsonInput, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidJsonInput> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidJsonInput>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidJsonInput>";
+            }
+        };
+    }
 }

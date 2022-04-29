@@ -75,4 +75,13 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
             Function<ChangeShoppingListLineItemQuantityChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemQuantityChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemQuantityChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeShoppingListLineItemQuantityChange>";
+            }
+        };
+    }
 }

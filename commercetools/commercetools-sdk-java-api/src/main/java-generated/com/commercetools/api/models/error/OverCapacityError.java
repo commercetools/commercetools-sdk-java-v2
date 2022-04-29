@@ -38,4 +38,13 @@ public interface OverCapacityError extends ErrorObject {
     default <T> T withOverCapacityError(Function<OverCapacityError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OverCapacityError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OverCapacityError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OverCapacityError>";
+            }
+        };
+    }
 }

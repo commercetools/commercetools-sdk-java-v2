@@ -48,4 +48,13 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
             Function<CartDiscountChangeRequiresDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeRequiresDiscountCodeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountChangeRequiresDiscountCodeAction>";
+            }
+        };
+    }
 }

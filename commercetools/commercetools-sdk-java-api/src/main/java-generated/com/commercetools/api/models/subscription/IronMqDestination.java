@@ -45,4 +45,13 @@ public interface IronMqDestination extends Destination {
     default <T> T withIronMqDestination(Function<IronMqDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<IronMqDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<IronMqDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<IronMqDestination>";
+            }
+        };
+    }
 }

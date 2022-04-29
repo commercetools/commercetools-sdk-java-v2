@@ -22,9 +22,18 @@ public interface MyCartSetLineItemCustomFieldAction extends MyCartUpdateAction {
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
+    /**
+    *  <p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p>
+    */
     @NotNull
     @JsonProperty("name")
     public String getName();
+
+    /**
+    *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.
+    *  Trying to remove a field that does not exist will fail with an <a href="/../api/errors#general-400-invalid-operation">InvalidOperation</a> error.
+    *  If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+    */
 
     @JsonProperty("value")
     public Object getValue();
@@ -57,5 +66,14 @@ public interface MyCartSetLineItemCustomFieldAction extends MyCartUpdateAction {
 
     default <T> T withMyCartSetLineItemCustomFieldAction(Function<MyCartSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartSetLineItemCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartSetLineItemCustomFieldAction>";
+            }
+        };
     }
 }

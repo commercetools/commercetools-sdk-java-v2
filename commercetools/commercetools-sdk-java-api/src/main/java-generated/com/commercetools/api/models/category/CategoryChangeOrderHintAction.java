@@ -45,4 +45,13 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
     default <T> T withCategoryChangeOrderHintAction(Function<CategoryChangeOrderHintAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeOrderHintAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeOrderHintAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryChangeOrderHintAction>";
+            }
+        };
+    }
 }

@@ -13,9 +13,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-/**
-*  <p>Update project</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyPost extends
         BodyApiMethod<ByProjectKeyPost, com.commercetools.api.models.project.Project, com.commercetools.api.models.project.ProjectUpdate>
@@ -39,7 +36,7 @@ public class ByProjectKeyPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s", this.projectKey);
         if (!params.isEmpty()) {

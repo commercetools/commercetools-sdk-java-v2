@@ -50,4 +50,13 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
     default <T> T withProductDiscountChangeSortOrderAction(Function<ProductDiscountChangeSortOrderAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangeSortOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountChangeSortOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountChangeSortOrderAction>";
+            }
+        };
+    }
 }

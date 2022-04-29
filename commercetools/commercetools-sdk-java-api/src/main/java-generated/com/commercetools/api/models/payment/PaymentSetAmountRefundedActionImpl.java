@@ -35,6 +35,10 @@ public class PaymentSetAmountRefundedActionImpl implements PaymentSetAmountRefun
         return this.action;
     }
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;
     }

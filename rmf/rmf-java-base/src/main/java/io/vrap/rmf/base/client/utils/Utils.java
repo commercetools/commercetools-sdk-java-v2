@@ -1,7 +1,6 @@
 
 package io.vrap.rmf.base.client.utils;
 
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletionException;
 import java.util.function.Function;
@@ -38,16 +37,10 @@ public final class Utils {
 
     public static <I, O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response,
             final Class<O> outputType) {
-        try {
-            if (response.getBody() == null) {
-                return (ApiHttpResponse<O>) response;
-            }
-            O newBody = JsonUtils.fromJsonByteArray(response.getBody(), outputType);
-            return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody);
+        if (response.getBody() == null) {
+            return (ApiHttpResponse<O>) response;
         }
-        catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        O newBody = JsonUtils.fromJsonByteArray(response.getBody(), outputType);
+        return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody);
     }
-
 }

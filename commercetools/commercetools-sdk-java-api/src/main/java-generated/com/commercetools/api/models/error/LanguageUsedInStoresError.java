@@ -38,4 +38,13 @@ public interface LanguageUsedInStoresError extends ErrorObject {
     default <T> T withLanguageUsedInStoresError(Function<LanguageUsedInStoresError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LanguageUsedInStoresError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LanguageUsedInStoresError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LanguageUsedInStoresError>";
+            }
+        };
+    }
 }

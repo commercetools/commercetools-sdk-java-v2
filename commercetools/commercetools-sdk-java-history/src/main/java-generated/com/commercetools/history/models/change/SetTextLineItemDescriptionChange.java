@@ -76,4 +76,13 @@ public interface SetTextLineItemDescriptionChange extends Change {
     default <T> T withSetTextLineItemDescriptionChange(Function<SetTextLineItemDescriptionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetTextLineItemDescriptionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetTextLineItemDescriptionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetTextLineItemDescriptionChange>";
+            }
+        };
+    }
 }

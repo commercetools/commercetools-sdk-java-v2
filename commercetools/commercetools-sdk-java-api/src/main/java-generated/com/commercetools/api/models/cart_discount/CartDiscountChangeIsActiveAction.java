@@ -45,4 +45,13 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
     default <T> T withCartDiscountChangeIsActiveAction(Function<CartDiscountChangeIsActiveAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeIsActiveAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeIsActiveAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountChangeIsActiveAction>";
+            }
+        };
+    }
 }

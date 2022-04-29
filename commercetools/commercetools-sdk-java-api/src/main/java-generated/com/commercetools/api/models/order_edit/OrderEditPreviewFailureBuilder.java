@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order_edit;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -19,6 +20,30 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     public OrderEditPreviewFailureBuilder errors(
             final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
         this.errors = errors;
+        return this;
+    }
+
+    public OrderEditPreviewFailureBuilder plusErrors(final com.commercetools.api.models.error.ErrorObject... errors) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.addAll(Arrays.asList(errors));
+        return this;
+    }
+
+    public OrderEditPreviewFailureBuilder plusErrors(
+            Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
+        return this;
+    }
+
+    public OrderEditPreviewFailureBuilder withErrors(
+            Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
+        this.errors = new ArrayList<>();
+        this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
         return this;
     }
 

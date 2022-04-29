@@ -36,6 +36,9 @@ public class TypeSetDescriptionActionImpl implements TypeSetDescriptionAction, M
         return this.action;
     }
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }

@@ -45,7 +45,7 @@ public class ByProjectKeyProductTypesImportContainersByImportContainerKeyPost ex
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-types/import-containers/%s", this.projectKey,
             this.importContainerKey);

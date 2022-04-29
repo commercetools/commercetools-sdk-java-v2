@@ -168,10 +168,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
-    public PaymentDraftBuilder withTransactions(
-            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraftBuilder> builder) {
-        this.transactions = new ArrayList<>();
-        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of()).build());
+    public PaymentDraftBuilder transactions(
+            @Nullable final java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions) {
+        this.transactions = transactions;
+        return this;
+    }
+
+    public PaymentDraftBuilder plusTransactions(
+            @Nullable final com.commercetools.api.models.payment.TransactionDraft... transactions) {
+        if (this.transactions == null) {
+            this.transactions = new ArrayList<>();
+        }
+        this.transactions.addAll(Arrays.asList(transactions));
         return this;
     }
 
@@ -184,9 +192,10 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
-    public PaymentDraftBuilder transactions(
-            @Nullable final java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions) {
-        this.transactions = transactions;
+    public PaymentDraftBuilder withTransactions(
+            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraftBuilder> builder) {
+        this.transactions = new ArrayList<>();
+        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of()).build());
         return this;
     }
 
@@ -196,11 +205,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
-    public PaymentDraftBuilder withInterfaceInteractions(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.interfaceInteractions = new ArrayList<>();
-        this.interfaceInteractions
-                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build());
+    public PaymentDraftBuilder interfaceInteractions(
+            @Nullable final java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions) {
+        this.interfaceInteractions = interfaceInteractions;
+        return this;
+    }
+
+    public PaymentDraftBuilder plusInterfaceInteractions(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft... interfaceInteractions) {
+        if (this.interfaceInteractions == null) {
+            this.interfaceInteractions = new ArrayList<>();
+        }
+        this.interfaceInteractions.addAll(Arrays.asList(interfaceInteractions));
         return this;
     }
 
@@ -214,9 +230,11 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
         return this;
     }
 
-    public PaymentDraftBuilder interfaceInteractions(
-            @Nullable final java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions) {
-        this.interfaceInteractions = interfaceInteractions;
+    public PaymentDraftBuilder withInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.interfaceInteractions = new ArrayList<>();
+        this.interfaceInteractions
+                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build());
         return this;
     }
 

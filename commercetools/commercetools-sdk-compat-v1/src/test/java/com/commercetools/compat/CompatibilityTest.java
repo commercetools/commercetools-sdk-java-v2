@@ -10,6 +10,7 @@ import com.commercetools.api.models.project.Project;
 import io.sphere.sdk.client.SphereClientConfig;
 import io.sphere.sdk.projects.queries.ProjectGet;
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.http.HttpStatusCode;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -22,7 +23,7 @@ public class CompatibilityTest {
         VrapHttpClient httpClient = Mockito.mock(VrapHttpClient.class);
         Mockito.when(httpClient.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
-                    new ApiHttpResponse<>(200, null, projectJson.getBytes(StandardCharsets.UTF_8))));
+                    new ApiHttpResponse<>(HttpStatusCode.OK_200, null, projectJson.getBytes(StandardCharsets.UTF_8))));
         ApiHttpClient client = ClientBuilder.of(httpClient).defaultClient("https://api.commercetools.com").build();
 
         CompatClient compatClient = CompatClient.of(client, "test");
@@ -37,7 +38,7 @@ public class CompatibilityTest {
         VrapHttpClient httpClient = Mockito.mock(VrapHttpClient.class);
         Mockito.when(httpClient.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
-                    new ApiHttpResponse<>(200, null, projectJson.getBytes(StandardCharsets.UTF_8))));
+                    new ApiHttpResponse<>(HttpStatusCode.OK_200, null, projectJson.getBytes(StandardCharsets.UTF_8))));
 
         ApiHttpClient client = ClientBuilder.of(httpClient).defaultClient("https://api.commercetools.com").build();
 

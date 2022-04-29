@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -36,7 +38,7 @@ public class ByProjectKeyImportContainersGet extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/import-containers", this.projectKey);
         if (!params.isEmpty()) {
@@ -79,23 +81,51 @@ public class ByProjectKeyImportContainersGet extends
     }
 
     /**
-     * set limit with the specificied value
+     * set limit with the specified value
      */
-    public ByProjectKeyImportContainersGet withLimit(final double limit) {
+    public <TValue> ByProjectKeyImportContainersGet withLimit(final TValue limit) {
         return copy().withQueryParam("limit", limit);
     }
 
     /**
      * add additional limit query parameter
      */
-    public ByProjectKeyImportContainersGet addLimit(final double limit) {
+    public <TValue> ByProjectKeyImportContainersGet addLimit(final TValue limit) {
         return copy().addQueryParam("limit", limit);
     }
 
     /**
-     * set limit with the specificied values
+     * set limit with the specified value
      */
-    public ByProjectKeyImportContainersGet withLimit(final List<Double> limit) {
+    public ByProjectKeyImportContainersGet withLimit(final Supplier<Double> supplier) {
+        return copy().withQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyImportContainersGet addLimit(final Supplier<Double> supplier) {
+        return copy().addQueryParam("limit", supplier.get());
+    }
+
+    /**
+     * set limit with the specified value
+     */
+    public ByProjectKeyImportContainersGet withLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional limit query parameter
+     */
+    public ByProjectKeyImportContainersGet addLimit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("limit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set limit with the specified values
+     */
+    public <TValue> ByProjectKeyImportContainersGet withLimit(final List<TValue> limit) {
         return copy().withoutQueryParam("limit")
                 .addQueryParams(
                     limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
@@ -104,29 +134,57 @@ public class ByProjectKeyImportContainersGet extends
     /**
      * add additional limit query parameters
      */
-    public ByProjectKeyImportContainersGet addLimit(final List<Double> limit) {
+    public <TValue> ByProjectKeyImportContainersGet addLimit(final List<TValue> limit) {
         return copy().addQueryParams(
             limit.stream().map(s -> new ParamEntry<>("limit", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * set offset with the specificied value
+     * set offset with the specified value
      */
-    public ByProjectKeyImportContainersGet withOffset(final double offset) {
+    public <TValue> ByProjectKeyImportContainersGet withOffset(final TValue offset) {
         return copy().withQueryParam("offset", offset);
     }
 
     /**
      * add additional offset query parameter
      */
-    public ByProjectKeyImportContainersGet addOffset(final double offset) {
+    public <TValue> ByProjectKeyImportContainersGet addOffset(final TValue offset) {
         return copy().addQueryParam("offset", offset);
     }
 
     /**
-     * set offset with the specificied values
+     * set offset with the specified value
      */
-    public ByProjectKeyImportContainersGet withOffset(final List<Double> offset) {
+    public ByProjectKeyImportContainersGet withOffset(final Supplier<Double> supplier) {
+        return copy().withQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyImportContainersGet addOffset(final Supplier<Double> supplier) {
+        return copy().addQueryParam("offset", supplier.get());
+    }
+
+    /**
+     * set offset with the specified value
+     */
+    public ByProjectKeyImportContainersGet withOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional offset query parameter
+     */
+    public ByProjectKeyImportContainersGet addOffset(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("offset", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set offset with the specified values
+     */
+    public <TValue> ByProjectKeyImportContainersGet withOffset(final List<TValue> offset) {
         return copy().withoutQueryParam("offset")
                 .addQueryParams(
                     offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
@@ -135,29 +193,57 @@ public class ByProjectKeyImportContainersGet extends
     /**
      * add additional offset query parameters
      */
-    public ByProjectKeyImportContainersGet addOffset(final List<Double> offset) {
+    public <TValue> ByProjectKeyImportContainersGet addOffset(final List<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * set sort with the specificied value
+     * set sort with the specified value
      */
-    public ByProjectKeyImportContainersGet withSort(final String sort) {
+    public <TValue> ByProjectKeyImportContainersGet withSort(final TValue sort) {
         return copy().withQueryParam("sort", sort);
     }
 
     /**
      * add additional sort query parameter
      */
-    public ByProjectKeyImportContainersGet addSort(final String sort) {
+    public <TValue> ByProjectKeyImportContainersGet addSort(final TValue sort) {
         return copy().addQueryParam("sort", sort);
     }
 
     /**
-     * set sort with the specificied values
+     * set sort with the specified value
      */
-    public ByProjectKeyImportContainersGet withSort(final List<String> sort) {
+    public ByProjectKeyImportContainersGet withSort(final Supplier<String> supplier) {
+        return copy().withQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyImportContainersGet addSort(final Supplier<String> supplier) {
+        return copy().addQueryParam("sort", supplier.get());
+    }
+
+    /**
+     * set sort with the specified value
+     */
+    public ByProjectKeyImportContainersGet withSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional sort query parameter
+     */
+    public ByProjectKeyImportContainersGet addSort(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("sort", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set sort with the specified values
+     */
+    public <TValue> ByProjectKeyImportContainersGet withSort(final List<TValue> sort) {
         return copy().withoutQueryParam("sort")
                 .addQueryParams(
                     sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
@@ -166,7 +252,7 @@ public class ByProjectKeyImportContainersGet extends
     /**
      * add additional sort query parameters
      */
-    public ByProjectKeyImportContainersGet addSort(final List<String> sort) {
+    public <TValue> ByProjectKeyImportContainersGet addSort(final List<TValue> sort) {
         return copy().addQueryParams(
             sort.stream().map(s -> new ParamEntry<>("sort", s.toString())).collect(Collectors.toList()));
     }

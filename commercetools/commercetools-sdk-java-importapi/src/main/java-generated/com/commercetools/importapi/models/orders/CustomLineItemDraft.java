@@ -34,9 +34,6 @@ public interface CustomLineItemDraft {
     @JsonProperty("name")
     public LocalizedString getName();
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("money")
@@ -46,9 +43,6 @@ public interface CustomLineItemDraft {
     @JsonProperty("taxedPrice")
     public CustomLineItemTaxedPrice getTaxedPrice();
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
@@ -150,5 +144,14 @@ public interface CustomLineItemDraft {
 
     default <T> T withCustomLineItemDraft(Function<CustomLineItemDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomLineItemDraft>";
+            }
+        };
     }
 }

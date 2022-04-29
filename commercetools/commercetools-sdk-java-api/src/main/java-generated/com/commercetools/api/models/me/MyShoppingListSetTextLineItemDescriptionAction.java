@@ -57,4 +57,13 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
             Function<MyShoppingListSetTextLineItemDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetTextLineItemDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetTextLineItemDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyShoppingListSetTextLineItemDescriptionAction>";
+            }
+        };
+    }
 }

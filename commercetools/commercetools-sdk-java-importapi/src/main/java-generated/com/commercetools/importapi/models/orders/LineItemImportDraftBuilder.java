@@ -97,10 +97,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
-    public LineItemImportDraftBuilder withState(
-            Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemStateBuilder> builder) {
-        this.state = new ArrayList<>();
-        this.state.add(builder.apply(com.commercetools.importapi.models.orders.ItemStateBuilder.of()).build());
+    public LineItemImportDraftBuilder state(
+            @Nullable final java.util.List<com.commercetools.importapi.models.orders.ItemState> state) {
+        this.state = state;
+        return this;
+    }
+
+    public LineItemImportDraftBuilder plusState(
+            @Nullable final com.commercetools.importapi.models.orders.ItemState... state) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.addAll(Arrays.asList(state));
         return this;
     }
 
@@ -113,9 +121,10 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
-    public LineItemImportDraftBuilder state(
-            @Nullable final java.util.List<com.commercetools.importapi.models.orders.ItemState> state) {
-        this.state = state;
+    public LineItemImportDraftBuilder withState(
+            Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemStateBuilder> builder) {
+        this.state = new ArrayList<>();
+        this.state.add(builder.apply(com.commercetools.importapi.models.orders.ItemStateBuilder.of()).build());
         return this;
     }
 

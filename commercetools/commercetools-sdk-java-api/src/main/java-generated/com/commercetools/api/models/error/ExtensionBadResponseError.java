@@ -64,4 +64,13 @@ public interface ExtensionBadResponseError extends ErrorObject {
     default <T> T withExtensionBadResponseError(Function<ExtensionBadResponseError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionBadResponseError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionBadResponseError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionBadResponseError>";
+            }
+        };
+    }
 }

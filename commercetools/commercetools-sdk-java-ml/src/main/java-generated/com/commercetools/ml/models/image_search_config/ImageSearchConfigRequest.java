@@ -51,4 +51,13 @@ public interface ImageSearchConfigRequest {
     default <T> T withImageSearchConfigRequest(Function<ImageSearchConfigRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImageSearchConfigRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImageSearchConfigRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImageSearchConfigRequest>";
+            }
+        };
+    }
 }

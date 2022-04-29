@@ -16,7 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupResourceIdentifierImpl.class)
-public interface CustomerGroupResourceIdentifier extends ResourceIdentifier {
+public interface CustomerGroupResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<CustomerGroup> {
 
     String CUSTOMER_GROUP = "customer-group";
 
@@ -59,5 +60,14 @@ public interface CustomerGroupResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withCustomerGroupResourceIdentifier(Function<CustomerGroupResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupResourceIdentifier>";
+            }
+        };
     }
 }

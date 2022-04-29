@@ -19,7 +19,7 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
     String CHANGE_CURRENCIES = "changeCurrencies";
 
     /**
-    *  <p>A three-digit currency code as per currency code.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     @NotNull
     @JsonProperty("currencies")
@@ -50,5 +50,14 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
 
     default <T> T withProjectChangeCurrenciesAction(Function<ProjectChangeCurrenciesAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCurrenciesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCurrenciesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeCurrenciesAction>";
+            }
+        };
     }
 }

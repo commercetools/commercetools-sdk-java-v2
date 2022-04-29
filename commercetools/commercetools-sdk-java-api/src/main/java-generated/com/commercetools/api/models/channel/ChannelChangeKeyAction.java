@@ -48,4 +48,13 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
     default <T> T withChannelChangeKeyAction(Function<ChannelChangeKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelChangeKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelChangeKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelChangeKeyAction>";
+            }
+        };
+    }
 }

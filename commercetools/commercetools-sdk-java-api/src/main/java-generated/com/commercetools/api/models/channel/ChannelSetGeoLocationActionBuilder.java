@@ -2,6 +2,7 @@
 package com.commercetools.api.models.channel;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -17,6 +18,12 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
     public ChannelSetGeoLocationActionBuilder geoLocation(
             @Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
         this.geoLocation = geoLocation;
+        return this;
+    }
+
+    public ChannelSetGeoLocationActionBuilder geoLocation(
+            Function<com.commercetools.api.models.common.GeoJsonBuilder, Builder<? extends com.commercetools.api.models.common.GeoJson>> builder) {
+        this.geoLocation = builder.apply(com.commercetools.api.models.common.GeoJsonBuilder.of()).build();
         return this;
     }
 

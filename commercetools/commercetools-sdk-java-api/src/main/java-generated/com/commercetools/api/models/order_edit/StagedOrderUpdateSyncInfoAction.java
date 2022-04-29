@@ -65,4 +65,13 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     default <T> T withStagedOrderUpdateSyncInfoAction(Function<StagedOrderUpdateSyncInfoAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderUpdateSyncInfoAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderUpdateSyncInfoAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderUpdateSyncInfoAction>";
+            }
+        };
+    }
 }

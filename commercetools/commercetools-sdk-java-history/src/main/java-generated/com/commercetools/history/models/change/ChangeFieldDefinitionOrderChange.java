@@ -76,4 +76,13 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
     default <T> T withChangeFieldDefinitionOrderChange(Function<ChangeFieldDefinitionOrderChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeFieldDefinitionOrderChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeFieldDefinitionOrderChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeFieldDefinitionOrderChange>";
+            }
+        };
+    }
 }

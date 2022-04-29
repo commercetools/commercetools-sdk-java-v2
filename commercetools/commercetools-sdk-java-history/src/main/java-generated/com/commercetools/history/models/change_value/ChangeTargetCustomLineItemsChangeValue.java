@@ -54,4 +54,13 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
             Function<ChangeTargetCustomLineItemsChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetCustomLineItemsChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetCustomLineItemsChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTargetCustomLineItemsChangeValue>";
+            }
+        };
+    }
 }

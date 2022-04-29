@@ -49,10 +49,18 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
         return this;
     }
 
-    public ProductTypePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.product_type.ProductTypeBuilder, com.commercetools.api.models.product_type.ProductTypeBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.product_type.ProductTypeBuilder.of()).build());
+    public ProductTypePagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.product_type.ProductType> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ProductTypePagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.product_type.ProductType... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class ProductTypePagedQueryResponseBuilder implements Builder<ProductType
         return this;
     }
 
-    public ProductTypePagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.product_type.ProductType> results) {
-        this.results = results;
+    public ProductTypePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.product_type.ProductTypeBuilder, com.commercetools.api.models.product_type.ProductTypeBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.product_type.ProductTypeBuilder.of()).build());
         return this;
     }
 

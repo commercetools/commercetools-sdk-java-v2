@@ -94,10 +94,16 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
         return this;
     }
 
-    public TaxCategoryBuilder withRates(
-            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
-        this.rates = new ArrayList<>();
-        this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build());
+    public TaxCategoryBuilder rates(final java.util.List<com.commercetools.api.models.tax_category.TaxRate> rates) {
+        this.rates = rates;
+        return this;
+    }
+
+    public TaxCategoryBuilder plusRates(final com.commercetools.api.models.tax_category.TaxRate... rates) {
+        if (this.rates == null) {
+            this.rates = new ArrayList<>();
+        }
+        this.rates.addAll(Arrays.asList(rates));
         return this;
     }
 
@@ -110,8 +116,10 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
         return this;
     }
 
-    public TaxCategoryBuilder rates(final java.util.List<com.commercetools.api.models.tax_category.TaxRate> rates) {
-        this.rates = rates;
+    public TaxCategoryBuilder withRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
+        this.rates = new ArrayList<>();
+        this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build());
         return this;
     }
 

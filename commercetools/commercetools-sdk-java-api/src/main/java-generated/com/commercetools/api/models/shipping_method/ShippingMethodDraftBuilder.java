@@ -98,11 +98,18 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
-    public ShippingMethodDraftBuilder withZoneRates(
-            Function<com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder> builder) {
-        this.zoneRates = new ArrayList<>();
-        this.zoneRates
-                .add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()).build());
+    public ShippingMethodDraftBuilder zoneRates(
+            final java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> zoneRates) {
+        this.zoneRates = zoneRates;
+        return this;
+    }
+
+    public ShippingMethodDraftBuilder plusZoneRates(
+            final com.commercetools.api.models.shipping_method.ZoneRateDraft... zoneRates) {
+        if (this.zoneRates == null) {
+            this.zoneRates = new ArrayList<>();
+        }
+        this.zoneRates.addAll(Arrays.asList(zoneRates));
         return this;
     }
 
@@ -116,9 +123,11 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
-    public ShippingMethodDraftBuilder zoneRates(
-            final java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> zoneRates) {
-        this.zoneRates = zoneRates;
+    public ShippingMethodDraftBuilder withZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder> builder) {
+        this.zoneRates = new ArrayList<>();
+        this.zoneRates
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()).build());
         return this;
     }
 

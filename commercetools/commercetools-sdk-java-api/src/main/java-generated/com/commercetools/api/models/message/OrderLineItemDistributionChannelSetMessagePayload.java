@@ -60,4 +60,13 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
             Function<OrderLineItemDistributionChannelSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDistributionChannelSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDistributionChannelSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderLineItemDistributionChannelSetMessagePayload>";
+            }
+        };
+    }
 }

@@ -84,4 +84,13 @@ public interface SetVariantAvailabilityChange extends Change {
     default <T> T withSetVariantAvailabilityChange(Function<SetVariantAvailabilityChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetVariantAvailabilityChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetVariantAvailabilityChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetVariantAvailabilityChange>";
+            }
+        };
+    }
 }

@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentDraftImpl.class)
-public interface PaymentDraft {
+public interface PaymentDraft extends com.commercetools.api.models.CustomizableDraft<PaymentDraft> {
 
     /**
     *  <p>A reference to the customer this payment belongs to.</p>
@@ -56,6 +56,10 @@ public interface PaymentDraft {
     @JsonProperty("amountPlanned")
     public Money getAmountPlanned();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @Valid
     @JsonProperty("amountAuthorized")
     public Money getAmountAuthorized();
@@ -63,10 +67,18 @@ public interface PaymentDraft {
     @JsonProperty("authorizedUntil")
     public String getAuthorizedUntil();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @Valid
     @JsonProperty("amountPaid")
     public Money getAmountPaid();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @Valid
     @JsonProperty("amountRefunded")
     public Money getAmountRefunded();
@@ -179,5 +191,14 @@ public interface PaymentDraft {
 
     default <T> T withPaymentDraft(Function<PaymentDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentDraft>";
+            }
+        };
     }
 }

@@ -76,4 +76,13 @@ public interface TrackingData {
     default <T> T withTrackingData(Function<TrackingData, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TrackingData> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TrackingData>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TrackingData>";
+            }
+        };
+    }
 }

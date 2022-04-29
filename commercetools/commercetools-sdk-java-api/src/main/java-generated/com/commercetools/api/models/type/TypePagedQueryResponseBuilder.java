@@ -14,17 +14,22 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.type.Type> results;
 
     public TypePagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
+        return this;
+    }
+
+    public TypePagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
         return this;
     }
 
@@ -38,20 +43,21 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
         return this;
     }
 
-    public TypePagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
-        return this;
-    }
-
     public TypePagedQueryResponseBuilder results(final com.commercetools.api.models.type.Type... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
 
-    public TypePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build());
+    public TypePagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.type.Type> results) {
+        this.results = results;
+        return this;
+    }
+
+    public TypePagedQueryResponseBuilder plusResults(final com.commercetools.api.models.type.Type... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,13 +70,19 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
         return this;
     }
 
-    public TypePagedQueryResponseBuilder results(final java.util.List<com.commercetools.api.models.type.Type> results) {
-        this.results = results;
+    public TypePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build());
         return this;
     }
 
     public Long getLimit() {
         return this.limit;
+    }
+
+    public Long getOffset() {
+        return this.offset;
     }
 
     public Long getCount() {
@@ -82,27 +94,23 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.type.Type> getResults() {
         return this.results;
     }
 
     public TypePagedQueryResponse build() {
         Objects.requireNonNull(limit, TypePagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, TypePagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, TypePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, TypePagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, TypePagedQueryResponse.class + ": results is missing");
-        return new TypePagedQueryResponseImpl(limit, count, total, offset, results);
+        return new TypePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds TypePagedQueryResponse without checking for non null required values
      */
     public TypePagedQueryResponse buildUnchecked() {
-        return new TypePagedQueryResponseImpl(limit, count, total, offset, results);
+        return new TypePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static TypePagedQueryResponseBuilder of() {
@@ -112,9 +120,9 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     public static TypePagedQueryResponseBuilder of(final TypePagedQueryResponse template) {
         TypePagedQueryResponseBuilder builder = new TypePagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

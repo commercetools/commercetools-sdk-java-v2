@@ -22,7 +22,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentImpl.class)
-public interface Payment extends BaseResource, com.commercetools.api.models.DomainResource<Payment> {
+public interface Payment extends BaseResource, com.commercetools.api.models.DomainResource<Payment>,
+        com.commercetools.api.models.Referencable<Payment>, com.commercetools.api.models.ResourceIdentifiable<Payment>,
+        com.commercetools.api.models.Customizable<Payment> {
 
     @NotNull
     @JsonProperty("id")
@@ -200,5 +202,24 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
 
     default <T> T withPayment(Function<Payment, T> helper) {
         return helper.apply(this);
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.payment.PaymentResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.payment.PaymentReference.builder().id(getId()).build();
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Payment> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Payment>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Payment>";
+            }
+        };
     }
 }

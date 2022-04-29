@@ -25,10 +25,17 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the <code>address</code> in a Delivery with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the <code>address</code> in a Delivery.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -63,5 +70,14 @@ public interface CartSetDeliveryAddressCustomTypeAction extends CartUpdateAction
     default <T> T withCartSetDeliveryAddressCustomTypeAction(
             Function<CartSetDeliveryAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetDeliveryAddressCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetDeliveryAddressCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetDeliveryAddressCustomTypeAction>";
+            }
+        };
     }
 }

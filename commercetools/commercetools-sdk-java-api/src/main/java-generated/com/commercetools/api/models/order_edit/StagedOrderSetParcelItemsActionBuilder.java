@@ -25,10 +25,18 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
         return this;
     }
 
-    public StagedOrderSetParcelItemsActionBuilder withItems(
-            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+    public StagedOrderSetParcelItemsActionBuilder items(
+            final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public StagedOrderSetParcelItemsActionBuilder plusItems(
+            final com.commercetools.api.models.order.DeliveryItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -41,9 +49,10 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
         return this;
     }
 
-    public StagedOrderSetParcelItemsActionBuilder items(
-            final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-        this.items = items;
+    public StagedOrderSetParcelItemsActionBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 

@@ -55,4 +55,13 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     default <T> T withProductSlugChangedMessagePayload(Function<ProductSlugChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSlugChangedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSlugChangedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSlugChangedMessagePayload>";
+            }
+        };
+    }
 }

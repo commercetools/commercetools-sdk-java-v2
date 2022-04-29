@@ -48,6 +48,14 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this;
     }
 
+    public InvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object... allowedValues) {
+        if (this.allowedValues == null) {
+            this.allowedValues = new ArrayList<>();
+        }
+        this.allowedValues.addAll(Arrays.asList(allowedValues));
+        return this;
+    }
+
     public InvalidFieldErrorBuilder resourceIndex(@Nullable final Long resourceIndex) {
         this.resourceIndex = resourceIndex;
         return this;

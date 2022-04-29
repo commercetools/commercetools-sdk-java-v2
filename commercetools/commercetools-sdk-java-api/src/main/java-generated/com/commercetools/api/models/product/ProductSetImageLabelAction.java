@@ -77,4 +77,13 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     default <T> T withProductSetImageLabelAction(Function<ProductSetImageLabelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetImageLabelAction>";
+            }
+        };
+    }
 }

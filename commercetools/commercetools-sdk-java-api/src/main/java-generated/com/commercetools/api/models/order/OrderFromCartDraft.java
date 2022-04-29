@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -65,6 +66,17 @@ public interface OrderFromCartDraft {
     @JsonProperty("state")
     public StateResourceIdentifier getState();
 
+    /**
+    *  <p><a href="/../api/projects/custom-fields">Custom Fields</a> to be added to the Order.</p>
+    *  <ul>
+    *  <li>If provided, only the Custom Fields given here are added to the Order and the Custom Fields on the referenced <a href="/../api/projects/carts#cart">Cart</a> are ignored.</li>
+    *  <li>If not provided, the Custom Fields on the referenced <a href="/../api/projects/carts#cart">Cart</a> are added to the Order automatically.</li>
+    *  </ul>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
     @Deprecated
     public void setId(final String id);
 
@@ -82,6 +94,8 @@ public interface OrderFromCartDraft {
 
     public void setState(final StateResourceIdentifier state);
 
+    public void setCustom(final CustomFieldsDraft custom);
+
     public static OrderFromCartDraft of() {
         return new OrderFromCartDraftImpl();
     }
@@ -96,6 +110,7 @@ public interface OrderFromCartDraft {
         instance.setShipmentState(template.getShipmentState());
         instance.setOrderState(template.getOrderState());
         instance.setState(template.getState());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -109,5 +124,14 @@ public interface OrderFromCartDraft {
 
     default <T> T withOrderFromCartDraft(Function<OrderFromCartDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderFromCartDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderFromCartDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderFromCartDraft>";
+            }
+        };
     }
 }

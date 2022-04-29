@@ -43,4 +43,13 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     default <T> T withStagedOrderSetCustomerIdAction(Function<StagedOrderSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomerIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetCustomerIdAction>";
+            }
+        };
+    }
 }

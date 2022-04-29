@@ -70,4 +70,13 @@ public interface AddPaymentChange extends Change {
     default <T> T withAddPaymentChange(Function<AddPaymentChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddPaymentChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddPaymentChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddPaymentChange>";
+            }
+        };
+    }
 }

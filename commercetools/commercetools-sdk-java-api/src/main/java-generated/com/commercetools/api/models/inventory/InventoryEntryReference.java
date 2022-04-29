@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryReferenceImpl.class)
-public interface InventoryEntryReference extends Reference {
+public interface InventoryEntryReference extends Reference, com.commercetools.api.models.Identifiable<InventoryEntry> {
 
     String INVENTORY_ENTRY = "inventory-entry";
 
@@ -46,5 +46,14 @@ public interface InventoryEntryReference extends Reference {
 
     default <T> T withInventoryEntryReference(Function<InventoryEntryReference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryReference>";
+            }
+        };
     }
 }

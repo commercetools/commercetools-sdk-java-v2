@@ -5,13 +5,14 @@ import io.vrap.rmf.base.client.ApiHttpException;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
+import io.vrap.rmf.base.client.http.HttpStatusCode;
 
 public interface HttpExceptionFactory {
 
     ResponseSerializer getResponseSerializer();
 
     public default ApiHttpException create(final ApiHttpRequest request, final ApiHttpResponse<byte[]> response) {
-        if (response.getStatusCode() >= 500) {
+        if (response.getStatusCode() >= HttpStatusCode.INTERNAL_SERVER_ERROR_500) {
             return createServerException(request, response);
         }
         return createClientException(request, response);
@@ -24,16 +25,16 @@ public interface HttpExceptionFactory {
                 + response.getStatusCode() + " [reason phrase] " + response.getMessage();
 
         switch (response.getStatusCode()) {
-            case 500:
+            case HttpStatusCode.INTERNAL_SERVER_ERROR_500:
                 return new InternalServerErrorException(response.getStatusCode(), new String(response.getBody()),
                     request.getHeaders(), message, response, request, serializer);
-            case 502:
+            case HttpStatusCode.BAD_GATEWAY_502:
                 return new BadGatewayException(response.getStatusCode(), new String(response.getBody()),
                     request.getHeaders(), message, response, request, serializer);
-            case 503:
+            case HttpStatusCode.SERVICE_UNAVAILABLE_503:
                 return new ServiceUnavailableException(response.getStatusCode(), new String(response.getBody()),
                     request.getHeaders(), message, response, request, serializer);
-            case 504:
+            case HttpStatusCode.GATEWAY_TIMEOUT_504:
                 return new GatewayTimeoutException(response.getStatusCode(), new String(response.getBody()),
                     request.getHeaders(), message, response, request, serializer);
         }
@@ -47,19 +48,19 @@ public interface HttpExceptionFactory {
                 + response.getStatusCode() + " [reason phrase] " + response.getMessage();
 
         switch (response.getStatusCode()) {
-            case 400:
+            case HttpStatusCode.BAD_REQUEST_400:
                 return new BadRequestException(response.getStatusCode(), new String(response.getBody()),
                     request.getHeaders(), message, response, request, serializer);
-            case 401:
+            case HttpStatusCode.UNAUTHORIZED_401:
                 return new UnauthorizedException(response.getStatusCode(), new String(response.getBody()),
                     request.getHeaders(), message, response, request, serializer);
-            case 403:
+            case HttpStatusCode.FORBIDDEN_403:
                 return new ForbiddenException(response.getStatusCode(), new String(response.getBody()),
                     request.getHeaders(), message, response, request, serializer);
-            case 404:
+            case HttpStatusCode.NOT_FOUND_404:
                 return new NotFoundException(response.getStatusCode(), new String(response.getBody()),
                     request.getHeaders(), message, response, request, serializer);
-            case 409:
+            case HttpStatusCode.CONFLICT_409:
                 return new ConcurrentModificationException(response.getStatusCode(), new String(response.getBody()),
                     request.getHeaders(), message, response, request, serializer);
         }

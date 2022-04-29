@@ -41,10 +41,18 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
         return this;
     }
 
-    public MissingAttributesPagedQueryResultBuilder withResults(
-            Function<com.commercetools.ml.models.missing_data.MissingAttributesBuilder, com.commercetools.ml.models.missing_data.MissingAttributesBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesBuilder.of()).build());
+    public MissingAttributesPagedQueryResultBuilder results(
+            final java.util.List<com.commercetools.ml.models.missing_data.MissingAttributes> results) {
+        this.results = results;
+        return this;
+    }
+
+    public MissingAttributesPagedQueryResultBuilder plusResults(
+            final com.commercetools.ml.models.missing_data.MissingAttributes... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -57,9 +65,10 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
         return this;
     }
 
-    public MissingAttributesPagedQueryResultBuilder results(
-            final java.util.List<com.commercetools.ml.models.missing_data.MissingAttributes> results) {
-        this.results = results;
+    public MissingAttributesPagedQueryResultBuilder withResults(
+            Function<com.commercetools.ml.models.missing_data.MissingAttributesBuilder, com.commercetools.ml.models.missing_data.MissingAttributesBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.ml.models.missing_data.MissingAttributesBuilder.of()).build());
         return this;
     }
 

@@ -53,4 +53,13 @@ public interface MissingPricesMeta {
     default <T> T withMissingPricesMeta(Function<MissingPricesMeta, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingPricesMeta> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingPricesMeta>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingPricesMeta>";
+            }
+        };
+    }
 }

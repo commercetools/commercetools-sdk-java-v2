@@ -22,6 +22,14 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
         return this;
     }
 
+    public ChannelAddRolesActionBuilder plusRoles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
+        if (this.roles == null) {
+            this.roles = new ArrayList<>();
+        }
+        this.roles.addAll(Arrays.asList(roles));
+        return this;
+    }
+
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }

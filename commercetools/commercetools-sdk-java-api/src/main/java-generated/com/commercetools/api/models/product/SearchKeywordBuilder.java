@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -24,6 +25,13 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     public SearchKeywordBuilder suggestTokenizer(
             @Nullable final com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer) {
         this.suggestTokenizer = suggestTokenizer;
+        return this;
+    }
+
+    public SearchKeywordBuilder suggestTokenizer(
+            Function<com.commercetools.api.models.product.SuggestTokenizerBuilder, Builder<? extends com.commercetools.api.models.product.SuggestTokenizer>> builder) {
+        this.suggestTokenizer = builder.apply(com.commercetools.api.models.product.SuggestTokenizerBuilder.of())
+                .build();
         return this;
     }
 

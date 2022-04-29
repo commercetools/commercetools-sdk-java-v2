@@ -56,4 +56,13 @@ public interface GeneralCategoryRecommendation {
     default <T> T withGeneralCategoryRecommendation(Function<GeneralCategoryRecommendation, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GeneralCategoryRecommendation> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GeneralCategoryRecommendation>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GeneralCategoryRecommendation>";
+            }
+        };
+    }
 }

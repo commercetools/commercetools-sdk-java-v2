@@ -107,10 +107,17 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
         return this;
     }
 
-    public PriceDraftBuilder withTiers(
-            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
-        this.tiers = new ArrayList<>();
-        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());
+    public PriceDraftBuilder tiers(
+            @Nullable final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
+        this.tiers = tiers;
+        return this;
+    }
+
+    public PriceDraftBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft... tiers) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.addAll(Arrays.asList(tiers));
         return this;
     }
 
@@ -123,9 +130,10 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
         return this;
     }
 
-    public PriceDraftBuilder tiers(
-            @Nullable final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
-        this.tiers = tiers;
+    public PriceDraftBuilder withTiers(
+            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraftBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());
         return this;
     }
 

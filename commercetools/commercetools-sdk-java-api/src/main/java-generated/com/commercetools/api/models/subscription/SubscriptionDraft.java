@@ -78,4 +78,13 @@ public interface SubscriptionDraft {
     default <T> T withSubscriptionDraft(Function<SubscriptionDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SubscriptionDraft>";
+            }
+        };
+    }
 }

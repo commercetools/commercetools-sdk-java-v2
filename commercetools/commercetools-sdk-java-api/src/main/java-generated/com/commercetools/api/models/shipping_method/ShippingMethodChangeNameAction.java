@@ -45,4 +45,13 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     default <T> T withShippingMethodChangeNameAction(Function<ShippingMethodChangeNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodChangeNameAction>";
+            }
+        };
+    }
 }

@@ -21,6 +21,14 @@ public class TimeSetFieldBuilder implements Builder<TimeSetField> {
         return this;
     }
 
+    public TimeSetFieldBuilder plusValue(final java.time.LocalTime... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     public java.util.List<java.time.LocalTime> getValue() {
         return this.value;
     }

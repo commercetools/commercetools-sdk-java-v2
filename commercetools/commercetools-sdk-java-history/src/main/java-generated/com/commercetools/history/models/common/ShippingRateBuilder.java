@@ -50,11 +50,17 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return this;
     }
 
-    public ShippingRateBuilder withTiers(
-            Function<com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder> builder) {
-        this.tiers = new ArrayList<>();
-        this.tiers
-                .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());
+    public ShippingRateBuilder tiers(
+            final java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> tiers) {
+        this.tiers = tiers;
+        return this;
+    }
+
+    public ShippingRateBuilder plusTiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.addAll(Arrays.asList(tiers));
         return this;
     }
 
@@ -68,9 +74,11 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return this;
     }
 
-    public ShippingRateBuilder tiers(
-            final java.util.List<com.commercetools.history.models.common.ShippingRatePriceTier> tiers) {
-        this.tiers = tiers;
+    public ShippingRateBuilder withTiers(
+            Function<com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers
+                .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());
         return this;
     }
 

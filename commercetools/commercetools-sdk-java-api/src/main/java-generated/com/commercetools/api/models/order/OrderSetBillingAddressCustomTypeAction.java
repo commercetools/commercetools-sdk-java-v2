@@ -20,10 +20,17 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
 
     String SET_BILLING_ADDRESS_CUSTOM_TYPE = "setBillingAddressCustomType";
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the <code>billingAddress</code> with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the <code>billingAddress</code>.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the <code>billingAddress</code>.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -55,5 +62,14 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
     default <T> T withOrderSetBillingAddressCustomTypeAction(
             Function<OrderSetBillingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetBillingAddressCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetBillingAddressCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetBillingAddressCustomTypeAction>";
+            }
+        };
     }
 }

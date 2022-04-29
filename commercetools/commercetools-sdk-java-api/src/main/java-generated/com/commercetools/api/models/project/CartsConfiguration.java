@@ -15,22 +15,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartsConfiguration {
 
     /**
-    *  <p>if country - no state tax rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all tax categories of a cart line items. Default value 'false'</p>
-    */
-
-    @JsonProperty("countryTaxRateFallbackEnabled")
-    public Boolean getCountryTaxRateFallbackEnabled();
-
-    /**
-    *  <p>The default value for the deleteDaysAfterLastModification parameter of the CartDraft. Initially set to 90 for projects created after December 2019.</p>
+    *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="ctp:api:type:CartDraft">CartDraft</a>. This field may not be present on Projects created before January 2020.</p>
     */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
-    public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
+    /**
+    *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
+    */
+
+    @JsonProperty("countryTaxRateFallbackEnabled")
+    public Boolean getCountryTaxRateFallbackEnabled();
 
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+
+    public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
 
     public static CartsConfiguration of() {
         return new CartsConfigurationImpl();
@@ -38,8 +38,8 @@ public interface CartsConfiguration {
 
     public static CartsConfiguration of(final CartsConfiguration template) {
         CartsConfigurationImpl instance = new CartsConfigurationImpl();
-        instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
         return instance;
     }
 
@@ -53,5 +53,14 @@ public interface CartsConfiguration {
 
     default <T> T withCartsConfiguration(Function<CartsConfiguration, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartsConfiguration> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartsConfiguration>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartsConfiguration>";
+            }
+        };
     }
 }

@@ -67,6 +67,10 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
         return this.id;
     }
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
@@ -104,6 +108,9 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
         return this.discounted;
     }
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

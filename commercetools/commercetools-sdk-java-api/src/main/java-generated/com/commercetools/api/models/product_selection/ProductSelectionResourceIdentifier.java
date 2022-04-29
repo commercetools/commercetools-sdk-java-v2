@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionResourceIdentifierImpl.class)
-public interface ProductSelectionResourceIdentifier extends ResourceIdentifier {
+public interface ProductSelectionResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<ProductSelection> {
 
     String PRODUCT_SELECTION = "product-selection";
 
@@ -38,5 +39,14 @@ public interface ProductSelectionResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withProductSelectionResourceIdentifier(Function<ProductSelectionResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionResourceIdentifier>";
+            }
+        };
     }
 }

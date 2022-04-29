@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyCustomerDraftImpl.class)
-public interface MyCustomerDraft {
+public interface MyCustomerDraft extends com.commercetools.api.models.CustomizableDraft<MyCustomerDraft> {
 
     @NotNull
     @JsonProperty("email")
@@ -78,7 +78,7 @@ public interface MyCustomerDraft {
     */
     @Valid
     @JsonProperty("custom")
-    public CustomFields getCustom();
+    public CustomFieldsDraft getCustom();
 
     @JsonProperty("locale")
     public String getLocale();
@@ -114,7 +114,7 @@ public interface MyCustomerDraft {
 
     public void setDefaultBillingAddress(final Long defaultBillingAddress);
 
-    public void setCustom(final CustomFields custom);
+    public void setCustom(final CustomFieldsDraft custom);
 
     public void setLocale(final String locale);
 
@@ -157,5 +157,14 @@ public interface MyCustomerDraft {
 
     default <T> T withMyCustomerDraft(Function<MyCustomerDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerDraft>";
+            }
+        };
     }
 }

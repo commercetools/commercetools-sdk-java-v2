@@ -60,16 +60,51 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
         return this;
     }
 
+    public ProductVariantImportBuilder plusAttributes(
+            @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    public ProductVariantImportBuilder plusAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    public ProductVariantImportBuilder withAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        return this;
+    }
+
     public ProductVariantImportBuilder images(
             @Nullable final com.commercetools.importapi.models.common.Image... images) {
         this.images = new ArrayList<>(Arrays.asList(images));
         return this;
     }
 
-    public ProductVariantImportBuilder withImages(
-            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
-        this.images = new ArrayList<>();
-        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());
+    public ProductVariantImportBuilder images(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
+        this.images = images;
+        return this;
+    }
+
+    public ProductVariantImportBuilder plusImages(
+            @Nullable final com.commercetools.importapi.models.common.Image... images) {
+        if (this.images == null) {
+            this.images = new ArrayList<>();
+        }
+        this.images.addAll(Arrays.asList(images));
         return this;
     }
 
@@ -82,9 +117,10 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
         return this;
     }
 
-    public ProductVariantImportBuilder images(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
-        this.images = images;
+    public ProductVariantImportBuilder withImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
+        this.images = new ArrayList<>();
+        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());
         return this;
     }
 
@@ -94,10 +130,18 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
         return this;
     }
 
-    public ProductVariantImportBuilder withAssets(
-            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
-        this.assets = new ArrayList<>();
-        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
+    public ProductVariantImportBuilder assets(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
+        this.assets = assets;
+        return this;
+    }
+
+    public ProductVariantImportBuilder plusAssets(
+            @Nullable final com.commercetools.importapi.models.common.Asset... assets) {
+        if (this.assets == null) {
+            this.assets = new ArrayList<>();
+        }
+        this.assets.addAll(Arrays.asList(assets));
         return this;
     }
 
@@ -110,9 +154,10 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
         return this;
     }
 
-    public ProductVariantImportBuilder assets(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
-        this.assets = assets;
+    public ProductVariantImportBuilder withAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
+        this.assets = new ArrayList<>();
+        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
         return this;
     }
 

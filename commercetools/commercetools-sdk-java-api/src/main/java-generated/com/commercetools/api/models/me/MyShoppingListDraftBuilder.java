@@ -61,11 +61,18 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
-    public MyShoppingListDraftBuilder withLineItems(
-            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder> builder) {
-        this.lineItems = new ArrayList<>();
-        this.lineItems.add(
-            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder.of()).build());
+    public MyShoppingListDraftBuilder lineItems(
+            @Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems) {
+        this.lineItems = lineItems;
+        return this;
+    }
+
+    public MyShoppingListDraftBuilder plusLineItems(
+            @Nullable final com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft... lineItems) {
+        if (this.lineItems == null) {
+            this.lineItems = new ArrayList<>();
+        }
+        this.lineItems.addAll(Arrays.asList(lineItems));
         return this;
     }
 
@@ -79,9 +86,11 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
-    public MyShoppingListDraftBuilder lineItems(
-            @Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems) {
-        this.lineItems = lineItems;
+    public MyShoppingListDraftBuilder withLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder> builder) {
+        this.lineItems = new ArrayList<>();
+        this.lineItems.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder.of()).build());
         return this;
     }
 
@@ -91,11 +100,18 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
-    public MyShoppingListDraftBuilder withTextLineItems(
-            Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder> builder) {
-        this.textLineItems = new ArrayList<>();
-        this.textLineItems
-                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder.of()).build());
+    public MyShoppingListDraftBuilder textLineItems(
+            @Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems) {
+        this.textLineItems = textLineItems;
+        return this;
+    }
+
+    public MyShoppingListDraftBuilder plusTextLineItems(
+            @Nullable final com.commercetools.api.models.shopping_list.TextLineItemDraft... textLineItems) {
+        if (this.textLineItems == null) {
+            this.textLineItems = new ArrayList<>();
+        }
+        this.textLineItems.addAll(Arrays.asList(textLineItems));
         return this;
     }
 
@@ -109,9 +125,11 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
-    public MyShoppingListDraftBuilder textLineItems(
-            @Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems) {
-        this.textLineItems = textLineItems;
+    public MyShoppingListDraftBuilder withTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder> builder) {
+        this.textLineItems = new ArrayList<>();
+        this.textLineItems
+                .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder.of()).build());
         return this;
     }
 

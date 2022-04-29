@@ -66,4 +66,13 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     default <T> T withProductRemoveImageAction(Function<ProductRemoveImageAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemoveImageAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemoveImageAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductRemoveImageAction>";
+            }
+        };
+    }
 }

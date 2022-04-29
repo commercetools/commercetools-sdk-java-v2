@@ -55,6 +55,14 @@ public class MissingAttributesMetaBuilder implements Builder<MissingAttributesMe
         return this;
     }
 
+    public MissingAttributesMetaBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {
+        if (this.productTypeIds == null) {
+            this.productTypeIds = new ArrayList<>();
+        }
+        this.productTypeIds.addAll(Arrays.asList(productTypeIds));
+        return this;
+    }
+
     public com.commercetools.ml.models.missing_data.MissingAttributesDetails getProductLevel() {
         return this.productLevel;
     }

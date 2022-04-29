@@ -30,11 +30,11 @@ public interface ItemShippingTarget {
     */
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     public void setAddressKey(final String addressKey);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public static ItemShippingTarget of() {
         return new ItemShippingTargetImpl();
@@ -57,5 +57,14 @@ public interface ItemShippingTarget {
 
     default <T> T withItemShippingTarget(Function<ItemShippingTarget, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ItemShippingTarget> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ItemShippingTarget>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ItemShippingTarget>";
+            }
+        };
     }
 }

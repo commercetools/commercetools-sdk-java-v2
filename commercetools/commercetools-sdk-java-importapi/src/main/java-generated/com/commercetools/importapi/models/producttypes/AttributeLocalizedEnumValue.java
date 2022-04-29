@@ -61,4 +61,13 @@ public interface AttributeLocalizedEnumValue {
     default <T> T withAttributeLocalizedEnumValue(Function<AttributeLocalizedEnumValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizedEnumValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizedEnumValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeLocalizedEnumValue>";
+            }
+        };
+    }
 }

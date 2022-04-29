@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StoreResourceIdentifierImpl.class)
-public interface StoreResourceIdentifier extends ResourceIdentifier {
+public interface StoreResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Store> {
 
     String STORE = "store";
 
@@ -38,5 +38,14 @@ public interface StoreResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withStoreResourceIdentifier(Function<StoreResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreResourceIdentifier>";
+            }
+        };
     }
 }

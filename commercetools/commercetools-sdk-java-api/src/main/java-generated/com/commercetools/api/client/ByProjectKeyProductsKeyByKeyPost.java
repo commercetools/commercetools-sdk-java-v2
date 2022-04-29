@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -44,7 +46,7 @@ public class ByProjectKeyProductsKeyByKeyPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/products/key=%s", this.projectKey, this.key);
         if (!params.isEmpty()) {
@@ -113,23 +115,51 @@ public class ByProjectKeyProductsKeyByKeyPost extends
     }
 
     /**
-     * set priceCurrency with the specificied value
+     * set priceCurrency with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withPriceCurrency(final String priceCurrency) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withPriceCurrency(final TValue priceCurrency) {
         return copy().withQueryParam("priceCurrency", priceCurrency);
     }
 
     /**
      * add additional priceCurrency query parameter
      */
-    public ByProjectKeyProductsKeyByKeyPost addPriceCurrency(final String priceCurrency) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addPriceCurrency(final TValue priceCurrency) {
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
 
     /**
-     * set priceCurrency with the specificied values
+     * set priceCurrency with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withPriceCurrency(final List<String> priceCurrency) {
+    public ByProjectKeyProductsKeyByKeyPost withPriceCurrency(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCurrency", supplier.get());
+    }
+
+    /**
+     * add additional priceCurrency query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addPriceCurrency(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCurrency", supplier.get());
+    }
+
+    /**
+     * set priceCurrency with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyPost withPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCurrency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCurrency query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addPriceCurrency(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCurrency", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCurrency with the specified values
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withPriceCurrency(final List<TValue> priceCurrency) {
         return copy().withoutQueryParam("priceCurrency")
                 .addQueryParams(priceCurrency.stream()
                         .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
@@ -139,30 +169,58 @@ public class ByProjectKeyProductsKeyByKeyPost extends
     /**
      * add additional priceCurrency query parameters
      */
-    public ByProjectKeyProductsKeyByKeyPost addPriceCurrency(final List<String> priceCurrency) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addPriceCurrency(final List<TValue> priceCurrency) {
         return copy().addQueryParams(priceCurrency.stream()
                 .map(s -> new ParamEntry<>("priceCurrency", s.toString()))
                 .collect(Collectors.toList()));
     }
 
     /**
-     * set priceCountry with the specificied value
+     * set priceCountry with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withPriceCountry(final String priceCountry) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withPriceCountry(final TValue priceCountry) {
         return copy().withQueryParam("priceCountry", priceCountry);
     }
 
     /**
      * add additional priceCountry query parameter
      */
-    public ByProjectKeyProductsKeyByKeyPost addPriceCountry(final String priceCountry) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addPriceCountry(final TValue priceCountry) {
         return copy().addQueryParam("priceCountry", priceCountry);
     }
 
     /**
-     * set priceCountry with the specificied values
+     * set priceCountry with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withPriceCountry(final List<String> priceCountry) {
+    public ByProjectKeyProductsKeyByKeyPost withPriceCountry(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCountry", supplier.get());
+    }
+
+    /**
+     * add additional priceCountry query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addPriceCountry(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCountry", supplier.get());
+    }
+
+    /**
+     * set priceCountry with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyPost withPriceCountry(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCountry", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCountry query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addPriceCountry(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCountry", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCountry with the specified values
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withPriceCountry(final List<TValue> priceCountry) {
         return copy().withoutQueryParam("priceCountry")
                 .addQueryParams(priceCountry.stream()
                         .map(s -> new ParamEntry<>("priceCountry", s.toString()))
@@ -172,30 +230,58 @@ public class ByProjectKeyProductsKeyByKeyPost extends
     /**
      * add additional priceCountry query parameters
      */
-    public ByProjectKeyProductsKeyByKeyPost addPriceCountry(final List<String> priceCountry) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addPriceCountry(final List<TValue> priceCountry) {
         return copy().addQueryParams(priceCountry.stream()
                 .map(s -> new ParamEntry<>("priceCountry", s.toString()))
                 .collect(Collectors.toList()));
     }
 
     /**
-     * set priceCustomerGroup with the specificied value
+     * set priceCustomerGroup with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withPriceCustomerGroup(final String priceCustomerGroup) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withPriceCustomerGroup(final TValue priceCustomerGroup) {
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
 
     /**
      * add additional priceCustomerGroup query parameter
      */
-    public ByProjectKeyProductsKeyByKeyPost addPriceCustomerGroup(final String priceCustomerGroup) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addPriceCustomerGroup(final TValue priceCustomerGroup) {
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
 
     /**
-     * set priceCustomerGroup with the specificied values
+     * set priceCustomerGroup with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withPriceCustomerGroup(final List<String> priceCustomerGroup) {
+    public ByProjectKeyProductsKeyByKeyPost withPriceCustomerGroup(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCustomerGroup", supplier.get());
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addPriceCustomerGroup(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCustomerGroup", supplier.get());
+    }
+
+    /**
+     * set priceCustomerGroup with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyPost withPriceCustomerGroup(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCustomerGroup query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addPriceCustomerGroup(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCustomerGroup with the specified values
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withPriceCustomerGroup(final List<TValue> priceCustomerGroup) {
         return copy().withoutQueryParam("priceCustomerGroup")
                 .addQueryParams(priceCustomerGroup.stream()
                         .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
@@ -205,30 +291,58 @@ public class ByProjectKeyProductsKeyByKeyPost extends
     /**
      * add additional priceCustomerGroup query parameters
      */
-    public ByProjectKeyProductsKeyByKeyPost addPriceCustomerGroup(final List<String> priceCustomerGroup) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addPriceCustomerGroup(final List<TValue> priceCustomerGroup) {
         return copy().addQueryParams(priceCustomerGroup.stream()
                 .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
                 .collect(Collectors.toList()));
     }
 
     /**
-     * set priceChannel with the specificied value
+     * set priceChannel with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withPriceChannel(final String priceChannel) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withPriceChannel(final TValue priceChannel) {
         return copy().withQueryParam("priceChannel", priceChannel);
     }
 
     /**
      * add additional priceChannel query parameter
      */
-    public ByProjectKeyProductsKeyByKeyPost addPriceChannel(final String priceChannel) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addPriceChannel(final TValue priceChannel) {
         return copy().addQueryParam("priceChannel", priceChannel);
     }
 
     /**
-     * set priceChannel with the specificied values
+     * set priceChannel with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withPriceChannel(final List<String> priceChannel) {
+    public ByProjectKeyProductsKeyByKeyPost withPriceChannel(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceChannel", supplier.get());
+    }
+
+    /**
+     * add additional priceChannel query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addPriceChannel(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceChannel", supplier.get());
+    }
+
+    /**
+     * set priceChannel with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyPost withPriceChannel(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceChannel", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceChannel query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addPriceChannel(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceChannel", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceChannel with the specified values
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withPriceChannel(final List<TValue> priceChannel) {
         return copy().withoutQueryParam("priceChannel")
                 .addQueryParams(priceChannel.stream()
                         .map(s -> new ParamEntry<>("priceChannel", s.toString()))
@@ -238,30 +352,58 @@ public class ByProjectKeyProductsKeyByKeyPost extends
     /**
      * add additional priceChannel query parameters
      */
-    public ByProjectKeyProductsKeyByKeyPost addPriceChannel(final List<String> priceChannel) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addPriceChannel(final List<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
                 .map(s -> new ParamEntry<>("priceChannel", s.toString()))
                 .collect(Collectors.toList()));
     }
 
     /**
-     * set localeProjection with the specificied value
+     * set localeProjection with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withLocaleProjection(final String localeProjection) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withLocaleProjection(final TValue localeProjection) {
         return copy().withQueryParam("localeProjection", localeProjection);
     }
 
     /**
      * add additional localeProjection query parameter
      */
-    public ByProjectKeyProductsKeyByKeyPost addLocaleProjection(final String localeProjection) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addLocaleProjection(final TValue localeProjection) {
         return copy().addQueryParam("localeProjection", localeProjection);
     }
 
     /**
-     * set localeProjection with the specificied values
+     * set localeProjection with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withLocaleProjection(final List<String> localeProjection) {
+    public ByProjectKeyProductsKeyByKeyPost withLocaleProjection(final Supplier<String> supplier) {
+        return copy().withQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addLocaleProjection(final Supplier<String> supplier) {
+        return copy().addQueryParam("localeProjection", supplier.get());
+    }
+
+    /**
+     * set localeProjection with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyPost withLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional localeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set localeProjection with the specified values
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withLocaleProjection(final List<TValue> localeProjection) {
         return copy().withoutQueryParam("localeProjection")
                 .addQueryParams(localeProjection.stream()
                         .map(s -> new ParamEntry<>("localeProjection", s.toString()))
@@ -271,30 +413,58 @@ public class ByProjectKeyProductsKeyByKeyPost extends
     /**
      * add additional localeProjection query parameters
      */
-    public ByProjectKeyProductsKeyByKeyPost addLocaleProjection(final List<String> localeProjection) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addLocaleProjection(final List<TValue> localeProjection) {
         return copy().addQueryParams(localeProjection.stream()
                 .map(s -> new ParamEntry<>("localeProjection", s.toString()))
                 .collect(Collectors.toList()));
     }
 
     /**
-     * set storeProjection with the specificied value
+     * set storeProjection with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withStoreProjection(final String storeProjection) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withStoreProjection(final TValue storeProjection) {
         return copy().withQueryParam("storeProjection", storeProjection);
     }
 
     /**
      * add additional storeProjection query parameter
      */
-    public ByProjectKeyProductsKeyByKeyPost addStoreProjection(final String storeProjection) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addStoreProjection(final TValue storeProjection) {
         return copy().addQueryParam("storeProjection", storeProjection);
     }
 
     /**
-     * set storeProjection with the specificied values
+     * set storeProjection with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withStoreProjection(final List<String> storeProjection) {
+    public ByProjectKeyProductsKeyByKeyPost withStoreProjection(final Supplier<String> supplier) {
+        return copy().withQueryParam("storeProjection", supplier.get());
+    }
+
+    /**
+     * add additional storeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addStoreProjection(final Supplier<String> supplier) {
+        return copy().addQueryParam("storeProjection", supplier.get());
+    }
+
+    /**
+     * set storeProjection with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyPost withStoreProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("storeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional storeProjection query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addStoreProjection(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("storeProjection", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set storeProjection with the specified values
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withStoreProjection(final List<TValue> storeProjection) {
         return copy().withoutQueryParam("storeProjection")
                 .addQueryParams(storeProjection.stream()
                         .map(s -> new ParamEntry<>("storeProjection", s.toString()))
@@ -304,30 +474,58 @@ public class ByProjectKeyProductsKeyByKeyPost extends
     /**
      * add additional storeProjection query parameters
      */
-    public ByProjectKeyProductsKeyByKeyPost addStoreProjection(final List<String> storeProjection) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addStoreProjection(final List<TValue> storeProjection) {
         return copy().addQueryParams(storeProjection.stream()
                 .map(s -> new ParamEntry<>("storeProjection", s.toString()))
                 .collect(Collectors.toList()));
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withExpand(final String expand) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyProductsKeyByKeyPost addExpand(final String expand) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
      */
-    public ByProjectKeyProductsKeyByKeyPost withExpand(final List<String> expand) {
+    public ByProjectKeyProductsKeyByKeyPost withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyProductsKeyByKeyPost withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyProductsKeyByKeyPost addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyPost withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -336,7 +534,7 @@ public class ByProjectKeyProductsKeyByKeyPost extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyProductsKeyByKeyPost addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyProductsKeyByKeyPost addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

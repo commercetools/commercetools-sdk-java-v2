@@ -64,6 +64,12 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    public CustomLineItemBuilder money(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.money = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+        return this;
+    }
+
     public CustomLineItemBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
@@ -78,6 +84,12 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     public CustomLineItemBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
+        return this;
+    }
+
+    public CustomLineItemBuilder totalPrice(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 
@@ -96,10 +108,16 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
-    public CustomLineItemBuilder withState(
-            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
-        this.state = new ArrayList<>();
-        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
+    public CustomLineItemBuilder state(final java.util.List<com.commercetools.api.models.order.ItemState> state) {
+        this.state = state;
+        return this;
+    }
+
+    public CustomLineItemBuilder plusState(final com.commercetools.api.models.order.ItemState... state) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.addAll(Arrays.asList(state));
         return this;
     }
 
@@ -112,8 +130,10 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
-    public CustomLineItemBuilder state(final java.util.List<com.commercetools.api.models.order.ItemState> state) {
-        this.state = state;
+    public CustomLineItemBuilder withState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemStateBuilder> builder) {
+        this.state = new ArrayList<>();
+        this.state.add(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()).build());
         return this;
     }
 
@@ -147,11 +167,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
-    public CustomLineItemBuilder withDiscountedPricePerQuantity(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
-        this.discountedPricePerQuantity = new ArrayList<>();
-        this.discountedPricePerQuantity.add(
-            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
+    public CustomLineItemBuilder discountedPricePerQuantity(
+            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+        this.discountedPricePerQuantity = discountedPricePerQuantity;
+        return this;
+    }
+
+    public CustomLineItemBuilder plusDiscountedPricePerQuantity(
+            final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
+        if (this.discountedPricePerQuantity == null) {
+            this.discountedPricePerQuantity = new ArrayList<>();
+        }
+        this.discountedPricePerQuantity.addAll(Arrays.asList(discountedPricePerQuantity));
         return this;
     }
 
@@ -165,9 +192,11 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
-    public CustomLineItemBuilder discountedPricePerQuantity(
-            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
-        this.discountedPricePerQuantity = discountedPricePerQuantity;
+    public CustomLineItemBuilder withDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder> builder) {
+        this.discountedPricePerQuantity = new ArrayList<>();
+        this.discountedPricePerQuantity.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()).build());
         return this;
     }
 

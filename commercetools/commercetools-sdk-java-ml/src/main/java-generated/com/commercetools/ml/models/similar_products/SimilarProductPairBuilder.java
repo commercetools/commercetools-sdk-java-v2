@@ -25,11 +25,18 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
         return this;
     }
 
-    public SimilarProductPairBuilder withProducts(
-            Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProductBuilder> builder) {
-        this.products = new ArrayList<>();
-        this.products
-                .add(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductBuilder.of()).build());
+    public SimilarProductPairBuilder products(
+            final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products) {
+        this.products = products;
+        return this;
+    }
+
+    public SimilarProductPairBuilder plusProducts(
+            final com.commercetools.ml.models.similar_products.SimilarProduct... products) {
+        if (this.products == null) {
+            this.products = new ArrayList<>();
+        }
+        this.products.addAll(Arrays.asList(products));
         return this;
     }
 
@@ -43,9 +50,11 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
         return this;
     }
 
-    public SimilarProductPairBuilder products(
-            final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products) {
-        this.products = products;
+    public SimilarProductPairBuilder withProducts(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProductBuilder> builder) {
+        this.products = new ArrayList<>();
+        this.products
+                .add(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductBuilder.of()).build());
         return this;
     }
 

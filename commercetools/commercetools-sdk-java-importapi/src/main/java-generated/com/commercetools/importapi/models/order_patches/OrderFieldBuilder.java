@@ -72,11 +72,18 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         return this;
     }
 
-    public OrderFieldBuilder withAddDeliveries(
-            Function<com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder> builder) {
-        this.addDeliveries = new ArrayList<>();
-        this.addDeliveries
-                .add(builder.apply(com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder.of()).build());
+    public OrderFieldBuilder addDeliveries(
+            @Nullable final java.util.List<com.commercetools.importapi.models.order_patches.DeliveryDraft> addDeliveries) {
+        this.addDeliveries = addDeliveries;
+        return this;
+    }
+
+    public OrderFieldBuilder plusAddDeliveries(
+            @Nullable final com.commercetools.importapi.models.order_patches.DeliveryDraft... addDeliveries) {
+        if (this.addDeliveries == null) {
+            this.addDeliveries = new ArrayList<>();
+        }
+        this.addDeliveries.addAll(Arrays.asList(addDeliveries));
         return this;
     }
 
@@ -90,9 +97,11 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         return this;
     }
 
-    public OrderFieldBuilder addDeliveries(
-            @Nullable final java.util.List<com.commercetools.importapi.models.order_patches.DeliveryDraft> addDeliveries) {
-        this.addDeliveries = addDeliveries;
+    public OrderFieldBuilder withAddDeliveries(
+            Function<com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder> builder) {
+        this.addDeliveries = new ArrayList<>();
+        this.addDeliveries
+                .add(builder.apply(com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder.of()).build());
         return this;
     }
 
@@ -172,11 +181,18 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         return this;
     }
 
-    public OrderFieldBuilder withSetParcelItems(
-            Function<com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItemsBuilder> builder) {
-        this.setParcelItems = new ArrayList<>();
-        this.setParcelItems
-                .add(builder.apply(com.commercetools.importapi.models.order_patches.ParcelItemsBuilder.of()).build());
+    public OrderFieldBuilder setParcelItems(
+            @Nullable final java.util.List<com.commercetools.importapi.models.order_patches.ParcelItems> setParcelItems) {
+        this.setParcelItems = setParcelItems;
+        return this;
+    }
+
+    public OrderFieldBuilder plusSetParcelItems(
+            @Nullable final com.commercetools.importapi.models.order_patches.ParcelItems... setParcelItems) {
+        if (this.setParcelItems == null) {
+            this.setParcelItems = new ArrayList<>();
+        }
+        this.setParcelItems.addAll(Arrays.asList(setParcelItems));
         return this;
     }
 
@@ -190,9 +206,11 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         return this;
     }
 
-    public OrderFieldBuilder setParcelItems(
-            @Nullable final java.util.List<com.commercetools.importapi.models.order_patches.ParcelItems> setParcelItems) {
-        this.setParcelItems = setParcelItems;
+    public OrderFieldBuilder withSetParcelItems(
+            Function<com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItemsBuilder> builder) {
+        this.setParcelItems = new ArrayList<>();
+        this.setParcelItems
+                .add(builder.apply(com.commercetools.importapi.models.order_patches.ParcelItemsBuilder.of()).build());
         return this;
     }
 

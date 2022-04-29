@@ -9,55 +9,151 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>IDs indicating the <a href="/../api/projects/types#list-of-customizable-data-types">customizable resources and data types</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ResourceTypeId {
 
+    /**
+    	<p><a href="ctp:api:type:Address">Address</a> on <a href="ctp:api:type:Cart">Cart</a>, <a href="ctp:api:type:Order">Order</a>, <a href="ctp:api:type:OrderEdit">OrderEdit</a>, <a href="ctp:api:type:Customer">Customer</a>, and <a href="ctp:api:type:Channel">Channel</a></p>
+
+    */
     ResourceTypeId ADDRESS = ResourceTypeIdEnum.ADDRESS;
+    /**
+    	<p><a href="ctp:api:type:Asset">Asset</a> on <a href="ctp:api:type:Category">Category</a> and <a href="ctp:api:type:ProductVariant">ProductVariant</a></p>
 
+    */
     ResourceTypeId ASSET = ResourceTypeIdEnum.ASSET;
+    /**
+    	<p><a href="ctp:api:type:CartDiscount">CartDiscount</a></p>
 
-    ResourceTypeId CATEGORY = ResourceTypeIdEnum.CATEGORY;
-
-    ResourceTypeId CHANNEL = ResourceTypeIdEnum.CHANNEL;
-
-    ResourceTypeId CUSTOMER = ResourceTypeIdEnum.CUSTOMER;
-
-    ResourceTypeId ORDER = ResourceTypeIdEnum.ORDER;
-
-    ResourceTypeId ORDER_EDIT = ResourceTypeIdEnum.ORDER_EDIT;
-
-    ResourceTypeId INVENTORY_ENTRY = ResourceTypeIdEnum.INVENTORY_ENTRY;
-
-    ResourceTypeId LINE_ITEM = ResourceTypeIdEnum.LINE_ITEM;
-
-    ResourceTypeId CUSTOM_LINE_ITEM = ResourceTypeIdEnum.CUSTOM_LINE_ITEM;
-
-    ResourceTypeId PRODUCT_PRICE = ResourceTypeIdEnum.PRODUCT_PRICE;
-
-    ResourceTypeId PAYMENT = ResourceTypeIdEnum.PAYMENT;
-
-    ResourceTypeId PAYMENT_INTERFACE_INTERACTION = ResourceTypeIdEnum.PAYMENT_INTERFACE_INTERACTION;
-
-    ResourceTypeId REVIEW = ResourceTypeIdEnum.REVIEW;
-
-    ResourceTypeId SHIPPING_METHOD = ResourceTypeIdEnum.SHIPPING_METHOD;
-
-    ResourceTypeId SHOPPING_LIST = ResourceTypeIdEnum.SHOPPING_LIST;
-
-    ResourceTypeId SHOPPING_LIST_TEXT_LINE_ITEM = ResourceTypeIdEnum.SHOPPING_LIST_TEXT_LINE_ITEM;
-
-    ResourceTypeId DISCOUNT_CODE = ResourceTypeIdEnum.DISCOUNT_CODE;
-
+    */
     ResourceTypeId CART_DISCOUNT = ResourceTypeIdEnum.CART_DISCOUNT;
+    /**
+    	<p><a href="ctp:api:type:Category">Category</a></p>
 
+    */
+    ResourceTypeId CATEGORY = ResourceTypeIdEnum.CATEGORY;
+    /**
+    	<p><a href="ctp:api:type:Channel">Channel</a></p>
+
+    */
+    ResourceTypeId CHANNEL = ResourceTypeIdEnum.CHANNEL;
+    /**
+    	<p><a href="ctp:api:type:Customer">Customer</a></p>
+
+    */
+    ResourceTypeId CUSTOMER = ResourceTypeIdEnum.CUSTOMER;
+    /**
+    	<p><a href="ctp:api:type:CustomerGroup">CustomerGroup</a></p>
+
+    */
     ResourceTypeId CUSTOMER_GROUP = ResourceTypeIdEnum.CUSTOMER_GROUP;
+    /**
+    	<p><a href="ctp:api:type:CustomLineItem">CustomLineItem</a> on <a href="ctp:api:type:Cart">Cart</a> and <a href="ctp:api:type:Order">Order</a></p>
 
+    */
+    ResourceTypeId CUSTOM_LINE_ITEM = ResourceTypeIdEnum.CUSTOM_LINE_ITEM;
+    /**
+    	<p><a href="ctp:api:type:DiscountCode">DiscountCode</a></p>
+
+    */
+    ResourceTypeId DISCOUNT_CODE = ResourceTypeIdEnum.DISCOUNT_CODE;
+    /**
+    	<p><a href="ctp:api:type:InventoryEntry">InventoryEntry</a></p>
+
+    */
+    ResourceTypeId INVENTORY_ENTRY = ResourceTypeIdEnum.INVENTORY_ENTRY;
+    /**
+    	<p><a href="ctp:api:type:LineItem">LineItem</a> on <a href="ctp:api:type:Cart">Cart</a> and <a href="ctp:api:type:Order">Order</a>, and <a href="ctp:api:type:LineItem">LineItem</a> on <a href="ctp:api:type:ShoppingList">ShoppingList</a></p>
+
+    */
+    ResourceTypeId LINE_ITEM = ResourceTypeIdEnum.LINE_ITEM;
+    /**
+    	<p><a href="ctp:api:type:Cart">Cart</a> and <a href="ctp:api:type:Order">Order</a>.
+    	When a <a href="ctp:api:type:Cart">Cart</a> is ordered, the <a href="ctp:api:type:CustomFields">CustomFields</a> need to be copied to the <a href="ctp:api:type:Order">Order</a>.
+    	For this reason, the Types for a Cart are also valid for an Order, and both Cart and Order are referenced by the same string <code>order</code>.</p>
+
+    */
+    ResourceTypeId ORDER = ResourceTypeIdEnum.ORDER;
+    /**
+    	<p><a href="ctp:api:type:OrderEdit">OrderEdit</a></p>
+
+    */
+    ResourceTypeId ORDER_EDIT = ResourceTypeIdEnum.ORDER_EDIT;
+    /**
+    	<p><a href="/projects/orders#delivery">Delivery</a></p>
+
+    */
+    ResourceTypeId ORDER_DELIVERY = ResourceTypeIdEnum.ORDER_DELIVERY;
+    /**
+    	<p><a href="ctp:api:type:Parcel">Parcel</a></p>
+
+    */
+    ResourceTypeId ORDER_PARCEL = ResourceTypeIdEnum.ORDER_PARCEL;
+    /**
+    	<p><a href="ctp:api:type:ReturnItem">ReturnItem</a></p>
+
+    */
+    ResourceTypeId ORDER_RETURN_ITEM = ResourceTypeIdEnum.ORDER_RETURN_ITEM;
+    /**
+    	<p><a href="ctp:api:type:Payment">Payment</a></p>
+
+    */
+    ResourceTypeId PAYMENT = ResourceTypeIdEnum.PAYMENT;
+    /**
+    	<p><a href="ctp:api:type:PaymentAddInterfaceInteractionAction">InterfaceInteraction</a> on <a href="ctp:api:type:Payment">Payment</a></p>
+
+    */
+    ResourceTypeId PAYMENT_INTERFACE_INTERACTION = ResourceTypeIdEnum.PAYMENT_INTERFACE_INTERACTION;
+    /**
+    	<p><a href="ctp:api:type:Price">Price</a> on <a href="ctp:api:type:ProductVariant">ProductVariant</a></p>
+
+    */
+    ResourceTypeId PRODUCT_PRICE = ResourceTypeIdEnum.PRODUCT_PRICE;
+    /**
+    	<p><a href="ctp:api:type:ProductSelection">ProductSelection</a></p>
+
+    */
+    ResourceTypeId PRODUCT_SELECTION = ResourceTypeIdEnum.PRODUCT_SELECTION;
+    /**
+    	<p><a href="ctp:api:type:Review">Review</a></p>
+
+    */
+    ResourceTypeId REVIEW = ResourceTypeIdEnum.REVIEW;
+    /**
+    	<p><a href="ctp:api:type:ShippingMethod">ShippingMethod</a></p>
+
+    */
+    ResourceTypeId SHIPPING_METHOD = ResourceTypeIdEnum.SHIPPING_METHOD;
+    /**
+    	<p><a href="ctp:api:type:ShoppingList">ShoppingList</a></p>
+
+    */
+    ResourceTypeId SHOPPING_LIST = ResourceTypeIdEnum.SHOPPING_LIST;
+    /**
+    	<p><a href="ctp:api:type:TextLineItem">TextLineItem</a> on <a href="ctp:api:type:ShoppingList">ShoppingList</a></p>
+
+    */
+    ResourceTypeId SHOPPING_LIST_TEXT_LINE_ITEM = ResourceTypeIdEnum.SHOPPING_LIST_TEXT_LINE_ITEM;
+    /**
+    	<p><a href="ctp:api:type:Store">Store</a></p>
+
+    */
     ResourceTypeId STORE = ResourceTypeIdEnum.STORE;
+    /**
+    	<p><a href="ctp:api:type:Transaction">Transaction</a> on <a href="ctp:api:type:Payment">Payment</a></p>
+
+    */
+    ResourceTypeId TRANSACTION = ResourceTypeIdEnum.TRANSACTION;
 
     enum ResourceTypeIdEnum implements ResourceTypeId {
         ADDRESS("address"),
 
         ASSET("asset"),
+
+        CART_DISCOUNT("cart-discount"),
 
         CATEGORY("category"),
 
@@ -65,21 +161,33 @@ public interface ResourceTypeId {
 
         CUSTOMER("customer"),
 
-        ORDER("order"),
+        CUSTOMER_GROUP("customer-group"),
 
-        ORDER_EDIT("order-edit"),
+        CUSTOM_LINE_ITEM("custom-line-item"),
+
+        DISCOUNT_CODE("discount-code"),
 
         INVENTORY_ENTRY("inventory-entry"),
 
         LINE_ITEM("line-item"),
 
-        CUSTOM_LINE_ITEM("custom-line-item"),
+        ORDER("order"),
 
-        PRODUCT_PRICE("product-price"),
+        ORDER_EDIT("order-edit"),
+
+        ORDER_DELIVERY("order-delivery"),
+
+        ORDER_PARCEL("order-parcel"),
+
+        ORDER_RETURN_ITEM("order-return-item"),
 
         PAYMENT("payment"),
 
         PAYMENT_INTERFACE_INTERACTION("payment-interface-interaction"),
+
+        PRODUCT_PRICE("product-price"),
+
+        PRODUCT_SELECTION("product-selection"),
 
         REVIEW("review"),
 
@@ -89,13 +197,9 @@ public interface ResourceTypeId {
 
         SHOPPING_LIST_TEXT_LINE_ITEM("shopping-list-text-line-item"),
 
-        DISCOUNT_CODE("discount-code"),
+        STORE("store"),
 
-        CART_DISCOUNT("cart-discount"),
-
-        CUSTOMER_GROUP("customer-group"),
-
-        STORE("store");
+        TRANSACTION("transaction");
         private final String jsonName;
 
         private ResourceTypeIdEnum(final String jsonName) {

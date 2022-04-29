@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeResourceIdentifierImpl.class)
-public interface DiscountCodeResourceIdentifier extends ResourceIdentifier {
+public interface DiscountCodeResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<DiscountCode> {
 
     String DISCOUNT_CODE = "discount-code";
 
@@ -38,5 +39,14 @@ public interface DiscountCodeResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withDiscountCodeResourceIdentifier(Function<DiscountCodeResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeResourceIdentifier>";
+            }
+        };
     }
 }

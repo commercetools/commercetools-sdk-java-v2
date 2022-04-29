@@ -20,10 +20,17 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
 
     String SET_CUSTOM_TYPE = "setCustomType";
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the MyShoppingList with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the MyShoppingList.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -53,5 +60,14 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
 
     default <T> T withMyShoppingListSetCustomTypeAction(Function<MyShoppingListSetCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyShoppingListSetCustomTypeAction>";
+            }
+        };
     }
 }

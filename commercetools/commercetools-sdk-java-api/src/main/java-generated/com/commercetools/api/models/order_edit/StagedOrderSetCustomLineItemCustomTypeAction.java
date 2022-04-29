@@ -26,10 +26,17 @@ public interface StagedOrderSetCustomLineItemCustomTypeAction extends StagedOrde
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the CustomLineItem with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the CustomLineItem.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -65,5 +72,14 @@ public interface StagedOrderSetCustomLineItemCustomTypeAction extends StagedOrde
     default <T> T withStagedOrderSetCustomLineItemCustomTypeAction(
             Function<StagedOrderSetCustomLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetCustomLineItemCustomTypeAction>";
+            }
+        };
     }
 }

@@ -92,6 +92,12 @@ public class CustomerLastNameSetMessageBuilder implements Builder<CustomerLastNa
         return this;
     }
 
+    public CustomerLastNameSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public CustomerLastNameSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;

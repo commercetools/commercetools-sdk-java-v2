@@ -45,4 +45,13 @@ public interface ProductTypeChangeDescriptionAction extends ProductTypeUpdateAct
     default <T> T withProductTypeChangeDescriptionAction(Function<ProductTypeChangeDescriptionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeDescriptionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeDescriptionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeChangeDescriptionAction>";
+            }
+        };
+    }
 }

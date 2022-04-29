@@ -12,11 +12,14 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.Category;
+import com.commercetools.api.models.category.CategoryDraftBuilder;
 import com.commercetools.api.models.project.Project;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.BadRequestException;
 import io.vrap.rmf.base.client.error.NotFoundException;
+import io.vrap.rmf.base.client.http.HttpStatusCode;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.assertj.core.api.Assertions;
@@ -41,7 +44,7 @@ public class MiddlewareTest {
                     count.getAndIncrement();
                     return next.apply(request);
                 })
-                .withRetryMiddleware(3, singletonList(404))
+                .withRetryMiddleware(3, singletonList(HttpStatusCode.NOT_FOUND_404))
                 .build(projectKey);
 
         Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(() -> {
@@ -52,6 +55,30 @@ public class MiddlewareTest {
                     .getBody();
         });
         Assertions.assertThat(count.get()).isEqualTo(1);
+    }
+
+    @Test
+    public void remapNotFoundExceptionToNullBody() {
+        String projectKey = CommercetoolsTestUtils.getProjectKey();
+
+        ProjectApiRoot b = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .addNotFoundExceptionMiddleware()
+                .build(projectKey);
+        Category category = b.categories()
+                .withId("adbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3")
+                .get()
+                .executeBlocking()
+                .getBody();
+
+        Assertions.assertThat(category).isNull();
+
+        Assertions.assertThatExceptionOfType(BadRequestException.class)
+                .isThrownBy(() -> b.categories().post(CategoryDraftBuilder.of().buildUnchecked()).executeBlocking());
     }
 
     @Test

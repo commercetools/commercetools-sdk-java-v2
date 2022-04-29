@@ -18,7 +18,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     @Nullable
-    private java.lang.Object fields;
+    private com.commercetools.api.models.type.FieldContainer fields;
 
     public StagedOrderSetParcelCustomTypeActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
@@ -37,7 +37,14 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
         return this;
     }
 
-    public StagedOrderSetParcelCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
+    public StagedOrderSetParcelCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderSetParcelCustomTypeActionBuilder fields(
+            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
@@ -52,7 +59,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     }
 
     @Nullable
-    public java.lang.Object getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 

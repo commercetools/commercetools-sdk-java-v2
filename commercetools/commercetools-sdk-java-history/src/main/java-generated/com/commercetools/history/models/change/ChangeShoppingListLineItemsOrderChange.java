@@ -75,4 +75,13 @@ public interface ChangeShoppingListLineItemsOrderChange extends Change {
             Function<ChangeShoppingListLineItemsOrderChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemsOrderChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemsOrderChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeShoppingListLineItemsOrderChange>";
+            }
+        };
+    }
 }

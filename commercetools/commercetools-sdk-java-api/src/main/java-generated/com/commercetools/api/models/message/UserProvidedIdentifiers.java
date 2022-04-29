@@ -84,4 +84,13 @@ public interface UserProvidedIdentifiers {
     default <T> T withUserProvidedIdentifiers(Function<UserProvidedIdentifiers, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<UserProvidedIdentifiers> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<UserProvidedIdentifiers>() {
+            @Override
+            public String toString() {
+                return "TypeReference<UserProvidedIdentifiers>";
+            }
+        };
+    }
 }

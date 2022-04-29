@@ -38,4 +38,13 @@ public interface CreatedBy extends ClientLogging {
     default <T> T withCreatedBy(Function<CreatedBy, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CreatedBy> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CreatedBy>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CreatedBy>";
+            }
+        };
+    }
 }

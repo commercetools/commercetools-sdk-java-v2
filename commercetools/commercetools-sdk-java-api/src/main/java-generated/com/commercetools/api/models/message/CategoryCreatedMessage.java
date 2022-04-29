@@ -58,4 +58,13 @@ public interface CategoryCreatedMessage extends Message {
     default <T> T withCategoryCreatedMessage(Function<CategoryCreatedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryCreatedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryCreatedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryCreatedMessage>";
+            }
+        };
+    }
 }

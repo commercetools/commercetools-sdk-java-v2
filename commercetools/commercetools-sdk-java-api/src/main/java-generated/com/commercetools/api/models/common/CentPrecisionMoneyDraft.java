@@ -39,4 +39,13 @@ public interface CentPrecisionMoneyDraft extends TypedMoneyDraft {
     default <T> T withCentPrecisionMoneyDraft(Function<CentPrecisionMoneyDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoneyDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoneyDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CentPrecisionMoneyDraft>";
+            }
+        };
+    }
 }

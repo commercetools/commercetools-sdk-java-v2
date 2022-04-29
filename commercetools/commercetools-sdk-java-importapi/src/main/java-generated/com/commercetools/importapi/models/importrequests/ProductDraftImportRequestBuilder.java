@@ -18,11 +18,18 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
         return this;
     }
 
-    public ProductDraftImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {
-        this.resources = new ArrayList<>();
-        this.resources.add(
-            builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()).build());
+    public ProductDraftImportRequestBuilder resources(
+            final java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources) {
+        this.resources = resources;
+        return this;
+    }
+
+    public ProductDraftImportRequestBuilder plusResources(
+            final com.commercetools.importapi.models.productdrafts.ProductDraftImport... resources) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources.addAll(Arrays.asList(resources));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
         return this;
     }
 
-    public ProductDraftImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources) {
-        this.resources = resources;
+    public ProductDraftImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources.add(
+            builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()).build());
         return this;
     }
 

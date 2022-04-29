@@ -60,4 +60,13 @@ public interface ZoneRate {
     default <T> T withZoneRate(Function<ZoneRate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneRate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneRate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneRate>";
+            }
+        };
+    }
 }

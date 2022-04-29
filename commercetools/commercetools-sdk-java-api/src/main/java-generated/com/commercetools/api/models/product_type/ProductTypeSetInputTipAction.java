@@ -54,4 +54,13 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
     default <T> T withProductTypeSetInputTipAction(Function<ProductTypeSetInputTipAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeSetInputTipAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeSetInputTipAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTypeSetInputTipAction>";
+            }
+        };
+    }
 }

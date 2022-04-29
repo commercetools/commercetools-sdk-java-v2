@@ -21,6 +21,14 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
         return this;
     }
 
+    public GeoJsonPointBuilder plusCoordinates(final Double... coordinates) {
+        if (this.coordinates == null) {
+            this.coordinates = new ArrayList<>();
+        }
+        this.coordinates.addAll(Arrays.asList(coordinates));
+        return this;
+    }
+
     public java.util.List<Double> getCoordinates() {
         return this.coordinates;
     }

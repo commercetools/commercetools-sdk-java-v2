@@ -49,4 +49,13 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
             Function<StagedOrderChangeTaxRoundingModeAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeTaxRoundingModeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeTaxRoundingModeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderChangeTaxRoundingModeAction>";
+            }
+        };
+    }
 }

@@ -73,4 +73,13 @@ public interface ChangeAssetOrderChange extends Change {
     default <T> T withChangeAssetOrderChange(Function<ChangeAssetOrderChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeAssetOrderChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeAssetOrderChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeAssetOrderChange>";
+            }
+        };
+    }
 }

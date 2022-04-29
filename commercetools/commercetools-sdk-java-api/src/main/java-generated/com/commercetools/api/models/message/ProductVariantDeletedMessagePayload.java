@@ -59,4 +59,13 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
     default <T> T withProductVariantDeletedMessagePayload(Function<ProductVariantDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantDeletedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantDeletedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductVariantDeletedMessagePayload>";
+            }
+        };
+    }
 }

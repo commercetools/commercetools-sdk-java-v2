@@ -77,4 +77,13 @@ public interface SetSearchKeywordsChange extends Change {
     default <T> T withSetSearchKeywordsChange(Function<SetSearchKeywordsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetSearchKeywordsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetSearchKeywordsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetSearchKeywordsChange>";
+            }
+        };
+    }
 }

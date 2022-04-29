@@ -19,13 +19,16 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
 
     private String action;
 
+    private String deliveryId;
+
     private String name;
 
     private java.lang.Object value;
 
     @JsonCreator
-    StagedOrderSetDeliveryCustomFieldActionImpl(@JsonProperty("name") final String name,
-            @JsonProperty("value") final java.lang.Object value) {
+    StagedOrderSetDeliveryCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+        this.deliveryId = deliveryId;
         this.name = name;
         this.value = value;
         this.action = SET_DELIVERY_CUSTOM_FIELD;
@@ -39,12 +42,28 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
         return this.action;
     }
 
+    public String getDeliveryId() {
+        return this.deliveryId;
+    }
+
+    /**
+    *  <p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p>
+    */
     public String getName() {
         return this.name;
     }
 
+    /**
+    *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.
+    *  Trying to remove a field that does not exist will fail with an <a href="/../api/errors#general-400-invalid-operation">InvalidOperation</a> error.
+    *  If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+    */
     public java.lang.Object getValue() {
         return this.value;
+    }
+
+    public void setDeliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
     }
 
     public void setName(final String name) {
@@ -66,6 +85,7 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
         StagedOrderSetDeliveryCustomFieldActionImpl that = (StagedOrderSetDeliveryCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -73,7 +93,7 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(name).append(value).toHashCode();
     }
 
 }

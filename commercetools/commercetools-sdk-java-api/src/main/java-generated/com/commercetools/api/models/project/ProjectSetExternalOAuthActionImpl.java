@@ -37,8 +37,7 @@ public class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAut
     }
 
     /**
-    *  <p>If you do not provide the <code>externalOAuth</code> field or provide a value
-    *  of <code>null</code>, the update action unsets the External OAuth provider.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
     public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
         return this.externalOAuth;

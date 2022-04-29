@@ -77,4 +77,13 @@ public interface MissingPricesPagedQueryResult {
     default <T> T withMissingPricesPagedQueryResult(Function<MissingPricesPagedQueryResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingPricesPagedQueryResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingPricesPagedQueryResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingPricesPagedQueryResult>";
+            }
+        };
+    }
 }

@@ -73,4 +73,13 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     default <T> T withChangeTextLineItemQuantityChange(Function<ChangeTextLineItemQuantityChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTextLineItemQuantityChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTextLineItemQuantityChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTextLineItemQuantityChange>";
+            }
+        };
+    }
 }

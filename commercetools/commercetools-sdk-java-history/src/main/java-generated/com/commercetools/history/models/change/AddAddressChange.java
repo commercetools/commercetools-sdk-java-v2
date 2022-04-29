@@ -70,4 +70,13 @@ public interface AddAddressChange extends Change {
     default <T> T withAddAddressChange(Function<AddAddressChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddAddressChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddAddressChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddAddressChange>";
+            }
+        };
+    }
 }

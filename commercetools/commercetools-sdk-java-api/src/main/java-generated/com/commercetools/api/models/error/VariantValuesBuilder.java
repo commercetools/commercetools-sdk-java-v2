@@ -29,10 +29,16 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
-    public VariantValuesBuilder withPrices(
-            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
-        this.prices = new ArrayList<>();
-        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
+    public VariantValuesBuilder prices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+        this.prices = prices;
+        return this;
+    }
+
+    public VariantValuesBuilder plusPrices(final com.commercetools.api.models.common.PriceDraft... prices) {
+        if (this.prices == null) {
+            this.prices = new ArrayList<>();
+        }
+        this.prices.addAll(Arrays.asList(prices));
         return this;
     }
 
@@ -45,8 +51,10 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
-    public VariantValuesBuilder prices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
-        this.prices = prices;
+    public VariantValuesBuilder withPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
+        this.prices = new ArrayList<>();
+        this.prices.add(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build());
         return this;
     }
 
@@ -55,10 +63,17 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
-    public VariantValuesBuilder withAttributes(
-            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
-        this.attributes = new ArrayList<>();
-        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+    public VariantValuesBuilder attributes(
+            final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    public VariantValuesBuilder plusAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
 
@@ -71,9 +86,10 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         return this;
     }
 
-    public VariantValuesBuilder attributes(
-            final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
-        this.attributes = attributes;
+    public VariantValuesBuilder withAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
     }
 

@@ -58,4 +58,13 @@ public interface OrderImportCustomLineItemStateAction extends OrderUpdateAction 
     default <T> T withOrderImportCustomLineItemStateAction(Function<OrderImportCustomLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderImportCustomLineItemStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderImportCustomLineItemStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderImportCustomLineItemStateAction>";
+            }
+        };
+    }
 }

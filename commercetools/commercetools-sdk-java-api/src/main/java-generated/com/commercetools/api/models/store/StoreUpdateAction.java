@@ -28,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetProductSelectionsActionImpl.class, name = StoreSetProductSelectionsAction.SET_PRODUCT_SELECTIONS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetSupplyChannelsActionImpl.class, name = StoreSetSupplyChannelsAction.SET_SUPPLY_CHANNELS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StoreUpdateActionImpl.class, visible = true)
+@JsonDeserialize(as = StoreUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface StoreUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<StoreUpdateAction> {
 
@@ -35,7 +36,72 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.store.StoreAddDistributionChannelActionBuilder addDistributionChannelBuilder() {
+        return com.commercetools.api.models.store.StoreAddDistributionChannelActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreAddProductSelectionActionBuilder addProductSelectionBuilder() {
+        return com.commercetools.api.models.store.StoreAddProductSelectionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreAddSupplyChannelActionBuilder addSupplyChannelBuilder() {
+        return com.commercetools.api.models.store.StoreAddSupplyChannelActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreChangeProductSelectionActionBuilder changeProductSelectionActiveBuilder() {
+        return com.commercetools.api.models.store.StoreChangeProductSelectionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreRemoveDistributionChannelActionBuilder removeDistributionChannelBuilder() {
+        return com.commercetools.api.models.store.StoreRemoveDistributionChannelActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreRemoveProductSelectionActionBuilder removeProductSelectionBuilder() {
+        return com.commercetools.api.models.store.StoreRemoveProductSelectionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreRemoveSupplyChannelActionBuilder removeSupplyChannelBuilder() {
+        return com.commercetools.api.models.store.StoreRemoveSupplyChannelActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.store.StoreSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.store.StoreSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreSetDistributionChannelsActionBuilder setDistributionChannelsBuilder() {
+        return com.commercetools.api.models.store.StoreSetDistributionChannelsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreSetLanguagesActionBuilder setLanguagesBuilder() {
+        return com.commercetools.api.models.store.StoreSetLanguagesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreSetNameActionBuilder setNameBuilder() {
+        return com.commercetools.api.models.store.StoreSetNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreSetProductSelectionsActionBuilder setProductSelectionsBuilder() {
+        return com.commercetools.api.models.store.StoreSetProductSelectionsActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.store.StoreSetSupplyChannelsActionBuilder setSupplyChannelsBuilder() {
+        return com.commercetools.api.models.store.StoreSetSupplyChannelsActionBuilder.of();
+    }
+
     default <T> T withStoreUpdateAction(Function<StoreUpdateAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreUpdateAction>";
+            }
+        };
     }
 }

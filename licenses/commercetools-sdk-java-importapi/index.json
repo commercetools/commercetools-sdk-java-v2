@@ -66,10 +66,10 @@
             ]
         },
         {
-            "moduleName": "javax.validation:validation-api",
-            "moduleVersion": "2.0.1.Final",
+            "moduleName": "com.spotify:completable-futures",
+            "moduleVersion": "0.3.5",
             "moduleUrls": [
-                "http://beanvalidation.org"
+                "https://spotify.github.io/completable-futures"
             ],
             "moduleLicenses": [
                 {
@@ -79,16 +79,29 @@
             ]
         },
         {
-            "moduleName": "net.jodah:failsafe",
-            "moduleVersion": "2.4.3",
+            "moduleName": "dev.failsafe:failsafe",
+            "moduleVersion": "3.2.0",
             "moduleUrls": [
-                "https://failsafe-lib.github.io"
+                "https://failsafe.dev"
             ],
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
                     "moduleLicenseUrl": "http://apache.org/licenses/LICENSE-2.0"
                 },
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "javax.validation:validation-api",
+            "moduleVersion": "2.0.1.Final",
+            "moduleUrls": [
+                "http://beanvalidation.org"
+            ],
+            "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
                     "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"

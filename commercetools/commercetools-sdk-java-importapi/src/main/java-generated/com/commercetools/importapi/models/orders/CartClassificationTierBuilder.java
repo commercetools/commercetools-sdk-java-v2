@@ -49,6 +49,33 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
         return this;
     }
 
+    public CartClassificationTierBuilder plusTiers(
+            final com.commercetools.importapi.models.orders.ShippingRatePriceTier... tiers) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.addAll(Arrays.asList(tiers));
+        return this;
+    }
+
+    public CartClassificationTierBuilder plusTiers(
+            Function<com.commercetools.importapi.models.orders.ShippingRatePriceTierBuilder, Builder<? extends com.commercetools.importapi.models.orders.ShippingRatePriceTier>> builder) {
+        if (this.tiers == null) {
+            this.tiers = new ArrayList<>();
+        }
+        this.tiers.add(
+            builder.apply(com.commercetools.importapi.models.orders.ShippingRatePriceTierBuilder.of()).build());
+        return this;
+    }
+
+    public CartClassificationTierBuilder withTiers(
+            Function<com.commercetools.importapi.models.orders.ShippingRatePriceTierBuilder, Builder<? extends com.commercetools.importapi.models.orders.ShippingRatePriceTier>> builder) {
+        this.tiers = new ArrayList<>();
+        this.tiers.add(
+            builder.apply(com.commercetools.importapi.models.orders.ShippingRatePriceTierBuilder.of()).build());
+        return this;
+    }
+
     public CartClassificationTierBuilder isMatching(@Nullable final Boolean isMatching) {
         this.isMatching = isMatching;
         return this;

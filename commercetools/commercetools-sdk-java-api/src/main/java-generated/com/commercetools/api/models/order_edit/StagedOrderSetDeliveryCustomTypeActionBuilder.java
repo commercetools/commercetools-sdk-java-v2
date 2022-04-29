@@ -12,11 +12,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<StagedOrderSetDeliveryCustomTypeAction> {
 
+    private String deliveryId;
+
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     @Nullable
-    private java.lang.Object fields;
+    private com.commercetools.api.models.type.FieldContainer fields;
+
+    public StagedOrderSetDeliveryCustomTypeActionBuilder deliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
+        return this;
+    }
 
     public StagedOrderSetDeliveryCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
@@ -30,9 +37,20 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
         return this;
     }
 
-    public StagedOrderSetDeliveryCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
+    public StagedOrderSetDeliveryCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    public StagedOrderSetDeliveryCustomTypeActionBuilder fields(
+            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
+    }
+
+    public String getDeliveryId() {
+        return this.deliveryId;
     }
 
     @Nullable
@@ -41,19 +59,20 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     @Nullable
-    public java.lang.Object getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 
     public StagedOrderSetDeliveryCustomTypeAction build() {
-        return new StagedOrderSetDeliveryCustomTypeActionImpl(type, fields);
+        Objects.requireNonNull(deliveryId, StagedOrderSetDeliveryCustomTypeAction.class + ": deliveryId is missing");
+        return new StagedOrderSetDeliveryCustomTypeActionImpl(deliveryId, type, fields);
     }
 
     /**
      * builds StagedOrderSetDeliveryCustomTypeAction without checking for non null required values
      */
     public StagedOrderSetDeliveryCustomTypeAction buildUnchecked() {
-        return new StagedOrderSetDeliveryCustomTypeActionImpl(type, fields);
+        return new StagedOrderSetDeliveryCustomTypeActionImpl(deliveryId, type, fields);
     }
 
     public static StagedOrderSetDeliveryCustomTypeActionBuilder of() {
@@ -63,6 +82,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     public static StagedOrderSetDeliveryCustomTypeActionBuilder of(
             final StagedOrderSetDeliveryCustomTypeAction template) {
         StagedOrderSetDeliveryCustomTypeActionBuilder builder = new StagedOrderSetDeliveryCustomTypeActionBuilder();
+        builder.deliveryId = template.getDeliveryId();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

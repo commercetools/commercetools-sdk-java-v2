@@ -66,4 +66,13 @@ public interface ChangeRequiresDiscountCodeChange extends Change {
     default <T> T withChangeRequiresDiscountCodeChange(Function<ChangeRequiresDiscountCodeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeRequiresDiscountCodeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeRequiresDiscountCodeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeRequiresDiscountCodeChange>";
+            }
+        };
+    }
 }

@@ -43,6 +43,9 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
         this.type = ShippingRateTierType.findEnum("CartScore");
     }
 
+    /**
+    *  <p>Can be one of the following or absent.</p>
+    */
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
         return this.type;
     }
@@ -51,6 +54,10 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
         return this.score;
     }
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     public com.commercetools.api.models.common.Money getPrice() {
         return this.price;
     }

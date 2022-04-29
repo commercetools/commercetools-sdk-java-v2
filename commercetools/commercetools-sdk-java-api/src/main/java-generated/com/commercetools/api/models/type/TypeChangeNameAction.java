@@ -20,6 +20,10 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
 
     String CHANGE_NAME = "changeName";
 
+    /**
+    *  <p>New value to set.
+    *  Must not be empty.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("name")
@@ -47,5 +51,14 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
 
     default <T> T withTypeChangeNameAction(Function<TypeChangeNameAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeNameAction>";
+            }
+        };
     }
 }

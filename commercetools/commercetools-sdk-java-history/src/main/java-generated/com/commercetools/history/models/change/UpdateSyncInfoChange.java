@@ -69,4 +69,13 @@ public interface UpdateSyncInfoChange extends Change {
     default <T> T withUpdateSyncInfoChange(Function<UpdateSyncInfoChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<UpdateSyncInfoChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<UpdateSyncInfoChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<UpdateSyncInfoChange>";
+            }
+        };
+    }
 }

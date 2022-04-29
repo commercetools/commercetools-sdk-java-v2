@@ -62,4 +62,13 @@ public interface AddReturnInfoChange extends Change {
     default <T> T withAddReturnInfoChange(Function<AddReturnInfoChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddReturnInfoChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddReturnInfoChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddReturnInfoChange>";
+            }
+        };
+    }
 }

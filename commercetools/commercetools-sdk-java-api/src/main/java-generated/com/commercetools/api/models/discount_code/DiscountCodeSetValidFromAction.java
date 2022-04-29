@@ -47,4 +47,13 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
     default <T> T withDiscountCodeSetValidFromAction(Function<DiscountCodeSetValidFromAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidFromAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidFromAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeSetValidFromAction>";
+            }
+        };
+    }
 }

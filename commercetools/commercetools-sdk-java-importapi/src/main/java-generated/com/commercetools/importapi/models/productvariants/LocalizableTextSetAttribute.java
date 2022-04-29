@@ -55,4 +55,13 @@ public interface LocalizableTextSetAttribute extends Attribute {
     default <T> T withLocalizableTextSetAttribute(Function<LocalizableTextSetAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LocalizableTextSetAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LocalizableTextSetAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LocalizableTextSetAttribute>";
+            }
+        };
+    }
 }

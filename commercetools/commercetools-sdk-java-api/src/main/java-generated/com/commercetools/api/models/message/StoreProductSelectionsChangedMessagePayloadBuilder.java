@@ -28,11 +28,18 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
-    public StoreProductSelectionsChangedMessagePayloadBuilder withAddedProductSelections(
-            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
-        this.addedProductSelections = new ArrayList<>();
-        this.addedProductSelections
-                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
+    public StoreProductSelectionsChangedMessagePayloadBuilder addedProductSelections(
+            @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> addedProductSelections) {
+        this.addedProductSelections = addedProductSelections;
+        return this;
+    }
+
+    public StoreProductSelectionsChangedMessagePayloadBuilder plusAddedProductSelections(
+            @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... addedProductSelections) {
+        if (this.addedProductSelections == null) {
+            this.addedProductSelections = new ArrayList<>();
+        }
+        this.addedProductSelections.addAll(Arrays.asList(addedProductSelections));
         return this;
     }
 
@@ -46,9 +53,11 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
-    public StoreProductSelectionsChangedMessagePayloadBuilder addedProductSelections(
-            @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> addedProductSelections) {
-        this.addedProductSelections = addedProductSelections;
+    public StoreProductSelectionsChangedMessagePayloadBuilder withAddedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
+        this.addedProductSelections = new ArrayList<>();
+        this.addedProductSelections
+                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
         return this;
     }
 
@@ -58,11 +67,18 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
-    public StoreProductSelectionsChangedMessagePayloadBuilder withRemovedProductSelections(
-            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
-        this.removedProductSelections = new ArrayList<>();
-        this.removedProductSelections
-                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
+    public StoreProductSelectionsChangedMessagePayloadBuilder removedProductSelections(
+            @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> removedProductSelections) {
+        this.removedProductSelections = removedProductSelections;
+        return this;
+    }
+
+    public StoreProductSelectionsChangedMessagePayloadBuilder plusRemovedProductSelections(
+            @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... removedProductSelections) {
+        if (this.removedProductSelections == null) {
+            this.removedProductSelections = new ArrayList<>();
+        }
+        this.removedProductSelections.addAll(Arrays.asList(removedProductSelections));
         return this;
     }
 
@@ -76,9 +92,11 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
-    public StoreProductSelectionsChangedMessagePayloadBuilder removedProductSelections(
-            @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> removedProductSelections) {
-        this.removedProductSelections = removedProductSelections;
+    public StoreProductSelectionsChangedMessagePayloadBuilder withRemovedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
+        this.removedProductSelections = new ArrayList<>();
+        this.removedProductSelections
+                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
         return this;
     }
 
@@ -88,11 +106,18 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
-    public StoreProductSelectionsChangedMessagePayloadBuilder withUpdatedProductSelections(
-            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
-        this.updatedProductSelections = new ArrayList<>();
-        this.updatedProductSelections
-                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
+    public StoreProductSelectionsChangedMessagePayloadBuilder updatedProductSelections(
+            @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections) {
+        this.updatedProductSelections = updatedProductSelections;
+        return this;
+    }
+
+    public StoreProductSelectionsChangedMessagePayloadBuilder plusUpdatedProductSelections(
+            @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... updatedProductSelections) {
+        if (this.updatedProductSelections == null) {
+            this.updatedProductSelections = new ArrayList<>();
+        }
+        this.updatedProductSelections.addAll(Arrays.asList(updatedProductSelections));
         return this;
     }
 
@@ -106,9 +131,11 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         return this;
     }
 
-    public StoreProductSelectionsChangedMessagePayloadBuilder updatedProductSelections(
-            @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> updatedProductSelections) {
-        this.updatedProductSelections = updatedProductSelections;
+    public StoreProductSelectionsChangedMessagePayloadBuilder withUpdatedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
+        this.updatedProductSelections = new ArrayList<>();
+        this.updatedProductSelections
+                .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
         return this;
     }
 

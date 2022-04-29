@@ -46,6 +46,9 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     @JsonProperty("productSelections")
     public List<ProductSelectionSetting> getProductSelections();
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
@@ -99,5 +102,14 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
 
     default <T> T withStoreCreatedMessagePayload(Function<StoreCreatedMessagePayload, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StoreCreatedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StoreCreatedMessagePayload>";
+            }
+        };
     }
 }

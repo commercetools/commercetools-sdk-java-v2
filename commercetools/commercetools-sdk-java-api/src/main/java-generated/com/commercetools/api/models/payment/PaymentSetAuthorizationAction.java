@@ -20,6 +20,10 @@ public interface PaymentSetAuthorizationAction extends PaymentUpdateAction {
 
     String SET_AUTHORIZATION = "setAuthorization";
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @Valid
     @JsonProperty("amount")
     public Money getAmount();
@@ -52,5 +56,14 @@ public interface PaymentSetAuthorizationAction extends PaymentUpdateAction {
 
     default <T> T withPaymentSetAuthorizationAction(Function<PaymentSetAuthorizationAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetAuthorizationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetAuthorizationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentSetAuthorizationAction>";
+            }
+        };
     }
 }

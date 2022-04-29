@@ -64,4 +64,13 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     default <T> T withProductSetProductVariantKeyAction(Function<ProductSetProductVariantKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSetProductVariantKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSetProductVariantKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSetProductVariantKeyAction>";
+            }
+        };
+    }
 }

@@ -76,4 +76,13 @@ public interface StagedOrder extends Order {
     default <T> T withStagedOrder(Function<StagedOrder, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrder> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrder>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrder>";
+            }
+        };
+    }
 }

@@ -55,4 +55,13 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
     default <T> T withOrderLineItemAddedMessagePayload(Function<OrderLineItemAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemAddedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemAddedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderLineItemAddedMessagePayload>";
+            }
+        };
+    }
 }

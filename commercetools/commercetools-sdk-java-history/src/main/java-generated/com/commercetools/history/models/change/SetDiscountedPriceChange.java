@@ -91,4 +91,13 @@ public interface SetDiscountedPriceChange extends Change {
     default <T> T withSetDiscountedPriceChange(Function<SetDiscountedPriceChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetDiscountedPriceChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetDiscountedPriceChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetDiscountedPriceChange>";
+            }
+        };
+    }
 }

@@ -46,11 +46,18 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
         return this;
     }
 
-    public ImportContainerPagedResponseBuilder withResults(
-            Function<com.commercetools.importapi.models.importcontainers.ImportContainerBuilder, com.commercetools.importapi.models.importcontainers.ImportContainerBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(
-            builder.apply(com.commercetools.importapi.models.importcontainers.ImportContainerBuilder.of()).build());
+    public ImportContainerPagedResponseBuilder results(
+            final java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ImportContainerPagedResponseBuilder plusResults(
+            final com.commercetools.importapi.models.importcontainers.ImportContainer... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +71,11 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
         return this;
     }
 
-    public ImportContainerPagedResponseBuilder results(
-            final java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> results) {
-        this.results = results;
+    public ImportContainerPagedResponseBuilder withResults(
+            Function<com.commercetools.importapi.models.importcontainers.ImportContainerBuilder, com.commercetools.importapi.models.importcontainers.ImportContainerBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(
+            builder.apply(com.commercetools.importapi.models.importcontainers.ImportContainerBuilder.of()).build());
         return this;
     }
 

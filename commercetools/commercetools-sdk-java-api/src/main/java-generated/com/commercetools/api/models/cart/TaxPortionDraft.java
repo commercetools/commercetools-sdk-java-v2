@@ -25,6 +25,10 @@ public interface TaxPortionDraft {
     @JsonProperty("rate")
     public Double getRate();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("amount")
@@ -58,5 +62,14 @@ public interface TaxPortionDraft {
 
     default <T> T withTaxPortionDraft(Function<TaxPortionDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxPortionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxPortionDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxPortionDraft>";
+            }
+        };
     }
 }

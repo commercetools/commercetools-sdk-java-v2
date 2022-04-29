@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListDraftImpl.class)
-public interface MyShoppingListDraft {
+public interface MyShoppingListDraft extends com.commercetools.api.models.CustomizableDraft<MyShoppingListDraft> {
 
     @NotNull
     @Valid
@@ -103,5 +103,14 @@ public interface MyShoppingListDraft {
 
     default <T> T withMyShoppingListDraft(Function<MyShoppingListDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyShoppingListDraft>";
+            }
+        };
     }
 }

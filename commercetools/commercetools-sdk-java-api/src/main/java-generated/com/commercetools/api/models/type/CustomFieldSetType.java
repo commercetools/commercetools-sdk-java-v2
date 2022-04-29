@@ -13,12 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Values of a SetType Custom Field are sets of values of the specified <code>elementType</code>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldSetTypeImpl.class)
 public interface CustomFieldSetType extends FieldType {
 
     String SET = "Set";
 
+    /**
+    *  <p>Field type of the elements in the set.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("elementType")
@@ -46,5 +52,14 @@ public interface CustomFieldSetType extends FieldType {
 
     default <T> T withCustomFieldSetType(Function<CustomFieldSetType, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldSetType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldSetType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldSetType>";
+            }
+        };
     }
 }

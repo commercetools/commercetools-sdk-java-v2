@@ -42,12 +42,18 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
-    public ProjectCategoryRecommendationPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder
-                .apply(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder.of())
-                .build());
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder plusResults(
+            final com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -62,9 +68,12 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
-    public ProjectCategoryRecommendationPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> results) {
-        this.results = results;
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder
+                .apply(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder.of())
+                .build());
         return this;
     }
 

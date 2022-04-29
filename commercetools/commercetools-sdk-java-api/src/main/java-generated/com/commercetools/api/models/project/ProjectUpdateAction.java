@@ -27,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetExternalOAuthActionImpl.class, name = ProjectSetExternalOAuthAction.SET_EXTERNAL_O_AUTH),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionImpl.class, name = ProjectSetShippingRateInputTypeAction.SET_SHIPPING_RATE_INPUT_TYPE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProjectUpdateActionImpl.class, visible = true)
+@JsonDeserialize(as = ProjectUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ProjectUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<ProjectUpdateAction> {
 
@@ -34,7 +35,68 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionBuilder changeCartsConfigurationBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeCountriesActionBuilder changeCountriesBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeCountriesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledActionBuilder changeCountryTaxRateFallbackEnabledBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeCurrenciesActionBuilder changeCurrenciesBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeCurrenciesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeLanguagesActionBuilder changeLanguagesBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeLanguagesActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionBuilder changeMessagesConfigurationBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder changeMessagesEnabledBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeMessagesEnabledActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeOrderSearchStatusActionBuilder changeOrderSearchStatusBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeOrderSearchStatusActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionBuilder changeProductSearchIndexingEnabledBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder changeShoppingListsConfigurationBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectSetExternalOAuthActionBuilder setExternalOAuthBuilder() {
+        return com.commercetools.api.models.project.ProjectSetExternalOAuthActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionBuilder setShippingRateInputTypeBuilder() {
+        return com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionBuilder.of();
+    }
+
     default <T> T withProjectUpdateAction(Function<ProjectUpdateAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectUpdateAction>";
+            }
+        };
     }
 }

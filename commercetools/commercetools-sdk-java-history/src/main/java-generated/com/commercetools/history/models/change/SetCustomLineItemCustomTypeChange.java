@@ -86,4 +86,13 @@ public interface SetCustomLineItemCustomTypeChange extends Change {
     default <T> T withSetCustomLineItemCustomTypeChange(Function<SetCustomLineItemCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemCustomTypeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemCustomTypeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomLineItemCustomTypeChange>";
+            }
+        };
+    }
 }

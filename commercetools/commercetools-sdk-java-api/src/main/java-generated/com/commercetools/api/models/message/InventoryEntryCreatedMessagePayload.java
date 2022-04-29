@@ -49,4 +49,13 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
     default <T> T withInventoryEntryCreatedMessagePayload(Function<InventoryEntryCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryCreatedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryCreatedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryCreatedMessagePayload>";
+            }
+        };
+    }
 }

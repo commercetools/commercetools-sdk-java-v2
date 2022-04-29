@@ -18,11 +18,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxedItemPriceDraftImpl.class)
 public interface TaxedItemPriceDraft {
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("totalNet")
     public Money getTotalNet();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("totalGross")
@@ -53,5 +61,14 @@ public interface TaxedItemPriceDraft {
 
     default <T> T withTaxedItemPriceDraft(Function<TaxedItemPriceDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxedItemPriceDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxedItemPriceDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxedItemPriceDraft>";
+            }
+        };
     }
 }

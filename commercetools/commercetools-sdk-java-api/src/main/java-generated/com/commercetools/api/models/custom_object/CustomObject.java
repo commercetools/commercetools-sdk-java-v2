@@ -19,7 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomObjectImpl.class)
-public interface CustomObject extends BaseResource, com.commercetools.api.models.DomainResource<CustomObject> {
+public interface CustomObject extends BaseResource, com.commercetools.api.models.DomainResource<CustomObject>,
+        com.commercetools.api.models.Referencable<CustomObject> {
 
     @NotNull
     @JsonProperty("id")
@@ -112,5 +113,19 @@ public interface CustomObject extends BaseResource, com.commercetools.api.models
 
     default <T> T withCustomObject(Function<CustomObject, T> helper) {
         return helper.apply(this);
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.custom_object.CustomObjectReference.builder().id(getId()).build();
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomObject> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomObject>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomObject>";
+            }
+        };
     }
 }

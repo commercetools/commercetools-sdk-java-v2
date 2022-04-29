@@ -48,4 +48,13 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
     default <T> T withTaxCategoryChangeNameAction(Function<TaxCategoryChangeNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryChangeNameAction>";
+            }
+        };
+    }
 }

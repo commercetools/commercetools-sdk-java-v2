@@ -36,4 +36,13 @@ public interface OrderEditNotProcessed extends OrderEditResult {
     default <T> T withOrderEditNotProcessed(Function<OrderEditNotProcessed, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditNotProcessed> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditNotProcessed>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditNotProcessed>";
+            }
+        };
+    }
 }

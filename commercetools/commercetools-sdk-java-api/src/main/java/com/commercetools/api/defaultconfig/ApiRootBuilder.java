@@ -3,6 +3,7 @@ package com.commercetools.api.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -10,10 +11,8 @@ import java.util.function.UnaryOperator;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.api.client.ApiInternalLoggerFactory;
-import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.client.ByProjectKeyRequestBuilder;
-import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.client.*;
+import com.commercetools.api.client.error.ApiHttpExceptionFactory;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.HttpExceptionFactory;
@@ -33,6 +32,7 @@ public class ApiRootBuilder {
     private String projectKey;
 
     private ApiRootBuilder(ClientBuilder builder) {
+        builder.withHttpExceptionFactory(ApiHttpExceptionFactory::of);
         this.builder = builder;
     }
 
@@ -236,11 +236,36 @@ public class ApiRootBuilder {
         return with(clientBuilder -> clientBuilder.withErrorMiddleware(errorMiddleware));
     }
 
-    public ApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+    public ApiRootBuilder addConcurrentModificationMiddleware() {
+        return addConcurrentModificationMiddleware(ConcurrentModificationMiddleware.of());
+    }
+
+    public ApiRootBuilder addConcurrentModificationMiddleware(final int maxRetries) {
+        return addConcurrentModificationMiddleware(ConcurrentModificationMiddleware.of(maxRetries));
+    }
+
+    public ApiRootBuilder addConcurrentModificationMiddleware(final int maxRetries, final long delay,
+            final long maxDelay) {
+        return addConcurrentModificationMiddleware(ConcurrentModificationMiddleware.of(maxRetries, delay, maxDelay));
+    }
+
+    public ApiRootBuilder addConcurrentModificationMiddleware(ConcurrentModificationMiddleware middleware) {
+        return addMiddleware(middleware);
+    }
+
+    public ApiRootBuilder addNotFoundExceptionMiddleware(NotFoundExceptionMiddleware notFoundExceptionMiddleware) {
+        return with(clientBuilder -> clientBuilder.addNotFoundExceptionMiddleware(notFoundExceptionMiddleware));
+    }
+
+    public ApiRootBuilder addNotFoundExceptionMiddleware() {
+        return with(ClientBuilder::addNotFoundExceptionMiddleware);
+    }
+
+    public ApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 
-    public ApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+    public ApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(retryMiddleware));
     }
 
@@ -250,6 +275,23 @@ public class ApiRootBuilder {
 
     public ApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
         return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, statusCodes));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, statusCodes, failures));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(
+            clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, delay, maxDelay, statusCodes, failures, fn));
+    }
+
+    public ApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, delay, maxDelay, fn));
     }
 
     public ApiRootBuilder withOAuthMiddleware(final Supplier<OAuthMiddleware> oAuthMiddleware) {
@@ -280,6 +322,13 @@ public class ApiRootBuilder {
             final Level responseLogEvent, final Level deprecationLogEvent) {
         return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent,
             deprecationLogEvent));
+    }
+
+    public ApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents) {
+        return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent,
+            deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents));
     }
 
     public ApiRootBuilder withApiBaseUrl(String apiBaseUrl) {

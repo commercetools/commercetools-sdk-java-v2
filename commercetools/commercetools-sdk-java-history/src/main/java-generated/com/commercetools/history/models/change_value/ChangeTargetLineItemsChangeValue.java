@@ -52,4 +52,13 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     default <T> T withChangeTargetLineItemsChangeValue(Function<ChangeTargetLineItemsChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetLineItemsChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetLineItemsChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTargetLineItemsChangeValue>";
+            }
+        };
+    }
 }

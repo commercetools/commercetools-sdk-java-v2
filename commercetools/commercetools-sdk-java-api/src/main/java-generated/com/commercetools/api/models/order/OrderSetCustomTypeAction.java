@@ -20,10 +20,17 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
 
     String SET_CUSTOM_TYPE = "setCustomType";
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Order with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the Order.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Order.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -53,5 +60,14 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
 
     default <T> T withOrderSetCustomTypeAction(Function<OrderSetCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetCustomTypeAction>";
+            }
+        };
     }
 }

@@ -12,16 +12,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Changes the order of <a href="ctp:api:type:CustomFieldEnumValue">EnumValues</a> in an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition.
+*  This update action can be used to update an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> FieldDefinition of <a href="ctp:api:type:CustomFieldEnumType">EnumType</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeChangeEnumValueOrderActionImpl.class)
 public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
 
     String CHANGE_ENUM_VALUE_ORDER = "changeEnumValueOrder";
 
+    /**
+    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</p>
+    */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
+    /**
+    *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
+    */
     @NotNull
     @JsonProperty("keys")
     public List<String> getKeys();
@@ -54,5 +64,14 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
 
     default <T> T withTypeChangeEnumValueOrderAction(Function<TypeChangeEnumValueOrderAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeEnumValueOrderAction>";
+            }
+        };
     }
 }

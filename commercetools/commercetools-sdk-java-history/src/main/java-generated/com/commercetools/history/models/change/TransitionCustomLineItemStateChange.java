@@ -91,4 +91,13 @@ public interface TransitionCustomLineItemStateChange extends Change {
     default <T> T withTransitionCustomLineItemStateChange(Function<TransitionCustomLineItemStateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TransitionCustomLineItemStateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TransitionCustomLineItemStateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TransitionCustomLineItemStateChange>";
+            }
+        };
+    }
 }

@@ -20,11 +20,26 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
     String SET_DELIVERY_CUSTOM_FIELD = "setDeliveryCustomField";
 
     @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+
+    /**
+    *  <p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p>
+    */
+    @NotNull
     @JsonProperty("name")
     public String getName();
 
+    /**
+    *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.
+    *  Trying to remove a field that does not exist will fail with an <a href="/../api/errors#general-400-invalid-operation">InvalidOperation</a> error.
+    *  If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+    */
+
     @JsonProperty("value")
     public Object getValue();
+
+    public void setDeliveryId(final String deliveryId);
 
     public void setName(final String name);
 
@@ -36,6 +51,7 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
 
     public static StagedOrderSetDeliveryCustomFieldAction of(final StagedOrderSetDeliveryCustomFieldAction template) {
         StagedOrderSetDeliveryCustomFieldActionImpl instance = new StagedOrderSetDeliveryCustomFieldActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
@@ -53,5 +69,14 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
     default <T> T withStagedOrderSetDeliveryCustomFieldAction(
             Function<StagedOrderSetDeliveryCustomFieldAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetDeliveryCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetDeliveryCustomFieldAction>";
+            }
+        };
     }
 }

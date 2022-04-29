@@ -21,10 +21,17 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
 
     String SET_ADDRESS_CUSTOM_TYPE = "setAddressCustomType";
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the <code>address</code> with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the <code>address</code>.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -61,5 +68,14 @@ public interface CustomerSetAddressCustomTypeAction extends CustomerUpdateAction
 
     default <T> T withCustomerSetAddressCustomTypeAction(Function<CustomerSetAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetAddressCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetAddressCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetAddressCustomTypeAction>";
+            }
+        };
     }
 }

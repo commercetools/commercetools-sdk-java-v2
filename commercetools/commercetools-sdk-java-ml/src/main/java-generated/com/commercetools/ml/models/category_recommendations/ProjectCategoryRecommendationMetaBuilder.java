@@ -40,6 +40,14 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
         return this;
     }
 
+    public ProjectCategoryRecommendationMetaBuilder plusGeneralCategoryNames(final String... generalCategoryNames) {
+        if (this.generalCategoryNames == null) {
+            this.generalCategoryNames = new ArrayList<>();
+        }
+        this.generalCategoryNames.addAll(Arrays.asList(generalCategoryNames));
+        return this;
+    }
+
     @Nullable
     public String getProductName() {
         return this.productName;

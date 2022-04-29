@@ -50,4 +50,13 @@ public interface LocalizableEnumAttribute extends Attribute {
     default <T> T withLocalizableEnumAttribute(Function<LocalizableEnumAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LocalizableEnumAttribute>";
+            }
+        };
+    }
 }

@@ -63,4 +63,13 @@ public interface MissingImagesMeta {
     default <T> T withMissingImagesMeta(Function<MissingImagesMeta, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingImagesMeta> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingImagesMeta>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingImagesMeta>";
+            }
+        };
+    }
 }

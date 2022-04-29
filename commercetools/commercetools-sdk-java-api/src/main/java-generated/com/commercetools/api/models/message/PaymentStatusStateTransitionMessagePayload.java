@@ -61,4 +61,13 @@ public interface PaymentStatusStateTransitionMessagePayload extends MessagePaylo
             Function<PaymentStatusStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentStatusStateTransitionMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentStatusStateTransitionMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentStatusStateTransitionMessagePayload>";
+            }
+        };
+    }
 }

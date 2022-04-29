@@ -57,4 +57,13 @@ public interface TransactionChangeValue {
     default <T> T withTransactionChangeValue(Function<TransactionChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TransactionChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TransactionChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TransactionChangeValue>";
+            }
+        };
+    }
 }

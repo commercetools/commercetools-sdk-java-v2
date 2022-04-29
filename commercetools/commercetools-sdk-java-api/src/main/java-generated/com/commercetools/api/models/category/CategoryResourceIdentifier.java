@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategoryResourceIdentifierImpl.class)
-public interface CategoryResourceIdentifier extends ResourceIdentifier {
+public interface CategoryResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Category> {
 
     String CATEGORY = "category";
 
@@ -38,5 +39,14 @@ public interface CategoryResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withCategoryResourceIdentifier(Function<CategoryResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryResourceIdentifier>";
+            }
+        };
     }
 }

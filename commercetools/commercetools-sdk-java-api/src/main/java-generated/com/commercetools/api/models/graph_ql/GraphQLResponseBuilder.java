@@ -28,10 +28,18 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
         return this;
     }
 
-    public GraphQLResponseBuilder withErrors(
-            Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorBuilder> builder) {
-        this.errors = new ArrayList<>();
-        this.errors.add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()).build());
+    public GraphQLResponseBuilder errors(
+            @Nullable final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors) {
+        this.errors = errors;
+        return this;
+    }
+
+    public GraphQLResponseBuilder plusErrors(
+            @Nullable final com.commercetools.api.models.graph_ql.GraphQLError... errors) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.addAll(Arrays.asList(errors));
         return this;
     }
 
@@ -44,9 +52,10 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
         return this;
     }
 
-    public GraphQLResponseBuilder errors(
-            @Nullable final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors) {
-        this.errors = errors;
+    public GraphQLResponseBuilder withErrors(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorBuilder> builder) {
+        this.errors = new ArrayList<>();
+        this.errors.add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()).build());
         return this;
     }
 

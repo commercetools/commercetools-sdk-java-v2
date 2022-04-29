@@ -48,10 +48,17 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
         return this;
     }
 
-    public ChannelPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build());
+    public ChannelPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.channel.Channel> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ChannelPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.channel.Channel... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +71,10 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
         return this;
     }
 
-    public ChannelPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.channel.Channel> results) {
-        this.results = results;
+    public ChannelPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build());
         return this;
     }
 

@@ -35,11 +35,18 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
         return this;
     }
 
-    public StagedOrderSetOrderTotalTaxActionBuilder withExternalTaxPortions(
-            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
-        this.externalTaxPortions = new ArrayList<>();
-        this.externalTaxPortions
-                .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
+    public StagedOrderSetOrderTotalTaxActionBuilder externalTaxPortions(
+            @Nullable final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
+        this.externalTaxPortions = externalTaxPortions;
+        return this;
+    }
+
+    public StagedOrderSetOrderTotalTaxActionBuilder plusExternalTaxPortions(
+            @Nullable final com.commercetools.api.models.cart.TaxPortionDraft... externalTaxPortions) {
+        if (this.externalTaxPortions == null) {
+            this.externalTaxPortions = new ArrayList<>();
+        }
+        this.externalTaxPortions.addAll(Arrays.asList(externalTaxPortions));
         return this;
     }
 
@@ -53,9 +60,11 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
         return this;
     }
 
-    public StagedOrderSetOrderTotalTaxActionBuilder externalTaxPortions(
-            @Nullable final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
-        this.externalTaxPortions = externalTaxPortions;
+    public StagedOrderSetOrderTotalTaxActionBuilder withExternalTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraftBuilder> builder) {
+        this.externalTaxPortions = new ArrayList<>();
+        this.externalTaxPortions
+                .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
     }
 

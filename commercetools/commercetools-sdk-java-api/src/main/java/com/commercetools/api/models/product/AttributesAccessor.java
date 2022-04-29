@@ -6,6 +6,8 @@ import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -24,6 +26,10 @@ public class AttributesAccessor extends MapAccessor<Attribute> {
 
     public static AttributesAccessor of(ProductVariant variant) {
         return new AttributesAccessor(AttributeAccessor.asMap(variant));
+    }
+
+    public static AttributesAccessor of(List<Attribute> attributes) {
+        return new AttributesAccessor(AttributeAccessor.asMap(attributes));
     }
 
     public static AttributesAccessor of(Map<String, Attribute> attributes) {
@@ -148,5 +154,18 @@ public class AttributesAccessor extends MapAccessor<Attribute> {
     @Nullable
     public List<TypedMoney> asSetMoney(final String key) {
         return get(key, AttributeAccessor::asSetMoney);
+    }
+
+    @Nullable
+    public AttributesAccessor asNested(final String key) {
+        return AttributesAccessor.of(get(key, AttributeAccessor::asNested));
+    }
+
+    @Nullable
+    public List<AttributesAccessor> asSetNested(final String key) {
+        return Objects.requireNonNull(get(key, AttributeAccessor::asSetNested))
+                .stream()
+                .map(AttributesAccessor::of)
+                .collect(Collectors.toList());
     }
 }

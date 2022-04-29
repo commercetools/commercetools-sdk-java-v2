@@ -24,6 +24,10 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("money")
@@ -55,5 +59,14 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
 
     default <T> T withCartChangeCustomLineItemMoneyAction(Function<CartChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemMoneyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemMoneyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartChangeCustomLineItemMoneyAction>";
+            }
+        };
     }
 }

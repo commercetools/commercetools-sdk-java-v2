@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ChannelReferenceImpl.class)
-public interface ChannelReference extends Reference {
+public interface ChannelReference extends Reference, com.commercetools.api.models.Identifiable<Channel> {
 
     String CHANNEL = "channel";
 
@@ -63,5 +63,14 @@ public interface ChannelReference extends Reference {
 
     default <T> T withChannelReference(Function<ChannelReference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelReference>";
+            }
+        };
     }
 }

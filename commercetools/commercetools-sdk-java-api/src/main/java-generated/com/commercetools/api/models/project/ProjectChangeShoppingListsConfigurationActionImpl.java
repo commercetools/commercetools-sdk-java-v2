@@ -37,6 +37,9 @@ public class ProjectChangeShoppingListsConfigurationActionImpl
         return this.action;
     }
 
+    /**
+    *  <p>Configuration for the <a href="/../api/projects/shoppingLists">Shopping Lists</a> feature.</p>
+    */
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingListsConfiguration() {
         return this.shoppingListsConfiguration;
     }

@@ -67,4 +67,13 @@ public interface ChangeStateTypeChange extends Change {
     default <T> T withChangeStateTypeChange(Function<ChangeStateTypeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeStateTypeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeStateTypeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeStateTypeChange>";
+            }
+        };
+    }
 }

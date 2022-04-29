@@ -12,6 +12,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>If a language is used by a <a href="ctp:api:type:Store">Store</a>, it cannot be deleted. Attempts to delete such language will lead to <a href="/../api/errors#projects-400-language-used-in-stores">LanguageUsedInStores</a> errors.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeLanguagesActionImpl.class)
 public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
@@ -19,7 +22,7 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     String CHANGE_LANGUAGES = "changeLanguages";
 
     /**
-    *  <p>.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     @NotNull
     @JsonProperty("languages")
@@ -50,5 +53,14 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
 
     default <T> T withProjectChangeLanguagesAction(Function<ProjectChangeLanguagesAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeLanguagesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeLanguagesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeLanguagesAction>";
+            }
+        };
     }
 }

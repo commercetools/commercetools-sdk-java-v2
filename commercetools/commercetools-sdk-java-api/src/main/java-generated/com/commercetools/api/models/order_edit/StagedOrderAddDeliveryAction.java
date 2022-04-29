@@ -11,7 +11,7 @@ import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.ParcelDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -19,7 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StagedOrderAddDeliveryActionImpl.class)
-public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
+public interface StagedOrderAddDeliveryAction
+        extends StagedOrderUpdateAction, com.commercetools.api.models.CustomizableDraft<StagedOrderAddDeliveryAction> {
 
     String ADD_DELIVERY = "addDelivery";
 
@@ -40,7 +41,7 @@ public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
     */
     @Valid
     @JsonProperty("custom")
-    public CustomFields getCustom();
+    public CustomFieldsDraft getCustom();
 
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
@@ -54,7 +55,7 @@ public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
 
     public void setParcels(final List<ParcelDraft> parcels);
 
-    public void setCustom(final CustomFields custom);
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static StagedOrderAddDeliveryAction of() {
         return new StagedOrderAddDeliveryActionImpl();
@@ -79,5 +80,14 @@ public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
 
     default <T> T withStagedOrderAddDeliveryAction(Function<StagedOrderAddDeliveryAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderAddDeliveryAction>";
+            }
+        };
     }
 }

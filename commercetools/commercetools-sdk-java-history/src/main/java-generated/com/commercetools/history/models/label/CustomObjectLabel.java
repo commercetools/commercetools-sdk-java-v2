@@ -56,4 +56,13 @@ public interface CustomObjectLabel extends Label {
     default <T> T withCustomObjectLabel(Function<CustomObjectLabel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomObjectLabel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomObjectLabel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomObjectLabel>";
+            }
+        };
+    }
 }

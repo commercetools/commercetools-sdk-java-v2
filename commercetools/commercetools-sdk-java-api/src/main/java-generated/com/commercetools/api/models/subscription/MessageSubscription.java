@@ -52,4 +52,13 @@ public interface MessageSubscription {
     default <T> T withMessageSubscription(Function<MessageSubscription, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MessageSubscription> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MessageSubscription>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MessageSubscription>";
+            }
+        };
+    }
 }

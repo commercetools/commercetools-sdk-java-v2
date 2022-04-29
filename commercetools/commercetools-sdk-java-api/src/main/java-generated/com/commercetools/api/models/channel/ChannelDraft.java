@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ChannelDraftImpl.class)
-public interface ChannelDraft {
+public interface ChannelDraft extends com.commercetools.api.models.CustomizableDraft<ChannelDraft> {
 
     /**
     *  <p>User-defined unique identifier for the Channel.</p>
@@ -116,5 +116,14 @@ public interface ChannelDraft {
 
     default <T> T withChannelDraft(Function<ChannelDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChannelDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChannelDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChannelDraft>";
+            }
+        };
     }
 }

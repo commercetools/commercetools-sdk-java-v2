@@ -48,4 +48,13 @@ public interface PaymentChangeAmountPlannedAction extends PaymentUpdateAction {
     default <T> T withPaymentChangeAmountPlannedAction(Function<PaymentChangeAmountPlannedAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentChangeAmountPlannedAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentChangeAmountPlannedAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentChangeAmountPlannedAction>";
+            }
+        };
+    }
 }

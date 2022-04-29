@@ -25,9 +25,6 @@ public interface TaxPortion {
     @JsonProperty("rate")
     public Double getRate();
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("amount")
@@ -61,5 +58,14 @@ public interface TaxPortion {
 
     default <T> T withTaxPortion(Function<TaxPortion, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxPortion> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxPortion>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxPortion>";
+            }
+        };
     }
 }

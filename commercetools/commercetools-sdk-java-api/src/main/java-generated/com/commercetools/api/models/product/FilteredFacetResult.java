@@ -51,4 +51,13 @@ public interface FilteredFacetResult extends FacetResult {
     default <T> T withFilteredFacetResult(Function<FilteredFacetResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<FilteredFacetResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<FilteredFacetResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<FilteredFacetResult>";
+            }
+        };
+    }
 }

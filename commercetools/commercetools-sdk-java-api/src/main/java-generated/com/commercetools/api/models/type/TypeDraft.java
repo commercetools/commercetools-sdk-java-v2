@@ -18,26 +18,38 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeDraftImpl.class)
 public interface TypeDraft {
 
+    /**
+    *  <p>User-defined unique identifier for the Type.</p>
+    */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>Name of the Type.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+    *  <p>Description of the Type.</p>
+    */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-    *  <p>The IDs of the resources that can be customized with this type.</p>
+    *  <p>Resources and/or data types for which the Type is defined.</p>
     */
     @NotNull
     @JsonProperty("resourceTypeIds")
     public List<ResourceTypeId> getResourceTypeIds();
 
+    /**
+    *  <p>Defines Custom Fields.</p>
+    */
     @Valid
     @JsonProperty("fieldDefinitions")
     public List<FieldDefinition> getFieldDefinitions();
@@ -82,5 +94,14 @@ public interface TypeDraft {
 
     default <T> T withTypeDraft(Function<TypeDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeDraft>";
+            }
+        };
     }
 }

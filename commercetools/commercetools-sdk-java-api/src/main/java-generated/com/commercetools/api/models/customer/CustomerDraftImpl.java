@@ -70,6 +70,8 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
+    private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
+
     @JsonCreator
     CustomerDraftImpl(@JsonProperty("customerNumber") final String customerNumber,
             @JsonProperty("email") final String email, @JsonProperty("password") final String password,
@@ -91,7 +93,8 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
             @JsonProperty("key") final String key,
-            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores,
+            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
         this.customerNumber = customerNumber;
         this.email = email;
         this.password = password;
@@ -118,6 +121,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.salutation = salutation;
         this.key = key;
         this.stores = stores;
+        this.authenticationMode = authenticationMode;
     }
 
     public CustomerDraftImpl() {
@@ -142,6 +146,9 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         return this.email;
     }
 
+    /**
+    *  <p>Only optional with <code>authenticationMode</code> set to <code>ExternalAuth</code>.</p>
+    */
     public String getPassword() {
         return this.password;
     }
@@ -283,6 +290,13 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         return this.stores;
     }
 
+    /**
+    *  <p>Defines whether a password is required for the Customer that is used for platform-internal authentication.</p>
+    */
+    public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
     public void setCustomerNumber(final String customerNumber) {
         this.customerNumber = customerNumber;
     }
@@ -405,6 +419,11 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.stores = stores;
     }
 
+    public void setAuthenticationMode(
+            final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -441,6 +460,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(salutation, that.salutation)
                 .append(key, that.key)
                 .append(stores, that.stores)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 
@@ -472,6 +492,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(salutation)
                 .append(key)
                 .append(stores)
+                .append(authenticationMode)
                 .toHashCode();
     }
 

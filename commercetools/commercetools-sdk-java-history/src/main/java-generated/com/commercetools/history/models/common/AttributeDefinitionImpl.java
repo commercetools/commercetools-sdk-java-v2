@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
 
-    private java.lang.Object type;
+    private com.commercetools.history.models.common.AttributeType type;
 
     private String name;
 
@@ -34,7 +34,8 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     private Boolean isSearchable;
 
     @JsonCreator
-    AttributeDefinitionImpl(@JsonProperty("type") final java.lang.Object type, @JsonProperty("name") final String name,
+    AttributeDefinitionImpl(@JsonProperty("type") final com.commercetools.history.models.common.AttributeType type,
+            @JsonProperty("name") final String name,
             @JsonProperty("label") final com.commercetools.history.models.common.LocalizedString label,
             @JsonProperty("isRequired") final Boolean isRequired,
             @JsonProperty("attributeConstraint") final com.commercetools.history.models.common.AttributeConstraintEnum attributeConstraint,
@@ -54,7 +55,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     public AttributeDefinitionImpl() {
     }
 
-    public java.lang.Object getType() {
+    public com.commercetools.history.models.common.AttributeType getType() {
         return this.type;
     }
 
@@ -95,7 +96,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         return this.isSearchable;
     }
 
-    public void setType(final java.lang.Object type) {
+    public void setType(final com.commercetools.history.models.common.AttributeType type) {
         this.type = type;
     }
 

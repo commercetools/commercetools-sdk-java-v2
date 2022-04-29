@@ -94,4 +94,13 @@ public interface ImportContainer {
     default <T> T withImportContainer(Function<ImportContainer, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportContainer> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportContainer>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportContainer>";
+            }
+        };
+    }
 }

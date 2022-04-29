@@ -21,11 +21,18 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
         return this;
     }
 
-    public SubscriptionSetMessagesActionBuilder withMessages(
-            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
-        this.messages = new ArrayList<>();
-        this.messages
-                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
+    public SubscriptionSetMessagesActionBuilder messages(
+            @Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
+        this.messages = messages;
+        return this;
+    }
+
+    public SubscriptionSetMessagesActionBuilder plusMessages(
+            @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
+        if (this.messages == null) {
+            this.messages = new ArrayList<>();
+        }
+        this.messages.addAll(Arrays.asList(messages));
         return this;
     }
 
@@ -39,9 +46,11 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
         return this;
     }
 
-    public SubscriptionSetMessagesActionBuilder messages(
-            @Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
-        this.messages = messages;
+    public SubscriptionSetMessagesActionBuilder withMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscriptionBuilder> builder) {
+        this.messages = new ArrayList<>();
+        this.messages
+                .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
     }
 

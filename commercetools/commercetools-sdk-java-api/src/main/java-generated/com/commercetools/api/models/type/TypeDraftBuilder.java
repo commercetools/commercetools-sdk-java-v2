@@ -63,16 +63,33 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         return this;
     }
 
+    public TypeDraftBuilder plusResourceTypeIds(
+            final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
+        if (this.resourceTypeIds == null) {
+            this.resourceTypeIds = new ArrayList<>();
+        }
+        this.resourceTypeIds.addAll(Arrays.asList(resourceTypeIds));
+        return this;
+    }
+
     public TypeDraftBuilder fieldDefinitions(
             @Nullable final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
         this.fieldDefinitions = new ArrayList<>(Arrays.asList(fieldDefinitions));
         return this;
     }
 
-    public TypeDraftBuilder withFieldDefinitions(
-            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
-        this.fieldDefinitions = new ArrayList<>();
-        this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
+    public TypeDraftBuilder fieldDefinitions(
+            @Nullable final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
+        this.fieldDefinitions = fieldDefinitions;
+        return this;
+    }
+
+    public TypeDraftBuilder plusFieldDefinitions(
+            @Nullable final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
+        if (this.fieldDefinitions == null) {
+            this.fieldDefinitions = new ArrayList<>();
+        }
+        this.fieldDefinitions.addAll(Arrays.asList(fieldDefinitions));
         return this;
     }
 
@@ -85,9 +102,10 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         return this;
     }
 
-    public TypeDraftBuilder fieldDefinitions(
-            @Nullable final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
-        this.fieldDefinitions = fieldDefinitions;
+    public TypeDraftBuilder withFieldDefinitions(
+            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
+        this.fieldDefinitions = new ArrayList<>();
+        this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
         return this;
     }
 

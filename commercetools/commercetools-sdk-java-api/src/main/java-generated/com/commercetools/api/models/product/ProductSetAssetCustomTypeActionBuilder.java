@@ -31,7 +31,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     @Nullable
-    private java.lang.Object fields;
+    private com.commercetools.api.models.type.FieldContainer fields;
 
     public ProductSetAssetCustomTypeActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
@@ -70,7 +70,14 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
         return this;
     }
 
-    public ProductSetAssetCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
+    public ProductSetAssetCustomTypeActionBuilder fields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    public ProductSetAssetCustomTypeActionBuilder fields(
+            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
@@ -106,7 +113,7 @@ public class ProductSetAssetCustomTypeActionBuilder implements Builder<ProductSe
     }
 
     @Nullable
-    public java.lang.Object getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 

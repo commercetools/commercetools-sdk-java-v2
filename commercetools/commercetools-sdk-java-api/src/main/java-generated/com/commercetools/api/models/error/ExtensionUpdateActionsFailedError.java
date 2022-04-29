@@ -64,4 +64,13 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
     default <T> T withExtensionUpdateActionsFailedError(Function<ExtensionUpdateActionsFailedError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionUpdateActionsFailedError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionUpdateActionsFailedError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionUpdateActionsFailedError>";
+            }
+        };
+    }
 }

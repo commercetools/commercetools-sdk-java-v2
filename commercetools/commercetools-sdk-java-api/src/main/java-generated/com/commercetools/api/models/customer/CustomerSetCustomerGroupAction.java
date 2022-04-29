@@ -49,4 +49,13 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
     default <T> T withCustomerSetCustomerGroupAction(Function<CustomerSetCustomerGroupAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetCustomerGroupAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerSetCustomerGroupAction>";
+            }
+        };
+    }
 }

@@ -19,7 +19,7 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
     String CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED = "changeCountryTaxRateFallbackEnabled";
 
     /**
-    *  <p>default value is <code>false</code></p>
+    *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See <a href="ctp:api:type:CartsConfiguration">CartsConfiguration</a>.</p>
     */
     @NotNull
     @JsonProperty("countryTaxRateFallbackEnabled")
@@ -50,5 +50,14 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
     default <T> T withProjectChangeCountryTaxRateFallbackEnabledAction(
             Function<ProjectChangeCountryTaxRateFallbackEnabledAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeCountryTaxRateFallbackEnabledAction>";
+            }
+        };
     }
 }

@@ -65,4 +65,13 @@ public interface ResultItem {
     default <T> T withResultItem(Function<ResultItem, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ResultItem> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ResultItem>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ResultItem>";
+            }
+        };
+    }
 }

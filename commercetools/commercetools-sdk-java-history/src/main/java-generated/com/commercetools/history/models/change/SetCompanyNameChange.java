@@ -66,4 +66,13 @@ public interface SetCompanyNameChange extends Change {
     default <T> T withSetCompanyNameChange(Function<SetCompanyNameChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCompanyNameChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCompanyNameChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCompanyNameChange>";
+            }
+        };
+    }
 }

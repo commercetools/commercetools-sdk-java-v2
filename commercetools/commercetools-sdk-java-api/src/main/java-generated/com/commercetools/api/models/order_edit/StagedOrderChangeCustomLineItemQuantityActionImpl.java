@@ -22,11 +22,11 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
 
     private String customLineItemId;
 
-    private Double quantity;
+    private Long quantity;
 
     @JsonCreator
     StagedOrderChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
-            @JsonProperty("quantity") final Double quantity) {
+            @JsonProperty("quantity") final Long quantity) {
         this.customLineItemId = customLineItemId;
         this.quantity = quantity;
         this.action = CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
@@ -44,7 +44,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
         return this.customLineItemId;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -52,7 +52,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
         this.customLineItemId = customLineItemId;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

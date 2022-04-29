@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importoperations;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -39,6 +40,31 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     public ImportOperationStatusBuilder errors(
             @Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
         this.errors = errors;
+        return this;
+    }
+
+    public ImportOperationStatusBuilder plusErrors(
+            @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.addAll(Arrays.asList(errors));
+        return this;
+    }
+
+    public ImportOperationStatusBuilder plusErrors(
+            Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.add(builder.apply(com.commercetools.importapi.models.errors.ErrorObjectBuilder.of()).build());
+        return this;
+    }
+
+    public ImportOperationStatusBuilder withErrors(
+            Function<com.commercetools.importapi.models.errors.ErrorObjectBuilder, Builder<? extends com.commercetools.importapi.models.errors.ErrorObject>> builder) {
+        this.errors = new ArrayList<>();
+        this.errors.add(builder.apply(com.commercetools.importapi.models.errors.ErrorObjectBuilder.of()).build());
         return this;
     }
 

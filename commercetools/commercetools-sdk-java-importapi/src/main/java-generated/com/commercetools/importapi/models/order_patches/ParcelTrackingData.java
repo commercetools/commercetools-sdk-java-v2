@@ -52,4 +52,13 @@ public interface ParcelTrackingData {
     default <T> T withParcelTrackingData(Function<ParcelTrackingData, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingData> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingData>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelTrackingData>";
+            }
+        };
+    }
 }

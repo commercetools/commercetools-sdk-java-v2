@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.ml.models.common.ProductReferenceImpl.class, name = ProductReference.PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.ml.models.common.ProductTypeReferenceImpl.class, name = ProductTypeReference.PRODUCT_TYPE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = ReferenceImpl.class, visible = true)
+@JsonDeserialize(as = ReferenceImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface Reference {
 
@@ -30,7 +31,28 @@ public interface Reference {
 
     public void setId(final String id);
 
+    public static com.commercetools.ml.models.common.CategoryReferenceBuilder categoryBuilder() {
+        return com.commercetools.ml.models.common.CategoryReferenceBuilder.of();
+    }
+
+    public static com.commercetools.ml.models.common.ProductReferenceBuilder productBuilder() {
+        return com.commercetools.ml.models.common.ProductReferenceBuilder.of();
+    }
+
+    public static com.commercetools.ml.models.common.ProductTypeReferenceBuilder productTypeBuilder() {
+        return com.commercetools.ml.models.common.ProductTypeReferenceBuilder.of();
+    }
+
     default <T> T withReference(Function<Reference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Reference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Reference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Reference>";
+            }
+        };
     }
 }

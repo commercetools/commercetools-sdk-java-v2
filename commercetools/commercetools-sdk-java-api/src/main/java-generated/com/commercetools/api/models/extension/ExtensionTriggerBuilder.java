@@ -30,6 +30,15 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
         return this;
     }
 
+    public ExtensionTriggerBuilder plusActions(
+            final com.commercetools.api.models.extension.ExtensionAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
     public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId() {
         return this.resourceTypeId;
     }

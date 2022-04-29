@@ -57,4 +57,13 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     default <T> T withPaymentAddInterfaceInteractionAction(Function<PaymentAddInterfaceInteractionAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentAddInterfaceInteractionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentAddInterfaceInteractionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentAddInterfaceInteractionAction>";
+            }
+        };
+    }
 }

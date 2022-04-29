@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ParcelDraftImpl.class)
-public interface ParcelDraft {
+public interface ParcelDraft extends com.commercetools.api.models.CustomizableDraft<ParcelDraft> {
 
     @Valid
     @JsonProperty("measurements")
@@ -73,5 +73,14 @@ public interface ParcelDraft {
 
     default <T> T withParcelDraft(Function<ParcelDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelDraft>";
+            }
+        };
     }
 }

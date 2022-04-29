@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -43,7 +45,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/cart-discounts/key=%s", this.projectKey, this.key);
         if (!params.isEmpty()) {
@@ -88,23 +90,51 @@ public class ByProjectKeyCartDiscountsKeyByKeyPost extends
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
-    public ByProjectKeyCartDiscountsKeyByKeyPost withExpand(final String expand) {
+    public <TValue> ByProjectKeyCartDiscountsKeyByKeyPost withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyCartDiscountsKeyByKeyPost addExpand(final String expand) {
+    public <TValue> ByProjectKeyCartDiscountsKeyByKeyPost addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
      */
-    public ByProjectKeyCartDiscountsKeyByKeyPost withExpand(final List<String> expand) {
+    public ByProjectKeyCartDiscountsKeyByKeyPost withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyCartDiscountsKeyByKeyPost addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyCartDiscountsKeyByKeyPost withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyCartDiscountsKeyByKeyPost addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
+     */
+    public <TValue> ByProjectKeyCartDiscountsKeyByKeyPost withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -113,7 +143,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyPost extends
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyCartDiscountsKeyByKeyPost addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCartDiscountsKeyByKeyPost addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

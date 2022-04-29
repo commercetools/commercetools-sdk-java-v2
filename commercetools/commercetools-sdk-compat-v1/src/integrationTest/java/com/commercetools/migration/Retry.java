@@ -21,6 +21,7 @@ import io.sphere.sdk.queries.PagedQueryResult;
 import io.sphere.sdk.retry.RetryAction;
 import io.sphere.sdk.retry.RetryPredicate;
 import io.sphere.sdk.retry.RetryRule;
+import io.vrap.rmf.base.client.http.HttpStatusCode;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class Retry implements MigrateExample {
@@ -42,7 +43,9 @@ public class Retry implements MigrateExample {
         final ProjectApiRoot projectClient = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
+                .withRetryMiddleware(5,
+                    Arrays.asList(HttpStatusCode.BAD_GATEWAY_502, HttpStatusCode.SERVICE_UNAVAILABLE_503,
+                        HttpStatusCode.GATEWAY_TIMEOUT_504))
                 .build("projectKey");
 
         final CategoryPagedQueryResponse body = projectClient.categories().get().executeBlocking().getBody();

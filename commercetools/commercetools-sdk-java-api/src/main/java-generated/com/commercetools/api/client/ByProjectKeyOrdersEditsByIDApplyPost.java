@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyOrdersEditsByIDApplyPost extends
-        BodyApiMethod<ByProjectKeyOrdersEditsByIDApplyPost, com.fasterxml.jackson.databind.JsonNode, com.commercetools.api.models.order_edit.OrderEditApply>
+        BodyApiMethod<ByProjectKeyOrdersEditsByIDApplyPost, com.commercetools.api.models.order_edit.OrderEdit, com.commercetools.api.models.order_edit.OrderEditApply>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsByIDApplyPost> {
 
     private String projectKey;
@@ -39,7 +39,7 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/edits/%s/apply", this.projectKey, this.ID);
         if (!params.isEmpty()) {
@@ -52,15 +52,15 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends
     }
 
     @Override
-    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
-            final Duration timeout) {
-        return executeBlocking(client, timeout, com.fasterxml.jackson.databind.JsonNode.class);
+    public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit> executeBlocking(
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout, com.commercetools.api.models.order_edit.OrderEdit.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit>> execute(
             final ApiHttpClient client) {
-        return execute(client, com.fasterxml.jackson.databind.JsonNode.class);
+        return execute(client, com.commercetools.api.models.order_edit.OrderEdit.class);
     }
 
     public String getProjectKey() {

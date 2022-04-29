@@ -50,4 +50,13 @@ public interface AssetDimensions {
     default <T> T withAssetDimensions(Function<AssetDimensions, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AssetDimensions> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AssetDimensions>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AssetDimensions>";
+            }
+        };
+    }
 }

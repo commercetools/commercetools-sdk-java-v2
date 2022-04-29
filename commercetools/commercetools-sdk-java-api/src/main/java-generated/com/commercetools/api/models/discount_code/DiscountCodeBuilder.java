@@ -140,11 +140,18 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         return this;
     }
 
-    public DiscountCodeBuilder withCartDiscounts(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {
-        this.cartDiscounts = new ArrayList<>();
-        this.cartDiscounts.add(
-            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()).build());
+    public DiscountCodeBuilder cartDiscounts(
+            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> cartDiscounts) {
+        this.cartDiscounts = cartDiscounts;
+        return this;
+    }
+
+    public DiscountCodeBuilder plusCartDiscounts(
+            final com.commercetools.api.models.cart_discount.CartDiscountReference... cartDiscounts) {
+        if (this.cartDiscounts == null) {
+            this.cartDiscounts = new ArrayList<>();
+        }
+        this.cartDiscounts.addAll(Arrays.asList(cartDiscounts));
         return this;
     }
 
@@ -158,9 +165,11 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         return this;
     }
 
-    public DiscountCodeBuilder cartDiscounts(
-            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> cartDiscounts) {
-        this.cartDiscounts = cartDiscounts;
+    public DiscountCodeBuilder withCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {
+        this.cartDiscounts = new ArrayList<>();
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()).build());
         return this;
     }
 
@@ -182,6 +191,30 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     public DiscountCodeBuilder references(
             final java.util.List<com.commercetools.api.models.common.Reference> references) {
         this.references = references;
+        return this;
+    }
+
+    public DiscountCodeBuilder plusReferences(final com.commercetools.api.models.common.Reference... references) {
+        if (this.references == null) {
+            this.references = new ArrayList<>();
+        }
+        this.references.addAll(Arrays.asList(references));
+        return this;
+    }
+
+    public DiscountCodeBuilder plusReferences(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        if (this.references == null) {
+            this.references = new ArrayList<>();
+        }
+        this.references.add(builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public DiscountCodeBuilder withReferences(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.references = new ArrayList<>();
+        this.references.add(builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build());
         return this;
     }
 
@@ -213,6 +246,14 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     public DiscountCodeBuilder groups(final java.util.List<String> groups) {
         this.groups = groups;
+        return this;
+    }
+
+    public DiscountCodeBuilder plusGroups(final String... groups) {
+        if (this.groups == null) {
+            this.groups = new ArrayList<>();
+        }
+        this.groups.addAll(Arrays.asList(groups));
         return this;
     }
 

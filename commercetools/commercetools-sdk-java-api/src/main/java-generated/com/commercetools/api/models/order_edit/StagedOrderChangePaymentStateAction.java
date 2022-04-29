@@ -45,4 +45,13 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
     default <T> T withStagedOrderChangePaymentStateAction(Function<StagedOrderChangePaymentStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangePaymentStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangePaymentStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderChangePaymentStateAction>";
+            }
+        };
+    }
 }

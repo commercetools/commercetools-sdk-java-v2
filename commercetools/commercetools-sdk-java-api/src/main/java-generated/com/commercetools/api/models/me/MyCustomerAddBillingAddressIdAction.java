@@ -49,4 +49,13 @@ public interface MyCustomerAddBillingAddressIdAction extends MyCustomerUpdateAct
     default <T> T withMyCustomerAddBillingAddressIdAction(Function<MyCustomerAddBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddBillingAddressIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddBillingAddressIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerAddBillingAddressIdAction>";
+            }
+        };
+    }
 }

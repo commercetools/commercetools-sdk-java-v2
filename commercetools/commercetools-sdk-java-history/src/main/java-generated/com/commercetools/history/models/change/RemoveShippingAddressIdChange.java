@@ -82,4 +82,13 @@ public interface RemoveShippingAddressIdChange extends Change {
     default <T> T withRemoveShippingAddressIdChange(Function<RemoveShippingAddressIdChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveShippingAddressIdChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveShippingAddressIdChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveShippingAddressIdChange>";
+            }
+        };
+    }
 }

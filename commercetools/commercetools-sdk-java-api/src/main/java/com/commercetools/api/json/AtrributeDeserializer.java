@@ -86,7 +86,7 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
                 return new TypeReference<String>() {
                 };
             case OBJECT:
-                if (valueNode.has("key")) {
+                if (valueNode.has("key") && valueNode.has("label")) {
                     JsonNode label = valueNode.get("label");
                     if (label.getNodeType() == JsonNodeType.OBJECT) {
                         return new TypeReference<AttributeLocalizedEnumValue>() {
@@ -171,7 +171,7 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
         JsonNodeType valueNodeType = valueNode.getNodeType();
         switch (valueNodeType) {
             case OBJECT:
-                if (valueNode.has("key")) {
+                if (valueNode.has("key") && valueNode.has("label")) {
                     JsonNode label = valueNode.get("label");
                     if (label.getNodeType() == JsonNodeType.OBJECT) {
                         return ElemType.LOCALIZED_ENUM;

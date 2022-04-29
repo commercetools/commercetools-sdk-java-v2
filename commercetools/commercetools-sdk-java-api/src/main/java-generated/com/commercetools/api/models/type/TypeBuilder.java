@@ -118,15 +118,31 @@ public class TypeBuilder implements Builder<Type> {
         return this;
     }
 
+    public TypeBuilder plusResourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId... resourceTypeIds) {
+        if (this.resourceTypeIds == null) {
+            this.resourceTypeIds = new ArrayList<>();
+        }
+        this.resourceTypeIds.addAll(Arrays.asList(resourceTypeIds));
+        return this;
+    }
+
     public TypeBuilder fieldDefinitions(final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
         this.fieldDefinitions = new ArrayList<>(Arrays.asList(fieldDefinitions));
         return this;
     }
 
-    public TypeBuilder withFieldDefinitions(
-            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
-        this.fieldDefinitions = new ArrayList<>();
-        this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
+    public TypeBuilder fieldDefinitions(
+            final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
+        this.fieldDefinitions = fieldDefinitions;
+        return this;
+    }
+
+    public TypeBuilder plusFieldDefinitions(
+            final com.commercetools.api.models.type.FieldDefinition... fieldDefinitions) {
+        if (this.fieldDefinitions == null) {
+            this.fieldDefinitions = new ArrayList<>();
+        }
+        this.fieldDefinitions.addAll(Arrays.asList(fieldDefinitions));
         return this;
     }
 
@@ -139,9 +155,10 @@ public class TypeBuilder implements Builder<Type> {
         return this;
     }
 
-    public TypeBuilder fieldDefinitions(
-            final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions) {
-        this.fieldDefinitions = fieldDefinitions;
+    public TypeBuilder withFieldDefinitions(
+            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
+        this.fieldDefinitions = new ArrayList<>();
+        this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
         return this;
     }
 

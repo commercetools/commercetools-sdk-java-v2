@@ -31,6 +31,10 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     @JsonProperty("discountedPricePerQuantity")
     public List<DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
@@ -85,5 +89,14 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
 
     default <T> T withOrderLineItemDiscountSetMessage(Function<OrderLineItemDiscountSetMessage, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDiscountSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderLineItemDiscountSetMessage>";
+            }
+        };
     }
 }

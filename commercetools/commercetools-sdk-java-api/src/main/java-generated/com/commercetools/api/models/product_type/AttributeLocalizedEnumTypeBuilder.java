@@ -18,11 +18,18 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
         return this;
     }
 
-    public AttributeLocalizedEnumTypeBuilder withValues(
-            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
-        this.values = new ArrayList<>();
-        this.values.add(
-            builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
+    public AttributeLocalizedEnumTypeBuilder values(
+            final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
+        this.values = values;
+        return this;
+    }
+
+    public AttributeLocalizedEnumTypeBuilder plusValues(
+            final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue... values) {
+        if (this.values == null) {
+            this.values = new ArrayList<>();
+        }
+        this.values.addAll(Arrays.asList(values));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
         return this;
     }
 
-    public AttributeLocalizedEnumTypeBuilder values(
-            final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
-        this.values = values;
+    public AttributeLocalizedEnumTypeBuilder withValues(
+            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder> builder) {
+        this.values = new ArrayList<>();
+        this.values.add(
+            builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()).build());
         return this;
     }
 

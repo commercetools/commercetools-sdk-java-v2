@@ -95,4 +95,13 @@ public interface CustomLineItemStateTransitionMessage extends OrderMessage {
     default <T> T withCustomLineItemStateTransitionMessage(Function<CustomLineItemStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemStateTransitionMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemStateTransitionMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomLineItemStateTransitionMessage>";
+            }
+        };
+    }
 }

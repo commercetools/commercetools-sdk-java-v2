@@ -10,6 +10,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Field type for <a href="ctp:api:type:LocalizedString">LocalizedString</a> values.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldLocalizedStringTypeImpl.class)
 public interface CustomFieldLocalizedStringType extends FieldType {
@@ -35,5 +38,14 @@ public interface CustomFieldLocalizedStringType extends FieldType {
 
     default <T> T withCustomFieldLocalizedStringType(Function<CustomFieldLocalizedStringType, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldLocalizedStringType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldLocalizedStringType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldLocalizedStringType>";
+            }
+        };
     }
 }

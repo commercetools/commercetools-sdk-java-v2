@@ -95,6 +95,12 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
         return this;
     }
 
+    public DeliveryItemsUpdatedMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public DeliveryItemsUpdatedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -124,10 +130,18 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
         return this;
     }
 
-    public DeliveryItemsUpdatedMessageBuilder withItems(
-            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+    public DeliveryItemsUpdatedMessageBuilder items(
+            final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public DeliveryItemsUpdatedMessageBuilder plusItems(
+            final com.commercetools.api.models.order.DeliveryItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -140,9 +154,10 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
         return this;
     }
 
-    public DeliveryItemsUpdatedMessageBuilder items(
-            final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
-        this.items = items;
+    public DeliveryItemsUpdatedMessageBuilder withItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -152,10 +167,18 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
         return this;
     }
 
-    public DeliveryItemsUpdatedMessageBuilder withOldItems(
-            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
-        this.oldItems = new ArrayList<>();
-        this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
+    public DeliveryItemsUpdatedMessageBuilder oldItems(
+            final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
+        this.oldItems = oldItems;
+        return this;
+    }
+
+    public DeliveryItemsUpdatedMessageBuilder plusOldItems(
+            final com.commercetools.api.models.order.DeliveryItem... oldItems) {
+        if (this.oldItems == null) {
+            this.oldItems = new ArrayList<>();
+        }
+        this.oldItems.addAll(Arrays.asList(oldItems));
         return this;
     }
 
@@ -168,9 +191,10 @@ public class DeliveryItemsUpdatedMessageBuilder implements Builder<DeliveryItems
         return this;
     }
 
-    public DeliveryItemsUpdatedMessageBuilder oldItems(
-            final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems) {
-        this.oldItems = oldItems;
+    public DeliveryItemsUpdatedMessageBuilder withOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
+        this.oldItems = new ArrayList<>();
+        this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
     }
 

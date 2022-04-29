@@ -66,4 +66,13 @@ public interface SetMethodInfoMethodChange extends Change {
     default <T> T withSetMethodInfoMethodChange(Function<SetMethodInfoMethodChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetMethodInfoMethodChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetMethodInfoMethodChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetMethodInfoMethodChange>";
+            }
+        };
+    }
 }

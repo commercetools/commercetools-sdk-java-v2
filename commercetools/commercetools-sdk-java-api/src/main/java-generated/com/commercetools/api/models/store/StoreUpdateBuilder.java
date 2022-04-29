@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,6 +27,30 @@ public class StoreUpdateBuilder implements Builder<StoreUpdate> {
     public StoreUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.store.StoreUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public StoreUpdateBuilder plusActions(final com.commercetools.api.models.store.StoreUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public StoreUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.store.StoreUpdateActionBuilder, Builder<? extends com.commercetools.api.models.store.StoreUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(builder.apply(com.commercetools.api.models.store.StoreUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public StoreUpdateBuilder withActions(
+            Function<com.commercetools.api.models.store.StoreUpdateActionBuilder, Builder<? extends com.commercetools.api.models.store.StoreUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(builder.apply(com.commercetools.api.models.store.StoreUpdateActionBuilder.of()).build());
         return this;
     }
 

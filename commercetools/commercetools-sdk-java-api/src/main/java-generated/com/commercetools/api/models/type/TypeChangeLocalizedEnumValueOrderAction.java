@@ -12,16 +12,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Changes the order of <a href="ctp:api:type:CustomFieldLocalizedEnumValue">LocalizedEnumValues</a> in a <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a> FieldDefinition.
+*  This update action can be used to update a <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> of <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a> FieldDefinitions.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeChangeLocalizedEnumValueOrderActionImpl.class)
 public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateAction {
 
     String CHANGE_LOCALIZED_ENUM_VALUE_ORDER = "changeLocalizedEnumValueOrder";
 
+    /**
+    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
+    */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
+    /**
+    *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+    */
     @NotNull
     @JsonProperty("keys")
     public List<String> getKeys();
@@ -56,5 +66,14 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
     default <T> T withTypeChangeLocalizedEnumValueOrderAction(
             Function<TypeChangeLocalizedEnumValueOrderAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueOrderAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueOrderAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeLocalizedEnumValueOrderAction>";
+            }
+        };
     }
 }

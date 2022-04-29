@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -40,7 +42,7 @@ public class ByProjectKeyPaymentsKeyByKeyDelete
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/payments/key=%s", this.projectKey, this.key);
         if (!params.isEmpty()) {
@@ -90,23 +92,51 @@ public class ByProjectKeyPaymentsKeyByKeyDelete
     }
 
     /**
-     * set dataErasure with the specificied value
+     * set dataErasure with the specified value
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete withDataErasure(final boolean dataErasure) {
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete withDataErasure(final TValue dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
     /**
      * add additional dataErasure query parameter
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete addDataErasure(final boolean dataErasure) {
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete addDataErasure(final TValue dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
     /**
-     * set dataErasure with the specificied values
+     * set dataErasure with the specified value
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete withDataErasure(final List<Boolean> dataErasure) {
+    public ByProjectKeyPaymentsKeyByKeyDelete withDataErasure(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("dataErasure", supplier.get());
+    }
+
+    /**
+     * add additional dataErasure query parameter
+     */
+    public ByProjectKeyPaymentsKeyByKeyDelete addDataErasure(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("dataErasure", supplier.get());
+    }
+
+    /**
+     * set dataErasure with the specified value
+     */
+    public ByProjectKeyPaymentsKeyByKeyDelete withDataErasure(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("dataErasure", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional dataErasure query parameter
+     */
+    public ByProjectKeyPaymentsKeyByKeyDelete addDataErasure(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("dataErasure", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set dataErasure with the specified values
+     */
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete withDataErasure(final List<TValue> dataErasure) {
         return copy().withoutQueryParam("dataErasure")
                 .addQueryParams(dataErasure.stream()
                         .map(s -> new ParamEntry<>("dataErasure", s.toString()))
@@ -116,29 +146,57 @@ public class ByProjectKeyPaymentsKeyByKeyDelete
     /**
      * add additional dataErasure query parameters
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete addDataErasure(final List<Boolean> dataErasure) {
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete addDataErasure(final List<TValue> dataErasure) {
         return copy().addQueryParams(
             dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * set version with the specificied value
+     * set version with the specified value
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete withVersion(final long version) {
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete withVersion(final TValue version) {
         return copy().withQueryParam("version", version);
     }
 
     /**
      * add additional version query parameter
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete addVersion(final long version) {
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete addVersion(final TValue version) {
         return copy().addQueryParam("version", version);
     }
 
     /**
-     * set version with the specificied values
+     * set version with the specified value
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete withVersion(final List<Long> version) {
+    public ByProjectKeyPaymentsKeyByKeyDelete withVersion(final Supplier<Long> supplier) {
+        return copy().withQueryParam("version", supplier.get());
+    }
+
+    /**
+     * add additional version query parameter
+     */
+    public ByProjectKeyPaymentsKeyByKeyDelete addVersion(final Supplier<Long> supplier) {
+        return copy().addQueryParam("version", supplier.get());
+    }
+
+    /**
+     * set version with the specified value
+     */
+    public ByProjectKeyPaymentsKeyByKeyDelete withVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional version query parameter
+     */
+    public ByProjectKeyPaymentsKeyByKeyDelete addVersion(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("version", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set version with the specified values
+     */
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete withVersion(final List<TValue> version) {
         return copy().withoutQueryParam("version")
                 .addQueryParams(
                     version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
@@ -147,29 +205,57 @@ public class ByProjectKeyPaymentsKeyByKeyDelete
     /**
      * add additional version query parameters
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete addVersion(final List<Long> version) {
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete addVersion(final List<TValue> version) {
         return copy().addQueryParams(
             version.stream().map(s -> new ParamEntry<>("version", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete withExpand(final String expand) {
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete addExpand(final String expand) {
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete withExpand(final List<String> expand) {
+    public ByProjectKeyPaymentsKeyByKeyDelete withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyPaymentsKeyByKeyDelete addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyPaymentsKeyByKeyDelete withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyPaymentsKeyByKeyDelete addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
+     */
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -178,7 +264,7 @@ public class ByProjectKeyPaymentsKeyByKeyDelete
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyPaymentsKeyByKeyDelete addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyPaymentsKeyByKeyDelete addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

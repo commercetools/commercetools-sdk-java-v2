@@ -26,6 +26,9 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
+    @Nullable
+    private String key;
+
     private String sku;
 
     @Nullable
@@ -84,6 +87,11 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     public InventoryEntryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
+        return this;
+    }
+
+    public InventoryEntryBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -161,6 +169,11 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         return this.createdBy;
     }
 
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
     public String getSku() {
         return this.sku;
     }
@@ -201,7 +214,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         Objects.requireNonNull(sku, InventoryEntry.class + ": sku is missing");
         Objects.requireNonNull(quantityOnStock, InventoryEntry.class + ": quantityOnStock is missing");
         Objects.requireNonNull(availableQuantity, InventoryEntry.class + ": availableQuantity is missing");
-        return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sku,
+        return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
             supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
     }
 
@@ -209,7 +222,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
      * builds InventoryEntry without checking for non null required values
      */
     public InventoryEntry buildUnchecked() {
-        return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sku,
+        return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
             supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
     }
 
@@ -225,6 +238,7 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         builder.lastModifiedAt = template.getLastModifiedAt();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
+        builder.key = template.getKey();
         builder.sku = template.getSku();
         builder.supplyChannel = template.getSupplyChannel();
         builder.quantityOnStock = template.getQuantityOnStock();

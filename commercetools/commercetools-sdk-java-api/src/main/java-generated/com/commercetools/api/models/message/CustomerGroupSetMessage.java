@@ -59,4 +59,13 @@ public interface CustomerGroupSetMessage extends Message {
     default <T> T withCustomerGroupSetMessage(Function<CustomerGroupSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupSetMessage>";
+            }
+        };
+    }
 }

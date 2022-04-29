@@ -60,4 +60,13 @@ public interface ProductLabel extends Label {
     default <T> T withProductLabel(Function<ProductLabel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductLabel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductLabel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductLabel>";
+            }
+        };
+    }
 }

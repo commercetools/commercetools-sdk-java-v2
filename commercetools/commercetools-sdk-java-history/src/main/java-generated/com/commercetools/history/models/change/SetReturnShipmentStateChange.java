@@ -67,4 +67,13 @@ public interface SetReturnShipmentStateChange extends Change {
     default <T> T withSetReturnShipmentStateChange(Function<SetReturnShipmentStateChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetReturnShipmentStateChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetReturnShipmentStateChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetReturnShipmentStateChange>";
+            }
+        };
+    }
 }

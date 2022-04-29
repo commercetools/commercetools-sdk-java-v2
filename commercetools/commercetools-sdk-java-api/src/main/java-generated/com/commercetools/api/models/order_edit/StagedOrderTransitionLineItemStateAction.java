@@ -86,4 +86,13 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
             Function<StagedOrderTransitionLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionLineItemStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionLineItemStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderTransitionLineItemStateAction>";
+            }
+        };
+    }
 }

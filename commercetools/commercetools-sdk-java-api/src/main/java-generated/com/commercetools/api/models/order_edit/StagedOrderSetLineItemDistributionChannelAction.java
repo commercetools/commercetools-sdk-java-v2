@@ -61,4 +61,13 @@ public interface StagedOrderSetLineItemDistributionChannelAction extends StagedO
             Function<StagedOrderSetLineItemDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemDistributionChannelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemDistributionChannelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetLineItemDistributionChannelAction>";
+            }
+        };
+    }
 }

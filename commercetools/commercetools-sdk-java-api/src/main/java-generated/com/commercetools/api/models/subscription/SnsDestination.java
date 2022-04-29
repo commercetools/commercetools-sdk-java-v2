@@ -59,4 +59,13 @@ public interface SnsDestination extends Destination {
     default <T> T withSnsDestination(Function<SnsDestination, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SnsDestination> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SnsDestination>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SnsDestination>";
+            }
+        };
+    }
 }

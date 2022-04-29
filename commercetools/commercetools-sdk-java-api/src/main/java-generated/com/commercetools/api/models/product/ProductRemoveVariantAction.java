@@ -54,4 +54,13 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     default <T> T withProductRemoveVariantAction(Function<ProductRemoveVariantAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductRemoveVariantAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductRemoveVariantAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductRemoveVariantAction>";
+            }
+        };
+    }
 }

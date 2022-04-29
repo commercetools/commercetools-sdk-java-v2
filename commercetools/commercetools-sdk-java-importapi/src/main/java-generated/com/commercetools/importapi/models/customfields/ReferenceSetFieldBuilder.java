@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.customfields;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -19,6 +20,30 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     public ReferenceSetFieldBuilder value(
             final java.util.List<com.commercetools.importapi.models.common.KeyReference> value) {
         this.value = value;
+        return this;
+    }
+
+    public ReferenceSetFieldBuilder plusValue(final com.commercetools.importapi.models.common.KeyReference... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
+    public ReferenceSetFieldBuilder plusValue(
+            Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public ReferenceSetFieldBuilder withValue(
+            Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
+        this.value = new ArrayList<>();
+        this.value.add(builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build());
         return this;
     }
 

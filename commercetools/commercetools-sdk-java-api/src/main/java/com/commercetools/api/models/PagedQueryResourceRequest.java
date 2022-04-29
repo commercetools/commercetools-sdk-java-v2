@@ -8,39 +8,46 @@ import io.vrap.rmf.base.client.ApiMethod;
 import io.vrap.rmf.base.client.ClientRequestCommand;
 import io.vrap.rmf.base.client.RequestCommand;
 
+/**
+ * Interface with common methods for query endpoints
+ * @param <T>
+ * @param <TResult>
+ */
 public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T, TResult>, TResult>
         extends RequestCommand<TResult>, ClientRequestCommand<TResult> {
-    PagedQueryResourceRequest<T, TResult> withLimit(final int limit);
+    <TValue> PagedQueryResourceRequest<T, TResult> withLimit(final TValue limit);
 
-    PagedQueryResourceRequest<T, TResult> addLimit(final int limit);
+    <TValue> PagedQueryResourceRequest<T, TResult> addLimit(final TValue limit);
 
-    PagedQueryResourceRequest<T, TResult> withOffset(final int offset);
+    <TValue> PagedQueryResourceRequest<T, TResult> withOffset(final TValue offset);
 
-    PagedQueryResourceRequest<T, TResult> addOffset(final int offset);
+    <TValue> PagedQueryResourceRequest<T, TResult> addOffset(final TValue offset);
 
-    PagedQueryResourceRequest<T, TResult> withSort(final String sort);
+    <TValue> PagedQueryResourceRequest<T, TResult> withSort(final TValue sort);
 
-    PagedQueryResourceRequest<T, TResult> addSort(final String sort);
+    <TValue> PagedQueryResourceRequest<T, TResult> addSort(final TValue sort);
 
-    PagedQueryResourceRequest<T, TResult> withWhere(final String where);
+    <TValue> PagedQueryResourceRequest<T, TResult> withWhere(final TValue where);
 
-    PagedQueryResourceRequest<T, TResult> addWhere(final String where);
+    <TValue> PagedQueryResourceRequest<T, TResult> addWhere(final TValue where);
 
-    PagedQueryResourceRequest<T, TResult> withExpand(final String expand);
+    <TValue> PagedQueryResourceRequest<T, TResult> withExpand(final TValue expand);
 
-    PagedQueryResourceRequest<T, TResult> addExpand(final String expand);
+    <TValue> PagedQueryResourceRequest<T, TResult> addExpand(final TValue expand);
 
-    PagedQueryResourceRequest<T, TResult> withWithTotal(final boolean withTotal);
+    <TValue> PagedQueryResourceRequest<T, TResult> withWithTotal(final TValue withTotal);
 
-    PagedQueryResourceRequest<T, TResult> addWithTotal(final boolean withTotal);
+    <TValue> PagedQueryResourceRequest<T, TResult> addWithTotal(final TValue withTotal);
 
-    PagedQueryResourceRequest<T, TResult> withPredicateVar(final String varName, final String predicateVar);
+    <TValue> PagedQueryResourceRequest<T, TResult> withPredicateVar(final String varName, final TValue predicateVar);
 
-    PagedQueryResourceRequest<T, TResult> addPredicateVar(final String varName, final String predicateVar);
+    <TValue> PagedQueryResourceRequest<T, TResult> addPredicateVar(final String varName, final TValue predicateVar);
 
-    PagedQueryResourceRequest<T, TResult> withPredicateVar(final String varName, final List<String> predicateVar);
+    <TValue> PagedQueryResourceRequest<T, TResult> withPredicateVar(final String varName,
+            final List<TValue> predicateVar);
 
-    PagedQueryResourceRequest<T, TResult> addPredicateVar(final String varName, final List<String> predicateVar);
+    <TValue> PagedQueryResourceRequest<T, TResult> addPredicateVar(final String varName,
+            final List<TValue> predicateVar);
 
     List<ApiMethod.ParamEntry<String, String>> getQueryParams();
 

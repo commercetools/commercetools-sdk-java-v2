@@ -59,4 +59,13 @@ public interface PaymentLabel extends Label {
     default <T> T withPaymentLabel(Function<PaymentLabel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentLabel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentLabel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentLabel>";
+            }
+        };
+    }
 }

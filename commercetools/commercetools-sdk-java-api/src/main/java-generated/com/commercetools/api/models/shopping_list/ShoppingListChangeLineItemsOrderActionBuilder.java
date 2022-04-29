@@ -21,6 +21,14 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
         return this;
     }
 
+    public ShoppingListChangeLineItemsOrderActionBuilder plusLineItemOrder(final String... lineItemOrder) {
+        if (this.lineItemOrder == null) {
+            this.lineItemOrder = new ArrayList<>();
+        }
+        this.lineItemOrder.addAll(Arrays.asList(lineItemOrder));
+        return this;
+    }
+
     public java.util.List<String> getLineItemOrder() {
         return this.lineItemOrder;
     }

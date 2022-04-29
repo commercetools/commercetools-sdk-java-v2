@@ -71,4 +71,13 @@ public interface Image {
     default <T> T withImage(Function<Image, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Image> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Image>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Image>";
+            }
+        };
+    }
 }

@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TextLineItemDraftImpl.class)
-public interface TextLineItemDraft {
+public interface TextLineItemDraft extends com.commercetools.api.models.CustomizableDraft<TextLineItemDraft> {
 
     /**
     *  <p>Defaults to the current date and time.</p>
@@ -84,5 +84,14 @@ public interface TextLineItemDraft {
 
     default <T> T withTextLineItemDraft(Function<TextLineItemDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TextLineItemDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TextLineItemDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TextLineItemDraft>";
+            }
+        };
     }
 }

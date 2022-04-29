@@ -2,6 +2,7 @@
 package com.commercetools.api.models.project;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -17,6 +18,14 @@ public class ProjectSetShippingRateInputTypeActionBuilder implements Builder<Pro
     public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(
             @Nullable final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
         this.shippingRateInputType = shippingRateInputType;
+        return this;
+    }
+
+    public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(
+            Function<com.commercetools.api.models.project.ShippingRateInputTypeBuilder, Builder<? extends com.commercetools.api.models.project.ShippingRateInputType>> builder) {
+        this.shippingRateInputType = builder
+                .apply(com.commercetools.api.models.project.ShippingRateInputTypeBuilder.of())
+                .build();
         return this;
     }
 

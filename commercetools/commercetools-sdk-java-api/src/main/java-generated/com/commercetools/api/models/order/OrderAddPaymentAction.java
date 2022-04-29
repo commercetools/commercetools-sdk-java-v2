@@ -48,4 +48,13 @@ public interface OrderAddPaymentAction extends OrderUpdateAction {
     default <T> T withOrderAddPaymentAction(Function<OrderAddPaymentAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderAddPaymentAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderAddPaymentAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderAddPaymentAction>";
+            }
+        };
+    }
 }

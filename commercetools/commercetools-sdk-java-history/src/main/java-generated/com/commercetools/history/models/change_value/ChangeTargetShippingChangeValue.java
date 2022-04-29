@@ -45,4 +45,13 @@ public interface ChangeTargetShippingChangeValue extends ChangeTargetChangeValue
     default <T> T withChangeTargetShippingChangeValue(Function<ChangeTargetShippingChangeValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetShippingChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetShippingChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTargetShippingChangeValue>";
+            }
+        };
+    }
 }

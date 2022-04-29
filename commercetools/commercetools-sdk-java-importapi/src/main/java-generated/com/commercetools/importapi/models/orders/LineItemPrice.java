@@ -25,7 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItemPrice {
 
     /**
-    *  <p>Maps to <code>Price.value</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    *  <p>Maps to <code>Price.value</code>.</p>
     */
     @NotNull
     @Valid
@@ -137,5 +137,14 @@ public interface LineItemPrice {
 
     default <T> T withLineItemPrice(Function<LineItemPrice, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LineItemPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LineItemPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LineItemPrice>";
+            }
+        };
     }
 }

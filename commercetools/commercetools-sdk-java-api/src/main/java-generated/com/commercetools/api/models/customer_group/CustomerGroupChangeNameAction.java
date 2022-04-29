@@ -48,4 +48,13 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
     default <T> T withCustomerGroupChangeNameAction(Function<CustomerGroupChangeNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupChangeNameAction>";
+            }
+        };
+    }
 }

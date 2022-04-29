@@ -4,9 +4,9 @@ package io.vrap.rmf.base.client.oauth2;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
-import net.jodah.failsafe.Failsafe;
-import net.jodah.failsafe.FailsafeExecutor;
-import net.jodah.failsafe.Timeout;
+import dev.failsafe.Failsafe;
+import dev.failsafe.FailsafeExecutor;
+import dev.failsafe.Timeout;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.AutoCloseableService;

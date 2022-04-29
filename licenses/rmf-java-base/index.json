@@ -66,10 +66,23 @@
             ]
         },
         {
-            "moduleName": "net.jodah:failsafe",
-            "moduleVersion": "2.4.3",
+            "moduleName": "com.spotify:completable-futures",
+            "moduleVersion": "0.3.5",
             "moduleUrls": [
-                "https://failsafe-lib.github.io"
+                "https://spotify.github.io/completable-futures"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "dev.failsafe:failsafe",
+            "moduleVersion": "3.2.0",
+            "moduleUrls": [
+                "https://failsafe.dev"
             ],
             "moduleLicenses": [
                 {

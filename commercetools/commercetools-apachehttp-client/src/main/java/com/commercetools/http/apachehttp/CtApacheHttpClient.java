@@ -20,8 +20,8 @@ import org.apache.hc.client5.http.async.methods.SimpleHttpResponse;
 import org.apache.hc.client5.http.async.methods.SimpleResponseConsumer;
 import org.apache.hc.client5.http.impl.async.CloseableHttpAsyncClient;
 import org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder;
-import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManager;
 import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder;
+import org.apache.hc.client5.http.nio.AsyncClientConnectionManager;
 import org.apache.hc.client5.http.ssl.ClientTlsStrategyBuilder;
 import org.apache.hc.core5.http.ContentType;
 import org.apache.hc.core5.http.Header;
@@ -34,25 +34,40 @@ import org.apache.hc.core5.reactor.IOReactorStatus;
 import org.apache.hc.core5.reactor.ssl.TlsDetails;
 
 public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
+    public static final int MAX_REQUESTS = 64;
+
     private final CloseableHttpAsyncClient apacheHttpClient;
 
     private final Supplier<HttpAsyncClientBuilder> clientBuilder = CtApacheHttpClient::createClientBuilder;
 
-    private static HttpAsyncClientBuilder createClientBuilder() {
+    public static HttpAsyncClientBuilder createClientBuilder() {
+        return createClientBuilder(createConnectionManager(MAX_REQUESTS, MAX_REQUESTS).build());
+    }
+
+    public static HttpAsyncClientBuilder createClientBuilder(AsyncClientConnectionManager cm) {
+        return HttpAsyncClientBuilder.create().setVersionPolicy(HttpVersionPolicy.NEGOTIATE).setConnectionManager(cm);
+    }
+
+    public static PoolingAsyncClientConnectionManagerBuilder createConnectionManager(final int maxConnTotal,
+            final int maxConnPerRoute) {
         final TlsStrategy tlsStrategy = ClientTlsStrategyBuilder.create()
                 .useSystemProperties()
                 .setTlsDetailsFactory(
                     sslEngine -> new TlsDetails(sslEngine.getSession(), sslEngine.getApplicationProtocol()))
                 .build();
-        final PoolingAsyncClientConnectionManager cm = PoolingAsyncClientConnectionManagerBuilder.create()
-                .setTlsStrategy(tlsStrategy)
-                .build();
-
-        return HttpAsyncClientBuilder.create().setVersionPolicy(HttpVersionPolicy.NEGOTIATE).setConnectionManager(cm);
+        return PoolingAsyncClientConnectionManagerBuilder.create()
+                .setMaxConnPerRoute(maxConnPerRoute)
+                .setMaxConnTotal(maxConnTotal)
+                .setTlsStrategy(tlsStrategy);
     }
 
     public CtApacheHttpClient() {
         apacheHttpClient = clientBuilder.get().build();
+        init();
+    }
+
+    public CtApacheHttpClient(final int maxConnTotal, final int maxConnPerRoute) {
+        apacheHttpClient = createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()).build();
         init();
     }
 
@@ -64,6 +79,13 @@ public class CtApacheHttpClient implements VrapHttpClient, AutoCloseable {
 
     public CtApacheHttpClient(final BuilderOptions options) {
         apacheHttpClient = options.plus(clientBuilder.get()).build();
+        init();
+    }
+
+    public CtApacheHttpClient(final int maxConnTotal, final int maxConnPerRoute, final BuilderOptions options) {
+        apacheHttpClient = options
+                .plus(createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()))
+                .build();
         init();
     }
 

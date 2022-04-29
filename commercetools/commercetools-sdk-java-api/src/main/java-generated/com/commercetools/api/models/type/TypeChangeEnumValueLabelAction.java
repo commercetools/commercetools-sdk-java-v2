@@ -13,16 +13,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Changes the <code>label</code> of an <a href="ctp:api:type:CustomFieldEnumValue">EnumValue</a> of an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeChangeEnumValueLabelActionImpl.class)
 public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
 
     String CHANGE_ENUM_VALUE_LABEL = "changeEnumValueLabel";
 
+    /**
+    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</p>
+    */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
+    /**
+    *  <p>New value to set.
+    *  Must not be empty.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -53,5 +63,14 @@ public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
 
     default <T> T withTypeChangeEnumValueLabelAction(Function<TypeChangeEnumValueLabelAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueLabelAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueLabelAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeChangeEnumValueLabelAction>";
+            }
+        };
     }
 }

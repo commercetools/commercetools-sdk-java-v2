@@ -48,4 +48,13 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
     default <T> T withPaymentSetKeyAction(Function<PaymentSetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentSetKeyAction>";
+            }
+        };
+    }
 }

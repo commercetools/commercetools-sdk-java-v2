@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreKeyReferenceImpl.class, name = StoreKeyReference.STORE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = KeyReferenceImpl.class, visible = true)
+@JsonDeserialize(as = KeyReferenceImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface KeyReference {
 
@@ -29,7 +30,20 @@ public interface KeyReference {
 
     public void setKey(final String key);
 
+    public static com.commercetools.api.models.store.StoreKeyReferenceBuilder storeBuilder() {
+        return com.commercetools.api.models.store.StoreKeyReferenceBuilder.of();
+    }
+
     default <T> T withKeyReference(Function<KeyReference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<KeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<KeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<KeyReference>";
+            }
+        };
     }
 }

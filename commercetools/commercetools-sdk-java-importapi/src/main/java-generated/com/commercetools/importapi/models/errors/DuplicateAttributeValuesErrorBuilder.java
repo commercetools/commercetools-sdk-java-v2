@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.errors;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,33 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     public DuplicateAttributeValuesErrorBuilder attributes(
             final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
+        return this;
+    }
+
+    public DuplicateAttributeValuesErrorBuilder plusAttributes(
+            final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    public DuplicateAttributeValuesErrorBuilder plusAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    public DuplicateAttributeValuesErrorBuilder withAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
         return this;
     }
 

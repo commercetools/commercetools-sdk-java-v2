@@ -9,11 +9,21 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface MoneyType {
 
-    MoneyType CENT_PRECISION = MoneyTypeEnum.CENT_PRECISION;
+    /**
+    	<p>for <a href="#centprecisionmoney">CentPrecisionMoney</a>.</p>
 
+    */
+    MoneyType CENT_PRECISION = MoneyTypeEnum.CENT_PRECISION;
+    /**
+    	<p>for <a href="#highprecisionmoney">HighPrecisionMoney</a>.</p>
+
+    */
     MoneyType HIGH_PRECISION = MoneyTypeEnum.HIGH_PRECISION;
 
     enum MoneyTypeEnum implements MoneyType {

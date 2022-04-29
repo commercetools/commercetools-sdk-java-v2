@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewSetTitleActionImpl.class, name = ReviewSetTitleAction.SET_TITLE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewTransitionStateActionImpl.class, name = ReviewTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ReviewUpdateActionImpl.class, visible = true)
+@JsonDeserialize(as = ReviewUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ReviewUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<ReviewUpdateAction> {
 
@@ -32,7 +33,60 @@ public interface ReviewUpdateAction extends com.commercetools.api.models.Resourc
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.review.ReviewSetAuthorNameActionBuilder setAuthorNameBuilder() {
+        return com.commercetools.api.models.review.ReviewSetAuthorNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.review.ReviewSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.review.ReviewSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewSetCustomerActionBuilder setCustomerBuilder() {
+        return com.commercetools.api.models.review.ReviewSetCustomerActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.review.ReviewSetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewSetLocaleActionBuilder setLocaleBuilder() {
+        return com.commercetools.api.models.review.ReviewSetLocaleActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewSetRatingActionBuilder setRatingBuilder() {
+        return com.commercetools.api.models.review.ReviewSetRatingActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewSetTargetActionBuilder setTargetBuilder() {
+        return com.commercetools.api.models.review.ReviewSetTargetActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewSetTextActionBuilder setTextBuilder() {
+        return com.commercetools.api.models.review.ReviewSetTextActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewSetTitleActionBuilder setTitleBuilder() {
+        return com.commercetools.api.models.review.ReviewSetTitleActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.review.ReviewTransitionStateActionBuilder transitionStateBuilder() {
+        return com.commercetools.api.models.review.ReviewTransitionStateActionBuilder.of();
+    }
+
     default <T> T withReviewUpdateAction(Function<ReviewUpdateAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewUpdateAction>";
+            }
+        };
     }
 }

@@ -19,15 +19,14 @@ public interface CustomerGroupSetCustomFieldAction extends CustomerGroupUpdateAc
     String SET_CUSTOM_FIELD = "setCustomField";
 
     /**
-    *  <p>Name of the Custom Field.</p>
+    *  <p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p>
     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>Value must be of type <a href="/../api/projects/custom-fields#value">Value</a>.
-    *  If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.
+    *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists.
     *  Trying to remove a field that does not exist will fail with an <a href="/../api/errors#general-400-invalid-operation">InvalidOperation</a> error.
     *  If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
     */
@@ -60,5 +59,14 @@ public interface CustomerGroupSetCustomFieldAction extends CustomerGroupUpdateAc
 
     default <T> T withCustomerGroupSetCustomFieldAction(Function<CustomerGroupSetCustomFieldAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomFieldAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomFieldAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupSetCustomFieldAction>";
+            }
+        };
     }
 }

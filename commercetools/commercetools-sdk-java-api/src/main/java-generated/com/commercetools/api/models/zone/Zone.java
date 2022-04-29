@@ -19,7 +19,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ZoneImpl.class)
-public interface Zone extends BaseResource, com.commercetools.api.models.DomainResource<Zone> {
+public interface Zone extends BaseResource, com.commercetools.api.models.DomainResource<Zone>,
+        com.commercetools.api.models.Referencable<Zone>, com.commercetools.api.models.ResourceIdentifiable<Zone> {
 
     /**
     *  <p>Unique ID of the Zone.</p>
@@ -144,5 +145,24 @@ public interface Zone extends BaseResource, com.commercetools.api.models.DomainR
 
     default <T> T withZone(Function<Zone, T> helper) {
         return helper.apply(this);
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.zone.ZoneResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.zone.ZoneReference.builder().id(getId()).build();
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Zone> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Zone>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Zone>";
+            }
+        };
     }
 }

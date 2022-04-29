@@ -76,4 +76,13 @@ public interface SetStoresChange extends Change {
     default <T> T withSetStoresChange(Function<SetStoresChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetStoresChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetStoresChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetStoresChange>";
+            }
+        };
+    }
 }

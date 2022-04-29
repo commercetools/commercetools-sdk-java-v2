@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AssetDraftImpl.class)
-public interface AssetDraft {
+public interface AssetDraft extends com.commercetools.api.models.CustomizableDraft<AssetDraft> {
 
     @NotNull
     @Valid
@@ -35,6 +35,9 @@ public interface AssetDraft {
     @JsonProperty("tags")
     public List<String> getTags();
 
+    /**
+    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
@@ -85,5 +88,14 @@ public interface AssetDraft {
 
     default <T> T withAssetDraft(Function<AssetDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AssetDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AssetDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AssetDraft>";
+            }
+        };
     }
 }

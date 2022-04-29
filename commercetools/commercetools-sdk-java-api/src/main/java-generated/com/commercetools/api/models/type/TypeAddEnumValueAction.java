@@ -13,16 +13,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Adds a value to an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a>.
+*  This update action can be used to update an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> FieldDefinition of <a href="ctp:api:type:CustomFieldEnumType">EnumType</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeAddEnumValueActionImpl.class)
 public interface TypeAddEnumValueAction extends TypeUpdateAction {
 
     String ADD_ENUM_VALUE = "addEnumValue";
 
+    /**
+    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
+    */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
+    /**
+    *  <p>Value to append to the array.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")
@@ -53,5 +63,14 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
 
     default <T> T withTypeAddEnumValueAction(Function<TypeAddEnumValueAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeAddEnumValueAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeAddEnumValueAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeAddEnumValueAction>";
+            }
+        };
     }
 }

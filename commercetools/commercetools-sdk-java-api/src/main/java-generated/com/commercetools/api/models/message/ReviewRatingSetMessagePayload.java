@@ -66,4 +66,13 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
     default <T> T withReviewRatingSetMessagePayload(Function<ReviewRatingSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewRatingSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewRatingSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewRatingSetMessagePayload>";
+            }
+        };
+    }
 }

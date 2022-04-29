@@ -41,4 +41,13 @@ public interface InvalidInput extends ErrorObject {
     default <T> T withInvalidInput(Function<InvalidInput, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InvalidInput> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InvalidInput>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InvalidInput>";
+            }
+        };
+    }
 }

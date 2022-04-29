@@ -36,4 +36,13 @@ public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
     default <T> T withProductRevertStagedChangesAction(Function<ProductRevertStagedChangesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductRevertStagedChangesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductRevertStagedChangesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductRevertStagedChangesAction>";
+            }
+        };
+    }
 }

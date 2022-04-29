@@ -57,4 +57,13 @@ public interface CustomerImportRequest extends ImportRequest {
     default <T> T withCustomerImportRequest(Function<CustomerImportRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerImportRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerImportRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerImportRequest>";
+            }
+        };
+    }
 }

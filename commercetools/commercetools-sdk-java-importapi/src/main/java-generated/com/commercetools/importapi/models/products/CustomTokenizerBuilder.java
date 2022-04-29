@@ -21,6 +21,14 @@ public class CustomTokenizerBuilder implements Builder<CustomTokenizer> {
         return this;
     }
 
+    public CustomTokenizerBuilder plusInputs(final String... inputs) {
+        if (this.inputs == null) {
+            this.inputs = new ArrayList<>();
+        }
+        this.inputs.addAll(Arrays.asList(inputs));
+        return this;
+    }
+
     public java.util.List<String> getInputs() {
         return this.inputs;
     }

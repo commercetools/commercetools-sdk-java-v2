@@ -149,10 +149,17 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
-    public CategoryImportBuilder withAssets(
-            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
-        this.assets = new ArrayList<>();
-        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
+    public CategoryImportBuilder assets(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
+        this.assets = assets;
+        return this;
+    }
+
+    public CategoryImportBuilder plusAssets(@Nullable final com.commercetools.importapi.models.common.Asset... assets) {
+        if (this.assets == null) {
+            this.assets = new ArrayList<>();
+        }
+        this.assets.addAll(Arrays.asList(assets));
         return this;
     }
 
@@ -165,9 +172,10 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
-    public CategoryImportBuilder assets(
-            @Nullable final java.util.List<com.commercetools.importapi.models.common.Asset> assets) {
-        this.assets = assets;
+    public CategoryImportBuilder withAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder> builder) {
+        this.assets = new ArrayList<>();
+        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
         return this;
     }
 

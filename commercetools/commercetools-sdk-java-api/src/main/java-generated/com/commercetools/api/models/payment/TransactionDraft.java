@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TransactionDraftImpl.class)
-public interface TransactionDraft {
+public interface TransactionDraft extends com.commercetools.api.models.CustomizableDraft<TransactionDraft> {
 
     /**
     *  <p>The time at which the transaction took place.</p>
@@ -99,5 +99,14 @@ public interface TransactionDraft {
 
     default <T> T withTransactionDraft(Function<TransactionDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TransactionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TransactionDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TransactionDraft>";
+            }
+        };
     }
 }

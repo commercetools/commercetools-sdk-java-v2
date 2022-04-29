@@ -49,10 +49,18 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
         return this;
     }
 
-    public DiscountCodePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()).build());
+    public DiscountCodePagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.discount_code.DiscountCode> results) {
+        this.results = results;
+        return this;
+    }
+
+    public DiscountCodePagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.discount_code.DiscountCode... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -65,9 +73,10 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
         return this;
     }
 
-    public DiscountCodePagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.discount_code.DiscountCode> results) {
-        this.results = results;
+    public DiscountCodePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()).build());
         return this;
     }
 

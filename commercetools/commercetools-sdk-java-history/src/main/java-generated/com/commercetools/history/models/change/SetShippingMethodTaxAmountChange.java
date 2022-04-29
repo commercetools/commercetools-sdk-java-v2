@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue;
 import com.commercetools.history.models.common.TaxMode;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -38,20 +39,20 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public Object getNextValue();
+    public ShippingMethodTaxAmountChangeValue getNextValue();
 
     @NotNull
     @Valid
     @JsonProperty("previousValue")
-    public Object getPreviousValue();
+    public ShippingMethodTaxAmountChangeValue getPreviousValue();
 
     public void setChange(final String change);
 
     public void setTaxMode(final TaxMode taxMode);
 
-    public void setNextValue(final Object nextValue);
+    public void setNextValue(final ShippingMethodTaxAmountChangeValue nextValue);
 
-    public void setPreviousValue(final Object previousValue);
+    public void setPreviousValue(final ShippingMethodTaxAmountChangeValue previousValue);
 
     public static SetShippingMethodTaxAmountChange of() {
         return new SetShippingMethodTaxAmountChangeImpl();
@@ -76,5 +77,14 @@ public interface SetShippingMethodTaxAmountChange extends Change {
 
     default <T> T withSetShippingMethodTaxAmountChange(Function<SetShippingMethodTaxAmountChange, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetShippingMethodTaxAmountChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetShippingMethodTaxAmountChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetShippingMethodTaxAmountChange>";
+            }
+        };
     }
 }

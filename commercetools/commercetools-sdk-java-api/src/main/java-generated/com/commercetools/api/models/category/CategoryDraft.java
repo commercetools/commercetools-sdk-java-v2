@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategoryDraftImpl.class)
-public interface CategoryDraft {
+public interface CategoryDraft extends com.commercetools.api.models.CustomizableDraft<CategoryDraft> {
 
     @NotNull
     @Valid
@@ -148,5 +148,14 @@ public interface CategoryDraft {
 
     default <T> T withCategoryDraft(Function<CategoryDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryDraft>";
+            }
+        };
     }
 }

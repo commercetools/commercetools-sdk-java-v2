@@ -13,12 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Field type for localized enum values.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldLocalizedEnumTypeImpl.class)
 public interface CustomFieldLocalizedEnumType extends FieldType {
 
     String LOCALIZED_ENUM = "LocalizedEnum";
 
+    /**
+    *  <p>Allowed values.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("values")
@@ -49,5 +55,14 @@ public interface CustomFieldLocalizedEnumType extends FieldType {
 
     default <T> T withCustomFieldLocalizedEnumType(Function<CustomFieldLocalizedEnumType, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldLocalizedEnumType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldLocalizedEnumType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldLocalizedEnumType>";
+            }
+        };
     }
 }

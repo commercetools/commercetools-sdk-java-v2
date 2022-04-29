@@ -20,68 +20,83 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeImpl.class)
-public interface Type extends BaseResource, com.commercetools.api.models.DomainResource<Type> {
+public interface Type extends BaseResource, com.commercetools.api.models.DomainResource<Type>,
+        com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type> {
 
     /**
-    *  <p>The unique ID of the type.</p>
+    *  <p>Unique ID of the Type.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the type.</p>
+    *  <p>Current version of the Type.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+    *  <p>Date and time (UTC) the Type was initially created.</p>
+    */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+    *  <p>Date and time (UTC) the Type was last updated.</p>
+    */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>Identifier for the type (max.
-    *  256 characters).</p>
+    *  <p>User-defined unique identifier for the Type.</p>
     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>Name of the Type.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+    *  <p>Description of the Type.</p>
+    */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-    *  <p>Defines for which resource(s) the type is valid.</p>
+    *  <p>Resources and/or data types for which the Type is defined.</p>
     */
     @NotNull
     @JsonProperty("resourceTypeIds")
     public List<ResourceTypeId> getResourceTypeIds();
 
+    /**
+    *  <p>Defines Custom Fields.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("fieldDefinitions")
@@ -145,5 +160,24 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
 
     default <T> T withType(Function<Type, T> helper) {
         return helper.apply(this);
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.type.TypeResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.type.TypeReference.builder().id(getId()).build();
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Type> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Type>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Type>";
+            }
+        };
     }
 }

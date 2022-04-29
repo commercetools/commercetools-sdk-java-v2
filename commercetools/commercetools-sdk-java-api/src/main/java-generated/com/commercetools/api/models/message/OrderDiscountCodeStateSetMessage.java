@@ -72,4 +72,13 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
     default <T> T withOrderDiscountCodeStateSetMessage(Function<OrderDiscountCodeStateSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeStateSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderDiscountCodeStateSetMessage>";
+            }
+        };
+    }
 }

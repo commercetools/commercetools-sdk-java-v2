@@ -38,6 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionImpl.class, name = PaymentSetTransactionCustomTypeAction.SET_TRANSACTION_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentTransitionStateActionImpl.class, name = PaymentTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = PaymentUpdateActionImpl.class, visible = true)
+@JsonDeserialize(as = PaymentUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface PaymentUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<PaymentUpdateAction> {
 
@@ -45,7 +46,112 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionBuilder addInterfaceInteractionBuilder() {
+        return com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentAddTransactionActionBuilder addTransactionBuilder() {
+        return com.commercetools.api.models.payment.PaymentAddTransactionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionBuilder changeAmountPlannedBuilder() {
+        return com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionBuilder changeTransactionInteractionIdBuilder() {
+        return com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentChangeTransactionStateActionBuilder changeTransactionStateBuilder() {
+        return com.commercetools.api.models.payment.PaymentChangeTransactionStateActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionBuilder changeTransactionTimestampBuilder() {
+        return com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder setAmountPaidBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder setAmountRefundedBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder setAnonymousIdBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder setAuthorizationBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder setCustomerBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder setExternalIdBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetInterfaceIdActionBuilder setInterfaceIdBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetInterfaceIdActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetKeyActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionBuilder setMethodInfoInterfaceBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetMethodInfoMethodActionBuilder setMethodInfoMethodBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoMethodActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder setMethodInfoNameBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionBuilder setStatusInterfaceCodeBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionBuilder setStatusInterfaceTextBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionBuilder setTransactionCustomFieldBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionBuilder setTransactionCustomTypeBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.payment.PaymentTransitionStateActionBuilder transitionStateBuilder() {
+        return com.commercetools.api.models.payment.PaymentTransitionStateActionBuilder.of();
+    }
+
     default <T> T withPaymentUpdateAction(Function<PaymentUpdateAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentUpdateAction>";
+            }
+        };
     }
 }

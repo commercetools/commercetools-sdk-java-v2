@@ -70,4 +70,13 @@ public interface RemoveChannelRolesChange extends Change {
     default <T> T withRemoveChannelRolesChange(Function<RemoveChannelRolesChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveChannelRolesChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveChannelRolesChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveChannelRolesChange>";
+            }
+        };
+    }
 }

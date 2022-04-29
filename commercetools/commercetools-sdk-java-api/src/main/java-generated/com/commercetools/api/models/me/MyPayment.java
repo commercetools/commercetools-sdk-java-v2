@@ -20,7 +20,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyPaymentImpl.class)
-public interface MyPayment extends com.commercetools.api.models.DomainResource<MyPayment> {
+public interface MyPayment extends com.commercetools.api.models.DomainResource<MyPayment>,
+        com.commercetools.api.models.Customizable<MyPayment> {
 
     @NotNull
     @JsonProperty("id")
@@ -117,5 +118,14 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
 
     default <T> T withMyPayment(Function<MyPayment, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyPayment> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyPayment>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyPayment>";
+            }
+        };
     }
 }

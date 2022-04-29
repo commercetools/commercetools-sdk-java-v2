@@ -47,4 +47,13 @@ public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateActi
     default <T> T withShoppingListSetAnonymousIdAction(Function<ShoppingListSetAnonymousIdAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetAnonymousIdAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetAnonymousIdAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListSetAnonymousIdAction>";
+            }
+        };
+    }
 }

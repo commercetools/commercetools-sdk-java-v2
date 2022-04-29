@@ -17,14 +17,39 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartScoreTierImpl.class, name = CartScoreTier.CART_SCORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.CartValueTierImpl.class, name = CartValueTier.CART_VALUE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ShippingRatePriceTierImpl.class, visible = true)
+@JsonDeserialize(as = ShippingRatePriceTierImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ShippingRatePriceTier {
 
+    /**
+    *  <p>Can be one of the following or absent.</p>
+    */
     @NotNull
     @JsonProperty("type")
     public ShippingRateTierType getType();
 
+    public static com.commercetools.api.models.shipping_method.CartClassificationTierBuilder cartClassificationBuilder() {
+        return com.commercetools.api.models.shipping_method.CartClassificationTierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.shipping_method.CartScoreTierBuilder cartScoreBuilder() {
+        return com.commercetools.api.models.shipping_method.CartScoreTierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.shipping_method.CartValueTierBuilder cartValueBuilder() {
+        return com.commercetools.api.models.shipping_method.CartValueTierBuilder.of();
+    }
+
     default <T> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingRatePriceTier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingRatePriceTier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingRatePriceTier>";
+            }
+        };
     }
 }

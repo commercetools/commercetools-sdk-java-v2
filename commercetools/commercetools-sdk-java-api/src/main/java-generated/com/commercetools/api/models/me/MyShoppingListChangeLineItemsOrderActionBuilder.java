@@ -22,6 +22,14 @@ public class MyShoppingListChangeLineItemsOrderActionBuilder
         return this;
     }
 
+    public MyShoppingListChangeLineItemsOrderActionBuilder plusLineItemOrder(final String... lineItemOrder) {
+        if (this.lineItemOrder == null) {
+            this.lineItemOrder = new ArrayList<>();
+        }
+        this.lineItemOrder.addAll(Arrays.asList(lineItemOrder));
+        return this;
+    }
+
     public java.util.List<String> getLineItemOrder() {
         return this.lineItemOrder;
     }

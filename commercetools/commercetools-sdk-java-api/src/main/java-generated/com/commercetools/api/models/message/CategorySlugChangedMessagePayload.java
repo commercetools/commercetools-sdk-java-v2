@@ -55,4 +55,13 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
     default <T> T withCategorySlugChangedMessagePayload(Function<CategorySlugChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySlugChangedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySlugChangedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySlugChangedMessagePayload>";
+            }
+        };
+    }
 }

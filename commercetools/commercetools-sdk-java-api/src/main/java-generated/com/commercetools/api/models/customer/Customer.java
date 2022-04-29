@@ -24,7 +24,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerImpl.class)
-public interface Customer extends BaseResource, com.commercetools.api.models.DomainResource<Customer> {
+public interface Customer extends BaseResource, com.commercetools.api.models.DomainResource<Customer>,
+        com.commercetools.api.models.Referencable<Customer>,
+        com.commercetools.api.models.ResourceIdentifiable<Customer>,
+        com.commercetools.api.models.Customizable<Customer> {
 
     /**
     *  <p>The unique ID of the customer.</p>
@@ -80,7 +83,10 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     @JsonProperty("email")
     public String getEmail();
 
-    @NotNull
+    /**
+    *  <p>Only present with the default <code>authenticationMode</code>, <code>Password</code>.</p>
+    */
+
     @JsonProperty("password")
     public String getPassword();
 
@@ -180,6 +186,13 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     @JsonProperty("stores")
     public List<StoreKeyReference> getStores();
 
+    /**
+    *  <p>Defines whether a Customer has a password.</p>
+    */
+
+    @JsonProperty("authenticationMode")
+    public AuthenticationMode getAuthenticationMode();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -250,6 +263,8 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
 
     public void setStores(final List<StoreKeyReference> stores);
 
+    public void setAuthenticationMode(final AuthenticationMode authenticationMode);
+
     public static Customer of() {
         return new CustomerImpl();
     }
@@ -285,6 +300,7 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
         instance.setSalutation(template.getSalutation());
         instance.setKey(template.getKey());
         instance.setStores(template.getStores());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }
 
@@ -298,5 +314,24 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
 
     default <T> T withCustomer(Function<Customer, T> helper) {
         return helper.apply(this);
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+        return com.commercetools.api.models.customer.CustomerResourceIdentifier.builder().id(getId()).build();
+    }
+
+    @Override
+    public default com.commercetools.api.models.common.Reference toReference() {
+        return com.commercetools.api.models.customer.CustomerReference.builder().id(getId()).build();
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Customer> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Customer>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Customer>";
+            }
+        };
     }
 }

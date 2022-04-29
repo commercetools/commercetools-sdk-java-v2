@@ -31,6 +31,7 @@ public class CustomerBuilder implements Builder<Customer> {
 
     private String email;
 
+    @Nullable
     private String password;
 
     @Nullable
@@ -91,6 +92,9 @@ public class CustomerBuilder implements Builder<Customer> {
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    @Nullable
+    private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
+
     public CustomerBuilder id(final String id) {
         this.id = id;
         return this;
@@ -144,7 +148,7 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder password(final String password) {
+    public CustomerBuilder password(@Nullable final String password) {
         this.password = password;
         return this;
     }
@@ -189,10 +193,16 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder withAddresses(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
-        this.addresses = new ArrayList<>();
-        this.addresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
+    public CustomerBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
+        this.addresses = addresses;
+        return this;
+    }
+
+    public CustomerBuilder plusAddresses(final com.commercetools.api.models.common.Address... addresses) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<>();
+        }
+        this.addresses.addAll(Arrays.asList(addresses));
         return this;
     }
 
@@ -205,8 +215,10 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder addresses(final java.util.List<com.commercetools.api.models.common.Address> addresses) {
-        this.addresses = addresses;
+    public CustomerBuilder withAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.addresses = new ArrayList<>();
+        this.addresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
         return this;
     }
 
@@ -225,6 +237,14 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
+    public CustomerBuilder plusShippingAddressIds(@Nullable final String... shippingAddressIds) {
+        if (this.shippingAddressIds == null) {
+            this.shippingAddressIds = new ArrayList<>();
+        }
+        this.shippingAddressIds.addAll(Arrays.asList(shippingAddressIds));
+        return this;
+    }
+
     public CustomerBuilder defaultBillingAddressId(@Nullable final String defaultBillingAddressId) {
         this.defaultBillingAddressId = defaultBillingAddressId;
         return this;
@@ -237,6 +257,14 @@ public class CustomerBuilder implements Builder<Customer> {
 
     public CustomerBuilder billingAddressIds(@Nullable final java.util.List<String> billingAddressIds) {
         this.billingAddressIds = billingAddressIds;
+        return this;
+    }
+
+    public CustomerBuilder plusBillingAddressIds(@Nullable final String... billingAddressIds) {
+        if (this.billingAddressIds == null) {
+            this.billingAddressIds = new ArrayList<>();
+        }
+        this.billingAddressIds.addAll(Arrays.asList(billingAddressIds));
         return this;
     }
 
@@ -295,10 +323,17 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder withStores(
-            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
-        this.stores = new ArrayList<>();
-        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+    public CustomerBuilder stores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    public CustomerBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
         return this;
     }
 
@@ -311,9 +346,16 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
-    public CustomerBuilder stores(
-            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
-        this.stores = stores;
+    public CustomerBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    public CustomerBuilder authenticationMode(
+            @Nullable final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
+        this.authenticationMode = authenticationMode;
         return this;
     }
 
@@ -352,6 +394,7 @@ public class CustomerBuilder implements Builder<Customer> {
         return this.email;
     }
 
+    @Nullable
     public String getPassword() {
         return this.password;
     }
@@ -454,19 +497,23 @@ public class CustomerBuilder implements Builder<Customer> {
         return this.stores;
     }
 
+    @Nullable
+    public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
+        return this.authenticationMode;
+    }
+
     public Customer build() {
         Objects.requireNonNull(id, Customer.class + ": id is missing");
         Objects.requireNonNull(version, Customer.class + ": version is missing");
         Objects.requireNonNull(createdAt, Customer.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, Customer.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(email, Customer.class + ": email is missing");
-        Objects.requireNonNull(password, Customer.class + ": password is missing");
         Objects.requireNonNull(addresses, Customer.class + ": addresses is missing");
         Objects.requireNonNull(isEmailVerified, Customer.class + ": isEmailVerified is missing");
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
             email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,
-            externalId, customerGroup, custom, locale, salutation, key, stores);
+            externalId, customerGroup, custom, locale, salutation, key, stores, authenticationMode);
     }
 
     /**
@@ -476,7 +523,7 @@ public class CustomerBuilder implements Builder<Customer> {
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerNumber,
             email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds, isEmailVerified,
-            externalId, customerGroup, custom, locale, salutation, key, stores);
+            externalId, customerGroup, custom, locale, salutation, key, stores, authenticationMode);
     }
 
     public static CustomerBuilder of() {
@@ -514,6 +561,7 @@ public class CustomerBuilder implements Builder<Customer> {
         builder.salutation = template.getSalutation();
         builder.key = template.getKey();
         builder.stores = template.getStores();
+        builder.authenticationMode = template.getAuthenticationMode();
         return builder;
     }
 

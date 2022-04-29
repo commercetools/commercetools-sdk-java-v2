@@ -66,4 +66,13 @@ public interface AttributeCount {
     default <T> T withAttributeCount(Function<AttributeCount, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeCount> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeCount>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeCount>";
+            }
+        };
+    }
 }

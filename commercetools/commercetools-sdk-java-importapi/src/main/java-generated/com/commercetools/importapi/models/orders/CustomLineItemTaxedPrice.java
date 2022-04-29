@@ -18,17 +18,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomLineItemTaxedPriceImpl.class)
 public interface CustomLineItemTaxedPrice {
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("totalNet")
     public TypedMoney getTotalNet();
 
-    /**
-    *  <p>TypedMoney is what is called BaseMoney in the HTTP API.</p>
-    */
     @NotNull
     @Valid
     @JsonProperty("totalGross")
@@ -59,5 +53,14 @@ public interface CustomLineItemTaxedPrice {
 
     default <T> T withCustomLineItemTaxedPrice(Function<CustomLineItemTaxedPrice, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemTaxedPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemTaxedPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomLineItemTaxedPrice>";
+            }
+        };
     }
 }

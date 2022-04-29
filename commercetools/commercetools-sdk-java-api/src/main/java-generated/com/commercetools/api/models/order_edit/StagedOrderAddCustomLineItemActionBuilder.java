@@ -17,7 +17,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
-    private Double quantity;
+    private Long quantity;
 
     private String slug;
 
@@ -53,7 +53,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
         return this;
     }
 
-    public StagedOrderAddCustomLineItemActionBuilder quantity(@Nullable final Double quantity) {
+    public StagedOrderAddCustomLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -111,7 +111,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     @Nullable
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

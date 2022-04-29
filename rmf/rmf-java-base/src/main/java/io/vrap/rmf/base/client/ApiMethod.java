@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
@@ -82,6 +83,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
         }
     }
 
+    private Function<ApiHttpRequest, ApiHttpRequest> httpRequestDecorator = Function.identity();
     private ApiHttpHeaders headers = new ApiHttpHeaders();
     private List<ParamEntry<String, String>> queryParams = new ArrayList<>();
     private final ApiHttpClient apiHttpClient;
@@ -114,7 +116,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * @return T
      */
     public T addHeader(final String key, final String value) {
-        T c = copy();
+        final T c = copy();
         ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers.addHeader(key, value);
         return c;
     }
@@ -125,7 +127,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * @return T
      */
     public T withoutHeader(final String key) {
-        T c = copy();
+        final T c = copy();
         ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers.withoutHeader(key);
         return c;
     }
@@ -137,7 +139,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * @return T
      */
     public T withHeader(final String key, final String value) {
-        T c = copy();
+        final T c = copy();
         ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers.withHeader(key, value);
         return c;
     }
@@ -148,7 +150,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * @return
      */
     public T withHeaders(final ApiHttpHeaders headers) {
-        T c = copy();
+        final T c = copy();
         ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers = headers;
         return c;
     }
@@ -159,7 +161,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * @return
      */
     public T contentType(final String contentType) {
-        T c = copy();
+        final T c = copy();
         ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers
                 .withHeader(ApiHttpHeaders.CONTENT_TYPE, contentType);
 
@@ -178,7 +180,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * @return T
      */
     public <V> T addQueryParam(final String key, final V value) {
-        T c = copy();
+        final T c = copy();
         ((ApiMethod<T, TResult>) c).queryParams.add(new ParamEntry<>(key, value.toString()));
         return c;
     }
@@ -200,7 +202,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * @return T
      */
     public T withoutQueryParam(final String key) {
-        T c = copy();
+        final T c = copy();
         ((ApiMethod<T, TResult>) c).queryParams = ((ApiMethod<T, TResult>) c).queryParams.stream()
                 .filter(e -> !e.getKey().equalsIgnoreCase(key))
                 .collect(Collectors.toList());
@@ -213,7 +215,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * @return T
      */
     public T withQueryParams(final List<ParamEntry<String, String>> queryParams) {
-        T c = copy();
+        final T c = copy();
         ((ApiMethod<T, TResult>) c).queryParams = queryParams;
         return c;
     }
@@ -224,7 +226,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
      * @return T
      */
     public T addQueryParams(final List<ParamEntry<String, String>> queryParams) {
-        T c = copy();
+        final T c = copy();
 
         ((ApiMethod<T, TResult>) c).queryParams.addAll(queryParams);
         return c;
@@ -257,13 +259,36 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
 
     protected abstract T copy();
 
-    public abstract ApiHttpRequest createHttpRequest();
+    protected abstract ApiHttpRequest buildHttpRequest();
+
+    public ApiHttpRequest createHttpRequest() {
+        return httpRequestDecorator.apply(this.buildHttpRequest());
+    }
 
     public CompletableFuture<ApiHttpResponse<TResult>> execute() {
         return execute(apiHttpClient());
     }
 
     public abstract CompletableFuture<ApiHttpResponse<TResult>> execute(final ApiHttpClient client);
+
+    /**
+     * allows to modify the HTTP request before it will be executed
+     * @param op decorator function
+     */
+    public T withHttpRequest(Function<ApiHttpRequest, ApiHttpRequest> op) {
+        final T c = copy();
+        ((ApiMethod<T, TResult>) c).httpRequestDecorator = httpRequestDecorator.andThen(op);
+        return c;
+    }
+
+    /**
+     * allows to provide a function to modify the ApiMethod itself
+     * @param op decorator function
+     */
+    public T with(Function<T, T> op) {
+        final T c = copy();
+        return op.apply(c);
+    }
 
     public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final Class<TReturn> returnType) {
         return execute(apiHttpClient(), returnType);

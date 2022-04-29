@@ -46,4 +46,13 @@ public interface ReviewSetKeyAction extends ReviewUpdateAction {
     default <T> T withReviewSetKeyAction(Function<ReviewSetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewSetKeyAction>";
+            }
+        };
+    }
 }

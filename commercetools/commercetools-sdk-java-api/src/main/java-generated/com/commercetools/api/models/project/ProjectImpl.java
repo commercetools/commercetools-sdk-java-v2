@@ -35,15 +35,15 @@ public class ProjectImpl implements Project, ModelBase {
 
     private com.commercetools.api.models.message.MessagesConfiguration messages;
 
+    private com.commercetools.api.models.project.CartsConfiguration carts;
+
+    private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists;
+
     private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
 
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
-    private com.commercetools.api.models.project.CartsConfiguration carts;
-
     private com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing;
-
-    private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists;
 
     @JsonCreator
     ProjectImpl(@JsonProperty("version") final Long version, @JsonProperty("key") final String key,
@@ -53,11 +53,11 @@ public class ProjectImpl implements Project, ModelBase {
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("trialUntil") final String trialUntil,
             @JsonProperty("messages") final com.commercetools.api.models.message.MessagesConfiguration messages,
+            @JsonProperty("carts") final com.commercetools.api.models.project.CartsConfiguration carts,
+            @JsonProperty("shoppingLists") final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists,
             @JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType,
             @JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth,
-            @JsonProperty("carts") final com.commercetools.api.models.project.CartsConfiguration carts,
-            @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing,
-            @JsonProperty("shoppingLists") final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {
+            @JsonProperty("searchIndexing") final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing) {
         this.version = version;
         this.key = key;
         this.name = name;
@@ -67,88 +67,112 @@ public class ProjectImpl implements Project, ModelBase {
         this.createdAt = createdAt;
         this.trialUntil = trialUntil;
         this.messages = messages;
+        this.carts = carts;
+        this.shoppingLists = shoppingLists;
         this.shippingRateInputType = shippingRateInputType;
         this.externalOAuth = externalOAuth;
-        this.carts = carts;
         this.searchIndexing = searchIndexing;
-        this.shoppingLists = shoppingLists;
     }
 
     public ProjectImpl() {
     }
 
     /**
-    *  <p>The current version of the project.</p>
+    *  <p>Current version of the Project.</p>
     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>The unique key of the project.</p>
+    *  <p>User-defined unique identifier of the Project.</p>
     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>The name of the project.</p>
+    *  <p>Name of the Project.</p>
     */
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Country code of the geographic location.</p>
     */
     public java.util.List<String> getCountries() {
         return this.countries;
     }
 
     /**
-    *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    *  <p>Currency code of the country. A Project must have at least one currency.</p>
     */
     public java.util.List<String> getCurrencies() {
         return this.currencies;
     }
 
+    /**
+    *  <p>Language of the country. A Project must have at least one language.</p>
+    */
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
+    /**
+    *  <p>Date and time (UTC) the Project was initially created.</p>
+    */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>The time is in the format Year-Month <code>YYYY-MM</code>.</p>
+    *  <p>Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.</p>
     */
     public String getTrialUntil() {
         return this.trialUntil;
     }
 
+    /**
+    *  <p>Holds the configuration for the <a href="/../api/projects/messages">Messages Query</a> feature.</p>
+    */
     public com.commercetools.api.models.message.MessagesConfiguration getMessages() {
         return this.messages;
     }
 
-    public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {
-        return this.shippingRateInputType;
-    }
-
-    public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
-        return this.externalOAuth;
-    }
-
+    /**
+    *  <p>Holds the configuration for the <a href="/../api/projects/carts">Carts</a> feature.</p>
+    */
     public com.commercetools.api.models.project.CartsConfiguration getCarts() {
         return this.carts;
     }
 
-    public com.commercetools.api.models.project.SearchIndexingConfiguration getSearchIndexing() {
-        return this.searchIndexing;
-    }
-
+    /**
+    *  <p>Holds the configuration for the <a href="/../api/projects/shoppingLists">Shopping Lists</a> feature. This field may not be present on Projects created before January 2020.</p>
+    */
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {
         return this.shoppingLists;
+    }
+
+    /**
+    *  <p>Holds the configuration for the <a href="ctp:api:type:ShippingRatePriceTier">tiered shipping rates</a> feature.</p>
+    */
+    public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {
+        return this.shippingRateInputType;
+    }
+
+    /**
+    *  <p>Represents a RFC 7662 compliant <a href="https://datatracker.ietf.org/doc/html/rfc7662">OAuth 2.0 Token Introspection</a> endpoint.</p>
+    */
+    public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
+        return this.externalOAuth;
+    }
+
+    /**
+    *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+    */
+    public com.commercetools.api.models.project.SearchIndexingConfiguration getSearchIndexing() {
+        return this.searchIndexing;
     }
 
     public void setVersion(final Long version) {
@@ -199,6 +223,14 @@ public class ProjectImpl implements Project, ModelBase {
         this.messages = messages;
     }
 
+    public void setCarts(final com.commercetools.api.models.project.CartsConfiguration carts) {
+        this.carts = carts;
+    }
+
+    public void setShoppingLists(final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {
+        this.shoppingLists = shoppingLists;
+    }
+
     public void setShippingRateInputType(
             final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
         this.shippingRateInputType = shippingRateInputType;
@@ -208,17 +240,9 @@ public class ProjectImpl implements Project, ModelBase {
         this.externalOAuth = externalOAuth;
     }
 
-    public void setCarts(final com.commercetools.api.models.project.CartsConfiguration carts) {
-        this.carts = carts;
-    }
-
     public void setSearchIndexing(
             final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing) {
         this.searchIndexing = searchIndexing;
-    }
-
-    public void setShoppingLists(final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {
-        this.shoppingLists = shoppingLists;
     }
 
     @Override
@@ -240,11 +264,11 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(createdAt, that.createdAt)
                 .append(trialUntil, that.trialUntil)
                 .append(messages, that.messages)
+                .append(carts, that.carts)
+                .append(shoppingLists, that.shoppingLists)
                 .append(shippingRateInputType, that.shippingRateInputType)
                 .append(externalOAuth, that.externalOAuth)
-                .append(carts, that.carts)
                 .append(searchIndexing, that.searchIndexing)
-                .append(shoppingLists, that.shoppingLists)
                 .isEquals();
     }
 
@@ -259,11 +283,11 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(createdAt)
                 .append(trialUntil)
                 .append(messages)
+                .append(carts)
+                .append(shoppingLists)
                 .append(shippingRateInputType)
                 .append(externalOAuth)
-                .append(carts)
                 .append(searchIndexing)
-                .append(shoppingLists)
                 .toHashCode();
     }
 

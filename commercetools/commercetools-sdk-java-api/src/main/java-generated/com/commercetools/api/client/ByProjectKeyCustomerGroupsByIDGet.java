@@ -6,6 +6,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import io.vrap.rmf.base.client.*;
@@ -37,7 +39,7 @@ public class ByProjectKeyCustomerGroupsByIDGet
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customer-groups/%s", this.projectKey, this.ID);
         if (!params.isEmpty()) {
@@ -79,23 +81,51 @@ public class ByProjectKeyCustomerGroupsByIDGet
     }
 
     /**
-     * set expand with the specificied value
+     * set expand with the specified value
      */
-    public ByProjectKeyCustomerGroupsByIDGet withExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomerGroupsByIDGet withExpand(final TValue expand) {
         return copy().withQueryParam("expand", expand);
     }
 
     /**
      * add additional expand query parameter
      */
-    public ByProjectKeyCustomerGroupsByIDGet addExpand(final String expand) {
+    public <TValue> ByProjectKeyCustomerGroupsByIDGet addExpand(final TValue expand) {
         return copy().addQueryParam("expand", expand);
     }
 
     /**
-     * set expand with the specificied values
+     * set expand with the specified value
      */
-    public ByProjectKeyCustomerGroupsByIDGet withExpand(final List<String> expand) {
+    public ByProjectKeyCustomerGroupsByIDGet withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyCustomerGroupsByIDGet addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyCustomerGroupsByIDGet withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyCustomerGroupsByIDGet addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
+     */
+    public <TValue> ByProjectKeyCustomerGroupsByIDGet withExpand(final List<TValue> expand) {
         return copy().withoutQueryParam("expand")
                 .addQueryParams(
                     expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
@@ -104,7 +134,7 @@ public class ByProjectKeyCustomerGroupsByIDGet
     /**
      * add additional expand query parameters
      */
-    public ByProjectKeyCustomerGroupsByIDGet addExpand(final List<String> expand) {
+    public <TValue> ByProjectKeyCustomerGroupsByIDGet addExpand(final List<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }

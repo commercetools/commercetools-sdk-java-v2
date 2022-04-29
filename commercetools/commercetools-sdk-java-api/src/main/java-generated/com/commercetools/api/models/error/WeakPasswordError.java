@@ -38,4 +38,13 @@ public interface WeakPasswordError extends ErrorObject {
     default <T> T withWeakPasswordError(Function<WeakPasswordError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<WeakPasswordError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<WeakPasswordError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<WeakPasswordError>";
+            }
+        };
+    }
 }

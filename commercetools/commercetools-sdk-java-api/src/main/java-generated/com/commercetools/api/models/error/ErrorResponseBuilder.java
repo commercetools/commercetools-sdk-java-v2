@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -52,6 +53,30 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     public ErrorResponseBuilder errors(
             @Nullable final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
         this.errors = errors;
+        return this;
+    }
+
+    public ErrorResponseBuilder plusErrors(@Nullable final com.commercetools.api.models.error.ErrorObject... errors) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.addAll(Arrays.asList(errors));
+        return this;
+    }
+
+    public ErrorResponseBuilder plusErrors(
+            Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
+        if (this.errors == null) {
+            this.errors = new ArrayList<>();
+        }
+        this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
+        return this;
+    }
+
+    public ErrorResponseBuilder withErrors(
+            Function<com.commercetools.api.models.error.ErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.ErrorObject>> builder) {
+        this.errors = new ArrayList<>();
+        this.errors.add(builder.apply(com.commercetools.api.models.error.ErrorObjectBuilder.of()).build());
         return this;
     }
 

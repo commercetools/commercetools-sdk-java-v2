@@ -19,6 +19,9 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
 
     String ADD_FIELD_DEFINITION = "addFieldDefinition";
 
+    /**
+    *  <p>Value to append to the array.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("fieldDefinition")
@@ -46,5 +49,14 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
 
     default <T> T withTypeAddFieldDefinitionAction(Function<TypeAddFieldDefinitionAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeAddFieldDefinitionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeAddFieldDefinitionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeAddFieldDefinitionAction>";
+            }
+        };
     }
 }

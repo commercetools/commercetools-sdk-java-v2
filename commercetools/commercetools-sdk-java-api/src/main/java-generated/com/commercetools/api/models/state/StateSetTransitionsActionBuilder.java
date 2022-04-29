@@ -21,11 +21,18 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
         return this;
     }
 
-    public StateSetTransitionsActionBuilder withTransitions(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
-        this.transitions = new ArrayList<>();
-        this.transitions
-                .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
+    public StateSetTransitionsActionBuilder transitions(
+            @Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
+        this.transitions = transitions;
+        return this;
+    }
+
+    public StateSetTransitionsActionBuilder plusTransitions(
+            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier... transitions) {
+        if (this.transitions == null) {
+            this.transitions = new ArrayList<>();
+        }
+        this.transitions.addAll(Arrays.asList(transitions));
         return this;
     }
 
@@ -39,9 +46,11 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
         return this;
     }
 
-    public StateSetTransitionsActionBuilder transitions(
-            @Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
-        this.transitions = transitions;
+    public StateSetTransitionsActionBuilder withTransitions(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.transitions = new ArrayList<>();
+        this.transitions
+                .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
         return this;
     }
 

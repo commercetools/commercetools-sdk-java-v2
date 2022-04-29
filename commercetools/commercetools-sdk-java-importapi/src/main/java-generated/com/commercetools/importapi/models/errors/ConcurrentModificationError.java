@@ -74,4 +74,13 @@ public interface ConcurrentModificationError extends ErrorObject {
     default <T> T withConcurrentModificationError(Function<ConcurrentModificationError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ConcurrentModificationError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ConcurrentModificationError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ConcurrentModificationError>";
+            }
+        };
+    }
 }

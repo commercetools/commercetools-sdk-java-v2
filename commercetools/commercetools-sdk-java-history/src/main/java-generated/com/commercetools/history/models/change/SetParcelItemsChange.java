@@ -85,4 +85,13 @@ public interface SetParcelItemsChange extends Change {
     default <T> T withSetParcelItemsChange(Function<SetParcelItemsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetParcelItemsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetParcelItemsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetParcelItemsChange>";
+            }
+        };
+    }
 }

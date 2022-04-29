@@ -109,4 +109,13 @@ public interface AttributeDefinition {
     default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AttributeDefinition>";
+            }
+        };
+    }
 }

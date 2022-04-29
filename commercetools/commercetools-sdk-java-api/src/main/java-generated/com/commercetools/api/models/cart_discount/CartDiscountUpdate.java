@@ -56,4 +56,13 @@ public interface CartDiscountUpdate extends
     default <T> T withCartDiscountUpdate(Function<CartDiscountUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountUpdate>";
+            }
+        };
+    }
 }

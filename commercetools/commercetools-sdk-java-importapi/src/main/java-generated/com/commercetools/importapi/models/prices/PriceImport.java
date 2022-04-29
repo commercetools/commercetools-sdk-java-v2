@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceImport extends ImportResource {
 
     /**
-    *  <p>Maps to <code>Price.value</code>. TypedMoney is what is called BaseMoney in the HTTP API.</p>
+    *  <p>Maps to <code>Price.value</code>.</p>
     */
     @NotNull
     @Valid
@@ -182,5 +182,14 @@ public interface PriceImport extends ImportResource {
 
     default <T> T withPriceImport(Function<PriceImport, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PriceImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PriceImport>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PriceImport>";
+            }
+        };
     }
 }

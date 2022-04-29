@@ -34,6 +34,12 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    public AttributeDefinitionBuilder type(
+            Function<com.commercetools.api.models.product_type.AttributeTypeBuilder, Builder<? extends com.commercetools.api.models.product_type.AttributeType>> builder) {
+        this.type = builder.apply(com.commercetools.api.models.product_type.AttributeTypeBuilder.of()).build();
+        return this;
+    }
+
     public AttributeDefinitionBuilder name(final String name) {
         this.name = name;
         return this;

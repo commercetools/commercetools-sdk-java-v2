@@ -62,4 +62,13 @@ public interface RemoveDeliveryItemsChange extends Change {
     default <T> T withRemoveDeliveryItemsChange(Function<RemoveDeliveryItemsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveDeliveryItemsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveDeliveryItemsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveDeliveryItemsChange>";
+            }
+        };
+    }
 }

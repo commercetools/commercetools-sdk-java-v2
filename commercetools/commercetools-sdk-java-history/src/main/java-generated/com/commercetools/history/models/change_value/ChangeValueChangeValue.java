@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueImpl.class, name = ChangeValueGiftLineItemChangeValue.GIFT_LINE_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueImpl.class, name = ChangeValueRelativeChangeValue.RELATIVE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeValueChangeValueImpl.class, visible = true)
+@JsonDeserialize(as = ChangeValueChangeValueImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ChangeValueChangeValue {
 
@@ -25,7 +26,32 @@ public interface ChangeValueChangeValue {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder absoluteBuilder() {
+        return com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder externalBuilder() {
+        return com.commercetools.history.models.change_value.ChangeValueExternalChangeValueBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder giftLineItemBuilder() {
+        return com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueBuilder.of();
+    }
+
+    public static com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder relativeBuilder() {
+        return com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueBuilder.of();
+    }
+
     default <T> T withChangeValueChangeValue(Function<ChangeValueChangeValue, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueChangeValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueChangeValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeValueChangeValue>";
+            }
+        };
     }
 }

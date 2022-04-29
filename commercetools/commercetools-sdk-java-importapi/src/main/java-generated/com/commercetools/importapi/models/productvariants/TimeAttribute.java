@@ -50,4 +50,13 @@ public interface TimeAttribute extends Attribute {
     default <T> T withTimeAttribute(Function<TimeAttribute, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TimeAttribute> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TimeAttribute>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TimeAttribute>";
+            }
+        };
+    }
 }

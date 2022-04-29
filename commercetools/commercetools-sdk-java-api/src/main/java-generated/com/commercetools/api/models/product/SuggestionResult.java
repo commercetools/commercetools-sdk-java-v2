@@ -45,4 +45,13 @@ public interface SuggestionResult {
     default <T> T withSuggestionResult(Function<SuggestionResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SuggestionResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SuggestionResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SuggestionResult>";
+            }
+        };
+    }
 }

@@ -67,4 +67,13 @@ public interface RemoveShoppingListLineItemChange extends Change {
     default <T> T withRemoveShoppingListLineItemChange(Function<RemoveShoppingListLineItemChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<RemoveShoppingListLineItemChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<RemoveShoppingListLineItemChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<RemoveShoppingListLineItemChange>";
+            }
+        };
+    }
 }

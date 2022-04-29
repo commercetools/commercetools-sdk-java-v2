@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneSetDescriptionActionImpl.class, name = ZoneSetDescriptionAction.SET_DESCRIPTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneSetKeyActionImpl.class, name = ZoneSetKeyAction.SET_KEY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ZoneUpdateActionImpl.class, visible = true)
+@JsonDeserialize(as = ZoneUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<ZoneUpdateAction> {
 
@@ -26,7 +27,36 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
     @JsonProperty("action")
     public String getAction();
 
+    public static com.commercetools.api.models.zone.ZoneAddLocationActionBuilder addLocationBuilder() {
+        return com.commercetools.api.models.zone.ZoneAddLocationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.zone.ZoneChangeNameActionBuilder changeNameBuilder() {
+        return com.commercetools.api.models.zone.ZoneChangeNameActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.zone.ZoneRemoveLocationActionBuilder removeLocationBuilder() {
+        return com.commercetools.api.models.zone.ZoneRemoveLocationActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.zone.ZoneSetDescriptionActionBuilder setDescriptionBuilder() {
+        return com.commercetools.api.models.zone.ZoneSetDescriptionActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.zone.ZoneSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.zone.ZoneSetKeyActionBuilder.of();
+    }
+
     default <T> T withZoneUpdateAction(Function<ZoneUpdateAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ZoneUpdateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ZoneUpdateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ZoneUpdateAction>";
+            }
+        };
     }
 }

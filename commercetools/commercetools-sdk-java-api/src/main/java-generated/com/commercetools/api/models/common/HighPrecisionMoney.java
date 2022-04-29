@@ -12,12 +12,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Money object that stores an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = HighPrecisionMoneyImpl.class)
 public interface HighPrecisionMoney extends TypedMoney {
 
     String HIGH_PRECISION = "highPrecision";
 
+    /**
+    *  <p>amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+    */
     @NotNull
     @JsonProperty("preciseAmount")
     public Long getPreciseAmount();
@@ -30,9 +36,9 @@ public interface HighPrecisionMoney extends TypedMoney {
 
     public static HighPrecisionMoney of(final HighPrecisionMoney template) {
         HighPrecisionMoneyImpl instance = new HighPrecisionMoneyImpl();
-        instance.setFractionDigits(template.getFractionDigits());
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setFractionDigits(template.getFractionDigits());
         instance.setPreciseAmount(template.getPreciseAmount());
         return instance;
     }
@@ -47,5 +53,14 @@ public interface HighPrecisionMoney extends TypedMoney {
 
     default <T> T withHighPrecisionMoney(Function<HighPrecisionMoney, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney>() {
+            @Override
+            public String toString() {
+                return "TypeReference<HighPrecisionMoney>";
+            }
+        };
     }
 }

@@ -13,7 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReviewResourceIdentifierImpl.class)
-public interface ReviewResourceIdentifier extends ResourceIdentifier {
+public interface ReviewResourceIdentifier
+        extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Review> {
 
     String REVIEW = "review";
 
@@ -38,5 +39,14 @@ public interface ReviewResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withReviewResourceIdentifier(Function<ReviewResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewResourceIdentifier>";
+            }
+        };
     }
 }

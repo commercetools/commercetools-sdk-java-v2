@@ -100,6 +100,12 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
         return this;
     }
 
+    public ReviewRatingSetMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public ReviewRatingSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -136,6 +142,12 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
 
     public ReviewRatingSetMessageBuilder target(@Nullable final com.commercetools.api.models.common.Reference target) {
         this.target = target;
+        return this;
+    }
+
+    public ReviewRatingSetMessageBuilder target(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.target = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 

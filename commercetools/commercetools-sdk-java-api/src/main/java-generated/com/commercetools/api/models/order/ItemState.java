@@ -20,14 +20,14 @@ public interface ItemState {
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @NotNull
     @Valid
     @JsonProperty("state")
     public StateReference getState();
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setState(final StateReference state);
 
@@ -52,5 +52,14 @@ public interface ItemState {
 
     default <T> T withItemState(Function<ItemState, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ItemState> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ItemState>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ItemState>";
+            }
+        };
     }
 }

@@ -1,6 +1,8 @@
 
 package com.commercetools;
 
+import static io.vrap.rmf.base.client.http.HttpStatusCode.*;
+
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.util.ArrayList;
@@ -38,6 +40,10 @@ public class ExampleTest {
                 .build();
 
         return apiRoot;
+    }
+
+    public void localizedString() {
+        LocalizedString string = LocalizedString.of();
     }
 
     public void performRequest() {
@@ -156,7 +162,7 @@ public class ExampleTest {
         ApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .withRetryMiddleware(5, Arrays.asList(502, 503, 504))
+                .withRetryMiddleware(5, Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))
                 .build();
     }
 

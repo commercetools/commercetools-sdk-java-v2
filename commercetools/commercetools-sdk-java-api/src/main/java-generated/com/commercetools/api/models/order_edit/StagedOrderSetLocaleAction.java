@@ -43,4 +43,13 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
     default <T> T withStagedOrderSetLocaleAction(Function<StagedOrderSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLocaleAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLocaleAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetLocaleAction>";
+            }
+        };
+    }
 }

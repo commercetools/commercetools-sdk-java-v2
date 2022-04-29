@@ -48,4 +48,13 @@ public interface StringField extends CustomField {
     default <T> T withStringField(Function<StringField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StringField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StringField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StringField>";
+            }
+        };
+    }
 }

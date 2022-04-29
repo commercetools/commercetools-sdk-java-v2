@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderReferenceImpl.class)
-public interface OrderReference extends Reference {
+public interface OrderReference extends Reference, com.commercetools.api.models.Identifiable<Order> {
 
     String ORDER = "order";
 
@@ -46,5 +46,14 @@ public interface OrderReference extends Reference {
 
     default <T> T withOrderReference(Function<OrderReference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderReference>";
+            }
+        };
     }
 }

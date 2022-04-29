@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyCartDraftImpl.class)
-public interface MyCartDraft {
+public interface MyCartDraft extends com.commercetools.api.models.CustomizableDraft<MyCartDraft> {
 
     /**
     *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
@@ -178,5 +178,14 @@ public interface MyCartDraft {
 
     default <T> T withMyCartDraft(Function<MyCartDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCartDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCartDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCartDraft>";
+            }
+        };
     }
 }

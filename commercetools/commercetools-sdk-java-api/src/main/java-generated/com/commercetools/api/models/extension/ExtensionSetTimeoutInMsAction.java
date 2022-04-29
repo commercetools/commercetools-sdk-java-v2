@@ -17,10 +17,11 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
     String SET_TIMEOUT_IN_MS = "setTimeoutInMs";
 
     /**
-    *  <p>The maximum time the commercetools platform waits for a response from the extension.
-    *  The maximum value is 2000 ms (2 seconds).
-    *  This limit can be increased per project after we review the performance impact.
-    *  Please contact Support via the support and provide the region, project key and use case.</p>
+    *  <p>Value to set. If not defined, the maximum value is used.
+    *  If no timeout is provided, the default value is used for all types of Extensions.
+    *  The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+    *  <p>This limit can be increased per Project after we review the performance impact.
+    *  Please contact our support via the <a href="https://support.commercetools.com/">Support Portal</a> and provide the Region, Project key, and use case.</p>
     */
 
     @JsonProperty("timeoutInMs")
@@ -48,5 +49,14 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
 
     default <T> T withExtensionSetTimeoutInMsAction(Function<ExtensionSetTimeoutInMsAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionSetTimeoutInMsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionSetTimeoutInMsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionSetTimeoutInMsAction>";
+            }
+        };
     }
 }

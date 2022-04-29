@@ -83,6 +83,14 @@ public class MissingImagesSearchRequestBuilder implements Builder<MissingImagesS
         return this;
     }
 
+    public MissingImagesSearchRequestBuilder plusProductIds(@Nullable final String... productIds) {
+        if (this.productIds == null) {
+            this.productIds = new ArrayList<>();
+        }
+        this.productIds.addAll(Arrays.asList(productIds));
+        return this;
+    }
+
     public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final String... productTypeIds) {
         this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
@@ -90,6 +98,14 @@ public class MissingImagesSearchRequestBuilder implements Builder<MissingImagesS
 
     public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
         this.productTypeIds = productTypeIds;
+        return this;
+    }
+
+    public MissingImagesSearchRequestBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {
+        if (this.productTypeIds == null) {
+            this.productTypeIds = new ArrayList<>();
+        }
+        this.productTypeIds.addAll(Arrays.asList(productTypeIds));
         return this;
     }
 

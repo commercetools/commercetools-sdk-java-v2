@@ -78,4 +78,13 @@ public interface SetOrderTaxedPriceChange extends Change {
     default <T> T withSetOrderTaxedPriceChange(Function<SetOrderTaxedPriceChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetOrderTaxedPriceChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetOrderTaxedPriceChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetOrderTaxedPriceChange>";
+            }
+        };
+    }
 }

@@ -55,4 +55,13 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     default <T> T withDuplicateAttributeValueError(Function<DuplicateAttributeValueError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DuplicateAttributeValueError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DuplicateAttributeValueError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DuplicateAttributeValueError>";
+            }
+        };
+    }
 }

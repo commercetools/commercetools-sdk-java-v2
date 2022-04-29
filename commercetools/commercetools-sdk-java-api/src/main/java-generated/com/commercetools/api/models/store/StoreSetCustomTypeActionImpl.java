@@ -21,12 +21,12 @@ public class StoreSetCustomTypeActionImpl implements StoreSetCustomTypeAction, M
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
-    private java.lang.Object fields;
+    private com.commercetools.api.models.type.FieldContainer fields;
 
     @JsonCreator
     StoreSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
-            @JsonProperty("fields") final java.lang.Object fields) {
+            @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
         this.action = SET_CUSTOM_TYPE;
@@ -41,18 +41,17 @@ public class StoreSetCustomTypeActionImpl implements StoreSetCustomTypeAction, M
     }
 
     /**
-    *  <p>If set, the custom type is reset to this value.
-    *  If absent, the custom type and any existing custom fields are removed.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Store with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the Store.</p>
     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-    *  <p>A valid JSON object, based on the FieldDefinitions of the Type
-    *  Sets the custom field to this value.</p>
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Store.</p>
     */
-    public java.lang.Object getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }
 
@@ -60,7 +59,7 @@ public class StoreSetCustomTypeActionImpl implements StoreSetCustomTypeAction, M
         this.type = type;
     }
 
-    public void setFields(final java.lang.Object fields) {
+    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
     }
 

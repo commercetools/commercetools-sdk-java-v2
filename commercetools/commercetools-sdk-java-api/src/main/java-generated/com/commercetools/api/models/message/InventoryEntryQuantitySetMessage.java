@@ -88,4 +88,13 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     default <T> T withInventoryEntryQuantitySetMessage(Function<InventoryEntryQuantitySetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryQuantitySetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InventoryEntryQuantitySetMessage>";
+            }
+        };
+    }
 }

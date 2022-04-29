@@ -43,4 +43,13 @@ public interface ResourceDeletionError extends ErrorObject {
     default <T> T withResourceDeletionError(Function<ResourceDeletionError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ResourceDeletionError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ResourceDeletionError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ResourceDeletionError>";
+            }
+        };
+    }
 }

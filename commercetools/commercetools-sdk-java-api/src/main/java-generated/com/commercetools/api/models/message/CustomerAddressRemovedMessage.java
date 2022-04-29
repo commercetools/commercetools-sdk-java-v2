@@ -58,4 +58,13 @@ public interface CustomerAddressRemovedMessage extends Message {
     default <T> T withCustomerAddressRemovedMessage(Function<CustomerAddressRemovedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddressRemovedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddressRemovedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerAddressRemovedMessage>";
+            }
+        };
+    }
 }

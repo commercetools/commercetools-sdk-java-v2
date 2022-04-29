@@ -57,4 +57,13 @@ public interface ShoppingListChangeTextLineItemNameAction extends ShoppingListUp
             Function<ShoppingListChangeTextLineItemNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeTextLineItemNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeTextLineItemNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListChangeTextLineItemNameAction>";
+            }
+        };
+    }
 }

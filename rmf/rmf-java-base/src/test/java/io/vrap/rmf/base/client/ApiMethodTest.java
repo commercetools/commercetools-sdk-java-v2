@@ -1,6 +1,7 @@
 
 package io.vrap.rmf.base.client;
 
+import java.net.URI;
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -26,8 +27,8 @@ public class ApiMethodTest {
         }
 
         @Override
-        public ApiHttpRequest createHttpRequest() {
-            return null;
+        protected ApiHttpRequest buildHttpRequest() {
+            return new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), getHeaders(), null);
         }
 
         @Override
@@ -63,6 +64,10 @@ public class ApiMethodTest {
         @Override
         public int hashCode() {
             return reflectionHashCode();
+        }
+
+        public TestApiMethod withTestParam(final String value) {
+            return withQueryParam("test", value);
         }
     }
 
@@ -222,5 +227,54 @@ public class ApiMethodTest {
 
         Assertions.assertNull(method.getHeaders().getFirst("bar"));
         Assertions.assertEquals("foo", method.getHeaders().getFirst("foo"));
+    }
+
+    @Test
+    public void testRequestDecorator() {
+        TestApiMethod method = new TestApiMethod(createClient())
+                .withHttpRequest(apiHttpRequest -> apiHttpRequest.addHeader("foo", "foo"));
+        Assertions.assertNull(method.getHeaders().getFirst("foo"));
+        Assertions.assertNull(method.getHeaders().getFirst("bar"));
+
+        final ApiHttpRequest httpRequest = method.buildHttpRequest();
+        Assertions.assertNull(httpRequest.getHeaders().getFirst("foo"));
+        Assertions.assertNull(httpRequest.getHeaders().getFirst("bar"));
+
+        final ApiHttpRequest httpRequestDecorated = method.createHttpRequest();
+        Assertions.assertEquals("foo", httpRequestDecorated.getHeaders().getFirst("foo"));
+        Assertions.assertNull(httpRequestDecorated.getHeaders().getFirst("bar"));
+
+        final TestApiMethod method2 = method.withHttpRequest(apiHttpRequest -> apiHttpRequest.addHeader("bar", "bar"));
+        final ApiHttpRequest httpRequestDecorated2 = method2.createHttpRequest();
+        Assertions.assertEquals("foo", httpRequestDecorated2.getHeaders().getFirst("foo"));
+        Assertions.assertEquals("bar", httpRequestDecorated2.getHeaders().getFirst("bar"));
+    }
+
+    @Test
+    public void testMethodDecorator() {
+        TestApiMethod method = new TestApiMethod(createClient());
+        Assertions.assertNull(method.getHeaders().getFirst("foo"));
+        Assertions.assertNull(method.getHeaders().getFirst("bar"));
+
+        final TestApiMethod decoratedMethod = method.with(ApiMethodTest::addFoo);
+        Assertions.assertEquals("foo", decoratedMethod.getHeaders().getFirst("foo"));
+        Assertions.assertNull(decoratedMethod.getHeaders().getFirst("bar"));
+
+        final TestApiMethod decoratedMethod2 = method.with(ApiMethodTest::addBar);
+        Assertions.assertNull(decoratedMethod2.getHeaders().getFirst("foo"));
+        Assertions.assertEquals("bar", decoratedMethod2.getHeaders().getFirst("bar"));
+
+        final TestApiMethod decoratedMethod3 = method.with(m -> m.withTestParam("foo"));
+        Assertions.assertNull(decoratedMethod3.getHeaders().getFirst("foo"));
+        Assertions.assertNull(decoratedMethod3.getHeaders().getFirst("bar"));
+        Assertions.assertEquals("foo", decoratedMethod3.getFirstQueryParam("test"));
+    }
+
+    public static <T extends ApiMethod<T, TResult>, TResult> T addFoo(ApiMethod<T, TResult> method) {
+        return method.addHeader("foo", "foo");
+    }
+
+    public static <T extends ApiMethod<T, TResult>, TResult> T addBar(ApiMethod<T, TResult> method) {
+        return method.addHeader("bar", "bar");
     }
 }

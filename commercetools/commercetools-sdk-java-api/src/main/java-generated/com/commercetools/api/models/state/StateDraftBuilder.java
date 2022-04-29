@@ -80,17 +80,32 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         return this;
     }
 
+    public StateDraftBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
+        if (this.roles == null) {
+            this.roles = new ArrayList<>();
+        }
+        this.roles.addAll(Arrays.asList(roles));
+        return this;
+    }
+
     public StateDraftBuilder transitions(
             @Nullable final com.commercetools.api.models.state.StateResourceIdentifier... transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
         return this;
     }
 
-    public StateDraftBuilder withTransitions(
-            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
-        this.transitions = new ArrayList<>();
-        this.transitions
-                .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
+    public StateDraftBuilder transitions(
+            @Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
+        this.transitions = transitions;
+        return this;
+    }
+
+    public StateDraftBuilder plusTransitions(
+            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier... transitions) {
+        if (this.transitions == null) {
+            this.transitions = new ArrayList<>();
+        }
+        this.transitions.addAll(Arrays.asList(transitions));
         return this;
     }
 
@@ -104,9 +119,11 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         return this;
     }
 
-    public StateDraftBuilder transitions(
-            @Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
-        this.transitions = transitions;
+    public StateDraftBuilder withTransitions(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
+        this.transitions = new ArrayList<>();
+        this.transitions
+                .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
         return this;
     }
 

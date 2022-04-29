@@ -51,4 +51,13 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
     default <T> T withOrderEditPreviewFailure(Function<OrderEditPreviewFailure, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderEditPreviewFailure> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderEditPreviewFailure>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderEditPreviewFailure>";
+            }
+        };
+    }
 }

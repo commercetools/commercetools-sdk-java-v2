@@ -13,12 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Field type for enum values.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldEnumTypeImpl.class)
 public interface CustomFieldEnumType extends FieldType {
 
     String ENUM = "Enum";
 
+    /**
+    *  <p>Allowed values.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("values")
@@ -49,5 +55,14 @@ public interface CustomFieldEnumType extends FieldType {
 
     default <T> T withCustomFieldEnumType(Function<CustomFieldEnumType, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldEnumType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldEnumType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldEnumType>";
+            }
+        };
     }
 }

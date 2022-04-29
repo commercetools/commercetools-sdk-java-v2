@@ -90,4 +90,13 @@ public interface SetAssetCustomFieldChange extends Change {
     default <T> T withSetAssetCustomFieldChange(Function<SetAssetCustomFieldChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAssetCustomFieldChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAssetCustomFieldChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAssetCustomFieldChange>";
+            }
+        };
+    }
 }

@@ -38,10 +38,16 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
-    public DeliveryBuilder withItems(
-            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()).build());
+    public DeliveryBuilder items(final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public DeliveryBuilder plusItems(final com.commercetools.importapi.models.orders.DeliveryItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -54,8 +60,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
-    public DeliveryBuilder items(final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items) {
-        this.items = items;
+    public DeliveryBuilder withItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -64,10 +72,16 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
-    public DeliveryBuilder withParcels(
-            Function<com.commercetools.importapi.models.orders.ParcelBuilder, com.commercetools.importapi.models.orders.ParcelBuilder> builder) {
-        this.parcels = new ArrayList<>();
-        this.parcels.add(builder.apply(com.commercetools.importapi.models.orders.ParcelBuilder.of()).build());
+    public DeliveryBuilder parcels(final java.util.List<com.commercetools.importapi.models.orders.Parcel> parcels) {
+        this.parcels = parcels;
+        return this;
+    }
+
+    public DeliveryBuilder plusParcels(final com.commercetools.importapi.models.orders.Parcel... parcels) {
+        if (this.parcels == null) {
+            this.parcels = new ArrayList<>();
+        }
+        this.parcels.addAll(Arrays.asList(parcels));
         return this;
     }
 
@@ -80,8 +94,10 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
-    public DeliveryBuilder parcels(final java.util.List<com.commercetools.importapi.models.orders.Parcel> parcels) {
-        this.parcels = parcels;
+    public DeliveryBuilder withParcels(
+            Function<com.commercetools.importapi.models.orders.ParcelBuilder, com.commercetools.importapi.models.orders.ParcelBuilder> builder) {
+        this.parcels = new ArrayList<>();
+        this.parcels.add(builder.apply(com.commercetools.importapi.models.orders.ParcelBuilder.of()).build());
         return this;
     }
 

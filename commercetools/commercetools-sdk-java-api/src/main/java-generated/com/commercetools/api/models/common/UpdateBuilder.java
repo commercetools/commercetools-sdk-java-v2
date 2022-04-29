@@ -24,10 +24,16 @@ public class UpdateBuilder implements Builder<Update> {
         return this;
     }
 
-    public UpdateBuilder withActions(
-            Function<com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder> builder) {
-        this.actions = new ArrayList<>();
-        this.actions.add(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()).build());
+    public UpdateBuilder actions(final java.util.List<com.commercetools.api.models.common.UpdateAction> actions) {
+        this.actions = actions;
+        return this;
+    }
+
+    public UpdateBuilder plusActions(final com.commercetools.api.models.common.UpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
         return this;
     }
 
@@ -40,8 +46,10 @@ public class UpdateBuilder implements Builder<Update> {
         return this;
     }
 
-    public UpdateBuilder actions(final java.util.List<com.commercetools.api.models.common.UpdateAction> actions) {
-        this.actions = actions;
+    public UpdateBuilder withActions(
+            Function<com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()).build());
         return this;
     }
 

@@ -48,4 +48,13 @@ public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
     default <T> T withCartDiscountChangeNameAction(Function<CartDiscountChangeNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountChangeNameAction>";
+            }
+        };
+    }
 }

@@ -53,4 +53,13 @@ public interface DiscountCodeInfo {
     default <T> T withDiscountCodeInfo(Function<DiscountCodeInfo, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeInfo> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeInfo>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeInfo>";
+            }
+        };
+    }
 }

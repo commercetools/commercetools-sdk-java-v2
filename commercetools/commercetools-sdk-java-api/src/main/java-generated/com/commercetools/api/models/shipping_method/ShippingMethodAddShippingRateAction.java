@@ -57,4 +57,13 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     default <T> T withShippingMethodAddShippingRateAction(Function<ShippingMethodAddShippingRateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodAddShippingRateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodAddShippingRateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodAddShippingRateAction>";
+            }
+        };
+    }
 }

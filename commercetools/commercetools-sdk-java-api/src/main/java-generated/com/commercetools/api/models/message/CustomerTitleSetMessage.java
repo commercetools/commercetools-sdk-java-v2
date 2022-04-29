@@ -52,4 +52,13 @@ public interface CustomerTitleSetMessage extends Message {
     default <T> T withCustomerTitleSetMessage(Function<CustomerTitleSetMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerTitleSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerTitleSetMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerTitleSetMessage>";
+            }
+        };
+    }
 }

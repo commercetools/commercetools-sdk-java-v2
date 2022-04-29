@@ -22,6 +22,10 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
 
     String SET_ORDER_TOTAL_TAX = "setOrderTotalTax";
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("externalTotalGross")
@@ -59,5 +63,14 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
 
     default <T> T withStagedOrderSetOrderTotalTaxAction(Function<StagedOrderSetOrderTotalTaxAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetOrderTotalTaxAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetOrderTotalTaxAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetOrderTotalTaxAction>";
+            }
+        };
     }
 }

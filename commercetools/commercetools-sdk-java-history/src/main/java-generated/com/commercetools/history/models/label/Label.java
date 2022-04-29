@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.ReviewLabelImpl.class, name = ReviewLabel.REVIEW_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.StringLabelImpl.class, name = StringLabel.STRING_LABEL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = LabelImpl.class, visible = true)
+@JsonDeserialize(as = LabelImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface Label {
 
@@ -32,7 +33,48 @@ public interface Label {
     @JsonProperty("type")
     public String getType();
 
+    public static com.commercetools.history.models.label.CustomObjectLabelBuilder customObjectLabelBuilder() {
+        return com.commercetools.history.models.label.CustomObjectLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.CustomerLabelBuilder customerLabelBuilder() {
+        return com.commercetools.history.models.label.CustomerLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.LocalizedLabelBuilder localizedLabelBuilder() {
+        return com.commercetools.history.models.label.LocalizedLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.OrderLabelBuilder orderLabelBuilder() {
+        return com.commercetools.history.models.label.OrderLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.PaymentLabelBuilder paymentLabelBuilder() {
+        return com.commercetools.history.models.label.PaymentLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.ProductLabelBuilder productLabelBuilder() {
+        return com.commercetools.history.models.label.ProductLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.ReviewLabelBuilder reviewLabelBuilder() {
+        return com.commercetools.history.models.label.ReviewLabelBuilder.of();
+    }
+
+    public static com.commercetools.history.models.label.StringLabelBuilder stringLabelBuilder() {
+        return com.commercetools.history.models.label.StringLabelBuilder.of();
+    }
+
     default <T> T withLabel(Function<Label, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Label> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Label>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Label>";
+            }
+        };
     }
 }

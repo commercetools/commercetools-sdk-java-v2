@@ -2,6 +2,7 @@
 package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,6 +28,33 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
     public ShoppingListUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> actions) {
         this.actions = actions;
+        return this;
+    }
+
+    public ShoppingListUpdateBuilder plusActions(
+            final com.commercetools.api.models.shopping_list.ShoppingListUpdateAction... actions) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.addAll(Arrays.asList(actions));
+        return this;
+    }
+
+    public ShoppingListUpdateBuilder plusActions(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder, Builder<? extends com.commercetools.api.models.shopping_list.ShoppingListUpdateAction>> builder) {
+        if (this.actions == null) {
+            this.actions = new ArrayList<>();
+        }
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public ShoppingListUpdateBuilder withActions(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder, Builder<? extends com.commercetools.api.models.shopping_list.ShoppingListUpdateAction>> builder) {
+        this.actions = new ArrayList<>();
+        this.actions.add(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListUpdateActionBuilder.of()).build());
         return this;
     }
 

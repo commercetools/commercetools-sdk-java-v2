@@ -55,4 +55,13 @@ public interface Update extends com.commercetools.api.models.ResourceUpdate<Upda
     default <T> T withUpdate(Function<Update, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Update> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Update>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Update>";
+            }
+        };
+    }
 }

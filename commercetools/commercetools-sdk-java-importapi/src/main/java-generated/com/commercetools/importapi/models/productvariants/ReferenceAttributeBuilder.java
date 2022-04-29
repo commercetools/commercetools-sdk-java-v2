@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.productvariants;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -23,6 +24,12 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     public ReferenceAttributeBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
+        return this;
+    }
+
+    public ReferenceAttributeBuilder value(
+            Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {
+        this.value = builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build();
         return this;
     }
 

@@ -52,4 +52,13 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
     default <T> T withProductTransitionStateAction(Function<ProductTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductTransitionStateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductTransitionStateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductTransitionStateAction>";
+            }
+        };
+    }
 }

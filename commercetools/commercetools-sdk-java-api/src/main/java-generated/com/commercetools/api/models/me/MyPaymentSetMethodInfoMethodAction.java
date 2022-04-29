@@ -42,4 +42,13 @@ public interface MyPaymentSetMethodInfoMethodAction extends MyPaymentUpdateActio
     default <T> T withMyPaymentSetMethodInfoMethodAction(Function<MyPaymentSetMethodInfoMethodAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoMethodAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentSetMethodInfoMethodAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyPaymentSetMethodInfoMethodAction>";
+            }
+        };
+    }
 }

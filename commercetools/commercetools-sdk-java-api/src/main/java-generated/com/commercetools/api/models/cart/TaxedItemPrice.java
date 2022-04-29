@@ -31,9 +31,18 @@ public interface TaxedItemPrice {
     @JsonProperty("totalGross")
     public TypedMoney getTotalGross();
 
+    /**
+    *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+    */
+    @Valid
+    @JsonProperty("totalTax")
+    public TypedMoney getTotalTax();
+
     public void setTotalNet(final TypedMoney totalNet);
 
     public void setTotalGross(final TypedMoney totalGross);
+
+    public void setTotalTax(final TypedMoney totalTax);
 
     public static TaxedItemPrice of() {
         return new TaxedItemPriceImpl();
@@ -43,6 +52,7 @@ public interface TaxedItemPrice {
         TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
+        instance.setTotalTax(template.getTotalTax());
         return instance;
     }
 
@@ -56,5 +66,14 @@ public interface TaxedItemPrice {
 
     default <T> T withTaxedItemPrice(Function<TaxedItemPrice, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxedItemPrice> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxedItemPrice>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxedItemPrice>";
+            }
+        };
     }
 }

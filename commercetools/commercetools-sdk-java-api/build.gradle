@@ -1,6 +1,7 @@
 
 dependencies {
     api project(':rmf:rmf-java-base')
+    api project(':commercetools:commercetools-money')
     api "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
     api "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
     implementation "com.google.code.findbugs:jsr305:${versions.findbugs}"

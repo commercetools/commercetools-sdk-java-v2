@@ -40,10 +40,18 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
-    public SetPricesChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
+    public SetPricesChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.common.Price> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public SetPricesChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.Price... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -56,9 +64,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
-    public SetPricesChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.Price> previousValue) {
-        this.previousValue = previousValue;
+    public SetPricesChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
         return this;
     }
 
@@ -67,10 +76,17 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
-    public SetPricesChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
+    public SetPricesChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.Price> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetPricesChangeBuilder plusNextValue(final com.commercetools.history.models.common.Price... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -83,9 +99,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         return this;
     }
 
-    public SetPricesChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.Price> nextValue) {
-        this.nextValue = nextValue;
+    public SetPricesChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
         return this;
     }
 

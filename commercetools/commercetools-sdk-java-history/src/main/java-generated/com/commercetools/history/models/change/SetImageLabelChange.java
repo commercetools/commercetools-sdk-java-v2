@@ -77,4 +77,13 @@ public interface SetImageLabelChange extends Change {
     default <T> T withSetImageLabelChange(Function<SetImageLabelChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetImageLabelChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetImageLabelChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetImageLabelChange>";
+            }
+        };
+    }
 }

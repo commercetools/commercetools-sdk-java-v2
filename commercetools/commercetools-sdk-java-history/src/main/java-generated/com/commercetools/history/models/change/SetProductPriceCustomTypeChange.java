@@ -77,4 +77,13 @@ public interface SetProductPriceCustomTypeChange extends Change {
     default <T> T withSetProductPriceCustomTypeChange(Function<SetProductPriceCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetProductPriceCustomTypeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetProductPriceCustomTypeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetProductPriceCustomTypeChange>";
+            }
+        };
+    }
 }

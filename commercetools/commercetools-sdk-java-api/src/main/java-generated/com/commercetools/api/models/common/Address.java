@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AddressImpl.class)
-public interface Address extends BaseAddress {
+public interface Address extends BaseAddress, com.commercetools.api.models.Customizable<Address> {
 
     @Valid
     @JsonProperty("custom")
@@ -68,5 +68,14 @@ public interface Address extends BaseAddress {
 
     default <T> T withAddress(Function<Address, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Address> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Address>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Address>";
+            }
+        };
     }
 }

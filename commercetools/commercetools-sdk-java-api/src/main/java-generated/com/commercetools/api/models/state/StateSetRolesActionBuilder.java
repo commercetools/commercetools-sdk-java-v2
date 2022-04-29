@@ -22,6 +22,14 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
         return this;
     }
 
+    public StateSetRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
+        if (this.roles == null) {
+            this.roles = new ArrayList<>();
+        }
+        this.roles.addAll(Arrays.asList(roles));
+        return this;
+    }
+
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }

@@ -52,4 +52,13 @@ public interface LocalizedLabel extends Label {
     default <T> T withLocalizedLabel(Function<LocalizedLabel, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<LocalizedLabel> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<LocalizedLabel>() {
+            @Override
+            public String toString() {
+                return "TypeReference<LocalizedLabel>";
+            }
+        };
+    }
 }

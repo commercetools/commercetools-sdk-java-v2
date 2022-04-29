@@ -1,0 +1,299 @@
+#%RAML 1.0 Extension
+usage: Adds JavaSDK extended functionality
+extends: api.raml
+annotationTypes:
+  java-mixin:
+    type: string
+    allowedTargets: TypeDeclaration
+
+types:
+  Cart:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Cart>, com.commercetools.api.models.Referencable<Cart>, com.commercetools.api.models.ResourceIdentifiable<Cart>, com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.cart.CartResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.cart.CartReference.builder().id(getId()).build();
+      }
+  CartDiscount:
+    (java-extends): 'com.commercetools.api.models.DomainResource<CartDiscount>, com.commercetools.api.models.Referencable<CartDiscount>, com.commercetools.api.models.ResourceIdentifiable<CartDiscount>, com.commercetools.api.models.Customizable<CartDiscount>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.cart_discount.CartDiscountReference.builder().id(getId()).build();
+      }
+  Category:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Category>, com.commercetools.api.models.Referencable<Category>, com.commercetools.api.models.ResourceIdentifiable<Category>, com.commercetools.api.models.Customizable<Category>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.category.CategoryResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.category.CategoryReference.builder().id(getId()).build();
+      }
+  Channel:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Channel>, com.commercetools.api.models.Referencable<Channel>, com.commercetools.api.models.ResourceIdentifiable<Channel>, com.commercetools.api.models.Customizable<Channel>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.channel.ChannelResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.channel.ChannelReference.builder().id(getId()).build();
+      }
+  CustomObject:
+    (java-extends): 'com.commercetools.api.models.DomainResource<CustomObject>, com.commercetools.api.models.Referencable<CustomObject>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.custom_object.CustomObjectReference.builder().id(getId()).build();
+      }
+  Customer:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Customer>, com.commercetools.api.models.Referencable<Customer>, com.commercetools.api.models.ResourceIdentifiable<Customer>, com.commercetools.api.models.Customizable<Customer>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.customer.CustomerResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.customer.CustomerReference.builder().id(getId()).build();
+      }
+  CustomerGroup:
+    (java-extends): 'com.commercetools.api.models.DomainResource<CustomerGroup>, com.commercetools.api.models.Referencable<CustomerGroup>, com.commercetools.api.models.ResourceIdentifiable<CustomerGroup>, com.commercetools.api.models.Customizable<CustomerGroup>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.customer_group.CustomerGroupReference.builder().id(getId()).build();
+      }
+  DiscountCode:
+    (java-extends): 'com.commercetools.api.models.DomainResource<DiscountCode>, com.commercetools.api.models.Referencable<DiscountCode>, com.commercetools.api.models.ResourceIdentifiable<DiscountCode>, com.commercetools.api.models.Customizable<DiscountCode>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.discount_code.DiscountCodeReference.builder().id(getId()).build();
+      }
+  Order:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Order>, com.commercetools.api.models.Referencable<Order>, com.commercetools.api.models.ResourceIdentifiable<Order>, com.commercetools.api.models.Customizable<Order>, com.commercetools.api.models.order.OrderLike<Order>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.order.OrderResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.order.OrderReference.builder().id(getId()).build();
+      }
+  OrderEdit:
+    (java-extends): 'com.commercetools.api.models.DomainResource<OrderEdit>, com.commercetools.api.models.Referencable<OrderEdit>, com.commercetools.api.models.ResourceIdentifiable<OrderEdit>, com.commercetools.api.models.Customizable<OrderEdit>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.order_edit.OrderEditResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.order_edit.OrderEditReference.builder().id(getId()).build();
+      }
+  Payment:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Payment>, com.commercetools.api.models.Referencable<Payment>, com.commercetools.api.models.ResourceIdentifiable<Payment>, com.commercetools.api.models.Customizable<Payment>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.payment.PaymentResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.payment.PaymentReference.builder().id(getId()).build();
+      }
+  Product:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Product>, com.commercetools.api.models.Referencable<Product>, com.commercetools.api.models.ResourceIdentifiable<Product>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.product.ProductResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.product.ProductReference.builder().id(getId()).build();
+      }
+  ProductDiscount:
+    (java-extends): 'com.commercetools.api.models.DomainResource<ProductDiscount>, com.commercetools.api.models.Referencable<ProductDiscount>, com.commercetools.api.models.ResourceIdentifiable<ProductDiscount>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.product_discount.ProductDiscountReference.builder().id(getId()).build();
+      }
+  ProductType:
+    (java-extends): 'com.commercetools.api.models.DomainResource<ProductType>, com.commercetools.api.models.Referencable<ProductType>, com.commercetools.api.models.ResourceIdentifiable<ProductType>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.product_type.ProductTypeResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.product_type.ProductTypeReference.builder().id(getId()).build();
+      }
+  Review:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Review>, com.commercetools.api.models.Referencable<Review>, com.commercetools.api.models.ResourceIdentifiable<Review>, com.commercetools.api.models.Customizable<Review>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.review.ReviewResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.review.ReviewReference.builder().id(getId()).build();
+      }
+  ShippingMethod:
+    (java-extends): 'com.commercetools.api.models.DomainResource<ShippingMethod>, com.commercetools.api.models.Referencable<ShippingMethod>, com.commercetools.api.models.ResourceIdentifiable<ShippingMethod>, com.commercetools.api.models.Customizable<ShippingMethod>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.shipping_method.ShippingMethodReference.builder().id(getId()).build();
+      }
+  ShoppingList:
+    (java-extends): 'com.commercetools.api.models.DomainResource<ShoppingList>, com.commercetools.api.models.Referencable<ShoppingList>, com.commercetools.api.models.ResourceIdentifiable<ShoppingList>, com.commercetools.api.models.Customizable<ShoppingList>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.shopping_list.ShoppingListReference.builder().id(getId()).build();
+      }
+  State:
+    (java-extends): 'com.commercetools.api.models.DomainResource<State>, com.commercetools.api.models.Referencable<State>, com.commercetools.api.models.ResourceIdentifiable<State>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.state.StateResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.state.StateReference.builder().id(getId()).build();
+      }
+  Store:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Store>, com.commercetools.api.models.Referencable<Store>, com.commercetools.api.models.ResourceIdentifiable<Store>, com.commercetools.api.models.Customizable<Store>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.store.StoreResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.store.StoreReference.builder().id(getId()).build();
+      }
+  TaxCategory:
+    (java-extends): 'com.commercetools.api.models.DomainResource<TaxCategory>, com.commercetools.api.models.Referencable<TaxCategory>, com.commercetools.api.models.ResourceIdentifiable<TaxCategory>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.tax_category.TaxCategoryReference.builder().id(getId()).build();
+      }
+  Type:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Type>, com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.type.TypeResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.type.TypeReference.builder().id(getId()).build();
+      }
+  Zone:
+    (java-extends): 'com.commercetools.api.models.DomainResource<Zone>, com.commercetools.api.models.Referencable<Zone>, com.commercetools.api.models.ResourceIdentifiable<Zone>'
+    (java-mixin): |
+      @Override
+      public default com.commercetools.api.models.common.ResourceIdentifier toResourceIdentifier() {
+          return com.commercetools.api.models.zone.ZoneResourceIdentifier.builder().id(getId()).build();
+      }
+      @Override
+      public default com.commercetools.api.models.common.Reference toReference() {
+          return com.commercetools.api.models.zone.ZoneReference.builder().id(getId()).build();
+      }
+  CentPrecisionMoney:
+    (java-mixin): |
+      public static CentPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount) {
+          return MoneyUtil.of(monetaryAmount);
+      }
+      public default CentPrecisionMoneyDraft toDraft() {
+          return CentPrecisionMoneyDraft.of(this);
+      }
+  CentPrecisionMoneyDraft:
+    (java-mixin): |
+      public static CentPrecisionMoneyDraft of(final javax.money.MonetaryAmount monetaryAmount) {
+          return MoneyUtil.draftOf(monetaryAmount);
+      }
+      public static CentPrecisionMoneyDraft of(final CentPrecisionMoney template) {
+          CentPrecisionMoneyDraftImpl instance = new CentPrecisionMoneyDraftImpl();
+          instance.setCentAmount(template.getCentAmount());
+          instance.setCurrencyCode(template.getCurrencyCode());
+          instance.setFractionDigits(template.getFractionDigits());
+          return instance;
+      }
+  HighPrecisionMoney:
+    (java-mixin): |
+      public static HighPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
+          return MoneyUtil.of(monetaryAmount, fractionDigits);
+      }
+      public default HighPrecisionMoneyDraft toDraft() {
+          return HighPrecisionMoneyDraft.of(this);
+      }
+  HighPrecisionMoneyDraft:
+    (java-mixin): |
+      public static HighPrecisionMoneyDraft of(javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
+          return MoneyUtil.draftOf(monetaryAmount, fractionDigits);
+      }
+      public static HighPrecisionMoneyDraft of(final HighPrecisionMoney template) {
+          HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
+          instance.setCentAmount(template.getCentAmount());
+          instance.setCurrencyCode(template.getCurrencyCode());
+          instance.setFractionDigits(template.getFractionDigits());
+          instance.setPreciseAmount(template.getPreciseAmount());
+          return instance;
+      }
+  Money:
+    (java-mixin): |
+      public default TypedMoneyDraft toDraft() {
+          if (this instanceof TypedMoneyDraft) {
+              return (TypedMoneyDraft) this;
+          }
+          return TypedMoneyDraft.centPrecisionBuilder()
+                  .centAmount(this.getCentAmount())
+                  .currencyCode(this.getCurrencyCode())
+                  .build();
+      }

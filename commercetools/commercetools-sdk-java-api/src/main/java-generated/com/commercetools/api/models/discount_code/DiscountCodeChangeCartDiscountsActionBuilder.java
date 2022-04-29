@@ -18,12 +18,18 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
         return this;
     }
 
-    public DiscountCodeChangeCartDiscountsActionBuilder withCartDiscounts(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
-        this.cartDiscounts = new ArrayList<>();
-        this.cartDiscounts.add(
-            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
-                    .build());
+    public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
+            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
+        this.cartDiscounts = cartDiscounts;
+        return this;
+    }
+
+    public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
+            final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
+        if (this.cartDiscounts == null) {
+            this.cartDiscounts = new ArrayList<>();
+        }
+        this.cartDiscounts.addAll(Arrays.asList(cartDiscounts));
         return this;
     }
 
@@ -38,9 +44,12 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
         return this;
     }
 
-    public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
-            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
-        this.cartDiscounts = cartDiscounts;
+    public DiscountCodeChangeCartDiscountsActionBuilder withCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
+        this.cartDiscounts = new ArrayList<>();
+        this.cartDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of())
+                    .build());
         return this;
     }
 

@@ -19,6 +19,9 @@ public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
 
     String CHANGE_TRIGGERS = "changeTriggers";
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("triggers")
@@ -49,5 +52,14 @@ public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
 
     default <T> T withExtensionChangeTriggersAction(Function<ExtensionChangeTriggersAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionChangeTriggersAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionChangeTriggersAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionChangeTriggersAction>";
+            }
+        };
     }
 }

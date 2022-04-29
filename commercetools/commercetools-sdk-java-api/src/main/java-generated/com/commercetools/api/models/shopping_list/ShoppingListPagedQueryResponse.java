@@ -76,4 +76,13 @@ public interface ShoppingListPagedQueryResponse
     default <T> T withShoppingListPagedQueryResponse(Function<ShoppingListPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListPagedQueryResponse>";
+            }
+        };
+    }
 }

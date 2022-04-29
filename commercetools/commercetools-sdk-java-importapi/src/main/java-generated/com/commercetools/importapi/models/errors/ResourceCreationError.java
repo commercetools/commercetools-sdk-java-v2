@@ -43,4 +43,13 @@ public interface ResourceCreationError extends ErrorObject {
     default <T> T withResourceCreationError(Function<ResourceCreationError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ResourceCreationError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ResourceCreationError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ResourceCreationError>";
+            }
+        };
+    }
 }

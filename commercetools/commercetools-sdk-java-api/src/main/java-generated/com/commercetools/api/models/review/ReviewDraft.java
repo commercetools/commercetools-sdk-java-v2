@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReviewDraftImpl.class)
-public interface ReviewDraft {
+public interface ReviewDraft extends com.commercetools.api.models.CustomizableDraft<ReviewDraft> {
 
     /**
     *  <p>User-specific unique identifier for the review.</p>
@@ -137,5 +137,14 @@ public interface ReviewDraft {
 
     default <T> T withReviewDraft(Function<ReviewDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReviewDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReviewDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReviewDraft>";
+            }
+        };
     }
 }

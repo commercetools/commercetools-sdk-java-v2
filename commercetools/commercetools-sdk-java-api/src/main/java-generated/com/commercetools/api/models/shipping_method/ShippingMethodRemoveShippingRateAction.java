@@ -58,4 +58,13 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
             Function<ShippingMethodRemoveShippingRateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodRemoveShippingRateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodRemoveShippingRateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodRemoveShippingRateAction>";
+            }
+        };
+    }
 }

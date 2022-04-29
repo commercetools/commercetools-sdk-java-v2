@@ -40,4 +40,13 @@ public interface CategoryKeyReference extends KeyReference {
     default <T> T withCategoryKeyReference(Function<CategoryKeyReference, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategoryKeyReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategoryKeyReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategoryKeyReference>";
+            }
+        };
+    }
 }

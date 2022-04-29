@@ -96,4 +96,13 @@ public interface OperationStates {
     default <T> T withOperationStates(Function<OperationStates, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OperationStates> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OperationStates>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OperationStates>";
+            }
+        };
+    }
 }

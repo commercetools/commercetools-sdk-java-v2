@@ -57,6 +57,33 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
         return this;
     }
 
+    public OrderEditDraftBuilder plusStagedActions(
+            @Nullable final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
+        if (this.stagedActions == null) {
+            this.stagedActions = new ArrayList<>();
+        }
+        this.stagedActions.addAll(Arrays.asList(stagedActions));
+        return this;
+    }
+
+    public OrderEditDraftBuilder plusStagedActions(
+            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+        if (this.stagedActions == null) {
+            this.stagedActions = new ArrayList<>();
+        }
+        this.stagedActions
+                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
+        return this;
+    }
+
+    public OrderEditDraftBuilder withStagedActions(
+            Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
+        this.stagedActions = new ArrayList<>();
+        this.stagedActions
+                .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
+        return this;
+    }
+
     public OrderEditDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();

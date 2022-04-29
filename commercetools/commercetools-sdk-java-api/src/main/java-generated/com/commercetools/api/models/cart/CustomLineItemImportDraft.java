@@ -21,7 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemImportDraftImpl.class)
-public interface CustomLineItemImportDraft {
+public interface CustomLineItemImportDraft
+        extends com.commercetools.api.models.CustomizableDraft<CustomLineItemImportDraft> {
 
     @NotNull
     @Valid
@@ -120,5 +121,14 @@ public interface CustomLineItemImportDraft {
 
     default <T> T withCustomLineItemImportDraft(Function<CustomLineItemImportDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomLineItemImportDraft>";
+            }
+        };
     }
 }

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListReferenceImpl.class)
-public interface ShoppingListReference extends Reference {
+public interface ShoppingListReference extends Reference, com.commercetools.api.models.Identifiable<ShoppingList> {
 
     String SHOPPING_LIST = "shopping-list";
 
@@ -46,5 +46,14 @@ public interface ShoppingListReference extends Reference {
 
     default <T> T withShoppingListReference(Function<ShoppingListReference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListReference>";
+            }
+        };
     }
 }

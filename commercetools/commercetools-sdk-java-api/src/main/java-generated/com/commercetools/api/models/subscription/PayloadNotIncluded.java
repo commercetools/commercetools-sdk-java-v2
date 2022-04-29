@@ -50,4 +50,13 @@ public interface PayloadNotIncluded {
     default <T> T withPayloadNotIncluded(Function<PayloadNotIncluded, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PayloadNotIncluded> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PayloadNotIncluded>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PayloadNotIncluded>";
+            }
+        };
+    }
 }

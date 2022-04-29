@@ -18,14 +18,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExtensionDraft {
 
     /**
-    *  <p>User-specific unique identifier for the extension</p>
+    *  <p>User-defined unique identifier for the Extension.
+    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Details where the extension can be reached</p>
+    *  <p>Defines where the Extension can be reached.</p>
     */
     @NotNull
     @Valid
@@ -33,7 +34,7 @@ public interface ExtensionDraft {
     public ExtensionDestination getDestination();
 
     /**
-    *  <p>Describes what triggers the extension</p>
+    *  <p>Describes what triggers the Extension.</p>
     */
     @NotNull
     @Valid
@@ -41,10 +42,11 @@ public interface ExtensionDraft {
     public List<ExtensionTrigger> getTriggers();
 
     /**
-    *  <p>The maximum time the commercetools platform waits for a response from the extension.
-    *  The maximum value is 2000 ms (2 seconds).
-    *  This limit can be increased per project after we review the performance impact.
-    *  Please contact Support via the <a href="https://support.commercetools.com">Support Portal</a> and provide the region, project key and use case.</p>
+    *  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension.
+    *  If no timeout is provided, the default value is used for all types of Extensions.
+    *  The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+    *  <p>This limit can be increased per Project after we review the performance impact.
+    *  Please contact our support via the <a href="https://support.commercetools.com">support portal</a> and provide the Region, Project key, and use case.</p>
     */
 
     @JsonProperty("timeoutInMs")
@@ -84,5 +86,14 @@ public interface ExtensionDraft {
 
     default <T> T withExtensionDraft(Function<ExtensionDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionDraft>";
+            }
+        };
     }
 }

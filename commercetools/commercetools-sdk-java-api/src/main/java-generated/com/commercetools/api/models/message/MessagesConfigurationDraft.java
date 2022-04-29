@@ -12,14 +12,23 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Defines the configuration for the <a href="/../api/projects/messages">Messages Query</a> feature for the Project.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MessagesConfigurationDraftImpl.class)
 public interface MessagesConfigurationDraft {
 
+    /**
+    *  <p>Setting to <code>true</code> activates the <a href="/../api/projects/messages">Messages Query</a> feature.</p>
+    */
     @NotNull
     @JsonProperty("enabled")
     public Boolean getEnabled();
 
+    /**
+    *  <p>Specifies the number of days each Message should be available via the <a href="/../api/projects/messages">Messages Query</a> API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+    */
     @NotNull
     @JsonProperty("deleteDaysAfterCreation")
     public Integer getDeleteDaysAfterCreation();
@@ -49,5 +58,14 @@ public interface MessagesConfigurationDraft {
 
     default <T> T withMessagesConfigurationDraft(Function<MessagesConfigurationDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MessagesConfigurationDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MessagesConfigurationDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MessagesConfigurationDraft>";
+            }
+        };
     }
 }

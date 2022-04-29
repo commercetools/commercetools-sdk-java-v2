@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TransactionImpl.class)
-public interface Transaction {
+public interface Transaction extends com.commercetools.api.models.Customizable<Transaction> {
 
     /**
     *  <p>The unique ID of this object.</p>
@@ -108,5 +108,14 @@ public interface Transaction {
 
     default <T> T withTransaction(Function<Transaction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Transaction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Transaction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Transaction>";
+            }
+        };
     }
 }

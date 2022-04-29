@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StateResourceIdentifierImpl.class)
-public interface StateResourceIdentifier extends ResourceIdentifier {
+public interface StateResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<State> {
 
     String STATE = "state";
 
@@ -59,5 +59,14 @@ public interface StateResourceIdentifier extends ResourceIdentifier {
 
     default <T> T withStateResourceIdentifier(Function<StateResourceIdentifier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateResourceIdentifier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateResourceIdentifier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateResourceIdentifier>";
+            }
+        };
     }
 }

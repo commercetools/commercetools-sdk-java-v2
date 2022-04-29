@@ -76,4 +76,13 @@ public interface SetTransitionsChange extends Change {
     default <T> T withSetTransitionsChange(Function<SetTransitionsChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetTransitionsChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetTransitionsChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetTransitionsChange>";
+            }
+        };
+    }
 }

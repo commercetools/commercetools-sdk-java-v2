@@ -22,9 +22,9 @@ public interface CentPrecisionMoney extends TypedMoney {
 
     public static CentPrecisionMoney of(final CentPrecisionMoney template) {
         CentPrecisionMoneyImpl instance = new CentPrecisionMoneyImpl();
-        instance.setFractionDigits(template.getFractionDigits());
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setFractionDigits(template.getFractionDigits());
         return instance;
     }
 
@@ -38,5 +38,14 @@ public interface CentPrecisionMoney extends TypedMoney {
 
     default <T> T withCentPrecisionMoney(Function<CentPrecisionMoney, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoney> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoney>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CentPrecisionMoney>";
+            }
+        };
     }
 }

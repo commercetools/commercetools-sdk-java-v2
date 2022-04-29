@@ -49,12 +49,18 @@ public class ProductsInStorePagedQueryResponseBuilder implements Builder<Product
         return this;
     }
 
-    public ProductsInStorePagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder, com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(
-            builder.apply(com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder.of())
-                    .build());
+    public ProductsInStorePagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.product_selection.ProductSelectionAssignment> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ProductsInStorePagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.product_selection.ProductSelectionAssignment... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -69,9 +75,12 @@ public class ProductsInStorePagedQueryResponseBuilder implements Builder<Product
         return this;
     }
 
-    public ProductsInStorePagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.product_selection.ProductSelectionAssignment> results) {
-        this.results = results;
+    public ProductsInStorePagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder, com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(
+            builder.apply(com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder.of())
+                    .build());
         return this;
     }
 

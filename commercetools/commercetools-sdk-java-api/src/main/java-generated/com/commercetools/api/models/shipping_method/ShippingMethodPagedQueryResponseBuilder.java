@@ -51,11 +51,18 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
         return this;
     }
 
-    public ShippingMethodPagedQueryResponseBuilder withResults(
-            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results
-                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
+    public ShippingMethodPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ShippingMethodPagedQueryResponseBuilder plusResults(
+            final com.commercetools.api.models.shipping_method.ShippingMethod... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -69,9 +76,11 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
         return this;
     }
 
-    public ShippingMethodPagedQueryResponseBuilder results(
-            final java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results) {
-        this.results = results;
+    public ShippingMethodPagedQueryResponseBuilder withResults(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results
+                .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build());
         return this;
     }
 

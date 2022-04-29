@@ -70,4 +70,13 @@ public interface MissingImagesTaskStatus {
     default <T> T withMissingImagesTaskStatus(Function<MissingImagesTaskStatus, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingImagesTaskStatus> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingImagesTaskStatus>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingImagesTaskStatus>";
+            }
+        };
+    }
 }

@@ -45,4 +45,13 @@ public interface ProductDiscountValueRelative extends ProductDiscountValue {
     default <T> T withProductDiscountValueRelative(Function<ProductDiscountValueRelative, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueRelative> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueRelative>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountValueRelative>";
+            }
+        };
+    }
 }

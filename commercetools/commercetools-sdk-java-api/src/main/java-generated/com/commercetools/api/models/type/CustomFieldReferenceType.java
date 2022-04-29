@@ -7,23 +7,28 @@ import java.util.function.Function;
 
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.ReferenceTypeId;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Field type for <a href="ctp:api:type:Reference">Reference</a> values.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldReferenceTypeImpl.class)
 public interface CustomFieldReferenceType extends FieldType {
 
     String REFERENCE = "Reference";
 
+    /**
+    *  <p>Resource type the Custom Field can reference.</p>
+    */
     @NotNull
     @JsonProperty("referenceTypeId")
-    public ReferenceTypeId getReferenceTypeId();
+    public CustomFieldReferenceValue getReferenceTypeId();
 
-    public void setReferenceTypeId(final ReferenceTypeId referenceTypeId);
+    public void setReferenceTypeId(final CustomFieldReferenceValue referenceTypeId);
 
     public static CustomFieldReferenceType of() {
         return new CustomFieldReferenceTypeImpl();
@@ -45,5 +50,14 @@ public interface CustomFieldReferenceType extends FieldType {
 
     default <T> T withCustomFieldReferenceType(Function<CustomFieldReferenceType, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldReferenceType> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldReferenceType>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFieldReferenceType>";
+            }
+        };
     }
 }

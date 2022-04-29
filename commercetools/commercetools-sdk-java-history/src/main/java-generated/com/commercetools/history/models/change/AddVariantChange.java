@@ -77,4 +77,13 @@ public interface AddVariantChange extends Change {
     default <T> T withAddVariantChange(Function<AddVariantChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddVariantChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddVariantChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddVariantChange>";
+            }
+        };
+    }
 }

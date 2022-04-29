@@ -15,7 +15,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
 
     private String lineItemId;
 
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private com.commercetools.api.models.common.Money externalPrice;
@@ -28,7 +28,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
         return this;
     }
 
-    public StagedOrderChangeLineItemQuantityActionBuilder quantity(final Double quantity) {
+    public StagedOrderChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -63,7 +63,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
         return this.lineItemId;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

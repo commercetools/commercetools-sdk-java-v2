@@ -45,4 +45,13 @@ public interface CartDiscountLineItemsTarget extends CartDiscountTarget {
     default <T> T withCartDiscountLineItemsTarget(Function<CartDiscountLineItemsTarget, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountLineItemsTarget> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountLineItemsTarget>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountLineItemsTarget>";
+            }
+        };
+    }
 }

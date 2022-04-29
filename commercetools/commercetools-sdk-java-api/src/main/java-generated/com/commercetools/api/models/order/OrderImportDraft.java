@@ -17,6 +17,7 @@ import com.commercetools.api.models.cart.TaxedPriceDraft;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
@@ -26,7 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderImportDraftImpl.class)
-public interface OrderImportDraft {
+public interface OrderImportDraft extends com.commercetools.api.models.CustomizableDraft<OrderImportDraft> {
 
     /**
     *  <p>String that unique identifies an order.
@@ -109,6 +110,13 @@ public interface OrderImportDraft {
     @JsonProperty("orderState")
     public OrderState getOrderState();
 
+    /**
+    *  <p>This reference can point to a state in a custom workflow.</p>
+    */
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
 
@@ -121,6 +129,10 @@ public interface OrderImportDraft {
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfoImportDraft getShippingInfo();
+
+    @Valid
+    @JsonProperty("paymentInfo")
+    public PaymentInfo getPaymentInfo();
 
     @JsonProperty("completedAt")
     public ZonedDateTime getCompletedAt();
@@ -194,11 +206,15 @@ public interface OrderImportDraft {
 
     public void setOrderState(final OrderState orderState);
 
+    public void setState(final StateReference state);
+
     public void setShipmentState(final ShipmentState shipmentState);
 
     public void setPaymentState(final PaymentState paymentState);
 
     public void setShippingInfo(final ShippingInfoImportDraft shippingInfo);
+
+    public void setPaymentInfo(final PaymentInfo paymentInfo);
 
     public void setCompletedAt(final ZonedDateTime completedAt);
 
@@ -235,9 +251,11 @@ public interface OrderImportDraft {
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setCountry(template.getCountry());
         instance.setOrderState(template.getOrderState());
+        instance.setState(template.getState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
         instance.setShippingInfo(template.getShippingInfo());
+        instance.setPaymentInfo(template.getPaymentInfo());
         instance.setCompletedAt(template.getCompletedAt());
         instance.setCustom(template.getCustom());
         instance.setInventoryMode(template.getInventoryMode());
@@ -258,5 +276,14 @@ public interface OrderImportDraft {
 
     default <T> T withOrderImportDraft(Function<OrderImportDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderImportDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderImportDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderImportDraft>";
+            }
+        };
     }
 }

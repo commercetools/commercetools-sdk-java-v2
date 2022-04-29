@@ -58,4 +58,13 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
             Function<StagedOrderSetCustomLineItemTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemTaxAmountAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemTaxAmountAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetCustomLineItemTaxAmountAction>";
+            }
+        };
+    }
 }

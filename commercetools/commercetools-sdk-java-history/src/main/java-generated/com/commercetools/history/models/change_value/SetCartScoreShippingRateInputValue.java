@@ -53,4 +53,13 @@ public interface SetCartScoreShippingRateInputValue {
     default <T> T withSetCartScoreShippingRateInputValue(Function<SetCartScoreShippingRateInputValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCartScoreShippingRateInputValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCartScoreShippingRateInputValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCartScoreShippingRateInputValue>";
+            }
+        };
+    }
 }

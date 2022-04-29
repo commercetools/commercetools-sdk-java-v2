@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductReferenceImpl.class)
-public interface ProductReference extends Reference {
+public interface ProductReference extends Reference, com.commercetools.api.models.Identifiable<Product> {
 
     String PRODUCT = "product";
 
@@ -46,5 +46,14 @@ public interface ProductReference extends Reference {
 
     default <T> T withProductReference(Function<ProductReference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductReference>";
+            }
+        };
     }
 }

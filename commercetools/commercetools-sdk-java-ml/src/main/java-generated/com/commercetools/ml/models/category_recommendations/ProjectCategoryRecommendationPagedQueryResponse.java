@@ -80,4 +80,13 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
             Function<ProjectCategoryRecommendationPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendationPagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendationPagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectCategoryRecommendationPagedQueryResponse>";
+            }
+        };
+    }
 }

@@ -70,4 +70,13 @@ public interface ChangeQuantityChange extends Change {
     default <T> T withChangeQuantityChange(Function<ChangeQuantityChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeQuantityChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeQuantityChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeQuantityChange>";
+            }
+        };
+    }
 }

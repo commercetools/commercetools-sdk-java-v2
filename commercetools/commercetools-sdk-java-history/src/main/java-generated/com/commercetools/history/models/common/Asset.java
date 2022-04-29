@@ -75,4 +75,13 @@ public interface Asset {
     default <T> T withAsset(Function<Asset, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<Asset> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<Asset>() {
+            @Override
+            public String toString() {
+                return "TypeReference<Asset>";
+            }
+        };
+    }
 }

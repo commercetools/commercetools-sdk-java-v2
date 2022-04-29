@@ -122,4 +122,13 @@ public interface MissingImagesSearchRequest {
     default <T> T withMissingImagesSearchRequest(Function<MissingImagesSearchRequest, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingImagesSearchRequest> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingImagesSearchRequest>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingImagesSearchRequest>";
+            }
+        };
+    }
 }

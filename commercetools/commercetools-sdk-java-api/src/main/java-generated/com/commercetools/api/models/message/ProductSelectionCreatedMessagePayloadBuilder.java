@@ -2,6 +2,7 @@
 package com.commercetools.api.models.message;
 
 import java.util.*;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -14,6 +15,14 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
     public ProductSelectionCreatedMessagePayloadBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
         this.productSelection = productSelection;
+        return this;
+    }
+
+    public ProductSelectionCreatedMessagePayloadBuilder productSelection(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductSelectionType>> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder.of())
+                .build();
         return this;
     }
 

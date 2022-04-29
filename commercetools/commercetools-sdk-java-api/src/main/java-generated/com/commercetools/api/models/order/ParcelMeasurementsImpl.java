@@ -17,19 +17,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
 
-    private Double heightInMillimeter;
+    private Integer heightInMillimeter;
 
-    private Double lengthInMillimeter;
+    private Integer lengthInMillimeter;
 
-    private Double widthInMillimeter;
+    private Integer widthInMillimeter;
 
-    private Double weightInGram;
+    private Integer weightInGram;
 
     @JsonCreator
-    ParcelMeasurementsImpl(@JsonProperty("heightInMillimeter") final Double heightInMillimeter,
-            @JsonProperty("lengthInMillimeter") final Double lengthInMillimeter,
-            @JsonProperty("widthInMillimeter") final Double widthInMillimeter,
-            @JsonProperty("weightInGram") final Double weightInGram) {
+    ParcelMeasurementsImpl(@JsonProperty("heightInMillimeter") final Integer heightInMillimeter,
+            @JsonProperty("lengthInMillimeter") final Integer lengthInMillimeter,
+            @JsonProperty("widthInMillimeter") final Integer widthInMillimeter,
+            @JsonProperty("weightInGram") final Integer weightInGram) {
         this.heightInMillimeter = heightInMillimeter;
         this.lengthInMillimeter = lengthInMillimeter;
         this.widthInMillimeter = widthInMillimeter;
@@ -39,35 +39,35 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
     public ParcelMeasurementsImpl() {
     }
 
-    public Double getHeightInMillimeter() {
+    public Integer getHeightInMillimeter() {
         return this.heightInMillimeter;
     }
 
-    public Double getLengthInMillimeter() {
+    public Integer getLengthInMillimeter() {
         return this.lengthInMillimeter;
     }
 
-    public Double getWidthInMillimeter() {
+    public Integer getWidthInMillimeter() {
         return this.widthInMillimeter;
     }
 
-    public Double getWeightInGram() {
+    public Integer getWeightInGram() {
         return this.weightInGram;
     }
 
-    public void setHeightInMillimeter(final Double heightInMillimeter) {
+    public void setHeightInMillimeter(final Integer heightInMillimeter) {
         this.heightInMillimeter = heightInMillimeter;
     }
 
-    public void setLengthInMillimeter(final Double lengthInMillimeter) {
+    public void setLengthInMillimeter(final Integer lengthInMillimeter) {
         this.lengthInMillimeter = lengthInMillimeter;
     }
 
-    public void setWidthInMillimeter(final Double widthInMillimeter) {
+    public void setWidthInMillimeter(final Integer widthInMillimeter) {
         this.widthInMillimeter = widthInMillimeter;
     }
 
-    public void setWeightInGram(final Double weightInGram) {
+    public void setWeightInGram(final Integer weightInGram) {
         this.weightInGram = weightInGram;
     }
 

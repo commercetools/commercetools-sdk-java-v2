@@ -18,10 +18,18 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
         return this;
     }
 
-    public PriceImportRequestBuilder withResources(
-            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
-        this.resources = new ArrayList<>();
-        this.resources.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
+    public PriceImportRequestBuilder resources(
+            final java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources) {
+        this.resources = resources;
+        return this;
+    }
+
+    public PriceImportRequestBuilder plusResources(
+            final com.commercetools.importapi.models.prices.PriceImport... resources) {
+        if (this.resources == null) {
+            this.resources = new ArrayList<>();
+        }
+        this.resources.addAll(Arrays.asList(resources));
         return this;
     }
 
@@ -34,9 +42,10 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
         return this;
     }
 
-    public PriceImportRequestBuilder resources(
-            final java.util.List<com.commercetools.importapi.models.prices.PriceImport> resources) {
-        this.resources = resources;
+    public PriceImportRequestBuilder withResources(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImportBuilder> builder) {
+        this.resources = new ArrayList<>();
+        this.resources.add(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()).build());
         return this;
     }
 

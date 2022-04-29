@@ -99,4 +99,13 @@ public interface CustomLineItem {
     default <T> T withCustomLineItem(Function<CustomLineItem, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItem> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItem>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomLineItem>";
+            }
+        };
+    }
 }

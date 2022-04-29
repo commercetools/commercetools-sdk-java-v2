@@ -18,12 +18,18 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
         return this;
     }
 
-    public ImportResponseBuilder withOperationStatus(
-            Function<com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder, com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder> builder) {
-        this.operationStatus = new ArrayList<>();
-        this.operationStatus.add(
-            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder.of())
-                    .build());
+    public ImportResponseBuilder operationStatus(
+            final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus) {
+        this.operationStatus = operationStatus;
+        return this;
+    }
+
+    public ImportResponseBuilder plusOperationStatus(
+            final com.commercetools.importapi.models.importoperations.ImportOperationStatus... operationStatus) {
+        if (this.operationStatus == null) {
+            this.operationStatus = new ArrayList<>();
+        }
+        this.operationStatus.addAll(Arrays.asList(operationStatus));
         return this;
     }
 
@@ -38,9 +44,12 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
         return this;
     }
 
-    public ImportResponseBuilder operationStatus(
-            final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus) {
-        this.operationStatus = operationStatus;
+    public ImportResponseBuilder withOperationStatus(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder, com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder> builder) {
+        this.operationStatus = new ArrayList<>();
+        this.operationStatus.add(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder.of())
+                    .build());
         return this;
     }
 

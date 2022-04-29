@@ -25,6 +25,10 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("money")
@@ -58,5 +62,14 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
     default <T> T withStagedOrderChangeCustomLineItemMoneyAction(
             Function<StagedOrderChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeCustomLineItemMoneyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeCustomLineItemMoneyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderChangeCustomLineItemMoneyAction>";
+            }
+        };
     }
 }

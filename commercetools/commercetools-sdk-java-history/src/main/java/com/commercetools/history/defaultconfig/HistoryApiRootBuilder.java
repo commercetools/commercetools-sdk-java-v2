@@ -3,6 +3,7 @@ package com.commercetools.history.defaultconfig;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -200,13 +201,13 @@ public class HistoryApiRootBuilder {
         return this;
     }
 
-    public HistoryApiRootBuilder withRetryMiddleware(Supplier<RetryMiddleware> retryMiddleware) {
+    public HistoryApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;
     }
 
-    public HistoryApiRootBuilder withRetryMiddleware(RetryMiddleware retryMiddleware) {
+    public HistoryApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;
@@ -220,6 +221,28 @@ public class HistoryApiRootBuilder {
 
     public HistoryApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
         builder.withRetryMiddleware(maxRetries, statusCodes);
+
+        return this;
+    }
+
+    public HistoryApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
+            final List<Class<? extends Throwable>> failures) {
+        builder.withRetryMiddleware(maxRetries, statusCodes, failures);
+
+        return this;
+    }
+
+    public HistoryApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        builder.withRetryMiddleware(maxRetries, delay, maxDelay, statusCodes, failures, fn);
+
+        return this;
+    }
+
+    public HistoryApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            final FailsafeRetryPolicyBuilderOptions fn) {
+        builder.withRetryMiddleware(maxRetries, delay, maxDelay, fn);
 
         return this;
     }
@@ -263,6 +286,15 @@ public class HistoryApiRootBuilder {
     public HistoryApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
             final Level responseLogEvent, final Level deprecationLogEvent) {
         builder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent, deprecationLogEvent);
+
+        return this;
+    }
+
+    public HistoryApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents) {
+        builder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent, deprecationLogEvent,
+            defaultExceptionLogEvent, exceptionLogEvents);
 
         return this;
     }

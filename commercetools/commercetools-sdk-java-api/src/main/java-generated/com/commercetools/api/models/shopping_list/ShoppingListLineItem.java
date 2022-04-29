@@ -20,12 +20,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListLineItemImpl.class)
-public interface ShoppingListLineItem {
+public interface ShoppingListLineItem extends com.commercetools.api.models.Customizable<ShoppingListLineItem> {
 
     @NotNull
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
@@ -118,5 +121,14 @@ public interface ShoppingListLineItem {
 
     default <T> T withShoppingListLineItem(Function<ShoppingListLineItem, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItem> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListLineItem>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListLineItem>";
+            }
+        };
     }
 }

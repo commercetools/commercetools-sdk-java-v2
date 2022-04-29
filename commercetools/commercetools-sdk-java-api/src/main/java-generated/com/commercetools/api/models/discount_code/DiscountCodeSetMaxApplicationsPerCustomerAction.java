@@ -49,4 +49,13 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
             Function<DiscountCodeSetMaxApplicationsPerCustomerAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsPerCustomerAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetMaxApplicationsPerCustomerAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<DiscountCodeSetMaxApplicationsPerCustomerAction>";
+            }
+        };
+    }
 }

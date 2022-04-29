@@ -65,4 +65,13 @@ public interface CategorySlugChangedMessage extends Message {
     default <T> T withCategorySlugChangedMessage(Function<CategorySlugChangedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySlugChangedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySlugChangedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySlugChangedMessage>";
+            }
+        };
+    }
 }

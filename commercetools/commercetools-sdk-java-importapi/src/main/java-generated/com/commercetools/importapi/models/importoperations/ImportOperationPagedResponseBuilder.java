@@ -46,11 +46,18 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
         return this;
     }
 
-    public ImportOperationPagedResponseBuilder withResults(
-            Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {
-        this.results = new ArrayList<>();
-        this.results.add(
-            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationBuilder.of()).build());
+    public ImportOperationPagedResponseBuilder results(
+            final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results) {
+        this.results = results;
+        return this;
+    }
+
+    public ImportOperationPagedResponseBuilder plusResults(
+            final com.commercetools.importapi.models.importoperations.ImportOperation... results) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.addAll(Arrays.asList(results));
         return this;
     }
 
@@ -64,9 +71,11 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
         return this;
     }
 
-    public ImportOperationPagedResponseBuilder results(
-            final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results) {
-        this.results = results;
+    public ImportOperationPagedResponseBuilder withResults(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {
+        this.results = new ArrayList<>();
+        this.results.add(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationBuilder.of()).build());
         return this;
     }
 

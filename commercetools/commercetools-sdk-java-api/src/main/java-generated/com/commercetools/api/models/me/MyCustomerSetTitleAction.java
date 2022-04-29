@@ -42,4 +42,13 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
     default <T> T withMyCustomerSetTitleAction(Function<MyCustomerSetTitleAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetTitleAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerSetTitleAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MyCustomerSetTitleAction>";
+            }
+        };
+    }
 }

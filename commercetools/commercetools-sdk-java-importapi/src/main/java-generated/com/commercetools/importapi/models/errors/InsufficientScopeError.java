@@ -37,4 +37,13 @@ public interface InsufficientScopeError extends ErrorObject {
     default <T> T withInsufficientScopeError(Function<InsufficientScopeError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<InsufficientScopeError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<InsufficientScopeError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<InsufficientScopeError>";
+            }
+        };
+    }
 }

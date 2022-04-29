@@ -56,4 +56,13 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
     default <T> T withStagedOrderSetLineItemTaxRateAction(Function<StagedOrderSetLineItemTaxRateAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemTaxRateAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemTaxRateAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetLineItemTaxRateAction>";
+            }
+        };
+    }
 }

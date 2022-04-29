@@ -66,4 +66,13 @@ public interface SetRatingChange extends Change {
     default <T> T withSetRatingChange(Function<SetRatingChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetRatingChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetRatingChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetRatingChange>";
+            }
+        };
+    }
 }

@@ -42,4 +42,13 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
     default <T> T withOrderSetLocaleAction(Function<OrderSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetLocaleAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetLocaleAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetLocaleAction>";
+            }
+        };
+    }
 }

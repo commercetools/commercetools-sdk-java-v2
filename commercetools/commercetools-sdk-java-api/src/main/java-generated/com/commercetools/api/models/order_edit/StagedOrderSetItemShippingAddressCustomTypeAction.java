@@ -26,10 +26,17 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     @JsonProperty("addressKey")
     public String getAddressKey();
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the <code>itemShippingAddress</code> with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the <code>itemShippingAddress</code>.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -65,5 +72,14 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     default <T> T withStagedOrderSetItemShippingAddressCustomTypeAction(
             Function<StagedOrderSetItemShippingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetItemShippingAddressCustomTypeAction>";
+            }
+        };
     }
 }

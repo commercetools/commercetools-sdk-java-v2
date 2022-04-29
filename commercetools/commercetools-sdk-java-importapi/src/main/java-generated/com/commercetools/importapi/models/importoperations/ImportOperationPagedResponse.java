@@ -95,4 +95,13 @@ public interface ImportOperationPagedResponse {
     default <T> T withImportOperationPagedResponse(Function<ImportOperationPagedResponse, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ImportOperationPagedResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ImportOperationPagedResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ImportOperationPagedResponse>";
+            }
+        };
+    }
 }

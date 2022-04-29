@@ -41,10 +41,18 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
         return this;
     }
 
-    public TransitionCustomLineItemStateChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
+    public TransitionCustomLineItemStateChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.ItemState> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    public TransitionCustomLineItemStateChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.ItemState... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 
@@ -57,9 +65,10 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
         return this;
     }
 
-    public TransitionCustomLineItemStateChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.ItemState> nextValue) {
-        this.nextValue = nextValue;
+    public TransitionCustomLineItemStateChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
         return this;
     }
 
@@ -69,10 +78,18 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
         return this;
     }
 
-    public TransitionCustomLineItemStateChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
-        this.previousValue = new ArrayList<>();
-        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
+    public TransitionCustomLineItemStateChangeBuilder previousValue(
+            final java.util.List<com.commercetools.history.models.common.ItemState> previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    public TransitionCustomLineItemStateChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.ItemState... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
         return this;
     }
 
@@ -85,9 +102,10 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
         return this;
     }
 
-    public TransitionCustomLineItemStateChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.ItemState> previousValue) {
-        this.previousValue = previousValue;
+    public TransitionCustomLineItemStateChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
+        this.previousValue = new ArrayList<>();
+        this.previousValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
         return this;
     }
 

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>If a language is used by a <a href="ctp:api:type:Store">Store</a>, it cannot be deleted. Attempts to delete such language will lead to <a href="/../api/errors#projects-400-language-used-in-stores">LanguageUsedInStores</a> errors.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesAction, ModelBase {
 
@@ -36,7 +39,7 @@ public class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesA
     }
 
     /**
-    *  <p>.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     public java.util.List<String> getLanguages() {
         return this.languages;

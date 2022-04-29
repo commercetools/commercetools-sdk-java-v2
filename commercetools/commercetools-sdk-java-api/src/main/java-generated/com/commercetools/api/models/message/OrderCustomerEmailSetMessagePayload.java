@@ -49,4 +49,13 @@ public interface OrderCustomerEmailSetMessagePayload extends OrderMessagePayload
     default <T> T withOrderCustomerEmailSetMessagePayload(Function<OrderCustomerEmailSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerEmailSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerEmailSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderCustomerEmailSetMessagePayload>";
+            }
+        };
+    }
 }

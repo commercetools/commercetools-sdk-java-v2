@@ -52,4 +52,13 @@ public interface ParcelMeasurementDraft {
     default <T> T withParcelMeasurementDraft(Function<ParcelMeasurementDraft, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ParcelMeasurementDraft>";
+            }
+        };
+    }
 }

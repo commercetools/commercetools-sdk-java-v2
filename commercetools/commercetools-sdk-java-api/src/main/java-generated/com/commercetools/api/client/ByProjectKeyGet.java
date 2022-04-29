@@ -13,9 +13,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-/**
-*  <p>The Endpoint is responding a limited set of information about settings and configuration of the project.</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyGet extends ApiMethod<ByProjectKeyGet, com.commercetools.api.models.project.Project>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyGet>,
@@ -34,7 +31,7 @@ public class ByProjectKeyGet extends ApiMethod<ByProjectKeyGet, com.commercetool
     }
 
     @Override
-    public ApiHttpRequest createHttpRequest() {
+    protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s", this.projectKey);
         if (!params.isEmpty()) {

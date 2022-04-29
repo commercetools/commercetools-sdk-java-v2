@@ -54,4 +54,13 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
     default <T> T withProductChangeMasterVariantAction(Function<ProductChangeMasterVariantAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeMasterVariantAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeMasterVariantAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductChangeMasterVariantAction>";
+            }
+        };
+    }
 }

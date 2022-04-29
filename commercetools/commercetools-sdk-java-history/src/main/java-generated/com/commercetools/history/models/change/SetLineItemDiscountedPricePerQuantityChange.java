@@ -89,4 +89,13 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
             Function<SetLineItemDiscountedPricePerQuantityChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemDiscountedPricePerQuantityChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemDiscountedPricePerQuantityChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetLineItemDiscountedPricePerQuantityChange>";
+            }
+        };
+    }
 }

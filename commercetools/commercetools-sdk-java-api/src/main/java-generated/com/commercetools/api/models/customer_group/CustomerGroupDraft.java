@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupDraftImpl.class)
-public interface CustomerGroupDraft {
+public interface CustomerGroupDraft extends com.commercetools.api.models.CustomizableDraft<CustomerGroupDraft> {
 
     /**
     *  <p>User-defined unique identifier for the Customer Group.
@@ -69,5 +69,14 @@ public interface CustomerGroupDraft {
 
     default <T> T withCustomerGroupDraft(Function<CustomerGroupDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupDraft>";
+            }
+        };
     }
 }

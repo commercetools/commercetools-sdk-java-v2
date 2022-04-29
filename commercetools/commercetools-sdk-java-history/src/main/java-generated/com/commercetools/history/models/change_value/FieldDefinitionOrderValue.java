@@ -56,4 +56,13 @@ public interface FieldDefinitionOrderValue {
     default <T> T withFieldDefinitionOrderValue(Function<FieldDefinitionOrderValue, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<FieldDefinitionOrderValue> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<FieldDefinitionOrderValue>() {
+            @Override
+            public String toString() {
+                return "TypeReference<FieldDefinitionOrderValue>";
+            }
+        };
+    }
 }

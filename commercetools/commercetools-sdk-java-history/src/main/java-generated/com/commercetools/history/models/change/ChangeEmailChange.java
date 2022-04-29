@@ -66,4 +66,13 @@ public interface ChangeEmailChange extends Change {
     default <T> T withChangeEmailChange(Function<ChangeEmailChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeEmailChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeEmailChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeEmailChange>";
+            }
+        };
+    }
 }

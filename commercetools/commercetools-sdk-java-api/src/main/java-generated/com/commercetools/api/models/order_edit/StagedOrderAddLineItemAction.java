@@ -22,10 +22,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StagedOrderAddLineItemActionImpl.class)
-public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
+public interface StagedOrderAddLineItemAction
+        extends StagedOrderUpdateAction, com.commercetools.api.models.CustomizableDraft<StagedOrderAddLineItemAction> {
 
     String ADD_LINE_ITEM = "addLineItem";
 
+    /**
+    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
@@ -51,7 +55,7 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
     public String getSku();
 
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
@@ -63,6 +67,10 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @Valid
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
@@ -87,7 +95,7 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
 
     public void setSku(final String sku);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setAddedAt(final ZonedDateTime addedAt);
 
@@ -130,5 +138,14 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
 
     default <T> T withStagedOrderAddLineItemAction(Function<StagedOrderAddLineItemAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddLineItemAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddLineItemAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderAddLineItemAction>";
+            }
+        };
     }
 }

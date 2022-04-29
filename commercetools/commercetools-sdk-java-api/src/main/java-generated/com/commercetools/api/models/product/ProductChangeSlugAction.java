@@ -59,4 +59,13 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     default <T> T withProductChangeSlugAction(Function<ProductChangeSlugAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeSlugAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeSlugAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductChangeSlugAction>";
+            }
+        };
+    }
 }

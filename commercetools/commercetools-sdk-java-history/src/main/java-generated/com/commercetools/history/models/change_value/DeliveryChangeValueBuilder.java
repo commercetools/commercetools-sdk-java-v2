@@ -21,10 +21,17 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
         return this;
     }
 
-    public DeliveryChangeValueBuilder withItems(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
-        this.items = new ArrayList<>();
-        this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+    public DeliveryChangeValueBuilder items(
+            final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
+        this.items = items;
+        return this;
+    }
+
+    public DeliveryChangeValueBuilder plusItems(final com.commercetools.history.models.common.DeliveryItem... items) {
+        if (this.items == null) {
+            this.items = new ArrayList<>();
+        }
+        this.items.addAll(Arrays.asList(items));
         return this;
     }
 
@@ -37,9 +44,10 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
         return this;
     }
 
-    public DeliveryChangeValueBuilder items(
-            final java.util.List<com.commercetools.history.models.common.DeliveryItem> items) {
-        this.items = items;
+    public DeliveryChangeValueBuilder withItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.items = new ArrayList<>();
+        this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
     }
 
@@ -59,10 +67,17 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
         return this;
     }
 
-    public DeliveryChangeValueBuilder withParcels(
-            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.ParcelBuilder> builder) {
-        this.parcels = new ArrayList<>();
-        this.parcels.add(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()).build());
+    public DeliveryChangeValueBuilder parcels(
+            final java.util.List<com.commercetools.history.models.common.Parcel> parcels) {
+        this.parcels = parcels;
+        return this;
+    }
+
+    public DeliveryChangeValueBuilder plusParcels(final com.commercetools.history.models.common.Parcel... parcels) {
+        if (this.parcels == null) {
+            this.parcels = new ArrayList<>();
+        }
+        this.parcels.addAll(Arrays.asList(parcels));
         return this;
     }
 
@@ -75,9 +90,10 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
         return this;
     }
 
-    public DeliveryChangeValueBuilder parcels(
-            final java.util.List<com.commercetools.history.models.common.Parcel> parcels) {
-        this.parcels = parcels;
+    public DeliveryChangeValueBuilder withParcels(
+            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.ParcelBuilder> builder) {
+        this.parcels = new ArrayList<>();
+        this.parcels.add(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()).build());
         return this;
     }
 

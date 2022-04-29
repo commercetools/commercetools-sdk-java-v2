@@ -64,4 +64,13 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     default <T> T withOrderUpdateSyncInfoAction(Function<OrderUpdateSyncInfoAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderUpdateSyncInfoAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderUpdateSyncInfoAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderUpdateSyncInfoAction>";
+            }
+        };
+    }
 }

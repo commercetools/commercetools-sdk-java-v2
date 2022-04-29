@@ -43,4 +43,13 @@ public interface BaseResource {
     default <T> T withBaseResource(Function<BaseResource, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<BaseResource> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<BaseResource>() {
+            @Override
+            public String toString() {
+                return "TypeReference<BaseResource>";
+            }
+        };
+    }
 }

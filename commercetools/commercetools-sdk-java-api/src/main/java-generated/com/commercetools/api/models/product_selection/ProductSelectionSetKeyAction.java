@@ -46,4 +46,13 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
     default <T> T withProductSelectionSetKeyAction(Function<ProductSelectionSetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductSelectionSetKeyAction>";
+            }
+        };
+    }
 }

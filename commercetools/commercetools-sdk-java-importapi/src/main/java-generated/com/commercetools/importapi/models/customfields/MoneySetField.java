@@ -54,4 +54,13 @@ public interface MoneySetField extends CustomField {
     default <T> T withMoneySetField(Function<MoneySetField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MoneySetField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MoneySetField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MoneySetField>";
+            }
+        };
+    }
 }

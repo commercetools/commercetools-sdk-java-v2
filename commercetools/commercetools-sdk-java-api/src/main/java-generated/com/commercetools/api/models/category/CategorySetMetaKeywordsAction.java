@@ -46,4 +46,13 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
     default <T> T withCategorySetMetaKeywordsAction(Function<CategorySetMetaKeywordsAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CategorySetMetaKeywordsAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CategorySetMetaKeywordsAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CategorySetMetaKeywordsAction>";
+            }
+        };
+    }
 }

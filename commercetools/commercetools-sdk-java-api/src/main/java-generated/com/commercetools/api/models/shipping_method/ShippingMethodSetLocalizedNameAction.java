@@ -47,4 +47,13 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
     default <T> T withShippingMethodSetLocalizedNameAction(Function<ShippingMethodSetLocalizedNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetLocalizedNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetLocalizedNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShippingMethodSetLocalizedNameAction>";
+            }
+        };
+    }
 }

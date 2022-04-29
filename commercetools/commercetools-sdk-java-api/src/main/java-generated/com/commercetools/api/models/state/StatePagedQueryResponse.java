@@ -47,7 +47,7 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
     *  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
     *  This field is returned by default.
     *  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
-    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/contract#queries">limit</a>.</p>
+    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/limits#queries">limit</a>.</p>
     */
 
     @JsonProperty("total")
@@ -98,5 +98,14 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
 
     default <T> T withStatePagedQueryResponse(Function<StatePagedQueryResponse, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StatePagedQueryResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StatePagedQueryResponse>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StatePagedQueryResponse>";
+            }
+        };
     }
 }

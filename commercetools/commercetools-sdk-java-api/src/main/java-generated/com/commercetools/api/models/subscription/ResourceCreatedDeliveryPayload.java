@@ -56,4 +56,13 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
     default <T> T withResourceCreatedDeliveryPayload(Function<ResourceCreatedDeliveryPayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ResourceCreatedDeliveryPayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ResourceCreatedDeliveryPayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ResourceCreatedDeliveryPayload>";
+            }
+        };
+    }
 }

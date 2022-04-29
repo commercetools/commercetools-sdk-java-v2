@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.validation.Valid;
 
+import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -20,23 +21,23 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-    *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the CartDiscount with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
-    *  Sets the custom fields to this value.</p>
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the CartDiscount.</p>
     */
     @Valid
     @JsonProperty("fields")
-    public Object getFields();
+    public FieldContainer getFields();
 
     public void setType(final TypeResourceIdentifier type);
 
-    public void setFields(final Object fields);
+    public void setFields(final FieldContainer fields);
 
     public static CartDiscountSetCustomTypeAction of() {
         return new CartDiscountSetCustomTypeActionImpl();
@@ -59,5 +60,14 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
 
     default <T> T withCartDiscountSetCustomTypeAction(Function<CartDiscountSetCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartDiscountSetCustomTypeAction>";
+            }
+        };
     }
 }

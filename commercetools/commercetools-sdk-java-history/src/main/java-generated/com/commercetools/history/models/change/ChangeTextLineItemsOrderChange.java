@@ -73,4 +73,13 @@ public interface ChangeTextLineItemsOrderChange extends Change {
     default <T> T withChangeTextLineItemsOrderChange(Function<ChangeTextLineItemsOrderChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTextLineItemsOrderChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTextLineItemsOrderChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTextLineItemsOrderChange>";
+            }
+        };
+    }
 }

@@ -48,4 +48,13 @@ public interface NumberField extends CustomField {
     default <T> T withNumberField(Function<NumberField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<NumberField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<NumberField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<NumberField>";
+            }
+        };
+    }
 }

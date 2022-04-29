@@ -79,4 +79,13 @@ public interface SetParcelTrackingDataChange extends Change {
     default <T> T withSetParcelTrackingDataChange(Function<SetParcelTrackingDataChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetParcelTrackingDataChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetParcelTrackingDataChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetParcelTrackingDataChange>";
+            }
+        };
+    }
 }

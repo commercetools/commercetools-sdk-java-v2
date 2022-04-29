@@ -32,6 +32,15 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
         return this;
     }
 
+    public SetChannelRolesChangeBuilder plusPreviousValue(
+            final com.commercetools.history.models.common.ChannelRole... previousValue) {
+        if (this.previousValue == null) {
+            this.previousValue = new ArrayList<>();
+        }
+        this.previousValue.addAll(Arrays.asList(previousValue));
+        return this;
+    }
+
     public SetChannelRolesChangeBuilder nextValue(
             final com.commercetools.history.models.common.ChannelRole... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
@@ -41,6 +50,15 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     public SetChannelRolesChangeBuilder nextValue(
             final java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue) {
         this.nextValue = nextValue;
+        return this;
+    }
+
+    public SetChannelRolesChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.ChannelRole... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
         return this;
     }
 

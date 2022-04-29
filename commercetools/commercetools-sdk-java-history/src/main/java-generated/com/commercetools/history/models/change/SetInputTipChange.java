@@ -80,4 +80,13 @@ public interface SetInputTipChange extends Change {
     default <T> T withSetInputTipChange(Function<SetInputTipChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetInputTipChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetInputTipChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetInputTipChange>";
+            }
+        };
+    }
 }

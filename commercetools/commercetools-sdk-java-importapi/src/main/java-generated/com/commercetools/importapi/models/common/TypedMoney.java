@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.HighPrecisionMoneyImpl.class, name = HighPrecisionMoney.HIGH_PRECISION),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.MoneyImpl.class, name = Money.CENT_PRECISION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyImpl.class, visible = true)
+@JsonDeserialize(as = TypedMoneyImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface TypedMoney {
 
@@ -43,7 +44,24 @@ public interface TypedMoney {
 
     public void setCurrencyCode(final String currencyCode);
 
+    public static com.commercetools.importapi.models.common.HighPrecisionMoneyBuilder highPrecisionBuilder() {
+        return com.commercetools.importapi.models.common.HighPrecisionMoneyBuilder.of();
+    }
+
+    public static com.commercetools.importapi.models.common.MoneyBuilder centPrecisionBuilder() {
+        return com.commercetools.importapi.models.common.MoneyBuilder.of();
+    }
+
     default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypedMoney> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypedMoney>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypedMoney>";
+            }
+        };
     }
 }

@@ -91,6 +91,12 @@ public class PaymentCreatedMessageBuilder implements Builder<PaymentCreatedMessa
         return this;
     }
 
+    public PaymentCreatedMessageBuilder resource(
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
     public PaymentCreatedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;

@@ -43,11 +43,18 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
         return this;
     }
 
-    public ProductTypeDraftBuilder withAttributes(
-            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
-        this.attributes = new ArrayList<>();
-        this.attributes.add(
-            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()).build());
+    public ProductTypeDraftBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    public ProductTypeDraftBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
         return this;
     }
 
@@ -61,9 +68,11 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
         return this;
     }
 
-    public ProductTypeDraftBuilder attributes(
-            @Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes) {
-        this.attributes = attributes;
+    public ProductTypeDraftBuilder withAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(
+            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()).build());
         return this;
     }
 

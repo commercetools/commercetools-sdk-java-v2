@@ -135,4 +135,13 @@ public interface OrderField {
     default <T> T withOrderField(Function<OrderField, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderField> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderField>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderField>";
+            }
+        };
+    }
 }

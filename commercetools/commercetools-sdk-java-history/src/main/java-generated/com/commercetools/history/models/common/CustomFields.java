@@ -56,4 +56,13 @@ public interface CustomFields {
     default <T> T withCustomFields(Function<CustomFields, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomFields> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomFields>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomFields>";
+            }
+        };
+    }
 }

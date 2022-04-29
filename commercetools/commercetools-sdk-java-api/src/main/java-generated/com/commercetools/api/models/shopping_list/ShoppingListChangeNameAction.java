@@ -48,4 +48,13 @@ public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
     default <T> T withShoppingListChangeNameAction(Function<ShoppingListChangeNameAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeNameAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeNameAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListChangeNameAction>";
+            }
+        };
+    }
 }

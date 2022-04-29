@@ -70,4 +70,13 @@ public interface AddAssetChange extends Change {
     default <T> T withAddAssetChange(Function<AddAssetChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddAssetChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddAssetChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddAssetChange>";
+            }
+        };
+    }
 }

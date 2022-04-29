@@ -63,4 +63,13 @@ public interface CustomerGroupUpdate extends
     default <T> T withCustomerGroupUpdate(Function<CustomerGroupUpdate, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupUpdate> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupUpdate>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomerGroupUpdate>";
+            }
+        };
+    }
 }

@@ -20,6 +20,9 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
 
     String PAYMENT_INTERACTION_ADDED = "PaymentInteractionAdded";
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("interaction")
@@ -48,5 +51,14 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
 
     default <T> T withPaymentInteractionAddedMessagePayload(Function<PaymentInteractionAddedMessagePayload, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PaymentInteractionAddedMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PaymentInteractionAddedMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PaymentInteractionAddedMessagePayload>";
+            }
+        };
     }
 }

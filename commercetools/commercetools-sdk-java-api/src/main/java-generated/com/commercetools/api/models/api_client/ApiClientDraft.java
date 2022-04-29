@@ -31,17 +31,35 @@ public interface ApiClientDraft {
     public String getScope();
 
     /**
-    *  <p>If set, the client will be deleted after the specified amount of days.</p>
+    *  <p>If set, the Client will be deleted after the specified amount of days.</p>
     */
 
     @JsonProperty("deleteDaysAfterCreation")
     public Long getDeleteDaysAfterCreation();
+
+    /**
+    *  <p>Expiration time in seconds for each access token obtained by the API Client. If not set the default value applies.</p>
+    */
+
+    @JsonProperty("accessTokenValiditySeconds")
+    public Integer getAccessTokenValiditySeconds();
+
+    /**
+    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the API Client. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
+    */
+
+    @JsonProperty("refreshTokenValiditySeconds")
+    public Integer getRefreshTokenValiditySeconds();
 
     public void setName(final String name);
 
     public void setScope(final String scope);
 
     public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation);
+
+    public void setAccessTokenValiditySeconds(final Integer accessTokenValiditySeconds);
+
+    public void setRefreshTokenValiditySeconds(final Integer refreshTokenValiditySeconds);
 
     public static ApiClientDraft of() {
         return new ApiClientDraftImpl();
@@ -52,6 +70,8 @@ public interface ApiClientDraft {
         instance.setName(template.getName());
         instance.setScope(template.getScope());
         instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
+        instance.setAccessTokenValiditySeconds(template.getAccessTokenValiditySeconds());
+        instance.setRefreshTokenValiditySeconds(template.getRefreshTokenValiditySeconds());
         return instance;
     }
 
@@ -65,5 +85,14 @@ public interface ApiClientDraft {
 
     default <T> T withApiClientDraft(Function<ApiClientDraft, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ApiClientDraft>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ApiClientDraft>";
+            }
+        };
     }
 }

@@ -47,4 +47,13 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
     default <T> T withProductDiscountSetKeyAction(Function<ProductDiscountSetKeyAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductDiscountSetKeyAction>";
+            }
+        };
+    }
 }

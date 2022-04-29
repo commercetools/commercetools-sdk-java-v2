@@ -99,4 +99,13 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     default <T> T withProductAddVariantAction(Function<ProductAddVariantAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductAddVariantAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductAddVariantAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductAddVariantAction>";
+            }
+        };
+    }
 }

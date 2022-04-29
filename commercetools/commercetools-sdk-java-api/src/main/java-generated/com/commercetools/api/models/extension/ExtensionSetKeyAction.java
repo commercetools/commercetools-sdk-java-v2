@@ -17,7 +17,7 @@ public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
 
     @JsonProperty("key")
@@ -45,5 +45,14 @@ public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
 
     default <T> T withExtensionSetKeyAction(Function<ExtensionSetKeyAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionSetKeyAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionSetKeyAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionSetKeyAction>";
+            }
+        };
     }
 }

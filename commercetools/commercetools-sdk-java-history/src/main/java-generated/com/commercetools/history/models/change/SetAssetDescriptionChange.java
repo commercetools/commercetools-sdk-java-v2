@@ -79,4 +79,13 @@ public interface SetAssetDescriptionChange extends Change {
     default <T> T withSetAssetDescriptionChange(Function<SetAssetDescriptionChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetAssetDescriptionChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetAssetDescriptionChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetAssetDescriptionChange>";
+            }
+        };
+    }
 }

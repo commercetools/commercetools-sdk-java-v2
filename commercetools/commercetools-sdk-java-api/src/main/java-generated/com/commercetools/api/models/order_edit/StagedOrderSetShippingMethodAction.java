@@ -55,4 +55,13 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     default <T> T withStagedOrderSetShippingMethodAction(Function<StagedOrderSetShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingMethodAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderSetShippingMethodAction>";
+            }
+        };
+    }
 }

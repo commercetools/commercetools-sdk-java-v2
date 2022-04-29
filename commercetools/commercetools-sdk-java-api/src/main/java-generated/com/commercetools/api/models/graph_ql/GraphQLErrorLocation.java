@@ -50,4 +50,13 @@ public interface GraphQLErrorLocation {
     default <T> T withGraphQLErrorLocation(Function<GraphQLErrorLocation, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLErrorLocation> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLErrorLocation>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GraphQLErrorLocation>";
+            }
+        };
+    }
 }

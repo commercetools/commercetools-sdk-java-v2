@@ -67,4 +67,13 @@ public interface ChangeTaxModeChange extends Change {
     default <T> T withChangeTaxModeChange(Function<ChangeTaxModeChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTaxModeChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTaxModeChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTaxModeChange>";
+            }
+        };
+    }
 }

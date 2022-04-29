@@ -215,4 +215,13 @@ public interface ProductImport extends ImportResource {
     default <T> T withProductImport(Function<ProductImport, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProductImport> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProductImport>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProductImport>";
+            }
+        };
+    }
 }

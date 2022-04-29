@@ -25,11 +25,11 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     public void setCustomLineItemId(final String customLineItemId);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public static StagedOrderChangeCustomLineItemQuantityAction of() {
         return new StagedOrderChangeCustomLineItemQuantityActionImpl();
@@ -55,5 +55,14 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
     default <T> T withStagedOrderChangeCustomLineItemQuantityAction(
             Function<StagedOrderChangeCustomLineItemQuantityAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeCustomLineItemQuantityAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeCustomLineItemQuantityAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StagedOrderChangeCustomLineItemQuantityAction>";
+            }
+        };
     }
 }

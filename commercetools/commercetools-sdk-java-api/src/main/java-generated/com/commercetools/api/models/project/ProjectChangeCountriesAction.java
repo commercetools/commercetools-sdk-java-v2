@@ -19,7 +19,7 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
     String CHANGE_COUNTRIES = "changeCountries";
 
     /**
-    *  <p>A two-digit country code as per country code.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     @NotNull
     @JsonProperty("countries")
@@ -50,5 +50,14 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
 
     default <T> T withProjectChangeCountriesAction(Function<ProjectChangeCountriesAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountriesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCountriesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeCountriesAction>";
+            }
+        };
     }
 }

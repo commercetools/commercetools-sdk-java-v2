@@ -21,6 +21,14 @@ public class NumberSetFieldBuilder implements Builder<NumberSetField> {
         return this;
     }
 
+    public NumberSetFieldBuilder plusValue(final Double... value) {
+        if (this.value == null) {
+            this.value = new ArrayList<>();
+        }
+        this.value.addAll(Arrays.asList(value));
+        return this;
+    }
+
     public java.util.List<Double> getValue() {
         return this.value;
     }

@@ -68,4 +68,13 @@ public interface SetDeleteDaysAfterLastModificationChange extends Change {
             Function<SetDeleteDaysAfterLastModificationChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetDeleteDaysAfterLastModificationChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetDeleteDaysAfterLastModificationChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetDeleteDaysAfterLastModificationChange>";
+            }
+        };
+    }
 }

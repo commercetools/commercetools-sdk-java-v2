@@ -48,4 +48,13 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     default <T> T withShoppingListStoreSetMessagePayload(Function<ShoppingListStoreSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListStoreSetMessagePayload> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListStoreSetMessagePayload>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ShoppingListStoreSetMessagePayload>";
+            }
+        };
+    }
 }

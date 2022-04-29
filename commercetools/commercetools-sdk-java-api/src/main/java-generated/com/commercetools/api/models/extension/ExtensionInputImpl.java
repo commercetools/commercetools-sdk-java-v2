@@ -31,10 +31,16 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
     public ExtensionInputImpl() {
     }
 
+    /**
+    *  <p><code>Create</code> or <code>Update</code> request.</p>
+    */
     public com.commercetools.api.models.extension.ExtensionAction getAction() {
         return this.action;
     }
 
+    /**
+    *  <p>Expanded reference to the resource that triggered the Extension.</p>
+    */
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }

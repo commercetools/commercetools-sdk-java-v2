@@ -25,10 +25,17 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
     @JsonProperty("parcelId")
     public String getParcelId();
 
+    /**
+    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Parcel with <a href="/../api/projects/custom-fields">Custom Fields</a>.
+    *  If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+    */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
+    /**
+    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Parcel.</p>
+    */
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
@@ -61,5 +68,14 @@ public interface OrderSetParcelCustomTypeAction extends OrderUpdateAction {
 
     default <T> T withOrderSetParcelCustomTypeAction(Function<OrderSetParcelCustomTypeAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelCustomTypeAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelCustomTypeAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderSetParcelCustomTypeAction>";
+            }
+        };
     }
 }

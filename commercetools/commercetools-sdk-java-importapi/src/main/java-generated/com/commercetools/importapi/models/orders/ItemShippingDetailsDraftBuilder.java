@@ -18,11 +18,18 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return this;
     }
 
-    public ItemShippingDetailsDraftBuilder withTargets(
-            Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTargetBuilder> builder) {
-        this.targets = new ArrayList<>();
-        this.targets
-                .add(builder.apply(com.commercetools.importapi.models.orders.ItemShippingTargetBuilder.of()).build());
+    public ItemShippingDetailsDraftBuilder targets(
+            final java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets) {
+        this.targets = targets;
+        return this;
+    }
+
+    public ItemShippingDetailsDraftBuilder plusTargets(
+            final com.commercetools.importapi.models.orders.ItemShippingTarget... targets) {
+        if (this.targets == null) {
+            this.targets = new ArrayList<>();
+        }
+        this.targets.addAll(Arrays.asList(targets));
         return this;
     }
 
@@ -36,9 +43,11 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return this;
     }
 
-    public ItemShippingDetailsDraftBuilder targets(
-            final java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets) {
-        this.targets = targets;
+    public ItemShippingDetailsDraftBuilder withTargets(
+            Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTargetBuilder> builder) {
+        this.targets = new ArrayList<>();
+        this.targets
+                .add(builder.apply(com.commercetools.importapi.models.orders.ItemShippingTargetBuilder.of()).build());
         return this;
     }
 

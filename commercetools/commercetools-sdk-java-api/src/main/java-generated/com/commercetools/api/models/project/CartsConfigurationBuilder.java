@@ -12,16 +12,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
 
     @Nullable
-    private Boolean countryTaxRateFallbackEnabled;
-
-    @Nullable
     private Long deleteDaysAfterLastModification;
 
-    public CartsConfigurationBuilder countryTaxRateFallbackEnabled(
-            @Nullable final Boolean countryTaxRateFallbackEnabled) {
-        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
-        return this;
-    }
+    @Nullable
+    private Boolean countryTaxRateFallbackEnabled;
 
     public CartsConfigurationBuilder deleteDaysAfterLastModification(
             @Nullable final Long deleteDaysAfterLastModification) {
@@ -29,9 +23,10 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
         return this;
     }
 
-    @Nullable
-    public Boolean getCountryTaxRateFallbackEnabled() {
-        return this.countryTaxRateFallbackEnabled;
+    public CartsConfigurationBuilder countryTaxRateFallbackEnabled(
+            @Nullable final Boolean countryTaxRateFallbackEnabled) {
+        this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+        return this;
     }
 
     @Nullable
@@ -39,15 +34,20 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
         return this.deleteDaysAfterLastModification;
     }
 
+    @Nullable
+    public Boolean getCountryTaxRateFallbackEnabled() {
+        return this.countryTaxRateFallbackEnabled;
+    }
+
     public CartsConfiguration build() {
-        return new CartsConfigurationImpl(countryTaxRateFallbackEnabled, deleteDaysAfterLastModification);
+        return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled);
     }
 
     /**
      * builds CartsConfiguration without checking for non null required values
      */
     public CartsConfiguration buildUnchecked() {
-        return new CartsConfigurationImpl(countryTaxRateFallbackEnabled, deleteDaysAfterLastModification);
+        return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled);
     }
 
     public static CartsConfigurationBuilder of() {
@@ -56,8 +56,8 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
 
     public static CartsConfigurationBuilder of(final CartsConfiguration template) {
         CartsConfigurationBuilder builder = new CartsConfigurationBuilder();
-        builder.countryTaxRateFallbackEnabled = template.getCountryTaxRateFallbackEnabled();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
+        builder.countryTaxRateFallbackEnabled = template.getCountryTaxRateFallbackEnabled();
         return builder;
     }
 

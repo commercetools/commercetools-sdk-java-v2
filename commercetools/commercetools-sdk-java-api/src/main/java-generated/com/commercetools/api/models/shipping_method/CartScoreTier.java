@@ -24,6 +24,10 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     @JsonProperty("score")
     public Double getScore();
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.
+    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    */
     @Valid
     @JsonProperty("price")
     public Money getPrice();
@@ -66,5 +70,14 @@ public interface CartScoreTier extends ShippingRatePriceTier {
 
     default <T> T withCartScoreTier(Function<CartScoreTier, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartScoreTier> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartScoreTier>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartScoreTier>";
+            }
+        };
     }
 }

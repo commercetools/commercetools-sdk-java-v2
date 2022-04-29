@@ -77,4 +77,13 @@ public interface MissingAttributesPagedQueryResult {
     default <T> T withMissingAttributesPagedQueryResult(Function<MissingAttributesPagedQueryResult, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MissingAttributesPagedQueryResult> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MissingAttributesPagedQueryResult>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MissingAttributesPagedQueryResult>";
+            }
+        };
+    }
 }

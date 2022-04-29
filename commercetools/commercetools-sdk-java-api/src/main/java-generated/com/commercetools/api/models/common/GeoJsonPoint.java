@@ -48,4 +48,13 @@ public interface GeoJsonPoint extends GeoJson {
     default <T> T withGeoJsonPoint(Function<GeoJsonPoint, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<GeoJsonPoint> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GeoJsonPoint>() {
+            @Override
+            public String toString() {
+                return "TypeReference<GeoJsonPoint>";
+            }
+        };
+    }
 }

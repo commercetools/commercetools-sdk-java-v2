@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryReferenceImpl.class)
-public interface TaxCategoryReference extends Reference {
+public interface TaxCategoryReference extends Reference, com.commercetools.api.models.Identifiable<TaxCategory> {
 
     String TAX_CATEGORY = "tax-category";
 
@@ -62,5 +62,14 @@ public interface TaxCategoryReference extends Reference {
 
     default <T> T withTaxCategoryReference(Function<TaxCategoryReference, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReference> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReference>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TaxCategoryReference>";
+            }
+        };
     }
 }

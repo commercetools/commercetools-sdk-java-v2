@@ -36,4 +36,13 @@ public interface PlatformFormat extends DeliveryFormat {
     default <T> T withPlatformFormat(Function<PlatformFormat, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<PlatformFormat> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<PlatformFormat>() {
+            @Override
+            public String toString() {
+                return "TypeReference<PlatformFormat>";
+            }
+        };
+    }
 }

@@ -48,4 +48,13 @@ public interface CustomTokenizer extends SuggestTokenizer {
     default <T> T withCustomTokenizer(Function<CustomTokenizer, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CustomTokenizer> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CustomTokenizer>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CustomTokenizer>";
+            }
+        };
+    }
 }

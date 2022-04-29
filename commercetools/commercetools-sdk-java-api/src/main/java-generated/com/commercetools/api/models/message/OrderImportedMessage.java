@@ -58,4 +58,13 @@ public interface OrderImportedMessage extends OrderMessage {
     default <T> T withOrderImportedMessage(Function<OrderImportedMessage, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<OrderImportedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<OrderImportedMessage>() {
+            @Override
+            public String toString() {
+                return "TypeReference<OrderImportedMessage>";
+            }
+        };
+    }
 }

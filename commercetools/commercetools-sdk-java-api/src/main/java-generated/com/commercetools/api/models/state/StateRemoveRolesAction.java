@@ -51,4 +51,13 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
     default <T> T withStateRemoveRolesAction(Function<StateRemoveRolesAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<StateRemoveRolesAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<StateRemoveRolesAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<StateRemoveRolesAction>";
+            }
+        };
+    }
 }

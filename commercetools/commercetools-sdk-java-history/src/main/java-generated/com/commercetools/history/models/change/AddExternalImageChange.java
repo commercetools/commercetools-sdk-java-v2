@@ -83,4 +83,13 @@ public interface AddExternalImageChange extends Change {
     default <T> T withAddExternalImageChange(Function<AddExternalImageChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<AddExternalImageChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AddExternalImageChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<AddExternalImageChange>";
+            }
+        };
+    }
 }

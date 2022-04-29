@@ -89,4 +89,13 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     default <T> T withMatchingPriceNotFoundError(Function<MatchingPriceNotFoundError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<MatchingPriceNotFoundError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<MatchingPriceNotFoundError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<MatchingPriceNotFoundError>";
+            }
+        };
+    }
 }

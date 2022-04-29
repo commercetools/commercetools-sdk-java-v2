@@ -19,8 +19,9 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.CustomLineItemReturnItemImpl.class, name = CustomLineItemReturnItem.CUSTOM_LINE_ITEM_RETURN_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.LineItemReturnItemImpl.class, name = LineItemReturnItem.LINE_ITEM_RETURN_ITEM) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ReturnItemImpl.class, visible = true)
+@JsonDeserialize(as = ReturnItemImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public interface ReturnItem {
+public interface ReturnItem extends com.commercetools.api.models.Customizable<ReturnItem> {
 
     @NotNull
     @JsonProperty("id")
@@ -76,7 +77,24 @@ public interface ReturnItem {
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    public static com.commercetools.api.models.order.CustomLineItemReturnItemBuilder customLineItemReturnItemBuilder() {
+        return com.commercetools.api.models.order.CustomLineItemReturnItemBuilder.of();
+    }
+
+    public static com.commercetools.api.models.order.LineItemReturnItemBuilder lineItemReturnItemBuilder() {
+        return com.commercetools.api.models.order.LineItemReturnItemBuilder.of();
+    }
+
     default <T> T withReturnItem(Function<ReturnItem, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ReturnItem> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ReturnItem>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ReturnItem>";
+            }
+        };
     }
 }

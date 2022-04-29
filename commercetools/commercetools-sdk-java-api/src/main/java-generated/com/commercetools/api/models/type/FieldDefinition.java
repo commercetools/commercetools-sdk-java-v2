@@ -14,12 +14,16 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Defines a <a href="/../api/projects/custom-fields">Custom Field</a> and its meta-information.
+*  This FieldDefinition is similar to an <a href="ctp:api:type:AttributeDefinition">AttributeDefinition</a> of <a href="/../api/projects/productTypes">Product Types</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = FieldDefinitionImpl.class)
 public interface FieldDefinition {
 
     /**
-    *  <p>Describes the type of the field.</p>
+    *  <p>Data type of the Custom Field to define.</p>
     */
     @NotNull
     @Valid
@@ -27,10 +31,9 @@ public interface FieldDefinition {
     public FieldType getType();
 
     /**
-    *  <p>The name of the field.
-    *  The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>).
-    *  The name must be unique for a given resource type ID.
-    *  In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+    *  <p>Name of the Custom Field to define.
+    *  Must be unique for a given <a href="ctp:api:type:ResourceTypeId">ResourceTypeId</a>.
+    *  In case there is a FieldDefinition with the same <code>name</code> in another <a href="ctp:api:type:Type">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p>
     */
     @NotNull
     @JsonProperty("name")
@@ -45,15 +48,16 @@ public interface FieldDefinition {
     public LocalizedString getLabel();
 
     /**
-    *  <p>Whether the field is required to have a value.</p>
+    *  <p>Defines whether the field is required to have a value.</p>
     */
     @NotNull
     @JsonProperty("required")
     public Boolean getRequired();
 
     /**
-    *  <p>Provides a visual representation type for this field.
-    *  It is only relevant for string-based field types like StringType and LocalizedStringType.</p>
+    *  <p>Must be either <code>SingleLine</code> or <code>MultiLine</code>.
+    *  Defines the visual representation of the field in user interfaces like the Merchant Center.
+    *  It is only relevant for string-based <a href="ctp:api:type:FieldType">FieldTypes</a> like <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> and <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a>.</p>
     */
 
     @JsonProperty("inputHint")
@@ -93,5 +97,14 @@ public interface FieldDefinition {
 
     default <T> T withFieldDefinition(Function<FieldDefinition, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<FieldDefinition> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<FieldDefinition>() {
+            @Override
+            public String toString() {
+                return "TypeReference<FieldDefinition>";
+            }
+        };
     }
 }

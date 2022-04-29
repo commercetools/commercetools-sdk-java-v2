@@ -38,4 +38,13 @@ public interface EnumValuesMustMatchError extends ErrorObject {
     default <T> T withEnumValuesMustMatchError(Function<EnumValuesMustMatchError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<EnumValuesMustMatchError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<EnumValuesMustMatchError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<EnumValuesMustMatchError>";
+            }
+        };
+    }
 }

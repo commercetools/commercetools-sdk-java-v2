@@ -53,4 +53,13 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
     default <T> T withCartSetLineItemTaxAmountAction(Function<CartSetLineItemTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemTaxAmountAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<CartSetLineItemTaxAmountAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<CartSetLineItemTaxAmountAction>";
+            }
+        };
+    }
 }

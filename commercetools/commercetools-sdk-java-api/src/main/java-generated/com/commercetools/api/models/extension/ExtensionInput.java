@@ -18,10 +18,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionInputImpl.class)
 public interface ExtensionInput {
 
+    /**
+    *  <p><code>Create</code> or <code>Update</code> request.</p>
+    */
     @NotNull
     @JsonProperty("action")
     public ExtensionAction getAction();
 
+    /**
+    *  <p>Expanded reference to the resource that triggered the Extension.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("resource")
@@ -52,5 +58,14 @@ public interface ExtensionInput {
 
     default <T> T withExtensionInput(Function<ExtensionInput, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ExtensionInput> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ExtensionInput>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ExtensionInput>";
+            }
+        };
     }
 }

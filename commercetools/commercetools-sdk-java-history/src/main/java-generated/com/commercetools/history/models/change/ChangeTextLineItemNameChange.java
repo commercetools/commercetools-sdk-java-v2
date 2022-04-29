@@ -79,4 +79,13 @@ public interface ChangeTextLineItemNameChange extends Change {
     default <T> T withChangeTextLineItemNameChange(Function<ChangeTextLineItemNameChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ChangeTextLineItemNameChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ChangeTextLineItemNameChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ChangeTextLineItemNameChange>";
+            }
+        };
+    }
 }

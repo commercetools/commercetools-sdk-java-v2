@@ -38,4 +38,13 @@ public interface ResourceSizeLimitExceededError extends ErrorObject {
     default <T> T withResourceSizeLimitExceededError(Function<ResourceSizeLimitExceededError, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ResourceSizeLimitExceededError> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ResourceSizeLimitExceededError>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ResourceSizeLimitExceededError>";
+            }
+        };
+    }
 }

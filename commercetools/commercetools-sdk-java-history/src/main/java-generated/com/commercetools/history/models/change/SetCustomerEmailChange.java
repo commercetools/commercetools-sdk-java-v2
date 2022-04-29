@@ -66,4 +66,13 @@ public interface SetCustomerEmailChange extends Change {
     default <T> T withSetCustomerEmailChange(Function<SetCustomerEmailChange, T> helper) {
         return helper.apply(this);
     }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<SetCustomerEmailChange> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<SetCustomerEmailChange>() {
+            @Override
+            public String toString() {
+                return "TypeReference<SetCustomerEmailChange>";
+            }
+        };
+    }
 }

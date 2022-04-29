@@ -64,10 +64,17 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         return this;
     }
 
-    public TaxRateBuilder withSubRates(
-            Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {
-        this.subRates = new ArrayList<>();
-        this.subRates.add(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()).build());
+    public TaxRateBuilder subRates(
+            @Nullable final java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates) {
+        this.subRates = subRates;
+        return this;
+    }
+
+    public TaxRateBuilder plusSubRates(@Nullable final com.commercetools.importapi.models.prices.SubRate... subRates) {
+        if (this.subRates == null) {
+            this.subRates = new ArrayList<>();
+        }
+        this.subRates.addAll(Arrays.asList(subRates));
         return this;
     }
 
@@ -80,9 +87,10 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         return this;
     }
 
-    public TaxRateBuilder subRates(
-            @Nullable final java.util.List<com.commercetools.importapi.models.prices.SubRate> subRates) {
-        this.subRates = subRates;
+    public TaxRateBuilder withSubRates(
+            Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRateBuilder> builder) {
+        this.subRates = new ArrayList<>();
+        this.subRates.add(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()).build());
         return this;
     }
 

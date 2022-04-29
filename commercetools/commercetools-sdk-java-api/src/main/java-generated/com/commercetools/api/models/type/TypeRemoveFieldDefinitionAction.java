@@ -18,6 +18,10 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
 
     String REMOVE_FIELD_DEFINITION = "removeFieldDefinition";
 
+    /**
+    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to remove.
+    *  The removal of a FieldDefinition deletes <a href="/../api/general-concepts#eventual-consistency">asynchronously</a> all Custom Fields using the FieldDefinition as well.</p>
+    */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
@@ -44,5 +48,14 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
 
     default <T> T withTypeRemoveFieldDefinitionAction(Function<TypeRemoveFieldDefinitionAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<TypeRemoveFieldDefinitionAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<TypeRemoveFieldDefinitionAction>";
+            }
+        };
     }
 }

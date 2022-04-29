@@ -20,6 +20,9 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
 
     String CHANGE_MESSAGES_CONFIGURATION = "changeMessagesConfiguration";
 
+    /**
+    *  <p>Configuration for the <a href="/../api/projects/messages">Messages Query</a> feature.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("messagesConfiguration")
@@ -49,5 +52,14 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
     default <T> T withProjectChangeMessagesConfigurationAction(
             Function<ProjectChangeMessagesConfigurationAction, T> helper) {
         return helper.apply(this);
+    }
+
+    public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction>() {
+            @Override
+            public String toString() {
+                return "TypeReference<ProjectChangeMessagesConfigurationAction>";
+            }
+        };
     }
 }

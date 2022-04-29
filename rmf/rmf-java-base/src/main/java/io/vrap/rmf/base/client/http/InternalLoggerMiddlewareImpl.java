@@ -4,11 +4,8 @@ package io.vrap.rmf.base.client.http;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.error.ApiClientException;
-import io.vrap.rmf.base.client.error.NotFoundException;
 import io.vrap.rmf.base.client.utils.json.JsonException;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 

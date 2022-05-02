@@ -40,6 +40,14 @@ public interface CentPrecisionMoney extends TypedMoney {
         return helper.apply(this);
     }
 
+    public static CentPrecisionMoney of(final javax.money.MonetaryAmount monetaryAmount) {
+        return MoneyUtil.of(monetaryAmount);
+    }
+
+    public default CentPrecisionMoneyDraft toDraft() {
+        return CentPrecisionMoneyDraft.of(this);
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoney> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CentPrecisionMoney>() {
             @Override

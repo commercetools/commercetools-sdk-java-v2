@@ -108,7 +108,16 @@
 <span class="source-line-no">095</span><span id="line.95">    default &lt;T&gt; T withTypeDraft(Function&lt;TypeDraft, T&gt; helper) {</span>
 <span class="source-line-no">096</span><span id="line.96">        return helper.apply(this);</span>
 <span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98">}</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TypeDraft&gt; typeReference() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TypeDraft&gt;() {</span>
+<span class="source-line-no">101</span><span id="line.101">            @Override</span>
+<span class="source-line-no">102</span><span id="line.102">            public String toString() {</span>
+<span class="source-line-no">103</span><span id="line.103">                return "TypeReference&lt;TypeDraft&gt;";</span>
+<span class="source-line-no">104</span><span id="line.104">            }</span>
+<span class="source-line-no">105</span><span id="line.105">        };</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107">}</span>
 
 
 

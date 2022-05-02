@@ -72,7 +72,16 @@
 <span class="source-line-no">059</span><span id="line.59">    default &lt;T&gt; T withTaxPortion(Function&lt;TaxPortion, T&gt; helper) {</span>
 <span class="source-line-no">060</span><span id="line.60">        return helper.apply(this);</span>
 <span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62">}</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TaxPortion&gt; typeReference() {</span>
+<span class="source-line-no">064</span><span id="line.64">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TaxPortion&gt;() {</span>
+<span class="source-line-no">065</span><span id="line.65">            @Override</span>
+<span class="source-line-no">066</span><span id="line.66">            public String toString() {</span>
+<span class="source-line-no">067</span><span id="line.67">                return "TypeReference&lt;TaxPortion&gt;";</span>
+<span class="source-line-no">068</span><span id="line.68">            }</span>
+<span class="source-line-no">069</span><span id="line.69">        };</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71">}</span>
 
 
 

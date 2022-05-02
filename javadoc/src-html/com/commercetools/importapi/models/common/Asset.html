@@ -123,7 +123,16 @@
 <span class="source-line-no">110</span><span id="line.110">    default &lt;T&gt; T withAsset(Function&lt;Asset, T&gt; helper) {</span>
 <span class="source-line-no">111</span><span id="line.111">        return helper.apply(this);</span>
 <span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113">}</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Asset&gt; typeReference() {</span>
+<span class="source-line-no">115</span><span id="line.115">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Asset&gt;() {</span>
+<span class="source-line-no">116</span><span id="line.116">            @Override</span>
+<span class="source-line-no">117</span><span id="line.117">            public String toString() {</span>
+<span class="source-line-no">118</span><span id="line.118">                return "TypeReference&lt;Asset&gt;";</span>
+<span class="source-line-no">119</span><span id="line.119">            }</span>
+<span class="source-line-no">120</span><span id="line.120">        };</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122">}</span>
 
 
 

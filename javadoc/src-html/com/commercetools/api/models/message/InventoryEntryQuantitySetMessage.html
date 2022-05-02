@@ -101,7 +101,16 @@
 <span class="source-line-no">088</span><span id="line.88">    default &lt;T&gt; T withInventoryEntryQuantitySetMessage(Function&lt;InventoryEntryQuantitySetMessage, T&gt; helper) {</span>
 <span class="source-line-no">089</span><span id="line.89">        return helper.apply(this);</span>
 <span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91">}</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public static com.fasterxml.jackson.core.type.TypeReference&lt;InventoryEntryQuantitySetMessage&gt; typeReference() {</span>
+<span class="source-line-no">093</span><span id="line.93">        return new com.fasterxml.jackson.core.type.TypeReference&lt;InventoryEntryQuantitySetMessage&gt;() {</span>
+<span class="source-line-no">094</span><span id="line.94">            @Override</span>
+<span class="source-line-no">095</span><span id="line.95">            public String toString() {</span>
+<span class="source-line-no">096</span><span id="line.96">                return "TypeReference&lt;InventoryEntryQuantitySetMessage&gt;";</span>
+<span class="source-line-no">097</span><span id="line.97">            }</span>
+<span class="source-line-no">098</span><span id="line.98">        };</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100">}</span>
 
 
 

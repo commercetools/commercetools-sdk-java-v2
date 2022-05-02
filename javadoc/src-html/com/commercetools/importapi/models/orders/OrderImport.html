@@ -290,7 +290,16 @@
 <span class="source-line-no">277</span><span id="line.277">    default &lt;T&gt; T withOrderImport(Function&lt;OrderImport, T&gt; helper) {</span>
 <span class="source-line-no">278</span><span id="line.278">        return helper.apply(this);</span>
 <span class="source-line-no">279</span><span id="line.279">    }</span>
-<span class="source-line-no">280</span><span id="line.280">}</span>
+<span class="source-line-no">280</span><span id="line.280"></span>
+<span class="source-line-no">281</span><span id="line.281">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderImport&gt; typeReference() {</span>
+<span class="source-line-no">282</span><span id="line.282">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderImport&gt;() {</span>
+<span class="source-line-no">283</span><span id="line.283">            @Override</span>
+<span class="source-line-no">284</span><span id="line.284">            public String toString() {</span>
+<span class="source-line-no">285</span><span id="line.285">                return "TypeReference&lt;OrderImport&gt;";</span>
+<span class="source-line-no">286</span><span id="line.286">            }</span>
+<span class="source-line-no">287</span><span id="line.287">        };</span>
+<span class="source-line-no">288</span><span id="line.288">    }</span>
+<span class="source-line-no">289</span><span id="line.289">}</span>
 
 
 

@@ -144,7 +144,16 @@
 <span class="source-line-no">131</span><span id="line.131">    default &lt;T&gt; T withMyCustomerUpdateAction(Function&lt;MyCustomerUpdateAction, T&gt; helper) {</span>
 <span class="source-line-no">132</span><span id="line.132">        return helper.apply(this);</span>
 <span class="source-line-no">133</span><span id="line.133">    }</span>
-<span class="source-line-no">134</span><span id="line.134">}</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public static com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerUpdateAction&gt; typeReference() {</span>
+<span class="source-line-no">136</span><span id="line.136">        return new com.fasterxml.jackson.core.type.TypeReference&lt;MyCustomerUpdateAction&gt;() {</span>
+<span class="source-line-no">137</span><span id="line.137">            @Override</span>
+<span class="source-line-no">138</span><span id="line.138">            public String toString() {</span>
+<span class="source-line-no">139</span><span id="line.139">                return "TypeReference&lt;MyCustomerUpdateAction&gt;";</span>
+<span class="source-line-no">140</span><span id="line.140">            }</span>
+<span class="source-line-no">141</span><span id="line.141">        };</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143">}</span>
 
 
 

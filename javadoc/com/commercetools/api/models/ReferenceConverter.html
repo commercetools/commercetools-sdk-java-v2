@@ -72,7 +72,7 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="description">
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.73">ReferenceConverter</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.77">ReferenceConverter</a></span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -86,76 +86,211 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.cart_discount.CartDiscount)">toReference</a></span>&#8203;(<a href="cart_discount/CartDiscount.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscount</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.cart.Cart)">toReference</a></span>&#8203;(<a href="cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.category.Category)">toReference</a></span>&#8203;(<a href="category/Category.html" title="interface in com.commercetools.api.models.category">Category</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.channel.Channel)">toReference</a></span>&#8203;(<a href="channel/Channel.html" title="interface in com.commercetools.api.models.channel">Channel</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.customer_group.CustomerGroup)">toReference</a></span>&#8203;(<a href="customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.customer.Customer)">toReference</a></span>&#8203;(<a href="customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.discount_code.DiscountCode)">toReference</a></span>&#8203;(<a href="discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="inventory/InventoryEntryReference.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.inventory.InventoryEntry)">toReference</a></span>&#8203;(<a href="inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.order_edit.OrderEdit)">toReference</a></span>&#8203;(<a href="order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.order.Order)">toReference</a></span>&#8203;(<a href="order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.payment.Payment)">toReference</a></span>&#8203;(<a href="payment/Payment.html" title="interface in com.commercetools.api.models.payment">Payment</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="product_discount/ProductDiscountReference.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.product_discount.ProductDiscount)">toReference</a></span>&#8203;(<a href="product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.product_type.ProductType)">toReference</a></span>&#8203;(<a href="product_type/ProductType.html" title="interface in com.commercetools.api.models.product_type">ProductType</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.product.Product)">toReference</a></span>&#8203;(<a href="product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="review/ReviewReference.html" title="interface in com.commercetools.api.models.review">ReviewReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.review.Review)">toReference</a></span>&#8203;(<a href="review/Review.html" title="interface in com.commercetools.api.models.review">Review</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.shipping_method.ShippingMethod)">toReference</a></span>&#8203;(<a href="shipping_method/ShippingMethod.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethod</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="shopping_list/ShoppingListReference.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.shopping_list.ShoppingList)">toReference</a></span>&#8203;(<a href="shopping_list/ShoppingList.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingList</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.state.State)">toReference</a></span>&#8203;(<a href="state/State.html" title="interface in com.commercetools.api.models.state">State</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="store/StoreReference.html" title="interface in com.commercetools.api.models.store">StoreReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.store.Store)">toReference</a></span>&#8203;(<a href="store/Store.html" title="interface in com.commercetools.api.models.store">Store</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.tax_category.TaxCategory)">toReference</a></span>&#8203;(<a href="tax_category/TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="type/TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.type.Type)">toReference</a></span>&#8203;(<a href="type/Type.html" title="interface in com.commercetools.api.models.type">Type</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toReference(com.commercetools.api.models.zone.Zone)">toReference</a></span>&#8203;(<a href="zone/Zone.html" title="interface in com.commercetools.api.models.zone">Zone</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="cart_discount/CartDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifier</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.cart_discount.CartDiscountReference)">toResourceIdentifier</a></span>&#8203;(<a href="cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;reference)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.cart_discount.CartDiscount)">toResourceIdentifier</a></span>&#8203;(<a href="cart_discount/CartDiscount.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscount</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="cart_discount/CartDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.cart_discount.CartDiscountReference)">toResourceIdentifier</a></span>&#8203;(<a href="cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.cart.Cart)">toResourceIdentifier</a></span>&#8203;(<a href="cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.cart.CartReference)">toResourceIdentifier</a></span>&#8203;(<a href="cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.category.CategoryReference)">toResourceIdentifier</a></span>&#8203;(<a href="category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&nbsp;reference)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.category.Category)">toResourceIdentifier</a></span>&#8203;(<a href="category/Category.html" title="interface in com.commercetools.api.models.category">Category</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.category.CategoryReference)">toResourceIdentifier</a></span>&#8203;(<a href="category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.channel.Channel)">toResourceIdentifier</a></span>&#8203;(<a href="channel/Channel.html" title="interface in com.commercetools.api.models.channel">Channel</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.channel.ChannelReference)">toResourceIdentifier</a></span>&#8203;(<a href="channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static &lt;T extends <a href="common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a>&gt;<br>T</code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.common.Reference,java.lang.Class)">toResourceIdentifier</a></span>&#8203;(<a href="common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;reference,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.customer_group.CustomerGroup)">toResourceIdentifier</a></span>&#8203;(<a href="customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.customer_group.CustomerGroupReference)">toResourceIdentifier</a></span>&#8203;(<a href="customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.customer.CustomerReference)">toResourceIdentifier</a></span>&#8203;(<a href="customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;reference)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.customer.Customer)">toResourceIdentifier</a></span>&#8203;(<a href="customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.customer.CustomerReference)">toResourceIdentifier</a></span>&#8203;(<a href="customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="discount_code/DiscountCodeResourceIdentifier.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.discount_code.DiscountCode)">toResourceIdentifier</a></span>&#8203;(<a href="discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="discount_code/DiscountCodeResourceIdentifier.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.discount_code.DiscountCodeReference)">toResourceIdentifier</a></span>&#8203;(<a href="discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static &lt;T extends <a href="common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a>&gt;<br>T</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.Identifiable,java.lang.Class)">toResourceIdentifier</a></span>&#8203;(<a href="Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;?&gt;&nbsp;reference,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="inventory/InventoryEntryResourceIdentifier.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.inventory.InventoryEntry)">toResourceIdentifier</a></span>&#8203;(<a href="inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="inventory/InventoryEntryResourceIdentifier.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.inventory.InventoryEntryReference)">toResourceIdentifier</a></span>&#8203;(<a href="inventory/InventoryEntryReference.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryReference</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="order_edit/OrderEditResourceIdentifier.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResourceIdentifier</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.order_edit.OrderEditReference)">toResourceIdentifier</a></span>&#8203;(<a href="order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a>&nbsp;reference)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.order_edit.OrderEdit)">toResourceIdentifier</a></span>&#8203;(<a href="order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="order_edit/OrderEditResourceIdentifier.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.order_edit.OrderEditReference)">toResourceIdentifier</a></span>&#8203;(<a href="order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="order/OrderResourceIdentifier.html" title="interface in com.commercetools.api.models.order">OrderResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.order.Order)">toResourceIdentifier</a></span>&#8203;(<a href="order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="order/OrderResourceIdentifier.html" title="interface in com.commercetools.api.models.order">OrderResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.order.OrderReference)">toResourceIdentifier</a></span>&#8203;(<a href="order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.payment.PaymentReference)">toResourceIdentifier</a></span>&#8203;(<a href="payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;reference)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.payment.Payment)">toResourceIdentifier</a></span>&#8203;(<a href="payment/Payment.html" title="interface in com.commercetools.api.models.payment">Payment</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.payment.PaymentReference)">toResourceIdentifier</a></span>&#8203;(<a href="payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="product_discount/ProductDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.product_discount.ProductDiscount)">toResourceIdentifier</a></span>&#8203;(<a href="product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="product_discount/ProductDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.product_discount.ProductDiscountReference)">toResourceIdentifier</a></span>&#8203;(<a href="product_discount/ProductDiscountReference.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountReference</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="product_type/ProductTypeResourceIdentifier.html" title="interface in com.commercetools.api.models.product_type">ProductTypeResourceIdentifier</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.product_type.ProductTypeReference)">toResourceIdentifier</a></span>&#8203;(<a href="product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a>&nbsp;reference)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.product_type.ProductType)">toResourceIdentifier</a></span>&#8203;(<a href="product_type/ProductType.html" title="interface in com.commercetools.api.models.product_type">ProductType</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="product_type/ProductTypeResourceIdentifier.html" title="interface in com.commercetools.api.models.product_type">ProductTypeResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.product_type.ProductTypeReference)">toResourceIdentifier</a></span>&#8203;(<a href="product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="product/ProductResourceIdentifier.html" title="interface in com.commercetools.api.models.product">ProductResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.product.Product)">toResourceIdentifier</a></span>&#8203;(<a href="product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="product/ProductResourceIdentifier.html" title="interface in com.commercetools.api.models.product">ProductResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.product.ProductReference)">toResourceIdentifier</a></span>&#8203;(<a href="product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="review/ReviewResourceIdentifier.html" title="interface in com.commercetools.api.models.review">ReviewResourceIdentifier</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.review.ReviewReference)">toResourceIdentifier</a></span>&#8203;(<a href="review/ReviewReference.html" title="interface in com.commercetools.api.models.review">ReviewReference</a>&nbsp;reference)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.review.Review)">toResourceIdentifier</a></span>&#8203;(<a href="review/Review.html" title="interface in com.commercetools.api.models.review">Review</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="review/ReviewResourceIdentifier.html" title="interface in com.commercetools.api.models.review">ReviewResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.review.ReviewReference)">toResourceIdentifier</a></span>&#8203;(<a href="review/ReviewReference.html" title="interface in com.commercetools.api.models.review">ReviewReference</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.shipping_method.ShippingMethod)">toResourceIdentifier</a></span>&#8203;(<a href="shipping_method/ShippingMethod.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethod</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.shipping_method.ShippingMethodReference)">toResourceIdentifier</a></span>&#8203;(<a href="shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="shopping_list/ShoppingListResourceIdentifier.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListResourceIdentifier</a></code></div>
-<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.shopping_list.ShoppingListReference)">toResourceIdentifier</a></span>&#8203;(<a href="shopping_list/ShoppingListReference.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListReference</a>&nbsp;reference)</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.shopping_list.ShoppingList)">toResourceIdentifier</a></span>&#8203;(<a href="shopping_list/ShoppingList.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingList</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="shopping_list/ShoppingListResourceIdentifier.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.shopping_list.ShoppingListReference)">toResourceIdentifier</a></span>&#8203;(<a href="shopping_list/ShoppingListReference.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListReference</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.state.State)">toResourceIdentifier</a></span>&#8203;(<a href="state/State.html" title="interface in com.commercetools.api.models.state">State</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.state.StateReference)">toResourceIdentifier</a></span>&#8203;(<a href="state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.store.Store)">toResourceIdentifier</a></span>&#8203;(<a href="store/Store.html" title="interface in com.commercetools.api.models.store">Store</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.store.StoreKeyReference)">toResourceIdentifier</a></span>&#8203;(<a href="store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.store.StoreReference)">toResourceIdentifier</a></span>&#8203;(<a href="store/StoreReference.html" title="interface in com.commercetools.api.models.store">StoreReference</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.tax_category.TaxCategoryReference)">toResourceIdentifier</a></span>&#8203;(<a href="tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;reference)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.tax_category.TaxCategory)">toResourceIdentifier</a></span>&#8203;(<a href="tax_category/TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&nbsp;reference)</code></div>
+<div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.tax_category.TaxCategoryReference)">toResourceIdentifier</a></span>&#8203;(<a href="tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.type.Type)">toResourceIdentifier</a></span>&#8203;(<a href="type/Type.html" title="interface in com.commercetools.api.models.type">Type</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></div>
 <div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.type.TypeReference)">toResourceIdentifier</a></span>&#8203;(<a href="type/TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a>&nbsp;reference)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="zone/ZoneResourceIdentifier.html" title="interface in com.commercetools.api.models.zone">ZoneResourceIdentifier</a></code></div>
-<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.zone.ZoneReference)">toResourceIdentifier</a></span>&#8203;(<a href="zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a>&nbsp;reference)</code></div>
+<div class="col-second even-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.zone.Zone)">toResourceIdentifier</a></span>&#8203;(<a href="zone/Zone.html" title="interface in com.commercetools.api.models.zone">Zone</a>&nbsp;reference)</code></div>
 <div class="col-last even-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static <a href="zone/ZoneResourceIdentifier.html" title="interface in com.commercetools.api.models.zone">ZoneResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#toResourceIdentifier(com.commercetools.api.models.zone.ZoneReference)">toResourceIdentifier</a></span>&#8203;(<a href="zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a>&nbsp;reference)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </section>
@@ -170,142 +305,412 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.common.Reference,java.lang.Class)">
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.Identifiable,java.lang.Class)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="type-parameters">&lt;T extends <a href="common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a>&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.75">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;reference,
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="type-parameters">&lt;T extends <a href="common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a>&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.79">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;?&gt;&nbsp;reference,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;clazz)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.cart.CartReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.86">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.91">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.cart_discount.CartDiscountReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="cart_discount/CartDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.90">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="cart_discount/CartDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.95">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.category.CategoryReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.94">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.99">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.channel.ChannelReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.98">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.103">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.customer.CustomerReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.102">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.107">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.customer_group.CustomerGroupReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.106">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.111">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.discount_code.DiscountCodeReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="discount_code/DiscountCodeResourceIdentifier.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.110">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="discount_code/DiscountCodeResourceIdentifier.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.115">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.inventory.InventoryEntryReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="inventory/InventoryEntryResourceIdentifier.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.114">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="inventory/InventoryEntryReference.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="inventory/InventoryEntryResourceIdentifier.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.119">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="inventory/InventoryEntryReference.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.order.OrderReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="order/OrderResourceIdentifier.html" title="interface in com.commercetools.api.models.order">OrderResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.118">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="order/OrderResourceIdentifier.html" title="interface in com.commercetools.api.models.order">OrderResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.123">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.order_edit.OrderEditReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="order_edit/OrderEditResourceIdentifier.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.122">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="order_edit/OrderEditResourceIdentifier.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.127">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.payment.PaymentReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.126">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.131">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.product.ProductReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product/ProductResourceIdentifier.html" title="interface in com.commercetools.api.models.product">ProductResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.130">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product/ProductResourceIdentifier.html" title="interface in com.commercetools.api.models.product">ProductResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.135">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.product_discount.ProductDiscountReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product_discount/ProductDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.134">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="product_discount/ProductDiscountReference.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product_discount/ProductDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.139">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="product_discount/ProductDiscountReference.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.product_type.ProductTypeReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product_type/ProductTypeResourceIdentifier.html" title="interface in com.commercetools.api.models.product_type">ProductTypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.138">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product_type/ProductTypeResourceIdentifier.html" title="interface in com.commercetools.api.models.product_type">ProductTypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.143">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.review.ReviewReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="review/ReviewResourceIdentifier.html" title="interface in com.commercetools.api.models.review">ReviewResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.142">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="review/ReviewReference.html" title="interface in com.commercetools.api.models.review">ReviewReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="review/ReviewResourceIdentifier.html" title="interface in com.commercetools.api.models.review">ReviewResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.147">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="review/ReviewReference.html" title="interface in com.commercetools.api.models.review">ReviewReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.shipping_method.ShippingMethodReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.146">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.151">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.shopping_list.ShoppingListReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="shopping_list/ShoppingListResourceIdentifier.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.150">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="shopping_list/ShoppingListReference.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="shopping_list/ShoppingListResourceIdentifier.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.155">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="shopping_list/ShoppingListReference.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.state.StateReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.154">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.159">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.store.StoreReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.158">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="store/StoreReference.html" title="interface in com.commercetools.api.models.store">StoreReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.163">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="store/StoreReference.html" title="interface in com.commercetools.api.models.store">StoreReference</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.store.StoreKeyReference)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.167">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.tax_category.TaxCategoryReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.162">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.171">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.type.TypeReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.166">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="type/TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.175">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="type/TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a>&nbsp;reference)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="toResourceIdentifier(com.commercetools.api.models.zone.ZoneReference)">
 <h3>toResourceIdentifier</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="zone/ZoneResourceIdentifier.html" title="interface in com.commercetools.api.models.zone">ZoneResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.170">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a>&nbsp;reference)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="zone/ZoneResourceIdentifier.html" title="interface in com.commercetools.api.models.zone">ZoneResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.179">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.cart.Cart)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.183">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.cart_discount.CartDiscount)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="cart_discount/CartDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.187">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="cart_discount/CartDiscount.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscount</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.category.Category)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="category/CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.191">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="category/Category.html" title="interface in com.commercetools.api.models.category">Category</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.channel.Channel)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.195">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="channel/Channel.html" title="interface in com.commercetools.api.models.channel">Channel</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.customer.Customer)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.199">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.customer_group.CustomerGroup)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.203">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.discount_code.DiscountCode)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="discount_code/DiscountCodeResourceIdentifier.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.207">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.inventory.InventoryEntry)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="inventory/InventoryEntryResourceIdentifier.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.211">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.order.Order)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="order/OrderResourceIdentifier.html" title="interface in com.commercetools.api.models.order">OrderResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.215">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.order_edit.OrderEdit)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="order_edit/OrderEditResourceIdentifier.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.219">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.payment.Payment)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.223">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="payment/Payment.html" title="interface in com.commercetools.api.models.payment">Payment</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.product.Product)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product/ProductResourceIdentifier.html" title="interface in com.commercetools.api.models.product">ProductResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.227">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.product_discount.ProductDiscount)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product_discount/ProductDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.231">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.product_type.ProductType)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product_type/ProductTypeResourceIdentifier.html" title="interface in com.commercetools.api.models.product_type">ProductTypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.235">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="product_type/ProductType.html" title="interface in com.commercetools.api.models.product_type">ProductType</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.review.Review)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="review/ReviewResourceIdentifier.html" title="interface in com.commercetools.api.models.review">ReviewResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.239">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="review/Review.html" title="interface in com.commercetools.api.models.review">Review</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.shipping_method.ShippingMethod)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.243">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="shipping_method/ShippingMethod.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethod</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.shopping_list.ShoppingList)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="shopping_list/ShoppingListResourceIdentifier.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.247">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="shopping_list/ShoppingList.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingList</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.state.State)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.251">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="state/State.html" title="interface in com.commercetools.api.models.state">State</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.store.Store)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.255">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="store/Store.html" title="interface in com.commercetools.api.models.store">Store</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.tax_category.TaxCategory)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="tax_category/TaxCategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.259">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="tax_category/TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.type.Type)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.263">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="type/Type.html" title="interface in com.commercetools.api.models.type">Type</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toResourceIdentifier(com.commercetools.api.models.zone.Zone)">
+<h3>toResourceIdentifier</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="zone/ZoneResourceIdentifier.html" title="interface in com.commercetools.api.models.zone">ZoneResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.267">toResourceIdentifier</a></span>&#8203;<span class="parameters">(<a href="zone/Zone.html" title="interface in com.commercetools.api.models.zone">Zone</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.cart.Cart)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.271">toReference</a></span>&#8203;<span class="parameters">(<a href="cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.cart_discount.CartDiscount)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.275">toReference</a></span>&#8203;<span class="parameters">(<a href="cart_discount/CartDiscount.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscount</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.category.Category)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.279">toReference</a></span>&#8203;<span class="parameters">(<a href="category/Category.html" title="interface in com.commercetools.api.models.category">Category</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.channel.Channel)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.283">toReference</a></span>&#8203;<span class="parameters">(<a href="channel/Channel.html" title="interface in com.commercetools.api.models.channel">Channel</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.customer.Customer)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.287">toReference</a></span>&#8203;<span class="parameters">(<a href="customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.customer_group.CustomerGroup)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.291">toReference</a></span>&#8203;<span class="parameters">(<a href="customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.discount_code.DiscountCode)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.295">toReference</a></span>&#8203;<span class="parameters">(<a href="discount_code/DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.inventory.InventoryEntry)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="inventory/InventoryEntryReference.html" title="interface in com.commercetools.api.models.inventory">InventoryEntryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.299">toReference</a></span>&#8203;<span class="parameters">(<a href="inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.order.Order)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.303">toReference</a></span>&#8203;<span class="parameters">(<a href="order/Order.html" title="interface in com.commercetools.api.models.order">Order</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.order_edit.OrderEdit)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="order_edit/OrderEditReference.html" title="interface in com.commercetools.api.models.order_edit">OrderEditReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.307">toReference</a></span>&#8203;<span class="parameters">(<a href="order_edit/OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.payment.Payment)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.311">toReference</a></span>&#8203;<span class="parameters">(<a href="payment/Payment.html" title="interface in com.commercetools.api.models.payment">Payment</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.product.Product)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.315">toReference</a></span>&#8203;<span class="parameters">(<a href="product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.product_discount.ProductDiscount)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product_discount/ProductDiscountReference.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.319">toReference</a></span>&#8203;<span class="parameters">(<a href="product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.product_type.ProductType)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="product_type/ProductTypeReference.html" title="interface in com.commercetools.api.models.product_type">ProductTypeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.323">toReference</a></span>&#8203;<span class="parameters">(<a href="product_type/ProductType.html" title="interface in com.commercetools.api.models.product_type">ProductType</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.review.Review)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="review/ReviewReference.html" title="interface in com.commercetools.api.models.review">ReviewReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.327">toReference</a></span>&#8203;<span class="parameters">(<a href="review/Review.html" title="interface in com.commercetools.api.models.review">Review</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.shipping_method.ShippingMethod)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.331">toReference</a></span>&#8203;<span class="parameters">(<a href="shipping_method/ShippingMethod.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethod</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.shopping_list.ShoppingList)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="shopping_list/ShoppingListReference.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.335">toReference</a></span>&#8203;<span class="parameters">(<a href="shopping_list/ShoppingList.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingList</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.state.State)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.339">toReference</a></span>&#8203;<span class="parameters">(<a href="state/State.html" title="interface in com.commercetools.api.models.state">State</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.store.Store)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="store/StoreReference.html" title="interface in com.commercetools.api.models.store">StoreReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.343">toReference</a></span>&#8203;<span class="parameters">(<a href="store/Store.html" title="interface in com.commercetools.api.models.store">Store</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.tax_category.TaxCategory)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.347">toReference</a></span>&#8203;<span class="parameters">(<a href="tax_category/TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.type.Type)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="type/TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.351">toReference</a></span>&#8203;<span class="parameters">(<a href="type/Type.html" title="interface in com.commercetools.api.models.type">Type</a>&nbsp;reference)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference(com.commercetools.api.models.zone.Zone)">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="zone/ZoneReference.html" title="interface in com.commercetools.api.models.zone">ZoneReference</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/models/ReferenceConverter.html#line.355">toReference</a></span>&#8203;<span class="parameters">(<a href="zone/Zone.html" title="interface in com.commercetools.api.models.zone">Zone</a>&nbsp;reference)</span></div>
 </section>
 </li>
 </ul>

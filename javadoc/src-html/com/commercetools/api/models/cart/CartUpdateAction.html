@@ -343,7 +343,16 @@
 <span class="source-line-no">330</span><span id="line.330">    default &lt;T&gt; T withCartUpdateAction(Function&lt;CartUpdateAction, T&gt; helper) {</span>
 <span class="source-line-no">331</span><span id="line.331">        return helper.apply(this);</span>
 <span class="source-line-no">332</span><span id="line.332">    }</span>
-<span class="source-line-no">333</span><span id="line.333">}</span>
+<span class="source-line-no">333</span><span id="line.333"></span>
+<span class="source-line-no">334</span><span id="line.334">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartUpdateAction&gt; typeReference() {</span>
+<span class="source-line-no">335</span><span id="line.335">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartUpdateAction&gt;() {</span>
+<span class="source-line-no">336</span><span id="line.336">            @Override</span>
+<span class="source-line-no">337</span><span id="line.337">            public String toString() {</span>
+<span class="source-line-no">338</span><span id="line.338">                return "TypeReference&lt;CartUpdateAction&gt;";</span>
+<span class="source-line-no">339</span><span id="line.339">            }</span>
+<span class="source-line-no">340</span><span id="line.340">        };</span>
+<span class="source-line-no">341</span><span id="line.341">    }</span>
+<span class="source-line-no">342</span><span id="line.342">}</span>
 
 
 

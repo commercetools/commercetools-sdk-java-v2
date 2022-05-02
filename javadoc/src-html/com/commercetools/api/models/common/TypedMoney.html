@@ -67,7 +67,16 @@
 <span class="source-line-no">054</span><span id="line.54">    default &lt;T&gt; T withTypedMoney(Function&lt;TypedMoney, T&gt; helper) {</span>
 <span class="source-line-no">055</span><span id="line.55">        return helper.apply(this);</span>
 <span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57">}</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoney&gt; typeReference() {</span>
+<span class="source-line-no">059</span><span id="line.59">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoney&gt;() {</span>
+<span class="source-line-no">060</span><span id="line.60">            @Override</span>
+<span class="source-line-no">061</span><span id="line.61">            public String toString() {</span>
+<span class="source-line-no">062</span><span id="line.62">                return "TypeReference&lt;TypedMoney&gt;";</span>
+<span class="source-line-no">063</span><span id="line.63">            }</span>
+<span class="source-line-no">064</span><span id="line.64">        };</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66">}</span>
 
 
 

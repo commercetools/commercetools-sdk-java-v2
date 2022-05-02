@@ -167,7 +167,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><code>static <a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></code></div>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#ORDER">ORDER</a></span></code></div>
 <div class="col-last odd-row-color">
-<div class="block"><a href="ctp:api:type:Cart">Cart</a>, <a href="ctp:api:type:Order">Order</a>, and <a href="ctp:api:type:ReturnItem">ReturnItem</a>.</div>
+<div class="block"><a href="ctp:api:type:Cart">Cart</a> and <a href="ctp:api:type:Order">Order</a>.</div>
 </div>
 <div class="col-first even-row-color"><code>static <a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="#ORDER_DELIVERY">ORDER_DELIVERY</a></span></code></div>
@@ -178,6 +178,16 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#ORDER_EDIT">ORDER_EDIT</a></span></code></div>
 <div class="col-last odd-row-color">
 <div class="block"><a href="ctp:api:type:OrderEdit">OrderEdit</a></div>
+</div>
+<div class="col-first even-row-color"><code>static <a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></code></div>
+<div class="col-second even-row-color"><code><span class="member-name-link"><a href="#ORDER_PARCEL">ORDER_PARCEL</a></span></code></div>
+<div class="col-last even-row-color">
+<div class="block"><a href="ctp:api:type:Parcel">Parcel</a></div>
+</div>
+<div class="col-first odd-row-color"><code>static <a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></code></div>
+<div class="col-second odd-row-color"><code><span class="member-name-link"><a href="#ORDER_RETURN_ITEM">ORDER_RETURN_ITEM</a></span></code></div>
+<div class="col-last odd-row-color">
+<div class="block"><a href="ctp:api:type:ReturnItem">ReturnItem</a></div>
 </div>
 <div class="col-first even-row-color"><code>static <a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></code></div>
 <div class="col-second even-row-color"><code><span class="member-name-link"><a href="#PAYMENT">PAYMENT</a></span></code></div>
@@ -356,7 +366,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="ORDER">
 <h3>ORDER</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.79">ORDER</a></span></div>
-<div class="block"><p><a href="ctp:api:type:Cart">Cart</a>, <a href="ctp:api:type:Order">Order</a>, and <a href="ctp:api:type:ReturnItem">ReturnItem</a>.
+<div class="block"><p><a href="ctp:api:type:Cart">Cart</a> and <a href="ctp:api:type:Order">Order</a>.
         When a <a href="ctp:api:type:Cart">Cart</a> is ordered, the <a href="ctp:api:type:CustomFields">CustomFields</a> need to be copied to the <a href="ctp:api:type:Order">Order</a>.
         For this reason, the Types for a Cart are also valid for an Order, and both Cart and Order are referenced by the same string <code>order</code>.</p></div>
 </section>
@@ -376,72 +386,86 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="ORDER_PARCEL">
+<h3>ORDER_PARCEL</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.94">ORDER_PARCEL</a></span></div>
+<div class="block"><p><a href="ctp:api:type:Parcel">Parcel</a></p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="ORDER_RETURN_ITEM">
+<h3>ORDER_RETURN_ITEM</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.99">ORDER_RETURN_ITEM</a></span></div>
+<div class="block"><p><a href="ctp:api:type:ReturnItem">ReturnItem</a></p></div>
+</section>
+</li>
+<li>
 <section class="detail" id="PAYMENT">
 <h3>PAYMENT</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.94">PAYMENT</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.104">PAYMENT</a></span></div>
 <div class="block"><p><a href="ctp:api:type:Payment">Payment</a></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="PAYMENT_INTERFACE_INTERACTION">
 <h3>PAYMENT_INTERFACE_INTERACTION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.99">PAYMENT_INTERFACE_INTERACTION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.109">PAYMENT_INTERFACE_INTERACTION</a></span></div>
 <div class="block"><p><a href="ctp:api:type:PaymentAddInterfaceInteractionAction">InterfaceInteraction</a> on <a href="ctp:api:type:Payment">Payment</a></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="PRODUCT_PRICE">
 <h3>PRODUCT_PRICE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.104">PRODUCT_PRICE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.114">PRODUCT_PRICE</a></span></div>
 <div class="block"><p><a href="ctp:api:type:Price">Price</a> on <a href="ctp:api:type:ProductVariant">ProductVariant</a></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="PRODUCT_SELECTION">
 <h3>PRODUCT_SELECTION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.109">PRODUCT_SELECTION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.119">PRODUCT_SELECTION</a></span></div>
 <div class="block"><p><a href="ctp:api:type:ProductSelection">ProductSelection</a></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="REVIEW">
 <h3>REVIEW</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.114">REVIEW</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.124">REVIEW</a></span></div>
 <div class="block"><p><a href="ctp:api:type:Review">Review</a></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="SHIPPING_METHOD">
 <h3>SHIPPING_METHOD</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.119">SHIPPING_METHOD</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.129">SHIPPING_METHOD</a></span></div>
 <div class="block"><p><a href="ctp:api:type:ShippingMethod">ShippingMethod</a></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="SHOPPING_LIST">
 <h3>SHOPPING_LIST</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.124">SHOPPING_LIST</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.134">SHOPPING_LIST</a></span></div>
 <div class="block"><p><a href="ctp:api:type:ShoppingList">ShoppingList</a></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="SHOPPING_LIST_TEXT_LINE_ITEM">
 <h3>SHOPPING_LIST_TEXT_LINE_ITEM</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.129">SHOPPING_LIST_TEXT_LINE_ITEM</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.139">SHOPPING_LIST_TEXT_LINE_ITEM</a></span></div>
 <div class="block"><p><a href="ctp:api:type:TextLineItem">TextLineItem</a> on <a href="ctp:api:type:ShoppingList">ShoppingList</a></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="STORE">
 <h3>STORE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.134">STORE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.144">STORE</a></span></div>
 <div class="block"><p><a href="ctp:api:type:Store">Store</a></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="TRANSACTION">
 <h3>TRANSACTION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.139">TRANSACTION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.149">TRANSACTION</a></span></div>
 <div class="block"><p><a href="ctp:api:type:Transaction">Transaction</a> on <a href="ctp:api:type:Payment">Payment</a></p></div>
 </section>
 </li>
@@ -456,19 +480,19 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getJsonName()">
 <h3>getJsonName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.204">getJsonName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.218">getJsonName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="name()">
 <h3>name</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.207">name</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.221">name</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.209">toString</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.223">toString</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -478,19 +502,19 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="findEnum(java.lang.String)">
 <h3>findEnum</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.211">findEnum</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.225">findEnum</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="findEnumViaJsonName(java.lang.String)">
 <h3>findEnumViaJsonName</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.230">findEnumViaJsonName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonName)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.244">findEnumViaJsonName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;jsonName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="values()">
 <h3>values</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.234">values</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/ResourceTypeId.html#line.248">values</a></span>()</div>
 </section>
 </li>
 </ul>

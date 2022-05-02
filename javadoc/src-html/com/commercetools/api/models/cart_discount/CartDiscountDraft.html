@@ -172,7 +172,16 @@
 <span class="source-line-no">159</span><span id="line.159">    default &lt;T&gt; T withCartDiscountDraft(Function&lt;CartDiscountDraft, T&gt; helper) {</span>
 <span class="source-line-no">160</span><span id="line.160">        return helper.apply(this);</span>
 <span class="source-line-no">161</span><span id="line.161">    }</span>
-<span class="source-line-no">162</span><span id="line.162">}</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountDraft&gt; typeReference() {</span>
+<span class="source-line-no">164</span><span id="line.164">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountDraft&gt;() {</span>
+<span class="source-line-no">165</span><span id="line.165">            @Override</span>
+<span class="source-line-no">166</span><span id="line.166">            public String toString() {</span>
+<span class="source-line-no">167</span><span id="line.167">                return "TypeReference&lt;CartDiscountDraft&gt;";</span>
+<span class="source-line-no">168</span><span id="line.168">            }</span>
+<span class="source-line-no">169</span><span id="line.169">        };</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171">}</span>
 
 
 

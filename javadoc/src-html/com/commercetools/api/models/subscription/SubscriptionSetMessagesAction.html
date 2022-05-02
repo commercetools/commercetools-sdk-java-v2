@@ -61,7 +61,16 @@
 <span class="source-line-no">048</span><span id="line.48">    default &lt;T&gt; T withSubscriptionSetMessagesAction(Function&lt;SubscriptionSetMessagesAction, T&gt; helper) {</span>
 <span class="source-line-no">049</span><span id="line.49">        return helper.apply(this);</span>
 <span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51">}</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public static com.fasterxml.jackson.core.type.TypeReference&lt;SubscriptionSetMessagesAction&gt; typeReference() {</span>
+<span class="source-line-no">053</span><span id="line.53">        return new com.fasterxml.jackson.core.type.TypeReference&lt;SubscriptionSetMessagesAction&gt;() {</span>
+<span class="source-line-no">054</span><span id="line.54">            @Override</span>
+<span class="source-line-no">055</span><span id="line.55">            public String toString() {</span>
+<span class="source-line-no">056</span><span id="line.56">                return "TypeReference&lt;SubscriptionSetMessagesAction&gt;";</span>
+<span class="source-line-no">057</span><span id="line.57">            }</span>
+<span class="source-line-no">058</span><span id="line.58">        };</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60">}</span>
 
 
 

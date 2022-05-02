@@ -196,7 +196,16 @@
 <span class="source-line-no">183</span><span id="line.183">    default &lt;T&gt; T withPriceImport(Function&lt;PriceImport, T&gt; helper) {</span>
 <span class="source-line-no">184</span><span id="line.184">        return helper.apply(this);</span>
 <span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186">}</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">    public static com.fasterxml.jackson.core.type.TypeReference&lt;PriceImport&gt; typeReference() {</span>
+<span class="source-line-no">188</span><span id="line.188">        return new com.fasterxml.jackson.core.type.TypeReference&lt;PriceImport&gt;() {</span>
+<span class="source-line-no">189</span><span id="line.189">            @Override</span>
+<span class="source-line-no">190</span><span id="line.190">            public String toString() {</span>
+<span class="source-line-no">191</span><span id="line.191">                return "TypeReference&lt;PriceImport&gt;";</span>
+<span class="source-line-no">192</span><span id="line.192">            }</span>
+<span class="source-line-no">193</span><span id="line.193">        };</span>
+<span class="source-line-no">194</span><span id="line.194">    }</span>
+<span class="source-line-no">195</span><span id="line.195">}</span>
 
 
 

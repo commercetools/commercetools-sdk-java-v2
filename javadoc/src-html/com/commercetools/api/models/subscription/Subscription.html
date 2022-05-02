@@ -153,7 +153,16 @@
 <span class="source-line-no">140</span><span id="line.140">    default &lt;T&gt; T withSubscription(Function&lt;Subscription, T&gt; helper) {</span>
 <span class="source-line-no">141</span><span id="line.141">        return helper.apply(this);</span>
 <span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143">}</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Subscription&gt; typeReference() {</span>
+<span class="source-line-no">145</span><span id="line.145">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Subscription&gt;() {</span>
+<span class="source-line-no">146</span><span id="line.146">            @Override</span>
+<span class="source-line-no">147</span><span id="line.147">            public String toString() {</span>
+<span class="source-line-no">148</span><span id="line.148">                return "TypeReference&lt;Subscription&gt;";</span>
+<span class="source-line-no">149</span><span id="line.149">            }</span>
+<span class="source-line-no">150</span><span id="line.150">        };</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152">}</span>
 
 
 

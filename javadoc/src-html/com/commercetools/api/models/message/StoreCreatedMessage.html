@@ -126,7 +126,16 @@
 <span class="source-line-no">113</span><span id="line.113">    default &lt;T&gt; T withStoreCreatedMessage(Function&lt;StoreCreatedMessage, T&gt; helper) {</span>
 <span class="source-line-no">114</span><span id="line.114">        return helper.apply(this);</span>
 <span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116">}</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    public static com.fasterxml.jackson.core.type.TypeReference&lt;StoreCreatedMessage&gt; typeReference() {</span>
+<span class="source-line-no">118</span><span id="line.118">        return new com.fasterxml.jackson.core.type.TypeReference&lt;StoreCreatedMessage&gt;() {</span>
+<span class="source-line-no">119</span><span id="line.119">            @Override</span>
+<span class="source-line-no">120</span><span id="line.120">            public String toString() {</span>
+<span class="source-line-no">121</span><span id="line.121">                return "TypeReference&lt;StoreCreatedMessage&gt;";</span>
+<span class="source-line-no">122</span><span id="line.122">            }</span>
+<span class="source-line-no">123</span><span id="line.123">        };</span>
+<span class="source-line-no">124</span><span id="line.124">    }</span>
+<span class="source-line-no">125</span><span id="line.125">}</span>
 
 
 

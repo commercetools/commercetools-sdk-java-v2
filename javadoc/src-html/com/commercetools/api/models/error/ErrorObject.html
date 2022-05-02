@@ -376,7 +376,16 @@
 <span class="source-line-no">363</span><span id="line.363">    default &lt;T&gt; T withErrorObject(Function&lt;ErrorObject, T&gt; helper) {</span>
 <span class="source-line-no">364</span><span id="line.364">        return helper.apply(this);</span>
 <span class="source-line-no">365</span><span id="line.365">    }</span>
-<span class="source-line-no">366</span><span id="line.366">}</span>
+<span class="source-line-no">366</span><span id="line.366"></span>
+<span class="source-line-no">367</span><span id="line.367">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ErrorObject&gt; typeReference() {</span>
+<span class="source-line-no">368</span><span id="line.368">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ErrorObject&gt;() {</span>
+<span class="source-line-no">369</span><span id="line.369">            @Override</span>
+<span class="source-line-no">370</span><span id="line.370">            public String toString() {</span>
+<span class="source-line-no">371</span><span id="line.371">                return "TypeReference&lt;ErrorObject&gt;";</span>
+<span class="source-line-no">372</span><span id="line.372">            }</span>
+<span class="source-line-no">373</span><span id="line.373">        };</span>
+<span class="source-line-no">374</span><span id="line.374">    }</span>
+<span class="source-line-no">375</span><span id="line.375">}</span>
 
 
 

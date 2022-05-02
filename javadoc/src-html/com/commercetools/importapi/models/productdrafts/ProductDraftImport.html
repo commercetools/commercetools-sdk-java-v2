@@ -248,7 +248,16 @@
 <span class="source-line-no">235</span><span id="line.235">    default &lt;T&gt; T withProductDraftImport(Function&lt;ProductDraftImport, T&gt; helper) {</span>
 <span class="source-line-no">236</span><span id="line.236">        return helper.apply(this);</span>
 <span class="source-line-no">237</span><span id="line.237">    }</span>
-<span class="source-line-no">238</span><span id="line.238">}</span>
+<span class="source-line-no">238</span><span id="line.238"></span>
+<span class="source-line-no">239</span><span id="line.239">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductDraftImport&gt; typeReference() {</span>
+<span class="source-line-no">240</span><span id="line.240">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductDraftImport&gt;() {</span>
+<span class="source-line-no">241</span><span id="line.241">            @Override</span>
+<span class="source-line-no">242</span><span id="line.242">            public String toString() {</span>
+<span class="source-line-no">243</span><span id="line.243">                return "TypeReference&lt;ProductDraftImport&gt;";</span>
+<span class="source-line-no">244</span><span id="line.244">            }</span>
+<span class="source-line-no">245</span><span id="line.245">        };</span>
+<span class="source-line-no">246</span><span id="line.246">    }</span>
+<span class="source-line-no">247</span><span id="line.247">}</span>
 
 
 

@@ -162,7 +162,16 @@
 <span class="source-line-no">149</span><span id="line.149">    default &lt;T&gt; T withCategoryDraft(Function&lt;CategoryDraft, T&gt; helper) {</span>
 <span class="source-line-no">150</span><span id="line.150">        return helper.apply(this);</span>
 <span class="source-line-no">151</span><span id="line.151">    }</span>
-<span class="source-line-no">152</span><span id="line.152">}</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CategoryDraft&gt; typeReference() {</span>
+<span class="source-line-no">154</span><span id="line.154">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CategoryDraft&gt;() {</span>
+<span class="source-line-no">155</span><span id="line.155">            @Override</span>
+<span class="source-line-no">156</span><span id="line.156">            public String toString() {</span>
+<span class="source-line-no">157</span><span id="line.157">                return "TypeReference&lt;CategoryDraft&gt;";</span>
+<span class="source-line-no">158</span><span id="line.158">            }</span>
+<span class="source-line-no">159</span><span id="line.159">        };</span>
+<span class="source-line-no">160</span><span id="line.160">    }</span>
+<span class="source-line-no">161</span><span id="line.161">}</span>
 
 
 

@@ -130,7 +130,16 @@
 <span class="source-line-no">117</span><span id="line.117">    default &lt;T&gt; T withChannelDraft(Function&lt;ChannelDraft, T&gt; helper) {</span>
 <span class="source-line-no">118</span><span id="line.118">        return helper.apply(this);</span>
 <span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120">}</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ChannelDraft&gt; typeReference() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ChannelDraft&gt;() {</span>
+<span class="source-line-no">123</span><span id="line.123">            @Override</span>
+<span class="source-line-no">124</span><span id="line.124">            public String toString() {</span>
+<span class="source-line-no">125</span><span id="line.125">                return "TypeReference&lt;ChannelDraft&gt;";</span>
+<span class="source-line-no">126</span><span id="line.126">            }</span>
+<span class="source-line-no">127</span><span id="line.127">        };</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129">}</span>
 
 
 

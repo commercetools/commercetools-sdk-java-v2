@@ -158,7 +158,16 @@
 <span class="source-line-no">145</span><span id="line.145">    default &lt;T&gt; T withCustomLineItemDraft(Function&lt;CustomLineItemDraft, T&gt; helper) {</span>
 <span class="source-line-no">146</span><span id="line.146">        return helper.apply(this);</span>
 <span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148">}</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomLineItemDraft&gt; typeReference() {</span>
+<span class="source-line-no">150</span><span id="line.150">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomLineItemDraft&gt;() {</span>
+<span class="source-line-no">151</span><span id="line.151">            @Override</span>
+<span class="source-line-no">152</span><span id="line.152">            public String toString() {</span>
+<span class="source-line-no">153</span><span id="line.153">                return "TypeReference&lt;CustomLineItemDraft&gt;";</span>
+<span class="source-line-no">154</span><span id="line.154">            }</span>
+<span class="source-line-no">155</span><span id="line.155">        };</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157">}</span>
 
 
 

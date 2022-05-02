@@ -138,7 +138,16 @@
 <span class="source-line-no">125</span><span id="line.125">    default &lt;T&gt; T withAttributeDefinitionDraft(Function&lt;AttributeDefinitionDraft, T&gt; helper) {</span>
 <span class="source-line-no">126</span><span id="line.126">        return helper.apply(this);</span>
 <span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128">}</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public static com.fasterxml.jackson.core.type.TypeReference&lt;AttributeDefinitionDraft&gt; typeReference() {</span>
+<span class="source-line-no">130</span><span id="line.130">        return new com.fasterxml.jackson.core.type.TypeReference&lt;AttributeDefinitionDraft&gt;() {</span>
+<span class="source-line-no">131</span><span id="line.131">            @Override</span>
+<span class="source-line-no">132</span><span id="line.132">            public String toString() {</span>
+<span class="source-line-no">133</span><span id="line.133">                return "TypeReference&lt;AttributeDefinitionDraft&gt;";</span>
+<span class="source-line-no">134</span><span id="line.134">            }</span>
+<span class="source-line-no">135</span><span id="line.135">        };</span>
+<span class="source-line-no">136</span><span id="line.136">    }</span>
+<span class="source-line-no">137</span><span id="line.137">}</span>
 
 
 

@@ -71,7 +71,16 @@
 <span class="source-line-no">058</span><span id="line.58">    default &lt;T&gt; T withItemShippingTarget(Function&lt;ItemShippingTarget, T&gt; helper) {</span>
 <span class="source-line-no">059</span><span id="line.59">        return helper.apply(this);</span>
 <span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61">}</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ItemShippingTarget&gt; typeReference() {</span>
+<span class="source-line-no">063</span><span id="line.63">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ItemShippingTarget&gt;() {</span>
+<span class="source-line-no">064</span><span id="line.64">            @Override</span>
+<span class="source-line-no">065</span><span id="line.65">            public String toString() {</span>
+<span class="source-line-no">066</span><span id="line.66">                return "TypeReference&lt;ItemShippingTarget&gt;";</span>
+<span class="source-line-no">067</span><span id="line.67">            }</span>
+<span class="source-line-no">068</span><span id="line.68">        };</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70">}</span>
 
 
 

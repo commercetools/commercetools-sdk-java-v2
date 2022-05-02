@@ -152,7 +152,16 @@
 <span class="source-line-no">139</span><span id="line.139">    default &lt;T&gt; T withStagedOrderAddLineItemAction(Function&lt;StagedOrderAddLineItemAction, T&gt; helper) {</span>
 <span class="source-line-no">140</span><span id="line.140">        return helper.apply(this);</span>
 <span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142">}</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public static com.fasterxml.jackson.core.type.TypeReference&lt;StagedOrderAddLineItemAction&gt; typeReference() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return new com.fasterxml.jackson.core.type.TypeReference&lt;StagedOrderAddLineItemAction&gt;() {</span>
+<span class="source-line-no">145</span><span id="line.145">            @Override</span>
+<span class="source-line-no">146</span><span id="line.146">            public String toString() {</span>
+<span class="source-line-no">147</span><span id="line.147">                return "TypeReference&lt;StagedOrderAddLineItemAction&gt;";</span>
+<span class="source-line-no">148</span><span id="line.148">            }</span>
+<span class="source-line-no">149</span><span id="line.149">        };</span>
+<span class="source-line-no">150</span><span id="line.150">    }</span>
+<span class="source-line-no">151</span><span id="line.151">}</span>
 
 
 

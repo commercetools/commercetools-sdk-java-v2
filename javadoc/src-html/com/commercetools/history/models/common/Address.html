@@ -227,7 +227,16 @@
 <span class="source-line-no">214</span><span id="line.214">    default &lt;T&gt; T withAddress(Function&lt;Address, T&gt; helper) {</span>
 <span class="source-line-no">215</span><span id="line.215">        return helper.apply(this);</span>
 <span class="source-line-no">216</span><span id="line.216">    }</span>
-<span class="source-line-no">217</span><span id="line.217">}</span>
+<span class="source-line-no">217</span><span id="line.217"></span>
+<span class="source-line-no">218</span><span id="line.218">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Address&gt; typeReference() {</span>
+<span class="source-line-no">219</span><span id="line.219">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Address&gt;() {</span>
+<span class="source-line-no">220</span><span id="line.220">            @Override</span>
+<span class="source-line-no">221</span><span id="line.221">            public String toString() {</span>
+<span class="source-line-no">222</span><span id="line.222">                return "TypeReference&lt;Address&gt;";</span>
+<span class="source-line-no">223</span><span id="line.223">            }</span>
+<span class="source-line-no">224</span><span id="line.224">        };</span>
+<span class="source-line-no">225</span><span id="line.225">    }</span>
+<span class="source-line-no">226</span><span id="line.226">}</span>
 
 
 

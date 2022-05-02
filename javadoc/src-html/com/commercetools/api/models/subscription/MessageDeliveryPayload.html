@@ -106,7 +106,16 @@
 <span class="source-line-no">093</span><span id="line.93">    default &lt;T&gt; T withMessageDeliveryPayload(Function&lt;MessageDeliveryPayload, T&gt; helper) {</span>
 <span class="source-line-no">094</span><span id="line.94">        return helper.apply(this);</span>
 <span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96">}</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public static com.fasterxml.jackson.core.type.TypeReference&lt;MessageDeliveryPayload&gt; typeReference() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return new com.fasterxml.jackson.core.type.TypeReference&lt;MessageDeliveryPayload&gt;() {</span>
+<span class="source-line-no">099</span><span id="line.99">            @Override</span>
+<span class="source-line-no">100</span><span id="line.100">            public String toString() {</span>
+<span class="source-line-no">101</span><span id="line.101">                return "TypeReference&lt;MessageDeliveryPayload&gt;";</span>
+<span class="source-line-no">102</span><span id="line.102">            }</span>
+<span class="source-line-no">103</span><span id="line.103">        };</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105">}</span>
 
 
 

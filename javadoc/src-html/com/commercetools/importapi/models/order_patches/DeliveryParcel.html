@@ -84,7 +84,16 @@
 <span class="source-line-no">071</span><span id="line.71">    default &lt;T&gt; T withDeliveryParcel(Function&lt;DeliveryParcel, T&gt; helper) {</span>
 <span class="source-line-no">072</span><span id="line.72">        return helper.apply(this);</span>
 <span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74">}</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DeliveryParcel&gt; typeReference() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DeliveryParcel&gt;() {</span>
+<span class="source-line-no">077</span><span id="line.77">            @Override</span>
+<span class="source-line-no">078</span><span id="line.78">            public String toString() {</span>
+<span class="source-line-no">079</span><span id="line.79">                return "TypeReference&lt;DeliveryParcel&gt;";</span>
+<span class="source-line-no">080</span><span id="line.80">            }</span>
+<span class="source-line-no">081</span><span id="line.81">        };</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83">}</span>
 
 
 

@@ -20,15 +20,15 @@
 <span class="source-line-no">007</span><span id="line.7">import javax.validation.Valid;</span>
 <span class="source-line-no">008</span><span id="line.8">import javax.validation.constraints.NotNull;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">import com.commercetools.api.models.common.BaseResource;</span>
-<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.CreatedBy;</span>
-<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.common.LastModifiedBy;</span>
-<span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.annotation.JsonProperty;</span>
-<span class="source-line-no">014</span><span id="line.14">import com.fasterxml.jackson.databind.annotation.JsonDeserialize;</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">@JsonDeserialize(as = GenericCustomObjectImpl.class)</span>
-<span class="source-line-no">017</span><span id="line.17">public interface GenericCustomObject&lt;TValue&gt;</span>
-<span class="source-line-no">018</span><span id="line.18">        extends BaseResource, com.commercetools.api.models.DomainResource&lt;GenericCustomObject&lt;TValue&gt;&gt; {</span>
+<span class="source-line-no">010</span><span id="line.10">import com.commercetools.api.models.Referencable;</span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.common.*;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.annotation.JsonProperty;</span>
+<span class="source-line-no">013</span><span id="line.13">import com.fasterxml.jackson.databind.annotation.JsonDeserialize;</span>
+<span class="source-line-no">014</span><span id="line.14"></span>
+<span class="source-line-no">015</span><span id="line.15">@JsonDeserialize(as = GenericCustomObjectImpl.class)</span>
+<span class="source-line-no">016</span><span id="line.16">public interface GenericCustomObject&lt;TValue&gt;</span>
+<span class="source-line-no">017</span><span id="line.17">        extends BaseResource, com.commercetools.api.models.DomainResource&lt;GenericCustomObject&lt;TValue&gt;&gt;,</span>
+<span class="source-line-no">018</span><span id="line.18">        Referencable&lt;GenericCustomObject&lt;TValue&gt;&gt; {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    @NotNull</span>
 <span class="source-line-no">021</span><span id="line.21">    @JsonProperty("id")</span>
@@ -122,7 +122,12 @@
 <span class="source-line-no">109</span><span id="line.109">    default &lt;T&gt; T withCustomObject(Function&lt;GenericCustomObject&lt;TValue&gt;, T&gt; helper) {</span>
 <span class="source-line-no">110</span><span id="line.110">        return helper.apply(this);</span>
 <span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112">}</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    @Override</span>
+<span class="source-line-no">114</span><span id="line.114">    default Reference toReference() {</span>
+<span class="source-line-no">115</span><span id="line.115">        return CustomObjectReference.builder().id(getId()).build();</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117">}</span>
 
 
 

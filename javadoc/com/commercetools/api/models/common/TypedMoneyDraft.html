@@ -123,9 +123,12 @@ extends <a href="Money.html" title="interface in com.commercetools.api.models.co
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setFractionDigits(java.lang.Integer)">setFractionDigits</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withTypedMoneyDraft(java.util.function.Function)">withTypedMoneyDraft</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a>,&#8203;T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab1 method-summary-table"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table-tab1 method-summary-table"><code><span class="member-name-link"><a href="#typeReference()">typeReference</a></span>()</code></div>
+<div class="col-last odd-row-color method-summary-table-tab1 method-summary-table">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withTypedMoneyDraft(java.util.function.Function)">withTypedMoneyDraft</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a>,&#8203;T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -134,7 +137,7 @@ extends <a href="Money.html" title="interface in com.commercetools.api.models.co
 <code><a href="MonetaryAmountConvertable.html#toMonetaryAmount()">toMonetaryAmount</a></code></div>
 <div class="inherited-list">
 <h3 id="methods.inherited.from.class.com.commercetools.api.models.common.Money">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></h3>
-<code><a href="Money.html#getCentAmount()">getCentAmount</a>, <a href="Money.html#getCurrencyCode()">getCurrencyCode</a>, <a href="Money.html#setCentAmount(java.lang.Long)">setCentAmount</a>, <a href="Money.html#setCurrencyCode(java.lang.String)">setCurrencyCode</a>, <a href="Money.html#withMoney(java.util.function.Function)">withMoney</a></code></div>
+<code><a href="Money.html#getCentAmount()">getCentAmount</a>, <a href="Money.html#getCurrencyCode()">getCurrencyCode</a>, <a href="Money.html#setCentAmount(java.lang.Long)">setCentAmount</a>, <a href="Money.html#setCurrencyCode(java.lang.String)">setCurrencyCode</a>, <a href="Money.html#toDraft()">toDraft</a>, <a href="Money.html#withMoney(java.util.function.Function)">withMoney</a></code></div>
 </section>
 </li>
 </ul>
@@ -183,6 +186,12 @@ extends <a href="Money.html" title="interface in com.commercetools.api.models.co
 <section class="detail" id="withTypedMoneyDraft(java.util.function.Function)">
 <h3>withTypedMoneyDraft</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.47">withTypedMoneyDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="typeReference()">
+<h3>typeReference</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypedMoneyDraft.html" title="interface in com.commercetools.api.models.common">TypedMoneyDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoneyDraft.html#line.51">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

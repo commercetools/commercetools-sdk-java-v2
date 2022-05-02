@@ -74,7 +74,16 @@
 <span class="source-line-no">061</span><span id="line.61">    default &lt;T&gt; T withCartSetCustomTypeAction(Function&lt;CartSetCustomTypeAction, T&gt; helper) {</span>
 <span class="source-line-no">062</span><span id="line.62">        return helper.apply(this);</span>
 <span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64">}</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartSetCustomTypeAction&gt; typeReference() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartSetCustomTypeAction&gt;() {</span>
+<span class="source-line-no">067</span><span id="line.67">            @Override</span>
+<span class="source-line-no">068</span><span id="line.68">            public String toString() {</span>
+<span class="source-line-no">069</span><span id="line.69">                return "TypeReference&lt;CartSetCustomTypeAction&gt;";</span>
+<span class="source-line-no">070</span><span id="line.70">            }</span>
+<span class="source-line-no">071</span><span id="line.71">        };</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73">}</span>
 
 
 

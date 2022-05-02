@@ -146,7 +146,16 @@
 <span class="source-line-no">133</span><span id="line.133">    default &lt;T&gt; T withProductVariant(Function&lt;ProductVariant, T&gt; helper) {</span>
 <span class="source-line-no">134</span><span id="line.134">        return helper.apply(this);</span>
 <span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136">}</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariant&gt; typeReference() {</span>
+<span class="source-line-no">138</span><span id="line.138">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariant&gt;() {</span>
+<span class="source-line-no">139</span><span id="line.139">            @Override</span>
+<span class="source-line-no">140</span><span id="line.140">            public String toString() {</span>
+<span class="source-line-no">141</span><span id="line.141">                return "TypeReference&lt;ProductVariant&gt;";</span>
+<span class="source-line-no">142</span><span id="line.142">            }</span>
+<span class="source-line-no">143</span><span id="line.143">        };</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145">}</span>
 
 
 

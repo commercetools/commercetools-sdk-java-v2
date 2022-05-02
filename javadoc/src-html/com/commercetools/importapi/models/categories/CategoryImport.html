@@ -174,7 +174,16 @@
 <span class="source-line-no">161</span><span id="line.161">    default &lt;T&gt; T withCategoryImport(Function&lt;CategoryImport, T&gt; helper) {</span>
 <span class="source-line-no">162</span><span id="line.162">        return helper.apply(this);</span>
 <span class="source-line-no">163</span><span id="line.163">    }</span>
-<span class="source-line-no">164</span><span id="line.164">}</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CategoryImport&gt; typeReference() {</span>
+<span class="source-line-no">166</span><span id="line.166">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CategoryImport&gt;() {</span>
+<span class="source-line-no">167</span><span id="line.167">            @Override</span>
+<span class="source-line-no">168</span><span id="line.168">            public String toString() {</span>
+<span class="source-line-no">169</span><span id="line.169">                return "TypeReference&lt;CategoryImport&gt;";</span>
+<span class="source-line-no">170</span><span id="line.170">            }</span>
+<span class="source-line-no">171</span><span id="line.171">        };</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173">}</span>
 
 
 

@@ -118,7 +118,16 @@
 <span class="source-line-no">105</span><span id="line.105">    default &lt;T&gt; T withFacetRange(Function&lt;FacetRange, T&gt; helper) {</span>
 <span class="source-line-no">106</span><span id="line.106">        return helper.apply(this);</span>
 <span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108">}</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public static com.fasterxml.jackson.core.type.TypeReference&lt;FacetRange&gt; typeReference() {</span>
+<span class="source-line-no">110</span><span id="line.110">        return new com.fasterxml.jackson.core.type.TypeReference&lt;FacetRange&gt;() {</span>
+<span class="source-line-no">111</span><span id="line.111">            @Override</span>
+<span class="source-line-no">112</span><span id="line.112">            public String toString() {</span>
+<span class="source-line-no">113</span><span id="line.113">                return "TypeReference&lt;FacetRange&gt;";</span>
+<span class="source-line-no">114</span><span id="line.114">            }</span>
+<span class="source-line-no">115</span><span id="line.115">        };</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117">}</span>
 
 
 

@@ -551,7 +551,16 @@
 <span class="source-line-no">538</span><span id="line.538">    default &lt;T&gt; T withMessage(Function&lt;Message, T&gt; helper) {</span>
 <span class="source-line-no">539</span><span id="line.539">        return helper.apply(this);</span>
 <span class="source-line-no">540</span><span id="line.540">    }</span>
-<span class="source-line-no">541</span><span id="line.541">}</span>
+<span class="source-line-no">541</span><span id="line.541"></span>
+<span class="source-line-no">542</span><span id="line.542">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Message&gt; typeReference() {</span>
+<span class="source-line-no">543</span><span id="line.543">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Message&gt;() {</span>
+<span class="source-line-no">544</span><span id="line.544">            @Override</span>
+<span class="source-line-no">545</span><span id="line.545">            public String toString() {</span>
+<span class="source-line-no">546</span><span id="line.546">                return "TypeReference&lt;Message&gt;";</span>
+<span class="source-line-no">547</span><span id="line.547">            }</span>
+<span class="source-line-no">548</span><span id="line.548">        };</span>
+<span class="source-line-no">549</span><span id="line.549">    }</span>
+<span class="source-line-no">550</span><span id="line.550">}</span>
 
 
 

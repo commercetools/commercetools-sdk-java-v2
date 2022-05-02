@@ -96,7 +96,16 @@
 <span class="source-line-no">083</span><span id="line.83">    default &lt;T&gt; T withRemoveImageChange(Function&lt;RemoveImageChange, T&gt; helper) {</span>
 <span class="source-line-no">084</span><span id="line.84">        return helper.apply(this);</span>
 <span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86">}</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public static com.fasterxml.jackson.core.type.TypeReference&lt;RemoveImageChange&gt; typeReference() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return new com.fasterxml.jackson.core.type.TypeReference&lt;RemoveImageChange&gt;() {</span>
+<span class="source-line-no">089</span><span id="line.89">            @Override</span>
+<span class="source-line-no">090</span><span id="line.90">            public String toString() {</span>
+<span class="source-line-no">091</span><span id="line.91">                return "TypeReference&lt;RemoveImageChange&gt;";</span>
+<span class="source-line-no">092</span><span id="line.92">            }</span>
+<span class="source-line-no">093</span><span id="line.93">        };</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95">}</span>
 
 
 

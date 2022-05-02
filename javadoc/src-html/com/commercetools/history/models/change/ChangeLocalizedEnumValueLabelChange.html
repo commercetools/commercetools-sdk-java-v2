@@ -114,7 +114,16 @@
 <span class="source-line-no">101</span><span id="line.101">    default &lt;T&gt; T withChangeLocalizedEnumValueLabelChange(Function&lt;ChangeLocalizedEnumValueLabelChange, T&gt; helper) {</span>
 <span class="source-line-no">102</span><span id="line.102">        return helper.apply(this);</span>
 <span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104">}</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ChangeLocalizedEnumValueLabelChange&gt; typeReference() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ChangeLocalizedEnumValueLabelChange&gt;() {</span>
+<span class="source-line-no">107</span><span id="line.107">            @Override</span>
+<span class="source-line-no">108</span><span id="line.108">            public String toString() {</span>
+<span class="source-line-no">109</span><span id="line.109">                return "TypeReference&lt;ChangeLocalizedEnumValueLabelChange&gt;";</span>
+<span class="source-line-no">110</span><span id="line.110">            }</span>
+<span class="source-line-no">111</span><span id="line.111">        };</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113">}</span>
 
 
 

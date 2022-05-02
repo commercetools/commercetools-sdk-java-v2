@@ -132,7 +132,16 @@
 <span class="source-line-no">119</span><span id="line.119">    default &lt;T&gt; T withShippingMethodDraft(Function&lt;ShippingMethodDraft, T&gt; helper) {</span>
 <span class="source-line-no">120</span><span id="line.120">        return helper.apply(this);</span>
 <span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122">}</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ShippingMethodDraft&gt; typeReference() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ShippingMethodDraft&gt;() {</span>
+<span class="source-line-no">125</span><span id="line.125">            @Override</span>
+<span class="source-line-no">126</span><span id="line.126">            public String toString() {</span>
+<span class="source-line-no">127</span><span id="line.127">                return "TypeReference&lt;ShippingMethodDraft&gt;";</span>
+<span class="source-line-no">128</span><span id="line.128">            }</span>
+<span class="source-line-no">129</span><span id="line.129">        };</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">131</span><span id="line.131">}</span>
 
 
 

@@ -77,15 +77,15 @@ loadScripts(document, 'script');</script>
 <section class="description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;TValue&gt;&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;TValue&gt;&gt;</code></dd>
+<dd><code><a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a></code>, <code><a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;TValue&gt;&gt;</code>, <code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;TValue&gt;&gt;</code>, <code><a href="../Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;TValue&gt;&gt;</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
 <dd><code><a href="GenericCustomObjectImpl.html" title="class in com.commercetools.api.models.custom_object">GenericCustomObjectImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/custom_object/GenericCustomObject.html#line.16">GenericCustomObject</a>&lt;TValue&gt;</span><span class="extends-implements">
-extends <a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a>, <a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;TValue&gt;&gt;</span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/custom_object/GenericCustomObject.html#line.15">GenericCustomObject</a>&lt;TValue&gt;</span><span class="extends-implements">
+extends <a href="../common/BaseResource.html" title="interface in com.commercetools.api.models.common">BaseResource</a>, <a href="../DomainResource.html" title="interface in com.commercetools.api.models">DomainResource</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;TValue&gt;&gt;, <a href="../Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;TValue&gt;&gt;</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -174,9 +174,12 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3"><code><span class="member-name-link"><a href="#setVersion(java.lang.Long)">setVersion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withCustomObject(java.util.function.Function)">withCustomObject</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;<a href="GenericCustomObject.html" title="type parameter in GenericCustomObject">TValue</a>&gt;,&#8203;T&gt;&nbsp;helper)</code></div>
+<div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
+<div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#toReference()">toReference</a></span>()</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table"><code><span class="member-name-link"><a href="#withCustomObject(java.util.function.Function)">withCustomObject</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;<a href="GenericCustomObject.html" title="type parameter in GenericCustomObject">TValue</a>&gt;,&#8203;T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab5 method-summary-table">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -387,6 +390,16 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="withCustomObject(java.util.function.Function)">
 <h3>withCustomObject</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/custom_object/GenericCustomObject.html#line.109">withCustomObject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a>&lt;<a href="GenericCustomObject.html" title="type parameter in GenericCustomObject">TValue</a>&gt;,&#8203;T&gt;&nbsp;helper)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="toReference()">
+<h3>toReference</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/custom_object/GenericCustomObject.html#line.113">toReference</a></span>()</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../Referencable.html#toReference()">toReference</a></code>&nbsp;in interface&nbsp;<code><a href="../Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="GenericCustomObject.html" title="type parameter in GenericCustomObject">TValue</a>&gt;</code></dd>
+</dl>
 </section>
 </li>
 </ul>

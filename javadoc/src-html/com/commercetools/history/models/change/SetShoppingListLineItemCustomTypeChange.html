@@ -94,7 +94,16 @@
 <span class="source-line-no">081</span><span id="line.81">            Function&lt;SetShoppingListLineItemCustomTypeChange, T&gt; helper) {</span>
 <span class="source-line-no">082</span><span id="line.82">        return helper.apply(this);</span>
 <span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84">}</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public static com.fasterxml.jackson.core.type.TypeReference&lt;SetShoppingListLineItemCustomTypeChange&gt; typeReference() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return new com.fasterxml.jackson.core.type.TypeReference&lt;SetShoppingListLineItemCustomTypeChange&gt;() {</span>
+<span class="source-line-no">087</span><span id="line.87">            @Override</span>
+<span class="source-line-no">088</span><span id="line.88">            public String toString() {</span>
+<span class="source-line-no">089</span><span id="line.89">                return "TypeReference&lt;SetShoppingListLineItemCustomTypeChange&gt;";</span>
+<span class="source-line-no">090</span><span id="line.90">            }</span>
+<span class="source-line-no">091</span><span id="line.91">        };</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93">}</span>
 
 
 

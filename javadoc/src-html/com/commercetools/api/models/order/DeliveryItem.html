@@ -63,7 +63,16 @@
 <span class="source-line-no">050</span><span id="line.50">    default &lt;T&gt; T withDeliveryItem(Function&lt;DeliveryItem, T&gt; helper) {</span>
 <span class="source-line-no">051</span><span id="line.51">        return helper.apply(this);</span>
 <span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53">}</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DeliveryItem&gt; typeReference() {</span>
+<span class="source-line-no">055</span><span id="line.55">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DeliveryItem&gt;() {</span>
+<span class="source-line-no">056</span><span id="line.56">            @Override</span>
+<span class="source-line-no">057</span><span id="line.57">            public String toString() {</span>
+<span class="source-line-no">058</span><span id="line.58">                return "TypeReference&lt;DeliveryItem&gt;";</span>
+<span class="source-line-no">059</span><span id="line.59">            }</span>
+<span class="source-line-no">060</span><span id="line.60">        };</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62">}</span>
 
 
 

@@ -8,6 +8,7 @@ dependencies {
     api commons.lang3
 
     integrationTestImplementation project(':commercetools:commercetools-http-client')
+    integrationTestImplementation project(':commercetools:commercetools-sdk-java-api')
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"

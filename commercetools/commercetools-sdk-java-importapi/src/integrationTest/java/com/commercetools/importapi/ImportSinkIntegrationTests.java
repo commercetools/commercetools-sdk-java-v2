@@ -1,10 +1,11 @@
 
-package com.commercetools.importapi.defaultconfig;
+package com.commercetools.importapi;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importcontainers.ImportContainer;
 import com.commercetools.importapi.models.importcontainers.ImportContainerDraft;
 import com.commercetools.importapi.models.importcontainers.ImportContainerDraftBuilder;
+import com.commercetools.importapi.utils.ImportApiTestUtils;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

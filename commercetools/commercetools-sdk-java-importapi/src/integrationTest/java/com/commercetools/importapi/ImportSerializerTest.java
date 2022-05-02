@@ -1,7 +1,8 @@
 
-package com.commercetools.importapi.defaultconfig;
+package com.commercetools.importapi;
 
 import com.commercetools.importapi.client.ProjectApiRoot;
+import com.commercetools.importapi.defaultconfig.ImportApiRootBuilder;
 import com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder;
 import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestBuilder;
 import com.fasterxml.jackson.annotation.JsonInclude;

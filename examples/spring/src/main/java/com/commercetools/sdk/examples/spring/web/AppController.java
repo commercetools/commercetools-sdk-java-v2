@@ -18,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestAttribute;
+import org.springframework.web.reactive.result.view.RedirectView;
 import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Mono;
@@ -64,6 +65,26 @@ public class AppController {
 
         model.addAttribute("cart", cart);
         return "mycart/index";
+    }
+
+    @GetMapping("/cart/add")
+    public RedirectView addToCart(@RequestAttribute("meClient") ProjectApiRoot client, String sku, Model model, WebSession session) {
+        MeRepository repository = new MeRepository(client, session);
+
+        final Mono<Cart> cart = repository.addToCart(sku);
+        model.addAttribute("cart", cart);
+
+        return new RedirectView("/cart");
+    }
+
+    @GetMapping("/cart/del")
+    public RedirectView removeFromCart(@RequestAttribute("meClient") ProjectApiRoot client, String lineItemId, Model model, WebSession session) {
+        MeRepository repository = new MeRepository(client, session);
+
+        final Mono<Cart> cart = repository.removeFromCart(lineItemId);
+        model.addAttribute("cart", cart);
+
+        return new RedirectView("/cart");
     }
 
     @GetMapping("/me")

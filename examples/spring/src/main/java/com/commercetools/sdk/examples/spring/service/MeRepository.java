@@ -83,4 +83,21 @@ public class MeRepository {
                     .thenApply(ApiHttpResponse::getBody));
         });
     }
+
+    public Mono<Cart> removeFromCart(final String lineItemId) {
+        return meCart().flatMap(cart -> {
+            if (cart.getId() == null) {
+                return Mono.just(emptyCart());
+            }
+            return Mono.fromFuture(apiRoot.me()
+                    .carts()
+                    .withId(cart.getId())
+                    .post(MyCartUpdateBuilder.of()
+                            .version(cart.getVersion())
+                            .withActions(actionBuilder -> actionBuilder.removeLineItemBuilder().lineItemId(lineItemId))
+                            .build())
+                    .execute()
+                    .thenApply(ApiHttpResponse::getBody));
+        });
+    }
 }

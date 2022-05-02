@@ -23,20 +23,9 @@
                     <td th:text="${lineItem.name.values.en}">ProductName</td>
                     <td th:text="${lineItem.quantity}">Quantity</td>
                     <td>
-                        @Html.ActionLink(
-                        "Delete",
-                        "Delete",
-                        "MyCart",
-                        new
-                        {
-                        lineItemId = lineItem.LineItemId
-                        },
-                        new
-                        {
-                        onclick = "return confirm('Are you sure?');",
-                        @class = "btn btn-primary"
-                        }
-                        )
+                        <a id="btn_add" th:href="@{/cart/del(lineItemId=${lineItem.id})}" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Delete
+                        </a>
                     </td>
                 </tr>
                 </tbody>

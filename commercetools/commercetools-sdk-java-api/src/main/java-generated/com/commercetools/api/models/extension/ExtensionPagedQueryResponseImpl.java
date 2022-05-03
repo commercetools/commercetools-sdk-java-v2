@@ -45,7 +45,7 @@ public class ExtensionPagedQueryResponseImpl implements ExtensionPagedQueryRespo
     }
 
     /**
-    *  <p>Number of results requested in the query request.</p>
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
     */
     public Long getLimit() {
         return this.limit;

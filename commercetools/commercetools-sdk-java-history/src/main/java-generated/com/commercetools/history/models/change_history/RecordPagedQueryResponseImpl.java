@@ -45,7 +45,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-    *  <p>Maximum number of results requested in the query request.</p>
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
     */
     public Integer getLimit() {
         return this.limit;

@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypePagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<Type> {
 
     /**
-    *  <p>Number of results requested in the query request.</p>
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
     */
     @NotNull
     @JsonProperty("limit")

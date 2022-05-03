@@ -70,6 +70,9 @@ public class CustomerLastNameSetMessageImpl implements CustomerLastNameSetMessag
         this.type = CUSTOMER_LAST_NAME_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

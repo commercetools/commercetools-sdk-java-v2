@@ -74,6 +74,9 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
         this.type = PRODUCT_VARIANT_DELETED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

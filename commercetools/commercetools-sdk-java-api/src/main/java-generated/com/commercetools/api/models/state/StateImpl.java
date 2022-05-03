@@ -78,7 +78,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-    *  <p>Unique ID of the State.</p>
+    *  <p>Platform-generated unique identifier of the State.</p>
     */
     public String getId() {
         return this.id;
@@ -120,7 +120,7 @@ public class StateImpl implements State, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the State.</p>
+    *  <p>User-defined unique identifier of the State.</p>
     */
     public String getKey() {
         return this.key;

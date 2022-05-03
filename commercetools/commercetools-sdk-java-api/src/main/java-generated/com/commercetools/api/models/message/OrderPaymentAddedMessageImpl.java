@@ -70,6 +70,9 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         this.type = ORDER_PAYMENT_ADDED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -120,6 +123,9 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Payment">Payment</a>.</p>
+    */
     public com.commercetools.api.models.payment.PaymentReference getPayment() {
         return this.payment;
     }

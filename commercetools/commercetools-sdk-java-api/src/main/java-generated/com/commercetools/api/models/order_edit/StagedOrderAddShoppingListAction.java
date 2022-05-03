@@ -22,6 +22,9 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
 
     String ADD_SHOPPING_LIST = "addShoppingList";
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("shoppingList")

@@ -81,6 +81,9 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
         this.type = REVIEW_RATING_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

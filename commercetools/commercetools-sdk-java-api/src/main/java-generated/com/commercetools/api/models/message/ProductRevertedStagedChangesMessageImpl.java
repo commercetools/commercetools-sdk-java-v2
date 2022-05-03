@@ -71,6 +71,9 @@ public class ProductRevertedStagedChangesMessageImpl implements ProductRevertedS
         this.type = PRODUCT_REVERTED_STAGED_CHANGES;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

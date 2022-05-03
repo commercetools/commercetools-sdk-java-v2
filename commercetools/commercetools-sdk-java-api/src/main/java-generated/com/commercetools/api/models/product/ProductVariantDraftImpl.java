@@ -50,6 +50,10 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
         return this.sku;
     }
 
+    /**
+    *  <p>User-defined unique identifier for the ProductVariant.
+    *  <em>ProductVariant keys are different from Product keys.</em></p>
+    */
     public String getKey() {
         return this.key;
     }

@@ -48,6 +48,9 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
         return this.type;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
+    */
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
         return this.product;
     }

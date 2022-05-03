@@ -64,6 +64,9 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
         return this.anonymousCartId;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Cart">Cart</a>.</p>
+    */
     public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
         return this.anonymousCart;
     }

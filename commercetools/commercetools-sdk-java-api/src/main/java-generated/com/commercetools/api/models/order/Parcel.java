@@ -19,6 +19,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ParcelImpl.class)
 public interface Parcel extends com.commercetools.api.models.Customizable<Parcel> {
 
+    /**
+    *  <p>Platform-generated unique identifier of the Parcel.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();

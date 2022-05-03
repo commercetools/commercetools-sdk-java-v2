@@ -20,6 +20,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodDraftImpl.class)
 public interface ShippingMethodDraft extends com.commercetools.api.models.CustomizableDraft<ShippingMethodDraft> {
 
+    /**
+    *  <p>User-defined unique identifier for the ShippingMethod.</p>
+    */
+
     @JsonProperty("key")
     public String getKey();
 

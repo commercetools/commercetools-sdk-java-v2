@@ -48,7 +48,7 @@ public interface ProductDraft {
     public LocalizedString getSlug();
 
     /**
-    *  <p>User-specific unique identifier for the product.</p>
+    *  <p>User-defined unique identifier for the Product.</p>
     */
 
     @JsonProperty("key")

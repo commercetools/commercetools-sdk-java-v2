@@ -36,6 +36,9 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     @JsonProperty("deactivatedAt")
     public ZonedDateTime getDeactivatedAt();
 
+    /**
+    *  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();
@@ -53,6 +56,9 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     @JsonProperty("productSlug")
     public LocalizedString getProductSlug();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:ProductType">ProductType</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("productType")

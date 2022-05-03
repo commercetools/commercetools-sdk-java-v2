@@ -28,7 +28,7 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
         com.commercetools.api.models.Customizable<OrderEdit> {
 
     /**
-    *  <p>The unique ID of the OrderEdit.</p>
+    *  <p>Platform-generated unique identifier of the OrderEdit.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -64,7 +64,7 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>Unique identifier for this edit.</p>
+    *  <p>User-defined unique identifier of the OrderEdit.</p>
     */
 
     @JsonProperty("key")

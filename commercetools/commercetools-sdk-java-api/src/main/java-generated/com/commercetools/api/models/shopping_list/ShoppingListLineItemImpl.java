@@ -82,6 +82,9 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         return this.deactivatedAt;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -98,6 +101,9 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         return this.productSlug;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:ProductType">ProductType</a>.</p>
+    */
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }

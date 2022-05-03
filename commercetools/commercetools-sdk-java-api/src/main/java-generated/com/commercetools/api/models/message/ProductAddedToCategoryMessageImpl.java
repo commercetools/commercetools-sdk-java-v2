@@ -74,6 +74,9 @@ public class ProductAddedToCategoryMessageImpl implements ProductAddedToCategory
         this.type = PRODUCT_ADDED_TO_CATEGORY;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -124,6 +127,9 @@ public class ProductAddedToCategoryMessageImpl implements ProductAddedToCategory
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Category">Category</a>.</p>
+    */
     public com.commercetools.api.models.category.CategoryReference getCategory() {
         return this.category;
     }

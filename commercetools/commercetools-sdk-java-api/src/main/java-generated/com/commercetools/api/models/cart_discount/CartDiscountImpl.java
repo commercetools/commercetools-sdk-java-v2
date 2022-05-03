@@ -102,7 +102,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>The unique ID of the cart discount.</p>
+    *  <p>Platform-generated unique identifier of the CartDiscount.</p>
     */
     public String getId() {
         return this.id;
@@ -142,8 +142,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for a cart discount.
-    *  Must be unique across a project.</p>
+    *  <p>User-defined unique identifier of the CartDiscount.</p>
     */
     public String getKey() {
         return this.key;

@@ -67,7 +67,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-    *  <p>Unique ID of the Product Selection.</p>
+    *  <p>Platform-generated unique identifier of the Product Selection.</p>
     */
     public String getId() {
         return this.id;
@@ -95,23 +95,21 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-    *  <p>Present on resources updated after 1/02/2019 except for events not
-    *  tracked.</p>
+    *  <p>Present on resources updated after 1/02/2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1/02/2019 except for events not
-    *  tracked.</p>
+    *  <p>Present on resources created after 1/02/2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier for the Product Selection.</p>
+    *  <p>User-defined unique identifier of the Product Selection.</p>
     */
     public String getKey() {
         return this.key;

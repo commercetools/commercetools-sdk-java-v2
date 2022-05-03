@@ -35,8 +35,7 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Customer Group.
-    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+    *  <p>User-defined unique identifier for the Customer Group.</p>
     */
     public String getKey() {
         return this.key;

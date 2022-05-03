@@ -78,6 +78,9 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
         this.type = DELIVERY_ADDRESS_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

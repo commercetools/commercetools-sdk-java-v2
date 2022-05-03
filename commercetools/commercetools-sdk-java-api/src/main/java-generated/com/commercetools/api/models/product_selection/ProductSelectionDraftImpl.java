@@ -36,7 +36,7 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
     }
 
     /**
-    *  <p>User-defined unique identifier for the Product Selection. You can use <code>key</code> besides <code>ID</code> to reference the Product Selection.</p>
+    *  <p>User-defined unique identifier for the Product Selection.</p>
     */
     public String getKey() {
         return this.key;

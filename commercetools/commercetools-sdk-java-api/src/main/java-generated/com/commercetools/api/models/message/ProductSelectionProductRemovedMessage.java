@@ -20,6 +20,9 @@ public interface ProductSelectionProductRemovedMessage extends Message {
 
     String PRODUCT_SELECTION_PRODUCT_REMOVED = "ProductSelectionProductRemoved";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("product")

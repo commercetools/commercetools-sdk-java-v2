@@ -79,7 +79,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-    *  <p>Unique ID of the Channel.</p>
+    *  <p>Platform-generated unique identifier of the Channel.</p>
     */
     public String getId() {
         return this.id;
@@ -121,7 +121,7 @@ public class ChannelImpl implements Channel, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Channel.</p>
+    *  <p>User-defined unique identifier of the Channel.</p>
     */
     public String getKey() {
         return this.key;

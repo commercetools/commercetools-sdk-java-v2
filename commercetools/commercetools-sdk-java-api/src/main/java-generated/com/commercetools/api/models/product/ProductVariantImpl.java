@@ -70,6 +70,9 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     public ProductVariantImpl() {
     }
 
+    /**
+    *  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>
+    */
     public Long getId() {
         return this.id;
     }
@@ -78,6 +81,10 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
         return this.sku;
     }
 
+    /**
+    *  <p>User-defined unique identifier of the ProductVariant.
+    *  <em>ProductVariant keys are different from Product keys.</em></p>
+    */
     public String getKey() {
         return this.key;
     }

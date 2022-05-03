@@ -24,7 +24,7 @@ public interface ProductType extends BaseResource, com.commercetools.api.models.
         com.commercetools.api.models.ResourceIdentifiable<ProductType> {
 
     /**
-    *  <p>The unique ID of the product type.</p>
+    *  <p>Platform-generated unique identifier for the ProductType.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -60,8 +60,7 @@ public interface ProductType extends BaseResource, com.commercetools.api.models.
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-specific unique identifier for the product type (max.
-    *  256 characters).</p>
+    *  <p>User-defined unique identifier of the ProductType.</p>
     */
 
     @JsonProperty("key")

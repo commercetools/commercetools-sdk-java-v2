@@ -74,6 +74,9 @@ public class OrderLineItemAddedMessageImpl implements OrderLineItemAddedMessage,
         this.type = ORDER_LINE_ITEM_ADDED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

@@ -24,7 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomLineItem extends com.commercetools.api.models.Customizable<CustomLineItem> {
 
     /**
-    *  <p>The unique ID of this CustomLineItem.</p>
+    *  <p>Platform-generated unique identifier of the CustomLineItem.</p>
     */
     @NotNull
     @JsonProperty("id")

@@ -34,6 +34,9 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
     public CustomerCreateEmailTokenImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the email token.</p>
+    */
     public String getId() {
         return this.id;
     }

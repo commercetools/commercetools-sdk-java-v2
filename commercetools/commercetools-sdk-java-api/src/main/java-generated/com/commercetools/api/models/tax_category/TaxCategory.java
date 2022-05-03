@@ -24,7 +24,7 @@ public interface TaxCategory extends BaseResource, com.commercetools.api.models.
         com.commercetools.api.models.ResourceIdentifiable<TaxCategory> {
 
     /**
-    *  <p>Unique ID of the TaxCategory.</p>
+    *  <p>Platform-generated unique identifier of the TaxCategory.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -88,7 +88,7 @@ public interface TaxCategory extends BaseResource, com.commercetools.api.models.
     public List<TaxRate> getRates();
 
     /**
-    *  <p>User-defined unique identifier for the TaxCategory.</p>
+    *  <p>User-defined unique identifier of the TaxCategory.</p>
     */
 
     @JsonProperty("key")

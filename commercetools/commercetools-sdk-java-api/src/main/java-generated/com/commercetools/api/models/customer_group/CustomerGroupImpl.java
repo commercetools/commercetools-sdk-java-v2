@@ -58,7 +58,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-    *  <p>Unique ID of the Customer Group.</p>
+    *  <p>Platform-generated unique identifier of the Customer Group.</p>
     */
     public String getId() {
         return this.id;
@@ -100,7 +100,7 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Customer Group.</p>
+    *  <p>User-defined unique identifier of the Customer Group.</p>
     */
     public String getKey() {
         return this.key;

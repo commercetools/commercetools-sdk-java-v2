@@ -73,6 +73,9 @@ public class OrderCustomerEmailSetMessageImpl implements OrderCustomerEmailSetMe
         this.type = ORDER_CUSTOMER_EMAIL_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

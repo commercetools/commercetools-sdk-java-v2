@@ -19,6 +19,9 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
 
     String SET_SHIPPING_METHOD = "setShippingMethod";
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ShippingMethod">ShippingMethod</a>.</p>
+    */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();

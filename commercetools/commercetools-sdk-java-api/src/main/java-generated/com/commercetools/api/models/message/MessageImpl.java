@@ -65,6 +65,9 @@ public class MessageImpl implements Message, ModelBase {
     public MessageImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

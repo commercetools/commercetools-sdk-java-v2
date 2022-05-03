@@ -16,6 +16,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerChangePasswordImpl.class)
 public interface CustomerChangePassword {
 
+    /**
+    *  <p>Platform-generated unique identifier of the Customer.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();

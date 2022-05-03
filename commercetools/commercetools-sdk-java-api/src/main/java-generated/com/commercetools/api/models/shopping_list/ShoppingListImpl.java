@@ -91,7 +91,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>The unique ID of the shopping list.</p>
+    *  <p>Platform-generated unique identifier of the ShoppingList.</p>
     */
     public String getId() {
         return this.id;
@@ -146,7 +146,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for the shopping list.</p>
+    *  <p>User-defined unique identifier of the ShoppingList.</p>
     */
     public String getKey() {
         return this.key;

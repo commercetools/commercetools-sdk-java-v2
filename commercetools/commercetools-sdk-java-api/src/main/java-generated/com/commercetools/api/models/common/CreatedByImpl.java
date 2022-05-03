@@ -47,6 +47,9 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
         return this.externalUserId;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
+    */
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }

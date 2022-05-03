@@ -75,6 +75,9 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
         this.type = PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

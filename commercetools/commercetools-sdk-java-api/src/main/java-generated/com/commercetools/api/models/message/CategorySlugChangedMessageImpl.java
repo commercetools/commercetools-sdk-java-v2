@@ -74,6 +74,9 @@ public class CategorySlugChangedMessageImpl implements CategorySlugChangedMessag
         this.type = CATEGORY_SLUG_CHANGED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

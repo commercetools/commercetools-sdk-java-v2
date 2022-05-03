@@ -44,6 +44,9 @@ public class StagedOrderAddShoppingListActionImpl implements StagedOrderAddShopp
         return this.action;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
+    */
     public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList() {
         return this.shoppingList;
     }

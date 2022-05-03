@@ -66,6 +66,9 @@ public class ProductUnpublishedMessageImpl implements ProductUnpublishedMessage,
         this.type = PRODUCT_UNPUBLISHED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

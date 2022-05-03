@@ -74,6 +74,9 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
         this.type = PARCEL_ADDED_TO_DELIVERY;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

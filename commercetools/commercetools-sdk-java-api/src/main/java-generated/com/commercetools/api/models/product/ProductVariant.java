@@ -21,12 +21,20 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductVariantImpl.class)
 public interface ProductVariant {
 
+    /**
+    *  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public Long getId();
 
     @JsonProperty("sku")
     public String getSku();
+
+    /**
+    *  <p>User-defined unique identifier of the ProductVariant.
+    *  <em>ProductVariant keys are different from Product keys.</em></p>
+    */
 
     @JsonProperty("key")
     public String getKey();

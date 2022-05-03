@@ -70,6 +70,9 @@ public class InventoryEntryCreatedMessageImpl implements InventoryEntryCreatedMe
         this.type = INVENTORY_ENTRY_CREATED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

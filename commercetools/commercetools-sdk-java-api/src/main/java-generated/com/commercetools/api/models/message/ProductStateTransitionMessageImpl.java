@@ -74,6 +74,9 @@ public class ProductStateTransitionMessageImpl implements ProductStateTransition
         this.type = PRODUCT_STATE_TRANSITION;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

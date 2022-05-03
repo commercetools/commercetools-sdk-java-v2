@@ -71,6 +71,9 @@ public class OrderDiscountCodeRemovedMessageImpl implements OrderDiscountCodeRem
         this.type = ORDER_DISCOUNT_CODE_REMOVED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -121,6 +124,9 @@ public class OrderDiscountCodeRemovedMessageImpl implements OrderDiscountCodeRem
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    */
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }

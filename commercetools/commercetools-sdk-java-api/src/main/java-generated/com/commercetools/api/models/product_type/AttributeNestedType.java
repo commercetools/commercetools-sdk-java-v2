@@ -19,6 +19,9 @@ public interface AttributeNestedType extends AttributeType {
 
     String NESTED = "nested";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:ProductType">ProductType</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("typeReference")

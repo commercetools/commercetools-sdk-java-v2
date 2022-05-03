@@ -17,6 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = UserProvidedIdentifiersImpl.class)
 public interface UserProvidedIdentifiers {
 
+    /**
+    *  <p>User-provided unique identifier of the resource.</p>
+    */
+
     @JsonProperty("key")
     public String getKey();
 

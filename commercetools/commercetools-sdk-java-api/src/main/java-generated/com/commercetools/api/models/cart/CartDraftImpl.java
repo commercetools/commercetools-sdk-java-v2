@@ -130,7 +130,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier of the cart.</p>
+    *  <p>User-defined unique identifier for the Cart.</p>
     */
     public String getKey() {
         return this.key;

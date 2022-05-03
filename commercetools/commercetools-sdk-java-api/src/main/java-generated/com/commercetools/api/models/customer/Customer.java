@@ -30,7 +30,7 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
         com.commercetools.api.models.Customizable<Customer> {
 
     /**
-    *  <p>The unique ID of the customer.</p>
+    *  <p>Platform-generated unique identifier of the Customer.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -169,9 +169,7 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     public String getSalutation();
 
     /**
-    *  <p>User-specific unique identifier for a customer.
-    *  Must be unique across a project.
-    *  The field can be reset using the Set Key UpdateAction</p>
+    *  <p>User-defined unique identifier of the Customer.</p>
     */
 
     @JsonProperty("key")

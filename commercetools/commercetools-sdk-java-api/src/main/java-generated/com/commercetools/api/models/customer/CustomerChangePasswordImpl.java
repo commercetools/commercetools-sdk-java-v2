@@ -38,6 +38,9 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
     public CustomerChangePasswordImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Customer.</p>
+    */
     public String getId() {
         return this.id;
     }

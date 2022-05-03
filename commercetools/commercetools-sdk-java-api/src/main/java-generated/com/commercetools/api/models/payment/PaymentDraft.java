@@ -113,8 +113,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public CustomFieldsDraft getCustom();
 
     /**
-    *  <p>User-specific unique identifier for the payment (max.
-    *  256 characters).</p>
+    *  <p>User-defined unique identifier for the Payment.</p>
     */
 
     @JsonProperty("key")

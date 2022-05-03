@@ -70,6 +70,9 @@ public class ReviewCreatedMessageImpl implements ReviewCreatedMessage, ModelBase
         this.type = REVIEW_CREATED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

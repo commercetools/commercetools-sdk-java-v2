@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionDraft extends com.commercetools.api.models.CustomizableDraft<ProductSelectionDraft> {
 
     /**
-    *  <p>User-defined unique identifier for the Product Selection. You can use <code>key</code> besides <code>ID</code> to reference the Product Selection.</p>
+    *  <p>User-defined unique identifier for the Product Selection.</p>
     */
 
     @JsonProperty("key")

@@ -20,6 +20,9 @@ public interface ProductSelectionProductAddedMessage extends Message {
 
     String PRODUCT_SELECTION_PRODUCT_ADDED = "ProductSelectionProductAdded";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("product")

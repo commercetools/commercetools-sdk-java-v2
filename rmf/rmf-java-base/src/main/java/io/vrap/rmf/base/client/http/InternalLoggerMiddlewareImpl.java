@@ -47,7 +47,6 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,
             final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
-        final long startTime = System.nanoTime();
         InternalLogger logger = factory.createFor(request, InternalLogger.TOPIC_REQUEST);
         logger.debug(() -> request);
         logger.trace(() -> {
@@ -82,6 +81,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
             }
             return output;
         });
+        final long startTime = System.nanoTime();
         return next.apply(request).whenComplete((response, throwable) -> {
             final long executionTime = System.nanoTime() - startTime;
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);

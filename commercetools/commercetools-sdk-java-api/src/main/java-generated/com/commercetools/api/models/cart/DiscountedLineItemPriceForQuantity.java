@@ -19,14 +19,14 @@ public interface DiscountedLineItemPriceForQuantity {
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @NotNull
     @Valid
     @JsonProperty("discountedPrice")
     public DiscountedLineItemPrice getDiscountedPrice();
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
 

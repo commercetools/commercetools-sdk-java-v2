@@ -10,11 +10,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class DiscountedLineItemPriceForQuantityBuilder implements Builder<DiscountedLineItemPriceForQuantity> {
 
-    private Double quantity;
+    private Long quantity;
 
     private com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice;
 
-    public DiscountedLineItemPriceForQuantityBuilder quantity(final Double quantity) {
+    public DiscountedLineItemPriceForQuantityBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -32,7 +32,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
         return this;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

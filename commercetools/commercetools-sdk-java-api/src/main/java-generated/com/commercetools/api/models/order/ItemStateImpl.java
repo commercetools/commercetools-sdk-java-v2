@@ -17,12 +17,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ItemStateImpl implements ItemState, ModelBase {
 
-    private Double quantity;
+    private Long quantity;
 
     private com.commercetools.api.models.state.StateReference state;
 
     @JsonCreator
-    ItemStateImpl(@JsonProperty("quantity") final Double quantity,
+    ItemStateImpl(@JsonProperty("quantity") final Long quantity,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
         this.quantity = quantity;
         this.state = state;
@@ -31,7 +31,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     public ItemStateImpl() {
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -39,7 +39,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
         return this.state;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

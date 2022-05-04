@@ -81,9 +81,9 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
             }
             return output;
         });
-        final long startTime = System.nanoTime();
+        final long startTime = System.currentTimeMillis();
         return next.apply(request).whenComplete((response, throwable) -> {
-            final long executionTime = System.nanoTime() - startTime;
+            final long executionTime = System.currentTimeMillis() - startTime;
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
             if (throwable != null) {
                 if (throwable.getCause() instanceof ApiHttpException) {

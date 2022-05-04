@@ -81,7 +81,9 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
             }
             return output;
         });
+        final long startTime = System.currentTimeMillis();
         return next.apply(request).whenComplete((response, throwable) -> {
+            final long executionTime = System.currentTimeMillis() - startTime;
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
             if (throwable != null) {
                 if (throwable.getCause() instanceof ApiHttpException) {
@@ -89,8 +91,14 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                             .getResponse();
                     final Level level = Optional.ofNullable(exceptionLogEvents.get(throwable.getCause().getClass()))
                             .orElse(defaultExceptionLogEvent);
-                    responseLogger.log(level, () -> String.format("%s %s %s", request.getMethod().name(),
-                        request.getUrl(), errorResponse.getStatusCode()));
+                    responseLogger.log(level, () -> String
+                            .format("%s %s %s %s %s %s", request.getMethod().name(), request.getUrl(),
+                                errorResponse.getStatusCode(), executionTime,
+                                Optional.ofNullable(errorResponse.getHeaders().getFirst(ApiHttpHeaders.SERVER_TIMING))
+                                        .orElse("-"),
+                                Optional.ofNullable(
+                                    errorResponse.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID)).orElse("-"))
+                            .trim());
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()
                             .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                     if (notices != null) {
@@ -110,8 +118,11 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                 }
             }
             else {
-                responseLogger.log(responseLogEvent, () -> String.format("%s %s %s", request.getMethod().name(),
-                    request.getUrl(), response.getStatusCode()));
+                responseLogger.log(responseLogEvent, () -> String.format("%s %s %s %s %s %s",
+                    request.getMethod().name(), request.getUrl(), response.getStatusCode(), executionTime,
+                    Optional.ofNullable(response.getHeaders().getFirst(ApiHttpHeaders.SERVER_TIMING)).orElse("-"),
+                    Optional.ofNullable(response.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID)).orElse("-"))
+                        .trim());
                 final List<Map.Entry<String, String>> notices = response.getHeaders()
                         .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                 if (notices != null) {

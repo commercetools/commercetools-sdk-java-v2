@@ -91,14 +91,14 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                             .getResponse();
                     final Level level = Optional.ofNullable(exceptionLogEvents.get(throwable.getCause().getClass()))
                             .orElse(defaultExceptionLogEvent);
-                    responseLogger.log(level,
-                        () -> String.format("%s %s %s %s %s %s", request.getMethod().name(), request.getUrl(),
-                            errorResponse.getStatusCode(), executionTime,
-                            Optional.ofNullable(errorResponse.getHeaders().getFirst(ApiHttpHeaders.SERVER_TIMING))
-                                    .orElse("-"),
-                            Optional.ofNullable(errorResponse.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID))
-                                    .orElse("-"))
-                                .trim());
+                    responseLogger.log(level, () -> String
+                            .format("%s %s %s %s %s %s", request.getMethod().name(), request.getUrl(),
+                                errorResponse.getStatusCode(), executionTime,
+                                Optional.ofNullable(errorResponse.getHeaders().getFirst(ApiHttpHeaders.SERVER_TIMING))
+                                        .orElse("-"),
+                                Optional.ofNullable(
+                                    errorResponse.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID)).orElse("-"))
+                            .trim());
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()
                             .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                     if (notices != null) {

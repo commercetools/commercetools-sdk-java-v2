@@ -97,6 +97,7 @@ public class ApiHttpHeaders extends Base {
     public static final String CONTENT_LENGTH = "Content-Length";
     public static final String X_CORRELATION_ID = "X-Correlation-ID";
     public static final String X_DEPRECATION_NOTICE = "X-Deprecation-Notice";
+    public static final String SERVER_TIMING = "Server-Timing";
 
     private final List<StringHeaderEntry> headers;
 

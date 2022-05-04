@@ -18,6 +18,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InventoryPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<InventoryEntry> {
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    */
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();

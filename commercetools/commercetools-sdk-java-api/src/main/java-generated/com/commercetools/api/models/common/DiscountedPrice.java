@@ -26,6 +26,9 @@ public interface DiscountedPrice {
     @JsonProperty("value")
     public TypedMoney getValue();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("discount")

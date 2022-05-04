@@ -71,6 +71,9 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
         this.type = PRODUCT_SELECTION_PRODUCT_ADDED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -121,6 +124,9 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
+    */
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }

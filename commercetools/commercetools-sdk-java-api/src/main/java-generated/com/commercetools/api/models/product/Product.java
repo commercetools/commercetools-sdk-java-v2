@@ -27,7 +27,7 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
         com.commercetools.api.models.Referencable<Product>, com.commercetools.api.models.ResourceIdentifiable<Product> {
 
     /**
-    *  <p>The unique ID of the product.</p>
+    *  <p>Platform-generated unique identifier of the Product.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -63,8 +63,8 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-specific unique identifier for the product.
-    *  <em>Product keys are different from product variant keys.</em></p>
+    *  <p>User-defined unique identifier of the Product.
+    *  <em>Product keys are different from ProductVariant keys.</em></p>
     */
 
     @JsonProperty("key")

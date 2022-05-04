@@ -78,6 +78,9 @@ public class ProductPublishedMessageImpl implements ProductPublishedMessage, Mod
         this.type = PRODUCT_PUBLISHED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

@@ -83,6 +83,9 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

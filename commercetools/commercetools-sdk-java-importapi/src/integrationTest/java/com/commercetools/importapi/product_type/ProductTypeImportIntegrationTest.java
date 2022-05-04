@@ -1,8 +1,8 @@
 
-package com.commercetools.importapi.defaultconfig;
+package com.commercetools.importapi.product_type;
 
-import static com.commercetools.importapi.defaultconfig.ImportApiTestUtils.assertEventually;
-import static com.commercetools.importapi.defaultconfig.ImportApiTestUtils.randomKey;
+import static com.commercetools.importapi.utils.ImportApiTestUtils.assertEventually;
+import static com.commercetools.importapi.utils.ImportApiTestUtils.randomKey;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.time.Duration;
@@ -19,6 +19,7 @@ import com.commercetools.importapi.models.importoperations.ImportOperationPagedR
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequest;
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder;
 import com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder;
+import com.commercetools.importapi.utils.ImportApiTestUtils;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

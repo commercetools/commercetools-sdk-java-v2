@@ -70,6 +70,9 @@ public class DeliveryAddedMessageImpl implements DeliveryAddedMessage, ModelBase
         this.type = DELIVERY_ADDED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

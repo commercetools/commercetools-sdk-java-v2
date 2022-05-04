@@ -66,6 +66,9 @@ public class CustomerEmailVerifiedMessageImpl implements CustomerEmailVerifiedMe
         this.type = CUSTOMER_EMAIL_VERIFIED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

@@ -70,6 +70,9 @@ public class CustomerFirstNameSetMessageImpl implements CustomerFirstNameSetMess
         this.type = CUSTOMER_FIRST_NAME_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

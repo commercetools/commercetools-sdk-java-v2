@@ -112,6 +112,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface Message extends BaseResource, com.commercetools.api.models.DomainResource<Message> {
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();

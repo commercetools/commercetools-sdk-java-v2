@@ -44,7 +44,7 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
     }
 
     /**
-    *  <p>Unique ID of the referenced <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Type">Type</a>.</p>
     */
     public String getId() {
         return this.id;

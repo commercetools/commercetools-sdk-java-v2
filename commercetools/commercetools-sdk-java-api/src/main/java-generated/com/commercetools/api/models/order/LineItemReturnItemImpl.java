@@ -62,6 +62,9 @@ public class LineItemReturnItemImpl implements LineItemReturnItem, ModelBase {
         this.type = LINE_ITEM_RETURN_ITEM;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the ReturnItem.</p>
+    */
     public String getId() {
         return this.id;
     }

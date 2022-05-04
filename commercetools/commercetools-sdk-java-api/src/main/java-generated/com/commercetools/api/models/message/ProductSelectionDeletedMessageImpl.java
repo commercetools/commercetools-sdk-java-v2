@@ -70,6 +70,9 @@ public class ProductSelectionDeletedMessageImpl implements ProductSelectionDelet
         this.type = PRODUCT_SELECTION_DELETED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

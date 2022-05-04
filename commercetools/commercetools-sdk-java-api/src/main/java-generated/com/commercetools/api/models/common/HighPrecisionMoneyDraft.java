@@ -60,6 +60,19 @@ public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
         return helper.apply(this);
     }
 
+    public static HighPrecisionMoneyDraft of(javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {
+        return MoneyUtil.draftOf(monetaryAmount, fractionDigits);
+    }
+
+    public static HighPrecisionMoneyDraft of(final HighPrecisionMoney template) {
+        HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setFractionDigits(template.getFractionDigits());
+        instance.setPreciseAmount(template.getPreciseAmount());
+        return instance;
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft>() {
             @Override

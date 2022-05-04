@@ -1,11 +1,13 @@
 
-package com.commercetools.importapi.defaultconfig;
+package com.commercetools.importapi.utils;
 
 import java.time.Duration;
 import java.util.UUID;
 import java.util.function.Consumer;
 
 import com.commercetools.importapi.client.ProjectApiRoot;
+import com.commercetools.importapi.defaultconfig.ImportApiRootBuilder;
+import com.commercetools.importapi.defaultconfig.ServiceRegion;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
 

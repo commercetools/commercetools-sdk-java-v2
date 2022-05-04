@@ -20,6 +20,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DeliveryImpl.class)
 public interface Delivery extends com.commercetools.api.models.Customizable<Delivery> {
 
+    /**
+    *  <p>Platform-generated unique identifier of the Delivery.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();

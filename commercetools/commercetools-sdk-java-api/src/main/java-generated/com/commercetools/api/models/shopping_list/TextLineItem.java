@@ -36,7 +36,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     public LocalizedString getDescription();
 
     /**
-    *  <p>The unique ID of this TextLineItem.</p>
+    *  <p>Platform-generated unique identifier of the TextLineItem.</p>
     */
     @NotNull
     @JsonProperty("id")

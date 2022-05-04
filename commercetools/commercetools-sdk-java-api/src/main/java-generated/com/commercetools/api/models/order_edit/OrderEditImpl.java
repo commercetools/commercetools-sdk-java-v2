@@ -71,7 +71,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-    *  <p>The unique ID of the OrderEdit.</p>
+    *  <p>Platform-generated unique identifier of the OrderEdit.</p>
     */
     public String getId() {
         return this.id;
@@ -107,7 +107,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-    *  <p>Unique identifier for this edit.</p>
+    *  <p>User-defined unique identifier of the OrderEdit.</p>
     */
     public String getKey() {
         return this.key;

@@ -70,6 +70,9 @@ public class CustomerAddressAddedMessageImpl implements CustomerAddressAddedMess
         this.type = CUSTOMER_ADDRESS_ADDED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

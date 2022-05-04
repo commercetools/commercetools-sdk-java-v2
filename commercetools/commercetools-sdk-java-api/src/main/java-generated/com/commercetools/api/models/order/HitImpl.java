@@ -35,7 +35,7 @@ public class HitImpl implements Hit, ModelBase {
     }
 
     /**
-    *  <p>Unique ID of the Order.</p>
+    *  <p>Platform-generated unique identifier of the Order.</p>
     */
     public String getId() {
         return this.id;

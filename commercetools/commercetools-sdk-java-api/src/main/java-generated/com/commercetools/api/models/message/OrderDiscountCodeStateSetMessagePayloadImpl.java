@@ -44,6 +44,9 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
         return this.type;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    */
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }

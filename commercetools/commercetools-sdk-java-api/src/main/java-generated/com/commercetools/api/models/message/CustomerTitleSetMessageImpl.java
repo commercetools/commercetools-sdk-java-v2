@@ -70,6 +70,9 @@ public class CustomerTitleSetMessageImpl implements CustomerTitleSetMessage, Mod
         this.type = CUSTOMER_TITLE_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

@@ -62,7 +62,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-    *  <p>Unique ID of the TaxCategory.</p>
+    *  <p>Platform-generated unique identifier of the TaxCategory.</p>
     */
     public String getId() {
         return this.id;
@@ -125,7 +125,7 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the TaxCategory.</p>
+    *  <p>User-defined unique identifier of the TaxCategory.</p>
     */
     public String getKey() {
         return this.key;

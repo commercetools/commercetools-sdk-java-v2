@@ -52,7 +52,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-    *  <p>The unique ID of this object.</p>
+    *  <p>Platform-generated unique identifier of the Transaction.</p>
     */
     public String getId() {
         return this.id;

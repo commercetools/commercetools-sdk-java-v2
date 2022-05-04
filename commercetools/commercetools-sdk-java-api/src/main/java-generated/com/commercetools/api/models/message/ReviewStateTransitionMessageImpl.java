@@ -90,6 +90,9 @@ public class ReviewStateTransitionMessageImpl implements ReviewStateTransitionMe
         this.type = REVIEW_STATE_TRANSITION;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

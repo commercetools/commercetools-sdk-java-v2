@@ -47,7 +47,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-    *  <p>Unique identifier for this edit.</p>
+    *  <p>User-defined unique identifier for the OrderEdit.</p>
     */
     public String getKey() {
         return this.key;

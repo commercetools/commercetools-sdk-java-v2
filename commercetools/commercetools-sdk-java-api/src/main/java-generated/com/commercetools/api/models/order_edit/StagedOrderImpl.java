@@ -186,7 +186,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>The unique ID of the order.</p>
+    *  <p>Platform-generated unique identifier of the Order.</p>
     */
     public String getId() {
         return this.id;

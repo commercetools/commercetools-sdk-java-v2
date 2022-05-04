@@ -75,6 +75,9 @@ public class PaymentTransactionStateChangedMessageImpl implements PaymentTransac
         this.type = PAYMENT_TRANSACTION_STATE_CHANGED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

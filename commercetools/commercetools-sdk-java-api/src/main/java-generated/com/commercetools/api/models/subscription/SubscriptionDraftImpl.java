@@ -52,6 +52,9 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
         return this.destination;
     }
 
+    /**
+    *  <p>User-defined unique identifier for the Subscription.</p>
+    */
     public String getKey() {
         return this.key;
     }

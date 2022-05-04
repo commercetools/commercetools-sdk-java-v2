@@ -36,6 +36,9 @@ public class MyCartAddPaymentActionImpl implements MyCartAddPaymentAction, Model
         return this.action;
     }
 
+    /**
+    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Payment">Payment</a>.</p>
+    */
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
         return this.payment;
     }

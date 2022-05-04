@@ -70,6 +70,9 @@ public class OrderStoreSetMessageImpl implements OrderStoreSetMessage, ModelBase
         this.type = ORDER_STORE_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

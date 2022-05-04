@@ -71,6 +71,9 @@ public class ProductPriceDiscountsSetMessageImpl implements ProductPriceDiscount
         this.type = PRODUCT_PRICE_DISCOUNTS_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

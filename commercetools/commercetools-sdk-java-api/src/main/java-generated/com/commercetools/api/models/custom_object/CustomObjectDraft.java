@@ -24,7 +24,7 @@ public interface CustomObjectDraft {
     public String getContainer();
 
     /**
-    *  <p>A user-defined key that is unique within the given container.</p>
+    *  <p>User-defined unique identifier for the CustomObject.</p>
     */
     @NotNull
     @JsonProperty("key")

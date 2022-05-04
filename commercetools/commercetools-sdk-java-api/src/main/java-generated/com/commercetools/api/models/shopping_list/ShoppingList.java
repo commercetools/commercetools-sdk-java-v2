@@ -29,7 +29,7 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
         com.commercetools.api.models.Customizable<ShoppingList> {
 
     /**
-    *  <p>The unique ID of the shopping list.</p>
+    *  <p>Platform-generated unique identifier of the ShoppingList.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -84,7 +84,7 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
     public LocalizedString getDescription();
 
     /**
-    *  <p>User-specific unique identifier for the shopping list.</p>
+    *  <p>User-defined unique identifier of the ShoppingList.</p>
     */
 
     @JsonProperty("key")

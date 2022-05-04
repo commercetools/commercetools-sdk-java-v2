@@ -28,7 +28,7 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
         com.commercetools.api.models.Customizable<CartDiscount> {
 
     /**
-    *  <p>The unique ID of the cart discount.</p>
+    *  <p>Platform-generated unique identifier of the CartDiscount.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -69,8 +69,7 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     public LocalizedString getName();
 
     /**
-    *  <p>User-specific unique identifier for a cart discount.
-    *  Must be unique across a project.</p>
+    *  <p>User-defined unique identifier of the CartDiscount.</p>
     */
 
     @JsonProperty("key")

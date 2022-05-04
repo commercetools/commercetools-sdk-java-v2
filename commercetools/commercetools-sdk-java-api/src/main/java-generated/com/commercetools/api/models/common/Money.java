@@ -65,6 +65,16 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
         return helper.apply(this);
     }
 
+    public default TypedMoneyDraft toDraft() {
+        if (this instanceof TypedMoneyDraft) {
+            return (TypedMoneyDraft) this;
+        }
+        return TypedMoneyDraft.centPrecisionBuilder()
+                .centAmount(this.getCentAmount())
+                .currencyCode(this.getCurrencyCode())
+                .build();
+    }
+
     public static com.fasterxml.jackson.core.type.TypeReference<Money> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Money>() {
             @Override

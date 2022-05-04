@@ -74,6 +74,9 @@ public class OrderShippingInfoSetMessageImpl implements OrderShippingInfoSetMess
         this.type = ORDER_SHIPPING_INFO_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

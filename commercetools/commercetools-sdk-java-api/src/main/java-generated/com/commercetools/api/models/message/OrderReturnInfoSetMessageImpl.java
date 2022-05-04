@@ -70,6 +70,9 @@ public class OrderReturnInfoSetMessageImpl implements OrderReturnInfoSetMessage,
         this.type = RETURN_INFO_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

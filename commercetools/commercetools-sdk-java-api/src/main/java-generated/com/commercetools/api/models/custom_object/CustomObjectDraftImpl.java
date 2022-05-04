@@ -45,7 +45,7 @@ public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
     }
 
     /**
-    *  <p>A user-defined key that is unique within the given container.</p>
+    *  <p>User-defined unique identifier for the CustomObject.</p>
     */
     public String getKey() {
         return this.key;

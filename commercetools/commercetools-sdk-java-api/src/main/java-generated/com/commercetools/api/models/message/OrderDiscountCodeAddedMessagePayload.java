@@ -20,6 +20,9 @@ public interface OrderDiscountCodeAddedMessagePayload extends OrderMessagePayloa
 
     String ORDER_DISCOUNT_CODE_ADDED = "OrderDiscountCodeAdded";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("discountCode")

@@ -70,6 +70,9 @@ public class CustomerGroupSetMessageImpl implements CustomerGroupSetMessage, Mod
         this.type = CUSTOMER_GROUP_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -121,7 +124,7 @@ public class CustomerGroupSetMessageImpl implements CustomerGroupSetMessage, Mod
     }
 
     /**
-    *  <p><a href="/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;

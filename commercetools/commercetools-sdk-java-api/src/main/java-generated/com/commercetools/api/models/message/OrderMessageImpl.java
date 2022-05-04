@@ -65,6 +65,9 @@ public class OrderMessageImpl implements OrderMessage, ModelBase {
     public OrderMessageImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

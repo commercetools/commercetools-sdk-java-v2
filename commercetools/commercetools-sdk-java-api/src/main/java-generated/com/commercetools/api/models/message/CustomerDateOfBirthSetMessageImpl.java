@@ -70,6 +70,9 @@ public class CustomerDateOfBirthSetMessageImpl implements CustomerDateOfBirthSet
         this.type = CUSTOMER_DATE_OF_BIRTH_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

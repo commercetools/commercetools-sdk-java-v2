@@ -24,14 +24,14 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     String TAX_CATEGORY = "tax-category";
 
     /**
-    *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for TaxCategory.</p>
+    *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for TaxCategories.</p>
     */
     @Valid
     @JsonProperty("obj")
     public TaxCategory getObj();
 
     /**
-    *  <p>Unique ID of the referenced <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
     */
     @NotNull
     @JsonProperty("id")

@@ -29,7 +29,7 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
         com.commercetools.api.models.Customizable<Review> {
 
     /**
-    *  <p>The unique ID of the review.</p>
+    *  <p>Platform-generated unique identifier of the Review.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -65,7 +65,7 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-specific unique identifier for the review.</p>
+    *  <p>User-defined unique identifier of the Review.</p>
     */
 
     @JsonProperty("key")

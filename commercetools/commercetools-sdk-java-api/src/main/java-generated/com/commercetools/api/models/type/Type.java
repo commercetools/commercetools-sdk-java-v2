@@ -24,7 +24,7 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
         com.commercetools.api.models.Referencable<Type>, com.commercetools.api.models.ResourceIdentifiable<Type> {
 
     /**
-    *  <p>Unique ID of the Type.</p>
+    *  <p>Platform-generated unique identifier of the Type.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -66,7 +66,7 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier for the Type.</p>
+    *  <p>User-defined unique identifier of the Type.</p>
     */
     @NotNull
     @JsonProperty("key")

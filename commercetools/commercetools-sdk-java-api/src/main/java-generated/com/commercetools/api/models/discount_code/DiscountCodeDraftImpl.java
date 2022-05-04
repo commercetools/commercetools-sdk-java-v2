@@ -79,9 +79,8 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
     }
 
     /**
-    *  <p>Unique identifier of this discount code.
-    *  This value is added to the cart
-    *  to enable the related cart discounts in the cart.</p>
+    *  <p>User-defined unique identifier for the DiscountCode.
+    *  <a href="/../api/projects/carts#add-discountcode">Add it to a Cart</a> to enable the related CartDiscounts in that Cart.</p>
     */
     public String getCode() {
         return this.code;

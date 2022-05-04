@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Extension extends BaseResource, com.commercetools.api.models.DomainResource<Extension> {
 
     /**
-    *  <p>Unique ID of the Extension.</p>
+    *  <p>Platform-generated unique identifier of the Extension.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -64,8 +64,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier for the Extension.
-    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+    *  <p>User-defined unique identifier of the Extension.</p>
     */
 
     @JsonProperty("key")

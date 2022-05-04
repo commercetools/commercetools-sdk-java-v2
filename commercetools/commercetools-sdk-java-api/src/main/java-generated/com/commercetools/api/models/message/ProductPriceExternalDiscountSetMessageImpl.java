@@ -89,6 +89,9 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
         this.type = PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

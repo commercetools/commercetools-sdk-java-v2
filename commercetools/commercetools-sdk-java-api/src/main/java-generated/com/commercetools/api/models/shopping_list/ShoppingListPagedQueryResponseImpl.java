@@ -41,6 +41,9 @@ public class ShoppingListPagedQueryResponseImpl implements ShoppingListPagedQuer
     public ShoppingListPagedQueryResponseImpl() {
     }
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    */
     public Long getLimit() {
         return this.limit;
     }

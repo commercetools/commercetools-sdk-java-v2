@@ -70,6 +70,9 @@ public class OrderImportedMessageImpl implements OrderImportedMessage, ModelBase
         this.type = ORDER_IMPORTED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

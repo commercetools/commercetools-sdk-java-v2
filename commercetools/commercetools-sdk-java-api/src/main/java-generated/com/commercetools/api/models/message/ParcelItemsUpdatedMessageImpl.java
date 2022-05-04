@@ -81,6 +81,9 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
         this.type = PARCEL_ITEMS_UPDATED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

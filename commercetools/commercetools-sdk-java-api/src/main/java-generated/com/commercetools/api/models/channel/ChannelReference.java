@@ -32,7 +32,7 @@ public interface ChannelReference extends Reference, com.commercetools.api.model
     public Channel getObj();
 
     /**
-    *  <p>Unique ID of the referenced <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     @NotNull
     @JsonProperty("id")

@@ -87,6 +87,9 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
         this.type = CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

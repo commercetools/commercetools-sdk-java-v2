@@ -87,6 +87,9 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
         this.type = INVENTORY_ENTRY_QUANTITY_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

@@ -111,7 +111,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for the product.</p>
+    *  <p>User-defined unique identifier for the Product.</p>
     */
     public String getKey() {
         return this.key;

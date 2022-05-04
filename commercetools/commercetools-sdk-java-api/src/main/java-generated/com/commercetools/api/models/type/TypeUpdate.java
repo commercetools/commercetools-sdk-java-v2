@@ -20,7 +20,7 @@ public interface TypeUpdate
 
     /**
     *  <p>Expected version of the type on which the changes should be applied.
-    *  If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+    *  If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> will be returned.</p>
     */
     @NotNull
     @JsonProperty("version")

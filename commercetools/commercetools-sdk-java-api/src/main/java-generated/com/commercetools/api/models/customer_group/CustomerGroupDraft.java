@@ -19,8 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroupDraft extends com.commercetools.api.models.CustomizableDraft<CustomerGroupDraft> {
 
     /**
-    *  <p>User-defined unique identifier for the Customer Group.
-    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+    *  <p>User-defined unique identifier for the Customer Group.</p>
     */
 
     @JsonProperty("key")

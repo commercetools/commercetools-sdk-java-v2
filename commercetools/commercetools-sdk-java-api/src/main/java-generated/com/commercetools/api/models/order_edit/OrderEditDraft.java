@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderEditDraft extends com.commercetools.api.models.CustomizableDraft<OrderEditDraft> {
 
     /**
-    *  <p>Unique identifier for this edit.</p>
+    *  <p>User-defined unique identifier for the OrderEdit.</p>
     */
 
     @JsonProperty("key")

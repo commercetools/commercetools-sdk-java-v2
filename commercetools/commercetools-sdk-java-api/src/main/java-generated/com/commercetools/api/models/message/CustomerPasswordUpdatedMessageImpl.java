@@ -70,6 +70,9 @@ public class CustomerPasswordUpdatedMessageImpl implements CustomerPasswordUpdat
         this.type = CUSTOMER_PASSWORD_UPDATED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

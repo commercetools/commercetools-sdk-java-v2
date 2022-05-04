@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
@@ -13,17 +14,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListReferenceImpl.class)
 public interface ShoppingListReference extends Reference, com.commercetools.api.models.Identifiable<ShoppingList> {
 
     String SHOPPING_LIST = "shopping-list";
 
+    /**
+    *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for ShoppingLists.</p>
+    */
     @Valid
     @JsonProperty("obj")
     public ShoppingList getObj();
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
+    */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+
     public void setObj(final ShoppingList obj);
+
+    public void setId(final String id);
 
     public static ShoppingListReference of() {
         return new ShoppingListReferenceImpl();

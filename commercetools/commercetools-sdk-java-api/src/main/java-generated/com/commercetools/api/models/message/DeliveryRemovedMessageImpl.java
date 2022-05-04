@@ -70,6 +70,9 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
         this.type = DELIVERY_REMOVED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

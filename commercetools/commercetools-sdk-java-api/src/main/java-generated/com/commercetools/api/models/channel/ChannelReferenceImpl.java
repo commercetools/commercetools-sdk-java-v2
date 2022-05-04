@@ -44,7 +44,7 @@ public class ChannelReferenceImpl implements ChannelReference, ModelBase {
     }
 
     /**
-    *  <p>Unique ID of the referenced <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     public String getId() {
         return this.id;

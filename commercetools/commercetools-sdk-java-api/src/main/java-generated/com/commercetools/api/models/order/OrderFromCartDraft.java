@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderFromCartDraft {
 
     /**
-    *  <p>The unique id of the cart from which an order is created.</p>
+    *  <p>Platform-generated unique identifier of the Cart from which you can create an Order.</p>
     */
     @Deprecated
     @JsonProperty("id")

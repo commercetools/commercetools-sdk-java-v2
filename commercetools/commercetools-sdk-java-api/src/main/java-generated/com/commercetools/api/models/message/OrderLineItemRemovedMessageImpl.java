@@ -98,6 +98,9 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
         this.type = ORDER_LINE_ITEM_REMOVED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

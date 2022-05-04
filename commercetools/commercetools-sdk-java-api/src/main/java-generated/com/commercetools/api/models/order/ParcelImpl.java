@@ -46,6 +46,9 @@ public class ParcelImpl implements Parcel, ModelBase {
     public ParcelImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Parcel.</p>
+    */
     public String getId() {
         return this.id;
     }

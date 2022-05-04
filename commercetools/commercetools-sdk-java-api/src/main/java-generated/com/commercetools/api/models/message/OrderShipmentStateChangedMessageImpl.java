@@ -75,6 +75,9 @@ public class OrderShipmentStateChangedMessageImpl implements OrderShipmentStateC
         this.type = ORDER_SHIPMENT_STATE_CHANGED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

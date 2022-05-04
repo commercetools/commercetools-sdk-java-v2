@@ -132,8 +132,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the category.
-    *  Keys can only contain alphanumeric characters (<code>a-Z, 0-9</code>), underscores and hyphens (<code>-, _</code>) and be between 2 and 256 characters.</p>
+    *  <p>User-defined unique identifier for the Category.</p>
     */
     public String getKey() {
         return this.key;

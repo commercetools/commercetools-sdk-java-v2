@@ -74,6 +74,9 @@ public class ProductVariantAddedMessageImpl implements ProductVariantAddedMessag
         this.type = PRODUCT_VARIANT_ADDED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

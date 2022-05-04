@@ -21,6 +21,9 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
 
     String ORDER_EDIT_APPLIED = "OrderEditApplied";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:OrderEdit">OrderEdit</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("edit")

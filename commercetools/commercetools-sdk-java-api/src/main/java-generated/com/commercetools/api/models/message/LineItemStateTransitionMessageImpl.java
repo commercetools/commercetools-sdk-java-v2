@@ -86,6 +86,9 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
         this.type = LINE_ITEM_STATE_TRANSITION;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

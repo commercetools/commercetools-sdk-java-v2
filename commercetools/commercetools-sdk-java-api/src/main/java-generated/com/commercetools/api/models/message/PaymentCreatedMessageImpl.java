@@ -70,6 +70,9 @@ public class PaymentCreatedMessageImpl implements PaymentCreatedMessage, ModelBa
         this.type = PAYMENT_CREATED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

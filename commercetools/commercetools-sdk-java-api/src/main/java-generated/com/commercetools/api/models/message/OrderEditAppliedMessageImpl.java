@@ -74,6 +74,9 @@ public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, Mod
         this.type = ORDER_EDIT_APPLIED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -124,6 +127,9 @@ public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, Mod
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:OrderEdit">OrderEdit</a>.</p>
+    */
     public com.commercetools.api.models.order_edit.OrderEditReference getEdit() {
         return this.edit;
     }

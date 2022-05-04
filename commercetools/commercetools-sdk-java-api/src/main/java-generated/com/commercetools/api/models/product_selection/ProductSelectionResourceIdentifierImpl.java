@@ -15,6 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ProductSelection">ProductSelection</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProductSelectionResourceIdentifierImpl implements ProductSelectionResourceIdentifier, ModelBase {
 
@@ -40,14 +43,14 @@ public class ProductSelectionResourceIdentifierImpl implements ProductSelectionR
     }
 
     /**
-    *  <p>Unique ID of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:ProductSelection">ProductSelection</a>. Either <code>id</code> or <code>key</code> is required.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Unique key of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>User-defined unique identifier of the referenced <a href="ctp:api:type:ProductSelection">ProductSelection</a>. Either <code>id</code> or <code>key</code> is required.</p>
     */
     public String getKey() {
         return this.key;

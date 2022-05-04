@@ -78,6 +78,9 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
         this.type = PARCEL_MEASUREMENTS_UPDATED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

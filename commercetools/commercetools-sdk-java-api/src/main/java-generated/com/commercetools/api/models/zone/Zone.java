@@ -23,7 +23,7 @@ public interface Zone extends BaseResource, com.commercetools.api.models.DomainR
         com.commercetools.api.models.Referencable<Zone>, com.commercetools.api.models.ResourceIdentifiable<Zone> {
 
     /**
-    *  <p>Unique ID of the Zone.</p>
+    *  <p>Platform-generated unique identifier of the Zone.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -65,7 +65,7 @@ public interface Zone extends BaseResource, com.commercetools.api.models.DomainR
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier for the Zone.</p>
+    *  <p>User-defined unique identifier of the Zone.</p>
     */
 
     @JsonProperty("key")

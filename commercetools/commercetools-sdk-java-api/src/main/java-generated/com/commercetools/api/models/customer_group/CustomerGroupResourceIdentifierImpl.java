@@ -43,14 +43,14 @@ public class CustomerGroupResourceIdentifierImpl implements CustomerGroupResourc
     }
 
     /**
-    *  <p>Unique ID of the referenced <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>. Either <code>id</code> or <code>key</code> is required.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Unique key of the referenced <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>User-defined unique identifier of the referenced <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>. Either <code>id</code> or <code>key</code> is required.</p>
     */
     public String getKey() {
         return this.key;

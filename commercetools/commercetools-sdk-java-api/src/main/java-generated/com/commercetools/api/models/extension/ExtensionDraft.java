@@ -18,8 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExtensionDraft {
 
     /**
-    *  <p>User-defined unique identifier for the Extension.
-    *  Keys can only contain alphanumeric characters, underscores, and hyphens.</p>
+    *  <p>User-defined unique identifier for the Extension.</p>
     */
 
     @JsonProperty("key")

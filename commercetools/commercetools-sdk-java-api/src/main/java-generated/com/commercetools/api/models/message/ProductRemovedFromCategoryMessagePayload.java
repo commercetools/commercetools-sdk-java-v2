@@ -20,6 +20,9 @@ public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload
 
     String PRODUCT_REMOVED_FROM_CATEGORY = "ProductRemovedFromCategory";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Category">Category</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("category")

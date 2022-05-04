@@ -23,6 +23,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ReturnItem extends com.commercetools.api.models.Customizable<ReturnItem> {
 
+    /**
+    *  <p>Platform-generated unique identifier of the ReturnItem.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();

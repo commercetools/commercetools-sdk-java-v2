@@ -70,6 +70,9 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
         this.type = CUSTOMER_EMAIL_CHANGED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

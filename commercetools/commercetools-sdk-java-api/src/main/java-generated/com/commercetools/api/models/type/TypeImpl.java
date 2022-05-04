@@ -67,7 +67,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-    *  <p>Unique ID of the Type.</p>
+    *  <p>Platform-generated unique identifier of the Type.</p>
     */
     public String getId() {
         return this.id;
@@ -109,7 +109,7 @@ public class TypeImpl implements Type, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Type.</p>
+    *  <p>User-defined unique identifier of the Type.</p>
     */
     public String getKey() {
         return this.key;

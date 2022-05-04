@@ -30,6 +30,9 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     public DeliveryItemImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the DeliveryItem.</p>
+    */
     public String getId() {
         return this.id;
     }

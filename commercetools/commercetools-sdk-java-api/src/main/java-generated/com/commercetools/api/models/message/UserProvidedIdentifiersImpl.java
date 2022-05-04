@@ -49,6 +49,9 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     public UserProvidedIdentifiersImpl() {
     }
 
+    /**
+    *  <p>User-provided unique identifier of the resource.</p>
+    */
     public String getKey() {
         return this.key;
     }

@@ -178,8 +178,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for the payment (max.
-    *  256 characters).</p>
+    *  <p>User-defined unique identifier for the Payment.</p>
     */
     public String getKey() {
         return this.key;

@@ -70,6 +70,9 @@ public class PaymentInteractionAddedMessageImpl implements PaymentInteractionAdd
         this.type = PAYMENT_INTERACTION_ADDED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

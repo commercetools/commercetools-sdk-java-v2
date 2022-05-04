@@ -22,7 +22,7 @@ public interface ProductSelectionProductPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<AssignedProductReference> {
 
     /**
-    *  <p>Number of results requested in the query request.</p>
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
     */
     @NotNull
     @JsonProperty("limit")

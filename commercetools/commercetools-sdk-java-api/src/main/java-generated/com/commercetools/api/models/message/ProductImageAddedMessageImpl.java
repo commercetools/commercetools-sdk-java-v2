@@ -78,6 +78,9 @@ public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, M
         this.type = PRODUCT_IMAGE_ADDED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

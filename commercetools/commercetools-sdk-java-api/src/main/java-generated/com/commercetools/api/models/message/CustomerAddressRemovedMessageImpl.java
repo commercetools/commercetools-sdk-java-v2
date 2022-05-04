@@ -70,6 +70,9 @@ public class CustomerAddressRemovedMessageImpl implements CustomerAddressRemoved
         this.type = CUSTOMER_ADDRESS_REMOVED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

@@ -75,6 +75,9 @@ public class ProductRemovedFromCategoryMessageImpl implements ProductRemovedFrom
         this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -125,6 +128,9 @@ public class ProductRemovedFromCategoryMessageImpl implements ProductRemovedFrom
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Category">Category</a>.</p>
+    */
     public com.commercetools.api.models.category.CategoryReference getCategory() {
         return this.category;
     }

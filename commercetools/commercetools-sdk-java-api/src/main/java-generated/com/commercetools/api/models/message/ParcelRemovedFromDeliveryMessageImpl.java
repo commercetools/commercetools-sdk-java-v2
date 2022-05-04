@@ -75,6 +75,9 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
         this.type = PARCEL_REMOVED_FROM_DELIVERY;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

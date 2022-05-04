@@ -79,6 +79,9 @@ public class StoreProductSelectionsChangedMessageImpl implements StoreProductSel
         this.type = STORE_PRODUCT_SELECTIONS_CHANGED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

@@ -30,10 +30,16 @@ public class ErrorByExtensionImpl implements ErrorByExtension, ModelBase {
     public ErrorByExtensionImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Extension.</p>
+    */
     public String getId() {
         return this.id;
     }
 
+    /**
+    *  <p>User-defined unique identifier of the Extension.</p>
+    */
     public String getKey() {
         return this.key;
     }

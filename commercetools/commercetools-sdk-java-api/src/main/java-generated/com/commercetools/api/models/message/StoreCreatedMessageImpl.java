@@ -90,6 +90,9 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
         this.type = STORE_CREATED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

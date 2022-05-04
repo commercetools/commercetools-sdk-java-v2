@@ -29,7 +29,7 @@ public interface Channel extends BaseResource, com.commercetools.api.models.Doma
         com.commercetools.api.models.Customizable<Channel> {
 
     /**
-    *  <p>Unique ID of the Channel.</p>
+    *  <p>Platform-generated unique identifier of the Channel.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -71,7 +71,7 @@ public interface Channel extends BaseResource, com.commercetools.api.models.Doma
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier for the Channel.</p>
+    *  <p>User-defined unique identifier of the Channel.</p>
     */
     @NotNull
     @JsonProperty("key")

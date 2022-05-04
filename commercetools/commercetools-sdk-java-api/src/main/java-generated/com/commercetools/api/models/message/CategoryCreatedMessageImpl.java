@@ -70,6 +70,9 @@ public class CategoryCreatedMessageImpl implements CategoryCreatedMessage, Model
         this.type = CATEGORY_CREATED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

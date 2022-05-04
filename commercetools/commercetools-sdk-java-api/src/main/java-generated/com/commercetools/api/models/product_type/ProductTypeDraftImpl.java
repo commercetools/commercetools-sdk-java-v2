@@ -39,9 +39,7 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for the product type (min.
-    *  2 and max.
-    *  256 characters).</p>
+    *  <p>User-defined unique identifier for the ProductType.</p>
     */
     public String getKey() {
         return this.key;

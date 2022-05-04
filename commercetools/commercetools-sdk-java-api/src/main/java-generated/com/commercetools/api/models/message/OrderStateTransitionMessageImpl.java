@@ -78,6 +78,9 @@ public class OrderStateTransitionMessageImpl implements OrderStateTransitionMess
         this.type = ORDER_STATE_TRANSITION;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

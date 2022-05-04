@@ -22,6 +22,11 @@ public interface ProductVariantDraft {
     @JsonProperty("sku")
     public String getSku();
 
+    /**
+    *  <p>User-defined unique identifier for the ProductVariant.
+    *  <em>ProductVariant keys are different from Product keys.</em></p>
+    */
+
     @JsonProperty("key")
     public String getKey();
 

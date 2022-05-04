@@ -17,6 +17,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MessagePagedQueryResponseImpl.class)
 public interface MessagePagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<Message> {
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    */
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();

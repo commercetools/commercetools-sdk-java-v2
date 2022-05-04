@@ -28,7 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItem extends com.commercetools.api.models.Customizable<LineItem> {
 
     /**
-    *  <p>The unique ID of this LineItem.</p>
+    *  <p>Platform-generated unique identifier of the LineItem.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -39,7 +39,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public String getProductId();
 
     /**
-    *  <p>User-defined unique identifier for the <a href="ctp:api:type:Product">Product</a>.
+    *  <p>User-defined unique identifier of the <a href="ctp:api:type:Product">Product</a>.
     *  Only present on Line Items in a <a href="ctp:api:type:Cart">Cart</a> when the <code>key</code> is available on that specific Product at the time the Line Item is created or updated on the Cart. On <a href="/ctp:api:type:Order">Order</a> resources this field is only present when the <code>key</code> is available on the specific Product at the time the Order is created from the Cart. This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.</p>
     */
 

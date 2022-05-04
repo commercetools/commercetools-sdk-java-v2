@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Transaction extends com.commercetools.api.models.Customizable<Transaction> {
 
     /**
-    *  <p>The unique ID of this object.</p>
+    *  <p>Platform-generated unique identifier of the Transaction.</p>
     */
     @NotNull
     @JsonProperty("id")

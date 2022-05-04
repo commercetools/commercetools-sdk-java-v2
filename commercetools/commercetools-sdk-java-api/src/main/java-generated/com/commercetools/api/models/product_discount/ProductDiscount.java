@@ -26,7 +26,7 @@ public interface ProductDiscount extends BaseResource, com.commercetools.api.mod
         com.commercetools.api.models.ResourceIdentifiable<ProductDiscount> {
 
     /**
-    *  <p>The unique ID of the product discount</p>
+    *  <p>Platform-generated unique identifier of the ProductDiscount</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -67,8 +67,7 @@ public interface ProductDiscount extends BaseResource, com.commercetools.api.mod
     public LocalizedString getName();
 
     /**
-    *  <p>User-specific unique identifier for a product discount.
-    *  Must be unique across a project.</p>
+    *  <p>User-defined unique identifier of the ProductDiscount.</p>
     */
 
     @JsonProperty("key")

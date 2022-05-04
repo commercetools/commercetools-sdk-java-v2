@@ -24,7 +24,7 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     String TYPE = "type";
 
     /**
-    *  <p>Unique ID of the referenced <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Type">Type</a>.</p>
     */
     @NotNull
     @JsonProperty("id")

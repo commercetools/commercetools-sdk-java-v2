@@ -79,6 +79,9 @@ public class OrderDiscountCodeStateSetMessageImpl implements OrderDiscountCodeSt
         this.type = ORDER_DISCOUNT_CODE_STATE_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -129,6 +132,9 @@ public class OrderDiscountCodeStateSetMessageImpl implements OrderDiscountCodeSt
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    */
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }

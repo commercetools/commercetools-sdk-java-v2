@@ -16,9 +16,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ErrorByExtensionImpl.class)
 public interface ErrorByExtension {
 
+    /**
+    *  <p>Platform-generated unique identifier of the Extension.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();
+
+    /**
+    *  <p>User-defined unique identifier of the Extension.</p>
+    */
 
     @JsonProperty("key")
     public String getKey();

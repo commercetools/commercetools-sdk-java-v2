@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
@@ -13,17 +14,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:InventoryEntry">InventoryEntry</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryReferenceImpl.class)
 public interface InventoryEntryReference extends Reference, com.commercetools.api.models.Identifiable<InventoryEntry> {
 
     String INVENTORY_ENTRY = "inventory-entry";
 
+    /**
+    *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for InventoryEntries.</p>
+    */
     @Valid
     @JsonProperty("obj")
     public InventoryEntry getObj();
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:InventoryEntry">InventoryEntry</a>.</p>
+    */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+
     public void setObj(final InventoryEntry obj);
+
+    public void setId(final String id);
 
     public static InventoryEntryReference of() {
         return new InventoryEntryReferenceImpl();

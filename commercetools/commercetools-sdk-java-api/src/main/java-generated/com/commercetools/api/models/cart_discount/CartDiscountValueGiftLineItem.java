@@ -21,6 +21,9 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
 
     String GIFT_LINE_ITEM = "giftLineItem";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("product")

@@ -98,7 +98,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-    *  <p>The unique ID of the category.</p>
+    *  <p>Platform-generated unique identifier of the Category.</p>
     */
     public String getId() {
         return this.id;
@@ -198,7 +198,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for the category.</p>
+    *  <p>User-defined unique identifier of the Category.</p>
     */
     public String getKey() {
         return this.key;

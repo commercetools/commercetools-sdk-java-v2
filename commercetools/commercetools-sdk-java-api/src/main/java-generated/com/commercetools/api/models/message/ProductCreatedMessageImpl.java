@@ -70,6 +70,9 @@ public class ProductCreatedMessageImpl implements ProductCreatedMessage, ModelBa
         this.type = PRODUCT_CREATED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

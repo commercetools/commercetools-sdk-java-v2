@@ -47,6 +47,9 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
     public CustomerTokenImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the CustomerToken.</p>
+    */
     public String getId() {
         return this.id;
     }

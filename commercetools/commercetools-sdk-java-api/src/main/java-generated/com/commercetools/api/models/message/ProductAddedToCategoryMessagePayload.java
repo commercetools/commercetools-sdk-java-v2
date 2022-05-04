@@ -20,6 +20,9 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
 
     String PRODUCT_ADDED_TO_CATEGORY = "ProductAddedToCategory";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Category">Category</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("category")

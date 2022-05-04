@@ -31,14 +31,14 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
         com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart> {
 
     /**
-    *  <p>The unique ID of the cart.</p>
+    *  <p>Platform-generated unique identifier of the Cart.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>User-specific unique identifier of the cart.</p>
+    *  <p>User-defined unique identifier of the Cart.</p>
     */
 
     @JsonProperty("key")

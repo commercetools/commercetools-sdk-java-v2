@@ -20,6 +20,9 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
 
     String PRODUCT_SELECTION_PRODUCT_ADDED = "ProductSelectionProductAdded";
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("product")

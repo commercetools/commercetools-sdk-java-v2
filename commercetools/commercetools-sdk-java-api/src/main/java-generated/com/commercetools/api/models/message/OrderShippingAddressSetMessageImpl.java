@@ -74,6 +74,9 @@ public class OrderShippingAddressSetMessageImpl implements OrderShippingAddressS
         this.type = ORDER_SHIPPING_ADDRESS_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

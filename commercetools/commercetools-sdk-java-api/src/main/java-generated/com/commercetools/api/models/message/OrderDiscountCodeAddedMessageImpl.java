@@ -70,6 +70,9 @@ public class OrderDiscountCodeAddedMessageImpl implements OrderDiscountCodeAdded
         this.type = ORDER_DISCOUNT_CODE_ADDED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -120,6 +123,9 @@ public class OrderDiscountCodeAddedMessageImpl implements OrderDiscountCodeAdded
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    */
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }

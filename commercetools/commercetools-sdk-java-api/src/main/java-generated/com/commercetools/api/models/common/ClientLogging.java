@@ -23,6 +23,9 @@ public interface ClientLogging {
     @JsonProperty("externalUserId")
     public String getExternalUserId();
 
+    /**
+    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
+    */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();

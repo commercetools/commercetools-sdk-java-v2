@@ -74,6 +74,9 @@ public class OrderBillingAddressSetMessageImpl implements OrderBillingAddressSet
         this.type = ORDER_BILLING_ADDRESS_SET;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

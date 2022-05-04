@@ -74,6 +74,9 @@ public class InventoryEntryDeletedMessageImpl implements InventoryEntryDeletedMe
         this.type = INVENTORY_ENTRY_DELETED;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
     public String getId() {
         return this.id;
     }

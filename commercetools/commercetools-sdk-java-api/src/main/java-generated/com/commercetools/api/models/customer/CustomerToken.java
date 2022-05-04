@@ -17,6 +17,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerTokenImpl.class)
 public interface CustomerToken {
 
+    /**
+    *  <p>Platform-generated unique identifier of the CustomerToken.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();

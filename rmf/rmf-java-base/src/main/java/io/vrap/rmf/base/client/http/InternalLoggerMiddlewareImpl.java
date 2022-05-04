@@ -96,7 +96,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                             errorResponse.getStatusCode(), executionTime,
                             Optional.ofNullable(errorResponse.getHeaders().getFirst(ApiHttpHeaders.SERVER_TIMING))
                                     .orElse("-"),
-                            Optional.ofNullable(response.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID))
+                            Optional.ofNullable(errorResponse.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID))
                                     .orElse("-"))
                                 .trim());
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()

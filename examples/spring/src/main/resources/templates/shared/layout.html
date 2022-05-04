@@ -4,9 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title th:replace="${title}">Checkout app</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/resources/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"  href="@{/css/site.css}"/>
 </head>
 <body>
 
@@ -43,9 +43,9 @@
             &copy; 2021 - commercetools
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/resources/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/resources/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/resources/js/site.js" asp-append-version="true"></script>
     <!--@await RenderSectionAsync("Scripts", required: false)-->
 </body>
 </html>

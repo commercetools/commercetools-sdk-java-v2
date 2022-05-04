@@ -13,6 +13,7 @@ import com.commercetools.sdk.examples.spring.service.ProjectRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,6 +36,17 @@ public class AppController {
         this.projectRepository = projectRepository;
         this.productsRepository = productsRepository;
 
+    }
+
+    @GetMapping("/login")
+    public String viewLoginPage(ServerWebExchange exchange, Model model) {
+        // custom logic before showing login page...
+//        Mono<CsrfToken> token = exchange.getAttributeOrDefault(CsrfToken.class.getName(), Mono.empty());
+//        return token.map(t -> {
+//            model.addAttribute("_csrf", t);
+//            return "login";
+//        });
+        return "login";
     }
 
     @PostMapping("/login")

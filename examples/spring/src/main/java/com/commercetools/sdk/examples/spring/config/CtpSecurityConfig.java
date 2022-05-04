@@ -16,12 +16,17 @@ import org.springframework.security.config.annotation.web.reactive.EnableWebFlux
 import org.springframework.security.config.web.server.SecurityWebFiltersOrder;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
+import org.springframework.security.web.reactive.result.view.CsrfRequestDataValueProcessor;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.WebFilterExchange;
 import org.springframework.security.web.server.authentication.*;
 import org.springframework.security.web.server.context.ServerSecurityContextRepository;
 import org.springframework.security.web.server.context.WebSessionServerSecurityContextRepository;
+import org.springframework.security.web.server.csrf.CookieServerCsrfTokenRepository;
+import org.springframework.security.web.server.csrf.WebSessionServerCsrfTokenRepository;
 import org.springframework.security.web.server.util.matcher.ServerWebExchangeMatchers;
+import org.springframework.web.reactive.result.view.RequestDataValueProcessor;
 import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Mono;
@@ -41,25 +46,31 @@ public class CtpSecurityConfig {
     SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) throws Exception {
         ServerSecurityContextRepository securityContextRepository = new WebSessionServerSecurityContextRepository();
         return http.securityContextRepository(securityContextRepository)
+                .csrf().disable()
                 .addFilterBefore(new LoginWebFilter(authenticationManager, securityContextRepository),
                     SecurityWebFiltersOrder.FORM_LOGIN)
                 .formLogin()
-                .requiresAuthenticationMatcher(ServerWebExchangeMatchers.pathMatchers("none"))
-                .authenticationManager(Mono::just)
+                    .loginPage("/login")
+                    .requiresAuthenticationMatcher(ServerWebExchangeMatchers.pathMatchers("none"))
+                    .authenticationManager(Mono::just)
                 .and()
                 .authorizeExchange()
-                .pathMatchers("/")
-                .permitAll()
-                .pathMatchers("/home")
-                .permitAll()
-                .pathMatchers("/p/**")
-                .permitAll()
-                .pathMatchers("/cart/**")
-                .permitAll()
-                .pathMatchers("/me/**")
-                .authenticated()
-                .anyExchange()
-                .authenticated()
+                    .pathMatchers("/login")
+                    .permitAll()
+                    .pathMatchers("/")
+                    .permitAll()
+                    .pathMatchers("/resources/**")
+                    .permitAll()
+                    .pathMatchers("/home")
+                    .permitAll()
+                    .pathMatchers("/p/**")
+                    .permitAll()
+                    .pathMatchers("/cart/**")
+                    .permitAll()
+                    .pathMatchers("/me/**")
+                    .authenticated()
+                    .anyExchange()
+                    .authenticated()
                 .and()
                 .build();
     }

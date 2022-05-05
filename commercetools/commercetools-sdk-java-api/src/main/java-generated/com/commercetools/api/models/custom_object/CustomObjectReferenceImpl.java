@@ -39,6 +39,9 @@ public class CustomObjectReferenceImpl implements CustomObjectReference, ModelBa
         this.typeId = ReferenceTypeId.findEnum("key-value-document");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

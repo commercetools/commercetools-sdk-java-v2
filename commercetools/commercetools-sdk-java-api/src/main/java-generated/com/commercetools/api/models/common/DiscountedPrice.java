@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedPrice {
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    *  <p>Money value of the discounted price.</p>
     */
     @NotNull
     @Valid
@@ -27,7 +27,7 @@ public interface DiscountedPrice {
     public TypedMoney getValue();
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>.</p>
+    *  <p><a href="ctp:api:type:ProductDiscount">ProductDiscount</a> related to the discounted price.</p>
     */
     @NotNull
     @Valid

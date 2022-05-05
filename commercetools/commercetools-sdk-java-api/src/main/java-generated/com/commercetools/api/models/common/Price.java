@@ -21,12 +21,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PriceImpl.class)
 public interface Price extends com.commercetools.api.models.Customizable<Price> {
 
+    /**
+    *  <p>Platform-generated unique identifier of this Price.</p>
+    */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    *  <p>Money value of this Price.</p>
     */
     @NotNull
     @Valid
@@ -34,46 +37,62 @@ public interface Price extends com.commercetools.api.models.Customizable<Price> 
     public TypedMoney getValue();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Country for which this Price is valid.</p>
     */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which this Price is valid.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p><code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a> for which this Price is valid.</p>
     */
     @Valid
     @JsonProperty("channel")
     public ChannelReference getChannel();
 
+    /**
+    *  <p>Date and time from which this Price is valid.</p>
+    */
+
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
+
+    /**
+    *  <p>Date and time until this Price is valid.</p>
+    */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
+    /**
+    *  <p>Is set if a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> has been applied.
+    *  If set, the commercetools Platform uses the DiscountedPrice value for the <a href="/projects/carts#lineitem-price-selection">LineItem Price selection</a>.
+    *  When a <a href="/../api/projects/productDiscounts#relative">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <a href="https://en.wikipedia.org/wiki/Rounding#Round_half_down">half down rounding</a>.</p>
+    */
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Present if different Prices for certain <a href="ctp:api:type:LineItem">LineItem</a> quantities have been specified.</p>
+    */
+    @Valid
+    @JsonProperty("tiers")
+    public List<PriceTier> getTiers();
+
+    /**
+    *  <p>Custom Fields defined for the Price.</p>
     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
-
-    @Valid
-    @JsonProperty("tiers")
-    public List<PriceTier> getTiers();
 
     public void setId(final String id);
 
@@ -91,12 +110,12 @@ public interface Price extends com.commercetools.api.models.Customizable<Price> 
 
     public void setDiscounted(final DiscountedPrice discounted);
 
-    public void setCustom(final CustomFields custom);
-
     @JsonIgnore
     public void setTiers(final PriceTier... tiers);
 
     public void setTiers(final List<PriceTier> tiers);
+
+    public void setCustom(final CustomFields custom);
 
     public static Price of() {
         return new PriceImpl();
@@ -112,8 +131,8 @@ public interface Price extends com.commercetools.api.models.Customizable<Price> 
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         instance.setDiscounted(template.getDiscounted());
-        instance.setCustom(template.getCustom());
         instance.setTiers(template.getTiers());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

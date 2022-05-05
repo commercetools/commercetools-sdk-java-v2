@@ -39,6 +39,9 @@ public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBa
         this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

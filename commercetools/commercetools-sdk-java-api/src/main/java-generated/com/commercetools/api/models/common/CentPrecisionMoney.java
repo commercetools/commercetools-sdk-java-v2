@@ -5,16 +5,30 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Object that stores cent amounts in a specific currency.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CentPrecisionMoneyImpl.class)
 public interface CentPrecisionMoney extends TypedMoney {
 
     String CENT_PRECISION = "centPrecision";
+
+    /**
+    *  <p>The number of default fraction digits for the given currency, like <code>2</code> for EUR or <code>0</code> for JPY.</p>
+    */
+    @NotNull
+    @JsonProperty("fractionDigits")
+    public Integer getFractionDigits();
+
+    public void setFractionDigits(final Integer fractionDigits);
 
     public static CentPrecisionMoney of() {
         return new CentPrecisionMoneyImpl();

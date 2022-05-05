@@ -39,6 +39,9 @@ public class DiscountCodeReferenceImpl implements DiscountCodeReference, ModelBa
         this.typeId = ReferenceTypeId.findEnum("discount-code");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

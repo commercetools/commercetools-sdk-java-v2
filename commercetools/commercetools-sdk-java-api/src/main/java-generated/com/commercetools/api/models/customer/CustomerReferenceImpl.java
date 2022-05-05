@@ -39,6 +39,9 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("customer");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

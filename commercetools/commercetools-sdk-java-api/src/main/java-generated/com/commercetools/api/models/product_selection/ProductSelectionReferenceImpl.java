@@ -39,6 +39,9 @@ public class ProductSelectionReferenceImpl implements ProductSelectionReference,
         this.typeId = ReferenceTypeId.findEnum("product-selection");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

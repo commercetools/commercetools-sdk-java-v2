@@ -39,6 +39,9 @@ public class ZoneReferenceImpl implements ZoneReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("zone");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

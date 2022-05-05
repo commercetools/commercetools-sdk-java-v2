@@ -9,63 +9,146 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>supported resource type identifiers:</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ReferenceTypeId {
 
+    /**
+    	<p>References a <a href="ctp:api:type:Cart">Cart</a>.</p>
+
+    */
     ReferenceTypeId CART = ReferenceTypeIdEnum.CART;
+    /**
+    	<p>References a <a href="ctp:api:type:CartDiscount">CartDiscount</a>.</p>
 
+    */
     ReferenceTypeId CART_DISCOUNT = ReferenceTypeIdEnum.CART_DISCOUNT;
+    /**
+    	<p>References a <a href="ctp:api:type:Category">Category</a>.</p>
 
+    */
     ReferenceTypeId CATEGORY = ReferenceTypeIdEnum.CATEGORY;
+    /**
+    	<p>References a <a href="ctp:api:type:Channel">Channel</a>.</p>
 
+    */
     ReferenceTypeId CHANNEL = ReferenceTypeIdEnum.CHANNEL;
+    /**
+    	<p>References a <a href="ctp:api:type:Customer">Customer</a>.</p>
 
+    */
     ReferenceTypeId CUSTOMER = ReferenceTypeIdEnum.CUSTOMER;
+    /**
+    	<p>References a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
 
-    ReferenceTypeId CUSTOMER_EMAIL_TOKEN = ReferenceTypeIdEnum.CUSTOMER_EMAIL_TOKEN;
-
+    */
     ReferenceTypeId CUSTOMER_GROUP = ReferenceTypeIdEnum.CUSTOMER_GROUP;
+    /**
+    	<p>References a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
 
-    ReferenceTypeId CUSTOMER_PASSWORD_TOKEN = ReferenceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
-
+    */
     ReferenceTypeId DISCOUNT_CODE = ReferenceTypeIdEnum.DISCOUNT_CODE;
+    /**
+    	<p>References an <a href="ctp:api:type:Extension">Extension</a>.</p>
 
+    */
     ReferenceTypeId EXTENSION = ReferenceTypeIdEnum.EXTENSION;
+    /**
+    	<p>References an <a href="ctp:api:type:InventoryEntry">InventoryEntry</a>.</p>
 
+    */
     ReferenceTypeId INVENTORY_ENTRY = ReferenceTypeIdEnum.INVENTORY_ENTRY;
+    /**
+    	<p>References a <a href="ctp:api:type:CustomObject">CustomObject</a>.</p>
 
+    */
     ReferenceTypeId KEY_VALUE_DOCUMENT = ReferenceTypeIdEnum.KEY_VALUE_DOCUMENT;
+    /**
+    	<p>References an <a href="ctp:api:type:Order">Order</a>.</p>
 
+    */
     ReferenceTypeId ORDER = ReferenceTypeIdEnum.ORDER;
+    /**
+    	<p>References an <a href="ctp:api:type:OrderEdit">Order Edit</a>.</p>
 
+    */
     ReferenceTypeId ORDER_EDIT = ReferenceTypeIdEnum.ORDER_EDIT;
+    /**
+    	<p>References a <a href="ctp:api:type:Payment">Payment</a>.</p>
 
+    */
     ReferenceTypeId PAYMENT = ReferenceTypeIdEnum.PAYMENT;
+    /**
+    	<p>References a <a href="ctp:api:type:Product">Product</a>.</p>
 
+    */
     ReferenceTypeId PRODUCT = ReferenceTypeIdEnum.PRODUCT;
+    /**
+    	<p>References a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>.</p>
 
+    */
     ReferenceTypeId PRODUCT_DISCOUNT = ReferenceTypeIdEnum.PRODUCT_DISCOUNT;
+    /**
+    	<p>References an <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrice</a>.</p>
 
+    */
+    ReferenceTypeId PRODUCT_PRICE = ReferenceTypeIdEnum.PRODUCT_PRICE;
+    /**
+    	<p>References a <a href="ctp:api:type:ProductSelection">ProductSelection</a>.</p>
+
+    */
     ReferenceTypeId PRODUCT_SELECTION = ReferenceTypeIdEnum.PRODUCT_SELECTION;
+    /**
+    	<p>References a <a href="ctp:api:type:ProductType">ProductType</a>.</p>
 
+    */
     ReferenceTypeId PRODUCT_TYPE = ReferenceTypeIdEnum.PRODUCT_TYPE;
+    /**
+    	<p>References a <a href="ctp:api:type:Review">Review</a>.</p>
 
+    */
     ReferenceTypeId REVIEW = ReferenceTypeIdEnum.REVIEW;
+    /**
+    	<p>References a <a href="ctp:api:type:ShippingMethod">ShippingMethod</a>.</p>
 
+    */
     ReferenceTypeId SHIPPING_METHOD = ReferenceTypeIdEnum.SHIPPING_METHOD;
+    /**
+    	<p>References a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
 
+    */
     ReferenceTypeId SHOPPING_LIST = ReferenceTypeIdEnum.SHOPPING_LIST;
+    /**
+    	<p>References a <a href="ctp:api:type:State">State</a>.</p>
 
+    */
     ReferenceTypeId STATE = ReferenceTypeIdEnum.STATE;
+    /**
+    	<p>References a <a href="ctp:api:type:Store">Store</a>.</p>
 
+    */
     ReferenceTypeId STORE = ReferenceTypeIdEnum.STORE;
+    /**
+    	<p>References a <a href="ctp:api:type:Subscription">Subscription</a>.</p>
 
+    */
     ReferenceTypeId SUBSCRIPTION = ReferenceTypeIdEnum.SUBSCRIPTION;
+    /**
+    	<p>References a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
 
+    */
     ReferenceTypeId TAX_CATEGORY = ReferenceTypeIdEnum.TAX_CATEGORY;
+    /**
+    	<p>References a <a href="ctp:api:type:Type">Type</a>.</p>
 
+    */
     ReferenceTypeId TYPE = ReferenceTypeIdEnum.TYPE;
+    /**
+    	<p>References a <a href="ctp:api:type:Zone">Zone</a>.</p>
 
+    */
     ReferenceTypeId ZONE = ReferenceTypeIdEnum.ZONE;
 
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
@@ -79,11 +162,7 @@ public interface ReferenceTypeId {
 
         CUSTOMER("customer"),
 
-        CUSTOMER_EMAIL_TOKEN("customer-email-token"),
-
         CUSTOMER_GROUP("customer-group"),
-
-        CUSTOMER_PASSWORD_TOKEN("customer-password-token"),
 
         DISCOUNT_CODE("discount-code"),
 
@@ -102,6 +181,8 @@ public interface ReferenceTypeId {
         PRODUCT("product"),
 
         PRODUCT_DISCOUNT("product-discount"),
+
+        PRODUCT_PRICE("product-price"),
 
         PRODUCT_SELECTION("product-selection"),
 

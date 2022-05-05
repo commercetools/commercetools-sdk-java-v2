@@ -33,9 +33,9 @@ public class PriceImpl implements Price, ModelBase {
 
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
-    private com.commercetools.api.models.type.CustomFields custom;
-
     private java.util.List<com.commercetools.api.models.common.PriceTier> tiers;
+
+    private com.commercetools.api.models.type.CustomFields custom;
 
     @JsonCreator
     PriceImpl(@JsonProperty("id") final String id,
@@ -46,8 +46,8 @@ public class PriceImpl implements Price, ModelBase {
             @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTier> tiers) {
+            @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTier> tiers,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.value = value;
         this.country = country;
@@ -56,66 +56,83 @@ public class PriceImpl implements Price, ModelBase {
         this.validFrom = validFrom;
         this.validUntil = validUntil;
         this.discounted = discounted;
-        this.custom = custom;
         this.tiers = tiers;
+        this.custom = custom;
     }
 
     public PriceImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of this Price.</p>
+    */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+    *  <p>Money value of this Price.</p>
     */
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Country for which this Price is valid.</p>
     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which this Price is valid.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p><code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a> for which this Price is valid.</p>
     */
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
 
+    /**
+    *  <p>Date and time from which this Price is valid.</p>
+    */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
+    /**
+    *  <p>Date and time until this Price is valid.</p>
+    */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+    *  <p>Is set if a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> has been applied.
+    *  If set, the commercetools Platform uses the DiscountedPrice value for the <a href="/projects/carts#lineitem-price-selection">LineItem Price selection</a>.
+    *  When a <a href="/../api/projects/productDiscounts#relative">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <a href="https://en.wikipedia.org/wiki/Rounding#Round_half_down">half down rounding</a>.</p>
+    */
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Present if different Prices for certain <a href="ctp:api:type:LineItem">LineItem</a> quantities have been specified.</p>
+    */
+    public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
+        return this.tiers;
+    }
+
+    /**
+    *  <p>Custom Fields defined for the Price.</p>
     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
-    }
-
-    public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
-        return this.tiers;
     }
 
     public void setId(final String id) {
@@ -151,16 +168,16 @@ public class PriceImpl implements Price, ModelBase {
         this.discounted = discounted;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
-        this.custom = custom;
-    }
-
     public void setTiers(final com.commercetools.api.models.common.PriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
     }
 
     public void setTiers(final java.util.List<com.commercetools.api.models.common.PriceTier> tiers) {
         this.tiers = tiers;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
     }
 
     @Override
@@ -181,8 +198,8 @@ public class PriceImpl implements Price, ModelBase {
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
                 .append(discounted, that.discounted)
-                .append(custom, that.custom)
                 .append(tiers, that.tiers)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -196,8 +213,8 @@ public class PriceImpl implements Price, ModelBase {
                 .append(validFrom)
                 .append(validUntil)
                 .append(discounted)
-                .append(custom)
                 .append(tiers)
+                .append(custom)
                 .toHashCode();
     }
 

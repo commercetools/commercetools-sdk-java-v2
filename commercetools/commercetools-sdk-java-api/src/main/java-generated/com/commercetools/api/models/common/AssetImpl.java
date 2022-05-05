@@ -51,6 +51,9 @@ public class AssetImpl implements Asset, ModelBase {
     public AssetImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Asset.</p>
+    */
     public String getId() {
         return this.id;
     }
@@ -59,25 +62,37 @@ public class AssetImpl implements Asset, ModelBase {
         return this.sources;
     }
 
+    /**
+    *  <p>Name of the Asset.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+    *  <p>Description of the Asset.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+    *  <p>Keywords for categorizing and organizing Assets.</p>
+    */
     public java.util.List<String> getTags() {
         return this.tags;
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Custom Fields defined for the Asset.</p>
     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+    *  <p>User-defined unique identifier of the Asset.</p>
+    */
     public String getKey() {
         return this.key;
     }

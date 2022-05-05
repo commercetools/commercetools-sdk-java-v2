@@ -39,6 +39,9 @@ public class CustomerGroupReferenceImpl implements CustomerGroupReference, Model
         this.typeId = ReferenceTypeId.findEnum("customer-group");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

@@ -39,6 +39,9 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("order-edit");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

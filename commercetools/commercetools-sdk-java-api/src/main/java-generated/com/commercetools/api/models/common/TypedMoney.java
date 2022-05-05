@@ -24,17 +24,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypedMoney extends Money {
 
     /**
-    *  <p>The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</p>
+    *  <p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
     */
     @NotNull
     @JsonProperty("type")
     public MoneyType getType();
 
     /**
-    *  <p>number of digits after the decimal separator</p>
+    *  <p>Number of digits after the decimal separator:</p>
     *  <ul>
-    *  <li>equal to the default number of fraction digits for a currency in <a href="ctp:api:type:CentPrecisionMoney">CentPrecisionMoney</a>.</li>
-    *  <li>greater than the default number of fraction digits for a currency in <a href="ctp:api:type:HighPrecisionMoney">HighPrecisionMoney</a>.</li>
+    *  <li>Equal to the default number of fraction digits for a currency in <a href="ctp:api:type:CentPrecisionMoney">CentPrecisionMoney</a>.</li>
+    *  <li>Greater than the default number of fraction digits for a currency in <a href="ctp:api:type:HighPrecisionMoney">HighPrecisionMoney</a>.</li>
     *  </ul>
     */
     @NotNull

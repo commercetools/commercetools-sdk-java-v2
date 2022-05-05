@@ -39,6 +39,9 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
         this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

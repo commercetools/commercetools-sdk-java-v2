@@ -24,6 +24,9 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("label")

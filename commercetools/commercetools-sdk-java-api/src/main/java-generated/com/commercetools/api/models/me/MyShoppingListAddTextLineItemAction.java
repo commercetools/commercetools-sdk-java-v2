@@ -23,11 +23,17 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
 
     String ADD_TEXT_LINE_ITEM = "addTextLineItem";
 
+    /**
+    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();

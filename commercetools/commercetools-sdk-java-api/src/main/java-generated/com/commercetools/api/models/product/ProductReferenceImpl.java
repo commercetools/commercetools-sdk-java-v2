@@ -39,6 +39,9 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("product");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

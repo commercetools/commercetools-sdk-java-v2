@@ -39,6 +39,9 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
         this.typeId = ReferenceTypeId.findEnum("shipping-method");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

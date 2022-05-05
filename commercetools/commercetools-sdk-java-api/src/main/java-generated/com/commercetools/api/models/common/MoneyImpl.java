@@ -15,8 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Draft type that stores amounts in cent precision for the specified currency.
-*  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+*  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+*  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class MoneyImpl implements Money, ModelBase {
@@ -36,10 +36,10 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-    *  <p>amount in the smallest indivisible unit of a currency, such as</p>
+    *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
     *  <ul>
-    *  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
-    *  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
+    *  <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+    *  <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
     *  </ul>
     */
     public Long getCentAmount() {
@@ -47,7 +47,7 @@ public class MoneyImpl implements Money, ModelBase {
     }
 
     /**
-    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    *  <p>Currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
     */
     public String getCurrencyCode() {
         return this.currencyCode;

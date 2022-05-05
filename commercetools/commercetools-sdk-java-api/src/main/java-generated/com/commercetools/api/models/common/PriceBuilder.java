@@ -35,10 +35,10 @@ public class PriceBuilder implements Builder<Price> {
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private java.util.List<com.commercetools.api.models.common.PriceTier> tiers;
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.common.PriceTier> tiers;
+    private com.commercetools.api.models.type.CustomFields custom;
 
     public PriceBuilder id(final String id) {
         this.id = id;
@@ -107,17 +107,6 @@ public class PriceBuilder implements Builder<Price> {
         return this;
     }
 
-    public PriceBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
-        return this;
-    }
-
-    public PriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
-        this.custom = custom;
-        return this;
-    }
-
     public PriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
@@ -149,6 +138,17 @@ public class PriceBuilder implements Builder<Price> {
             Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTierBuilder> builder) {
         this.tiers = new ArrayList<>();
         this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierBuilder.of()).build());
+        return this;
+    }
+
+    public PriceBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    public PriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -191,28 +191,28 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
-        return this.custom;
+    public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
+        return this.tiers;
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
-        return this.tiers;
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
     }
 
     public Price build() {
         Objects.requireNonNull(id, Price.class + ": id is missing");
         Objects.requireNonNull(value, Price.class + ": value is missing");
-        return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,
-            tiers);
+        return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
+            custom);
     }
 
     /**
      * builds Price without checking for non null required values
      */
     public Price buildUnchecked() {
-        return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,
-            tiers);
+        return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
+            custom);
     }
 
     public static PriceBuilder of() {
@@ -229,8 +229,8 @@ public class PriceBuilder implements Builder<Price> {
         builder.validFrom = template.getValidFrom();
         builder.validUntil = template.getValidUntil();
         builder.discounted = template.getDiscounted();
-        builder.custom = template.getCustom();
         builder.tiers = template.getTiers();
+        builder.custom = template.getCustom();
         return builder;
     }
 

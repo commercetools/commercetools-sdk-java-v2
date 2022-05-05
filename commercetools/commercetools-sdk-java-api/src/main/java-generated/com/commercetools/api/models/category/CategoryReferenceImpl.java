@@ -39,6 +39,9 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("category");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

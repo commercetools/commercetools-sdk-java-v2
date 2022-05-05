@@ -58,6 +58,9 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
         return values;
     }
 
+    /**
+    *  <p>supported resource type identifiers:</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

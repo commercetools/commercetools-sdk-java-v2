@@ -38,6 +38,9 @@ public class ShoppingListResourceIdentifierImpl implements ShoppingListResourceI
         this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
 
+    /**
+    *  <p>Type of referenced resource. If given, it must match the expected <a href="#referencetypeid">ReferenceTypeId</a> of the referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

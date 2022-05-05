@@ -33,6 +33,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Draft type to create a <a href="ctp:api:type:Reference">Reference</a> or a <a href="ctp:api:type:KeyReference">KeyReference</a> to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a <a href="ctp:api:type:CategoryDraft">CategoryDraft</a> takes a ResourceIdentifier for its value while the value of the corresponding field of a <a href="ctp:api:type:Category">Category</a> is a Reference.</p>
+*  <p>Each resource type has its corresponding ResourceIdentifier, like <a href="ctp:api:type:ChannelResourceIdentifier">ChannelResourceIdentifier</a>.</p>
+*/
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierImpl.class, name = CartDiscountResourceIdentifier.CART_DISCOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartResourceIdentifierImpl.class, name = CartResourceIdentifier.CART),
@@ -62,18 +66,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ResourceIdentifier {
 
+    /**
+    *  <p>Type of referenced resource. If given, it must match the expected <a href="#referencetypeid">ReferenceTypeId</a> of the referenced resource.</p>
+    */
+
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
     /**
-    *  <p>Unique ID of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
     */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Unique key of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
     */
 
     @JsonProperty("key")

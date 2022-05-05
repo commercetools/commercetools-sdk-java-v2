@@ -22,8 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PriceDraft extends com.commercetools.api.models.CustomizableDraft<PriceDraft> {
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.
-    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    *  <p>Money value of this Price.</p>
     */
     @NotNull
     @Valid
@@ -31,46 +30,67 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public Money getValue();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Set this field if this Price is only valid for the specified country.</p>
     */
 
     @JsonProperty("country")
     public String getCountry();
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>Set this field if this Price is only valid for the referenced <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();
 
+    /**
+    *  <p>Set this field if this Price is valid only valid from the specified date and time.</p>
+    */
+
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
+
+    /**
+    *  <p>Set this field if this Price is valid only valid until the specified date and time.</p>
+    */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    *  <p>Set this field to add a DiscountedPrice from an external service.</p>
+    *  <p>The commercetools Platform sets this field automatically if at least one <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> applies.
+    *  The DiscountedPrice must reference a ProductDiscount with:</p>
+    *  <ul>
+    *  <li>The <code>isActive</code> flag set to <code>true</code>.</li>
+    *  <li>A <a href="ctp:api:type:ProductDiscountValueExternal">ProductDiscountValue</a> of type <code>external</code>.</li>
+    *  <li>A <code>predicate</code> that matches the <a href="ctp:api:type:ProductVariant">ProductVariant</a> the Price is referenced from.</li>
+    *  </ul>
     */
     @Valid
-    @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
+    @JsonProperty("discounted")
+    public DiscountedPriceDraft getDiscounted();
 
+    /**
+    *  <p>Set this field to specify different Prices for certain <a href="ctp:api:type:LineItem">LineItem</a> quantities.</p>
+    */
     @Valid
     @JsonProperty("tiers")
     public List<PriceTierDraft> getTiers();
 
+    /**
+    *  <p>Custom Fields for the Price.</p>
+    */
     @Valid
-    @JsonProperty("discounted")
-    public DiscountedPriceDraft getDiscounted();
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
 
     public void setValue(final Money value);
 
@@ -84,14 +104,14 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public void setCustom(final CustomFieldsDraft custom);
+    public void setDiscounted(final DiscountedPriceDraft discounted);
 
     @JsonIgnore
     public void setTiers(final PriceTierDraft... tiers);
 
     public void setTiers(final List<PriceTierDraft> tiers);
 
-    public void setDiscounted(final DiscountedPriceDraft discounted);
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static PriceDraft of() {
         return new PriceDraftImpl();
@@ -105,9 +125,9 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
         instance.setChannel(template.getChannel());
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
-        instance.setCustom(template.getCustom());
-        instance.setTiers(template.getTiers());
         instance.setDiscounted(template.getDiscounted());
+        instance.setTiers(template.getTiers());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

@@ -39,6 +39,9 @@ public class PaymentReferenceImpl implements PaymentReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("payment");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

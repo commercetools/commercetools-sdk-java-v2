@@ -39,6 +39,9 @@ public class ReviewReferenceImpl implements ReviewReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("review");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

@@ -39,6 +39,9 @@ public class CartReferenceImpl implements CartReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("cart");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

@@ -39,6 +39,9 @@ public class InventoryEntryReferenceImpl implements InventoryEntryReference, Mod
         this.typeId = ReferenceTypeId.findEnum("inventory-entry");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

@@ -36,6 +36,9 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
         return this.name;
     }
 
+    /**
+    *  <p>supported resource type identifiers:</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getReferenceTypeId() {
         return this.referenceTypeId;
     }

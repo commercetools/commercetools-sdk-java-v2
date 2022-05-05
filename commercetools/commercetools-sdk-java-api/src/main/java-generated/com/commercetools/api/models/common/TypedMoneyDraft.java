@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypedMoneyDraft extends Money {
 
     /**
-    *  <p>The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</p>
+    *  <p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
     */
     @NotNull
     @JsonProperty("type")

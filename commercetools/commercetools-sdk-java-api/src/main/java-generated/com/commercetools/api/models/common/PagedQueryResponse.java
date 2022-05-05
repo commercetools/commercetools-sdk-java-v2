@@ -17,20 +17,37 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PagedQueryResponseImpl.class)
 public interface PagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<BaseResource> {
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    */
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    */
+    @NotNull
+    @JsonProperty("offset")
+    public Long getOffset();
+
+    /**
+    *  <p>Actual number of results returned.</p>
+    */
     @NotNull
     @JsonProperty("count")
     public Long getCount();
 
+    /**
+    *  <p>Total number of results matching the query.
+    *  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
+    *  This field is returned by default.
+    *  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
+    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/limits#queries">limit</a>.</p>
+    */
+
     @JsonProperty("total")
     public Long getTotal();
-
-    @NotNull
-    @JsonProperty("offset")
-    public Long getOffset();
 
     @NotNull
     @Valid
@@ -43,11 +60,11 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
 
     public void setLimit(final Long limit);
 
+    public void setOffset(final Long offset);
+
     public void setCount(final Long count);
 
     public void setTotal(final Long total);
-
-    public void setOffset(final Long offset);
 
     @JsonIgnore
     public void setResults(final BaseResource... results);
@@ -63,9 +80,9 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
     public static PagedQueryResponse of(final PagedQueryResponse template) {
         PagedQueryResponseImpl instance = new PagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
-        instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
         instance.setMeta(template.getMeta());
         return instance;

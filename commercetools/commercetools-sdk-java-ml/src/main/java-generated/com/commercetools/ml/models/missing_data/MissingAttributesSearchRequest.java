@@ -14,8 +14,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MissingAttributesSearchRequestImpl.class)
 public interface MissingAttributesSearchRequest {
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    */
+
     @JsonProperty("limit")
     public Integer getLimit();
+
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    */
 
     @JsonProperty("offset")
     public Integer getOffset();

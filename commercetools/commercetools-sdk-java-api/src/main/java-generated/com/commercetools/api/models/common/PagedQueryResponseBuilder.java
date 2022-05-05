@@ -13,12 +13,12 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
-
-    private Long offset;
 
     private java.util.List<com.commercetools.api.models.common.BaseResource> results;
 
@@ -30,6 +30,11 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
         return this;
     }
 
+    public PagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
+        return this;
+    }
+
     public PagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
@@ -37,11 +42,6 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
 
     public PagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
-        return this;
-    }
-
-    public PagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
         return this;
     }
 
@@ -73,6 +73,10 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -80,10 +84,6 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     @Nullable
     public Long getTotal() {
         return this.total;
-    }
-
-    public Long getOffset() {
-        return this.offset;
     }
 
     public java.util.List<com.commercetools.api.models.common.BaseResource> getResults() {
@@ -97,17 +97,17 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
 
     public PagedQueryResponse build() {
         Objects.requireNonNull(limit, PagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, PagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, PagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, PagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, PagedQueryResponse.class + ": results is missing");
-        return new PagedQueryResponseImpl(limit, count, total, offset, results, meta);
+        return new PagedQueryResponseImpl(limit, offset, count, total, results, meta);
     }
 
     /**
      * builds PagedQueryResponse without checking for non null required values
      */
     public PagedQueryResponse buildUnchecked() {
-        return new PagedQueryResponseImpl(limit, count, total, offset, results, meta);
+        return new PagedQueryResponseImpl(limit, offset, count, total, results, meta);
     }
 
     public static PagedQueryResponseBuilder of() {
@@ -117,9 +117,9 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     public static PagedQueryResponseBuilder of(final PagedQueryResponse template) {
         PagedQueryResponseBuilder builder = new PagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         builder.meta = template.getMeta();
         return builder;

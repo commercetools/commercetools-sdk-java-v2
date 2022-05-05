@@ -54,8 +54,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-    *  <p>The number of elements skipped, not a page number.
-    *  Supplied by the client or the server default.</p>
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
     */
     public Long getOffset() {
         return this.offset;

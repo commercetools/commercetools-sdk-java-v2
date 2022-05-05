@@ -18,6 +18,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingMethodPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ShippingMethod> {
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    */
+
     @JsonProperty("limit")
     public Long getLimit();
 
@@ -27,6 +31,10 @@ public interface ShippingMethodPagedQueryResponse
 
     @JsonProperty("total")
     public Long getTotal();
+
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    */
 
     @JsonProperty("offset")
     public Long getOffset();

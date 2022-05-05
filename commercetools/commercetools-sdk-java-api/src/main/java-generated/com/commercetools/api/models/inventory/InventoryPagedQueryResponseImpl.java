@@ -56,6 +56,9 @@ public class InventoryPagedQueryResponseImpl implements InventoryPagedQueryRespo
         return this.total;
     }
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    */
     public Long getOffset() {
         return this.offset;
     }

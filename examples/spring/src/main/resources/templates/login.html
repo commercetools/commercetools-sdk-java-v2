@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{shared/layout :: layout(~{::title}, ~{::section})}"  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{shared/layout :: layout(~{::title}, ~{::section})}">
 <head>
     <title>Spring Security Example </title>
 </head>
@@ -13,9 +13,10 @@
     You have been logged out.
 </div>
 <form th:action="@{/login}" method="post">
-    <div><label> User Name : <input type="text" name="email"/> </label></div>
+    <div><label> User Name : <input type="text" id="username" name="username"/> </label></div>
     <div><label> Password: <input type="password" name="password"/> </label></div>
     <div><input type="submit" value="Sign In"/></div>
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 </form>
 </section>
 </body>

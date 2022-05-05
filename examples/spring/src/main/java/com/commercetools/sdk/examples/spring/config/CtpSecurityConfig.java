@@ -46,7 +46,6 @@ public class CtpSecurityConfig {
     SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) throws Exception {
         ServerSecurityContextRepository securityContextRepository = new WebSessionServerSecurityContextRepository();
         return http.securityContextRepository(securityContextRepository)
-                .csrf().disable()
                 .addFilterBefore(new LoginWebFilter(authenticationManager, securityContextRepository),
                     SecurityWebFiltersOrder.FORM_LOGIN)
                 .formLogin()

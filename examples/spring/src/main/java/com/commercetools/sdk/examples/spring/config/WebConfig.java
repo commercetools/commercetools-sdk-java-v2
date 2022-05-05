@@ -14,6 +14,7 @@ import org.springframework.web.reactive.config.ResourceHandlerRegistry;
 import org.springframework.web.reactive.config.ViewResolverRegistry;
 import org.springframework.web.reactive.config.WebFluxConfigurer;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.thymeleaf.extras.springsecurity5.dialect.SpringSecurityDialect;
 import org.thymeleaf.spring5.ISpringWebFluxTemplateEngine;
 import org.thymeleaf.spring5.SpringWebFluxTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
@@ -62,6 +63,7 @@ public class WebConfig implements ApplicationContextAware, WebFluxConfigurer {
 
     }
 
+
     @Bean
     public ISpringWebFluxTemplateEngine thymeleafTemplateEngine() {
         // We override here the SpringTemplateEngine instance that would otherwise be
@@ -70,6 +72,8 @@ public class WebConfig implements ApplicationContextAware, WebFluxConfigurer {
         // factory, link builder...
         final SpringWebFluxTemplateEngine templateEngine = new SpringWebFluxTemplateEngine();
         templateEngine.setTemplateResolver(thymeleafTemplateResolver());
+        templateEngine.setEnableSpringELCompiler(true);
+        templateEngine.addDialect(new SpringSecurityDialect());
         return templateEngine;
     }
 

@@ -12,6 +12,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class AddressBuilder implements Builder<Address> {
 
+    @Nullable
     private String id;
 
     @Nullable
@@ -88,7 +89,7 @@ public class AddressBuilder implements Builder<Address> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
-    public AddressBuilder id(final String id) {
+    public AddressBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
@@ -224,6 +225,7 @@ public class AddressBuilder implements Builder<Address> {
         return this;
     }
 
+    @Nullable
     public String getId() {
         return this.id;
     }
@@ -353,7 +355,6 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     public Address build() {
-        Objects.requireNonNull(id, Address.class + ": id is missing");
         Objects.requireNonNull(country, Address.class + ": country is missing");
         return new AddressImpl(id, key, country, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, company, department, building, apartment, pOBox,

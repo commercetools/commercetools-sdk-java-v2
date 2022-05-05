@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -18,10 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddressImpl.class)
 public interface Address extends BaseAddress, com.commercetools.api.models.Customizable<Address> {
 
-    /**
-    *  <p>Platform-generated unique identifier of the Address.</p>
-    */
-    @NotNull
     @JsonProperty("id")
     public String getId();
 

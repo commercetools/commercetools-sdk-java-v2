@@ -117,9 +117,6 @@ public class AddressImpl implements Address, ModelBase {
     public AddressImpl() {
     }
 
-    /**
-    *  <p>Platform-generated unique identifier of the Address.</p>
-    */
     public String getId() {
         return this.id;
     }

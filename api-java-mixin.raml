@@ -7,6 +7,9 @@ annotationTypes:
     allowedTargets: TypeDeclaration
 
 types:
+  Address:
+    id:
+      required: false
   Cart:
     (java-extends): 'com.commercetools.api.models.DomainResource<Cart>, com.commercetools.api.models.Referencable<Cart>, com.commercetools.api.models.ResourceIdentifiable<Cart>, com.commercetools.api.models.Customizable<Cart>, com.commercetools.api.models.order.OrderLike<Cart>'
     (java-mixin): |

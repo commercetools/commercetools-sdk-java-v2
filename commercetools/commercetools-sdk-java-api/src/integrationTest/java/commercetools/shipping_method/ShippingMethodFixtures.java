@@ -7,8 +7,6 @@ import java.util.function.UnaryOperator;
 
 import com.commercetools.api.models.common.CentPrecisionMoneyDraft;
 import com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder;
-import com.commercetools.api.models.common.HighPrecisionMoneyDraft;
-import com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder;
 import com.commercetools.api.models.shipping_method.*;
 import com.commercetools.api.models.tax_category.TaxCategory;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder;

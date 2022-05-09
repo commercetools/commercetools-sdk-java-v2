@@ -58,28 +58,28 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Customer Group.</p>
+    *  <p>Platform-generated unique identifier of the CustomerGroup.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the Customer Group.</p>
+    *  <p>Current version of the CustomerGroup.</p>
     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Date and time (UTC) the Customer Group was initially created.</p>
+    *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the Customer Group was last updated.</p>
+    *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
@@ -100,21 +100,21 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Customer Group.</p>
+    *  <p>User-defined unique identifier for the CustomerGroup.</p>
     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Unique name of the Customer Group.</p>
+    *  <p>Unique name of the CustomerGroup.</p>
     */
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>Custom Fields for the Customer Group.</p>
+    *  <p>Custom Fields for the CustomerGroup.</p>
     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;

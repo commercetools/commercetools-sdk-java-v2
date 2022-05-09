@@ -15,14 +15,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Specifies which Product is assigned to which Product Selection.</p>
+*  <p>Specifies which Product is assigned to which ProductSelection.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionAssignmentImpl.class)
 public interface ProductSelectionAssignment {
 
     /**
-    *  <p>Reference to a Product that is assigned to the Product Selection.</p>
+    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
     */
     @NotNull
     @Valid
@@ -30,7 +30,7 @@ public interface ProductSelectionAssignment {
     public ProductReference getProduct();
 
     /**
-    *  <p>Reference to the Product Selection that this assignment is part of.</p>
+    *  <p>Reference to the ProductSelection that this assignment is part of.</p>
     */
     @NotNull
     @Valid

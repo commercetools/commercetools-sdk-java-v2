@@ -40,10 +40,16 @@ public class ProductSlugChangedMessagePayloadImpl implements ProductSlugChangedM
         return this.type;
     }
 
+    /**
+    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
 
+    /**
+    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getOldSlug() {
         return this.oldSlug;
     }

@@ -35,19 +35,22 @@ public class OrderResourceIdentifierImpl implements OrderResourceIdentifier, Mod
         this.typeId = ReferenceTypeId.findEnum("order");
     }
 
+    /**
+    *  <p>Type of referenced resource. If given, it must match the expected <a href="#referencetypeid">ReferenceTypeId</a> of the referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-    *  <p>Unique ID of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Unique key of the referenced resource. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
     */
     public String getKey() {
         return this.key;

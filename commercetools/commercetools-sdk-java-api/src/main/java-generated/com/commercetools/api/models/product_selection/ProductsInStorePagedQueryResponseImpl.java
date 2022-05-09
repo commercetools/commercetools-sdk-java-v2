@@ -53,8 +53,7 @@ public class ProductsInStorePagedQueryResponseImpl implements ProductsInStorePag
     }
 
     /**
-    *  <p>Offset supplied by the client or the server default.
-    *  It is the number of elements skipped, not a page number.</p>
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
     */
     public Long getOffset() {
         return this.offset;
@@ -79,7 +78,7 @@ public class ProductsInStorePagedQueryResponseImpl implements ProductsInStorePag
     }
 
     /**
-    *  <p>Product Selection Assignments.</p>
+    *  <p>ProductSelectionAssignments matching the query.</p>
     */
     public java.util.List<com.commercetools.api.models.product_selection.ProductSelectionAssignment> getResults() {
         return this.results;

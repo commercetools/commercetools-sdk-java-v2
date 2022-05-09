@@ -30,7 +30,7 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
     public Long getQuantity();
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
     */
     @NotNull
     @Valid
@@ -38,7 +38,7 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
     public StateResourceIdentifier getFromState();
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
     */
     @NotNull
     @Valid

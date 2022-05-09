@@ -19,6 +19,9 @@ public interface AttributeReferenceType extends AttributeType {
 
     String REFERENCE = "reference";
 
+    /**
+    *  <p>supported resource type identifiers:</p>
+    */
     @NotNull
     @JsonProperty("referenceTypeId")
     public ReferenceTypeId getReferenceTypeId();

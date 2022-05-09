@@ -20,14 +20,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionDraft extends com.commercetools.api.models.CustomizableDraft<ProductSelectionDraft> {
 
     /**
-    *  <p>User-defined unique identifier for the Product Selection.</p>
+    *  <p>User-defined unique identifier for the ProductSelection.</p>
     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Name of the Product Selection. Not checked for uniqueness, but distinct names are recommended.</p>
+    *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
     */
     @NotNull
     @Valid
@@ -35,7 +35,7 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
     public LocalizedString getName();
 
     /**
-    *  <p>Custom Fields of this Product Selection.</p>
+    *  <p>Custom Fields of this ProductSelection.</p>
     */
     @Valid
     @JsonProperty("custom")

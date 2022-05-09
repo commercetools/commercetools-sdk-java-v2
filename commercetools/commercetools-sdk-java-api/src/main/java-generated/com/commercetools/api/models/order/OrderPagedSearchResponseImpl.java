@@ -46,14 +46,14 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
     }
 
     /**
-    *  <p>Number of results skipped, used for pagination.</p>
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
     */
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>Number of results the response should contain at maximum, used for pagination.</p>
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
     */
     public Long getLimit() {
         return this.limit;

@@ -17,6 +17,8 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     @Nullable
     private String key;
 
+    private String country;
+
     @Nullable
     private String title;
 
@@ -49,8 +51,6 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     @Nullable
     private String state;
-
-    private String country;
 
     @Nullable
     private String company;
@@ -92,6 +92,11 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     public BaseAddressBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public BaseAddressBuilder country(final String country) {
+        this.country = country;
         return this;
     }
 
@@ -147,11 +152,6 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     public BaseAddressBuilder state(@Nullable final String state) {
         this.state = state;
-        return this;
-    }
-
-    public BaseAddressBuilder country(final String country) {
-        this.country = country;
         return this;
     }
 
@@ -220,6 +220,10 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
         return this.key;
     }
 
+    public String getCountry() {
+        return this.country;
+    }
+
     @Nullable
     public String getTitle() {
         return this.title;
@@ -273,10 +277,6 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
     @Nullable
     public String getState() {
         return this.state;
-    }
-
-    public String getCountry() {
-        return this.country;
     }
 
     @Nullable
@@ -336,18 +336,18 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
 
     public BaseAddress build() {
         Objects.requireNonNull(country, BaseAddress.class + ": country is missing");
-        return new BaseAddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
-            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);
+        return new BaseAddressImpl(id, key, country, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, company, department, building, apartment, pOBox,
+            phone, mobile, email, fax, additionalAddressInfo, externalId);
     }
 
     /**
      * builds BaseAddress without checking for non null required values
      */
     public BaseAddress buildUnchecked() {
-        return new BaseAddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
-            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);
+        return new BaseAddressImpl(id, key, country, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, company, department, building, apartment, pOBox,
+            phone, mobile, email, fax, additionalAddressInfo, externalId);
     }
 
     public static BaseAddressBuilder of() {
@@ -358,6 +358,7 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
         BaseAddressBuilder builder = new BaseAddressBuilder();
         builder.id = template.getId();
         builder.key = template.getKey();
+        builder.country = template.getCountry();
         builder.title = template.getTitle();
         builder.salutation = template.getSalutation();
         builder.firstName = template.getFirstName();
@@ -369,7 +370,6 @@ public class BaseAddressBuilder implements Builder<BaseAddress> {
         builder.city = template.getCity();
         builder.region = template.getRegion();
         builder.state = template.getState();
-        builder.country = template.getCountry();
         builder.company = template.getCompany();
         builder.department = template.getDepartment();
         builder.building = template.getBuilding();

@@ -40,7 +40,7 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
     }
 
     /**
-    *  <p>ID of the <a href="#price">Price</a></p>
+    *  <p>ID of the <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrice</a></p>
     */
     public String getPriceId() {
         return this.priceId;

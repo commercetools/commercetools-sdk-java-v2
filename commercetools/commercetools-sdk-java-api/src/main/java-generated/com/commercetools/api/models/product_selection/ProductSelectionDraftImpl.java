@@ -36,21 +36,21 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
     }
 
     /**
-    *  <p>User-defined unique identifier for the Product Selection.</p>
+    *  <p>User-defined unique identifier for the ProductSelection.</p>
     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Name of the Product Selection. Not checked for uniqueness, but distinct names are recommended.</p>
+    *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Custom Fields of this Product Selection.</p>
+    *  <p>Custom Fields of this ProductSelection.</p>
     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;

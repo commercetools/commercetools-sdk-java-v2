@@ -36,6 +36,9 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("order");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

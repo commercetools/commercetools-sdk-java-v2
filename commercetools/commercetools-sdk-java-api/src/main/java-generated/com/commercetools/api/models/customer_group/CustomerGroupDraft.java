@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroupDraft extends com.commercetools.api.models.CustomizableDraft<CustomerGroupDraft> {
 
     /**
-    *  <p>User-defined unique identifier for the Customer Group.</p>
+    *  <p>User-defined unique identifier for the CustomerGroup.</p>
     */
 
     @JsonProperty("key")
@@ -34,7 +34,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     public String getGroupName();
 
     /**
-    *  <p>Custom Fields for the Customer Group.</p>
+    *  <p>Custom Fields for the CustomerGroup.</p>
     */
     @Valid
     @JsonProperty("custom")

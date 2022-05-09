@@ -17,9 +17,17 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddressImpl.class)
 public interface Address extends BaseAddress, com.commercetools.api.models.Customizable<Address> {
 
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+    *  <p>Custom Fields defined for the Address.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
+
+    public void setId(final String id);
 
     public void setCustom(final CustomFields custom);
 
@@ -31,6 +39,7 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
         AddressImpl instance = new AddressImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
+        instance.setCountry(template.getCountry());
         instance.setTitle(template.getTitle());
         instance.setSalutation(template.getSalutation());
         instance.setFirstName(template.getFirstName());
@@ -42,7 +51,6 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
         instance.setCity(template.getCity());
         instance.setRegion(template.getRegion());
         instance.setState(template.getState());
-        instance.setCountry(template.getCountry());
         instance.setCompany(template.getCompany());
         instance.setDepartment(template.getDepartment());
         instance.setBuilding(template.getBuilding());

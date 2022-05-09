@@ -36,7 +36,7 @@ public class CustomerGroupChangeNameActionImpl implements CustomerGroupChangeNam
     }
 
     /**
-    *  <p>New name of the Customer Group.</p>
+    *  <p>New name of the CustomerGroup.</p>
     */
     public String getName() {
         return this.name;

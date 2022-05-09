@@ -18,6 +18,8 @@ public class AddressBuilder implements Builder<Address> {
     @Nullable
     private String key;
 
+    private String country;
+
     @Nullable
     private String title;
 
@@ -50,8 +52,6 @@ public class AddressBuilder implements Builder<Address> {
 
     @Nullable
     private String state;
-
-    private String country;
 
     @Nullable
     private String company;
@@ -96,6 +96,11 @@ public class AddressBuilder implements Builder<Address> {
 
     public AddressBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public AddressBuilder country(final String country) {
+        this.country = country;
         return this;
     }
 
@@ -151,11 +156,6 @@ public class AddressBuilder implements Builder<Address> {
 
     public AddressBuilder state(@Nullable final String state) {
         this.state = state;
-        return this;
-    }
-
-    public AddressBuilder country(final String country) {
-        this.country = country;
         return this;
     }
 
@@ -235,6 +235,10 @@ public class AddressBuilder implements Builder<Address> {
         return this.key;
     }
 
+    public String getCountry() {
+        return this.country;
+    }
+
     @Nullable
     public String getTitle() {
         return this.title;
@@ -288,10 +292,6 @@ public class AddressBuilder implements Builder<Address> {
     @Nullable
     public String getState() {
         return this.state;
-    }
-
-    public String getCountry() {
-        return this.country;
     }
 
     @Nullable
@@ -356,18 +356,18 @@ public class AddressBuilder implements Builder<Address> {
 
     public Address build() {
         Objects.requireNonNull(country, Address.class + ": country is missing");
-        return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
-            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
+        return new AddressImpl(id, key, country, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, company, department, building, apartment, pOBox,
+            phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     /**
      * builds Address without checking for non null required values
      */
     public Address buildUnchecked() {
-        return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
-            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
+        return new AddressImpl(id, key, country, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, company, department, building, apartment, pOBox,
+            phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     public static AddressBuilder of() {
@@ -378,6 +378,7 @@ public class AddressBuilder implements Builder<Address> {
         AddressBuilder builder = new AddressBuilder();
         builder.id = template.getId();
         builder.key = template.getKey();
+        builder.country = template.getCountry();
         builder.title = template.getTitle();
         builder.salutation = template.getSalutation();
         builder.firstName = template.getFirstName();
@@ -389,7 +390,6 @@ public class AddressBuilder implements Builder<Address> {
         builder.city = template.getCity();
         builder.region = template.getRegion();
         builder.state = template.getState();
-        builder.country = template.getCountry();
         builder.company = template.getCompany();
         builder.department = template.getDepartment();
         builder.building = template.getBuilding();

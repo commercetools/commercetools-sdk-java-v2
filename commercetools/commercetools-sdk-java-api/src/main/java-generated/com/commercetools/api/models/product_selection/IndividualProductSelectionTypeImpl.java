@@ -40,7 +40,7 @@ public class IndividualProductSelectionTypeImpl implements IndividualProductSele
     }
 
     /**
-    *  <p>The name of the Product Selection which is recommended to be unique.</p>
+    *  <p>The name of the ProductSelection which is recommended to be unique.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;

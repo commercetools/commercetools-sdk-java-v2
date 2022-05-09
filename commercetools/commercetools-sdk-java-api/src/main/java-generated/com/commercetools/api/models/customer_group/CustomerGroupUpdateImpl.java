@@ -32,7 +32,7 @@ public class CustomerGroupUpdateImpl implements CustomerGroupUpdate, ModelBase {
     }
 
     /**
-    *  <p>Expected version of the Customer Group on which the changes should be applied.
+    *  <p>Expected version of the CustomerGroup on which the changes should be applied.
     *  If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> will be returned.</p>
     */
     public Long getVersion() {
@@ -40,7 +40,7 @@ public class CustomerGroupUpdateImpl implements CustomerGroupUpdate, ModelBase {
     }
 
     /**
-    *  <p>Update actions to be performed on the Customer Group.</p>
+    *  <p>Update actions to be performed on the CustomerGroup.</p>
     */
     public java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> getActions() {
         return this.actions;

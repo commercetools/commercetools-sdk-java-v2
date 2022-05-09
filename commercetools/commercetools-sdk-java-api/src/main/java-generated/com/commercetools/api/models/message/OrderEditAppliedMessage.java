@@ -22,7 +22,7 @@ public interface OrderEditAppliedMessage extends OrderMessage {
     String ORDER_EDIT_APPLIED = "OrderEditApplied";
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:OrderEdit">OrderEdit</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:OrderEdit">OrderEdit</a>.</p>
     */
     @NotNull
     @Valid

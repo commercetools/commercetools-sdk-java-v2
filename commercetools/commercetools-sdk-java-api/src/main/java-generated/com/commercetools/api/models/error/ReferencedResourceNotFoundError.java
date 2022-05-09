@@ -19,6 +19,9 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
 
     String REFERENCED_RESOURCE_NOT_FOUND = "ReferencedResourceNotFound";
 
+    /**
+    *  <p>supported resource type identifiers:</p>
+    */
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();

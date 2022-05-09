@@ -64,10 +64,16 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     public MissingPricesSearchRequestImpl() {
     }
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    */
     public Long getLimit() {
         return this.limit;
     }
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    */
     public Long getOffset() {
         return this.offset;
     }

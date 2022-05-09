@@ -19,6 +19,9 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
 
     String MAX_RESOURCE_LIMIT_EXCEEDED = "MaxResourceLimitExceeded";
 
+    /**
+    *  <p>supported resource type identifiers:</p>
+    */
     @NotNull
     @JsonProperty("exceededResource")
     public ReferenceTypeId getExceededResource();

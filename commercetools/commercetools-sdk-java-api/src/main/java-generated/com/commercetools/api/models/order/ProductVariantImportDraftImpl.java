@@ -59,7 +59,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-    *  <p>The prices of the variant.
+    *  <p>The <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrices</a> of the variant.
     *  The prices should not contain two prices for the same price scope (same currency, country and customer group).
     *  If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
     */

@@ -29,11 +29,11 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
 
     private java.time.ZonedDateTime validUntil;
 
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
 
-    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
     PriceDraftImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value,
@@ -42,73 +42,91 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
             @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelResourceIdentifier channel,
             @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers,
-            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.value = value;
         this.country = country;
         this.customerGroup = customerGroup;
         this.channel = channel;
         this.validFrom = validFrom;
         this.validUntil = validUntil;
-        this.custom = custom;
-        this.tiers = tiers;
         this.discounted = discounted;
+        this.tiers = tiers;
+        this.custom = custom;
     }
 
     public PriceDraftImpl() {
     }
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.
-    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    *  <p>Money value of this Price.</p>
     */
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Set this field if this Price is only valid for the specified country.</p>
     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>Set this field if this Price is only valid for the referenced <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
+    /**
+    *  <p>Set this field if this Price is valid only valid from the specified date and time.</p>
+    */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
+    /**
+    *  <p>Set this field if this Price is valid only valid until the specified date and time.</p>
+    */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    *  <p>Set this field to add a DiscountedPrice from an external service.</p>
+    *  <p>The commercetools Platform sets this field automatically if at least one <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> applies.
+    *  The DiscountedPrice must reference a ProductDiscount with:</p>
+    *  <ul>
+    *  <li>The <code>isActive</code> flag set to <code>true</code>.</li>
+    *  <li>A <a href="ctp:api:type:ProductDiscountValueExternal">ProductDiscountValue</a> of type <code>external</code>.</li>
+    *  <li>A <code>predicate</code> that matches the <a href="ctp:api:type:ProductVariant">ProductVariant</a> the Price is referenced from.</li>
+    *  </ul>
     */
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
+        return this.discounted;
     }
 
+    /**
+    *  <p>Set this field to specify different Prices for certain <a href="ctp:api:type:LineItem">LineItem</a> quantities.</p>
+    */
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
         return this.tiers;
     }
 
-    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
-        return this.discounted;
+    /**
+    *  <p>Custom Fields for the Price.</p>
+    */
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     public void setValue(final com.commercetools.api.models.common.Money value) {
@@ -136,8 +154,8 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
         this.validUntil = validUntil;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
+    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
+        this.discounted = discounted;
     }
 
     public void setTiers(final com.commercetools.api.models.common.PriceTierDraft... tiers) {
@@ -148,8 +166,8 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
         this.tiers = tiers;
     }
 
-    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
-        this.discounted = discounted;
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
     }
 
     @Override
@@ -168,9 +186,9 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
                 .append(channel, that.channel)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
-                .append(custom, that.custom)
-                .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
+                .append(tiers, that.tiers)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -182,9 +200,9 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
                 .append(channel)
                 .append(validFrom)
                 .append(validUntil)
-                .append(custom)
-                .append(tiers)
                 .append(discounted)
+                .append(tiers)
+                .append(custom)
                 .toHashCode();
     }
 

@@ -23,24 +23,38 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     @JsonProperty("sources")
     public List<AssetSource> getSources();
 
+    /**
+    *  <p>Name of the Asset.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+    *  <p>Description of the Asset.</p>
+    */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
+
+    /**
+    *  <p>Keywords for categorizing and organizing Assets.</p>
+    */
 
     @JsonProperty("tags")
     public List<String> getTags();
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    *  <p>Custom Fields defined for the Asset.</p>
     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
+    /**
+    *  <p>User-defined unique identifier for the Asset.</p>
+    */
 
     @JsonProperty("key")
     public String getKey();

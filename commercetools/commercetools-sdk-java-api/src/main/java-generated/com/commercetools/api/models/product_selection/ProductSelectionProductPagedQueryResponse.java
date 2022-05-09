@@ -29,8 +29,7 @@ public interface ProductSelectionProductPagedQueryResponse
     public Long getLimit();
 
     /**
-    *  <p>Offset supplied by the client or the server default.
-    *  It is the number of elements skipped, not a page number.</p>
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
     */
     @NotNull
     @JsonProperty("offset")
@@ -55,7 +54,7 @@ public interface ProductSelectionProductPagedQueryResponse
     public Long getTotal();
 
     /**
-    *  <p>References to Products that are assigned to the Product Selection.</p>
+    *  <p>References to Products that are assigned to the ProductSelection.</p>
     */
     @NotNull
     @Valid

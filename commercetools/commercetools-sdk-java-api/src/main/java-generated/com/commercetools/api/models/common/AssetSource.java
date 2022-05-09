@@ -13,20 +13,37 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Representation of an <a href="#asset">Asset</a> in a specific format, for example a video in a certain encoding, or an image in a certain resolution.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AssetSourceImpl.class)
 public interface AssetSource {
 
+    /**
+    *  <p>URI of the AssetSource.</p>
+    */
     @NotNull
     @JsonProperty("uri")
     public String getUri();
 
+    /**
+    *  <p>User-defined unique identifier of the AssetSource.</p>
+    */
+
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>Width and height of the AssetSource.</p>
+    */
     @Valid
     @JsonProperty("dimensions")
     public AssetDimensions getDimensions();
+
+    /**
+    *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
+    */
 
     @JsonProperty("contentType")
     public String getContentType();

@@ -21,6 +21,8 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
 
     private String key;
 
+    private String country;
+
     private String title;
 
     private String salutation;
@@ -42,8 +44,6 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     private String region;
 
     private String state;
-
-    private String country;
 
     private String company;
 
@@ -69,22 +69,23 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
 
     @JsonCreator
     BaseAddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
-            @JsonProperty("title") final String title, @JsonProperty("salutation") final String salutation,
-            @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName,
-            @JsonProperty("streetName") final String streetName,
+            @JsonProperty("country") final String country, @JsonProperty("title") final String title,
+            @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName,
+            @JsonProperty("lastName") final String lastName, @JsonProperty("streetName") final String streetName,
             @JsonProperty("streetNumber") final String streetNumber,
             @JsonProperty("additionalStreetInfo") final String additionalStreetInfo,
             @JsonProperty("postalCode") final String postalCode, @JsonProperty("city") final String city,
             @JsonProperty("region") final String region, @JsonProperty("state") final String state,
-            @JsonProperty("country") final String country, @JsonProperty("company") final String company,
-            @JsonProperty("department") final String department, @JsonProperty("building") final String building,
-            @JsonProperty("apartment") final String apartment, @JsonProperty("pOBox") final String pOBox,
-            @JsonProperty("phone") final String phone, @JsonProperty("mobile") final String mobile,
-            @JsonProperty("email") final String email, @JsonProperty("fax") final String fax,
+            @JsonProperty("company") final String company, @JsonProperty("department") final String department,
+            @JsonProperty("building") final String building, @JsonProperty("apartment") final String apartment,
+            @JsonProperty("pOBox") final String pOBox, @JsonProperty("phone") final String phone,
+            @JsonProperty("mobile") final String mobile, @JsonProperty("email") final String email,
+            @JsonProperty("fax") final String fax,
             @JsonProperty("additionalAddressInfo") final String additionalAddressInfo,
             @JsonProperty("externalId") final String externalId) {
         this.id = id;
         this.key = key;
+        this.country = country;
         this.title = title;
         this.salutation = salutation;
         this.firstName = firstName;
@@ -96,7 +97,6 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
         this.city = city;
         this.region = region;
         this.state = state;
-        this.country = country;
         this.company = company;
         this.department = department;
         this.building = building;
@@ -113,105 +113,177 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     public BaseAddressImpl() {
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the Address.</p>
+    */
     public String getId() {
         return this.id;
     }
 
+    /**
+    *  <p>User-defined unique identifier of the Address.</p>
+    */
     public String getKey() {
         return this.key;
     }
 
-    public String getTitle() {
-        return this.title;
-    }
-
-    public String getSalutation() {
-        return this.salutation;
-    }
-
-    public String getFirstName() {
-        return this.firstName;
-    }
-
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    public String getStreetName() {
-        return this.streetName;
-    }
-
-    public String getStreetNumber() {
-        return this.streetNumber;
-    }
-
-    public String getAdditionalStreetInfo() {
-        return this.additionalStreetInfo;
-    }
-
-    public String getPostalCode() {
-        return this.postalCode;
-    }
-
-    public String getCity() {
-        return this.city;
-    }
-
-    public String getRegion() {
-        return this.region;
-    }
-
-    public String getState() {
-        return this.state;
-    }
-
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
     */
     public String getCountry() {
         return this.country;
     }
 
+    /**
+    *  <p>Title of the contact, for example 'Dr.'</p>
+    */
+    public String getTitle() {
+        return this.title;
+    }
+
+    /**
+    *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+    */
+    public String getSalutation() {
+        return this.salutation;
+    }
+
+    /**
+    *  <p>Given name (first name) of the contact.</p>
+    */
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    /**
+    *  <p>Family name (last name) of the contact.</p>
+    */
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    /**
+    *  <p>Name of the street.</p>
+    */
+    public String getStreetName() {
+        return this.streetName;
+    }
+
+    /**
+    *  <p>Street number.</p>
+    */
+    public String getStreetNumber() {
+        return this.streetNumber;
+    }
+
+    /**
+    *  <p>Further information on the street address.</p>
+    */
+    public String getAdditionalStreetInfo() {
+        return this.additionalStreetInfo;
+    }
+
+    /**
+    *  <p>Postal code.</p>
+    */
+    public String getPostalCode() {
+        return this.postalCode;
+    }
+
+    /**
+    *  <p>Name of the city.</p>
+    */
+    public String getCity() {
+        return this.city;
+    }
+
+    /**
+    *  <p>Name of the region.</p>
+    */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
+    *  <p>Name of the state, for example, Colorado.</p>
+    */
+    public String getState() {
+        return this.state;
+    }
+
+    /**
+    *  <p>Name of the company.</p>
+    */
     public String getCompany() {
         return this.company;
     }
 
+    /**
+    *  <p>Name of the department.</p>
+    */
     public String getDepartment() {
         return this.department;
     }
 
+    /**
+    *  <p>Number or name of the building.</p>
+    */
     public String getBuilding() {
         return this.building;
     }
 
+    /**
+    *  <p>Number or name of the apartment.</p>
+    */
     public String getApartment() {
         return this.apartment;
     }
 
+    /**
+    *  <p>Post office box number.</p>
+    */
     public String getPOBox() {
         return this.pOBox;
     }
 
+    /**
+    *  <p>Phone number of the contact.</p>
+    */
     public String getPhone() {
         return this.phone;
     }
 
+    /**
+    *  <p>Mobile phone number of the contact.</p>
+    */
     public String getMobile() {
         return this.mobile;
     }
 
+    /**
+    *  <p>Email address of the contact.</p>
+    */
     public String getEmail() {
         return this.email;
     }
 
+    /**
+    *  <p>Fax number of the contact.</p>
+    */
     public String getFax() {
         return this.fax;
     }
 
+    /**
+    *  <p>Further information on the Address.</p>
+    */
     public String getAdditionalAddressInfo() {
         return this.additionalAddressInfo;
     }
 
+    /**
+    *  <p>ID for the contact used in an external system.</p>
+    */
     public String getExternalId() {
         return this.externalId;
     }
@@ -222,6 +294,10 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
 
     public void setKey(final String key) {
         this.key = key;
+    }
+
+    public void setCountry(final String country) {
+        this.country = country;
     }
 
     public void setTitle(final String title) {
@@ -266,10 +342,6 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
 
     public void setState(final String state) {
         this.state = state;
-    }
-
-    public void setCountry(final String country) {
-        this.country = country;
     }
 
     public void setCompany(final String company) {
@@ -328,6 +400,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
 
         return new EqualsBuilder().append(id, that.id)
                 .append(key, that.key)
+                .append(country, that.country)
                 .append(title, that.title)
                 .append(salutation, that.salutation)
                 .append(firstName, that.firstName)
@@ -339,7 +412,6 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
                 .append(city, that.city)
                 .append(region, that.region)
                 .append(state, that.state)
-                .append(country, that.country)
                 .append(company, that.company)
                 .append(department, that.department)
                 .append(building, that.building)
@@ -358,6 +430,7 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
                 .append(key)
+                .append(country)
                 .append(title)
                 .append(salutation)
                 .append(firstName)
@@ -369,7 +442,6 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
                 .append(city)
                 .append(region)
                 .append(state)
-                .append(country)
                 .append(company)
                 .append(department)
                 .append(building)

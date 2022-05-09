@@ -25,6 +25,9 @@ public interface MissingPricesPagedQueryResult {
     @JsonProperty("total")
     public Long getTotal();
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();

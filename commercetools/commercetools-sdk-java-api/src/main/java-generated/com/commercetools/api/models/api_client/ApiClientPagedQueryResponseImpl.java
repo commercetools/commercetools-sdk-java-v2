@@ -52,8 +52,7 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
     }
 
     /**
-    *  <p>Offset supplied by the client or server default.
-    *  It is the number of elements skipped, not a page number.</p>
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
     */
     public Long getOffset() {
         return this.offset;
@@ -78,7 +77,7 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
     }
 
     /**
-    *  <p>API Clients matching the query.</p>
+    *  <p>APIClients matching the query.</p>
     */
     public java.util.List<com.commercetools.api.models.api_client.ApiClient> getResults() {
         return this.results;

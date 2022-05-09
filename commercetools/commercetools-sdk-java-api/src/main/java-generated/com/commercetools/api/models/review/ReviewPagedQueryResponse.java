@@ -31,6 +31,9 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     @JsonProperty("total")
     public Long getTotal();
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    */
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();

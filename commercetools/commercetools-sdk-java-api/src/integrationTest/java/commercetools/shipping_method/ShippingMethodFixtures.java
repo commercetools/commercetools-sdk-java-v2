@@ -41,7 +41,7 @@ public class ShippingMethodFixtures {
     }
 
     public static ShippingMethod createShippingMethod(TaxCategory taxCategory, Zone zone) {
-        CentPrecisionMoneyDraft highPrecisionMoney = CentPrecisionMoneyDraftBuilder.of()
+        CentPrecisionMoneyDraft centPrecisionMoneyDraft = CentPrecisionMoneyDraftBuilder.of()
                 .centAmount(100L)
                 .currencyCode("EUR")
                 .build();
@@ -53,7 +53,7 @@ public class ShippingMethodFixtures {
                 .taxCategory(TaxCategoryResourceIdentifierBuilder.of().id(taxCategory.getId()).build())
                 .zoneRates(Arrays.asList(ZoneRateDraftBuilder.of()
                         .zone(ZoneResourceIdentifierBuilder.of().id(zone.getId()).build())
-                        .shippingRates(Arrays.asList(ShippingRateDraftBuilder.of().price(highPrecisionMoney).build()))
+                        .shippingRates(Arrays.asList(ShippingRateDraftBuilder.of().price(centPrecisionMoneyDraft).build()))
                         .build()))
                 .isDefault(false)
                 .build();

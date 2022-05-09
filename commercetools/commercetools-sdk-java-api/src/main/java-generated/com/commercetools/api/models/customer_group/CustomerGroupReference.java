@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupReferenceImpl.class)
@@ -24,7 +24,7 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
     String CUSTOMER_GROUP = "customer-group";
 
     /**
-    *  <p>Contains the representation of the expanded Customer Group. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for Customer Groups.</p>
+    *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for CustomerGroups.</p>
     */
     @Valid
     @JsonProperty("obj")

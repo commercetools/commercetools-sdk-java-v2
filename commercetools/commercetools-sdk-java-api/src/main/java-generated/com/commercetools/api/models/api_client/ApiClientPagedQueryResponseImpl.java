@@ -77,7 +77,7 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
     }
 
     /**
-    *  <p>API Clients matching the query.</p>
+    *  <p>APIClients matching the query.</p>
     */
     public java.util.List<com.commercetools.api.models.api_client.ApiClient> getResults() {
         return this.results;

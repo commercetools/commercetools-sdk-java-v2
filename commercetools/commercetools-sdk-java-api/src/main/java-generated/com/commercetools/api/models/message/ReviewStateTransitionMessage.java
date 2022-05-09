@@ -22,7 +22,7 @@ public interface ReviewStateTransitionMessage extends Message {
     String REVIEW_STATE_TRANSITION = "ReviewStateTransition";
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
     */
     @NotNull
     @Valid
@@ -30,7 +30,7 @@ public interface ReviewStateTransitionMessage extends Message {
     public StateReference getOldState();
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
     */
     @NotNull
     @Valid

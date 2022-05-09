@@ -22,7 +22,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     String MISSING_ROLE_ON_CHANNEL = "MissingRoleOnChannel";
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     @Valid
     @JsonProperty("channel")

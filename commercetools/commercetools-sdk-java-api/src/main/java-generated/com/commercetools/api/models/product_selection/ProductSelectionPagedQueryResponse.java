@@ -54,7 +54,7 @@ public interface ProductSelectionPagedQueryResponse
     public Long getTotal();
 
     /**
-    *  <p>The Product Selections matching the query.</p>
+    *  <p><a href="ctp:api:type:ProductSelection">ProductSelections</a> matching the query.</p>
     */
     @NotNull
     @Valid

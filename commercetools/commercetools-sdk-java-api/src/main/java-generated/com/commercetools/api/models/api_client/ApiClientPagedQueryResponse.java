@@ -54,7 +54,7 @@ public interface ApiClientPagedQueryResponse
     public Long getTotal();
 
     /**
-    *  <p>API Clients matching the query.</p>
+    *  <p>APIClients matching the query.</p>
     */
     @NotNull
     @Valid

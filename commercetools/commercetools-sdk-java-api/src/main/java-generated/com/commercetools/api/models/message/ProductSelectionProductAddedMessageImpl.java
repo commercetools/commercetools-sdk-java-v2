@@ -128,7 +128,7 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
     */
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;

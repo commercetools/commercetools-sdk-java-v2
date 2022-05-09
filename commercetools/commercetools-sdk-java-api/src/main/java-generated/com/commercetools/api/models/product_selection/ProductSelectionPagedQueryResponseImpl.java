@@ -78,7 +78,7 @@ public class ProductSelectionPagedQueryResponseImpl implements ProductSelectionP
     }
 
     /**
-    *  <p>The Product Selections matching the query.</p>
+    *  <p><a href="ctp:api:type:ProductSelection">ProductSelections</a> matching the query.</p>
     */
     public java.util.List<com.commercetools.api.models.product_selection.ProductSelection> getResults() {
         return this.results;

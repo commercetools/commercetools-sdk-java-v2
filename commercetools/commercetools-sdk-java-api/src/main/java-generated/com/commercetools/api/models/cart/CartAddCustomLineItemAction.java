@@ -50,7 +50,7 @@ public interface CartAddCustomLineItemAction
     public String getSlug();
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
     */
     @Valid
     @JsonProperty("taxCategory")

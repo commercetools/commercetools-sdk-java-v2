@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssignedProductSelection {
 
     /**
-    *  <p>Reference to the Product Selection that this assignment is part of.</p>
+    *  <p>Reference to the ProductSelection that this assignment is part of.</p>
     */
     @NotNull
     @Valid

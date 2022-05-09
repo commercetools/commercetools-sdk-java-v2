@@ -34,7 +34,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     public Long getQuantity();
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
     */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     public StateReference getFromState();
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
     */
     @NotNull
     @Valid

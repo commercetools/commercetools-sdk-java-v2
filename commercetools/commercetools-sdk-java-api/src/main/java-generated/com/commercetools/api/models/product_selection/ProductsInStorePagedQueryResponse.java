@@ -54,7 +54,7 @@ public interface ProductsInStorePagedQueryResponse
     public Long getTotal();
 
     /**
-    *  <p>Product Selection Assignments.</p>
+    *  <p>ProductSelectionAssignments matching the query.</p>
     */
     @NotNull
     @Valid

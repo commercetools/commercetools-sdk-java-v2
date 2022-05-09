@@ -67,28 +67,28 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Product Selection.</p>
+    *  <p>Platform-generated unique identifier of the ProductSelection.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the Product Selection.</p>
+    *  <p>Current version of the ProductSelection.</p>
     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Date and time (UTC) the Product Selection was initially created.</p>
+    *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the Product Selection was last updated.</p>
+    *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
@@ -109,35 +109,35 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Product Selection.</p>
+    *  <p>User-defined unique identifier of the ProductSelection.</p>
     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Name of the Product Selection.</p>
+    *  <p>Name of the ProductSelection.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Number of Products that are currently assigned to this Product Selection.</p>
+    *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
     */
     public Integer getProductCount() {
         return this.productCount;
     }
 
     /**
-    *  <p>Specifies in which way the Products are assigned to the Product Selection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>
+    *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>
     */
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
     }
 
     /**
-    *  <p>Custom Fields of this Product Selection.</p>
+    *  <p>Custom Fields of this ProductSelection.</p>
     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;

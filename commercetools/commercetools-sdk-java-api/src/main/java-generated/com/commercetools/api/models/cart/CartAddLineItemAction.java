@@ -30,7 +30,7 @@ public interface CartAddLineItemAction
     public CustomFieldsDraft getCustom();
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     @Valid
     @JsonProperty("distributionChannel")
@@ -53,7 +53,7 @@ public interface CartAddLineItemAction
     public Long getQuantity();
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     @Valid
     @JsonProperty("supplyChannel")

@@ -79,7 +79,7 @@ public class ProductSelectionProductPagedQueryResponseImpl
     }
 
     /**
-    *  <p>References to Products that are assigned to the Product Selection.</p>
+    *  <p>References to Products that are assigned to the ProductSelection.</p>
     */
     public java.util.List<com.commercetools.api.models.product_selection.AssignedProductReference> getResults() {
         return this.results;

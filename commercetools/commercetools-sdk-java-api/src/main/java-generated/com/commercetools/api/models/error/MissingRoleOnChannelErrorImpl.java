@@ -56,7 +56,7 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
     }
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;

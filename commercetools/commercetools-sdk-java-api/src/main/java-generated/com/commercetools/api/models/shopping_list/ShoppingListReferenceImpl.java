@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
+*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBase {

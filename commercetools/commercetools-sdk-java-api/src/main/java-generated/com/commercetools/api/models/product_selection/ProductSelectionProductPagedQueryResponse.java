@@ -54,7 +54,7 @@ public interface ProductSelectionProductPagedQueryResponse
     public Long getTotal();
 
     /**
-    *  <p>References to Products that are assigned to the Product Selection.</p>
+    *  <p>References to Products that are assigned to the ProductSelection.</p>
     */
     @NotNull
     @Valid

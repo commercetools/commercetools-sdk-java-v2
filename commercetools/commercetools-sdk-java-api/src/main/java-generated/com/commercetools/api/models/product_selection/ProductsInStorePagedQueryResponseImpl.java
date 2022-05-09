@@ -78,7 +78,7 @@ public class ProductsInStorePagedQueryResponseImpl implements ProductsInStorePag
     }
 
     /**
-    *  <p>Product Selection Assignments.</p>
+    *  <p>ProductSelectionAssignments matching the query.</p>
     */
     public java.util.List<com.commercetools.api.models.product_selection.ProductSelectionAssignment> getResults() {
         return this.results;

@@ -35,7 +35,7 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Customer Group.</p>
+    *  <p>User-defined unique identifier for the CustomerGroup.</p>
     */
     public String getKey() {
         return this.key;
@@ -50,7 +50,7 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
     }
 
     /**
-    *  <p>Custom Fields for the Customer Group.</p>
+    *  <p>Custom Fields for the CustomerGroup.</p>
     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;

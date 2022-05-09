@@ -42,6 +42,9 @@ public class ProductBuilder implements Builder<Product> {
     @Nullable
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
 
+    @Nullable
+    private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
+
     public ProductBuilder id(final String id) {
         this.id = id;
         return this;
@@ -152,6 +155,12 @@ public class ProductBuilder implements Builder<Product> {
         return this;
     }
 
+    public ProductBuilder priceMode(
+            @Nullable final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+        this.priceMode = priceMode;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -206,6 +215,11 @@ public class ProductBuilder implements Builder<Product> {
         return this.reviewRatingStatistics;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
+        return this.priceMode;
+    }
+
     public Product build() {
         Objects.requireNonNull(id, Product.class + ": id is missing");
         Objects.requireNonNull(version, Product.class + ": version is missing");
@@ -214,7 +228,7 @@ public class ProductBuilder implements Builder<Product> {
         Objects.requireNonNull(productType, Product.class + ": productType is missing");
         Objects.requireNonNull(masterData, Product.class + ": masterData is missing");
         return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,
-            masterData, taxCategory, state, reviewRatingStatistics);
+            masterData, taxCategory, state, reviewRatingStatistics, priceMode);
     }
 
     /**
@@ -222,7 +236,7 @@ public class ProductBuilder implements Builder<Product> {
      */
     public Product buildUnchecked() {
         return new ProductImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, productType,
-            masterData, taxCategory, state, reviewRatingStatistics);
+            masterData, taxCategory, state, reviewRatingStatistics, priceMode);
     }
 
     public static ProductBuilder of() {
@@ -243,6 +257,7 @@ public class ProductBuilder implements Builder<Product> {
         builder.taxCategory = template.getTaxCategory();
         builder.state = template.getState();
         builder.reviewRatingStatistics = template.getReviewRatingStatistics();
+        builder.priceMode = template.getPriceMode();
         return builder;
     }
 

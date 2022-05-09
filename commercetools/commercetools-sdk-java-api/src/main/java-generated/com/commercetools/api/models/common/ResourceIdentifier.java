@@ -23,6 +23,7 @@ import com.commercetools.api.models.product_type.ProductTypeResourceIdentifier;
 import com.commercetools.api.models.review.ReviewResourceIdentifier;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier;
+import com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifier;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
@@ -56,6 +57,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewResourceIdentifierImpl.class, name = ReviewResourceIdentifier.REVIEW),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl.class, name = ShippingMethodResourceIdentifier.SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierImpl.class, name = ShoppingListResourceIdentifier.SHOPPING_LIST),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierImpl.class, name = StandalonePriceResourceIdentifier.STANDALONE_PRICE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateResourceIdentifierImpl.class, name = StateResourceIdentifier.STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreResourceIdentifierImpl.class, name = StoreResourceIdentifier.STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl.class, name = TaxCategoryResourceIdentifier.TAX_CATEGORY),
@@ -67,7 +69,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ResourceIdentifier {
 
     /**
-    *  <p>Type of referenced resource. If given, it must match the expected <a href="#referencetypeid">ReferenceTypeId</a> of the referenced resource.</p>
+    *  <p>Type of referenced resource. If given, it must match the expected <a href="ctp:api:type:ReferenceTypeId">ReferenceTypeId</a> of the referenced resource.</p>
     */
 
     @JsonProperty("typeId")
@@ -161,6 +163,10 @@ public interface ResourceIdentifier {
 
     public static com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder shoppingListBuilder() {
         return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of();
+    }
+
+    public static com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder standalonePriceBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder.of();
     }
 
     public static com.commercetools.api.models.state.StateResourceIdentifierBuilder stateBuilder() {

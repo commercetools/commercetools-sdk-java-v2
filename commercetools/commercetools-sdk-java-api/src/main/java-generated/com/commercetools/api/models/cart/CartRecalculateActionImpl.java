@@ -37,9 +37,8 @@ public class CartRecalculateActionImpl implements CartRecalculateAction, ModelBa
 
     /**
     *  <p>If set to <code>true</code>, the line item product data (<code>name</code>, <code>variant</code> and <code>productType</code>) will also be updated.
-    *  If set to <code>false</code>,
-    *  only the prices and tax rates of the line item will be updated.
-    *  The updated price of a line item may not correspond to a price in <code>variant.prices</code> anymore.</p>
+    *  If set to <code>false</code>, only the prices and tax rates of the line item will be updated.
+    *  Notice that if the Product's <a href="ctp:api:type:Product">priceMode</a> value is <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a>, the updated price of a line item may not correspond to a price in <code>variant.prices</code> anymore.</p>
     */
     public Boolean getUpdateProductData() {
         return this.updateProductData;

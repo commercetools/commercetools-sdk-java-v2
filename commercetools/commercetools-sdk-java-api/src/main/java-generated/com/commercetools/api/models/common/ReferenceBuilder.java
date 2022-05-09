@@ -84,6 +84,10 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.shopping_list.ShoppingListReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder standalonePriceBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.state.StateReferenceBuilder stateBuilder() {
         return com.commercetools.api.models.state.StateReferenceBuilder.of();
     }

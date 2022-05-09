@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
+import com.commercetools.api.models.common.CentPrecisionMoneyDraft;
+import com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder;
 import com.commercetools.api.models.common.HighPrecisionMoneyDraft;
 import com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder;
 import com.commercetools.api.models.shipping_method.*;
@@ -41,10 +43,9 @@ public class ShippingMethodFixtures {
     }
 
     public static ShippingMethod createShippingMethod(TaxCategory taxCategory, Zone zone) {
-        HighPrecisionMoneyDraft highPrecisionMoney = HighPrecisionMoneyDraftBuilder.of()
+        CentPrecisionMoneyDraft highPrecisionMoney = CentPrecisionMoneyDraftBuilder.of()
                 .centAmount(100L)
                 .currencyCode("EUR")
-                .preciseAmount(20L)
                 .build();
 
         ShippingMethodDraft shippingMethodDraft = ShippingMethodDraftBuilder.of()

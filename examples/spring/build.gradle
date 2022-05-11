@@ -32,7 +32,7 @@ spotless {
 
 ext {
     versions = [
-        commercetools: "8.7.0",
+        commercetools: "8.8.0-SNAPSHOT",
         newrelic: "7.7.0"
     ]
 }
@@ -57,13 +57,14 @@ test {
     useJUnitPlatform()
 }
 
-task downloadNewrelic(type: Download) {
+task downloadNewRelic(type: Download) {
     mkdir 'newrelic'
     src 'https://download.newrelic.com/newrelic/java-agent/newrelic-agent/current/newrelic-java.zip'
     dest file('newrelic')
 }
 
-task unzipNewrelic(type: Copy) {
+task unzipNewRelic(type: Copy) {
+    dependsOn downloadNewRelic
     from zipTree(file('newrelic/newrelic-java.zip'))
     into rootDir
 }

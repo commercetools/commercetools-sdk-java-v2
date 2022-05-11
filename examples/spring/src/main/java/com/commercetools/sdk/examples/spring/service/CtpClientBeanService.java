@@ -40,15 +40,13 @@ public class CtpClientBeanService {
 
     @Bean
     public ApiHttpClient client() {
-
-        return ApiRootBuilder.of(new NewRelicClient(ApiRootBuilder.of().defaultClient(credentials())
-                .buildClient())).withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl()).buildClient();
+        return ApiRootBuilder.of(new NewRelicClient(HttpClientSupplier.of().get())).defaultClient(credentials()).buildClient();
     }
 
     public static class NewRelicClient implements VrapHttpClient {
-        private final ApiHttpClient client;
+        private final VrapHttpClient client;
 
-        public NewRelicClient(ApiHttpClient client) {
+        public NewRelicClient(VrapHttpClient client) {
             this.client = client;
         }
 
@@ -57,17 +55,23 @@ public class CtpClientBeanService {
         @Override
         public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
             Segment segment = NewRelic.getAgent().getTransaction().startSegment("commercetools");
-            return client.execute(request).thenApply(apiHttpResponse -> {processResponse(segment, request, apiHttpResponse); segment.end(); return apiHttpResponse;});
+            return client.execute(request).whenComplete((response, throwable) -> {
+                if (response != null) {
+                    processResponse(segment, request, response);
+                }
+                segment.end();
+            });
         }
     }
 
     public static void processResponse(Segment segment, ApiHttpRequest request, ApiHttpResponse<?> response) {
-        segment.reportAsExternal(HttpParameters
-                .library("ApiHttpClient")
+        final HttpParameters build = HttpParameters.library("ApiHttpClient")
                 .uri(request.getUri())
                 .procedure("execute")
                 .inboundHeaders(new InboundWrapper(response))
-                .build());
+                .status(response.getStatusCode(), response.getMessage())
+                .build();
+        segment.reportAsExternal(build);
     }
 
     public static class InboundWrapper extends ExtendedInboundHeaders {

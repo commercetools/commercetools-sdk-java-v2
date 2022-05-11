@@ -16,81 +16,177 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BaseAddressImpl.class)
 public interface BaseAddress {
 
+    /**
+    *  <p>Platform-generated unique identifier of the Address.</p>
+    */
+
     @JsonProperty("id")
     public String getId();
+
+    /**
+    *  <p>User-defined unique identifier of the Address.</p>
+    */
 
     @JsonProperty("key")
     public String getKey();
 
-    @JsonProperty("title")
-    public String getTitle();
-
-    @JsonProperty("salutation")
-    public String getSalutation();
-
-    @JsonProperty("firstName")
-    public String getFirstName();
-
-    @JsonProperty("lastName")
-    public String getLastName();
-
-    @JsonProperty("streetName")
-    public String getStreetName();
-
-    @JsonProperty("streetNumber")
-    public String getStreetNumber();
-
-    @JsonProperty("additionalStreetInfo")
-    public String getAdditionalStreetInfo();
-
-    @JsonProperty("postalCode")
-    public String getPostalCode();
-
-    @JsonProperty("city")
-    public String getCity();
-
-    @JsonProperty("region")
-    public String getRegion();
-
-    @JsonProperty("state")
-    public String getState();
-
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
     */
     @NotNull
     @JsonProperty("country")
     public String getCountry();
 
+    /**
+    *  <p>Title of the contact, for example 'Dr.'</p>
+    */
+
+    @JsonProperty("title")
+    public String getTitle();
+
+    /**
+    *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+    */
+
+    @JsonProperty("salutation")
+    public String getSalutation();
+
+    /**
+    *  <p>Given name (first name) of the contact.</p>
+    */
+
+    @JsonProperty("firstName")
+    public String getFirstName();
+
+    /**
+    *  <p>Family name (last name) of the contact.</p>
+    */
+
+    @JsonProperty("lastName")
+    public String getLastName();
+
+    /**
+    *  <p>Name of the street.</p>
+    */
+
+    @JsonProperty("streetName")
+    public String getStreetName();
+
+    /**
+    *  <p>Street number.</p>
+    */
+
+    @JsonProperty("streetNumber")
+    public String getStreetNumber();
+
+    /**
+    *  <p>Further information on the street address.</p>
+    */
+
+    @JsonProperty("additionalStreetInfo")
+    public String getAdditionalStreetInfo();
+
+    /**
+    *  <p>Postal code.</p>
+    */
+
+    @JsonProperty("postalCode")
+    public String getPostalCode();
+
+    /**
+    *  <p>Name of the city.</p>
+    */
+
+    @JsonProperty("city")
+    public String getCity();
+
+    /**
+    *  <p>Name of the region.</p>
+    */
+
+    @JsonProperty("region")
+    public String getRegion();
+
+    /**
+    *  <p>Name of the state, for example, Colorado.</p>
+    */
+
+    @JsonProperty("state")
+    public String getState();
+
+    /**
+    *  <p>Name of the company.</p>
+    */
+
     @JsonProperty("company")
     public String getCompany();
+
+    /**
+    *  <p>Name of the department.</p>
+    */
 
     @JsonProperty("department")
     public String getDepartment();
 
+    /**
+    *  <p>Number or name of the building.</p>
+    */
+
     @JsonProperty("building")
     public String getBuilding();
+
+    /**
+    *  <p>Number or name of the apartment.</p>
+    */
 
     @JsonProperty("apartment")
     public String getApartment();
 
+    /**
+    *  <p>Post office box number.</p>
+    */
+
     @JsonProperty("pOBox")
     public String getPOBox();
+
+    /**
+    *  <p>Phone number of the contact.</p>
+    */
 
     @JsonProperty("phone")
     public String getPhone();
 
+    /**
+    *  <p>Mobile phone number of the contact.</p>
+    */
+
     @JsonProperty("mobile")
     public String getMobile();
+
+    /**
+    *  <p>Email address of the contact.</p>
+    */
 
     @JsonProperty("email")
     public String getEmail();
 
+    /**
+    *  <p>Fax number of the contact.</p>
+    */
+
     @JsonProperty("fax")
     public String getFax();
 
+    /**
+    *  <p>Further information on the Address.</p>
+    */
+
     @JsonProperty("additionalAddressInfo")
     public String getAdditionalAddressInfo();
+
+    /**
+    *  <p>ID for the contact used in an external system.</p>
+    */
 
     @JsonProperty("externalId")
     public String getExternalId();
@@ -98,6 +194,8 @@ public interface BaseAddress {
     public void setId(final String id);
 
     public void setKey(final String key);
+
+    public void setCountry(final String country);
 
     public void setTitle(final String title);
 
@@ -120,8 +218,6 @@ public interface BaseAddress {
     public void setRegion(final String region);
 
     public void setState(final String state);
-
-    public void setCountry(final String country);
 
     public void setCompany(final String company);
 
@@ -153,6 +249,7 @@ public interface BaseAddress {
         BaseAddressImpl instance = new BaseAddressImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
+        instance.setCountry(template.getCountry());
         instance.setTitle(template.getTitle());
         instance.setSalutation(template.getSalutation());
         instance.setFirstName(template.getFirstName());
@@ -164,7 +261,6 @@ public interface BaseAddress {
         instance.setCity(template.getCity());
         instance.setRegion(template.getRegion());
         instance.setState(template.getState());
-        instance.setCountry(template.getCountry());
         instance.setCompany(template.getCompany());
         instance.setDepartment(template.getDepartment());
         instance.setBuilding(template.getBuilding());

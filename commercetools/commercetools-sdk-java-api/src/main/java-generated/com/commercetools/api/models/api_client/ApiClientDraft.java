@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApiClientDraft {
 
     /**
-    *  <p>Name of the API Client.</p>
+    *  <p>Name of the APIClient.</p>
     */
     @NotNull
     @JsonProperty("name")
@@ -38,14 +38,14 @@ public interface ApiClientDraft {
     public Long getDeleteDaysAfterCreation();
 
     /**
-    *  <p>Expiration time in seconds for each access token obtained by the API Client. If not set the default value applies.</p>
+    *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
     */
 
     @JsonProperty("accessTokenValiditySeconds")
     public Integer getAccessTokenValiditySeconds();
 
     /**
-    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the API Client. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
+    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
     */
 
     @JsonProperty("refreshTokenValiditySeconds")

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>.</p>
+*  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProductDiscountResourceIdentifierImpl implements ProductDiscountResourceIdentifier, ModelBase {
@@ -38,6 +38,9 @@ public class ProductDiscountResourceIdentifierImpl implements ProductDiscountRes
         this.typeId = ReferenceTypeId.findEnum("product-discount");
     }
 
+    /**
+    *  <p>Type of referenced resource. If given, it must match the expected <a href="#referencetypeid">ReferenceTypeId</a> of the referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

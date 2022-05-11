@@ -25,28 +25,28 @@ public interface ProductSelection extends BaseResource, com.commercetools.api.mo
         com.commercetools.api.models.Customizable<ProductSelection> {
 
     /**
-    *  <p>Platform-generated unique identifier of the Product Selection.</p>
+    *  <p>Platform-generated unique identifier of the ProductSelection.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Current version of the Product Selection.</p>
+    *  <p>Current version of the ProductSelection.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>Date and time (UTC) the Product Selection was initially created.</p>
+    *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>Date and time (UTC) the Product Selection was last updated.</p>
+    *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
     */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -67,14 +67,14 @@ public interface ProductSelection extends BaseResource, com.commercetools.api.mo
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier of the Product Selection.</p>
+    *  <p>User-defined unique identifier of the ProductSelection.</p>
     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Name of the Product Selection.</p>
+    *  <p>Name of the ProductSelection.</p>
     */
     @NotNull
     @Valid
@@ -82,21 +82,21 @@ public interface ProductSelection extends BaseResource, com.commercetools.api.mo
     public LocalizedString getName();
 
     /**
-    *  <p>Number of Products that are currently assigned to this Product Selection.</p>
+    *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
     */
     @NotNull
     @JsonProperty("productCount")
     public Integer getProductCount();
 
     /**
-    *  <p>Specifies in which way the Products are assigned to the Product Selection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>
+    *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually. Hence, the type is fixed to <code>individual</code> for now, but we have plans to add other types in the future.</p>
     */
     @NotNull
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();
 
     /**
-    *  <p>Custom Fields of this Product Selection.</p>
+    *  <p>Custom Fields of this ProductSelection.</p>
     */
     @Valid
     @JsonProperty("custom")

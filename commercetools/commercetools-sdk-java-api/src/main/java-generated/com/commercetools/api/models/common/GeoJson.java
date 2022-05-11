@@ -12,6 +12,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>GeoJSON Geometry represents a <a href="https://datatracker.ietf.org/doc/html/rfc7946#section-3.1">Geometry Object</a> as defined in the GeoJSON standard.</p>
+*/
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.common.GeoJsonPointImpl.class, name = GeoJsonPoint.POINT) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = GeoJsonImpl.class, visible = true)

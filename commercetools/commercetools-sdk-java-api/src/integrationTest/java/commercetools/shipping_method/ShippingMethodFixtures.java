@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
-import com.commercetools.api.models.common.HighPrecisionMoneyDraft;
-import com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder;
+import com.commercetools.api.models.common.CentPrecisionMoneyDraft;
+import com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder;
 import com.commercetools.api.models.shipping_method.*;
 import com.commercetools.api.models.tax_category.TaxCategory;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder;
@@ -41,10 +41,9 @@ public class ShippingMethodFixtures {
     }
 
     public static ShippingMethod createShippingMethod(TaxCategory taxCategory, Zone zone) {
-        HighPrecisionMoneyDraft highPrecisionMoney = HighPrecisionMoneyDraftBuilder.of()
+        CentPrecisionMoneyDraft centPrecisionMoneyDraft = CentPrecisionMoneyDraftBuilder.of()
                 .centAmount(100L)
                 .currencyCode("EUR")
-                .preciseAmount(20L)
                 .build();
 
         ShippingMethodDraft shippingMethodDraft = ShippingMethodDraftBuilder.of()
@@ -54,7 +53,8 @@ public class ShippingMethodFixtures {
                 .taxCategory(TaxCategoryResourceIdentifierBuilder.of().id(taxCategory.getId()).build())
                 .zoneRates(Arrays.asList(ZoneRateDraftBuilder.of()
                         .zone(ZoneResourceIdentifierBuilder.of().id(zone.getId()).build())
-                        .shippingRates(Arrays.asList(ShippingRateDraftBuilder.of().price(highPrecisionMoney).build()))
+                        .shippingRates(
+                            Arrays.asList(ShippingRateDraftBuilder.of().price(centPrecisionMoneyDraft).build()))
                         .build()))
                 .isDefault(false)
                 .build();

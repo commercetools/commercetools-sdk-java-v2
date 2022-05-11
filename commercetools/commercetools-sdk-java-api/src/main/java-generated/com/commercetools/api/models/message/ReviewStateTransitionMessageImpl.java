@@ -127,6 +127,9 @@ public class ReviewStateTransitionMessageImpl implements ReviewStateTransitionMe
         return this.sequenceNumber;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="ctp:api:type:ChannelReference">ChannelReference</a>.  A referenced resource can be embedded through <a href="/general-concepts#reference-expansion">Reference Expansion</a>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
@@ -144,14 +147,14 @@ public class ReviewStateTransitionMessageImpl implements ReviewStateTransitionMe
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
     */
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
     */
     public com.commercetools.api.models.state.StateReference getNewState() {
         return this.newState;
@@ -165,6 +168,9 @@ public class ReviewStateTransitionMessageImpl implements ReviewStateTransitionMe
         return this.newIncludedInStatistics;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="ctp:api:type:ChannelReference">ChannelReference</a>.  A referenced resource can be embedded through <a href="/general-concepts#reference-expansion">Reference Expansion</a>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
     public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }

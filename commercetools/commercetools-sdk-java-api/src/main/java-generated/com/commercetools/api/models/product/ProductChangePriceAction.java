@@ -21,7 +21,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     String CHANGE_PRICE = "changePrice";
 
     /**
-    *  <p>ID of the <a href="#price">Price</a></p>
+    *  <p>ID of the <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrice</a></p>
     */
     @NotNull
     @JsonProperty("priceId")

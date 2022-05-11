@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Payment">Payment</a>.</p>
+*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Payment">Payment</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentReferenceImpl.class)

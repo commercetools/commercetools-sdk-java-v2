@@ -69,10 +69,16 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     public MissingAttributesSearchRequestImpl() {
     }
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    */
     public Integer getLimit() {
         return this.limit;
     }
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    */
     public Integer getOffset() {
         return this.offset;
     }

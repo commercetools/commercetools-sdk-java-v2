@@ -22,7 +22,7 @@ public interface StagedOrderRemovePaymentAction extends StagedOrderUpdateAction 
     String REMOVE_PAYMENT = "removePayment";
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Payment">Payment</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Payment">Payment</a>.</p>
     */
     @NotNull
     @Valid

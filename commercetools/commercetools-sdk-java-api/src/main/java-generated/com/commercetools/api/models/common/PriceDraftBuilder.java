@@ -30,13 +30,13 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     private java.time.ZonedDateTime validUntil;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
     @Nullable
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
 
     @Nullable
-    private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     public PriceDraftBuilder value(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -91,14 +91,15 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
         return this;
     }
 
-    public PriceDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+    public PriceDraftBuilder discounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
         return this;
     }
 
-    public PriceDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
+    public PriceDraftBuilder discounted(
+            @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
+        this.discounted = discounted;
         return this;
     }
 
@@ -137,15 +138,14 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
         return this;
     }
 
-    public PriceDraftBuilder discounted(
-            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
-        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
+    public PriceDraftBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
-    public PriceDraftBuilder discounted(
-            @Nullable final com.commercetools.api.models.common.DiscountedPriceDraft discounted) {
-        this.discounted = discounted;
+    public PriceDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -179,8 +179,8 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
+    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
+        return this.discounted;
     }
 
     @Nullable
@@ -189,22 +189,22 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
-        return this.discounted;
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     public PriceDraft build() {
         Objects.requireNonNull(value, PriceDraft.class + ": value is missing");
-        return new PriceDraftImpl(value, country, customerGroup, channel, validFrom, validUntil, custom, tiers,
-            discounted);
+        return new PriceDraftImpl(value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
+            custom);
     }
 
     /**
      * builds PriceDraft without checking for non null required values
      */
     public PriceDraft buildUnchecked() {
-        return new PriceDraftImpl(value, country, customerGroup, channel, validFrom, validUntil, custom, tiers,
-            discounted);
+        return new PriceDraftImpl(value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
+            custom);
     }
 
     public static PriceDraftBuilder of() {
@@ -219,9 +219,9 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
         builder.channel = template.getChannel();
         builder.validFrom = template.getValidFrom();
         builder.validUntil = template.getValidUntil();
-        builder.custom = template.getCustom();
-        builder.tiers = template.getTiers();
         builder.discounted = template.getDiscounted();
+        builder.tiers = template.getTiers();
+        builder.custom = template.getCustom();
         return builder;
     }
 

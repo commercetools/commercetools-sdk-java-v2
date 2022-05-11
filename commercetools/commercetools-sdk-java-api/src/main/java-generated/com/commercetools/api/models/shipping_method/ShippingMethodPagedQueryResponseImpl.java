@@ -42,6 +42,9 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
     public ShippingMethodPagedQueryResponseImpl() {
     }
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    */
     public Long getLimit() {
         return this.limit;
     }
@@ -54,6 +57,9 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
         return this.total;
     }
 
+    /**
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    */
     public Long getOffset() {
         return this.offset;
     }

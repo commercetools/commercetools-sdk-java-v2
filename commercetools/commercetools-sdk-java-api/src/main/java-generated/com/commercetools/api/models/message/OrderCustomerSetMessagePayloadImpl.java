@@ -49,28 +49,28 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
     */
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
     */
     public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {
         return this.oldCustomer;
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {
         return this.oldCustomerGroup;

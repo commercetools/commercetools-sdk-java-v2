@@ -21,7 +21,7 @@ public interface IndividualProductSelectionType extends ProductSelectionType {
     String INDIVIDUAL = "individual";
 
     /**
-    *  <p>The name of the Product Selection which is recommended to be unique.</p>
+    *  <p>The name of the ProductSelection which is recommended to be unique.</p>
     */
     @NotNull
     @Valid

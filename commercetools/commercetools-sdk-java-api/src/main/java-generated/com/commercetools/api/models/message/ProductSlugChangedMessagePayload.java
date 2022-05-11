@@ -20,11 +20,17 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
 
     String PRODUCT_SLUG_CHANGED = "ProductSlugChanged";
 
+    /**
+    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
 
+    /**
+    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    */
     @Valid
     @JsonProperty("oldSlug")
     public LocalizedString getOldSlug();

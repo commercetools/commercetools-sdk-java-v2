@@ -28,7 +28,7 @@ public interface TypePagedQueryResponse extends com.commercetools.api.models.Res
     public Long getLimit();
 
     /**
-    *  <p>Offset supplied by the client or server default. It is the number of elements skipped, not a page number.</p>
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
     */
     @NotNull
     @JsonProperty("offset")

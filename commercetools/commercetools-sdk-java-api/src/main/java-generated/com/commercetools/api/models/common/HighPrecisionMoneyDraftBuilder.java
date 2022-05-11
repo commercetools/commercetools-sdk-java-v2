@@ -16,7 +16,6 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
 
     private String currencyCode;
 
-    @Nullable
     private Integer fractionDigits;
 
     private Long preciseAmount;
@@ -31,7 +30,7 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
         return this;
     }
 
-    public HighPrecisionMoneyDraftBuilder fractionDigits(@Nullable final Integer fractionDigits) {
+    public HighPrecisionMoneyDraftBuilder fractionDigits(final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;
         return this;
     }
@@ -50,7 +49,6 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
         return this.currencyCode;
     }
 
-    @Nullable
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }
@@ -61,6 +59,7 @@ public class HighPrecisionMoneyDraftBuilder implements Builder<HighPrecisionMone
 
     public HighPrecisionMoneyDraft build() {
         Objects.requireNonNull(currencyCode, HighPrecisionMoneyDraft.class + ": currencyCode is missing");
+        Objects.requireNonNull(fractionDigits, HighPrecisionMoneyDraft.class + ": fractionDigits is missing");
         Objects.requireNonNull(preciseAmount, HighPrecisionMoneyDraft.class + ": preciseAmount is missing");
         return new HighPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits, preciseAmount);
     }

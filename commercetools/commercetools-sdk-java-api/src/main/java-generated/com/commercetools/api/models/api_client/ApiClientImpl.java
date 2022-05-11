@@ -58,7 +58,7 @@ public class ApiClientImpl implements ApiClient, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the API Client.
+    *  <p>Platform-generated unique identifier of the APIClient.
     *  This is the OAuth2 <code>client_id</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
     */
     public String getId() {
@@ -66,7 +66,7 @@ public class ApiClientImpl implements ApiClient, ModelBase {
     }
 
     /**
-    *  <p>Name of the API Client.</p>
+    *  <p>Name of the APIClient.</p>
     */
     public String getName() {
         return this.name;
@@ -80,7 +80,7 @@ public class ApiClientImpl implements ApiClient, ModelBase {
     }
 
     /**
-    *  <p>Only shown once in the response of creating the API Client.
+    *  <p>Only shown once in the response of creating the APIClient.
     *  This is the OAuth2 <code>client_secret</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
     */
     public String getSecret() {
@@ -88,7 +88,7 @@ public class ApiClientImpl implements ApiClient, ModelBase {
     }
 
     /**
-    *  <p>Date of the last day this API Client was used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
+    *  <p>Date of the last day this APIClient was used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
     */
     public java.time.LocalDate getLastUsedAt() {
         return this.lastUsedAt;
@@ -102,21 +102,21 @@ public class ApiClientImpl implements ApiClient, ModelBase {
     }
 
     /**
-    *  <p>Date and time (UTC) the API Client was initially created at.</p>
+    *  <p>Date and time (UTC) the APIClient was initially created at.</p>
     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Expiration time in seconds for each access token obtained by the API Client. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
+    *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
     */
     public Integer getAccessTokenValiditySeconds() {
         return this.accessTokenValiditySeconds;
     }
 
     /**
-    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the API Client. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
+    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
     */
     public Integer getRefreshTokenValiditySeconds() {
         return this.refreshTokenValiditySeconds;

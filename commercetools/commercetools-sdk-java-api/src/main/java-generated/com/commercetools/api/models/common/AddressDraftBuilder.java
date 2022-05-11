@@ -18,6 +18,8 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     @Nullable
     private String key;
 
+    private String country;
+
     @Nullable
     private String title;
 
@@ -50,8 +52,6 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     @Nullable
     private String state;
-
-    private String country;
 
     @Nullable
     private String company;
@@ -96,6 +96,11 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     public AddressDraftBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+
+    public AddressDraftBuilder country(final String country) {
+        this.country = country;
         return this;
     }
 
@@ -151,11 +156,6 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     public AddressDraftBuilder state(@Nullable final String state) {
         this.state = state;
-        return this;
-    }
-
-    public AddressDraftBuilder country(final String country) {
-        this.country = country;
         return this;
     }
 
@@ -235,6 +235,10 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
         return this.key;
     }
 
+    public String getCountry() {
+        return this.country;
+    }
+
     @Nullable
     public String getTitle() {
         return this.title;
@@ -288,10 +292,6 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
     @Nullable
     public String getState() {
         return this.state;
-    }
-
-    public String getCountry() {
-        return this.country;
     }
 
     @Nullable
@@ -356,18 +356,18 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
 
     public AddressDraft build() {
         Objects.requireNonNull(country, AddressDraft.class + ": country is missing");
-        return new AddressDraftImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
-            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
+        return new AddressDraftImpl(id, key, country, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, company, department, building, apartment, pOBox,
+            phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     /**
      * builds AddressDraft without checking for non null required values
      */
     public AddressDraft buildUnchecked() {
-        return new AddressDraftImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
-            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
+        return new AddressDraftImpl(id, key, country, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, company, department, building, apartment, pOBox,
+            phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     public static AddressDraftBuilder of() {
@@ -378,6 +378,7 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
         AddressDraftBuilder builder = new AddressDraftBuilder();
         builder.id = template.getId();
         builder.key = template.getKey();
+        builder.country = template.getCountry();
         builder.title = template.getTitle();
         builder.salutation = template.getSalutation();
         builder.firstName = template.getFirstName();
@@ -389,7 +390,6 @@ public class AddressDraftBuilder implements Builder<AddressDraft> {
         builder.city = template.getCity();
         builder.region = template.getRegion();
         builder.state = template.getState();
-        builder.country = template.getCountry();
         builder.company = template.getCompany();
         builder.department = template.getDepartment();
         builder.building = template.getBuilding();

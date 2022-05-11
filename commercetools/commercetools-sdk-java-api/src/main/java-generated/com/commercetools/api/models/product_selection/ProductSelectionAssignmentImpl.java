@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Specifies which Product is assigned to which Product Selection.</p>
+*  <p>Specifies which Product is assigned to which ProductSelection.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProductSelectionAssignmentImpl implements ProductSelectionAssignment, ModelBase {
@@ -36,14 +36,14 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
     }
 
     /**
-    *  <p>Reference to a Product that is assigned to the Product Selection.</p>
+    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
     */
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
 
     /**
-    *  <p>Reference to the Product Selection that this assignment is part of.</p>
+    *  <p>Reference to the ProductSelection that this assignment is part of.</p>
     */
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
         return this.productSelection;

@@ -14,6 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>A KeyReference represents a loose reference to another resource in the same commercetools Project identified by the resource's <code>key</code> field. If available, the <code>key</code> is immutable and mandatory. KeyReferences do not support <a href="/general-concepts#reference-expansion">Reference Expansion</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class KeyReferenceImpl implements KeyReference, ModelBase {
 
@@ -31,10 +34,16 @@ public class KeyReferenceImpl implements KeyReference, ModelBase {
     public KeyReferenceImpl() {
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
+    /**
+    *  <p>User-defined unique and immutable key of the referenced resource.</p>
+    */
     public String getKey() {
         return this.key;
     }

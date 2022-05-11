@@ -29,7 +29,7 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
     }
 
     /**
-    *  <p>Reference to a Product that is assigned to the Product Selection.</p>
+    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
     */
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>This action sets or removes the custom type for an existing Customer Group.
+*  <p>This action sets or removes the custom type for an existing CustomerGroup.
 *  If present, this action overwrites any existing <a href="/../api/projects/custom-fields">custom</a> type and fields.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

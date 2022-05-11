@@ -26,28 +26,28 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
         com.commercetools.api.models.Customizable<CustomerGroup> {
 
     /**
-    *  <p>Platform-generated unique identifier of the Customer Group.</p>
+    *  <p>Platform-generated unique identifier of the CustomerGroup.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Current version of the Customer Group.</p>
+    *  <p>Current version of the CustomerGroup.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>Date and time (UTC) the Customer Group was initially created.</p>
+    *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>Date and time (UTC) the Customer Group was last updated.</p>
+    *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
     */
     @NotNull
     @JsonProperty("lastModifiedAt")
@@ -68,21 +68,21 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier of the Customer Group.</p>
+    *  <p>User-defined unique identifier for the CustomerGroup.</p>
     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Unique name of the Customer Group.</p>
+    *  <p>Unique name of the CustomerGroup.</p>
     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>Custom Fields for the Customer Group.</p>
+    *  <p>Custom Fields for the CustomerGroup.</p>
     */
     @Valid
     @JsonProperty("custom")

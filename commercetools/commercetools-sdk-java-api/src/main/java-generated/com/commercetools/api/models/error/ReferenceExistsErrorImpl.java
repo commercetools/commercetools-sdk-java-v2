@@ -51,6 +51,9 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
         return values;
     }
 
+    /**
+    *  <p>supported resource type identifiers:</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getReferencedBy() {
         return this.referencedBy;
     }

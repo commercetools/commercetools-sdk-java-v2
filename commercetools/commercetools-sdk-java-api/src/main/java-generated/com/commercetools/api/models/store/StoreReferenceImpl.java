@@ -36,6 +36,9 @@ public class StoreReferenceImpl implements StoreReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("store");
     }
 
+    /**
+    *  <p>Type of referenced resource.</p>
+    */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }

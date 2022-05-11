@@ -40,10 +40,10 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
     }
 
     /**
-    *  <p>amount in the smallest indivisible unit of a currency, such as</p>
+    *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
     *  <ul>
-    *  <li>cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).</li>
-    *  <li>the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).</li>
+    *  <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+    *  <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
     *  </ul>
     */
     public Long getCentAmount() {
@@ -51,14 +51,14 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
     }
 
     /**
-    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    *  <p>Currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
     */
     public String getCurrencyCode() {
         return this.currencyCode;
     }
 
     /**
-    *  <p>The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.</p>
+    *  <p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
     */
     public com.commercetools.api.models.common.MoneyType getType() {
         return this.type;

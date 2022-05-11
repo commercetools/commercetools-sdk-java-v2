@@ -54,8 +54,7 @@ public class AssignedProductSelectionPagedQueryResponseImpl
     }
 
     /**
-    *  <p>Offset supplied by the client or the server default.
-    *  It is the number of elements skipped, not a page number.</p>
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
     */
     public Long getOffset() {
         return this.offset;
@@ -80,7 +79,7 @@ public class AssignedProductSelectionPagedQueryResponseImpl
     }
 
     /**
-    *  <p>References to Product Selection that are assigned to the Product.</p>
+    *  <p>References to ProductSelection that are assigned to the Product.</p>
     */
     public java.util.List<com.commercetools.api.models.product_selection.AssignedProductSelection> getResults() {
         return this.results;

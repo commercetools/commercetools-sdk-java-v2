@@ -19,8 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedPriceDraft {
 
     /**
-    *  <p>Draft type that stores amounts in cent precision for the specified currency.
-    *  For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    *  <p>Sets the money value for the discounted price.</p>
     */
     @NotNull
     @Valid
@@ -28,7 +27,7 @@ public interface DiscountedPriceDraft {
     public Money getValue();
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>.</p>
+    *  <p>Relates the referenced <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> to the discounted price.</p>
     */
     @NotNull
     @Valid

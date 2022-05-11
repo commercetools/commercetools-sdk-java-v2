@@ -23,7 +23,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     String ADD_SHOPPING_LIST = "addShoppingList";
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
     */
     @NotNull
     @Valid
@@ -31,14 +31,14 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public ShoppingListResourceIdentifier getShoppingList();
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-    *  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
     */
     @Valid
     @JsonProperty("distributionChannel")

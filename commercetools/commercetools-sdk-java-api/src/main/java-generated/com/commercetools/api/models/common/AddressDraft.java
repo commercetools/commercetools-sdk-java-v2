@@ -17,11 +17,32 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddressDraftImpl.class)
 public interface AddressDraft extends BaseAddress, com.commercetools.api.models.CustomizableDraft<AddressDraft> {
 
+    /**
+    *  <p>Custom Fields defined for the Address.</p>
+    */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+    *  <p>Unique identifier for the Address. Not recommended to set it manually since the Platform overwrites this ID when creating an Address for a <a href="ctp:api:type:Customer">Customer</a>. Use <code>key</code> instead and omit this field to let the Platform generate the ID for the Address.</p>
+    */
+
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+    *  <p>User-defined unique identifier for the Address.</p>
+    */
+
+    @JsonProperty("key")
+    public String getKey();
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    public void setId(final String id);
+
+    public void setKey(final String key);
 
     public static AddressDraft of() {
         return new AddressDraftImpl();
@@ -31,6 +52,7 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
         AddressDraftImpl instance = new AddressDraftImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
+        instance.setCountry(template.getCountry());
         instance.setTitle(template.getTitle());
         instance.setSalutation(template.getSalutation());
         instance.setFirstName(template.getFirstName());
@@ -42,7 +64,6 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
         instance.setCity(template.getCity());
         instance.setRegion(template.getRegion());
         instance.setState(template.getState());
-        instance.setCountry(template.getCountry());
         instance.setCompany(template.getCompany());
         instance.setDepartment(template.getDepartment());
         instance.setBuilding(template.getBuilding());

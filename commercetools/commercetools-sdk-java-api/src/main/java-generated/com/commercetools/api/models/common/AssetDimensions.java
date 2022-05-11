@@ -12,14 +12,23 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Dimensions of the Asset source specified by the number of pixels.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AssetDimensionsImpl.class)
 public interface AssetDimensions {
 
+    /**
+    *  <p>Width of the Asset source.</p>
+    */
     @NotNull
     @JsonProperty("w")
     public Integer getW();
 
+    /**
+    *  <p>Height of the Asset source.</p>
+    */
     @NotNull
     @JsonProperty("h")
     public Integer getH();

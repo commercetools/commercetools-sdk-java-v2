@@ -37,7 +37,7 @@ public class ProductSelectionChangeNameActionImpl implements ProductSelectionCha
     }
 
     /**
-    *  <p>The new name to be set for the Product Selection.</p>
+    *  <p>The new name to be set for the ProductSelection.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;

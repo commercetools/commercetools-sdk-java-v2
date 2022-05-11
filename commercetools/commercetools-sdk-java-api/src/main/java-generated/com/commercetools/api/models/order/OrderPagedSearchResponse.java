@@ -25,14 +25,14 @@ public interface OrderPagedSearchResponse {
     public Long getTotal();
 
     /**
-    *  <p>Number of results skipped, used for pagination.</p>
+    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
     */
 
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-    *  <p>Number of results the response should contain at maximum, used for pagination.</p>
+    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
     */
 
     @JsonProperty("limit")

@@ -1,15 +1,14 @@
 
 package com.commercetools.sdk.examples.spring.service;
 
-import java.net.URI;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductProjectionPagedSearchResponse;
-
 import com.newrelic.api.agent.*;
+
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import org.springframework.stereotype.Component;

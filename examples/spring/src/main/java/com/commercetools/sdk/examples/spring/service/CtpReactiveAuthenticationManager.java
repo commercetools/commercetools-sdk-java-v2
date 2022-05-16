@@ -3,10 +3,14 @@ package com.commercetools.sdk.examples.spring.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Optional;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
+import com.commercetools.api.models.cart.CartReferenceBuilder;
+import com.commercetools.api.models.customer.CustomerSignInResult;
 import com.commercetools.api.models.customer.CustomerSigninBuilder;
+import com.commercetools.sdk.examples.spring.config.CtpUserDetails;
 import com.commercetools.sdk.examples.spring.config.CustomerAuthenticationToken;
 import com.commercetools.sdk.examples.spring.config.TokenGrantedAuthority;
 
@@ -66,18 +70,25 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
                             clientSecret, authentication.getName(), authentication.getCredentials().toString(), null,
                             ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(projectKey), client);
 
-                        return Mono.fromFuture(supplier.getToken().exceptionally(throwable -> null));
+                        return Mono.zip(Mono.fromFuture(supplier.getToken().exceptionally(throwable -> null)),
+                            Mono.just(customerSignInResultApiHttpResponse.getBody()));
                     })
                     .switchIfEmpty(Mono.defer(() -> Mono.error(new BadCredentialsException("Invalid Credentials"))))
-                    .map(token -> {
+                    .map(tokenSignin -> {
+                        final AuthenticationToken token = tokenSignin.getT1();
+                        final CustomerSignInResult signinResult = tokenSignin.getT2();
+
                         final Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
                         GrantedAuthority authority = new TokenGrantedAuthority("ROLE_USER", token);
                         Collection<GrantedAuthority> updatedAuthorities = new ArrayList<>();
                         updatedAuthorities.add(authority);
                         updatedAuthorities.addAll(authorities);
 
-                        return new UsernamePasswordAuthenticationToken(authentication.getPrincipal(), "",
-                            updatedAuthorities);
+                        return new UsernamePasswordAuthenticationToken(new CtpUserDetails(signinResult.getCustomer(),
+                            Optional.ofNullable(signinResult.getCart())
+                                    .map(c -> CartReferenceBuilder.of().id(c.getId()).build())
+                                    .orElse(null),
+                            updatedAuthorities), "", updatedAuthorities);
                     });
         }
         return Mono.defer(() -> Mono.error(new BadCredentialsException("Invalid authentication")));

@@ -35,10 +35,10 @@ public class SessionTokenStorage implements TokenStorage {
 
     @Override
     public void setToken(AuthenticationToken token) {
-        WebSession s = session.block(Duration.ofMillis(500));
-        assert s != null;
-        s.getAttributes().put(SessionConfig.SESSION_ACCESS_TOKEN, token.getAccessToken());
-        s.getAttributes().put(SessionConfig.SESSION_REFRESH_TOKEN, token.getRefreshToken());
-        s.save();
+        session.blockOptional(Duration.ofMillis(500)).ifPresent(s -> {
+            s.getAttributes().put(SessionConfig.SESSION_ACCESS_TOKEN, token.getAccessToken());
+            s.getAttributes().put(SessionConfig.SESSION_REFRESH_TOKEN, token.getRefreshToken());
+            s.save();
+        });
     }
 }

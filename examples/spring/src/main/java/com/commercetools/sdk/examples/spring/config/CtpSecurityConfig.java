@@ -1,6 +1,8 @@
 
 package com.commercetools.sdk.examples.spring.config;
 
+import java.time.Duration;
+
 import com.commercetools.api.models.cart.CartResourceIdentifierBuilder;
 import com.commercetools.sdk.examples.spring.service.MeRepository;
 
@@ -16,17 +18,13 @@ import org.springframework.security.config.annotation.web.reactive.EnableWebFlux
 import org.springframework.security.config.web.server.SecurityWebFiltersOrder;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
-import org.springframework.security.web.reactive.result.view.CsrfRequestDataValueProcessor;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.WebFilterExchange;
 import org.springframework.security.web.server.authentication.*;
+import org.springframework.security.web.server.authentication.logout.*;
 import org.springframework.security.web.server.context.ServerSecurityContextRepository;
 import org.springframework.security.web.server.context.WebSessionServerSecurityContextRepository;
-import org.springframework.security.web.server.csrf.CookieServerCsrfTokenRepository;
-import org.springframework.security.web.server.csrf.WebSessionServerCsrfTokenRepository;
 import org.springframework.security.web.server.util.matcher.ServerWebExchangeMatchers;
-import org.springframework.web.reactive.result.view.RequestDataValueProcessor;
 import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Mono;
@@ -46,30 +44,39 @@ public class CtpSecurityConfig {
     SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) throws Exception {
         ServerSecurityContextRepository securityContextRepository = new WebSessionServerSecurityContextRepository();
         return http.securityContextRepository(securityContextRepository)
+                .anonymous()
+                .and()
                 .addFilterBefore(new LoginWebFilter(authenticationManager, securityContextRepository),
                     SecurityWebFiltersOrder.FORM_LOGIN)
+                .logout()
+                .logoutUrl("/logout")
+                .requiresLogout(ServerWebExchangeMatchers.pathMatchers(HttpMethod.GET, "/logout"))
+                .logoutHandler(new DelegatingServerLogoutHandler(new WebSessionServerLogoutHandler(),
+                    new SecurityContextServerLogoutHandler()))
+                .logoutSuccessHandler(new RedirectServerLogoutSuccessHandler())
+                .and()
                 .formLogin()
-                    .loginPage("/login")
-                    .requiresAuthenticationMatcher(ServerWebExchangeMatchers.pathMatchers("none"))
-                    .authenticationManager(Mono::just)
+                .loginPage("/login")
+                .requiresAuthenticationMatcher(ServerWebExchangeMatchers.pathMatchers("none"))
+                .authenticationManager(Mono::just)
                 .and()
                 .authorizeExchange()
-                    .pathMatchers("/login")
-                    .permitAll()
-                    .pathMatchers("/")
-                    .permitAll()
-                    .pathMatchers("/resources/**")
-                    .permitAll()
-                    .pathMatchers("/home")
-                    .permitAll()
-                    .pathMatchers("/p/**")
-                    .permitAll()
-                    .pathMatchers("/cart/**")
-                    .permitAll()
-                    .pathMatchers("/me/**")
-                    .authenticated()
-                    .anyExchange()
-                    .authenticated()
+                .pathMatchers("/login")
+                .permitAll()
+                .pathMatchers("/")
+                .permitAll()
+                .pathMatchers("/resources/**")
+                .permitAll()
+                .pathMatchers("/home")
+                .permitAll()
+                .pathMatchers("/p/**")
+                .permitAll()
+                .pathMatchers("/cart/**")
+                .permitAll()
+                .pathMatchers("/me/**")
+                .authenticated()
+                .anyExchange()
+                .authenticated()
                 .and()
                 .build();
     }
@@ -117,8 +124,15 @@ public class CtpSecurityConfig {
                     .findFirst()
                     .get();
             storage.setToken(authority.getToken());
+
+            if (authentication.getPrincipal() instanceof CtpUserDetails) {
+                exchange.getSession().blockOptional(Duration.ofMillis(500)).ifPresent(session -> {
+                    session.getAttributes()
+                            .put(MeRepository.SESSION_CART, ((CtpUserDetails) authentication.getPrincipal()).getCart());
+                    session.save();
+                });
+            }
             return webFilterExchange.getChain().filter(exchange);
         }
-
     }
 }

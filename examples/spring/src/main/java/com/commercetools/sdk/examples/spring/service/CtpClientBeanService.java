@@ -1,25 +1,21 @@
 
 package com.commercetools.sdk.examples.spring.service;
 
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-
-import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.newrelic.api.agent.*;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
-import okhttp3.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.net.URI;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.function.Function;
 
 @Configuration
 @EnableAutoConfiguration
@@ -40,7 +36,9 @@ public class CtpClientBeanService {
 
     @Bean
     public ApiHttpClient client() {
-        return ApiRootBuilder.of(new NewRelicClient(HttpClientSupplier.of().get())).defaultClient(credentials()).buildClient();
+        return ApiRootBuilder.of(new NewRelicClient(HttpClientSupplier.of().get()))
+                .defaultClient(credentials())
+                .buildClient();
     }
 
     public static class NewRelicClient implements VrapHttpClient {
@@ -49,7 +47,6 @@ public class CtpClientBeanService {
         public NewRelicClient(VrapHttpClient client) {
             this.client = client;
         }
-
 
         @Trace(dispatcher = true)
         @Override

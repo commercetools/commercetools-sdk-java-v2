@@ -1,12 +1,10 @@
 
 package com.commercetools.sdk.examples.spring;
 
-import java.net.URI;
 import java.time.Duration;
-import java.util.List;
 
 import com.newrelic.api.agent.*;
-import okhttp3.Response;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

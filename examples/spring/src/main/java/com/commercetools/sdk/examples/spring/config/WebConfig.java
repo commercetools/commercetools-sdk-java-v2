@@ -13,7 +13,6 @@ import org.springframework.web.reactive.config.EnableWebFlux;
 import org.springframework.web.reactive.config.ResourceHandlerRegistry;
 import org.springframework.web.reactive.config.ViewResolverRegistry;
 import org.springframework.web.reactive.config.WebFluxConfigurer;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.thymeleaf.extras.springsecurity5.dialect.SpringSecurityDialect;
 import org.thymeleaf.spring5.ISpringWebFluxTemplateEngine;
 import org.thymeleaf.spring5.SpringWebFluxTemplateEngine;
@@ -33,11 +32,11 @@ public class WebConfig implements ApplicationContextAware, WebFluxConfigurer {
         return exception.getMessage();
     }
 
-    public void addViewControllers(ViewControllerRegistry registry) {
-        //        registry.addViewController("/home").setViewName("home");
-        registry.addViewController("/").setViewName("home");
-        registry.addViewController("/login").setViewName("login");
-    }
+    //    public void addViewControllers(ViewControllerRegistry registry) {
+    //        //        registry.addViewController("/home").setViewName("home");
+    //        registry.addViewController("/").setViewName("home");
+    //        registry.addViewController("/login").setViewName("login");
+    //    }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -62,7 +61,6 @@ public class WebConfig implements ApplicationContextAware, WebFluxConfigurer {
         return resolver;
 
     }
-
 
     @Bean
     public ISpringWebFluxTemplateEngine thymeleafTemplateEngine() {

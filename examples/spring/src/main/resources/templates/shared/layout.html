@@ -16,7 +16,7 @@
                 <a class="brand" href="/">
                     <img width="100" src="https://commercetools.com/_build/images/logos/commercetools-logo-desktop.svg" alt="commercetools"/>
                 </a> &nbsp;
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Checkout App</a>
+                <a class="navbar-brand" th:href="@{/}">Checkout App</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" th:href="@{/}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" th:href="@{/p}">Products</a>
                         </li>
                     </ul>
                     <div th:replace="shared/login-partial.html"></div>
@@ -45,7 +48,7 @@
     </footer>
     <script src="/resources/lib/jquery/dist/jquery.min.js"></script>
     <script src="/resources/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/resources/js/site.js" asp-append-version="true"></script>
+    <script src="/resources/js/site.js"></script>
     <!--@await RenderSectionAsync("Scripts", required: false)-->
 </body>
 </html>

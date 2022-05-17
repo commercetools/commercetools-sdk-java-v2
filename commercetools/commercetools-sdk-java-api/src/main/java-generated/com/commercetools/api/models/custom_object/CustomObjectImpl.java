@@ -64,46 +64,60 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
         return this.id;
     }
 
+    /**
+    *  <p>Current version of the CustomObject.</p>
+    */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>Date and time (UTC) the CustomObject was initially created.</p>
+    */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+    *  <p>Date and time (UTC) the CustomObject was last updated.</p>
+    */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>A namespace to group custom objects.</p>
+    *  <p>Namespace to group CustomObjects.</p>
     */
     public String getContainer() {
         return this.container;
     }
 
     /**
-    *  <p>User-defined unique identifier of the CustomObject.</p>
+    *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
     */
     public String getKey() {
         return this.key;
     }
 
+    /**
+    *  <p>JSON standard types Number, String, Boolean, Array, Object, and <a href="/../api/types">common API data types</a>.
+    *  For values of type <a href="ctp:api:type:Reference">Reference</a> the integrity of the data is not guaranteed.
+    *  If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+    */
     public java.lang.Object getValue() {
         return this.value;
     }

@@ -150,4 +150,8 @@ public class ByProjectKeyRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyRequestBuilder inStoreKeyWithStoreKeyValue(String storeKey) {
         return new ByProjectKeyInStoreKeyByStoreKeyRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
+
+    public ByProjectKeyStandalonePricesRequestBuilder standalonePrices() {
+        return new ByProjectKeyStandalonePricesRequestBuilder(apiHttpClient, projectKey);
+    }
 }

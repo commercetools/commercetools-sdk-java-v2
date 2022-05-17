@@ -40,13 +40,17 @@ public class ProductDiscountSetValidFromAndUntilActionImpl
         return this.action;
     }
 
+    /**
+    *  <p>Value to set.
+    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated undiscounted values.</p>
+    */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>The timeframe for which the discount should be effective.
-    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
+    *  <p>Value to set.
+    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated undiscounted values.</p>
     */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;

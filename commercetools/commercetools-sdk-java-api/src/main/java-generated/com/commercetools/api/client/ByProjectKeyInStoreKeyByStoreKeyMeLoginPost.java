@@ -15,27 +15,27 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMeLoginPost extends
-        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeLoginPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.customer.CustomerSignin>
+        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeLoginPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.customer.MyCustomerSignin>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeLoginPost> {
 
     private String projectKey;
     private String storeKey;
 
-    private com.commercetools.api.models.customer.CustomerSignin customerSignin;
+    private com.commercetools.api.models.customer.MyCustomerSignin myCustomerSignin;
 
     public ByProjectKeyInStoreKeyByStoreKeyMeLoginPost(final ApiHttpClient apiHttpClient, String projectKey,
-            String storeKey, com.commercetools.api.models.customer.CustomerSignin customerSignin) {
+            String storeKey, com.commercetools.api.models.customer.MyCustomerSignin myCustomerSignin) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
-        this.customerSignin = customerSignin;
+        this.myCustomerSignin = myCustomerSignin;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeLoginPost(ByProjectKeyInStoreKeyByStoreKeyMeLoginPost t) {
         super(t);
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
-        this.customerSignin = t.customerSignin;
+        this.myCustomerSignin = t.myCustomerSignin;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeLoginPost extends
         }
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
             io.vrap.rmf.base.client.utils.json.JsonUtils
-                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerSignin)));
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(myCustomerSignin)));
 
     }
 
@@ -79,14 +79,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeLoginPost extends
         this.storeKey = storeKey;
     }
 
-    public com.commercetools.api.models.customer.CustomerSignin getBody() {
-        return customerSignin;
+    public com.commercetools.api.models.customer.MyCustomerSignin getBody() {
+        return myCustomerSignin;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeLoginPost withBody(
-            com.commercetools.api.models.customer.CustomerSignin customerSignin) {
+            com.commercetools.api.models.customer.MyCustomerSignin myCustomerSignin) {
         ByProjectKeyInStoreKeyByStoreKeyMeLoginPost t = copy();
-        t.customerSignin = customerSignin;
+        t.myCustomerSignin = myCustomerSignin;
         return t;
     }
 
@@ -102,13 +102,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeLoginPost extends
 
         return new EqualsBuilder().append(projectKey, that.projectKey)
                 .append(storeKey, that.storeKey)
-                .append(customerSignin, that.customerSignin)
+                .append(myCustomerSignin, that.myCustomerSignin)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).append(customerSignin).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).append(myCustomerSignin).toHashCode();
     }
 
     @Override

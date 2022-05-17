@@ -64,6 +64,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.DuplicatePriceScopeErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.DuplicateStandalonePriceScopeErrorBuilder duplicateStandalonePriceScopeBuilder() {
+        return com.commercetools.api.models.error.DuplicateStandalonePriceScopeErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.DuplicateVariantValuesErrorBuilder duplicateVariantValuesBuilder() {
         return com.commercetools.api.models.error.DuplicateVariantValuesErrorBuilder.of();
     }
@@ -194,6 +198,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.OverCapacityErrorBuilder overCapacityBuilder() {
         return com.commercetools.api.models.error.OverCapacityErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder overlappingStandalonePriceValidityBuilder() {
+        return com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.PendingOperationErrorBuilder pendingOperationBuilder() {

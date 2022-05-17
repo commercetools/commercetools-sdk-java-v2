@@ -35,6 +35,9 @@ public class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeChangeI
         return this.action;
     }
 
+    /**
+    *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
+    */
     public Boolean getIsActive() {
         return this.isActive;
     }

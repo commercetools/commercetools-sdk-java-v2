@@ -12,12 +12,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Discounts the Product Price by a percentage, defined by the <code>permyriad</code> field.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueRelativeDraftImpl.class)
 public interface ProductDiscountValueRelativeDraft extends ProductDiscountValueDraft {
 
     String RELATIVE = "relative";
 
+    /**
+    *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
+    */
     @NotNull
     @JsonProperty("permyriad")
     public Long getPermyriad();

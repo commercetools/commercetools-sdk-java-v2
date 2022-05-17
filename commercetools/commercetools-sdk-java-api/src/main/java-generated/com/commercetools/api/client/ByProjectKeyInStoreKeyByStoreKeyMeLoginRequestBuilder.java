@@ -19,8 +19,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeLoginRequestBuilder {
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeLoginPost post(
-            com.commercetools.api.models.customer.CustomerSignin customerSignin) {
-        return new ByProjectKeyInStoreKeyByStoreKeyMeLoginPost(apiHttpClient, projectKey, storeKey, customerSignin);
+            com.commercetools.api.models.customer.MyCustomerSignin myCustomerSignin) {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeLoginPost(apiHttpClient, projectKey, storeKey, myCustomerSignin);
     }
 
 }

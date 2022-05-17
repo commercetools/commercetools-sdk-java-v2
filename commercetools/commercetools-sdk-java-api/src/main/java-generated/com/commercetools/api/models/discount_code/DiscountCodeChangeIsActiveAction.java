@@ -18,6 +18,9 @@ public interface DiscountCodeChangeIsActiveAction extends DiscountCodeUpdateActi
 
     String CHANGE_IS_ACTIVE = "changeIsActive";
 
+    /**
+    *  <p>New value to set. Set to <code>true</code> to activate the DiscountCode for all matching Discounts.</p>
+    */
     @NotNull
     @JsonProperty("isActive")
     public Boolean getIsActive();

@@ -50,6 +50,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductSetMetaDescriptionActionImpl.class, name = ProductSetMetaDescriptionAction.SET_META_DESCRIPTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductSetMetaKeywordsActionImpl.class, name = ProductSetMetaKeywordsAction.SET_META_KEYWORDS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductSetMetaTitleActionImpl.class, name = ProductSetMetaTitleAction.SET_META_TITLE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductSetPriceModeActionImpl.class, name = ProductSetPriceModeAction.SET_PRICE_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductSetPricesActionImpl.class, name = ProductSetPricesAction.SET_PRICES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductSetProductPriceCustomFieldActionImpl.class, name = ProductSetProductPriceCustomFieldAction.SET_PRODUCT_PRICE_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductSetProductPriceCustomTypeActionImpl.class, name = ProductSetProductPriceCustomTypeAction.SET_PRODUCT_PRICE_CUSTOM_TYPE),
@@ -214,6 +215,10 @@ public interface ProductUpdateAction extends com.commercetools.api.models.Resour
 
     public static com.commercetools.api.models.product.ProductSetMetaTitleActionBuilder setMetaTitleBuilder() {
         return com.commercetools.api.models.product.ProductSetMetaTitleActionBuilder.of();
+    }
+
+    public static com.commercetools.api.models.product.ProductSetPriceModeActionBuilder setPriceModeBuilder() {
+        return com.commercetools.api.models.product.ProductSetPriceModeActionBuilder.of();
     }
 
     public static com.commercetools.api.models.product.ProductSetPricesActionBuilder setPricesBuilder() {

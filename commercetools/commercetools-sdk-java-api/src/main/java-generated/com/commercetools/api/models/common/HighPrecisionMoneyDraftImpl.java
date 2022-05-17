@@ -62,9 +62,6 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
         return this.currencyCode;
     }
 
-    /**
-    *  <p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
-    */
     public com.commercetools.api.models.common.MoneyType getType() {
         return this.type;
     }

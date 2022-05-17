@@ -26,6 +26,7 @@ import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.review.ReviewReference;
 import com.commercetools.api.models.shipping_method.ShippingMethodReference;
 import com.commercetools.api.models.shopping_list.ShoppingListReference;
+import com.commercetools.api.models.standalone_price.StandalonePriceReference;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.store.StoreReference;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
@@ -59,6 +60,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewReferenceImpl.class, name = ReviewReference.REVIEW),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodReferenceImpl.class, name = ShippingMethodReference.SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListReferenceImpl.class, name = ShoppingListReference.SHOPPING_LIST),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl.class, name = StandalonePriceReference.STANDALONE_PRICE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateReferenceImpl.class, name = StateReference.STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreReferenceImpl.class, name = StoreReference.STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryReferenceImpl.class, name = TaxCategoryReference.TAX_CATEGORY),
@@ -159,6 +161,10 @@ public interface Reference {
 
     public static com.commercetools.api.models.shopping_list.ShoppingListReferenceBuilder shoppingListBuilder() {
         return com.commercetools.api.models.shopping_list.ShoppingListReferenceBuilder.of();
+    }
+
+    public static com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder standalonePriceBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder.of();
     }
 
     public static com.commercetools.api.models.state.StateReferenceBuilder stateBuilder() {

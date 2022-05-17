@@ -36,7 +36,7 @@ public class DiscountCodeSetCartPredicateActionImpl implements DiscountCodeSetCa
     }
 
     /**
-    *  <p>If the <code>cartPredicate</code> parameter is not included, the field will be emptied.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
     public String getCartPredicate() {
         return this.cartPredicate;

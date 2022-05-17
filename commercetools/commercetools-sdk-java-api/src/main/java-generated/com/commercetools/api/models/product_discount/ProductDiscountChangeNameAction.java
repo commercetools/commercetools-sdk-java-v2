@@ -20,6 +20,9 @@ public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAc
 
     String CHANGE_NAME = "changeName";
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("name")

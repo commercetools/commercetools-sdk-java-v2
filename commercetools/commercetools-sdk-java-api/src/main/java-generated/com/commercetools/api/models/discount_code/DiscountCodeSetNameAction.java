@@ -20,7 +20,7 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
     String SET_NAME = "setName";
 
     /**
-    *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
     @Valid
     @JsonProperty("name")

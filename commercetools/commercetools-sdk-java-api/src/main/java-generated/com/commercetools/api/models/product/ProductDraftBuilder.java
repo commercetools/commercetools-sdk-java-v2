@@ -57,6 +57,9 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     @Nullable
     private Boolean publish;
 
+    @Nullable
+    private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
+
     public ProductDraftBuilder productType(
             Function<com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder, com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder> builder) {
         this.productType = builder
@@ -290,6 +293,12 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    public ProductDraftBuilder priceMode(
+            @Nullable final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+        this.priceMode = priceMode;
+        return this;
+    }
+
     public com.commercetools.api.models.product_type.ProductTypeResourceIdentifier getProductType() {
         return this.productType;
     }
@@ -367,13 +376,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this.publish;
     }
 
+    @Nullable
+    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
+        return this.priceMode;
+    }
+
     public ProductDraft build() {
         Objects.requireNonNull(productType, ProductDraft.class + ": productType is missing");
         Objects.requireNonNull(name, ProductDraft.class + ": name is missing");
         Objects.requireNonNull(slug, ProductDraft.class + ": slug is missing");
         return new ProductDraftImpl(productType, name, slug, key, description, categories, categoryOrderHints,
             metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state,
-            publish);
+            publish, priceMode);
     }
 
     /**
@@ -382,7 +396,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     public ProductDraft buildUnchecked() {
         return new ProductDraftImpl(productType, name, slug, key, description, categories, categoryOrderHints,
             metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state,
-            publish);
+            publish, priceMode);
     }
 
     public static ProductDraftBuilder of() {
@@ -407,6 +421,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         builder.searchKeywords = template.getSearchKeywords();
         builder.state = template.getState();
         builder.publish = template.getPublish();
+        builder.priceMode = template.getPriceMode();
         return builder;
     }
 

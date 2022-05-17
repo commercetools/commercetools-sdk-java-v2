@@ -13,6 +13,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> with results containing an array of <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountPagedQueryResponseImpl.class)
 public interface ProductDiscountPagedQueryResponse
@@ -25,13 +28,6 @@ public interface ProductDiscountPagedQueryResponse
     @JsonProperty("limit")
     public Long getLimit();
 
-    @NotNull
-    @JsonProperty("count")
-    public Long getCount();
-
-    @JsonProperty("total")
-    public Long getTotal();
-
     /**
     *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
     */
@@ -39,6 +35,27 @@ public interface ProductDiscountPagedQueryResponse
     @JsonProperty("offset")
     public Long getOffset();
 
+    /**
+    *  <p>Actual number of results returned.</p>
+    */
+    @NotNull
+    @JsonProperty("count")
+    public Long getCount();
+
+    /**
+    *  <p>Total number of results matching the query.
+    *  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
+    *  This field is returned by default.
+    *  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
+    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/limits#queries">limit</a>.</p>
+    */
+
+    @JsonProperty("total")
+    public Long getTotal();
+
+    /**
+    *  <p><a href="ctp:api:type:ProductDiscount">ProductDiscounts</a> matching the query.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("results")
@@ -46,11 +63,11 @@ public interface ProductDiscountPagedQueryResponse
 
     public void setLimit(final Long limit);
 
+    public void setOffset(final Long offset);
+
     public void setCount(final Long count);
 
     public void setTotal(final Long total);
-
-    public void setOffset(final Long offset);
 
     @JsonIgnore
     public void setResults(final ProductDiscount... results);
@@ -64,9 +81,9 @@ public interface ProductDiscountPagedQueryResponse
     public static ProductDiscountPagedQueryResponse of(final ProductDiscountPagedQueryResponse template) {
         ProductDiscountPagedQueryResponseImpl instance = new ProductDiscountPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
-        instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
         return instance;
     }

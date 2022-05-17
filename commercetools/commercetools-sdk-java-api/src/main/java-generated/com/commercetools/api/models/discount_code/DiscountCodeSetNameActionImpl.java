@@ -37,7 +37,7 @@ public class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameAction,
     }
 
     /**
-    *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;

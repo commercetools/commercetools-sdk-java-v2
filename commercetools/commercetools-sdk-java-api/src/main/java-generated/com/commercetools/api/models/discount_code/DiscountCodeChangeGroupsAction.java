@@ -19,8 +19,7 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
     String CHANGE_GROUPS = "changeGroups";
 
     /**
-    *  <p>The groups to which this discount code shall belong to.
-    *  Use empty array to remove the code from all groups.</p>
+    *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
     */
     @NotNull
     @JsonProperty("groups")

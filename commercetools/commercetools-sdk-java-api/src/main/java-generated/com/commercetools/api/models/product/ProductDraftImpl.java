@@ -49,6 +49,8 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     private Boolean publish;
 
+    private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
+
     @JsonCreator
     ProductDraftImpl(
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType,
@@ -66,7 +68,8 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
-            @JsonProperty("publish") final Boolean publish) {
+            @JsonProperty("publish") final Boolean publish,
+            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
         this.productType = productType;
         this.name = name;
         this.slug = slug;
@@ -83,6 +86,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
         this.searchKeywords = searchKeywords;
         this.state = state;
         this.publish = publish;
+        this.priceMode = priceMode;
     }
 
     public ProductDraftImpl() {
@@ -178,6 +182,13 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
         return this.publish;
     }
 
+    /**
+    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
+    */
+    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
+        return this.priceMode;
+    }
+
     public void setProductType(
             final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType) {
         this.productType = productType;
@@ -254,6 +265,10 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
         this.publish = publish;
     }
 
+    public void setPriceMode(final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+        this.priceMode = priceMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -280,6 +295,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(searchKeywords, that.searchKeywords)
                 .append(state, that.state)
                 .append(publish, that.publish)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -301,6 +317,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(searchKeywords)
                 .append(state)
                 .append(publish)
+                .append(priceMode)
                 .toHashCode();
     }
 

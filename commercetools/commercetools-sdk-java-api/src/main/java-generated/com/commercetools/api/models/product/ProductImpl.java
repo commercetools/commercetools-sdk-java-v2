@@ -41,6 +41,8 @@ public class ProductImpl implements Product, ModelBase {
 
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
 
+    private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
+
     @JsonCreator
     ProductImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -52,7 +54,8 @@ public class ProductImpl implements Product, ModelBase {
             @JsonProperty("masterData") final com.commercetools.api.models.product.ProductCatalogData masterData,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
-            @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
+            @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics,
+            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -65,6 +68,7 @@ public class ProductImpl implements Product, ModelBase {
         this.taxCategory = taxCategory;
         this.state = state;
         this.reviewRatingStatistics = reviewRatingStatistics;
+        this.priceMode = priceMode;
     }
 
     public ProductImpl() {
@@ -140,6 +144,13 @@ public class ProductImpl implements Product, ModelBase {
         return this.reviewRatingStatistics;
     }
 
+    /**
+    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
+    */
+    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
+        return this.priceMode;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -189,6 +200,10 @@ public class ProductImpl implements Product, ModelBase {
         this.reviewRatingStatistics = reviewRatingStatistics;
     }
 
+    public void setPriceMode(final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+        this.priceMode = priceMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -211,6 +226,7 @@ public class ProductImpl implements Product, ModelBase {
                 .append(taxCategory, that.taxCategory)
                 .append(state, that.state)
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -228,6 +244,7 @@ public class ProductImpl implements Product, ModelBase {
                 .append(taxCategory)
                 .append(state)
                 .append(reviewRatingStatistics)
+                .append(priceMode)
                 .toHashCode();
     }
 

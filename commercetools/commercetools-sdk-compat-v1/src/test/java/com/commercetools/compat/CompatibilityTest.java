@@ -5,6 +5,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
+import com.commercetools.api.client.ByProjectKeyCustomersGet;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.project.Project;
 
 import io.sphere.sdk.client.SphereClientConfig;
@@ -55,5 +57,19 @@ public class CompatibilityTest {
 
         ApiHttpClient client = CompatClientFactory.of(clientConfig);
         Assertions.assertThat(client).isInstanceOf(ApiHttpClient.class);
+    }
+
+    @Test
+    public void queryPredicate() {
+        ProjectApiRoot root = ProjectApiRoot.of("test");
+
+        ByProjectKeyCustomersGet request = Query.customer(root, customerQuery -> customerQuery.withLimit(1));
+
+        String query = request.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(query).isEqualTo("limit=1");
+
+        ByProjectKeyCustomersGet request2 = new Query(root).customer(customerQuery -> customerQuery.withLimit(1)));
+        String query2 = request2.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(query2).isEqualTo("limit=1");
     }
 }

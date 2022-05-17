@@ -2,8 +2,11 @@
 package com.commercetools.api.client;
 
 import java.io.Closeable;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiMethod;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 
 /**
@@ -168,6 +171,10 @@ public class ProjectApiRoot implements Closeable {
 
     public ByProjectKeyInStoreKeyByStoreKeyRequestBuilder inStore(String storeKey) {
         return with().inStoreKeyWithStoreKeyValue(storeKey);
+    }
+
+    public <R> R with(Function<ProjectApiRoot, R> op) {
+        return op.apply(this);
     }
 
     @Override

@@ -3,6 +3,8 @@ package com.commercetools.api.models;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 
 import io.vrap.rmf.base.client.ApiMethod;
 import io.vrap.rmf.base.client.ClientRequestCommand;

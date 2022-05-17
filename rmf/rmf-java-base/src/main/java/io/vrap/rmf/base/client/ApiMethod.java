@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -288,6 +289,16 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     public T with(Function<T, T> op) {
         final T c = copy();
         return op.apply(c);
+    }
+
+    /**
+     * allows to provide a function to modify the ApiMethod itself
+     * @param op decorator function
+     * @param arg decorator function argument
+     */
+    public <U> T with(BiFunction<T, U, T> op, U arg) {
+        final T c = copy();
+        return op.apply(c, arg);
     }
 
     public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final Class<TReturn> returnType) {

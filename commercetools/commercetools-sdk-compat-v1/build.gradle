@@ -15,6 +15,7 @@ dependencies {
 
     api project(':commercetools:commercetools-sdk-java-api')
     api "com.commercetools.sdk.jvm.core:commercetools-java-client-core" version ctpJvmSdkVersion
+    api "com.commercetools.sdk.jvm.core:commercetools-models" version ctpJvmSdkVersion
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation "com.commercetools.sdk.jvm.core:commercetools-models" version ctpJvmSdkVersion

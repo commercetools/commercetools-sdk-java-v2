@@ -69,9 +69,25 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                                 .customObjects()
                                 .withContainer("test_container")
                                 .get()
+                                .withSort("sort")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/custom-objects/test_container?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .customObjects()
+                                .withContainer("test_container")
+                                .get()
                                 .withWhere("where")
                                 .createHttpRequest(),
                         "get", "/test_projectKey/custom-objects/test_container?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .customObjects()
+                                .withContainer("test_container")
+                                .get()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/custom-objects/test_container?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -85,9 +101,25 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                                 .customObjects()
                                 .withContainer("test_container")
                                 .get()
-                                .withExpand("expand")
+                                .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/custom-objects/test_container?expand=expand", },
+                        "get", "/test_projectKey/custom-objects/test_container?limit=7", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .customObjects()
+                                .withContainer("test_container")
+                                .get()
+                                .withOffset(3)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/custom-objects/test_container?offset=3", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .customObjects()
+                                .withContainer("test_container")
+                                .get()
+                                .withWithTotal(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/custom-objects/test_container?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .withContainer("test_container")
@@ -102,7 +134,17 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                         .customObjects()
                         .withContainer("test_container")
                         .get()
+                        .withSort("sort"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .withContainer("test_container")
+                        .get()
                         .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .withContainer("test_container")
+                        .get()
+                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .withContainer("test_container")
@@ -112,7 +154,17 @@ public class ByProjectKeyCustomObjectsByContainerTest {
                         .customObjects()
                         .withContainer("test_container")
                         .get()
-                        .withExpand("expand"), },
+                        .withLimit(7), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .withContainer("test_container")
+                        .get()
+                        .withOffset(3), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .withContainer("test_container")
+                        .get()
+                        .withWithTotal(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .withContainer("test_container")

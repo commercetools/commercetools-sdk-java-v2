@@ -18,7 +18,7 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
     String SET_VALID_FROM = "setValidFrom";
 
     /**
-    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
     */
 
     @JsonProperty("validFrom")

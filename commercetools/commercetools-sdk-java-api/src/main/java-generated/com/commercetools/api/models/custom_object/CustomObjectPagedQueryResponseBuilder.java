@@ -14,17 +14,22 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.custom_object.CustomObject> results;
 
     public CustomObjectPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
+        return this;
+    }
+
+    public CustomObjectPagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
         return this;
     }
 
@@ -35,11 +40,6 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
 
     public CustomObjectPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
-        return this;
-    }
-
-    public CustomObjectPagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
         return this;
     }
 
@@ -84,6 +84,10 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -93,27 +97,23 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.custom_object.CustomObject> getResults() {
         return this.results;
     }
 
     public CustomObjectPagedQueryResponse build() {
         Objects.requireNonNull(limit, CustomObjectPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, CustomObjectPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, CustomObjectPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, CustomObjectPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, CustomObjectPagedQueryResponse.class + ": results is missing");
-        return new CustomObjectPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new CustomObjectPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds CustomObjectPagedQueryResponse without checking for non null required values
      */
     public CustomObjectPagedQueryResponse buildUnchecked() {
-        return new CustomObjectPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new CustomObjectPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static CustomObjectPagedQueryResponseBuilder of() {
@@ -123,9 +123,9 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
     public static CustomObjectPagedQueryResponseBuilder of(final CustomObjectPagedQueryResponse template) {
         CustomObjectPagedQueryResponseBuilder builder = new CustomObjectPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

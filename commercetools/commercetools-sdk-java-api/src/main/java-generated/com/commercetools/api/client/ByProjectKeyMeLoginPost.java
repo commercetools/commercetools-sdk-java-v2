@@ -15,24 +15,24 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyMeLoginPost extends
-        BodyApiMethod<ByProjectKeyMeLoginPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.customer.CustomerSignin>
+        BodyApiMethod<ByProjectKeyMeLoginPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.customer.MyCustomerSignin>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeLoginPost> {
 
     private String projectKey;
 
-    private com.commercetools.api.models.customer.CustomerSignin customerSignin;
+    private com.commercetools.api.models.customer.MyCustomerSignin myCustomerSignin;
 
     public ByProjectKeyMeLoginPost(final ApiHttpClient apiHttpClient, String projectKey,
-            com.commercetools.api.models.customer.CustomerSignin customerSignin) {
+            com.commercetools.api.models.customer.MyCustomerSignin myCustomerSignin) {
         super(apiHttpClient);
         this.projectKey = projectKey;
-        this.customerSignin = customerSignin;
+        this.myCustomerSignin = myCustomerSignin;
     }
 
     public ByProjectKeyMeLoginPost(ByProjectKeyMeLoginPost t) {
         super(t);
         this.projectKey = t.projectKey;
-        this.customerSignin = t.customerSignin;
+        this.myCustomerSignin = t.myCustomerSignin;
     }
 
     @Override
@@ -44,7 +44,7 @@ public class ByProjectKeyMeLoginPost extends
         }
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
             io.vrap.rmf.base.client.utils.json.JsonUtils
-                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(customerSignin)));
+                    .executing(() -> apiHttpClient().getSerializerService().toJsonByteArray(myCustomerSignin)));
 
     }
 
@@ -68,13 +68,13 @@ public class ByProjectKeyMeLoginPost extends
         this.projectKey = projectKey;
     }
 
-    public com.commercetools.api.models.customer.CustomerSignin getBody() {
-        return customerSignin;
+    public com.commercetools.api.models.customer.MyCustomerSignin getBody() {
+        return myCustomerSignin;
     }
 
-    public ByProjectKeyMeLoginPost withBody(com.commercetools.api.models.customer.CustomerSignin customerSignin) {
+    public ByProjectKeyMeLoginPost withBody(com.commercetools.api.models.customer.MyCustomerSignin myCustomerSignin) {
         ByProjectKeyMeLoginPost t = copy();
-        t.customerSignin = customerSignin;
+        t.myCustomerSignin = myCustomerSignin;
         return t;
     }
 
@@ -89,13 +89,13 @@ public class ByProjectKeyMeLoginPost extends
         ByProjectKeyMeLoginPost that = (ByProjectKeyMeLoginPost) o;
 
         return new EqualsBuilder().append(projectKey, that.projectKey)
-                .append(customerSignin, that.customerSignin)
+                .append(myCustomerSignin, that.myCustomerSignin)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(customerSignin).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey).append(myCustomerSignin).toHashCode();
     }
 
     @Override

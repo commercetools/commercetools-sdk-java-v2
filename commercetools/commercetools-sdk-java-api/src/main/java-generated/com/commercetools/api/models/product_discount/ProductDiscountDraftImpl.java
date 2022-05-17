@@ -58,6 +58,9 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
     public ProductDiscountDraftImpl() {
     }
 
+    /**
+    *  <p>Name of the ProductDiscount.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -69,47 +72,53 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
         return this.key;
     }
 
+    /**
+    *  <p>Description of the ProductDiscount.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+    *  <p>Type of Discount and its corresponding value.</p>
+    */
     public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {
         return this.value;
     }
 
     /**
-    *  <p>A valid ProductDiscount Predicate.</p>
+    *  <p>Valid <a href="/../api/projects/predicates#productdiscount-predicates">ProductDiscount predicate</a>.</p>
     */
     public String getPredicate() {
         return this.predicate;
     }
 
     /**
-    *  <p>The string must contain a decimal number between 0 and 1.
-    *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
+    *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized.
+    *  The value must be <strong>unique</strong> among all ProductDiscounts in the <a href="ctp:api:type:Project">Project</a>.</p>
     */
     public String getSortOrder() {
         return this.sortOrder;
     }
 
     /**
-    *  <p>If set to <code>true</code> the discount will be applied to product prices.</p>
+    *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
     */
     public Boolean getIsActive() {
         return this.isActive;
     }
 
     /**
-    *  <p>The time from which the discount should be effective.
-    *  Please take Eventual Consistency into account for calculated product discount values.</p>
+    *  <p>Date and time (UTC) from which the Discount is effective.
+    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated discount values.</p>
     */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>The time from which the discount should be effective.
-    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
+    *  <p>Date and time (UTC) until which the Discount is effective.
+    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated undiscounted values.</p>
     */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;

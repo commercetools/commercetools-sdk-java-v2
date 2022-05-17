@@ -79,8 +79,8 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public ProductVariant getVariant();
 
     /**
-    *  <p>The price of a line item is selected from the prices array of the product variant.
-    *  If the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+    *  <p>The price of a line item is selected from the product variant according to the Product's <a href="ctp:api:type:Product">priceMode</a> value.
+    *  If the <code>priceMode</code> is <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
     */
     @NotNull
     @Valid

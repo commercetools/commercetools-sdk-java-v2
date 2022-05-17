@@ -29,46 +29,60 @@ public interface CustomObject extends BaseResource, com.commercetools.api.models
     @JsonProperty("id")
     public String getId();
 
+    /**
+    *  <p>Current version of the CustomObject.</p>
+    */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+    *  <p>Date and time (UTC) the CustomObject was initially created.</p>
+    */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+    *  <p>Date and time (UTC) the CustomObject was last updated.</p>
+    */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>A namespace to group custom objects.</p>
+    *  <p>Namespace to group CustomObjects.</p>
     */
     @NotNull
     @JsonProperty("container")
     public String getContainer();
 
     /**
-    *  <p>User-defined unique identifier of the CustomObject.</p>
+    *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>JSON standard types Number, String, Boolean, Array, Object, and <a href="/../api/types">common API data types</a>.
+    *  For values of type <a href="ctp:api:type:Reference">Reference</a> the integrity of the data is not guaranteed.
+    *  If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+    */
     @NotNull
     @JsonProperty("value")
     public Object getValue();

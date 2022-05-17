@@ -70,71 +70,86 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
     public DiscountCodeDraftImpl() {
     }
 
+    /**
+    *  <p>Name of the DiscountCode.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+    *  <p>Description of the DiscountCode.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>User-defined unique identifier for the DiscountCode.
-    *  <a href="/../api/projects/carts#add-discountcode">Add it to a Cart</a> to enable the related CartDiscounts in that Cart.</p>
+    *  <p>User-defined unique identifier for the DiscountCode that can be <a href="/../api/projects/carts#add-discountcode">added to the Cart</a> to apply the related <a href="ctp:api:type:CartDiscount">CartDiscounts</a>.
+    *  It cannot be modified after the DiscountCode is created.</p>
     */
     public String getCode() {
         return this.code;
     }
 
     /**
-    *  <p>The referenced matching cart discounts can be applied to the cart once the discount code is added.
-    *  The number of cart discounts in a discount code is limited to <strong>10</strong>.</p>
+    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
     */
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts() {
         return this.cartDiscounts;
     }
 
     /**
-    *  <p>The discount code can only be applied to carts that match this predicate.</p>
+    *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
     */
     public String getCartPredicate() {
         return this.cartPredicate;
     }
 
+    /**
+    *  <p>Only active DiscountCodes can be applied to the Cart.</p>
+    */
     public Boolean getIsActive() {
         return this.isActive;
     }
 
+    /**
+    *  <p>Number of times the DiscountCode can be applied.</p>
+    */
     public Long getMaxApplications() {
         return this.maxApplications;
     }
 
+    /**
+    *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+    */
     public Long getMaxApplicationsPerCustomer() {
         return this.maxApplicationsPerCustomer;
     }
 
+    /**
+    *  <p>Custom Fields for the DiscountCode.</p>
+    */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>The groups to which this discount code shall belong to.</p>
+    *  <p>Groups to which the DiscountCode will belong to.</p>
     */
     public java.util.List<String> getGroups() {
         return this.groups;
     }
 
     /**
-    *  <p>The time from which the discount can be applied on a cart.
-    *  Before that time the code is invalid.</p>
+    *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
     */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>The time until the discount can be applied on a cart.
-    *  After that time the code is invalid.</p>
+    *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
     */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;

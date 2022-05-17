@@ -115,6 +115,13 @@ public interface ProductDraft {
     @JsonProperty("publish")
     public Boolean getPublish();
 
+    /**
+    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
+    */
+
+    @JsonProperty("priceMode")
+    public ProductPriceModeEnum getPriceMode();
+
     public void setProductType(final ProductTypeResourceIdentifier productType);
 
     public void setName(final LocalizedString name);
@@ -153,6 +160,8 @@ public interface ProductDraft {
 
     public void setPublish(final Boolean publish);
 
+    public void setPriceMode(final ProductPriceModeEnum priceMode);
+
     public static ProductDraft of() {
         return new ProductDraftImpl();
     }
@@ -175,6 +184,7 @@ public interface ProductDraft {
         instance.setSearchKeywords(template.getSearchKeywords());
         instance.setState(template.getState());
         instance.setPublish(template.getPublish());
+        instance.setPriceMode(template.getPriceMode());
         return instance;
     }
 

@@ -26,41 +26,50 @@ public interface ProductDiscount extends BaseResource, com.commercetools.api.mod
         com.commercetools.api.models.ResourceIdentifiable<ProductDiscount> {
 
     /**
-    *  <p>Platform-generated unique identifier of the ProductDiscount</p>
+    *  <p>Platform-generated unique identifier of the ProductDiscount.</p>
     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>The current version of the product discount.</p>
+    *  <p>Current version of the ProductDiscount.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
+    /**
+    *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
+    */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+    *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
+    */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
+    /**
+    *  <p>Name of the ProductDiscount.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("name")
@@ -73,41 +82,45 @@ public interface ProductDiscount extends BaseResource, com.commercetools.api.mod
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>Description of the ProductDiscount.</p>
+    */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
+    /**
+    *  <p>Type of Discount and its corresponding value.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("value")
     public ProductDiscountValue getValue();
 
     /**
-    *  <p>A valid ProductDiscount Predicate.</p>
+    *  <p>Valid <a href="/../api/projects/predicates#productdiscount-predicates">ProductDiscount predicate</a>.</p>
     */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-    *  <p>The string contains a number between 0 and 1.
-    *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.
-    *  A sortOrder must be unambiguous.</p>
+    *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active.
+    *  A Product Discount with a higher value is prioritized.</p>
     */
     @NotNull
     @JsonProperty("sortOrder")
     public String getSortOrder();
 
     /**
-    *  <p>Only active discount will be applied to product prices.</p>
+    *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
     */
     @NotNull
     @JsonProperty("isActive")
     public Boolean getIsActive();
 
     /**
-    *  <p>The platform will generate this array from the predicate.
-    *  It contains the references of all the resources that are addressed in the predicate.</p>
+    *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
     */
     @NotNull
     @Valid
@@ -115,16 +128,16 @@ public interface ProductDiscount extends BaseResource, com.commercetools.api.mod
     public List<Reference> getReferences();
 
     /**
-    *  <p>The time from which the discount should be effective.
-    *  Please take Eventual Consistency into account for calculated product discount values.</p>
+    *  <p>Date and time (UTC) from which the Discount is effective.
+    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated discount values.</p>
     */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-    *  <p>The time from which the discount should be ineffective.
-    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
+    *  <p>Date and time (UTC) until which the Discount is effective.
+    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated undiscounted values.</p>
     */
 
     @JsonProperty("validUntil")

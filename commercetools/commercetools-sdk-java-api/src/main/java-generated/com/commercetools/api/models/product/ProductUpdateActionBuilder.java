@@ -156,6 +156,10 @@ public class ProductUpdateActionBuilder {
         return com.commercetools.api.models.product.ProductSetMetaTitleActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product.ProductSetPriceModeActionBuilder setPriceModeBuilder() {
+        return com.commercetools.api.models.product.ProductSetPriceModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.product.ProductSetPricesActionBuilder setPricesBuilder() {
         return com.commercetools.api.models.product.ProductSetPricesActionBuilder.of();
     }

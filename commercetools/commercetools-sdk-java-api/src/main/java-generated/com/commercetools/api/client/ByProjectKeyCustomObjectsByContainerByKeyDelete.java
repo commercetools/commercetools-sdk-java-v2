@@ -16,16 +16,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-/**
-*  <p>Delete CustomObject by container and key</p>
-*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends
         ApiMethod<ByProjectKeyCustomObjectsByContainerByKeyDelete, com.commercetools.api.models.custom_object.CustomObject>
         implements com.commercetools.api.client.DataerasureTrait<ByProjectKeyCustomObjectsByContainerByKeyDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyCustomObjectsByContainerByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyCustomObjectsByContainerByKeyDelete>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsByContainerByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsByContainerByKeyDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomObjectsByContainerByKeyDelete> {
 
@@ -86,12 +82,12 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends
         return this.getQueryParam("version");
     }
 
-    public List<String> getDataErasure() {
-        return this.getQueryParam("dataErasure");
-    }
-
     public List<String> getExpand() {
         return this.getQueryParam("expand");
+    }
+
+    public List<String> getDataErasure() {
+        return this.getQueryParam("dataErasure");
     }
 
     public void setProjectKey(final String projectKey) {
@@ -167,6 +163,65 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends
     }
 
     /**
+     * set expand with the specified value
+     */
+    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final TValue expand) {
+        return copy().withQueryParam("expand", expand);
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final TValue expand) {
+        return copy().addQueryParam("expand", expand);
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     */
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     */
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
+     */
+    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final List<TValue> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     */
+    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final List<TValue> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
      * set dataErasure with the specified value
      */
     public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete withDataErasure(final TValue dataErasure) {
@@ -226,65 +281,6 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends
     public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete addDataErasure(final List<TValue> dataErasure) {
         return copy().addQueryParams(
             dataErasure.stream().map(s -> new ParamEntry<>("dataErasure", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * set expand with the specified value
-     */
-    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final TValue expand) {
-        return copy().withQueryParam("expand", expand);
-    }
-
-    /**
-     * add additional expand query parameter
-     */
-    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final TValue expand) {
-        return copy().addQueryParam("expand", expand);
-    }
-
-    /**
-     * set expand with the specified value
-     */
-    public ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final Supplier<String> supplier) {
-        return copy().withQueryParam("expand", supplier.get());
-    }
-
-    /**
-     * add additional expand query parameter
-     */
-    public ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final Supplier<String> supplier) {
-        return copy().addQueryParam("expand", supplier.get());
-    }
-
-    /**
-     * set expand with the specified value
-     */
-    public ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional expand query parameter
-     */
-    public ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set expand with the specified values
-     */
-    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final List<TValue> expand) {
-        return copy().withoutQueryParam("expand")
-                .addQueryParams(
-                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional expand query parameters
-     */
-    public <TValue> ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final List<TValue> expand) {
-        return copy().addQueryParams(
-            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     @Override

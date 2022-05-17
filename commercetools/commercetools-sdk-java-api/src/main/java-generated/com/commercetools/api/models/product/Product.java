@@ -98,6 +98,13 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
     @JsonProperty("reviewRatingStatistics")
     public ReviewRatingStatistics getReviewRatingStatistics();
 
+    /**
+    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
+    */
+
+    @JsonProperty("priceMode")
+    public ProductPriceModeEnum getPriceMode();
+
     public void setId(final String id);
 
     public void setVersion(final Long version);
@@ -122,6 +129,8 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
 
     public void setReviewRatingStatistics(final ReviewRatingStatistics reviewRatingStatistics);
 
+    public void setPriceMode(final ProductPriceModeEnum priceMode);
+
     public static Product of() {
         return new ProductImpl();
     }
@@ -140,6 +149,7 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
         instance.setTaxCategory(template.getTaxCategory());
         instance.setState(template.getState());
         instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
+        instance.setPriceMode(template.getPriceMode());
         return instance;
     }
 

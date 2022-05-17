@@ -10,21 +10,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDiscountValueAbsolute> {
 
-    private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
+    private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
 
-    public ProductDiscountValueAbsoluteBuilder money(final com.commercetools.api.models.common.TypedMoney... money) {
+    public ProductDiscountValueAbsoluteBuilder money(
+            final com.commercetools.api.models.common.CentPrecisionMoney... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
         return this;
     }
 
     public ProductDiscountValueAbsoluteBuilder money(
-            final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
+            final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
         this.money = money;
         return this;
     }
 
     public ProductDiscountValueAbsoluteBuilder plusMoney(
-            final com.commercetools.api.models.common.TypedMoney... money) {
+            final com.commercetools.api.models.common.CentPrecisionMoney... money) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
@@ -33,22 +34,22 @@ public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDisco
     }
 
     public ProductDiscountValueAbsoluteBuilder plusMoney(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
-        this.money.add(builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build());
+        this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build());
         return this;
     }
 
     public ProductDiscountValueAbsoluteBuilder withMoney(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
         this.money = new ArrayList<>();
-        this.money.add(builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build());
+        this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build());
         return this;
     }
 
-    public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney() {
+    public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {
         return this.money;
     }
 

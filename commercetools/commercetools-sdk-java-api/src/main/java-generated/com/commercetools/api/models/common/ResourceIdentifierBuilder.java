@@ -80,6 +80,10 @@ public class ResourceIdentifierBuilder {
         return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of();
     }
 
+    public com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder standalonePriceBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifierBuilder.of();
+    }
+
     public com.commercetools.api.models.state.StateResourceIdentifierBuilder stateBuilder() {
         return com.commercetools.api.models.state.StateResourceIdentifierBuilder.of();
     }

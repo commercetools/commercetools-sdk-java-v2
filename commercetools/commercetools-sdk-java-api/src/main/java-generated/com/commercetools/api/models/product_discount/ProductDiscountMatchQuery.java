@@ -18,18 +18,31 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountMatchQueryImpl.class)
 public interface ProductDiscountMatchQuery {
 
+    /**
+    *  <p>ID of the specified Product.</p>
+    */
     @NotNull
     @JsonProperty("productId")
     public String getProductId();
 
+    /**
+    *  <p>ID of the specified Product Variant.</p>
+    */
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
 
+    /**
+    *  <p>Controls which <a href="/../api/projects/productProjections#current--staged">projected representation</a> is applied for the query.
+    *  Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+    */
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+    *  <p>Specified Price of the specified Product Variant.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("price")

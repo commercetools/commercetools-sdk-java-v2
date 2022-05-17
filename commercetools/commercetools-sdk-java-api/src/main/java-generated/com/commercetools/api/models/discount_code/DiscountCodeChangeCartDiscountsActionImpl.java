@@ -36,6 +36,9 @@ public class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeCh
         return this.action;
     }
 
+    /**
+    *  <p>New value to set.</p>
+    */
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts() {
         return this.cartDiscounts;
     }

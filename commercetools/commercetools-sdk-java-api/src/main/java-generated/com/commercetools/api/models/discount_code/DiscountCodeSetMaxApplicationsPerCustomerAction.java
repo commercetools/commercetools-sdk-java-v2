@@ -17,7 +17,7 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
     String SET_MAX_APPLICATIONS_PER_CUSTOMER = "setMaxApplicationsPerCustomer";
 
     /**
-    *  <p>If the <code>maxApplicationsPerCustomer</code> parameter is not included, the field will be emptied.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
 
     @JsonProperty("maxApplicationsPerCustomer")

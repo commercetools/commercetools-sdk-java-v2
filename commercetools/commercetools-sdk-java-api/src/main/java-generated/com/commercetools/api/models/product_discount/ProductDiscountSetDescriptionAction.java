@@ -19,6 +19,9 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
 
     String SET_DESCRIPTION = "setDescription";
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();

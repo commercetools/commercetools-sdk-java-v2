@@ -36,8 +36,7 @@ public class DiscountCodeChangeGroupsActionImpl implements DiscountCodeChangeGro
     }
 
     /**
-    *  <p>The groups to which this discount code shall belong to.
-    *  Use empty array to remove the code from all groups.</p>
+    *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
     */
     public java.util.List<String> getGroups() {
         return this.groups;

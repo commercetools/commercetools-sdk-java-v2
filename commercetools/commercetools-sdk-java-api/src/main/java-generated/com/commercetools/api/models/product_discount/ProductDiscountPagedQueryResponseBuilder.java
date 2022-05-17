@@ -14,17 +14,22 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.product_discount.ProductDiscount> results;
 
     public ProductDiscountPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
+        return this;
+    }
+
+    public ProductDiscountPagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
         return this;
     }
 
@@ -35,11 +40,6 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
 
     public ProductDiscountPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
-        return this;
-    }
-
-    public ProductDiscountPagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
         return this;
     }
 
@@ -86,6 +86,10 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -95,27 +99,23 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.product_discount.ProductDiscount> getResults() {
         return this.results;
     }
 
     public ProductDiscountPagedQueryResponse build() {
         Objects.requireNonNull(limit, ProductDiscountPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, ProductDiscountPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, ProductDiscountPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, ProductDiscountPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, ProductDiscountPagedQueryResponse.class + ": results is missing");
-        return new ProductDiscountPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new ProductDiscountPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds ProductDiscountPagedQueryResponse without checking for non null required values
      */
     public ProductDiscountPagedQueryResponse buildUnchecked() {
-        return new ProductDiscountPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new ProductDiscountPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static ProductDiscountPagedQueryResponseBuilder of() {
@@ -125,9 +125,9 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     public static ProductDiscountPagedQueryResponseBuilder of(final ProductDiscountPagedQueryResponse template) {
         ProductDiscountPagedQueryResponseBuilder builder = new ProductDiscountPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

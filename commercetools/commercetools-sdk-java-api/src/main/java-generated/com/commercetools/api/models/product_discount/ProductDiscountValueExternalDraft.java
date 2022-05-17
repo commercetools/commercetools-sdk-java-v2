@@ -10,6 +10,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>Discounts the Product Price by allowing the client to explicitly <a href="/../api/projects/products#set-discounted-embedded-price">set a discounted value</a>.
+*  Use this when setting discounts using an external service.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueExternalDraftImpl.class)
 public interface ProductDiscountValueExternalDraft extends ProductDiscountValueDraft {

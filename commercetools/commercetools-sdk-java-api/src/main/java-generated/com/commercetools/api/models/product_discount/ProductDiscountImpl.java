@@ -86,41 +86,50 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the ProductDiscount</p>
+    *  <p>Platform-generated unique identifier of the ProductDiscount.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the product discount.</p>
+    *  <p>Current version of the ProductDiscount.</p>
     */
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+    *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
+    */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+    *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
+    */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+    *  <p>Name of the ProductDiscount.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -132,56 +141,60 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
         return this.key;
     }
 
+    /**
+    *  <p>Description of the ProductDiscount.</p>
+    */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+    *  <p>Type of Discount and its corresponding value.</p>
+    */
     public com.commercetools.api.models.product_discount.ProductDiscountValue getValue() {
         return this.value;
     }
 
     /**
-    *  <p>A valid ProductDiscount Predicate.</p>
+    *  <p>Valid <a href="/../api/projects/predicates#productdiscount-predicates">ProductDiscount predicate</a>.</p>
     */
     public String getPredicate() {
         return this.predicate;
     }
 
     /**
-    *  <p>The string contains a number between 0 and 1.
-    *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.
-    *  A sortOrder must be unambiguous.</p>
+    *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active.
+    *  A Product Discount with a higher value is prioritized.</p>
     */
     public String getSortOrder() {
         return this.sortOrder;
     }
 
     /**
-    *  <p>Only active discount will be applied to product prices.</p>
+    *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
     */
     public Boolean getIsActive() {
         return this.isActive;
     }
 
     /**
-    *  <p>The platform will generate this array from the predicate.
-    *  It contains the references of all the resources that are addressed in the predicate.</p>
+    *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
     */
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
         return this.references;
     }
 
     /**
-    *  <p>The time from which the discount should be effective.
-    *  Please take Eventual Consistency into account for calculated product discount values.</p>
+    *  <p>Date and time (UTC) from which the Discount is effective.
+    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated discount values.</p>
     */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>The time from which the discount should be ineffective.
-    *  Please take Eventual Consistency into account for calculated undiscounted values.</p>
+    *  <p>Date and time (UTC) until which the Discount is effective.
+    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated undiscounted values.</p>
     */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;

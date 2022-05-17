@@ -92,17 +92,17 @@ public class ByProjectKeyCustomObjectsByContainerByKeyTest {
                                 .customObjects()
                                 .withContainerAndKey("test_container", "test_key")
                                 .delete()
-                                .withDataErasure(true)
+                                .withExpand("expand")
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/custom-objects/test_container/test_key?dataErasure=true", },
+                        "delete", "/test_projectKey/custom-objects/test_container/test_key?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
                                 .withContainerAndKey("test_container", "test_key")
                                 .delete()
-                                .withExpand("expand")
+                                .withDataErasure(true)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/custom-objects/test_container/test_key?expand=expand", },
+                        "delete", "/test_projectKey/custom-objects/test_container/test_key?dataErasure=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
@@ -133,12 +133,12 @@ public class ByProjectKeyCustomObjectsByContainerByKeyTest {
                         .customObjects()
                         .withContainerAndKey("test_container", "test_key")
                         .delete()
-                        .withDataErasure(true), },
+                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .withContainerAndKey("test_container", "test_key")
                         .delete()
-                        .withExpand("expand"), },
+                        .withDataErasure(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .withContainerAndKey("test_container", "test_key")

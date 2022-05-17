@@ -36,6 +36,9 @@ public class ProductDiscountChangeValueActionImpl implements ProductDiscountChan
         return this.action;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
     public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {
         return this.value;
     }

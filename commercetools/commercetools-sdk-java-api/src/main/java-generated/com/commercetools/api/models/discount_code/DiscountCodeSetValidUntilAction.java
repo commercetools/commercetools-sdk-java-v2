@@ -18,7 +18,7 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
     String SET_VALID_UNTIL = "setValidUntil";
 
     /**
-    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
     */
 
     @JsonProperty("validUntil")

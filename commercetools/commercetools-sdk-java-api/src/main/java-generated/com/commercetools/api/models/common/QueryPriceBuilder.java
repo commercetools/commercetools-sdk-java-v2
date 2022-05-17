@@ -12,6 +12,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class QueryPriceBuilder implements Builder<QueryPrice> {
 
+    @Nullable
     private String id;
 
     private com.commercetools.api.models.common.Money value;
@@ -40,7 +41,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     @Nullable
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
 
-    public QueryPriceBuilder id(final String id) {
+    public QueryPriceBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
@@ -154,6 +155,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
         return this;
     }
 
+    @Nullable
     public String getId() {
         return this.id;
     }
@@ -203,7 +205,6 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     }
 
     public QueryPrice build() {
-        Objects.requireNonNull(id, QueryPrice.class + ": id is missing");
         Objects.requireNonNull(value, QueryPrice.class + ": value is missing");
         return new QueryPriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,
             tiers);

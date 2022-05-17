@@ -14,17 +14,22 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
 
-    private Long offset;
-
     private java.util.List<com.commercetools.api.models.discount_code.DiscountCode> results;
 
     public DiscountCodePagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
+        return this;
+    }
+
+    public DiscountCodePagedQueryResponseBuilder offset(final Long offset) {
+        this.offset = offset;
         return this;
     }
 
@@ -35,11 +40,6 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
 
     public DiscountCodePagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
-        return this;
-    }
-
-    public DiscountCodePagedQueryResponseBuilder offset(final Long offset) {
-        this.offset = offset;
         return this;
     }
 
@@ -84,6 +84,10 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
         return this.limit;
     }
 
+    public Long getOffset() {
+        return this.offset;
+    }
+
     public Long getCount() {
         return this.count;
     }
@@ -93,27 +97,23 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
         return this.total;
     }
 
-    public Long getOffset() {
-        return this.offset;
-    }
-
     public java.util.List<com.commercetools.api.models.discount_code.DiscountCode> getResults() {
         return this.results;
     }
 
     public DiscountCodePagedQueryResponse build() {
         Objects.requireNonNull(limit, DiscountCodePagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, DiscountCodePagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, DiscountCodePagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, DiscountCodePagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, DiscountCodePagedQueryResponse.class + ": results is missing");
-        return new DiscountCodePagedQueryResponseImpl(limit, count, total, offset, results);
+        return new DiscountCodePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
      * builds DiscountCodePagedQueryResponse without checking for non null required values
      */
     public DiscountCodePagedQueryResponse buildUnchecked() {
-        return new DiscountCodePagedQueryResponseImpl(limit, count, total, offset, results);
+        return new DiscountCodePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     public static DiscountCodePagedQueryResponseBuilder of() {
@@ -123,9 +123,9 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     public static DiscountCodePagedQueryResponseBuilder of(final DiscountCodePagedQueryResponse template) {
         DiscountCodePagedQueryResponseBuilder builder = new DiscountCodePagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

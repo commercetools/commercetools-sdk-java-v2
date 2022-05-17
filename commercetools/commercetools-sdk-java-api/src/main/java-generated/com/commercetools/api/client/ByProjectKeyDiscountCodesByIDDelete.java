@@ -16,6 +16,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>Deprecated scope: <code>manage_orders:{projectKey}</code></p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyDiscountCodesByIDDelete
         extends ApiMethod<ByProjectKeyDiscountCodesByIDDelete, com.commercetools.api.models.discount_code.DiscountCode>

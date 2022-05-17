@@ -3,8 +3,6 @@ package com.commercetools.sdk.examples.spring;
 
 import java.time.Duration;
 
-import com.newrelic.api.agent.*;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

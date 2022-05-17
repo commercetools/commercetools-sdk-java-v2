@@ -10,6 +10,7 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.cart.CartReferenceBuilder;
 import com.commercetools.api.models.customer.CustomerSignInResult;
 import com.commercetools.api.models.customer.CustomerSigninBuilder;
+import com.commercetools.api.models.customer.MyCustomerSigninBuilder;
 import com.commercetools.sdk.examples.spring.config.CtpUserDetails;
 import com.commercetools.sdk.examples.spring.config.TokenGrantedAuthority;
 
@@ -46,7 +47,7 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
             if (authentication.getCredentials() == null || authentication.getPrincipal() == null) {
                 return Mono.defer(() -> Mono.error(new BadCredentialsException("Invalid Credentials")));
             }
-            CustomerSigninBuilder customerSignin = CustomerSigninBuilder.of()
+            MyCustomerSigninBuilder customerSignin = MyCustomerSigninBuilder.of()
                     .email(authentication.getName())
                     .password(authentication.getCredentials().toString());
 

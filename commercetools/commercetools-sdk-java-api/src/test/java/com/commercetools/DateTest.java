@@ -3,7 +3,7 @@ package com.commercetools;
 import com.commercetools.api.models.cart.Cart;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.time.ZoneId;

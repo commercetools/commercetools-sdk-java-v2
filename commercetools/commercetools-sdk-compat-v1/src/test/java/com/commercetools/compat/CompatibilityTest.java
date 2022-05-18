@@ -5,11 +5,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
+import com.commercetools.api.client.ByProjectKeyCustomersByIDGet;
 import com.commercetools.api.client.ByProjectKeyCustomersGet;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.project.Project;
 
 import io.sphere.sdk.client.SphereClientConfig;
+import io.sphere.sdk.customers.expansion.CustomerExpansionModel;
 import io.sphere.sdk.projects.queries.ProjectGet;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.HttpStatusCode;
@@ -68,5 +70,17 @@ public class CompatibilityTest {
 
         String query2 = request2.createHttpRequest().getUri().getQuery();
         Assertions.assertThat(query2).isEqualTo("limit=1");
+    }
+
+    @Test
+    public void getByIdPredicate() {
+        ProjectApiRoot root = ProjectApiRoot.of("test");
+
+        ByProjectKeyCustomersByIDGet request2 = CompatBuilder.getById(root)
+                .customer("abc",
+                    customerByIdGet -> customerByIdGet.withExpansionPaths(CustomerExpansionModel::customerGroup));
+
+        String query2 = request2.createHttpRequest().getUri().getQuery();
+        Assertions.assertThat(query2).isEqualTo("expand=customerGroup");
     }
 }

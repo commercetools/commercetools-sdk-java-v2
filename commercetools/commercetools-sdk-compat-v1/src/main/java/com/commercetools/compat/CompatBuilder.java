@@ -21,4 +21,20 @@ public class CompatBuilder {
     public static QueryBuilder query(ProjectApiRoot apiRoot) {
         return QueryBuilder.of(apiRoot);
     }
+
+    public GetByIdBuilder getById() {
+        return getById(apiRoot);
+    }
+
+    public static GetByIdBuilder getById(ProjectApiRoot apiRoot) {
+        return GetByIdBuilder.of(apiRoot);
+    }
+
+    public GetByKeyBuilder getByKey() {
+        return getByKey(apiRoot);
+    }
+
+    public static GetByKeyBuilder getByKey(ProjectApiRoot apiRoot) {
+        return GetByKeyBuilder.of(apiRoot);
+    }
 }

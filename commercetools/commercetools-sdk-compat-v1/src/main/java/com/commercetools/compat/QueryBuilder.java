@@ -71,15 +71,15 @@ public class QueryBuilder {
 
     public static <T extends PagedQueryResourceRequest<T, TResult>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T query(
             final T request, final Supplier<TQuery> createQueryDsl, final Function<TQuery, TQuery> queryDsl) {
-        MetaModelQueryDsl<?, ?, ?, ?> customerQuery = queryDsl.apply(createQueryDsl.get());
-        return query(request, customerQuery);
+        MetaModelQueryDsl<?, ?, ?, ?> query = queryDsl.apply(createQueryDsl.get());
+        return query(request, query);
     }
 
     public <T extends PagedQueryResourceRequest<T, TResult>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T with(
             final Function<ProjectApiRoot, T> request, final Supplier<TQuery> createQueryDsl,
             final Function<TQuery, TQuery> queryDsl) {
-        MetaModelQueryDsl<?, ?, ?, ?> customerQuery = queryDsl.apply(createQueryDsl.get());
-        return query(request.apply(apiRoot), customerQuery);
+        MetaModelQueryDsl<?, ?, ?, ?> query = queryDsl.apply(createQueryDsl.get());
+        return query(request.apply(apiRoot), query);
     }
 
     //    public PagedQueryResourceRequest apiClient(final Function<ApiClientQuery, ApiClientQuery> queryDsl) {
@@ -118,7 +118,7 @@ public class QueryBuilder {
         return query(apiRoot.products().get(), ProductQuery::of, queryDsl);
     }
 
-    public ByProjectKeyProductProjectionsGet productProjectionsCurrent(
+    public ByProjectKeyProductProjectionsGet productProjections(
             final Function<ProductProjectionQuery, ProductProjectionQuery> queryDsl) {
         return query(apiRoot.productProjections().get(), ProductProjectionQuery::ofCurrent, queryDsl);
     }

@@ -2,11 +2,9 @@
 package com.commercetools.api.client;
 
 import java.io.Closeable;
-import java.util.function.BiFunction;
 import java.util.function.Function;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.ApiMethod;
 import io.vrap.rmf.base.client.SerializerOnlyApiHttpClient;
 
 /**

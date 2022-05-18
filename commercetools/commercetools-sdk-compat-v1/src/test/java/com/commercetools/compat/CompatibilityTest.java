@@ -63,12 +63,9 @@ public class CompatibilityTest {
     public void queryPredicate() {
         ProjectApiRoot root = ProjectApiRoot.of("test");
 
-        ByProjectKeyCustomersGet request = Query.customer(root, customerQuery -> customerQuery.withLimit(1));
+        ByProjectKeyCustomersGet request2 = CompatBuilder.query(root)
+                .customer(customerQuery -> customerQuery.withLimit(1));
 
-        String query = request.createHttpRequest().getUri().getQuery();
-        Assertions.assertThat(query).isEqualTo("limit=1");
-
-        ByProjectKeyCustomersGet request2 = new Query(root).customer(customerQuery -> customerQuery.withLimit(1)));
         String query2 = request2.createHttpRequest().getUri().getQuery();
         Assertions.assertThat(query2).isEqualTo("limit=1");
     }

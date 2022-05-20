@@ -49,8 +49,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
     public String getAnonymousId();
 
     /**
-    *  <p>How much money this payment intends to receive from the customer.
-    *  The value usually matches the cart or order gross total.</p>
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
     */
     @NotNull
     @Valid
@@ -63,8 +62,7 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
     public PaymentMethodInfo getPaymentMethodInfo();
 
     /**
-    *  <p>A list of financial transactions of different TransactionTypes
-    *  with different TransactionStates.</p>
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
     */
     @NotNull
     @Valid

@@ -23,11 +23,19 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     @Nullable
     private com.commercetools.api.models.me.MyTransactionDraft transaction;
 
+    /**
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+    */
+
     public MyPaymentDraftBuilder amountPlanned(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.amountPlanned = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+    */
 
     public MyPaymentDraftBuilder amountPlanned(final com.commercetools.api.models.common.Money amountPlanned) {
         this.amountPlanned = amountPlanned;
@@ -58,11 +66,19 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
         return this;
     }
 
+    /**
+    *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
+    */
+
     public MyPaymentDraftBuilder transaction(
             Function<com.commercetools.api.models.me.MyTransactionDraftBuilder, com.commercetools.api.models.me.MyTransactionDraftBuilder> builder) {
         this.transaction = builder.apply(com.commercetools.api.models.me.MyTransactionDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
+    */
 
     public MyPaymentDraftBuilder transaction(
             @Nullable final com.commercetools.api.models.me.MyTransactionDraft transaction) {

@@ -37,6 +37,10 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
 
     private com.commercetools.api.models.payment.PaymentReference payment;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
+
     public OrderPaymentAddedMessageBuilder id(final String id) {
         this.id = id;
         return this;
@@ -57,11 +61,19 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public OrderPaymentAddedMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public OrderPaymentAddedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -69,11 +81,19 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public OrderPaymentAddedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public OrderPaymentAddedMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -86,10 +106,18 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
         return this;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
+
     public OrderPaymentAddedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
+
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
 
     public OrderPaymentAddedMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -116,11 +144,19 @@ public class OrderPaymentAddedMessageBuilder implements Builder<OrderPaymentAdde
         return this;
     }
 
+    /**
+    *  <p>Reference to a Payment.</p>
+    */
+
     public OrderPaymentAddedMessageBuilder payment(
             Function<com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReferenceBuilder> builder) {
         this.payment = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Payment.</p>
+    */
 
     public OrderPaymentAddedMessageBuilder payment(
             final com.commercetools.api.models.payment.PaymentReference payment) {

@@ -16,14 +16,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingPricesSearchRequest {
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
 
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
 
     @JsonProperty("offset")

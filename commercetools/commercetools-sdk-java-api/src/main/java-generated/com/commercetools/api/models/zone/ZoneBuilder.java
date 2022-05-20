@@ -36,25 +36,45 @@ public class ZoneBuilder implements Builder<Zone> {
 
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Zone.</p>
+    */
+
     public ZoneBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Current version of the Zone.</p>
+    */
 
     public ZoneBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) the Zone was initially created.</p>
+    */
+
     public ZoneBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) the Zone was last updated.</p>
+    */
+
     public ZoneBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ZoneBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -62,11 +82,19 @@ public class ZoneBuilder implements Builder<Zone> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ZoneBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ZoneBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -74,35 +102,63 @@ public class ZoneBuilder implements Builder<Zone> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ZoneBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the Zone.</p>
+    */
 
     public ZoneBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+    *  <p>Name of the Zone.</p>
+    */
+
     public ZoneBuilder name(final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>Description of the Zone.</p>
+    */
 
     public ZoneBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
 
+    /**
+    *  <p>List of locations that belong to the Zone.</p>
+    */
+
     public ZoneBuilder locations(final com.commercetools.api.models.zone.Location... locations) {
         this.locations = new ArrayList<>(Arrays.asList(locations));
         return this;
     }
 
+    /**
+    *  <p>List of locations that belong to the Zone.</p>
+    */
+
     public ZoneBuilder locations(final java.util.List<com.commercetools.api.models.zone.Location> locations) {
         this.locations = locations;
         return this;
     }
+
+    /**
+    *  <p>List of locations that belong to the Zone.</p>
+    */
 
     public ZoneBuilder plusLocations(final com.commercetools.api.models.zone.Location... locations) {
         if (this.locations == null) {
@@ -112,6 +168,10 @@ public class ZoneBuilder implements Builder<Zone> {
         return this;
     }
 
+    /**
+    *  <p>List of locations that belong to the Zone.</p>
+    */
+
     public ZoneBuilder plusLocations(
             Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
         if (this.locations == null) {
@@ -120,6 +180,10 @@ public class ZoneBuilder implements Builder<Zone> {
         this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>List of locations that belong to the Zone.</p>
+    */
 
     public ZoneBuilder withLocations(
             Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {

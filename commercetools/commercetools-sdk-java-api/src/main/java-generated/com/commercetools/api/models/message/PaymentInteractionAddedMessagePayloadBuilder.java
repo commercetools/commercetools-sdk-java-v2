@@ -12,11 +12,19 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
 
     private com.commercetools.api.models.type.CustomFields interaction;
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+    */
+
     public PaymentInteractionAddedMessagePayloadBuilder interaction(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.interaction = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+    */
 
     public PaymentInteractionAddedMessagePayloadBuilder interaction(
             final com.commercetools.api.models.type.CustomFields interaction) {

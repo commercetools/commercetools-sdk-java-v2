@@ -15,6 +15,10 @@ public class SetInterfaceIdChangeBuilder implements Builder<SetInterfaceIdChange
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setInterfaceId</code></p>
+    */
+
     public SetInterfaceIdChangeBuilder change(final String change) {
         this.change = change;
         return this;

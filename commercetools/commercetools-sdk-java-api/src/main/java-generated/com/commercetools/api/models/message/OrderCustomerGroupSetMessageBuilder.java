@@ -41,6 +41,10 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
+
     public OrderCustomerGroupSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
@@ -61,11 +65,19 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public OrderCustomerGroupSetMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public OrderCustomerGroupSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -73,11 +85,19 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public OrderCustomerGroupSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public OrderCustomerGroupSetMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -90,10 +110,18 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
         return this;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
+
     public OrderCustomerGroupSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
+
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
 
     public OrderCustomerGroupSetMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -120,6 +148,10 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
         return this;
     }
 
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
+
     public OrderCustomerGroupSetMessageBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
         this.customerGroup = builder
@@ -128,11 +160,19 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
         return this;
     }
 
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
+
     public OrderCustomerGroupSetMessageBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
 
     public OrderCustomerGroupSetMessageBuilder oldCustomerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -141,6 +181,10 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
 
     public OrderCustomerGroupSetMessageBuilder oldCustomerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {

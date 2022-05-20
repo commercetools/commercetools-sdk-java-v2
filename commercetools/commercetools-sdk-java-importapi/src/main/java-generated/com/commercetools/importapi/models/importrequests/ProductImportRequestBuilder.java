@@ -12,17 +12,29 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
 
     private java.util.List<com.commercetools.importapi.models.products.ProductImport> resources;
 
+    /**
+    *  <p>The product import resources of this request.</p>
+    */
+
     public ProductImportRequestBuilder resources(
             final com.commercetools.importapi.models.products.ProductImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
 
+    /**
+    *  <p>The product import resources of this request.</p>
+    */
+
     public ProductImportRequestBuilder resources(
             final java.util.List<com.commercetools.importapi.models.products.ProductImport> resources) {
         this.resources = resources;
         return this;
     }
+
+    /**
+    *  <p>The product import resources of this request.</p>
+    */
 
     public ProductImportRequestBuilder plusResources(
             final com.commercetools.importapi.models.products.ProductImport... resources) {
@@ -33,6 +45,10 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
         return this;
     }
 
+    /**
+    *  <p>The product import resources of this request.</p>
+    */
+
     public ProductImportRequestBuilder plusResources(
             Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {
         if (this.resources == null) {
@@ -42,6 +58,10 @@ public class ProductImportRequestBuilder implements Builder<ProductImportRequest
                 .add(builder.apply(com.commercetools.importapi.models.products.ProductImportBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The product import resources of this request.</p>
+    */
 
     public ProductImportRequestBuilder withResources(
             Function<com.commercetools.importapi.models.products.ProductImportBuilder, com.commercetools.importapi.models.products.ProductImportBuilder> builder) {

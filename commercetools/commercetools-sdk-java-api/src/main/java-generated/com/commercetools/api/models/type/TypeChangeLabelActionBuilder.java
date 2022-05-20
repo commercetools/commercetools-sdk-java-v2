@@ -14,16 +14,28 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
 
     private com.commercetools.api.models.common.LocalizedString label;
 
+    /**
+    *  <p>Name of the Field Definition to update.</p>
+    */
+
     public TypeChangeLabelActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public TypeChangeLabelActionBuilder label(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public TypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;

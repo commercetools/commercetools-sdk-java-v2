@@ -41,7 +41,7 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
     }
 
     /**
-    *  <p>The classification items that can be used for specifiying any <a href="ctp:api:type:ShippingRatePriceTier">ShippingRatePriceTier</a>.</p>
+    *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
     */
     public java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> getValues() {
         return this.values;

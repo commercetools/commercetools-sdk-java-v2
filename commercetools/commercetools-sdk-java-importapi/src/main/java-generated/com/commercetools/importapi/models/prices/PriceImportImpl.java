@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The data representation for a price to be imported that is persisted as an <a href="/../api/projects/products#embeddedprice">EmbeddedPrice</a> in the Project.</p>
+*  <p>The data representation for a price to be imported that is persisted as an EmbeddedPrice in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class PriceImportImpl implements PriceImport, ModelBase {
@@ -111,16 +111,14 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-    *  <p>The Reference to the <a href="/../api/projects/customerGroups#customergroup">CustomerGroup</a> with which the <a href="/../api/projects/products#embeddedprice">EmbeddedPrice</a> is associated.
-    *  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+    *  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
     */
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>The Reference to the <a href="/../api/projects/channels#channel">Channel</a> with which the <a href="/../api/projects/products#embeddedprice">EmbeddedPrice</a> is associated.
-    *  If referenced Channel does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+    *  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;
@@ -134,7 +132,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-    *  <p>Only the <a href="/../api/projects/products#embeddedprice">EmbeddedPrice</a> updates will be published to <code>staged</code> and <code>current</code> projection.</p>
+    *  <p>Only the EmbeddedPrice updates will be published to <code>staged</code> and <code>current</code> projection.</p>
     */
     public Boolean getPublish() {
         return this.publish;
@@ -155,18 +153,14 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-    *  <p>The ProductVariant in which this <a href="/../api/projects/products#embeddedprice">EmbeddedPrice</a> is contained.
-    *  The Reference to the <a href="/../api/projects/products#productvariant">ProductVariant</a> with which the <a href="/../api/projects/products#embeddedprice">EmbeddedPrice</a> is associated.
-    *  If referenced ProductVariant does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+    *  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
     */
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
         return this.productVariant;
     }
 
     /**
-    *  <p>The Product in which the Product Variant containing this <a href="/../api/projects/products#embeddedprice">EmbeddedPrice</a> is contained. Maps to <code>ProductVariant.product</code>.
-    *  The Reference to the <a href="/../api/projects/products#product">Product</a> with which the <a href="/../api/projects/products#embeddedprice">EmbeddedPrice</a> is associated.
-    *  If referenced Product does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Product is created.</p>
+    *  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
     */
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
         return this.product;

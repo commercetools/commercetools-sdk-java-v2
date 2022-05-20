@@ -11,15 +11,27 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
 
     private java.util.List<String> currencies;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ProjectChangeCurrenciesActionBuilder currencies(final String... currencies) {
         this.currencies = new ArrayList<>(Arrays.asList(currencies));
         return this;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ProjectChangeCurrenciesActionBuilder currencies(final java.util.List<String> currencies) {
         this.currencies = currencies;
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public ProjectChangeCurrenciesActionBuilder plusCurrencies(final String... currencies) {
         if (this.currencies == null) {

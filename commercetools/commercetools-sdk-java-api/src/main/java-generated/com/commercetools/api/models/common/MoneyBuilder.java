@@ -13,10 +13,22 @@ public class MoneyBuilder implements Builder<Money> {
 
     private String currencyCode;
 
+    /**
+    *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+    *  <ul>
+    *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+    *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+    *  </ul>
+    */
+
     public MoneyBuilder centAmount(final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
+
+    /**
+    *  <p>Currency code compliant to ISO 4217.</p>
+    */
 
     public MoneyBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;

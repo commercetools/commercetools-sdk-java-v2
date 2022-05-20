@@ -46,16 +46,28 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    /**
+    *  <p>Name of the DiscountCode.</p>
+    */
+
     public DiscountCodeDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Name of the DiscountCode.</p>
+    */
+
     public DiscountCodeDraftBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>Description of the DiscountCode.</p>
+    */
 
     public DiscountCodeDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -63,16 +75,28 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
+    /**
+    *  <p>Description of the DiscountCode.</p>
+    */
+
     public DiscountCodeDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+    */
+
     public DiscountCodeDraftBuilder code(final String code) {
         this.code = code;
         return this;
     }
+
+    /**
+    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+    */
 
     public DiscountCodeDraftBuilder cartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
@@ -80,11 +104,19 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
+    /**
+    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+    */
+
     public DiscountCodeDraftBuilder cartDiscounts(
             final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
         this.cartDiscounts = cartDiscounts;
         return this;
     }
+
+    /**
+    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+    */
 
     public DiscountCodeDraftBuilder plusCartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
@@ -95,6 +127,10 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
+    /**
+    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+    */
+
     public DiscountCodeDraftBuilder plusCartDiscounts(
             Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
         if (this.cartDiscounts == null) {
@@ -106,6 +142,10 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
+    /**
+    *  <p>Specify the CartDiscounts the Platform applies when you add the DiscountCode to the Cart.</p>
+    */
+
     public DiscountCodeDraftBuilder withCartDiscounts(
             Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
         this.cartDiscounts = new ArrayList<>();
@@ -115,25 +155,45 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
+    /**
+    *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+    */
+
     public DiscountCodeDraftBuilder cartPredicate(@Nullable final String cartPredicate) {
         this.cartPredicate = cartPredicate;
         return this;
     }
+
+    /**
+    *  <p>Only active DiscountCodes can be applied to the Cart.</p>
+    */
 
     public DiscountCodeDraftBuilder isActive(@Nullable final Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
+    /**
+    *  <p>Number of times the DiscountCode can be applied.</p>
+    */
+
     public DiscountCodeDraftBuilder maxApplications(@Nullable final Long maxApplications) {
         this.maxApplications = maxApplications;
         return this;
     }
 
+    /**
+    *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+    */
+
     public DiscountCodeDraftBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
         this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
         return this;
     }
+
+    /**
+    *  <p>Custom Fields for the DiscountCode.</p>
+    */
 
     public DiscountCodeDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -141,20 +201,36 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
+    /**
+    *  <p>Custom Fields for the DiscountCode.</p>
+    */
+
     public DiscountCodeDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+    *  <p>Groups to which the DiscountCode will belong to.</p>
+    */
 
     public DiscountCodeDraftBuilder groups(@Nullable final String... groups) {
         this.groups = new ArrayList<>(Arrays.asList(groups));
         return this;
     }
 
+    /**
+    *  <p>Groups to which the DiscountCode will belong to.</p>
+    */
+
     public DiscountCodeDraftBuilder groups(@Nullable final java.util.List<String> groups) {
         this.groups = groups;
         return this;
     }
+
+    /**
+    *  <p>Groups to which the DiscountCode will belong to.</p>
+    */
 
     public DiscountCodeDraftBuilder plusGroups(@Nullable final String... groups) {
         if (this.groups == null) {
@@ -164,10 +240,18 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
+    */
+
     public DiscountCodeDraftBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+    *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
+    */
 
     public DiscountCodeDraftBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;

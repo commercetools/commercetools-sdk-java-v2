@@ -25,15 +25,27 @@ public class ChangeTargetMultiBuyLineItemsChangeValueBuilder
         return this;
     }
 
+    /**
+    *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+    */
+
     public ChangeTargetMultiBuyLineItemsChangeValueBuilder triggerQuantity(final Integer triggerQuantity) {
         this.triggerQuantity = triggerQuantity;
         return this;
     }
 
+    /**
+    *  <p>Quantity of line items that are discounted per application of this discount.</p>
+    */
+
     public ChangeTargetMultiBuyLineItemsChangeValueBuilder discountedQuantity(final Integer discountedQuantity) {
         this.discountedQuantity = discountedQuantity;
         return this;
     }
+
+    /**
+    *  <p>Maximum number of applications of this discount.</p>
+    */
 
     public ChangeTargetMultiBuyLineItemsChangeValueBuilder maxOccurrence(final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;

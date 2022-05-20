@@ -19,26 +19,46 @@ public class ProjectCategoryRecommendationMetaBuilder implements Builder<Project
 
     private java.util.List<String> generalCategoryNames;
 
+    /**
+    *  <p>The product name that was used to generate recommendations.</p>
+    */
+
     public ProjectCategoryRecommendationMetaBuilder productName(@Nullable final String productName) {
         this.productName = productName;
         return this;
     }
+
+    /**
+    *  <p>The product image that was used to generate recommendations.</p>
+    */
 
     public ProjectCategoryRecommendationMetaBuilder productImageUrl(@Nullable final String productImageUrl) {
         this.productImageUrl = productImageUrl;
         return this;
     }
 
+    /**
+    *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+    */
+
     public ProjectCategoryRecommendationMetaBuilder generalCategoryNames(final String... generalCategoryNames) {
         this.generalCategoryNames = new ArrayList<>(Arrays.asList(generalCategoryNames));
         return this;
     }
+
+    /**
+    *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+    */
 
     public ProjectCategoryRecommendationMetaBuilder generalCategoryNames(
             final java.util.List<String> generalCategoryNames) {
         this.generalCategoryNames = generalCategoryNames;
         return this;
     }
+
+    /**
+    *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+    */
 
     public ProjectCategoryRecommendationMetaBuilder plusGeneralCategoryNames(final String... generalCategoryNames) {
         if (this.generalCategoryNames == null) {

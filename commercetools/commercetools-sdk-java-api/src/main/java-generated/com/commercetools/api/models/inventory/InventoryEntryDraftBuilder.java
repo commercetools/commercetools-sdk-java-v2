@@ -36,6 +36,10 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier for the InventoryEntry.</p>
+    */
+
     public InventoryEntryDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
@@ -69,11 +73,19 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
         return this;
     }
 
+    /**
+    *  <p>The custom fields.</p>
+    */
+
     public InventoryEntryDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The custom fields.</p>
+    */
 
     public InventoryEntryDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

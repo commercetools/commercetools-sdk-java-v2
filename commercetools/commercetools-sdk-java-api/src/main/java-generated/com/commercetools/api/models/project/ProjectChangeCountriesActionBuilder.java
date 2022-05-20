@@ -11,15 +11,27 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
 
     private java.util.List<String> countries;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ProjectChangeCountriesActionBuilder countries(final String... countries) {
         this.countries = new ArrayList<>(Arrays.asList(countries));
         return this;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ProjectChangeCountriesActionBuilder countries(final java.util.List<String> countries) {
         this.countries = countries;
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public ProjectChangeCountriesActionBuilder plusCountries(final String... countries) {
         if (this.countries == null) {

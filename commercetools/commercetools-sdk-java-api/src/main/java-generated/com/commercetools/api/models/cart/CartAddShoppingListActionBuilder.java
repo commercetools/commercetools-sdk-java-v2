@@ -20,6 +20,10 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    /**
+    *  <p>ResourceIdentifier to a ShoppingList.</p>
+    */
+
     public CartAddShoppingListActionBuilder shoppingList(
             Function<com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder, com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder> builder) {
         this.shoppingList = builder
@@ -28,11 +32,19 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a ShoppingList.</p>
+    */
+
     public CartAddShoppingListActionBuilder shoppingList(
             final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList) {
         this.shoppingList = shoppingList;
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
 
     public CartAddShoppingListActionBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -41,11 +53,19 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
+
     public CartAddShoppingListActionBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
 
     public CartAddShoppingListActionBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -54,6 +74,10 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
 
     public CartAddShoppingListActionBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {

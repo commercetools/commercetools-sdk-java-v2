@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The tokenizer defines the tokens that are used to match against the <a href="/../products-suggestions#suggest-query">Suggest Query</a> input.</p>
+*  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {

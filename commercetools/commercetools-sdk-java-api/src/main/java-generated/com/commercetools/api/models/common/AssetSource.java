@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Representation of an <a href="#asset">Asset</a> in a specific format, for example a video in a certain encoding, or an image in a certain resolution.</p>
+*  <p>Representation of an Asset in a specific format, for example a video in a certain encoding, or an image in a certain resolution.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AssetSourceImpl.class)

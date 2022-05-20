@@ -32,7 +32,7 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
     }
 
     /**
-    *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the <a href="ctp:api:type:CartDraft">CartDraft</a>. This field may not be present on Projects created before January 2020.</p>
+    *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft. This field may not be present on Projects created before January 2020.</p>
     */
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;

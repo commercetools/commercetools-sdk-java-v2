@@ -16,6 +16,10 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setName</code></p>
+    */
+
     public SetNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

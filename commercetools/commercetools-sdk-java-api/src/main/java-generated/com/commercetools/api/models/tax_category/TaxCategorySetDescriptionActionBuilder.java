@@ -14,6 +14,10 @@ public class TaxCategorySetDescriptionActionBuilder implements Builder<TaxCatego
     @Nullable
     private String description;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public TaxCategorySetDescriptionActionBuilder description(@Nullable final String description) {
         this.description = description;
         return this;

@@ -16,6 +16,10 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeSlug</code></p>
+    */
+
     public ChangeSlugChangeBuilder change(final String change) {
         this.change = change;
         return this;

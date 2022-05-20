@@ -30,14 +30,14 @@ public interface SetLocaleChange extends Change {
     public String getChange();
 
     /**
-    *  <p>A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</p>
+    *  <p>A locale of IETF language tag.</p>
     */
     @NotNull
     @JsonProperty("previousValue")
     public String getPreviousValue();
 
     /**
-    *  <p>A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</p>
+    *  <p>A locale of IETF language tag.</p>
     */
     @NotNull
     @JsonProperty("nextValue")

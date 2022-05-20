@@ -32,8 +32,7 @@ public interface ProductVariant {
     public String getSku();
 
     /**
-    *  <p>User-defined unique identifier of the ProductVariant.
-    *  <em>ProductVariant keys are different from Product keys.</em></p>
+    *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
     */
 
     @JsonProperty("key")

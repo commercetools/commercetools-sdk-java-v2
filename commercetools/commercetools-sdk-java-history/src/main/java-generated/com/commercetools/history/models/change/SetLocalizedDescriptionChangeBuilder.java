@@ -16,6 +16,10 @@ public class SetLocalizedDescriptionChangeBuilder implements Builder<SetLocalize
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setDescription</code></p>
+    */
+
     public SetLocalizedDescriptionChangeBuilder change(final String change) {
         this.change = change;
         return this;

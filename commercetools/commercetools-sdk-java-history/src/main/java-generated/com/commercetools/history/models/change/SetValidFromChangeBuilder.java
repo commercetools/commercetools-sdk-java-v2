@@ -15,6 +15,10 @@ public class SetValidFromChangeBuilder implements Builder<SetValidFromChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setValidFrom</code></p>
+    */
+
     public SetValidFromChangeBuilder change(final String change) {
         this.change = change;
         return this;

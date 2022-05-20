@@ -11,6 +11,10 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
 
     private String name;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public TaxCategoryChangeNameActionBuilder name(final String name) {
         this.name = name;
         return this;

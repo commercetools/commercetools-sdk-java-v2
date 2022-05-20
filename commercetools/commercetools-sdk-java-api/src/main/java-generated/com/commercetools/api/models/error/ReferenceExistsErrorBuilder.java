@@ -36,6 +36,10 @@ public class ReferenceExistsErrorBuilder implements Builder<ReferenceExistsError
         return this;
     }
 
+    /**
+    *  <p>supported resource type identifiers:</p>
+    */
+
     public ReferenceExistsErrorBuilder referencedBy(
             @Nullable final com.commercetools.api.models.common.ReferenceTypeId referencedBy) {
         this.referencedBy = referencedBy;

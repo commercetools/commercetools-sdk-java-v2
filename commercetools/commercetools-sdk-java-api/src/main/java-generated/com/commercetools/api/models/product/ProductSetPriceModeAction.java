@@ -17,7 +17,7 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
     String SET_PRICE_MODE = "setPriceMode";
 
     /**
-    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
+    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
     */
 
     @JsonProperty("priceMode")

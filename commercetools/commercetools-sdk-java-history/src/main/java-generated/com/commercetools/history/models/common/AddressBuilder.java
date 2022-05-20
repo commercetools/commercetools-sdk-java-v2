@@ -59,6 +59,10 @@ public class AddressBuilder implements Builder<Address> {
 
     private String externalId;
 
+    /**
+    *  <p>Unique ID of the Address.</p>
+    */
+
     public AddressBuilder id(final String id) {
         this.id = id;
         return this;
@@ -123,6 +127,10 @@ public class AddressBuilder implements Builder<Address> {
         this.state = state;
         return this;
     }
+
+    /**
+    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+    */
 
     public AddressBuilder country(final String country) {
         this.country = country;

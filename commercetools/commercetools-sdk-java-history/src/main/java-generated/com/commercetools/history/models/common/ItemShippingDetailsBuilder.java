@@ -51,6 +51,10 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
         return this;
     }
 
+    /**
+    *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+    */
+
     public ItemShippingDetailsBuilder valid(final Boolean valid) {
         this.valid = valid;
         return this;

@@ -15,14 +15,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MissingAttributesSearchRequest {
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
 
     @JsonProperty("limit")
     public Integer getLimit();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
 
     @JsonProperty("offset")
@@ -64,8 +64,7 @@ public interface MissingAttributesSearchRequest {
     public Double getCoverageMax();
 
     /**
-    *  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>]
-    *  <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>
+    *  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>] <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>
     */
 
     @JsonProperty("sortBy")
@@ -79,24 +78,21 @@ public interface MissingAttributesSearchRequest {
     public Boolean getShowMissingAttributeNames();
 
     /**
-    *  <p>Filters results by the provided Product IDs.
-    *  Cannot be applied in combination with any other filter.</p>
+    *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
     */
 
     @JsonProperty("productIds")
     public List<String> getProductIds();
 
     /**
-    *  <p>Filters results by the provided product type IDs.
-    *  Cannot be applied in combination with any other filter.</p>
+    *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>
     */
 
     @JsonProperty("productTypeIds")
     public List<String> getProductTypeIds();
 
     /**
-    *  <p>Filters results by the provided attribute name. If provided,  products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs
-    *  are then listed in <code>MissingAttributesMeta</code>. The  <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>
+    *  <p>Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in <code>MissingAttributesMeta</code>. The <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>
     */
 
     @JsonProperty("attributeName")

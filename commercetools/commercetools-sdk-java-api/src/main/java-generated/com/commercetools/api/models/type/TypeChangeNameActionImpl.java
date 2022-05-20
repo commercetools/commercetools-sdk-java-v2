@@ -36,8 +36,7 @@ public class TypeChangeNameActionImpl implements TypeChangeNameAction, ModelBase
     }
 
     /**
-    *  <p>New value to set.
-    *  Must not be empty.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;

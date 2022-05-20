@@ -50,7 +50,7 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
     }
 
     /**
-    *  <p>Whitespace-separated list of <a href="/../api/scopes">OAuth scopes</a> that can be used when <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtaining an access token</a>.</p>
+    *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
     */
     public String getScope() {
         return this.scope;

@@ -23,36 +23,64 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
 
     private java.util.List<com.commercetools.api.models.channel.Channel> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ChannelPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ChannelPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+    *  <p>Actual number of results returned.</p>
+    */
+
     public ChannelPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+    */
 
     public ChannelPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
 
+    /**
+    *  <p>Channels matching the query.</p>
+    */
+
     public ChannelPagedQueryResponseBuilder results(final com.commercetools.api.models.channel.Channel... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
+
+    /**
+    *  <p>Channels matching the query.</p>
+    */
 
     public ChannelPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.channel.Channel> results) {
         this.results = results;
         return this;
     }
+
+    /**
+    *  <p>Channels matching the query.</p>
+    */
 
     public ChannelPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.channel.Channel... results) {
         if (this.results == null) {
@@ -62,6 +90,10 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
         return this;
     }
 
+    /**
+    *  <p>Channels matching the query.</p>
+    */
+
     public ChannelPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
         if (this.results == null) {
@@ -70,6 +102,10 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
         this.results.add(builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Channels matching the query.</p>
+    */
 
     public ChannelPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {

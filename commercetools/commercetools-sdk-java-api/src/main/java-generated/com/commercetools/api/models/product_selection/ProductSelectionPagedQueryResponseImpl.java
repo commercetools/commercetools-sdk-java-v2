@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/general-concepts#pagedqueryresult">PagedQueryResult</a> containing an array of <a href="ctp:api:type:ProductSelection">ProductSelection</a>.</p>
+*  <p>PagedQueryResult containing an array of ProductSelection.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProductSelectionPagedQueryResponseImpl implements ProductSelectionPagedQueryResponse, ModelBase {
@@ -46,14 +46,14 @@ public class ProductSelectionPagedQueryResponseImpl implements ProductSelectionP
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     public Long getOffset() {
         return this.offset;
@@ -67,18 +67,14 @@ public class ProductSelectionPagedQueryResponseImpl implements ProductSelectionP
     }
 
     /**
-    *  <p>Total number of results matching the query.
-    *  This number is an estimation that is not <a href="/general-concepts#strong-consistency">strongly consistent</a>.
-    *  Unlike other endpoints, the Product Selection endpoint does not return this field by default.
-    *  To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>.
-    *  When the results are filtered with a <a href="/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/limits#queries">limit</a>.</p>
+    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
     */
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ProductSelection">ProductSelections</a> matching the query.</p>
+    *  <p>ProductSelections matching the query.</p>
     */
     public java.util.List<com.commercetools.api.models.product_selection.ProductSelection> getResults() {
         return this.results;

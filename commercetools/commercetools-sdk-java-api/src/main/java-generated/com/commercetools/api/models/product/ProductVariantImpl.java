@@ -82,8 +82,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier of the ProductVariant.
-    *  <em>ProductVariant keys are different from Product keys.</em></p>
+    *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
     */
     public String getKey() {
         return this.key;

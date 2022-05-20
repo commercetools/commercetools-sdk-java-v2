@@ -15,6 +15,10 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
 
     private com.commercetools.history.models.common.ReturnPaymentState previousValue;
 
+    /**
+    *  <p>Update action for <code>setReturnPaymentState</code></p>
+    */
+
     public SetReturnPaymentStateChangeBuilder change(final String change) {
         this.change = change;
         return this;

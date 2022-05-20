@@ -26,6 +26,10 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     private Integer quantity;
 
+    /**
+    *  <p>When the text line item was added to the shopping list.</p>
+    */
+
     public TextLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
@@ -53,6 +57,10 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         this.description = description;
         return this;
     }
+
+    /**
+    *  <p>Platform-generated unique identifier of the TextLineItem.</p>
+    */
 
     public TextLineItemBuilder id(final String id) {
         this.id = id;

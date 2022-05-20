@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Retrieves all <a href="ctp:import:type:ImportOperation">ImportOperations</a> of a given ImportContainer key.</p>
+*  <p>Retrieves all ImportOperations of a given ImportContainer key.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet extends

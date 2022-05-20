@@ -77,7 +77,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-    *  <p>The key of the <a href="/import-container#importcontainer">importContainer</a>.</p>
+    *  <p>The key of the importContainer.</p>
     */
     public String getImportContainerKey() {
         return this.importContainerKey;
@@ -112,7 +112,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-    *  <p>Contains an error if the import of the resource was not successful. See <a href="/error">Errors</a>.</p>
+    *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
     */
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;

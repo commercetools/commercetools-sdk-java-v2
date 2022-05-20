@@ -53,14 +53,14 @@ public interface ProductSelection extends BaseResource, com.commercetools.api.mo
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources updated after 1/02/2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1/02/2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")

@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> for <a href="#importcontainer">ImportContainers</a>.
-*  Used as a response to a query request for <a href="#importcontainer">ImportContainers</a>.</p>
+*  <p>PagedQueryResult for ImportContainers. Used as a response to a query request for ImportContainers.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ImportContainerPagedResponseImpl implements ImportContainerPagedResponse, ModelBase {
@@ -47,14 +46,14 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     public Integer getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     public Long getOffset() {
         return this.offset;

@@ -15,6 +15,10 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
 
     private com.commercetools.history.models.common.StackingMode previousValue;
 
+    /**
+    *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+    */
+
     public ChangeStackingModeChangeBuilder change(final String change) {
         this.change = change;
         return this;

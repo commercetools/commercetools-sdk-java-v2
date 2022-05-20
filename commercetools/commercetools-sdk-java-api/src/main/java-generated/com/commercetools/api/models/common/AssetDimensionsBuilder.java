@@ -13,10 +13,18 @@ public class AssetDimensionsBuilder implements Builder<AssetDimensions> {
 
     private Integer h;
 
+    /**
+    *  <p>Width of the Asset source.</p>
+    */
+
     public AssetDimensionsBuilder w(final Integer w) {
         this.w = w;
         return this;
     }
+
+    /**
+    *  <p>Height of the Asset source.</p>
+    */
 
     public AssetDimensionsBuilder h(final Integer h) {
         this.h = h;

@@ -15,6 +15,10 @@ public class SetVatIdChangeBuilder implements Builder<SetVatIdChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setVatId</code></p>
+    */
+
     public SetVatIdChangeBuilder change(final String change) {
         this.change = change;
         return this;

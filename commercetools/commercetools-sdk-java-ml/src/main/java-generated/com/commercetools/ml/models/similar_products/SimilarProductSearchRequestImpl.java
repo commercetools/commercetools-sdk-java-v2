@@ -54,14 +54,14 @@ public class SimilarProductSearchRequestImpl implements SimilarProductSearchRequ
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     public Long getOffset() {
         return this.offset;
@@ -75,7 +75,7 @@ public class SimilarProductSearchRequestImpl implements SimilarProductSearchRequ
     }
 
     /**
-    *  <p>The three-digit  currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
+    *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
     */
     public String getCurrencyCode() {
         return this.currencyCode;

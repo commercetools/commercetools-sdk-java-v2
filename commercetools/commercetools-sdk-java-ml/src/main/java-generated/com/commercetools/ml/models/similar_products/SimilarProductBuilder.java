@@ -21,27 +21,47 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     @Nullable
     private com.commercetools.ml.models.similar_products.SimilarProductMeta meta;
 
+    /**
+    *  <p>Reference to Product</p>
+    */
+
     public SimilarProductBuilder product(
             Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Reference to Product</p>
+    */
+
     public SimilarProductBuilder product(@Nullable final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
         return this;
     }
+
+    /**
+    *  <p>ID of the ProductVariant that was compared.</p>
+    */
 
     public SimilarProductBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
 
+    /**
+    *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+    */
+
     public SimilarProductBuilder meta(
             Function<com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder, com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder> builder) {
         this.meta = builder.apply(com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+    */
 
     public SimilarProductBuilder meta(
             @Nullable final com.commercetools.ml.models.similar_products.SimilarProductMeta meta) {

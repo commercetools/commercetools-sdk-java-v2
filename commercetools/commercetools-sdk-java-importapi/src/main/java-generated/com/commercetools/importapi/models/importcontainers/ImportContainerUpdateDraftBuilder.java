@@ -16,10 +16,18 @@ public class ImportContainerUpdateDraftBuilder implements Builder<ImportContaine
     @Nullable
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
+    /**
+    *  <p>Current version of the ImportContainer.</p>
+    */
+
     public ImportContainerUpdateDraftBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+    *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+    */
 
     public ImportContainerUpdateDraftBuilder resourceType(
             @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {

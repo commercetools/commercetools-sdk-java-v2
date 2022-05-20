@@ -16,10 +16,18 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     private com.commercetools.history.models.change_value.LocalizedEnumValue previousValue;
 
+    /**
+    *  <p>Update action for <code>removeEnumValues</code> on product types</p>
+    */
+
     public RemoveLocalizedEnumValuesChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>The name of the attribute updated.</p>
+    */
 
     public RemoveLocalizedEnumValuesChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

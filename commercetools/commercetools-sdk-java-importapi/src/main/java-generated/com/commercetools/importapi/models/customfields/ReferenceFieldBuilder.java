@@ -12,10 +12,18 @@ public class ReferenceFieldBuilder implements Builder<ReferenceField> {
 
     private com.commercetools.importapi.models.common.KeyReference value;
 
+    /**
+    *  <p>References a resource by key</p>
+    */
+
     public ReferenceFieldBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
         return this;
     }
+
+    /**
+    *  <p>References a resource by key</p>
+    */
 
     public ReferenceFieldBuilder value(
             Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {

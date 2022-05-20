@@ -22,7 +22,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     String ADD_SHOPPING_LIST = "addShoppingList";
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:ShoppingList">ShoppingList</a>.</p>
+    *  <p>ResourceIdentifier to a ShoppingList.</p>
     */
     @NotNull
     @Valid
@@ -30,14 +30,14 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     public ShoppingListResourceIdentifier getShoppingList();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>ResourceIdentifier to a Channel.</p>
     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>ResourceIdentifier to a Channel.</p>
     */
     @Valid
     @JsonProperty("distributionChannel")

@@ -21,7 +21,7 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
     String ORDER_DISCOUNT_CODE_REMOVED = "OrderDiscountCodeRemoved";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    *  <p>Reference to a DiscountCode.</p>
     */
     @NotNull
     @Valid

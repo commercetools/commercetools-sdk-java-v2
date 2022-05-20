@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The resources in the request are not in the valid state for the operation.
-*  The client application should validate the constraints described in the error message before sending the request again.</p>
+*  <p>The resources in the request are not in the valid state for the operation. The client application should validate the constraints described in the error message before sending the request again.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class InvalidOperationImpl implements InvalidOperation, ModelBase {

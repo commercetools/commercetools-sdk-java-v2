@@ -13,10 +13,18 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
 
     private String accountId;
 
+    /**
+    *  <p>AWS region to which commercetools sends the events.</p>
+    */
+
     public EventBridgeDestinationBuilder region(final String region) {
         this.region = region;
         return this;
     }
+
+    /**
+    *  <p>ID of the AWS account that receives events from the commercetools platform.</p>
+    */
 
     public EventBridgeDestinationBuilder accountId(final String accountId) {
         this.accountId = accountId;

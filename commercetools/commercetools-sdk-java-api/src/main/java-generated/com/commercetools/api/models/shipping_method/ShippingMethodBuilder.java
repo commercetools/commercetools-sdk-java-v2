@@ -52,10 +52,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+    *  <p>Platform-generated unique identifier of the ShippingMethod.</p>
+    */
+
     public ShippingMethodBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>The current version of the shipping method.</p>
+    */
 
     public ShippingMethodBuilder version(final Long version) {
         this.version = version;
@@ -72,11 +80,19 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ShippingMethodBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ShippingMethodBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -84,16 +100,28 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ShippingMethodBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ShippingMethodBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the ShippingMethod.</p>
+    */
 
     public ShippingMethodBuilder key(@Nullable final String key) {
         this.key = key;
@@ -184,10 +212,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+    *  <p>One shipping method in a project can be default.</p>
+    */
+
     public ShippingMethodBuilder isDefault(final Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
     }
+
+    /**
+    *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+    */
 
     public ShippingMethodBuilder predicate(@Nullable final String predicate) {
         this.predicate = predicate;

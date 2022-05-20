@@ -51,9 +51,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-    *  <p>The type of this transaction.
-    *  Only the <code>Authorization</code> or <code>Charge</code>
-    *  TransactionTypes are allowed here.</p>
+    *  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>
     */
     public com.commercetools.api.models.payment.TransactionType getType() {
         return this.type;
@@ -64,10 +62,7 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
     }
 
     /**
-    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-    *  If a matching interaction was logged in the interfaceInteractions array,
-    *  the corresponding interaction should be findable with this ID.
-    *  The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
+    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
     */
     public String getInteractionId() {
         return this.interactionId;

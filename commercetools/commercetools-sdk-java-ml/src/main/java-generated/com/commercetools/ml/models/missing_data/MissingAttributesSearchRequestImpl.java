@@ -70,14 +70,14 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     public Integer getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     public Integer getOffset() {
         return this.offset;
@@ -119,8 +119,7 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-    *  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>]
-    *  <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>
+    *  <p>Default value: <code>coverageAttributeValues</code> - Allowed values: [<code>coverageAttributeValues</code>, <code>coverageAttributeNames</code>] <code>coverageAttributeValues</code> shows the product variants with the most missing attribute values first and <code>coverageAttributeNames</code> the ones with the most missing attribute names.</p>
     */
     public String getSortBy() {
         return this.sortBy;
@@ -134,24 +133,21 @@ public class MissingAttributesSearchRequestImpl implements MissingAttributesSear
     }
 
     /**
-    *  <p>Filters results by the provided Product IDs.
-    *  Cannot be applied in combination with any other filter.</p>
+    *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with any other filter.</p>
     */
     public java.util.List<String> getProductIds() {
         return this.productIds;
     }
 
     /**
-    *  <p>Filters results by the provided product type IDs.
-    *  Cannot be applied in combination with any other filter.</p>
+    *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with any other filter.</p>
     */
     public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }
 
     /**
-    *  <p>Filters results by the provided attribute name. If provided,  products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs
-    *  are then listed in <code>MissingAttributesMeta</code>. The  <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>
+    *  <p>Filters results by the provided attribute name. If provided, products are only checked for this attribute. Therefore, only products of product types which define the attribute name are considered. These product type IDs are then listed in <code>MissingAttributesMeta</code>. The <code>attributeCount</code> and <code>attributeCoverage</code> fields are not part of the response when using this filter. Cannot be applied in combination with any other filter.</p>
     */
     public String getAttributeName() {
         return this.attributeName;

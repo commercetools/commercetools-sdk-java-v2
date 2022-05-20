@@ -12,11 +12,19 @@ public class ExtensionChangeDestinationActionBuilder implements Builder<Extensio
 
     private com.commercetools.api.models.extension.ExtensionDestination destination;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ExtensionChangeDestinationActionBuilder destination(
             final com.commercetools.api.models.extension.ExtensionDestination destination) {
         this.destination = destination;
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public ExtensionChangeDestinationActionBuilder destination(
             Function<com.commercetools.api.models.extension.ExtensionDestinationBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionDestination>> builder) {

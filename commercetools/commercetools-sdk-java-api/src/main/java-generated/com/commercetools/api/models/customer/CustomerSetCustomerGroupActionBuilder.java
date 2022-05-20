@@ -15,6 +15,10 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
+    /**
+    *  <p>If not defined, the customer group is unset.</p>
+    */
+
     public CustomerSetCustomerGroupActionBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
         this.customerGroup = builder
@@ -22,6 +26,10 @@ public class CustomerSetCustomerGroupActionBuilder implements Builder<CustomerSe
                 .build();
         return this;
     }
+
+    /**
+    *  <p>If not defined, the customer group is unset.</p>
+    */
 
     public CustomerSetCustomerGroupActionBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {

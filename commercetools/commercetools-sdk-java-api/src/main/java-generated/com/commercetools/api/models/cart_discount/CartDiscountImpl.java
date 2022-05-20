@@ -124,14 +124,14 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
@@ -171,10 +171,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>The string must contain a number between 0 and 1.
-    *  All matching cart discounts are applied to a cart in the order defined by this field.
-    *  A discount with greater sort order is prioritized higher than a discount with lower sort order.
-    *  The sort order is unambiguous among all cart discounts.</p>
+    *  <p>The string must contain a number between 0 and 1. All matching cart discounts are applied to a cart in the order defined by this field. A discount with greater sort order is prioritized higher than a discount with lower sort order. The sort order is unambiguous among all cart discounts.</p>
     */
     public String getSortOrder() {
         return this.sortOrder;
@@ -203,16 +200,14 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>The platform will generate this array from the predicate.
-    *  It contains the references of all the resources that are addressed in the predicate.</p>
+    *  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>
     */
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
         return this.references;
     }
 
     /**
-    *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.
-    *  Defaults to Stacking.</p>
+    *  <p>Specifies whether the application of this discount causes the following discounts to be ignored. Defaults to Stacking.</p>
     */
     public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
         return this.stackingMode;

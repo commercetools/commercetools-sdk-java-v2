@@ -15,6 +15,10 @@ public class SetExpectedDeliveryChangeBuilder implements Builder<SetExpectedDeli
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setExpectedDelivery</code></p>
+    */
+
     public SetExpectedDeliveryChangeBuilder change(final String change) {
         this.change = change;
         return this;

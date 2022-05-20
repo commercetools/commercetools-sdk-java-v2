@@ -23,6 +23,10 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
 
     private java.util.List<com.commercetools.api.models.me.MyPayment> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public MyPaymentPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public MyPaymentPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

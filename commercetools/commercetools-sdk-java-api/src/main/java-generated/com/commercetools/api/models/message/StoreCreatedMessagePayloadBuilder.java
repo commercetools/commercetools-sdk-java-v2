@@ -26,11 +26,19 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
+
     public StoreCreatedMessagePayloadBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public StoreCreatedMessagePayloadBuilder name(
             @Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -173,11 +181,19 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+    */
+
     public StoreCreatedMessagePayloadBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+    */
 
     public StoreCreatedMessagePayloadBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFields custom) {

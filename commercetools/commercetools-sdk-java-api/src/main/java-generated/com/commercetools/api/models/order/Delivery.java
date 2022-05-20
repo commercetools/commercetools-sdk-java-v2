@@ -32,8 +32,7 @@ public interface Delivery extends com.commercetools.api.models.Customizable<Deli
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>Items which are shipped in this delivery regardless their distribution over several parcels.
-    *  Can also be specified individually for each Parcel.</p>
+    *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
     */
     @NotNull
     @Valid

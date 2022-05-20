@@ -15,6 +15,10 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
 
     private java.lang.Object previousValue;
 
+    /**
+    *  <p>Update action for <code>setShippingRateInput</code></p>
+    */
+
     public SetShippingRateInputChangeBuilder change(final String change) {
         this.change = change;
         return this;

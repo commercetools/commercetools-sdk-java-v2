@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The representation sent to the server when creating an <a href="#importcontainer">ImportContainer</a>.</p>
+*  <p>The representation sent to the server when creating an ImportContainer.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase {
@@ -35,16 +35,14 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
     }
 
     /**
-    *  <p>User-defined unique identifier of the ImportContainer.
-    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+    *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
-    *  If not given, the ImportContainer is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
+    *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
     */
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;

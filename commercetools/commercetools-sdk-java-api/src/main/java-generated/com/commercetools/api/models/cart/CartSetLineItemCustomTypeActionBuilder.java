@@ -25,11 +25,19 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
         return this;
     }
 
+    /**
+    *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+    */
+
     public CartSetLineItemCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+    */
 
     public CartSetLineItemCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -37,11 +45,19 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
         return this;
     }
 
+    /**
+    *  <p>Sets the Custom Fields fields for the LineItem.</p>
+    */
+
     public CartSetLineItemCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Sets the Custom Fields fields for the LineItem.</p>
+    */
 
     public CartSetLineItemCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

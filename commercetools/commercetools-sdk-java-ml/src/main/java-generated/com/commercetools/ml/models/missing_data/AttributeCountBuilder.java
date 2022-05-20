@@ -15,15 +15,27 @@ public class AttributeCountBuilder implements Builder<AttributeCount> {
 
     private Integer missingAttributeValues;
 
+    /**
+    *  <p>Number of attributes defined in the product type.</p>
+    */
+
     public AttributeCountBuilder productTypeAttributes(final Integer productTypeAttributes) {
         this.productTypeAttributes = productTypeAttributes;
         return this;
     }
 
+    /**
+    *  <p>Number of attributes defined in the variant.</p>
+    */
+
     public AttributeCountBuilder variantAttributes(final Integer variantAttributes) {
         this.variantAttributes = variantAttributes;
         return this;
     }
+
+    /**
+    *  <p>Number of attributes missing values in the variant.</p>
+    */
 
     public AttributeCountBuilder missingAttributeValues(final Integer missingAttributeValues) {
         this.missingAttributeValues = missingAttributeValues;

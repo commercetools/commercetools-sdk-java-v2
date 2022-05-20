@@ -15,15 +15,27 @@ public class HitBuilder implements Builder<Hit> {
 
     private Double relevance;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Order.</p>
+    */
+
     public HitBuilder id(final String id) {
         this.id = id;
         return this;
     }
 
+    /**
+    *  <p>Current version of the Order.</p>
+    */
+
     public HitBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+    *  <p>The higher the value is, the more relevant the hit is for the search request.</p>
+    */
 
     public HitBuilder relevance(final Double relevance) {
         this.relevance = relevance;

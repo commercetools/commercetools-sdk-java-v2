@@ -17,16 +17,28 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategory obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>
+    */
+
     public TaxCategoryReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+    */
 
     public TaxCategoryReferenceBuilder obj(
             Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategoryBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+    */
 
     public TaxCategoryReferenceBuilder obj(@Nullable final com.commercetools.api.models.tax_category.TaxCategory obj) {
         this.obj = obj;

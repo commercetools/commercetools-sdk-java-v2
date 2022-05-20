@@ -23,6 +23,10 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
 
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntry> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public InventoryPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public InventoryPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

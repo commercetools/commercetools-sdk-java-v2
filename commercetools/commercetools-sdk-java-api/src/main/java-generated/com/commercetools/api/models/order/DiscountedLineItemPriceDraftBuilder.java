@@ -14,11 +14,21 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
+
     public DiscountedLineItemPriceDraftBuilder value(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
 
     public DiscountedLineItemPriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;

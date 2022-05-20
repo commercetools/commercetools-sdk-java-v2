@@ -48,12 +48,20 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a Cart.</p>
+    */
+
     public CustomerSigninBuilder anonymousCart(
             Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
         this.anonymousCart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Cart.</p>
+    */
 
     public CustomerSigninBuilder anonymousCart(
             @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart) {

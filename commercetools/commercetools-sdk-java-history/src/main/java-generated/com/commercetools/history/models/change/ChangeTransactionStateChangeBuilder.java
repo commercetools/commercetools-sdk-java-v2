@@ -18,6 +18,10 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     private com.commercetools.history.models.common.TransactionState previousValue;
 
+    /**
+    *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+    */
+
     public ChangeTransactionStateChangeBuilder change(final String change) {
         this.change = change;
         return this;

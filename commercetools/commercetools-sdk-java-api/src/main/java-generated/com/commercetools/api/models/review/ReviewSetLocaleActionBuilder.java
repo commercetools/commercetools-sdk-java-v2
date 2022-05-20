@@ -14,6 +14,10 @@ public class ReviewSetLocaleActionBuilder implements Builder<ReviewSetLocaleActi
     @Nullable
     private String locale;
 
+    /**
+    *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+
     public ReviewSetLocaleActionBuilder locale(@Nullable final String locale) {
         this.locale = locale;
         return this;

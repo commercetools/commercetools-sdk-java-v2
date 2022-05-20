@@ -21,8 +21,7 @@ public interface CategoryChangeSlugAction extends CategoryUpdateAction {
     String CHANGE_SLUG = "changeSlug";
 
     /**
-    *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.
-    *  Maximum size is {{ site.data.api-limits.slugLength }}.</p>
+    *  <p>Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters. Maximum size is {{ site.data.api-limits.slugLength }}.</p>
     */
     @NotNull
     @Valid

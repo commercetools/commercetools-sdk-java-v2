@@ -113,8 +113,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-    *  <p>User-defined identifier for the address.
-    *  Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+    *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
     */
     public String getKey() {
         return this.key;
@@ -165,7 +164,7 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
     */
     public String getCountry() {
         return this.country;

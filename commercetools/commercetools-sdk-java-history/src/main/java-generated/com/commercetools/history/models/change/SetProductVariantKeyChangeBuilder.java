@@ -17,6 +17,10 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     private String nextValue;
 
+    /**
+    *  <p>Update action for <code>setProductVariantKey</code></p>
+    */
+
     public SetProductVariantKeyChangeBuilder change(final String change) {
         this.change = change;
         return this;

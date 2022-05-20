@@ -42,7 +42,7 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Reference to a State.</p>
     */
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;

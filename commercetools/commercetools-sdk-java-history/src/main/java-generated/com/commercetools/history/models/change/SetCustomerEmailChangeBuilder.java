@@ -15,6 +15,10 @@ public class SetCustomerEmailChangeBuilder implements Builder<SetCustomerEmailCh
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setCustomerEmail</code></p>
+    */
+
     public SetCustomerEmailChangeBuilder change(final String change) {
         this.change = change;
         return this;

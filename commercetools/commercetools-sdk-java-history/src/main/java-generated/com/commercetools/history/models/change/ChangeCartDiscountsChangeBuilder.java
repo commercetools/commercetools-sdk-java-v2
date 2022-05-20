@@ -16,6 +16,10 @@ public class ChangeCartDiscountsChangeBuilder implements Builder<ChangeCartDisco
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeCartDiscounts</code></p>
+    */
+
     public ChangeCartDiscountsChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -50,14 +50,14 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
@@ -87,9 +87,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     public List<ExtensionTrigger> getTriggers();
 
     /**
-    *  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension.
-    *  If no timeout is provided, the default value is used for all types of Extensions.
-    *  The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+    *  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
     */
 
     @JsonProperty("timeoutInMs")

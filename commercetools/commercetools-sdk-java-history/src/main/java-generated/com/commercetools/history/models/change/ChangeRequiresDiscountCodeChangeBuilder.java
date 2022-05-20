@@ -15,6 +15,10 @@ public class ChangeRequiresDiscountCodeChangeBuilder implements Builder<ChangeRe
 
     private Boolean nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>
+    */
+
     public ChangeRequiresDiscountCodeChangeBuilder change(final String change) {
         this.change = change;
         return this;

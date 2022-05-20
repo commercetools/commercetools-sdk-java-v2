@@ -14,16 +14,28 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     private com.commercetools.importapi.models.order_patches.OrderField fields;
 
+    /**
+    *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+    */
+
     public OrderPatchImportBuilder orderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
     }
+
+    /**
+    *  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>
+    */
 
     public OrderPatchImportBuilder fields(
             Function<com.commercetools.importapi.models.order_patches.OrderFieldBuilder, com.commercetools.importapi.models.order_patches.OrderFieldBuilder> builder) {
         this.fields = builder.apply(com.commercetools.importapi.models.order_patches.OrderFieldBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Each field referenced must be defined in an already existing order in the commercetools project or the import operation state is set to <code>validationFailed</code>.</p>
+    */
 
     public OrderPatchImportBuilder fields(final com.commercetools.importapi.models.order_patches.OrderField fields) {
         this.fields = fields;

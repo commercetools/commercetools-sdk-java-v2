@@ -14,6 +14,10 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
 
     private com.commercetools.history.models.common.DiscountCodeInfo previousValue;
 
+    /**
+    *  <p>Update action for <code>removeDiscountCode</code></p>
+    */
+
     public RemoveDiscountCodeChangeBuilder change(final String change) {
         this.change = change;
         return this;

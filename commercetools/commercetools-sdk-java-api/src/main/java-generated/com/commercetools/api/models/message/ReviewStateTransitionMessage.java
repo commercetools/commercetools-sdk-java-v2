@@ -22,7 +22,7 @@ public interface ReviewStateTransitionMessage extends Message {
     String REVIEW_STATE_TRANSITION = "ReviewStateTransition";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Reference to a State.</p>
     */
     @NotNull
     @Valid
@@ -30,7 +30,7 @@ public interface ReviewStateTransitionMessage extends Message {
     public StateReference getOldState();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Reference to a State.</p>
     */
     @NotNull
     @Valid
@@ -46,7 +46,7 @@ public interface ReviewStateTransitionMessage extends Message {
     public Boolean getNewIncludedInStatistics();
 
     /**
-    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like <a href="ctp:api:type:ChannelReference">ChannelReference</a>.  A referenced resource can be embedded through <a href="/general-concepts#reference-expansion">Reference Expansion</a>. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
     */
     @NotNull
     @Valid

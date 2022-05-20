@@ -24,15 +24,27 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     @Nullable
     private String anonymousId;
 
+    /**
+    *  <p><code>id</code> of the APIClient which created the resource.</p>
+    */
+
     public ClientLoggingBuilder clientId(@Nullable final String clientId) {
         this.clientId = clientId;
         return this;
     }
 
+    /**
+    *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+    */
+
     public ClientLoggingBuilder externalUserId(@Nullable final String externalUserId) {
         this.externalUserId = externalUserId;
         return this;
     }
+
+    /**
+    *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+    */
 
     public ClientLoggingBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
@@ -40,11 +52,19 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
         return this;
     }
 
+    /**
+    *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+    */
+
     public ClientLoggingBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
+
+    /**
+    *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+    */
 
     public ClientLoggingBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;

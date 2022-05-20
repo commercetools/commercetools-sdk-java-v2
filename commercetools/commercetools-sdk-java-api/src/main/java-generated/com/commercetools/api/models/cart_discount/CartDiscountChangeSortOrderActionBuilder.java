@@ -11,6 +11,10 @@ public class CartDiscountChangeSortOrderActionBuilder implements Builder<CartDis
 
     private String sortOrder;
 
+    /**
+    *  <p>The string must contain a number between 0 and 1. A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>
+    */
+
     public CartDiscountChangeSortOrderActionBuilder sortOrder(final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;

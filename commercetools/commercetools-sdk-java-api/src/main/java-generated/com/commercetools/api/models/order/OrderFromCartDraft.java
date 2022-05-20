@@ -39,11 +39,7 @@ public interface OrderFromCartDraft {
     public Long getVersion();
 
     /**
-    *  <p>String that uniquely identifies an order.
-    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.
-    *  It should be unique across a project.
-    *  Once it's set it cannot be changed.
-    *  For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+    *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
     */
 
     @JsonProperty("orderNumber")
@@ -67,9 +63,7 @@ public interface OrderFromCartDraft {
     public StateResourceIdentifier getState();
 
     /**
-    *  <p><a href="/../api/projects/custom-fields">Custom Fields</a> for the Order. The Custom Field type must match the type of the Custom Fields in the referenced <a href="/../api/projects/carts#cart">Cart</a>.
-    *  If specified, the Custom Fields are merged with the Custom Fields on the referenced <a href="/../api/projects/carts#cart">Cart</a> and added to the Order.
-    *  If empty, the Custom Fields on the referenced <a href="/../api/projects/carts#cart">Cart</a> are added to the Order automatically.</p>
+    *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
     */
     @Valid
     @JsonProperty("custom")

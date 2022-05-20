@@ -35,17 +35,14 @@ public interface ErrorResponse {
     public String getMessage();
 
     /**
-    *  <p>This property is only used for OAuth2 errors.
-    *  Contains the error code.</p>
+    *  <p>This property is only used for OAuth2 errors. Contains the error code.</p>
     */
 
     @JsonProperty("error")
     public String getError();
 
     /**
-    *  <p>This property is only used for OAuth2 errors.
-    *  Additional information to assist the client developer in
-    *  understanding the error.</p>
+    *  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>
     */
 
     @JsonProperty("error_description")

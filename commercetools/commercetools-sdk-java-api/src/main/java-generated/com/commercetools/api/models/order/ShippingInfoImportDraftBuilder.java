@@ -52,12 +52,20 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+    *  <p>The shipping rate used to determine the price.</p>
+    */
+
     public ShippingInfoImportDraftBuilder shippingRate(
             Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
         this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>The shipping rate used to determine the price.</p>
+    */
 
     public ShippingInfoImportDraftBuilder shippingRate(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
@@ -91,6 +99,10 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+    *  <p>Not set if custom shipping method is used.</p>
+    */
+
     public ShippingInfoImportDraftBuilder shippingMethod(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
         this.shippingMethod = builder
@@ -99,11 +111,19 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+    *  <p>Not set if custom shipping method is used.</p>
+    */
+
     public ShippingInfoImportDraftBuilder shippingMethod(
             @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;
     }
+
+    /**
+    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+    */
 
     public ShippingInfoImportDraftBuilder deliveries(
             @Nullable final com.commercetools.api.models.order.Delivery... deliveries) {
@@ -111,11 +131,19 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+    */
+
     public ShippingInfoImportDraftBuilder deliveries(
             @Nullable final java.util.List<com.commercetools.api.models.order.Delivery> deliveries) {
         this.deliveries = deliveries;
         return this;
     }
+
+    /**
+    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+    */
 
     public ShippingInfoImportDraftBuilder plusDeliveries(
             @Nullable final com.commercetools.api.models.order.Delivery... deliveries) {
@@ -126,6 +154,10 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+    */
+
     public ShippingInfoImportDraftBuilder plusDeliveries(
             Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
         if (this.deliveries == null) {
@@ -134,6 +166,10 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         this.deliveries.add(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+    */
 
     public ShippingInfoImportDraftBuilder withDeliveries(
             Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.DeliveryBuilder> builder) {
@@ -155,6 +191,10 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         this.discountedPrice = discountedPrice;
         return this;
     }
+
+    /**
+    *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+    */
 
     public ShippingInfoImportDraftBuilder shippingMethodState(
             @Nullable final com.commercetools.api.models.cart.ShippingMethodState shippingMethodState) {

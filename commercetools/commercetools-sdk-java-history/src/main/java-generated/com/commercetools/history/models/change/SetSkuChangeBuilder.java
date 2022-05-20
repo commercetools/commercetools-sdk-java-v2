@@ -17,6 +17,10 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Update action for <code>setSku</code></p>
+    */
+
     public SetSkuChangeBuilder change(final String change) {
         this.change = change;
         return this;

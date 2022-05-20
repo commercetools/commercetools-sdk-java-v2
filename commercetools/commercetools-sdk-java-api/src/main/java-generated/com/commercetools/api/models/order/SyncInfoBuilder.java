@@ -19,16 +19,28 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     private java.time.ZonedDateTime syncedAt;
 
+    /**
+    *  <p>Connection to a particular synchronization destination.</p>
+    */
+
     public SyncInfoBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Connection to a particular synchronization destination.</p>
+    */
+
     public SyncInfoBuilder channel(final com.commercetools.api.models.channel.ChannelReference channel) {
         this.channel = channel;
         return this;
     }
+
+    /**
+    *  <p>Can be used to reference an external order instance, file etc.</p>
+    */
 
     public SyncInfoBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;

@@ -13,10 +13,18 @@ public class GeneralCategoryRecommendationBuilder implements Builder<GeneralCate
 
     private Double confidence;
 
+    /**
+    *  <p>An English category name that is recommended for a product.</p>
+    */
+
     public GeneralCategoryRecommendationBuilder categoryName(final String categoryName) {
         this.categoryName = categoryName;
         return this;
     }
+
+    /**
+    *  <p>Probability score for the category recommendation.</p>
+    */
 
     public GeneralCategoryRecommendationBuilder confidence(final Double confidence) {
         this.confidence = confidence;

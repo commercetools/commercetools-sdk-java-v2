@@ -18,6 +18,10 @@ public class AddBillingAddressIdChangeBuilder implements Builder<AddBillingAddre
 
     private com.commercetools.history.models.common.Address address;
 
+    /**
+    *  <p>Update action for <code>addBillingAddressId</code> action on customers.</p>
+    */
+
     public AddBillingAddressIdChangeBuilder change(final String change) {
         this.change = change;
         return this;

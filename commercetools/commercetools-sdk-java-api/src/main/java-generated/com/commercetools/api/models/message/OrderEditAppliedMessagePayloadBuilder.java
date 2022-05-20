@@ -14,11 +14,19 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     private com.commercetools.api.models.order_edit.OrderEditApplied result;
 
+    /**
+    *  <p>Reference to a OrderEdit.</p>
+    */
+
     public OrderEditAppliedMessagePayloadBuilder edit(
             Function<com.commercetools.api.models.order_edit.OrderEditReferenceBuilder, com.commercetools.api.models.order_edit.OrderEditReferenceBuilder> builder) {
         this.edit = builder.apply(com.commercetools.api.models.order_edit.OrderEditReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a OrderEdit.</p>
+    */
 
     public OrderEditAppliedMessagePayloadBuilder edit(
             final com.commercetools.api.models.order_edit.OrderEditReference edit) {

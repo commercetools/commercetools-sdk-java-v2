@@ -11,6 +11,10 @@ public class StateChangeKeyActionBuilder implements Builder<StateChangeKeyAction
 
     private String key;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public StateChangeKeyActionBuilder key(final String key) {
         this.key = key;
         return this;

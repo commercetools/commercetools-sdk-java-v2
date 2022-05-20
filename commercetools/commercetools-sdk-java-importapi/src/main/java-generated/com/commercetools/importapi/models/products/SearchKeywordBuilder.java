@@ -22,11 +22,19 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
         return this;
     }
 
+    /**
+    *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+    */
+
     public SearchKeywordBuilder suggestTokenizer(
             @Nullable final com.commercetools.importapi.models.products.SuggestTokenizer suggestTokenizer) {
         this.suggestTokenizer = suggestTokenizer;
         return this;
     }
+
+    /**
+    *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+    */
 
     public SearchKeywordBuilder suggestTokenizer(
             Function<com.commercetools.importapi.models.products.SuggestTokenizerBuilder, Builder<? extends com.commercetools.importapi.models.products.SuggestTokenizer>> builder) {

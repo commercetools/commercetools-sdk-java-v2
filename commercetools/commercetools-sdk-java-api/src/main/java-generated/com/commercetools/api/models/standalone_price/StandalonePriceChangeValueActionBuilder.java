@@ -12,11 +12,19 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     private com.commercetools.api.models.common.Money value;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public StandalonePriceChangeValueActionBuilder value(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public StandalonePriceChangeValueActionBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Type">Type</a>.</p>
+*  <p>Reference to a Type.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class TypeReferenceImpl implements TypeReference, ModelBase {
@@ -47,15 +47,14 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced Type.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Contains the representation of the expanded Type.
-    *  Only present in responses to requests with <a href="ctp:api:type:Expansion">Reference Expansion</a> for Types.</p>
+    *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
     */
     public com.commercetools.api.models.type.Type getObj() {
         return this.obj;

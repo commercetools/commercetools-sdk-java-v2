@@ -40,8 +40,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
     }
 
     /**
-    *  <p>How much money this payment intends to receive from the customer.
-    *  The value usually matches the cart or order gross total.</p>
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
     */
     public com.commercetools.api.models.common.Money getAmountPlanned() {
         return this.amountPlanned;
@@ -56,8 +55,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
     }
 
     /**
-    *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code>
-    *  TransactionTypes.</p>
+    *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
     */
     public com.commercetools.api.models.me.MyTransactionDraft getTransaction() {
         return this.transaction;

@@ -18,6 +18,10 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     private com.commercetools.history.models.common.SearchKeywords nextValue;
 
+    /**
+    *  <p>Update action for <code>setSearchKeywords</code></p>
+    */
+
     public SetSearchKeywordsChangeBuilder change(final String change) {
         this.change = change;
         return this;

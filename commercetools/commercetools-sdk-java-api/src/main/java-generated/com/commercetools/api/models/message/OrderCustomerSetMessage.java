@@ -21,28 +21,28 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     String ORDER_CUSTOMER_SET = "OrderCustomerSet";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
+    *  <p>Reference to a Customer.</p>
     */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>Reference to a CustomerGroup.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
+    *  <p>Reference to a Customer.</p>
     */
     @Valid
     @JsonProperty("oldCustomer")
     public CustomerReference getOldCustomer();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>Reference to a CustomerGroup.</p>
     */
     @Valid
     @JsonProperty("oldCustomerGroup")

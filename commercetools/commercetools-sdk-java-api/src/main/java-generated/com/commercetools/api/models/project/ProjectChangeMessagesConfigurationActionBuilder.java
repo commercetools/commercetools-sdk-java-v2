@@ -13,6 +13,10 @@ public class ProjectChangeMessagesConfigurationActionBuilder
 
     private com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration;
 
+    /**
+    *  <p>Configuration for the Messages Query feature.</p>
+    */
+
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
             Function<com.commercetools.api.models.message.MessagesConfigurationDraftBuilder, com.commercetools.api.models.message.MessagesConfigurationDraftBuilder> builder) {
         this.messagesConfiguration = builder
@@ -20,6 +24,10 @@ public class ProjectChangeMessagesConfigurationActionBuilder
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Configuration for the Messages Query feature.</p>
+    */
 
     public ProjectChangeMessagesConfigurationActionBuilder messagesConfiguration(
             final com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration) {

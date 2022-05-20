@@ -17,16 +17,28 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
     @Nullable
     private com.commercetools.api.models.customer.Customer obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Customer.</p>
+    */
+
     public CustomerReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+    */
 
     public CustomerReferenceBuilder obj(
             Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.CustomerBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+    */
 
     public CustomerReferenceBuilder obj(@Nullable final com.commercetools.api.models.customer.Customer obj) {
         this.obj = obj;

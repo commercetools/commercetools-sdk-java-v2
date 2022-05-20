@@ -41,6 +41,10 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
         return this;
     }
 
+    /**
+    *  <p>supported resource type identifiers:</p>
+    */
+
     public ReferencedResourceNotFoundErrorBuilder typeId(
             final com.commercetools.api.models.common.ReferenceTypeId typeId) {
         this.typeId = typeId;

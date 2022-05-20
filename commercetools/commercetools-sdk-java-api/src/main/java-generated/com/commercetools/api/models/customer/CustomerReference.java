@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Customer">Customer</a>.</p>
+*  <p>Reference to a Customer.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerReferenceImpl.class)
@@ -24,14 +24,14 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     String CUSTOMER = "customer";
 
     /**
-    *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for Customers.</p>
+    *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
     */
     @Valid
     @JsonProperty("obj")
     public Customer getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Customer">Customer</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced Customer.</p>
     */
     @NotNull
     @JsonProperty("id")

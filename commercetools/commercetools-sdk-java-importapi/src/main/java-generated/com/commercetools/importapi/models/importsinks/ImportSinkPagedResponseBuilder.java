@@ -20,25 +20,45 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
 
     private java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ImportSinkPagedResponseBuilder limit(final Integer limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ImportSinkPagedResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+    *  <p>The actual number of results returned.</p>
+    */
+
     public ImportSinkPagedResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+    *  <p>The total number of results matching the query.</p>
+    */
+
     public ImportSinkPagedResponseBuilder total(final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>The array of Import Sinks matching the query.</p>
+    */
 
     public ImportSinkPagedResponseBuilder results(
             final com.commercetools.importapi.models.importsinks.ImportSink... results) {
@@ -46,11 +66,19 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
         return this;
     }
 
+    /**
+    *  <p>The array of Import Sinks matching the query.</p>
+    */
+
     public ImportSinkPagedResponseBuilder results(
             final java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results) {
         this.results = results;
         return this;
     }
+
+    /**
+    *  <p>The array of Import Sinks matching the query.</p>
+    */
 
     public ImportSinkPagedResponseBuilder plusResults(
             final com.commercetools.importapi.models.importsinks.ImportSink... results) {
@@ -61,6 +89,10 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
         return this;
     }
 
+    /**
+    *  <p>The array of Import Sinks matching the query.</p>
+    */
+
     public ImportSinkPagedResponseBuilder plusResults(
             Function<com.commercetools.importapi.models.importsinks.ImportSinkBuilder, com.commercetools.importapi.models.importsinks.ImportSinkBuilder> builder) {
         if (this.results == null) {
@@ -69,6 +101,10 @@ public class ImportSinkPagedResponseBuilder implements Builder<ImportSinkPagedRe
         this.results.add(builder.apply(com.commercetools.importapi.models.importsinks.ImportSinkBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The array of Import Sinks matching the query.</p>
+    */
 
     public ImportSinkPagedResponseBuilder withResults(
             Function<com.commercetools.importapi.models.importsinks.ImportSinkBuilder, com.commercetools.importapi.models.importsinks.ImportSinkBuilder> builder) {

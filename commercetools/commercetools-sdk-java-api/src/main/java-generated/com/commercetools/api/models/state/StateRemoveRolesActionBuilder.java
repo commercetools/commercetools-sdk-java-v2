@@ -11,16 +11,28 @@ public class StateRemoveRolesActionBuilder implements Builder<StateRemoveRolesAc
 
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
+    /**
+    *  <p>Roles to remove from the State.</p>
+    */
+
     public StateRemoveRolesActionBuilder roles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
+
+    /**
+    *  <p>Roles to remove from the State.</p>
+    */
 
     public StateRemoveRolesActionBuilder roles(
             final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
+
+    /**
+    *  <p>Roles to remove from the State.</p>
+    */
 
     public StateRemoveRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
         if (this.roles == null) {

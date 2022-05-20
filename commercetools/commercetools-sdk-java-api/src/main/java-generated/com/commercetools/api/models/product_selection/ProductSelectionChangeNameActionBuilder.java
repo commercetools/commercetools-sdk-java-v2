@@ -12,11 +12,19 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+    *  <p>The new name to be set for the ProductSelection.</p>
+    */
+
     public ProductSelectionChangeNameActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The new name to be set for the ProductSelection.</p>
+    */
 
     public ProductSelectionChangeNameActionBuilder name(
             final com.commercetools.api.models.common.LocalizedString name) {

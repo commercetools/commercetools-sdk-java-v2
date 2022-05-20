@@ -30,22 +30,40 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
+
     public StagedOrderAddCustomLineItemActionBuilder money(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
+
     public StagedOrderAddCustomLineItemActionBuilder money(final com.commercetools.api.models.common.Money money) {
         this.money = money;
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public StagedOrderAddCustomLineItemActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public StagedOrderAddCustomLineItemActionBuilder name(
             final com.commercetools.api.models.common.LocalizedString name) {
@@ -63,6 +81,10 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a TaxCategory.</p>
+    */
+
     public StagedOrderAddCustomLineItemActionBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
         this.taxCategory = builder
@@ -71,17 +93,29 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a TaxCategory.</p>
+    */
+
     public StagedOrderAddCustomLineItemActionBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
 
+    /**
+    *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+    */
+
     public StagedOrderAddCustomLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+    */
 
     public StagedOrderAddCustomLineItemActionBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

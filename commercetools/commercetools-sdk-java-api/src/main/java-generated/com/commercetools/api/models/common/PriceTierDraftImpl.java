@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Specifies a Price tier that applies when the minimum quantity for the <a href="ctp:api:type:LineItem">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
+*  <p>Specifies a Price tier that applies when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class PriceTierDraftImpl implements PriceTierDraft, ModelBase {
@@ -43,7 +43,7 @@ public class PriceTierDraftImpl implements PriceTierDraft, ModelBase {
     }
 
     /**
-    *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the <a href="ctp:api:type:LineItem">LineItem</a> <code>quantity</code>.</p>
+    *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
     *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
     */
     public com.commercetools.api.models.common.Money getValue() {

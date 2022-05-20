@@ -51,14 +51,14 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
@@ -87,17 +87,14 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public String getText();
 
     /**
-    *  <p>Identifies the target of the review.
-    *  Can be a Product or a Channel</p>
+    *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
     */
 
     @JsonProperty("target")
     public Object getTarget();
 
     /**
-    *  <p>Indicates if this review is taken into account in the ratings statistics of the target.
-    *  A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.
-    *  If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+    *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
     */
     @NotNull
     @JsonProperty("includedInStatistics")

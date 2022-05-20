@@ -36,8 +36,7 @@ public class StateChangeTypeActionImpl implements StateChangeTypeAction, ModelBa
     }
 
     /**
-    *  <p>Resource or object types the State shall be assigned to.
-    *  Must not be empty.</p>
+    *  <p>Resource or object types the State shall be assigned to. Must not be empty.</p>
     */
     public com.commercetools.api.models.state.StateTypeEnum getType() {
         return this.type;

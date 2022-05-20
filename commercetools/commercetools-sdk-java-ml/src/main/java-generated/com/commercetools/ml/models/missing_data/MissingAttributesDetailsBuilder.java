@@ -15,15 +15,27 @@ public class MissingAttributesDetailsBuilder implements Builder<MissingAttribute
 
     private Integer missingAttributeValues;
 
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+
     public MissingAttributesDetailsBuilder total(final Integer total) {
         this.total = total;
         return this;
     }
 
+    /**
+    *  <p>Number of products missing attribute names.</p>
+    */
+
     public MissingAttributesDetailsBuilder missingAttributeNames(final Integer missingAttributeNames) {
         this.missingAttributeNames = missingAttributeNames;
         return this;
     }
+
+    /**
+    *  <p>Number of products missing attribute values.</p>
+    */
 
     public MissingAttributesDetailsBuilder missingAttributeValues(final Integer missingAttributeValues) {
         this.missingAttributeValues = missingAttributeValues;

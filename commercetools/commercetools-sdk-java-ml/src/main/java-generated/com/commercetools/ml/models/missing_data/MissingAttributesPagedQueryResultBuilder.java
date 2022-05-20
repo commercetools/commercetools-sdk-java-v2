@@ -30,6 +30,10 @@ public class MissingAttributesPagedQueryResultBuilder implements Builder<Missing
         return this;
     }
 
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
+
     public MissingAttributesPagedQueryResultBuilder offset(final Long offset) {
         this.offset = offset;
         return this;

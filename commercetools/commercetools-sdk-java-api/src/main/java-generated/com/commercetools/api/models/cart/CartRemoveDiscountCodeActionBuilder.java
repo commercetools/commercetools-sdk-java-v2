@@ -12,12 +12,20 @@ public class CartRemoveDiscountCodeActionBuilder implements Builder<CartRemoveDi
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
+    /**
+    *  <p>Reference to a DiscountCode.</p>
+    */
+
     public CartRemoveDiscountCodeActionBuilder discountCode(
             Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
         this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a DiscountCode.</p>
+    */
 
     public CartRemoveDiscountCodeActionBuilder discountCode(
             final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {

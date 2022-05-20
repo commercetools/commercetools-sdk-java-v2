@@ -15,11 +15,19 @@ public class DiscountCodeSetDescriptionActionBuilder implements Builder<Discount
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public DiscountCodeSetDescriptionActionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
 
     public DiscountCodeSetDescriptionActionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {

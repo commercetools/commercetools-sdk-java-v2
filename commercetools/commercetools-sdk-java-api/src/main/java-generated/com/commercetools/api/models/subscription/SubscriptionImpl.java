@@ -90,14 +90,14 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;

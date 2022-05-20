@@ -11,16 +11,28 @@ public class StateSetRolesActionBuilder implements Builder<StateSetRolesAction> 
 
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public StateSetRolesActionBuilder roles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
+
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
 
     public StateSetRolesActionBuilder roles(
             final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
+
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
 
     public StateSetRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
         if (this.roles == null) {

@@ -21,7 +21,7 @@ public interface CartClassificationType extends ShippingRateInputType {
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
-    *  <p>The classification items that can be used for specifiying any <a href="ctp:api:type:ShippingRatePriceTier">ShippingRatePriceTier</a>.</p>
+    *  <p>The classification items that can be used for specifiying any ShippingRatePriceTier.</p>
     */
     @NotNull
     @Valid

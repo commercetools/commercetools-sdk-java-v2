@@ -30,6 +30,10 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
         return this;
     }
 
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
+
     public SimilarProductsPagedQueryResultBuilder offset(final Long offset) {
         this.offset = offset;
         return this;

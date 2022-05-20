@@ -41,7 +41,7 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:OrderEdit">OrderEdit</a>.</p>
+    *  <p>Reference to a OrderEdit.</p>
     */
     public com.commercetools.api.models.order_edit.OrderEditReference getEdit() {
         return this.edit;

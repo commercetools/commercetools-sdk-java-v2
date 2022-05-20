@@ -22,6 +22,10 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
 
     private com.commercetools.history.models.common.TaxRate previousValue;
 
+    /**
+    *  <p>Update action for <code>setLineItemTaxRate</code></p>
+    */
+
     public SetLineItemTaxRateChangeBuilder change(final String change) {
         this.change = change;
         return this;
@@ -49,22 +53,38 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
         return this;
     }
 
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
+
     public SetLineItemTaxRateChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
+
     public SetLineItemTaxRateChangeBuilder nextValue(final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
 
     public SetLineItemTaxRateChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
 
     public SetLineItemTaxRateChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxRate previousValue) {

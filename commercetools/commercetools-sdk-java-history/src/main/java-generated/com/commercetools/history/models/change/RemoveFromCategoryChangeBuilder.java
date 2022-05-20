@@ -18,6 +18,10 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+    *  <p>Update action for <code>addToCategory</code></p>
+    */
+
     public RemoveFromCategoryChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -18,6 +18,10 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
 
     private com.commercetools.history.models.common.Image nextValue;
 
+    /**
+    *  <p>Update action for <code>setImageLabel</code></p>
+    */
+
     public SetImageLabelChangeBuilder change(final String change) {
         this.change = change;
         return this;

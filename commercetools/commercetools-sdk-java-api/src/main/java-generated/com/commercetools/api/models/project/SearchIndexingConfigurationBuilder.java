@@ -18,6 +18,10 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
+    /**
+    *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+    */
+
     public SearchIndexingConfigurationBuilder products(
             Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
         this.products = builder
@@ -26,11 +30,19 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
         return this;
     }
 
+    /**
+    *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+    */
+
     public SearchIndexingConfigurationBuilder products(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
         this.products = products;
         return this;
     }
+
+    /**
+    *  <p>Configuration for the Order Search feature.</p>
+    */
 
     public SearchIndexingConfigurationBuilder orders(
             Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
@@ -38,6 +50,10 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Configuration for the Order Search feature.</p>
+    */
 
     public SearchIndexingConfigurationBuilder orders(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders) {

@@ -20,6 +20,10 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     private Integer previousValue;
 
+    /**
+    *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
+    */
+
     public ChangeCustomLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
         return this;

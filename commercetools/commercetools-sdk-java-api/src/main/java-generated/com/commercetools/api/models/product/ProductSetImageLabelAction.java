@@ -32,8 +32,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     public String getImageUrl();
 
     /**
-    *  <p>The new image label.
-    *  If left blank or set to null, the label is removed.</p>
+    *  <p>The new image label. If left blank or set to null, the label is removed.</p>
     */
 
     @JsonProperty("label")

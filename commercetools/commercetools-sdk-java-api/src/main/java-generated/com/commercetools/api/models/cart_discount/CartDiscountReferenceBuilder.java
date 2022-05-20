@@ -17,16 +17,28 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
     @Nullable
     private com.commercetools.api.models.cart_discount.CartDiscount obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced CartDiscount.</p>
+    */
+
     public CartDiscountReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+    */
 
     public CartDiscountReferenceBuilder obj(
             Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscountBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+    */
 
     public CartDiscountReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.cart_discount.CartDiscount obj) {

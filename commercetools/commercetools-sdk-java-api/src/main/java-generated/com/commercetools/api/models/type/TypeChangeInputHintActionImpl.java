@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Changes the <code>inputHint</code> of <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a>, a <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a>, and <a href="ctp:api:type:CustomFieldSetType">CustomFieldSetType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> of these string-based FieldTypes.</p>
+*  <p>Changes the <code>inputHint</code> of CustomFieldStringType FieldDefinition, a CustomFieldLocalizedStringType FieldDefinition, and CustomFieldSetType FieldDefinition of these string-based FieldTypes.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class TypeChangeInputHintActionImpl implements TypeChangeInputHintAction, ModelBase {
@@ -43,15 +43,14 @@ public class TypeChangeInputHintActionImpl implements TypeChangeInputHintAction,
     }
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
+    *  <p><code>name</code> of the Field Definition to update.</p>
     */
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-    *  <p>New value to set.
-    *  Must not be empty.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     public com.commercetools.api.models.type.TypeTextInputHint getInputHint() {
         return this.inputHint;

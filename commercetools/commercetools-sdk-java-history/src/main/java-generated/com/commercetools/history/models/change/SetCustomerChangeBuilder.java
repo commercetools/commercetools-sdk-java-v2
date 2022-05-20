@@ -16,6 +16,10 @@ public class SetCustomerChangeBuilder implements Builder<SetCustomerChange> {
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setCustomer</code></p>
+    */
+
     public SetCustomerChangeBuilder change(final String change) {
         this.change = change;
         return this;

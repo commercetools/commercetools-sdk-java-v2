@@ -11,6 +11,10 @@ public class ProductDiscountValueRelativeDraftBuilder implements Builder<Product
 
     private Long permyriad;
 
+    /**
+    *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
+    */
+
     public ProductDiscountValueRelativeDraftBuilder permyriad(final Long permyriad) {
         this.permyriad = permyriad;
         return this;

@@ -14,6 +14,10 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
     @Nullable
     private Long maxApplications;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public DiscountCodeSetMaxApplicationsActionBuilder maxApplications(@Nullable final Long maxApplications) {
         this.maxApplications = maxApplications;
         return this;

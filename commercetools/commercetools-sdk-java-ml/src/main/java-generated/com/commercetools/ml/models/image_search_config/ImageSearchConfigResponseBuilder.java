@@ -13,6 +13,10 @@ public class ImageSearchConfigResponseBuilder implements Builder<ImageSearchConf
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    /**
+    *  <p>The image search activation status.</p>
+    */
+
     public ImageSearchConfigResponseBuilder status(
             final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {
         this.status = status;

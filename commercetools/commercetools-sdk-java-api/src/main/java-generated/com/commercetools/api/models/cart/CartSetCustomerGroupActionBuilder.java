@@ -15,6 +15,10 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
+    /**
+    *  <p>ResourceIdentifier to a CustomerGroup.</p>
+    */
+
     public CartSetCustomerGroupActionBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
         this.customerGroup = builder
@@ -22,6 +26,10 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a CustomerGroup.</p>
+    */
 
     public CartSetCustomerGroupActionBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {

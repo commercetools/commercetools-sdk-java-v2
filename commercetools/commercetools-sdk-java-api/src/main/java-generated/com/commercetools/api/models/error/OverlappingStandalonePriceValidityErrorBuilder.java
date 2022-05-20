@@ -62,6 +62,10 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+    *  <p>Reference to a StandalonePrice.</p>
+    */
+
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
             Function<com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder> builder) {
         this.conflictingStandalonePrice = builder
@@ -69,6 +73,10 @@ public class OverlappingStandalonePriceValidityErrorBuilder
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a StandalonePrice.</p>
+    */
 
     public OverlappingStandalonePriceValidityErrorBuilder conflictingStandalonePrice(
             final com.commercetools.api.models.standalone_price.StandalonePriceReference conflictingStandalonePrice) {
@@ -91,6 +99,10 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a CustomerGroup.</p>
+    */
+
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder> builder) {
         this.customerGroup = builder
@@ -99,11 +111,19 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a CustomerGroup.</p>
+    */
+
     public OverlappingStandalonePriceValidityErrorBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -111,6 +131,10 @@ public class OverlappingStandalonePriceValidityErrorBuilder
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
 
     public OverlappingStandalonePriceValidityErrorBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {

@@ -16,6 +16,10 @@ public class ChangeValueChangeBuilder implements Builder<ChangeValueChange> {
 
     private com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue;
 
+    /**
+    *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
+    */
+
     public ChangeValueChangeBuilder change(final String change) {
         this.change = change;
         return this;

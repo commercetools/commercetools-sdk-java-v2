@@ -17,16 +17,28 @@ public class ProductDiscountReferenceBuilder implements Builder<ProductDiscountR
     @Nullable
     private com.commercetools.api.models.product_discount.ProductDiscount obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>
+    */
+
     public ProductDiscountReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+    */
 
     public ProductDiscountReferenceBuilder obj(
             Function<com.commercetools.api.models.product_discount.ProductDiscountBuilder, com.commercetools.api.models.product_discount.ProductDiscountBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.product_discount.ProductDiscountBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+    */
 
     public ProductDiscountReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.product_discount.ProductDiscount obj) {

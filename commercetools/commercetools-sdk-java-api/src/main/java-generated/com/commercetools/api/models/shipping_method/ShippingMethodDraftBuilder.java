@@ -38,6 +38,10 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+    *  <p>User-defined unique identifier for the ShippingMethod.</p>
+    */
+
     public ShippingMethodDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
@@ -131,10 +135,18 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+    *  <p>If <code>true</code> the shipping method will be the default one in a project.</p>
+    */
+
     public ShippingMethodDraftBuilder isDefault(final Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
     }
+
+    /**
+    *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+    */
 
     public ShippingMethodDraftBuilder predicate(@Nullable final String predicate) {
         this.predicate = predicate;

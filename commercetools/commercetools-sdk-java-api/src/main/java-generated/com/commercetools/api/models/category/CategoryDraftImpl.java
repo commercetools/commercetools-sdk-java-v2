@@ -75,10 +75,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-    *  <p>human-readable identifier usually used as deep-link URL to the related category.
-    *  Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters.
-    *  Maximum size is 256.
-    *  <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
+    *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
@@ -89,16 +86,14 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
     }
 
     /**
-    *  <p>A category that is the parent of this category in the category tree.
-    *  The parent can be set by its ID or by its key.</p>
+    *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
     */
     public com.commercetools.api.models.category.CategoryResourceIdentifier getParent() {
         return this.parent;
     }
 
     /**
-    *  <p>An attribute as base for a custom category order in one level.
-    *  A random value will be assigned by API if not set.</p>
+    *  <p>An attribute as base for a custom category order in one level. A random value will be assigned by API if not set.</p>
     */
     public String getOrderHint() {
         return this.orderHint;

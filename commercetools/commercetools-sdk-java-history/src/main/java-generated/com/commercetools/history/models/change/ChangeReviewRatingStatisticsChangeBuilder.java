@@ -16,6 +16,10 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     private com.commercetools.history.models.common.ReviewRatingStatistics previousValue;
 
+    /**
+    *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+    */
+
     public ChangeReviewRatingStatisticsChangeBuilder change(final String change) {
         this.change = change;
         return this;

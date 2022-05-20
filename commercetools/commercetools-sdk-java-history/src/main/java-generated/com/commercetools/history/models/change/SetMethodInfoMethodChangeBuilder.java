@@ -15,6 +15,10 @@ public class SetMethodInfoMethodChangeBuilder implements Builder<SetMethodInfoMe
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setMethodInfoMethod</code></p>
+    */
+
     public SetMethodInfoMethodChangeBuilder change(final String change) {
         this.change = change;
         return this;

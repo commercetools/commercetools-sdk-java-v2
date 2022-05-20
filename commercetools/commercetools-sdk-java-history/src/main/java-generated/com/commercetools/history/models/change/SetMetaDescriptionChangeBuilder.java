@@ -16,6 +16,10 @@ public class SetMetaDescriptionChangeBuilder implements Builder<SetMetaDescripti
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setMetaDescription</code></p>
+    */
+
     public SetMetaDescriptionChangeBuilder change(final String change) {
         this.change = change;
         return this;

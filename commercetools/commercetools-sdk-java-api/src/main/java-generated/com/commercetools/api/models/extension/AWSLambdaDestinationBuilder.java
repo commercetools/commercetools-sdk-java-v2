@@ -15,15 +15,27 @@ public class AWSLambdaDestinationBuilder implements Builder<AWSLambdaDestination
 
     private String accessSecret;
 
+    /**
+    *  <p>Amazon Resource Name (ARN) of the Lambda function in the format <code>arn:aws:lambda:&lt;region&gt;:&lt;accountid&gt;:function:&lt;functionName&gt;</code>.</p>
+    */
+
     public AWSLambdaDestinationBuilder arn(final String arn) {
         this.arn = arn;
         return this;
     }
 
+    /**
+    *  <p>Partially hidden on retrieval for security reasons.</p>
+    */
+
     public AWSLambdaDestinationBuilder accessKey(final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
+
+    /**
+    *  <p>Partially hidden on retrieval for security reasons.</p>
+    */
 
     public AWSLambdaDestinationBuilder accessSecret(final String accessSecret) {
         this.accessSecret = accessSecret;

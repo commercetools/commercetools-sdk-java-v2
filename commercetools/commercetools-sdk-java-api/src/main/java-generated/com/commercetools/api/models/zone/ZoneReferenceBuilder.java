@@ -17,16 +17,28 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
     @Nullable
     private com.commercetools.api.models.zone.Zone obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Zone.</p>
+    */
+
     public ZoneReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+    */
 
     public ZoneReferenceBuilder obj(
             Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.ZoneBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+    */
 
     public ZoneReferenceBuilder obj(@Nullable final com.commercetools.api.models.zone.Zone obj) {
         this.obj = obj;

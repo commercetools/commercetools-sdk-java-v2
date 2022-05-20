@@ -18,6 +18,10 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     private String previousValue;
 
+    /**
+    *  <p>Update action for <code>setAssetKey</code></p>
+    */
+
     public SetAssetKeyChangeBuilder change(final String change) {
         this.change = change;
         return this;

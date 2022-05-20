@@ -60,9 +60,7 @@ public interface ShoppingListDraft {
     public LocalizedString getName();
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
-    *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.
-    *  The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
     */
     @Valid
     @JsonProperty("slug")

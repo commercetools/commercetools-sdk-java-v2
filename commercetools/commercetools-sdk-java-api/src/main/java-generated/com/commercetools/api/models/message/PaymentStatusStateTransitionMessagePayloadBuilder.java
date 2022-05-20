@@ -15,11 +15,19 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
 
     private Boolean force;
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public PaymentStatusStateTransitionMessagePayloadBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public PaymentStatusStateTransitionMessagePayloadBuilder state(
             final com.commercetools.api.models.state.StateReference state) {

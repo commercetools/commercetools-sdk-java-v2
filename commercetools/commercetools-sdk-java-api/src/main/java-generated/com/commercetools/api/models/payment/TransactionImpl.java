@@ -77,8 +77,7 @@ public class TransactionImpl implements Transaction, ModelBase {
     }
 
     /**
-    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-    *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
     */
     public String getInteractionId() {
         return this.interactionId;

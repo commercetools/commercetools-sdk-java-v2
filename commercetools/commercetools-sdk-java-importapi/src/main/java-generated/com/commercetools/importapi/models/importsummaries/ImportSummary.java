@@ -14,15 +14,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Describes the status of an <a href="/import-container#importcontainer">ImportContainer</a> by the number of resources in each <a href="/processing-state#processingstate">Processing State</a>.
-*  Can be used to monitor the import progress per <a href="/import-container">Import Container</a>.</p>
+*  <p>Describes the status of an ImportContainer by the number of resources in each Processing State. Can be used to monitor the import progress per Import Container.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImportSummaryImpl.class)
 public interface ImportSummary {
 
     /**
-    *  <p>The import status of an <a href="/import-container#importcontainer">ImportContainer</a> given by the number of resources in each <a href="/processing-state#processingstate">Processing State</a>.</p>
+    *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
     */
     @NotNull
     @Valid
@@ -30,7 +29,7 @@ public interface ImportSummary {
     public OperationStates getStates();
 
     /**
-    *  <p>The total number of <a href="/import-operation#importoperation">ImportOperations</a> received for this Import Summary.</p>
+    *  <p>The total number of ImportOperations received for this Import Summary.</p>
     */
     @NotNull
     @JsonProperty("total")

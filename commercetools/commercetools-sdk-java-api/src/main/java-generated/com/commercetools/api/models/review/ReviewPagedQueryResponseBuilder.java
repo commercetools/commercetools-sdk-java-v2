@@ -23,6 +23,10 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
 
     private java.util.List<com.commercetools.api.models.review.Review> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ReviewPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ReviewPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

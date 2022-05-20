@@ -12,11 +12,19 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
 
     private com.commercetools.api.models.common.ResourceIdentifier productSelection;
 
+    /**
+    *  <p>A Product Selection to be removed from the current Product Selections of this Store.</p>
+    */
+
     public StoreRemoveProductSelectionActionBuilder productSelection(
             final com.commercetools.api.models.common.ResourceIdentifier productSelection) {
         this.productSelection = productSelection;
         return this;
     }
+
+    /**
+    *  <p>A Product Selection to be removed from the current Product Selections of this Store.</p>
+    */
 
     public StoreRemoveProductSelectionActionBuilder productSelection(
             Function<com.commercetools.api.models.common.ResourceIdentifierBuilder, Builder<? extends com.commercetools.api.models.common.ResourceIdentifier>> builder) {

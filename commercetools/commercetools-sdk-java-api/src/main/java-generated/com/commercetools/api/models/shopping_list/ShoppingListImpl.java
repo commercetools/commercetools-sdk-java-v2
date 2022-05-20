@@ -113,14 +113,14 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
@@ -161,9 +161,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
-    *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.
-    *  The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;

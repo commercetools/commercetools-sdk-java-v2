@@ -30,6 +30,10 @@ public class MissingPricesPagedQueryResultBuilder implements Builder<MissingPric
         return this;
     }
 
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
+
     public MissingPricesPagedQueryResultBuilder offset(final Long offset) {
         this.offset = offset;
         return this;

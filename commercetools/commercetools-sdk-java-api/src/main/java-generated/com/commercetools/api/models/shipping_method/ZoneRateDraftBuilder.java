@@ -25,17 +25,29 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
         return this;
     }
 
+    /**
+    *  <p>The array must not contain two shipping rates with the same currency.</p>
+    */
+
     public ZoneRateDraftBuilder shippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft... shippingRates) {
         this.shippingRates = new ArrayList<>(Arrays.asList(shippingRates));
         return this;
     }
 
+    /**
+    *  <p>The array must not contain two shipping rates with the same currency.</p>
+    */
+
     public ZoneRateDraftBuilder shippingRates(
             final java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates) {
         this.shippingRates = shippingRates;
         return this;
     }
+
+    /**
+    *  <p>The array must not contain two shipping rates with the same currency.</p>
+    */
 
     public ZoneRateDraftBuilder plusShippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRateDraft... shippingRates) {
@@ -46,6 +58,10 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
         return this;
     }
 
+    /**
+    *  <p>The array must not contain two shipping rates with the same currency.</p>
+    */
+
     public ZoneRateDraftBuilder plusShippingRates(
             Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
         if (this.shippingRates == null) {
@@ -55,6 +71,10 @@ public class ZoneRateDraftBuilder implements Builder<ZoneRateDraft> {
                 .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The array must not contain two shipping rates with the same currency.</p>
+    */
 
     public ZoneRateDraftBuilder withShippingRates(
             Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {

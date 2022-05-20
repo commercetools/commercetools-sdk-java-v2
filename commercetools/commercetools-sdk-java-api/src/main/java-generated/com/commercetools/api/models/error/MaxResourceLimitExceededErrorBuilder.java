@@ -33,6 +33,10 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
         return this;
     }
 
+    /**
+    *  <p>supported resource type identifiers:</p>
+    */
+
     public MaxResourceLimitExceededErrorBuilder exceededResource(
             final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {
         this.exceededResource = exceededResource;

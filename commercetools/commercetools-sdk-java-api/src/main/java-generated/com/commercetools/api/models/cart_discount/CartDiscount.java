@@ -50,14 +50,14 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
@@ -99,10 +99,7 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     public CartDiscountTarget getTarget();
 
     /**
-    *  <p>The string must contain a number between 0 and 1.
-    *  All matching cart discounts are applied to a cart in the order defined by this field.
-    *  A discount with greater sort order is prioritized higher than a discount with lower sort order.
-    *  The sort order is unambiguous among all cart discounts.</p>
+    *  <p>The string must contain a number between 0 and 1. All matching cart discounts are applied to a cart in the order defined by this field. A discount with greater sort order is prioritized higher than a discount with lower sort order. The sort order is unambiguous among all cart discounts.</p>
     */
     @NotNull
     @JsonProperty("sortOrder")
@@ -129,8 +126,7 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     public Boolean getRequiresDiscountCode();
 
     /**
-    *  <p>The platform will generate this array from the predicate.
-    *  It contains the references of all the resources that are addressed in the predicate.</p>
+    *  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>
     */
     @NotNull
     @Valid
@@ -138,8 +134,7 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     public List<Reference> getReferences();
 
     /**
-    *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.
-    *  Defaults to Stacking.</p>
+    *  <p>Specifies whether the application of this discount causes the following discounts to be ignored. Defaults to Stacking.</p>
     */
     @NotNull
     @JsonProperty("stackingMode")

@@ -36,10 +36,18 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     @Nullable
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
 
+    /**
+    *  <p>Platform-generated unique identifier for the ProductType.</p>
+    */
+
     public ProductTypeBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>The current version of the product type.</p>
+    */
 
     public ProductTypeBuilder version(final Long version) {
         this.version = version;
@@ -56,11 +64,19 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductTypeBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ProductTypeBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -68,16 +84,28 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductTypeBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductTypeBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the ProductType.</p>
+    */
 
     public ProductTypeBuilder key(@Nullable final String key) {
         this.key = key;

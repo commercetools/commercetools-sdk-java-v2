@@ -21,15 +21,14 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the DiscountCode with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+    *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the DiscountCode.</p>
+    *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
     */
     @Valid
     @JsonProperty("fields")

@@ -14,22 +14,38 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+    *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+    */
+
     public CustomFieldsBuilder type(
             Function<com.commercetools.api.models.type.TypeReferenceBuilder, com.commercetools.api.models.type.TypeReferenceBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+    */
+
     public CustomFieldsBuilder type(final com.commercetools.api.models.type.TypeReference type) {
         this.type = type;
         return this;
     }
+
+    /**
+    *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+    */
 
     public CustomFieldsBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+    */
 
     public CustomFieldsBuilder fields(final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;

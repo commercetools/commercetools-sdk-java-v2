@@ -17,10 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Creates an order from a Cart from a specific Store.
-*  When using this endpoint the orders's store field is always set to the store specified in the path parameter.
-*  The cart must have a shipping address set before creating an order. When using the Platform TaxMode,
-*  the shipping address is used for tax calculation.</p>
+*  <p>Creates an order from a Cart from a specific Store. When using this endpoint the orders's store field is always set to the store specified in the path parameter. The cart must have a shipping address set before creating an order. When using the Platform TaxMode, the shipping address is used for tax calculation.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost extends

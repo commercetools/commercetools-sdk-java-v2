@@ -81,6 +81,10 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     @Nullable
     private String externalId;
 
+    /**
+    *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+    */
+
     public CustomerAddressBuilder key(final String key) {
         this.key = key;
         return this;
@@ -140,6 +144,10 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
         this.state = state;
         return this;
     }
+
+    /**
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+    */
 
     public CustomerAddressBuilder country(final String country) {
         this.country = country;

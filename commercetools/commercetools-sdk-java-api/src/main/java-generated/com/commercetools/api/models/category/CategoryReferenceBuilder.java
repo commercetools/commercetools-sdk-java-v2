@@ -17,16 +17,28 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
     @Nullable
     private com.commercetools.api.models.category.Category obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Category.</p>
+    */
+
     public CategoryReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+    */
 
     public CategoryReferenceBuilder obj(
             Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.CategoryBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+    */
 
     public CategoryReferenceBuilder obj(@Nullable final com.commercetools.api.models.category.Category obj) {
         this.obj = obj;

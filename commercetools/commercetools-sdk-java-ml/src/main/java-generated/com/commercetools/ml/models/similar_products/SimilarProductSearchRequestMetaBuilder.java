@@ -12,6 +12,10 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
 
     private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
 
+    /**
+    *  <p>The SimilarityMeasures used in this search.</p>
+    */
+
     public SimilarProductSearchRequestMetaBuilder similarityMeasures(
             Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder> builder) {
         this.similarityMeasures = builder
@@ -19,6 +23,10 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
                 .build();
         return this;
     }
+
+    /**
+    *  <p>The SimilarityMeasures used in this search.</p>
+    */
 
     public SimilarProductSearchRequestMetaBuilder similarityMeasures(
             final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {

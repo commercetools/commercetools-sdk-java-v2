@@ -23,6 +23,10 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscount> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public CartDiscountPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public CartDiscountPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

@@ -14,6 +14,10 @@ public class ProductDiscountSetValidFromActionBuilder implements Builder<Product
     @Nullable
     private java.time.ZonedDateTime validFrom;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
+    */
+
     public ProductDiscountSetValidFromActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;

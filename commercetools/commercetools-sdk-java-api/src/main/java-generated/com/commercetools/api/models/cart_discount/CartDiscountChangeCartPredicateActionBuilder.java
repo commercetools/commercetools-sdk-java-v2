@@ -11,6 +11,10 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
 
     private String cartPredicate;
 
+    /**
+    *  <p>A valid Cart predicate.</p>
+    */
+
     public CartDiscountChangeCartPredicateActionBuilder cartPredicate(final String cartPredicate) {
         this.cartPredicate = cartPredicate;
         return this;

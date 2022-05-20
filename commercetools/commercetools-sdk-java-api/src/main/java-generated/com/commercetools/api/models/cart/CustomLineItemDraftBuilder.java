@@ -43,6 +43,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+    *  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>
+    */
+
     public CustomLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
@@ -64,6 +68,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+    *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
+    */
+
     public CustomLineItemDraftBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
         this.taxCategory = builder
@@ -72,11 +80,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+    *  <p>The given tax category will be used to select a tax rate when a cart has the TaxMode <code>Platform</code>.</p>
+    */
+
     public CustomLineItemDraftBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
+
+    /**
+    *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+    */
 
     public CustomLineItemDraftBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
@@ -85,11 +101,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+    *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+    */
+
     public CustomLineItemDraftBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
+
+    /**
+    *  <p>The custom fields.</p>
+    */
 
     public CustomLineItemDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -97,11 +121,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+    *  <p>The custom fields.</p>
+    */
+
     public CustomLineItemDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+    *  <p>Container for custom line item specific address(es).</p>
+    */
 
     public CustomLineItemDraftBuilder shippingDetails(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
@@ -109,6 +141,10 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Container for custom line item specific address(es).</p>
+    */
 
     public CustomLineItemDraftBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {

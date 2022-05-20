@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> for <a href="#importsink">ImportSinks</a>.
-*  Used as a response to a query request for <a href="#importsink">ImportSinks</a>.</p>
+*  <p>PagedQueryResult for ImportSinks. Used as a response to a query request for ImportSinks.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse, ModelBase {
@@ -46,14 +45,14 @@ public class ImportSinkPagedResponseImpl implements ImportSinkPagedResponse, Mod
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     public Integer getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     public Long getOffset() {
         return this.offset;

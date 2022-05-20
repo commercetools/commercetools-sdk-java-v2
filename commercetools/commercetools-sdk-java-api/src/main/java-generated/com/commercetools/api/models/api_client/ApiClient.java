@@ -19,8 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApiClient {
 
     /**
-    *  <p>Platform-generated unique identifier of the APIClient.
-    *  This is the OAuth2 <code>client_id</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
+    *  <p>Platform-generated unique identifier of the APIClient. This is the OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
     */
     @NotNull
     @JsonProperty("id")
@@ -34,22 +33,21 @@ public interface ApiClient {
     public String getName();
 
     /**
-    *  <p>Whitespace-separated list of <a href="/../api/scopes">OAuth scopes</a> that can be used when <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtaining an access token</a>.</p>
+    *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
     */
     @NotNull
     @JsonProperty("scope")
     public String getScope();
 
     /**
-    *  <p>Only shown once in the response of creating the APIClient.
-    *  This is the OAuth2 <code>client_secret</code> that can be used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
+    *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
     */
 
     @JsonProperty("secret")
     public String getSecret();
 
     /**
-    *  <p>Date of the last day this APIClient was used to <a href="/../api/authorization#requesting-an-access-token-using-commercetools-oauth-20-server">obtain an access token</a>.</p>
+    *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
     */
 
     @JsonProperty("lastUsedAt")
@@ -70,14 +68,14 @@ public interface ApiClient {
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
+    *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
     */
 
     @JsonProperty("accessTokenValiditySeconds")
     public Integer getAccessTokenValiditySeconds();
 
     /**
-    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the <a href="ctp:api:type:ApiClientDraft">APIClientDraft</a>. If not present the default value applies.</p>
+    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
     */
 
     @JsonProperty("refreshTokenValiditySeconds")

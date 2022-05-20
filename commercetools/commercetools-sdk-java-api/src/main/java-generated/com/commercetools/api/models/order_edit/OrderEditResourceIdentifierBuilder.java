@@ -17,10 +17,18 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
     public OrderEditResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+    */
 
     public OrderEditResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

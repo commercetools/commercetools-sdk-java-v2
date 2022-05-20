@@ -14,6 +14,10 @@ public class CustomerSetCustomerNumberActionBuilder implements Builder<CustomerS
     @Nullable
     private String customerNumber;
 
+    /**
+    *  <p>It should be <strong>unique</strong> across a project. Once it's set, it cannot be changed.</p>
+    */
+
     public CustomerSetCustomerNumberActionBuilder customerNumber(@Nullable final String customerNumber) {
         this.customerNumber = customerNumber;
         return this;

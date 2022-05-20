@@ -18,15 +18,27 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
 
     private com.commercetools.history.models.change_value.LocalizedEnumValue nextValue;
 
+    /**
+    *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
+    */
+
     public AddLocalizedEnumValueChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+    *  <p>The name of the field definition updated.</p>
+    */
+
     public AddLocalizedEnumValueChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+    *  <p>The name of the attribute updated.</p>
+    */
 
     public AddLocalizedEnumValueChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

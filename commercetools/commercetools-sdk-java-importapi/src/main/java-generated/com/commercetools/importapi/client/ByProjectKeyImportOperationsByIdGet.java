@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Retrieves the <a href="ctp:import:type:ImportOperation">ImportOperation</a> of a given ID.</p>
+*  <p>Retrieves the ImportOperation of a given ID.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyImportOperationsByIdGet extends

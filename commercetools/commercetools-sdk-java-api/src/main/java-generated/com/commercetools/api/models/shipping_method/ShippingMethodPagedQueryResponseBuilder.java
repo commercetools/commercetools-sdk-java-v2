@@ -25,6 +25,10 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingMethod> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ShippingMethodPagedQueryResponseBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
         return this;
@@ -39,6 +43,10 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ShippingMethodPagedQueryResponseBuilder offset(@Nullable final Long offset) {
         this.offset = offset;

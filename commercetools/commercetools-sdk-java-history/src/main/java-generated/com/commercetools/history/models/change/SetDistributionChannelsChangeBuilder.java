@@ -16,6 +16,10 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setDistributionChannels</code></p>
+    */
+
     public SetDistributionChannelsChangeBuilder change(final String change) {
         this.change = change;
         return this;

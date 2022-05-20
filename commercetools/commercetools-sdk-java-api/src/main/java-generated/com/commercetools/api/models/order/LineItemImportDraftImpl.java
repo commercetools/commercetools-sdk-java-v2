@@ -68,8 +68,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-    *  <p>ID of the existing product.
-    *  You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
+    *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
     */
     public String getProductId() {
         return this.productId;
@@ -99,19 +98,14 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-    *  <p>Connection to a particular supplier.
-    *  By providing supply channel information, you can uniquely identify
-    *  inventory entries that should be reserved.
-    *  The provided channel should have the
-    *  InventorySupply role.</p>
+    *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
     /**
-    *  <p>The channel is used to select a ProductPrice.
-    *  The provided channel should have the ProductDistribution role.</p>
+    *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;

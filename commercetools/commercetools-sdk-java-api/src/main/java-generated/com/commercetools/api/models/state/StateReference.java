@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+*  <p>Reference to a State.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StateReferenceImpl.class)
@@ -24,14 +24,14 @@ public interface StateReference extends Reference, com.commercetools.api.models.
     String STATE = "state";
 
     /**
-    *  <p>Contains the representation of the expanded State. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for States.</p>
+    *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
     */
     @Valid
     @JsonProperty("obj")
     public State getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced State.</p>
     */
     @NotNull
     @JsonProperty("id")

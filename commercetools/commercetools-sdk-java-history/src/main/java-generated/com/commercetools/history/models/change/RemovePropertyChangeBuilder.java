@@ -15,10 +15,18 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
 
     private java.lang.Object previousValue;
 
+    /**
+    *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+    */
+
     public RemovePropertyChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>Value path to the property that was removed</p>
+    */
 
     public RemovePropertyChangeBuilder path(final String path) {
         this.path = path;

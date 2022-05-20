@@ -18,6 +18,10 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     private com.commercetools.history.models.common.Address address;
 
+    /**
+    *  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>
+    */
+
     public RemoveShippingAddressIdChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -23,6 +23,10 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
 
     private java.util.List<com.commercetools.api.models.category.Category> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public CategoryPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public CategoryPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

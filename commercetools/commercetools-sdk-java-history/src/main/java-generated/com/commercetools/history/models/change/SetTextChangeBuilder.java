@@ -15,6 +15,10 @@ public class SetTextChangeBuilder implements Builder<SetTextChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setText</code></p>
+    */
+
     public SetTextChangeBuilder change(final String change) {
         this.change = change;
         return this;

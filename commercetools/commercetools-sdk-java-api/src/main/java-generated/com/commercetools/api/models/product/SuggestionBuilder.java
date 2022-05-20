@@ -11,6 +11,10 @@ public class SuggestionBuilder implements Builder<Suggestion> {
 
     private String text;
 
+    /**
+    *  <p>The suggested text.</p>
+    */
+
     public SuggestionBuilder text(final String text) {
         this.text = text;
         return this;

@@ -13,10 +13,18 @@ public class CustomFieldEnumValueBuilder implements Builder<CustomFieldEnumValue
 
     private String label;
 
+    /**
+    *  <p>Key of the value used as a programmatic identifier.</p>
+    */
+
     public CustomFieldEnumValueBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>Descriptive label of the value.</p>
+    */
 
     public CustomFieldEnumValueBuilder label(final String label) {
         this.label = label;

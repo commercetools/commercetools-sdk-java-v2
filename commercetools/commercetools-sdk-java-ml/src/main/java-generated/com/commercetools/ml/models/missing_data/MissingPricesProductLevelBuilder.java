@@ -13,10 +13,18 @@ public class MissingPricesProductLevelBuilder implements Builder<MissingPricesPr
 
     private Long missingPrices;
 
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+
     public MissingPricesProductLevelBuilder total(final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of products missing prices.</p>
+    */
 
     public MissingPricesProductLevelBuilder missingPrices(final Long missingPrices) {
         this.missingPrices = missingPrices;

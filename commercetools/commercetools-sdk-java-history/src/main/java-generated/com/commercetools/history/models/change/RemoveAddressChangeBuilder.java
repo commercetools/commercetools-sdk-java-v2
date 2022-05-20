@@ -14,6 +14,10 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+    *  <p>Update action for <code>removeAddress</code> action.</p>
+    */
+
     public RemoveAddressChangeBuilder change(final String change) {
         this.change = change;
         return this;

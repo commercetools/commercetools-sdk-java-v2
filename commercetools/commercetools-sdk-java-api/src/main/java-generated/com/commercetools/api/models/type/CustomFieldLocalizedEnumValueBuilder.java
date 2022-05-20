@@ -14,16 +14,28 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
 
     private com.commercetools.api.models.common.LocalizedString label;
 
+    /**
+    *  <p>Key of the value used as a programmatic identifier.</p>
+    */
+
     public CustomFieldLocalizedEnumValueBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>Descriptive localized label of the value.</p>
+    */
 
     public CustomFieldLocalizedEnumValueBuilder label(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Descriptive localized label of the value.</p>
+    */
 
     public CustomFieldLocalizedEnumValueBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;

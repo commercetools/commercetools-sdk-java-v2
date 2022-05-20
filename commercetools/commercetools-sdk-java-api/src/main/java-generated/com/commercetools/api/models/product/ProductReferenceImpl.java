@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
+*  <p>Reference to a Product.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProductReferenceImpl implements ProductReference, ModelBase {
@@ -47,14 +47,14 @@ public class ProductReferenceImpl implements ProductReference, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Product">Product</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced Product.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Contains the representation of the expanded Product. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for Products.</p>
+    *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
     */
     public com.commercetools.api.models.product.Product getObj() {
         return this.obj;

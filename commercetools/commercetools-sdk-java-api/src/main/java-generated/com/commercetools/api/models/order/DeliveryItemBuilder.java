@@ -13,6 +13,10 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
     private Long quantity;
 
+    /**
+    *  <p>Platform-generated unique identifier of the DeliveryItem.</p>
+    */
+
     public DeliveryItemBuilder id(final String id) {
         this.id = id;
         return this;

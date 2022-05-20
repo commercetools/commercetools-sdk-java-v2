@@ -15,11 +15,19 @@ public class TypeSetDescriptionActionBuilder implements Builder<TypeSetDescripti
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public TypeSetDescriptionActionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
 
     public TypeSetDescriptionActionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {

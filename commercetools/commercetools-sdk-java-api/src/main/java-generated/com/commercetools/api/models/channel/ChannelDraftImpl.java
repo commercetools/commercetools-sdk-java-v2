@@ -59,9 +59,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-    *  <p>Roles of the Channel.
-    *  Each channel must have at least one role.
-    *  If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+    *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
     */
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
@@ -96,8 +94,7 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
     }
 
     /**
-    *  <p>GeoJSON geometry object encoding the geo location of the Channel.
-    *  Currently, only the <a href="ctp:api:type:GeoJsonPoint">Point</a> type is supported.</p>
+    *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
     */
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {
         return this.geoLocation;

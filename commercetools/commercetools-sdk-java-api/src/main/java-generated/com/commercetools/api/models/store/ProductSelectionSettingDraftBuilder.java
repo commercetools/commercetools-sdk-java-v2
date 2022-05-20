@@ -17,6 +17,10 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
     @Nullable
     private Boolean active;
 
+    /**
+    *  <p>Resource Identifier of a Product Selection</p>
+    */
+
     public ProductSelectionSettingDraftBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder> builder) {
         this.productSelection = builder
@@ -25,11 +29,19 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
         return this;
     }
 
+    /**
+    *  <p>Resource Identifier of a Product Selection</p>
+    */
+
     public ProductSelectionSettingDraftBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
         this.productSelection = productSelection;
         return this;
     }
+
+    /**
+    *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+    */
 
     public ProductSelectionSettingDraftBuilder active(@Nullable final Boolean active) {
         this.active = active;

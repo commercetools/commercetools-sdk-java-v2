@@ -20,8 +20,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The data representation for a Product to be imported that is persisted as a <a href="/../api/projects/products#product">Product</a> in the Project.</p>
-*  <p>This is the minimal representation required for creating a <a href="/../api/projects/products#product">Product</a> in commercetools.</p>
+*  <p>The data representation for a Product to be imported that is persisted as a Product in the Project.</p>
+*  <p>This is the minimal representation required for creating a Product in commercetools.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductImportImpl.class)
@@ -36,10 +36,7 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getName();
 
     /**
-    *  <p>The <code>productType</code> of a <a href="/../api/projects/products#product">Product</a>.
-    *  Maps to <code>Product.productType</code>.
-    *  The Reference to the <a href="/../api/projects/productTypes#producttype">ProductType</a> with which the Product is associated.
-    *  If referenced ProductType does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+    *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
     */
     @NotNull
     @Valid
@@ -47,8 +44,7 @@ public interface ProductImport extends ImportResource {
     public ProductTypeKeyReference getProductType();
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project,
-    *  but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+    *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
     */
     @NotNull
     @Valid
@@ -63,19 +59,17 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getDescription();
 
     /**
-    *  <p>Maps to <code>Product.categories</code>.
-    *  The References to the <a href="/../api/projects/categories#category">Categories</a> with which the Product is associated.
-    *  If referenced Categories do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+    *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
     */
     @Valid
     @JsonProperty("categories")
     public List<CategoryKeyReference> getCategories();
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
     *  }
     *  </code></pre>
     */
@@ -84,10 +78,10 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getMetaTitle();
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
     *  }
     *  </code></pre>
     */
@@ -96,10 +90,10 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getMetaDescription();
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
     *  }
     *  </code></pre>
     */
@@ -108,26 +102,25 @@ public interface ProductImport extends ImportResource {
     public LocalizedString getMetaKeywords();
 
     /**
-    *  <p>The Reference to the <a href="/../api/projects/taxCategories#taxcategory">TaxCategory</a> with which the Product is associated.
-    *  If referenced TaxCategory does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+    *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-    *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;en&quot;: [
-    *      { &quot;text&quot;: &quot;Multi tool&quot; },
-    *      { &quot;text&quot;: &quot;Swiss Army Knife&quot;, &quot;suggestTokenizer&quot;: { &quot;type&quot;: &quot;whitespace&quot; } }
+    *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+    *  <pre><code>{
+    *    "en": [
+    *      { "text": "Multi tool" },
+    *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
     *    ],
-    *    &quot;de&quot;: [
+    *    "de": [
     *      {
-    *        &quot;text&quot;: &quot;Schweizer Messer&quot;,
-    *        &quot;suggestTokenizer&quot;: {
-    *          &quot;type&quot;: &quot;custom&quot;,
-    *          &quot;inputs&quot;: [&quot;schweizer messer&quot;, &quot;offiziersmesser&quot;, &quot;sackmesser&quot;]
+    *        "text": "Schweizer Messer",
+    *        "suggestTokenizer": {
+    *          "type": "custom",
+    *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
     *        }
     *      }
     *    ]
@@ -139,17 +132,14 @@ public interface ProductImport extends ImportResource {
     public SearchKeywords getSearchKeywords();
 
     /**
-    *  <p>The Reference to the <a href="/../api/projects/states#state">State</a> with which the Product is associated.
-    *  If referenced State does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary State is created.</p>
+    *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
     */
     @Valid
     @JsonProperty("state")
     public StateKeyReference getState();
 
     /**
-    *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data.
-    *  If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged.
-    *  However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+    *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
     */
 
     @JsonProperty("publish")

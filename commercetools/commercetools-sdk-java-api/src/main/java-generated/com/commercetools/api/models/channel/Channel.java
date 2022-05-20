@@ -57,14 +57,14 @@ public interface Channel extends BaseResource, com.commercetools.api.models.Doma
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")

@@ -22,6 +22,10 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    /**
+    *  <p>Update action for <code>setDiscountedPrice</code></p>
+    */
+
     public SetDiscountedPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;

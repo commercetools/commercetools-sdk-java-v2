@@ -12,17 +12,29 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
+    /**
+    *  <p>Allowed values.</p>
+    */
+
     public CustomFieldLocalizedEnumTypeBuilder values(
             final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue... values) {
         this.values = new ArrayList<>(Arrays.asList(values));
         return this;
     }
 
+    /**
+    *  <p>Allowed values.</p>
+    */
+
     public CustomFieldLocalizedEnumTypeBuilder values(
             final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
         this.values = values;
         return this;
     }
+
+    /**
+    *  <p>Allowed values.</p>
+    */
 
     public CustomFieldLocalizedEnumTypeBuilder plusValues(
             final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue... values) {
@@ -33,6 +45,10 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
         return this;
     }
 
+    /**
+    *  <p>Allowed values.</p>
+    */
+
     public CustomFieldLocalizedEnumTypeBuilder plusValues(
             Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
         if (this.values == null) {
@@ -42,6 +58,10 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
             builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Allowed values.</p>
+    */
 
     public CustomFieldLocalizedEnumTypeBuilder withValues(
             Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {

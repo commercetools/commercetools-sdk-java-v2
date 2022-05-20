@@ -15,6 +15,10 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
 
     private com.commercetools.history.models.common.PaymentState previousValue;
 
+    /**
+    *  <p>Update action for <code>changePaymentState</code></p>
+    */
+
     public ChangePaymentStateChangeBuilder change(final String change) {
         this.change = change;
         return this;

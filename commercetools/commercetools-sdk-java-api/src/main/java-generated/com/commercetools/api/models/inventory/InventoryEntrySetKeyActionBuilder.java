@@ -14,6 +14,10 @@ public class InventoryEntrySetKeyActionBuilder implements Builder<InventoryEntry
     @Nullable
     private String key;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public InventoryEntrySetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

@@ -23,14 +23,14 @@ public interface CartAddLineItemAction
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>ResourceIdentifier to a Channel.</p>
     */
     @Valid
     @JsonProperty("distributionChannel")
@@ -53,7 +53,7 @@ public interface CartAddLineItemAction
     public Long getQuantity();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>ResourceIdentifier to a Channel.</p>
     */
     @Valid
     @JsonProperty("supplyChannel")
@@ -61,7 +61,7 @@ public interface CartAddLineItemAction
 
     /**
     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
     */
     @Valid
     @JsonProperty("externalPrice")

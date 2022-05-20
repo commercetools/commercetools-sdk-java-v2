@@ -33,11 +33,19 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         return this;
     }
 
+    /**
+    *  <p>The width and height of the Asset Source.</p>
+    */
+
     public AssetSourceBuilder dimensions(
             Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensionsBuilder> builder) {
         this.dimensions = builder.apply(com.commercetools.importapi.models.common.AssetDimensionsBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The width and height of the Asset Source.</p>
+    */
 
     public AssetSourceBuilder dimensions(
             @Nullable final com.commercetools.importapi.models.common.AssetDimensions dimensions) {

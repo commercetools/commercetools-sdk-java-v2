@@ -17,22 +17,38 @@ public class CustomBuilder implements Builder<Custom> {
     @Nullable
     private com.commercetools.importapi.models.customfields.FieldContainer fields;
 
+    /**
+    *  <p>The type that provides the field definitions for this object.</p>
+    */
+
     public CustomBuilder type(
             Function<com.commercetools.importapi.models.common.TypeKeyReferenceBuilder, com.commercetools.importapi.models.common.TypeKeyReferenceBuilder> builder) {
         this.type = builder.apply(com.commercetools.importapi.models.common.TypeKeyReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>The type that provides the field definitions for this object.</p>
+    */
+
     public CustomBuilder type(final com.commercetools.importapi.models.common.TypeKeyReference type) {
         this.type = type;
         return this;
     }
+
+    /**
+    *  <p>The custom fields of this object.</p>
+    */
 
     public CustomBuilder fields(
             Function<com.commercetools.importapi.models.customfields.FieldContainerBuilder, com.commercetools.importapi.models.customfields.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.importapi.models.customfields.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The custom fields of this object.</p>
+    */
 
     public CustomBuilder fields(@Nullable final com.commercetools.importapi.models.customfields.FieldContainer fields) {
         this.fields = fields;

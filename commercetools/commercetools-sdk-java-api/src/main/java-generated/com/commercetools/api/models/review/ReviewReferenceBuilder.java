@@ -17,16 +17,28 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
     @Nullable
     private com.commercetools.api.models.review.Review obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Review.</p>
+    */
+
     public ReviewReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+    */
 
     public ReviewReferenceBuilder obj(
             Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.ReviewBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+    */
 
     public ReviewReferenceBuilder obj(@Nullable final com.commercetools.api.models.review.Review obj) {
         this.obj = obj;

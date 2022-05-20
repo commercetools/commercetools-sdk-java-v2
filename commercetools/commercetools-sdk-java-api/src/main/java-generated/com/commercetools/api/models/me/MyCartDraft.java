@@ -25,7 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyCartDraft extends com.commercetools.api.models.CustomizableDraft<MyCartDraft> {
 
     /**
-    *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>
     */
     @NotNull
     @JsonProperty("currency")
@@ -35,7 +35,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public String getCustomerEmail();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
     */
 
     @JsonProperty("country")
@@ -82,16 +82,14 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public TaxMode getTaxMode();
 
     /**
-    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.
-    *  If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
     */
 
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses.
-    *  Each address must contain a key which is unique in this cart.</p>
+    *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
     */
     @Valid
     @JsonProperty("itemShippingAddresses")

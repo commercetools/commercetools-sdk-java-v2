@@ -23,6 +23,10 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     private java.util.List<com.commercetools.api.models.order.Order> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public OrderPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public OrderPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

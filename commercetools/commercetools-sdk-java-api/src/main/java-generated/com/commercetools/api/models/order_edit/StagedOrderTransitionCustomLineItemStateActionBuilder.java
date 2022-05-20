@@ -34,11 +34,19 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
+
     public StagedOrderTransitionCustomLineItemStateActionBuilder fromState(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.fromState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
 
     public StagedOrderTransitionCustomLineItemStateActionBuilder fromState(
             final com.commercetools.api.models.state.StateResourceIdentifier fromState) {
@@ -46,11 +54,19 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
+
     public StagedOrderTransitionCustomLineItemStateActionBuilder toState(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.toState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
 
     public StagedOrderTransitionCustomLineItemStateActionBuilder toState(
             final com.commercetools.api.models.state.StateResourceIdentifier toState) {

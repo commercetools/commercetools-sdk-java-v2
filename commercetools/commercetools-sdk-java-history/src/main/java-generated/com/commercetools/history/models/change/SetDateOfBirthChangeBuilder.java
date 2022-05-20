@@ -15,6 +15,10 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setDateOfBirth</code></p>
+    */
+
     public SetDateOfBirthChangeBuilder change(final String change) {
         this.change = change;
         return this;

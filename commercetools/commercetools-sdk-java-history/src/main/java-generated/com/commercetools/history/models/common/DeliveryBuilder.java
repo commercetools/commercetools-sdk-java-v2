@@ -115,11 +115,19 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
+
     public DeliveryBuilder custom(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
 
     public DeliveryBuilder custom(@Nullable final com.commercetools.history.models.common.CustomFields custom) {
         this.custom = custom;

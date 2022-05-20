@@ -15,6 +15,10 @@ public class SetCompanyNameChangeBuilder implements Builder<SetCompanyNameChange
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setCompanyName</code></p>
+    */
+
     public SetCompanyNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

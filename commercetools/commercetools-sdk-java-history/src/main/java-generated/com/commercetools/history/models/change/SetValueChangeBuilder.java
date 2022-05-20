@@ -15,6 +15,10 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
 
     private java.lang.Object previousValue;
 
+    /**
+    *  <p>Update action for <code>setValue</code> on custom objects</p>
+    */
+
     public SetValueChangeBuilder change(final String change) {
         this.change = change;
         return this;

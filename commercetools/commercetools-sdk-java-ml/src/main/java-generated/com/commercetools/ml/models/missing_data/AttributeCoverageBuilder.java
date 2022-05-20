@@ -13,10 +13,18 @@ public class AttributeCoverageBuilder implements Builder<AttributeCoverage> {
 
     private Double values;
 
+    /**
+    *  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>
+    */
+
     public AttributeCoverageBuilder names(final Double names) {
         this.names = names;
         return this;
     }
+
+    /**
+    *  <p>Represents the percentage of attributes in the product variant that contain values.</p>
+    */
 
     public AttributeCoverageBuilder values(final Double values) {
         this.values = values;

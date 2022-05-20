@@ -15,24 +15,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Serves as the entry point of resources.
-*  An Import Container is not resource type-specific.</p>
+*  <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImportContainerImpl.class)
 public interface ImportContainer {
 
     /**
-    *  <p>User-defined unique identifier for the ImportContainer.
-    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+    *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> the ImportContainer is able to handle.
-    *  If not present, the ImportContainer is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
+    *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
     */
 
     @JsonProperty("resourceType")

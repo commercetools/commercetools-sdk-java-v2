@@ -120,9 +120,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-    *  <p>String that unique identifies an order.
-    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.
-    *  It should be unique within a project.</p>
+    *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
     */
     public String getOrderNumber() {
         return this.orderNumber;
@@ -161,8 +159,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-    *  <p>Order Import does not support calculation of taxes.
-    *  When setting the draft the taxedPrice is to be provided.</p>
+    *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
     */
     public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
         return this.taxedPrice;
@@ -177,16 +174,14 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-    *  <p>Set when the customer is set and the customer is a member of a customer group.
-    *  Used for product variant price selection.</p>
+    *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
-    *  Used for product variant price selection.</p>
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
     */
     public String getCountry() {
         return this.country;

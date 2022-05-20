@@ -18,11 +18,19 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    /**
+    *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+    */
+
     public ProductDiscountSetValidFromAndUntilActionBuilder validFrom(
             @Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+    *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+    */
 
     public ProductDiscountSetValidFromAndUntilActionBuilder validUntil(
             @Nullable final java.time.ZonedDateTime validUntil) {

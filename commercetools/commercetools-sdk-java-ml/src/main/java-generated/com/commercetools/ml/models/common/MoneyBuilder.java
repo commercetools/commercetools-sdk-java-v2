@@ -18,6 +18,10 @@ public class MoneyBuilder implements Builder<Money> {
         return this;
     }
 
+    /**
+    *  <p>The currency code compliant to ISO 4217.</p>
+    */
+
     public MoneyBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;

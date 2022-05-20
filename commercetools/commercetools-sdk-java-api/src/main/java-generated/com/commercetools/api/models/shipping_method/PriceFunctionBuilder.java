@@ -13,6 +13,10 @@ public class PriceFunctionBuilder implements Builder<PriceFunction> {
 
     private String function;
 
+    /**
+    *  <p>Currency code compliant to ISO 4217.</p>
+    */
+
     public PriceFunctionBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;

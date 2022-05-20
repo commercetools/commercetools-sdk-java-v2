@@ -18,6 +18,10 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    /**
+    *  <p>Update action for adding prices</p>
+    */
+
     public AddPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -65,8 +65,7 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
     }
 
     /**
-    *  <p>The new image label.
-    *  If left blank or set to null, the label is removed.</p>
+    *  <p>The new image label. If left blank or set to null, the label is removed.</p>
     */
     public String getLabel() {
         return this.label;

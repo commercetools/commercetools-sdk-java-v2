@@ -26,11 +26,19 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
         return this;
     }
 
+    /**
+    *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+    */
+
     public StagedOrderSetReturnItemCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+    */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -38,11 +46,19 @@ public class StagedOrderSetReturnItemCustomTypeActionBuilder
         return this;
     }
 
+    /**
+    *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+    */
+
     public StagedOrderSetReturnItemCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+    */
 
     public StagedOrderSetReturnItemCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

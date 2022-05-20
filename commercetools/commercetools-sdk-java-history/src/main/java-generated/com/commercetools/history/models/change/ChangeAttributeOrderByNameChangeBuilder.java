@@ -15,6 +15,10 @@ public class ChangeAttributeOrderByNameChangeBuilder implements Builder<ChangeAt
 
     private java.util.List<String> nextValue;
 
+    /**
+    *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
+    */
+
     public ChangeAttributeOrderByNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

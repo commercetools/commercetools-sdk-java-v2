@@ -55,11 +55,19 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
         return this;
     }
 
+    /**
+    *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+    */
+
     public ShoppingListAddLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+    */
 
     public ShoppingListAddLineItemActionBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

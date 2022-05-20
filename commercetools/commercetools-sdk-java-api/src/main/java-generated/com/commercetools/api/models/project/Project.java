@@ -76,7 +76,7 @@ public interface Project {
     public String getTrialUntil();
 
     /**
-    *  <p>Holds the configuration for the <a href="/../api/projects/messages">Messages Query</a> feature.</p>
+    *  <p>Holds the configuration for the Messages Query feature.</p>
     */
     @NotNull
     @Valid
@@ -84,7 +84,7 @@ public interface Project {
     public MessagesConfiguration getMessages();
 
     /**
-    *  <p>Holds the configuration for the <a href="/../api/projects/carts">Carts</a> feature.</p>
+    *  <p>Holds the configuration for the Carts feature.</p>
     */
     @NotNull
     @Valid
@@ -92,21 +92,21 @@ public interface Project {
     public CartsConfiguration getCarts();
 
     /**
-    *  <p>Holds the configuration for the <a href="/../api/projects/shoppingLists">Shopping Lists</a> feature. This field may not be present on Projects created before January 2020.</p>
+    *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
     */
     @Valid
     @JsonProperty("shoppingLists")
     public ShoppingListsConfiguration getShoppingLists();
 
     /**
-    *  <p>Holds the configuration for the <a href="ctp:api:type:ShippingRatePriceTier">tiered shipping rates</a> feature.</p>
+    *  <p>Holds the configuration for the tiered shipping rates feature.</p>
     */
     @Valid
     @JsonProperty("shippingRateInputType")
     public ShippingRateInputType getShippingRateInputType();
 
     /**
-    *  <p>Represents a RFC 7662 compliant <a href="https://datatracker.ietf.org/doc/html/rfc7662">OAuth 2.0 Token Introspection</a> endpoint.</p>
+    *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
     */
     @Valid
     @JsonProperty("externalOAuth")

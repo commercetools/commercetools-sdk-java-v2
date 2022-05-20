@@ -17,6 +17,10 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
     @Nullable
     private com.commercetools.api.models.store.Store obj;
 
+    /**
+    *  <p>Unique ID of the referenced resource.</p>
+    */
+
     public StoreReferenceBuilder id(final String id) {
         this.id = id;
         return this;

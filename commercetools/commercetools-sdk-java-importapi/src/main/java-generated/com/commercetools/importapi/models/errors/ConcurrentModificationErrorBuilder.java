@@ -26,15 +26,27 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
         return this;
     }
 
+    /**
+    *  <p>The version specified in the failed request.</p>
+    */
+
     public ConcurrentModificationErrorBuilder specifiedVersion(@Nullable final Long specifiedVersion) {
         this.specifiedVersion = specifiedVersion;
         return this;
     }
 
+    /**
+    *  <p>The current version of the resource.</p>
+    */
+
     public ConcurrentModificationErrorBuilder currentVersion(final Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
     }
+
+    /**
+    *  <p>The resource in conflict.</p>
+    */
 
     public ConcurrentModificationErrorBuilder conflictedResource(@Nullable final java.lang.Object conflictedResource) {
         this.conflictedResource = conflictedResource;

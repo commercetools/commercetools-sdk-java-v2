@@ -56,17 +56,14 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public CartDiscountTarget getTarget();
 
     /**
-    *  <p>The string must contain a number between 0 and 1.
-    *  A discount with greater sort order is prioritized higher than a discount with lower sort order.
-    *  The sort order must be unambiguous among all cart discounts.</p>
+    *  <p>The string must contain a number between 0 and 1. A discount with greater sort order is prioritized higher than a discount with lower sort order. The sort order must be unambiguous among all cart discounts.</p>
     */
     @NotNull
     @JsonProperty("sortOrder")
     public String getSortOrder();
 
     /**
-    *  <p>Only active discount can be applied to the cart.
-    *  Defaults to <code>true</code>.</p>
+    *  <p>Only active discount can be applied to the cart. Defaults to <code>true</code>.</p>
     */
 
     @JsonProperty("isActive")
@@ -79,16 +76,14 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public ZonedDateTime getValidUntil();
 
     /**
-    *  <p>States whether the discount can only be used in a connection with a DiscountCode.
-    *  Defaults to <code>false</code>.</p>
+    *  <p>States whether the discount can only be used in a connection with a DiscountCode. Defaults to <code>false</code>.</p>
     */
 
     @JsonProperty("requiresDiscountCode")
     public Boolean getRequiresDiscountCode();
 
     /**
-    *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.
-    *  Defaults to Stacking.</p>
+    *  <p>Specifies whether the application of this discount causes the following discounts to be ignored. Defaults to Stacking.</p>
     */
 
     @JsonProperty("stackingMode")

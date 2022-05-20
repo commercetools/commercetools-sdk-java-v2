@@ -22,12 +22,20 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    /**
+    *  <p>ResourceIdentifier to a Product.</p>
+    */
+
     public CartDiscountValueGiftLineItemDraftBuilder product(
             Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifierBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Product.</p>
+    */
 
     public CartDiscountValueGiftLineItemDraftBuilder product(
             final com.commercetools.api.models.product.ProductResourceIdentifier product) {
@@ -40,6 +48,10 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
         return this;
     }
 
+    /**
+    *  <p>The channel must have the role <code>InventorySupply</code></p>
+    */
+
     public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
@@ -47,11 +59,19 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
         return this;
     }
 
+    /**
+    *  <p>The channel must have the role <code>InventorySupply</code></p>
+    */
+
     public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+
+    /**
+    *  <p>The channel must have the role <code>ProductDistribution</code></p>
+    */
 
     public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -60,6 +80,10 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
                 .build();
         return this;
     }
+
+    /**
+    *  <p>The channel must have the role <code>ProductDistribution</code></p>
+    */
 
     public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {

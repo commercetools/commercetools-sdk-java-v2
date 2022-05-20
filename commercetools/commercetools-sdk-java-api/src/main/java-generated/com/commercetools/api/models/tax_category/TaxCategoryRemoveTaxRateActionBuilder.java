@@ -11,6 +11,10 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
 
     private String taxRateId;
 
+    /**
+    *  <p>ID of the TaxRate to remove.</p>
+    */
+
     public TaxCategoryRemoveTaxRateActionBuilder taxRateId(final String taxRateId) {
         this.taxRateId = taxRateId;
         return this;

@@ -14,6 +14,10 @@ public class PaymentSetAnonymousIdActionBuilder implements Builder<PaymentSetAno
     @Nullable
     private String anonymousId;
 
+    /**
+    *  <p>Anonymous ID of the anonymous customer that this payment belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p>
+    */
+
     public PaymentSetAnonymousIdActionBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;

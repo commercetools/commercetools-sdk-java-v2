@@ -60,17 +60,14 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-    *  <p>This property is only used for OAuth2 errors.
-    *  Contains the error code.</p>
+    *  <p>This property is only used for OAuth2 errors. Contains the error code.</p>
     */
     public String getError() {
         return this.error;
     }
 
     /**
-    *  <p>This property is only used for OAuth2 errors.
-    *  Additional information to assist the client developer in
-    *  understanding the error.</p>
+    *  <p>This property is only used for OAuth2 errors. Additional information to assist the client developer in understanding the error.</p>
     */
     public String getErrorDescription() {
         return this.errorDescription;

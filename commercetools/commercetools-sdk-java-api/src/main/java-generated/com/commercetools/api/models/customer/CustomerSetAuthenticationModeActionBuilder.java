@@ -22,6 +22,10 @@ public class CustomerSetAuthenticationModeActionBuilder implements Builder<Custo
         return this;
     }
 
+    /**
+    *  <p>Required when <code>authMode</code> is <code>Password</code></p>
+    */
+
     public CustomerSetAuthenticationModeActionBuilder password(@Nullable final String password) {
         this.password = password;
         return this;

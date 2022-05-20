@@ -79,7 +79,7 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:StandalonePrice">StandalonePrice</a>.</p>
+    *  <p>Reference to a StandalonePrice.</p>
     */
     public com.commercetools.api.models.standalone_price.StandalonePriceReference getConflictingStandalonePrice() {
         return this.conflictingStandalonePrice;
@@ -98,14 +98,14 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>ResourceIdentifier to a CustomerGroup.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>ResourceIdentifier to a Channel.</p>
     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;

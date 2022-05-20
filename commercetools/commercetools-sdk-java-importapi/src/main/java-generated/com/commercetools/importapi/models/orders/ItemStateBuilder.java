@@ -19,11 +19,19 @@ public class ItemStateBuilder implements Builder<ItemState> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ItemState.state</code>.</p>
+    */
+
     public ItemStateBuilder state(
             Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ItemState.state</code>.</p>
+    */
 
     public ItemStateBuilder state(final com.commercetools.importapi.models.common.StateKeyReference state) {
         this.state = state;

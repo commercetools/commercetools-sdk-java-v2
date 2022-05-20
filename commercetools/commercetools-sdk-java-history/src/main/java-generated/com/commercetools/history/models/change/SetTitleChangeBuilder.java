@@ -15,6 +15,10 @@ public class SetTitleChangeBuilder implements Builder<SetTitleChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setTitle</code></p>
+    */
+
     public SetTitleChangeBuilder change(final String change) {
         this.change = change;
         return this;

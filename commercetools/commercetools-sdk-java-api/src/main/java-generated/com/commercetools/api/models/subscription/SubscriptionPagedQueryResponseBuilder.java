@@ -23,6 +23,10 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
 
     private java.util.List<com.commercetools.api.models.subscription.Subscription> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public SubscriptionPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public SubscriptionPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

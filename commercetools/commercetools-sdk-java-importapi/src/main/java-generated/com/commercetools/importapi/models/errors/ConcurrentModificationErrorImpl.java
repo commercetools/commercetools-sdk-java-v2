@@ -15,9 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The request conflicts with the current state of the involved resources.
-*  This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it.
-*  The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
+*  <p>The request conflicts with the current state of the involved resources. This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it. The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ConcurrentModificationErrorImpl implements ConcurrentModificationError, ModelBase {

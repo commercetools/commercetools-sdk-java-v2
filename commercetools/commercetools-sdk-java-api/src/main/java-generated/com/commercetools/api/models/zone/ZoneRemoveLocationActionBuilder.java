@@ -12,11 +12,19 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
 
     private com.commercetools.api.models.zone.Location location;
 
+    /**
+    *  <p>Location to be removed from the Zone.</p>
+    */
+
     public ZoneRemoveLocationActionBuilder location(
             Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
         this.location = builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Location to be removed from the Zone.</p>
+    */
 
     public ZoneRemoveLocationActionBuilder location(final com.commercetools.api.models.zone.Location location) {
         this.location = location;

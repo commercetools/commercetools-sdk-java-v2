@@ -32,7 +32,7 @@ public class ChannelUpdateImpl implements ChannelUpdate, ModelBase {
     }
 
     /**
-    *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a <a href="/../api/errors#409-conflict">409 Conflict</a> error will be returned.</p>
+    *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
     */
     public Long getVersion() {
         return this.version;

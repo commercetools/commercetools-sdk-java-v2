@@ -15,6 +15,10 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setFirstName</code></p>
+    */
+
     public SetFirstNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

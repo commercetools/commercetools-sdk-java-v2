@@ -12,12 +12,20 @@ public class OrderDiscountCodeAddedMessagePayloadBuilder implements Builder<Orde
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
+    /**
+    *  <p>Reference to a DiscountCode.</p>
+    */
+
     public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(
             Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
         this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a DiscountCode.</p>
+    */
 
     public OrderDiscountCodeAddedMessagePayloadBuilder discountCode(
             final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {

@@ -15,6 +15,10 @@ public class ChangePredicateChangeBuilder implements Builder<ChangePredicateChan
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changePredicate</code></p>
+    */
+
     public ChangePredicateChangeBuilder change(final String change) {
         this.change = change;
         return this;

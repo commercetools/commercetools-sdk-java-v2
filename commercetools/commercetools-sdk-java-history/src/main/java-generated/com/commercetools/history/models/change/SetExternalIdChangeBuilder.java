@@ -15,6 +15,10 @@ public class SetExternalIdChangeBuilder implements Builder<SetExternalIdChange> 
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setExternalId</code></p>
+    */
+
     public SetExternalIdChangeBuilder change(final String change) {
         this.change = change;
         return this;

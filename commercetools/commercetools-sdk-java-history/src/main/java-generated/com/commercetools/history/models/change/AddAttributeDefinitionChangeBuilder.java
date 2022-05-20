@@ -14,6 +14,10 @@ public class AddAttributeDefinitionChangeBuilder implements Builder<AddAttribute
 
     private com.commercetools.history.models.common.AttributeDefinition nextValue;
 
+    /**
+    *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
+    */
+
     public AddAttributeDefinitionChangeBuilder change(final String change) {
         this.change = change;
         return this;

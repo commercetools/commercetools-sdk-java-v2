@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomObject">CustomObject</a>.</p>
+*  <p>Reference to a CustomObject.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomObjectReferenceImpl.class)
@@ -24,14 +24,14 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
     /**
-    *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for CustomObjects.</p>
+    *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
     */
     @Valid
     @JsonProperty("obj")
     public CustomObject getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:CustomObject">CustomObject</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced CustomObject.</p>
     */
     @NotNull
     @JsonProperty("id")

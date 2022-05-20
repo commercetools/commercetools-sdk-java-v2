@@ -37,11 +37,19 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
         return this;
     }
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.fromState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
             final com.commercetools.api.models.state.StateReference fromState) {
@@ -49,11 +57,19 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
         return this;
     }
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.toState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public CustomLineItemStateTransitionMessagePayloadBuilder toState(
             final com.commercetools.api.models.state.StateReference toState) {

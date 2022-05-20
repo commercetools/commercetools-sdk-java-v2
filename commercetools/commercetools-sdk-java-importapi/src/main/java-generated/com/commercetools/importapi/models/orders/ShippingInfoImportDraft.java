@@ -18,8 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with
-*  the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
+*  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShippingInfoImportDraftImpl.class)

@@ -12,6 +12,10 @@ public class ProductTypeRemoveAttributeDefinitionActionBuilder
 
     private String name;
 
+    /**
+    *  <p>The name of the attribute to remove.</p>
+    */
+
     public ProductTypeRemoveAttributeDefinitionActionBuilder name(final String name) {
         this.name = name;
         return this;

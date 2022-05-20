@@ -17,16 +17,28 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
     @Nullable
     private com.commercetools.api.models.shipping_method.ShippingMethod obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced ShippingMethod.</p>
+    */
+
     public ShippingMethodReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+    */
 
     public ShippingMethodReferenceBuilder obj(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethodBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+    */
 
     public ShippingMethodReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.shipping_method.ShippingMethod obj) {

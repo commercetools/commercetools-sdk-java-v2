@@ -33,6 +33,10 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a ShippingMethod.</p>
+    */
+
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
         this.shippingMethod = builder
@@ -40,6 +44,10 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a ShippingMethod.</p>
+    */
 
     public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
             @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {

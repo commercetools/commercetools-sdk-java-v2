@@ -40,6 +40,10 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         return this;
     }
 
+    /**
+    *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
+    */
+
     public ShippingRateBuilder isMatching(final Boolean isMatching) {
         this.isMatching = isMatching;
         return this;

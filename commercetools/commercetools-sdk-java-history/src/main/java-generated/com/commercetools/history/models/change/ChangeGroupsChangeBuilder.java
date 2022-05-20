@@ -15,6 +15,10 @@ public class ChangeGroupsChangeBuilder implements Builder<ChangeGroupsChange> {
 
     private java.util.List<String> nextValue;
 
+    /**
+    *  <p>Update action for <code>changeGroups</code> on stores</p>
+    */
+
     public ChangeGroupsChangeBuilder change(final String change) {
         this.change = change;
         return this;

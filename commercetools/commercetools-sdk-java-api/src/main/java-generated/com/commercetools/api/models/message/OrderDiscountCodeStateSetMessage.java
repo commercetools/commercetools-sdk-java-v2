@@ -22,7 +22,7 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
     String ORDER_DISCOUNT_CODE_STATE_SET = "OrderDiscountCodeStateSet";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    *  <p>Reference to a DiscountCode.</p>
     */
     @NotNull
     @Valid

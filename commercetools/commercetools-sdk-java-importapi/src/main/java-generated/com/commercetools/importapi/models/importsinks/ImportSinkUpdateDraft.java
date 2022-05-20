@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The representation sent to the server when updating an <a href="#importsink">ImportSink</a>.</p>
+*  <p>The representation sent to the server when updating an ImportSink.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImportSinkUpdateDraftImpl.class)
@@ -28,8 +28,7 @@ public interface ImportSinkUpdateDraft {
     public Long getVersion();
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
-    *  If not given, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
+    *  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
     */
 
     @JsonProperty("resourceType")

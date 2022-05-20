@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartDraft extends com.commercetools.api.models.CustomizableDraft<CartDraft> {
 
     /**
-    *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    *  <p>A three-digit currency code as per ISO 4217.</p>
     */
     @NotNull
     @JsonProperty("currency")
@@ -47,8 +47,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public String getCustomerEmail();
 
     /**
-    *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group.
-    *  Can be set explicitly when no <code>customerId</code> is present.</p>
+    *  <p>Will be set automatically when the <code>customerId</code> is set and the customer is a member of a customer group. Can be set explicitly when no <code>customerId</code> is present.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
@@ -62,15 +61,14 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public String getAnonymousId();
 
     /**
-    *  <p>Assigns the new cart to the store.
-    *  The store assignment can not be modified.</p>
+    *  <p>Assigns the new cart to the store. The store assignment can not be modified.</p>
     */
     @Valid
     @JsonProperty("store")
     public StoreResourceIdentifier getStore();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
     */
 
     @JsonProperty("country")
@@ -149,8 +147,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public String getLocale();
 
     /**
-    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.
-    *  If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
     */
 
     @JsonProperty("deleteDaysAfterLastModification")
@@ -164,22 +161,14 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public CartOrigin getOrigin();
 
     /**
-    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.
-    *  Based on the definition of ShippingRateInputType.
-    *  If CartClassification is defined, it must be ClassificationShippingRateInput.
-    *  If CartScore is defined, it must be ScoreShippingRateInput.
-    *  Otherwise it can not bet set.</p>
+    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
     */
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInputDraft getShippingRateInput();
 
     /**
-    *  <p>Contains addresses for carts with multiple shipping addresses.
-    *  Each address must contain a key which is unique in this cart.
-    *  Line items will use these keys to reference the addresses under their <code>shippingDetails</code>.
-    *  The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate.
-    *  Only the cart's <code>shippingAddress</code> is used for this.</p>
+    *  <p>Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
     */
     @Valid
     @JsonProperty("itemShippingAddresses")

@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Changes the order of <a href="ctp:api:type:CustomFieldEnumValue">EnumValues</a> in an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition.
-*  This update action can be used to update an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> FieldDefinition of <a href="ctp:api:type:CustomFieldEnumType">EnumType</a>.</p>
+*  <p>Changes the order of EnumValues in an EnumType FieldDefinition. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOrderAction, ModelBase {
@@ -44,7 +43,7 @@ public class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOr
     }
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</p>
+    *  <p><code>name</code> of the FieldDefinition to update.</p>
     */
     public String getFieldName() {
         return this.fieldName;

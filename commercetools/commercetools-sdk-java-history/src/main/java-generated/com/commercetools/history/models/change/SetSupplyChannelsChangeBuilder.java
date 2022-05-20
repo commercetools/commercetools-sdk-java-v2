@@ -16,6 +16,10 @@ public class SetSupplyChannelsChangeBuilder implements Builder<SetSupplyChannels
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setSupplyChannels</code></p>
+    */
+
     public SetSupplyChannelsChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -36,7 +36,7 @@ public class ProductDiscountChangePredicateActionImpl implements ProductDiscount
     }
 
     /**
-    *  <p>New value to set. Must be a valid <a href="/../api/projects/predicates#productdiscount-predicates">ProductDiscount predicate</a>.</p>
+    *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
     */
     public String getPredicate() {
         return this.predicate;

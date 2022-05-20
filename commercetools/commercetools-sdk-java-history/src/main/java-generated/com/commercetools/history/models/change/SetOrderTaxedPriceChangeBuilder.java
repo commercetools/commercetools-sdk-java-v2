@@ -18,6 +18,10 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
 
     private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
+    /**
+    *  <p>Update action for <code>setOrderTaxedPrice</code></p>
+    */
+
     public SetOrderTaxedPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;

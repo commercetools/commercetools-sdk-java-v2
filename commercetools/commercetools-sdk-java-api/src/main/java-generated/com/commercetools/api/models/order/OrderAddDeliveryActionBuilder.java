@@ -110,11 +110,19 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
         return this;
     }
 
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
+
     public OrderAddDeliveryActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
 
     public OrderAddDeliveryActionBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

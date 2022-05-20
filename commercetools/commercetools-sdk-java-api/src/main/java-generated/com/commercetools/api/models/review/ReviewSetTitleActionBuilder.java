@@ -14,6 +14,10 @@ public class ReviewSetTitleActionBuilder implements Builder<ReviewSetTitleAction
     @Nullable
     private String title;
 
+    /**
+    *  <p>If <code>title</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+
     public ReviewSetTitleActionBuilder title(@Nullable final String title) {
         this.title = title;
         return this;

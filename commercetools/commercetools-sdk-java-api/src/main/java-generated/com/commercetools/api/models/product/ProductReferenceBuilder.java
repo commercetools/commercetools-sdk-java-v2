@@ -17,16 +17,28 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
     @Nullable
     private com.commercetools.api.models.product.Product obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Product.</p>
+    */
+
     public ProductReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+    */
 
     public ProductReferenceBuilder obj(
             Function<com.commercetools.api.models.product.ProductBuilder, com.commercetools.api.models.product.ProductBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.product.ProductBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+    */
 
     public ProductReferenceBuilder obj(@Nullable final com.commercetools.api.models.product.Product obj) {
         this.obj = obj;

@@ -33,11 +33,19 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
+
     public OrderTransitionLineItemStateActionBuilder fromState(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.fromState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
 
     public OrderTransitionLineItemStateActionBuilder fromState(
             final com.commercetools.api.models.state.StateResourceIdentifier fromState) {
@@ -45,11 +53,19 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
+
     public OrderTransitionLineItemStateActionBuilder toState(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.toState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
 
     public OrderTransitionLineItemStateActionBuilder toState(
             final com.commercetools.api.models.state.StateResourceIdentifier toState) {

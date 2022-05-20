@@ -20,6 +20,10 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
 
     private Integer previousValue;
 
+    /**
+    *  <p>Update action for <code>changeLineItemQuantity</code></p>
+    */
+
     public ChangeLineItemQuantityChangeBuilder change(final String change) {
         this.change = change;
         return this;
@@ -42,10 +46,18 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
         return this;
     }
 
+    /**
+    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+    */
+
     public ChangeLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
         this.nextValue = nextValue;
         return this;
     }
+
+    /**
+    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+    */
 
     public ChangeLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
         this.previousValue = previousValue;

@@ -23,6 +23,10 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
 
     private java.util.List<com.commercetools.api.models.shopping_list.ShoppingList> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ShoppingListPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ShoppingListPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

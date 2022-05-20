@@ -28,25 +28,45 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
         return this;
     }
 
+    /**
+    *  <p>The name of the field.</p>
+    */
+
     public InvalidFieldErrorBuilder field(final String field) {
         this.field = field;
         return this;
     }
+
+    /**
+    *  <p>The invalid value.</p>
+    */
 
     public InvalidFieldErrorBuilder invalidValue(final java.lang.Object invalidValue) {
         this.invalidValue = invalidValue;
         return this;
     }
 
+    /**
+    *  <p>The set of allowed values for the field, if any.</p>
+    */
+
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object... allowedValues) {
         this.allowedValues = new ArrayList<>(Arrays.asList(allowedValues));
         return this;
     }
 
+    /**
+    *  <p>The set of allowed values for the field, if any.</p>
+    */
+
     public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
         this.allowedValues = allowedValues;
         return this;
     }
+
+    /**
+    *  <p>The set of allowed values for the field, if any.</p>
+    */
 
     public InvalidFieldErrorBuilder plusAllowedValues(@Nullable final java.lang.Object... allowedValues) {
         if (this.allowedValues == null) {

@@ -18,10 +18,18 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     private java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue;
 
+    /**
+    *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
+    */
+
     public ChangeEnumValueOrderChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>The name of the field/attribute definition updated.</p>
+    */
 
     public ChangeEnumValueOrderChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;

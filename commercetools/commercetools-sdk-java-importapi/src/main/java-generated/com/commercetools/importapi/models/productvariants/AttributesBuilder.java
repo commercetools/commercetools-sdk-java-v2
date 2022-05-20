@@ -11,11 +11,19 @@ public class AttributesBuilder implements Builder<Attributes> {
 
     private Map<String, com.commercetools.importapi.models.productvariants.Attribute> values = new HashMap<>();
 
+    /**
+    *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p>
+    */
+
     public AttributesBuilder values(
             final Map<String, com.commercetools.importapi.models.productvariants.Attribute> values) {
         this.values = values;
         return this;
     }
+
+    /**
+    *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p>
+    */
 
     public AttributesBuilder addValue(final String key,
             final com.commercetools.importapi.models.productvariants.Attribute value) {

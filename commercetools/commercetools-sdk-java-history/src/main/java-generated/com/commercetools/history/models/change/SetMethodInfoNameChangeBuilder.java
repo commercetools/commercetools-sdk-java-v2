@@ -16,6 +16,10 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setMethodInfoName</code></p>
+    */
+
     public SetMethodInfoNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

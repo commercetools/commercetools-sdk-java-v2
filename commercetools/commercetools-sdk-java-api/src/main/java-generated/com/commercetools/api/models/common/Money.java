@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-*  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+*  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
@@ -23,8 +23,8 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
     /**
     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
     *  <ul>
-    *  <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-    *  <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+    *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+    *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
     *  </ul>
     */
     @NotNull
@@ -32,7 +32,7 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
     public Long getCentAmount();
 
     /**
-    *  <p>Currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    *  <p>Currency code compliant to ISO 4217.</p>
     */
     @NotNull
     @JsonProperty("currencyCode")

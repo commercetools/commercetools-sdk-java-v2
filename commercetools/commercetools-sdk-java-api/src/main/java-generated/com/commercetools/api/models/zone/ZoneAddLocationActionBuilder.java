@@ -12,11 +12,19 @@ public class ZoneAddLocationActionBuilder implements Builder<ZoneAddLocationActi
 
     private com.commercetools.api.models.zone.Location location;
 
+    /**
+    *  <p>Location to be added to the Zone.</p>
+    */
+
     public ZoneAddLocationActionBuilder location(
             Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.LocationBuilder> builder) {
         this.location = builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Location to be added to the Zone.</p>
+    */
 
     public ZoneAddLocationActionBuilder location(final com.commercetools.api.models.zone.Location location) {
         this.location = location;

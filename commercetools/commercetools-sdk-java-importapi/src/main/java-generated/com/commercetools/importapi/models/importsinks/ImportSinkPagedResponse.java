@@ -14,22 +14,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> for <a href="#importsink">ImportSinks</a>.
-*  Used as a response to a query request for <a href="#importsink">ImportSinks</a>.</p>
+*  <p>PagedQueryResult for ImportSinks. Used as a response to a query request for ImportSinks.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImportSinkPagedResponseImpl.class)
 public interface ImportSinkPagedResponse {
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     @NotNull
     @JsonProperty("limit")
     public Integer getLimit();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     @NotNull
     @JsonProperty("offset")

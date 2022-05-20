@@ -18,6 +18,10 @@ public class ChangeAssetNameChangeBuilder implements Builder<ChangeAssetNameChan
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+    *  <p>Update action for <code>changeAssetName</code></p>
+    */
+
     public ChangeAssetNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

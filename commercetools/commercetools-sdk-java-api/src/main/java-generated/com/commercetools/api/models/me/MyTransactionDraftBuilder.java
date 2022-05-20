@@ -25,10 +25,18 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+    *  <p>The time at which the transaction took place.</p>
+    */
+
     public MyTransactionDraftBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
+
+    /**
+    *  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>
+    */
 
     public MyTransactionDraftBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
         this.type = type;
@@ -46,16 +54,28 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
         return this;
     }
 
+    /**
+    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
+    */
+
     public MyTransactionDraftBuilder interactionId(@Nullable final String interactionId) {
         this.interactionId = interactionId;
         return this;
     }
+
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
 
     public MyTransactionDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields for the Transaction.</p>
+    */
 
     public MyTransactionDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

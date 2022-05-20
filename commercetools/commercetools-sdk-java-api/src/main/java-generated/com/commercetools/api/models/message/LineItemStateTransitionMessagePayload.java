@@ -34,7 +34,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     public Long getQuantity();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Reference to a State.</p>
     */
     @NotNull
     @Valid
@@ -42,7 +42,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     public StateReference getFromState();
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Reference to a State.</p>
     */
     @NotNull
     @Valid

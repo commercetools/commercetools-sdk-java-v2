@@ -24,10 +24,18 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         return this;
     }
 
+    /**
+    *  <p>The name of the field.</p>
+    */
+
     public DuplicateFieldErrorBuilder field(@Nullable final String field) {
         this.field = field;
         return this;
     }
+
+    /**
+    *  <p>The offending duplicate value.</p>
+    */
 
     public DuplicateFieldErrorBuilder duplicateValue(@Nullable final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;

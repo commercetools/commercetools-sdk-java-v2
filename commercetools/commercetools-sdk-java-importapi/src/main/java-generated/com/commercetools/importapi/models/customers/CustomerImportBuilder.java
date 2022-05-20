@@ -82,20 +82,36 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.customerNumber</code>.</p>
+    */
+
     public CustomerImportBuilder customerNumber(@Nullable final String customerNumber) {
         this.customerNumber = customerNumber;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Customer.email</code>.</p>
+    */
 
     public CustomerImportBuilder email(final String email) {
         this.email = email;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.password</code>.</p>
+    */
+
     public CustomerImportBuilder password(final String password) {
         this.password = password;
         return this;
     }
+
+    /**
+    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+    */
 
     public CustomerImportBuilder stores(
             @Nullable final com.commercetools.importapi.models.common.StoreKeyReference... stores) {
@@ -103,11 +119,19 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+    */
+
     public CustomerImportBuilder stores(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> stores) {
         this.stores = stores;
         return this;
     }
+
+    /**
+    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+    */
 
     public CustomerImportBuilder plusStores(
             @Nullable final com.commercetools.importapi.models.common.StoreKeyReference... stores) {
@@ -118,6 +142,10 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+    */
+
     public CustomerImportBuilder plusStores(
             Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReferenceBuilder> builder) {
         if (this.stores == null) {
@@ -127,6 +155,10 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+    */
+
     public CustomerImportBuilder withStores(
             Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReferenceBuilder> builder) {
         this.stores = new ArrayList<>();
@@ -134,55 +166,99 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.firstName</code>.</p>
+    */
+
     public CustomerImportBuilder firstName(@Nullable final String firstName) {
         this.firstName = firstName;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Customer.lastName</code>.</p>
+    */
 
     public CustomerImportBuilder lastName(@Nullable final String lastName) {
         this.lastName = lastName;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.middleName</code>.</p>
+    */
+
     public CustomerImportBuilder middleName(@Nullable final String middleName) {
         this.middleName = middleName;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Customer.title</code>.</p>
+    */
 
     public CustomerImportBuilder title(@Nullable final String title) {
         this.title = title;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.salutation</code>.</p>
+    */
+
     public CustomerImportBuilder salutation(@Nullable final String salutation) {
         this.salutation = salutation;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Customer.externalId</code>.</p>
+    */
 
     public CustomerImportBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.dateOfBirth</code>.</p>
+    */
+
     public CustomerImportBuilder dateOfBirth(@Nullable final java.time.LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Customer.companyName</code>.</p>
+    */
 
     public CustomerImportBuilder companyName(@Nullable final String companyName) {
         this.companyName = companyName;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.vatId</code>.</p>
+    */
+
     public CustomerImportBuilder vatId(@Nullable final String vatId) {
         this.vatId = vatId;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.isEmailVerified</code>.</p>
+    */
+
     public CustomerImportBuilder isEmailVerified(@Nullable final Boolean isEmailVerified) {
         this.isEmailVerified = isEmailVerified;
         return this;
     }
+
+    /**
+    *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+    */
 
     public CustomerImportBuilder customerGroup(
             Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder> builder) {
@@ -192,11 +268,19 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+    */
+
     public CustomerImportBuilder customerGroup(
             @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Customer.addresses</code>.</p>
+    */
 
     public CustomerImportBuilder addresses(
             final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
@@ -204,11 +288,19 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.addresses</code>.</p>
+    */
+
     public CustomerImportBuilder addresses(
             final java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses) {
         this.addresses = addresses;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Customer.addresses</code>.</p>
+    */
 
     public CustomerImportBuilder plusAddresses(
             final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
@@ -219,6 +311,10 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.addresses</code>.</p>
+    */
+
     public CustomerImportBuilder plusAddresses(
             Function<com.commercetools.importapi.models.customers.CustomerAddressBuilder, com.commercetools.importapi.models.customers.CustomerAddressBuilder> builder) {
         if (this.addresses == null) {
@@ -229,6 +325,10 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.addresses</code>.</p>
+    */
+
     public CustomerImportBuilder withAddresses(
             Function<com.commercetools.importapi.models.customers.CustomerAddressBuilder, com.commercetools.importapi.models.customers.CustomerAddressBuilder> builder) {
         this.addresses = new ArrayList<>();
@@ -237,20 +337,36 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+    */
+
     public CustomerImportBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {
         this.defaultBillingAddress = defaultBillingAddress;
         return this;
     }
+
+    /**
+    *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+    */
 
     public CustomerImportBuilder billingAddresses(@Nullable final Integer... billingAddresses) {
         this.billingAddresses = new ArrayList<>(Arrays.asList(billingAddresses));
         return this;
     }
 
+    /**
+    *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+    */
+
     public CustomerImportBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
         this.billingAddresses = billingAddresses;
         return this;
     }
+
+    /**
+    *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+    */
 
     public CustomerImportBuilder plusBillingAddresses(@Nullable final Integer... billingAddresses) {
         if (this.billingAddresses == null) {
@@ -260,20 +376,36 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+    */
+
     public CustomerImportBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
         this.defaultShippingAddress = defaultShippingAddress;
         return this;
     }
+
+    /**
+    *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+    */
 
     public CustomerImportBuilder shippingAddresses(@Nullable final Integer... shippingAddresses) {
         this.shippingAddresses = new ArrayList<>(Arrays.asList(shippingAddresses));
         return this;
     }
 
+    /**
+    *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+    */
+
     public CustomerImportBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
         this.shippingAddresses = shippingAddresses;
         return this;
     }
+
+    /**
+    *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+    */
 
     public CustomerImportBuilder plusShippingAddresses(@Nullable final Integer... shippingAddresses) {
         if (this.shippingAddresses == null) {
@@ -283,16 +415,28 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Customer.locale</code>.</p>
+    */
+
     public CustomerImportBuilder locale(@Nullable final String locale) {
         this.locale = locale;
         return this;
     }
+
+    /**
+    *  <p>The custom fields for this Customer.</p>
+    */
 
     public CustomerImportBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The custom fields for this Customer.</p>
+    */
 
     public CustomerImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;

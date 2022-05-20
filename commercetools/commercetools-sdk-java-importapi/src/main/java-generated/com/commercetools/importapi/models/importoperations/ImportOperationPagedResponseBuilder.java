@@ -20,25 +20,45 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
 
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ImportOperationPagedResponseBuilder limit(final Integer limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ImportOperationPagedResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+    *  <p>The actual number of results returned.</p>
+    */
+
     public ImportOperationPagedResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+    *  <p>The total number of import operations matching the query.</p>
+    */
+
     public ImportOperationPagedResponseBuilder total(final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>The array of Import Operations matching the query.</p>
+    */
 
     public ImportOperationPagedResponseBuilder results(
             final com.commercetools.importapi.models.importoperations.ImportOperation... results) {
@@ -46,11 +66,19 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
         return this;
     }
 
+    /**
+    *  <p>The array of Import Operations matching the query.</p>
+    */
+
     public ImportOperationPagedResponseBuilder results(
             final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results) {
         this.results = results;
         return this;
     }
+
+    /**
+    *  <p>The array of Import Operations matching the query.</p>
+    */
 
     public ImportOperationPagedResponseBuilder plusResults(
             final com.commercetools.importapi.models.importoperations.ImportOperation... results) {
@@ -61,6 +89,10 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
         return this;
     }
 
+    /**
+    *  <p>The array of Import Operations matching the query.</p>
+    */
+
     public ImportOperationPagedResponseBuilder plusResults(
             Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {
         if (this.results == null) {
@@ -70,6 +102,10 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
             builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The array of Import Operations matching the query.</p>
+    */
 
     public ImportOperationPagedResponseBuilder withResults(
             Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {

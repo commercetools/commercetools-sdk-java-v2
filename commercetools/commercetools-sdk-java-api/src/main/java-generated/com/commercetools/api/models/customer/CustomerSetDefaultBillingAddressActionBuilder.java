@@ -17,6 +17,10 @@ public class CustomerSetDefaultBillingAddressActionBuilder implements Builder<Cu
     @Nullable
     private String addressKey;
 
+    /**
+    *  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>
+    */
+
     public CustomerSetDefaultBillingAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
         return this;

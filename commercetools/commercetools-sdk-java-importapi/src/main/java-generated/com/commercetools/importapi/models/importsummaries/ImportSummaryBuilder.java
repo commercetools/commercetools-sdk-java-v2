@@ -14,6 +14,10 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     private Long total;
 
+    /**
+    *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+    */
+
     public ImportSummaryBuilder states(
             Function<com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStatesBuilder> builder) {
         this.states = builder.apply(com.commercetools.importapi.models.importsummaries.OperationStatesBuilder.of())
@@ -21,11 +25,19 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
         return this;
     }
 
+    /**
+    *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+    */
+
     public ImportSummaryBuilder states(
             final com.commercetools.importapi.models.importsummaries.OperationStates states) {
         this.states = states;
         return this;
     }
+
+    /**
+    *  <p>The total number of ImportOperations received for this Import Summary.</p>
+    */
 
     public ImportSummaryBuilder total(final Long total) {
         this.total = total;

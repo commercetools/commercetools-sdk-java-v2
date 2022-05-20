@@ -12,11 +12,19 @@ public class ChannelChangeDescriptionActionBuilder implements Builder<ChannelCha
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ChannelChangeDescriptionActionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public ChannelChangeDescriptionActionBuilder description(
             final com.commercetools.api.models.common.LocalizedString description) {

@@ -19,15 +19,27 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     private String nextValue;
 
+    /**
+    *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+    */
+
     public ChangePlainEnumValueLabelChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+    *  <p>The name of the attribute updated.</p>
+    */
+
     public ChangePlainEnumValueLabelChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+    *  <p>Key of the values that was updated</p>
+    */
 
     public ChangePlainEnumValueLabelChangeBuilder valueKey(final String valueKey) {
         this.valueKey = valueKey;

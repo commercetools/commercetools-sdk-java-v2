@@ -23,6 +23,10 @@ public class CartSetLineItemDistributionChannelActionBuilder
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
+
     public CartSetLineItemDistributionChannelActionBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.distributionChannel = builder
@@ -30,6 +34,10 @@ public class CartSetLineItemDistributionChannelActionBuilder
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
 
     public CartSetLineItemDistributionChannelActionBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {

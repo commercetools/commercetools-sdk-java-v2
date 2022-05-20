@@ -123,10 +123,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Order.</p>
+    */
+
     public StagedOrderBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>The current version of the order.</p>
+    */
 
     public StagedOrderBuilder version(final Long version) {
         this.version = version;
@@ -143,11 +151,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public StagedOrderBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public StagedOrderBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -155,21 +171,37 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public StagedOrderBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public StagedOrderBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
+    /**
+    *  <p>This field will only be present if it was set for Order Import</p>
+    */
+
     public StagedOrderBuilder completedAt(@Nullable final java.time.ZonedDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
     }
+
+    /**
+    *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
+    */
 
     public StagedOrderBuilder orderNumber(@Nullable final String orderNumber) {
         this.orderNumber = orderNumber;
@@ -185,6 +217,10 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         this.customerEmail = customerEmail;
         return this;
     }
+
+    /**
+    *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+    */
 
     public StagedOrderBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
@@ -284,11 +320,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>The taxes are calculated based on the shipping address.</p>
+    */
+
     public StagedOrderBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The taxes are calculated based on the shipping address.</p>
+    */
 
     public StagedOrderBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
@@ -324,11 +368,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
+    */
+
     public StagedOrderBuilder taxRoundingMode(
             @Nullable final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
         return this;
     }
+
+    /**
+    *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+    */
 
     public StagedOrderBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -338,27 +390,47 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+    */
+
     public StagedOrderBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
 
+    /**
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+    */
+
     public StagedOrderBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+    *  <p>One of the four predefined OrderStates.</p>
+    */
 
     public StagedOrderBuilder orderState(final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
         return this;
     }
 
+    /**
+    *  <p>This reference can point to a state in a custom workflow.</p>
+    */
+
     public StagedOrderBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>This reference can point to a state in a custom workflow.</p>
+    */
 
     public StagedOrderBuilder state(@Nullable final com.commercetools.api.models.state.StateReference state) {
         this.state = state;
@@ -377,11 +449,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>Set if the ShippingMethod is set.</p>
+    */
+
     public StagedOrderBuilder shippingInfo(
             Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
         this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Set if the ShippingMethod is set.</p>
+    */
 
     public StagedOrderBuilder shippingInfo(
             @Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
@@ -496,16 +576,28 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>
+    */
+
     public StagedOrderBuilder lastMessageSequenceNumber(final Long lastMessageSequenceNumber) {
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
         return this;
     }
+
+    /**
+    *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+    */
 
     public StagedOrderBuilder cart(
             Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReferenceBuilder> builder) {
         this.cart = builder.apply(com.commercetools.api.models.cart.CartReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+    */
 
     public StagedOrderBuilder cart(@Nullable final com.commercetools.api.models.cart.CartReference cart) {
         this.cart = cart;
@@ -550,11 +642,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
+    */
+
     public StagedOrderBuilder taxCalculationMode(
             @Nullable final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
         this.taxCalculationMode = taxCalculationMode;
         return this;
     }
+
+    /**
+    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+    */
 
     public StagedOrderBuilder shippingRateInput(
             @Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
@@ -562,11 +662,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+    */
+
     public StagedOrderBuilder shippingRateInput(
             Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
         this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+    */
 
     public StagedOrderBuilder itemShippingAddresses(
             @Nullable final com.commercetools.api.models.common.Address... itemShippingAddresses) {
@@ -574,11 +682,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+    */
+
     public StagedOrderBuilder itemShippingAddresses(
             @Nullable final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
         this.itemShippingAddresses = itemShippingAddresses;
         return this;
     }
+
+    /**
+    *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+    */
 
     public StagedOrderBuilder plusItemShippingAddresses(
             @Nullable final com.commercetools.api.models.common.Address... itemShippingAddresses) {
@@ -589,6 +705,10 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+    */
+
     public StagedOrderBuilder plusItemShippingAddresses(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         if (this.itemShippingAddresses == null) {
@@ -598,6 +718,10 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+    */
+
     public StagedOrderBuilder withItemShippingAddresses(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.itemShippingAddresses = new ArrayList<>();
@@ -605,17 +729,29 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+    */
+
     public StagedOrderBuilder refusedGifts(
             final com.commercetools.api.models.cart_discount.CartDiscountReference... refusedGifts) {
         this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
         return this;
     }
 
+    /**
+    *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+    */
+
     public StagedOrderBuilder refusedGifts(
             final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts) {
         this.refusedGifts = refusedGifts;
         return this;
     }
+
+    /**
+    *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+    */
 
     public StagedOrderBuilder plusRefusedGifts(
             final com.commercetools.api.models.cart_discount.CartDiscountReference... refusedGifts) {
@@ -626,6 +762,10 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+    *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+    */
+
     public StagedOrderBuilder plusRefusedGifts(
             Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {
         if (this.refusedGifts == null) {
@@ -635,6 +775,10 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
             builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+    */
 
     public StagedOrderBuilder withRefusedGifts(
             Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {

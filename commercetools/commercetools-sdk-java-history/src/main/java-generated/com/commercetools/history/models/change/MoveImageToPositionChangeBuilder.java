@@ -18,6 +18,10 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
 
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
+    /**
+    *  <p>Update actions for moving images</p>
+    */
+
     public MoveImageToPositionChangeBuilder change(final String change) {
         this.change = change;
         return this;

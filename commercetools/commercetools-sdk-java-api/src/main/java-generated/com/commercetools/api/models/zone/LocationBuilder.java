@@ -16,10 +16,18 @@ public class LocationBuilder implements Builder<Location> {
     @Nullable
     private String state;
 
+    /**
+    *  <p>Country code of the geographic location.</p>
+    */
+
     public LocationBuilder country(final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+    *  <p>State within the country.</p>
+    */
 
     public LocationBuilder state(@Nullable final String state) {
         this.state = state;

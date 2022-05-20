@@ -14,15 +14,30 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     private com.commercetools.api.models.common.TypedMoney value;
 
+    /**
+    *  <p>Minimum quantity this Price tier is valid for.</p>
+    *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
+    */
+
     public PriceTierBuilder minimumQuantity(final Long minimumQuantity) {
         this.minimumQuantity = minimumQuantity;
         return this;
     }
 
+    /**
+    *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+    *  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
+    */
+
     public PriceTierBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
+
+    /**
+    *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+    *  <p>The <code>currencyCode</code> of a Price tier is always the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
+    */
 
     public PriceTierBuilder value(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {

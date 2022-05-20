@@ -37,6 +37,10 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
+
     public ProductSelectionDeletedMessageBuilder id(final String id) {
         this.id = id;
         return this;
@@ -57,11 +61,19 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductSelectionDeletedMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ProductSelectionDeletedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -69,11 +81,19 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductSelectionDeletedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ProductSelectionDeletedMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -86,11 +106,19 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
         return this;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
+
     public ProductSelectionDeletedMessageBuilder resource(
             final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
+
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
 
     public ProductSelectionDeletedMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -117,11 +145,19 @@ public class ProductSelectionDeletedMessageBuilder implements Builder<ProductSel
         return this;
     }
 
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
+
     public ProductSelectionDeletedMessageBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public ProductSelectionDeletedMessageBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;

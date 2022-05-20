@@ -15,11 +15,19 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
+    /**
+    *  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+    */
+
     public CartSetShippingRateInputActionBuilder shippingRateInput(
             @Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
         return this;
     }
+
+    /**
+    *  <p>Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.</p>
+    */
 
     public CartSetShippingRateInputActionBuilder shippingRateInput(
             Function<com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInputDraft>> builder) {

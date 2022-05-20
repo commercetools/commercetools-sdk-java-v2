@@ -17,16 +17,28 @@ public class StateReferenceBuilder implements Builder<StateReference> {
     @Nullable
     private com.commercetools.api.models.state.State obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced State.</p>
+    */
+
     public StateReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+    */
 
     public StateReferenceBuilder obj(
             Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.StateBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.state.StateBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+    */
 
     public StateReferenceBuilder obj(@Nullable final com.commercetools.api.models.state.State obj) {
         this.obj = obj;

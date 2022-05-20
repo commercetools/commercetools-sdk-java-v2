@@ -15,6 +15,10 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
 
     private com.commercetools.history.models.common.StateType nextValue;
 
+    /**
+    *  <p>Update action for <code>changeType</code> on state</p>
+    */
+
     public ChangeStateTypeChangeBuilder change(final String change) {
         this.change = change;
         return this;

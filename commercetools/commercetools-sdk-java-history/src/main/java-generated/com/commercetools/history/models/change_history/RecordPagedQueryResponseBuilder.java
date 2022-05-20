@@ -20,20 +20,36 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
 
     private java.util.List<com.commercetools.history.models.change_history.Record> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public RecordPagedQueryResponseBuilder limit(final Integer limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+    *  <p>Actual number of results returned.</p>
+    */
 
     public RecordPagedQueryResponseBuilder count(final Integer count) {
         this.count = count;
         return this;
     }
 
+    /**
+    *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+    */
+
     public RecordPagedQueryResponseBuilder total(final Integer total) {
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public RecordPagedQueryResponseBuilder offset(final Integer offset) {
         this.offset = offset;

@@ -19,7 +19,7 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     String REMOVE_PRICE = "removePrice";
 
     /**
-    *  <p>ID of the <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrice</a></p>
+    *  <p>ID of the EmbeddedPrice</p>
     */
     @NotNull
     @JsonProperty("priceId")

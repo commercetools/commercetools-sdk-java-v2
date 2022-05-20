@@ -18,6 +18,10 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
 
     private com.commercetools.history.models.common.ParcelMeasurements previousValue;
 
+    /**
+    *  <p>Update action for <code>setParcelMeasurements</code></p>
+    */
+
     public SetParcelMeasurementsChangeBuilder change(final String change) {
         this.change = change;
         return this;

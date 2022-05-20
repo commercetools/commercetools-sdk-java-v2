@@ -17,9 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>You can use the product projections query endpoint to get the current or staged representations of Products.
-*  When used with an API client that has the view_published_products:{projectKey} scope,
-*  this endpoint only returns published (current) product projections.</p>
+*  <p>You can use the product projections query endpoint to get the current or staged representations of Products. When used with an API client that has the view_published_products:{projectKey} scope, this endpoint only returns published (current) product projections.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductProjectionsGet extends

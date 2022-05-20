@@ -11,6 +11,10 @@ public class ProductDiscountChangeSortOrderActionBuilder implements Builder<Prod
 
     private String sortOrder;
 
+    /**
+    *  <p>New value to set. Must not be empty. The string value must be a number between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized.</p>
+    */
+
     public ProductDiscountChangeSortOrderActionBuilder sortOrder(final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;

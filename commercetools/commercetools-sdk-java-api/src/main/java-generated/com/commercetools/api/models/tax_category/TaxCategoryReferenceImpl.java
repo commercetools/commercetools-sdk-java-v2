@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+*  <p>Reference to a TaxCategory.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class TaxCategoryReferenceImpl implements TaxCategoryReference, ModelBase {
@@ -47,14 +47,14 @@ public class TaxCategoryReferenceImpl implements TaxCategoryReference, ModelBase
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced TaxCategory.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for TaxCategories.</p>
+    *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
     */
     public com.commercetools.api.models.tax_category.TaxCategory getObj() {
         return this.obj;

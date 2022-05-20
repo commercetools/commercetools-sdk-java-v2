@@ -70,6 +70,10 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
         return this;
     }
 
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
+
     public MatchingPriceNotFoundErrorBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
         this.customerGroup = builder
@@ -78,17 +82,29 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
         return this;
     }
 
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
+
     public MatchingPriceNotFoundErrorBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
 
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
+
     public MatchingPriceNotFoundErrorBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
 
     public MatchingPriceNotFoundErrorBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference channel) {

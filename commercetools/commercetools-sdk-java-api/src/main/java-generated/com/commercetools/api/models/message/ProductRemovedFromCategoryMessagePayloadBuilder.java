@@ -15,11 +15,19 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
 
     private Boolean staged;
 
+    /**
+    *  <p>Reference to a Category.</p>
+    */
+
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Category.</p>
+    */
 
     public ProductRemovedFromCategoryMessagePayloadBuilder category(
             final com.commercetools.api.models.category.CategoryReference category) {

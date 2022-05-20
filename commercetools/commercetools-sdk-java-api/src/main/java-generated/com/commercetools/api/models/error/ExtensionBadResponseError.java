@@ -21,7 +21,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
     String EXTENSION_BAD_RESPONSE = "ExtensionBadResponse";
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
     */
     @Valid
     @JsonProperty("localizedMessage")

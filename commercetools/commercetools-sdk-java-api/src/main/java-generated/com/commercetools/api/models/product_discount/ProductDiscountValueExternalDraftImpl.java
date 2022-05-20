@@ -14,8 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Discounts the Product Price by allowing the client to explicitly <a href="/../api/projects/products#set-discounted-embedded-price">set a discounted value</a>.
-*  Use this when setting discounts using an external service.</p>
+*  <p>Discounts the Product Price by allowing the client to explicitly set a discounted value. Use this when setting discounts using an external service.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProductDiscountValueExternalDraftImpl implements ProductDiscountValueExternalDraft, ModelBase {

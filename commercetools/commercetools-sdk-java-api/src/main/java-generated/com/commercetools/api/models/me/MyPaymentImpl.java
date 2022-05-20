@@ -80,8 +80,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-    *  <p>How much money this payment intends to receive from the customer.
-    *  The value usually matches the cart or order gross total.</p>
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
     */
     public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {
         return this.amountPlanned;
@@ -92,8 +91,7 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
     }
 
     /**
-    *  <p>A list of financial transactions of different TransactionTypes
-    *  with different TransactionStates.</p>
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
     */
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
         return this.transactions;

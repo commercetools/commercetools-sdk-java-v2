@@ -20,6 +20,10 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    /**
+    *  <p>Update action for removing prices</p>
+    */
+
     public RemovePriceChangeBuilder change(final String change) {
         this.change = change;
         return this;

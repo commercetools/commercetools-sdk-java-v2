@@ -49,7 +49,7 @@ public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftL
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Product">Product</a>.</p>
+    *  <p>Reference to a Product.</p>
     */
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;

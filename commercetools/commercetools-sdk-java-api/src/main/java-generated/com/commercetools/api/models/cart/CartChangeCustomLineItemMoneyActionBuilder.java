@@ -19,11 +19,21 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
         return this;
     }
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
+
     public CartChangeCustomLineItemMoneyActionBuilder money(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
 
     public CartChangeCustomLineItemMoneyActionBuilder money(final com.commercetools.api.models.common.Money money) {
         this.money = money;

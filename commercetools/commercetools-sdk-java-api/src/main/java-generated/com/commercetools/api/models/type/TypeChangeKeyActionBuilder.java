@@ -11,6 +11,10 @@ public class TypeChangeKeyActionBuilder implements Builder<TypeChangeKeyAction> 
 
     private String key;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public TypeChangeKeyActionBuilder key(final String key) {
         this.key = key;
         return this;

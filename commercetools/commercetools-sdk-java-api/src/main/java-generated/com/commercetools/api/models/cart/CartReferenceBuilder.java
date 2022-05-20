@@ -17,16 +17,28 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     @Nullable
     private com.commercetools.api.models.cart.Cart obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Cart.</p>
+    */
+
     public CartReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+    */
 
     public CartReferenceBuilder obj(
             Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+    */
 
     public CartReferenceBuilder obj(@Nullable final com.commercetools.api.models.cart.Cart obj) {
         this.obj = obj;

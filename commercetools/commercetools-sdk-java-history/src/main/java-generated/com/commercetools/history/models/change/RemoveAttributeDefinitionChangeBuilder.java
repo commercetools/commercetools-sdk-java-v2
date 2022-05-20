@@ -14,6 +14,10 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
 
     private com.commercetools.history.models.common.AttributeDefinition previousValue;
 
+    /**
+    *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
+    */
+
     public RemoveAttributeDefinitionChangeBuilder change(final String change) {
         this.change = change;
         return this;

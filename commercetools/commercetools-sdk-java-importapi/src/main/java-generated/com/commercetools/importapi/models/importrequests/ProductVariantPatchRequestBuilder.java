@@ -12,17 +12,29 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
 
+    /**
+    *  <p>The product variant patches of this request.</p>
+    */
+
     public ProductVariantPatchRequestBuilder patches(
             final com.commercetools.importapi.models.productvariants.ProductVariantPatch... patches) {
         this.patches = new ArrayList<>(Arrays.asList(patches));
         return this;
     }
 
+    /**
+    *  <p>The product variant patches of this request.</p>
+    */
+
     public ProductVariantPatchRequestBuilder patches(
             final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
         this.patches = patches;
         return this;
     }
+
+    /**
+    *  <p>The product variant patches of this request.</p>
+    */
 
     public ProductVariantPatchRequestBuilder plusPatches(
             final com.commercetools.importapi.models.productvariants.ProductVariantPatch... patches) {
@@ -33,6 +45,10 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
         return this;
     }
 
+    /**
+    *  <p>The product variant patches of this request.</p>
+    */
+
     public ProductVariantPatchRequestBuilder plusPatches(
             Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {
         if (this.patches == null) {
@@ -42,6 +58,10 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
             builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The product variant patches of this request.</p>
+    */
 
     public ProductVariantPatchRequestBuilder withPatches(
             Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder> builder) {

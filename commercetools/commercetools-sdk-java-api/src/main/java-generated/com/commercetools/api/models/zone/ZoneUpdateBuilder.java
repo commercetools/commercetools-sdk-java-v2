@@ -14,20 +14,36 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
 
     private java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions;
 
+    /**
+    *  <p>Expected version of the Zone on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+    */
+
     public ZoneUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+    *  <p>Update actions to be performed on the Zone.</p>
+    */
 
     public ZoneUpdateBuilder actions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
 
+    /**
+    *  <p>Update actions to be performed on the Zone.</p>
+    */
+
     public ZoneUpdateBuilder actions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+    *  <p>Update actions to be performed on the Zone.</p>
+    */
 
     public ZoneUpdateBuilder plusActions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
         if (this.actions == null) {
@@ -37,6 +53,10 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
         return this;
     }
 
+    /**
+    *  <p>Update actions to be performed on the Zone.</p>
+    */
+
     public ZoneUpdateBuilder plusActions(
             Function<com.commercetools.api.models.zone.ZoneUpdateActionBuilder, Builder<? extends com.commercetools.api.models.zone.ZoneUpdateAction>> builder) {
         if (this.actions == null) {
@@ -45,6 +65,10 @@ public class ZoneUpdateBuilder implements Builder<ZoneUpdate> {
         this.actions.add(builder.apply(com.commercetools.api.models.zone.ZoneUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Update actions to be performed on the Zone.</p>
+    */
 
     public ZoneUpdateBuilder withActions(
             Function<com.commercetools.api.models.zone.ZoneUpdateActionBuilder, Builder<? extends com.commercetools.api.models.zone.ZoneUpdateAction>> builder) {

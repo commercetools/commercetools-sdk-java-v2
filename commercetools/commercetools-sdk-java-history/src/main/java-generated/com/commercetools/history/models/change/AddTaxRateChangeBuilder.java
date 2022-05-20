@@ -14,16 +14,28 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     private com.commercetools.history.models.common.TaxRate nextValue;
 
+    /**
+    *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
+    */
+
     public AddTaxRateChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
 
     public AddTaxRateChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
 
     public AddTaxRateChangeBuilder nextValue(final com.commercetools.history.models.common.TaxRate nextValue) {
         this.nextValue = nextValue;

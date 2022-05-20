@@ -61,10 +61,18 @@ public class ReviewBuilder implements Builder<Review> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Review.</p>
+    */
+
     public ReviewBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>The current version of the review.</p>
+    */
 
     public ReviewBuilder version(final Long version) {
         this.version = version;
@@ -81,11 +89,19 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ReviewBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ReviewBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -93,16 +109,28 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ReviewBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ReviewBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the Review.</p>
+    */
 
     public ReviewBuilder key(@Nullable final String key) {
         this.key = key;
@@ -134,15 +162,27 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    /**
+    *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
+    */
+
     public ReviewBuilder target(@Nullable final java.lang.Object target) {
         this.target = target;
         return this;
     }
 
+    /**
+    *  <p>Indicates if this review is taken into account in the ratings statistics of the target. A review is per default used in the statistics, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+    */
+
     public ReviewBuilder includedInStatistics(final Boolean includedInStatistics) {
         this.includedInStatistics = includedInStatistics;
         return this;
     }
+
+    /**
+    *  <p>Number between -100 and 100 included.</p>
+    */
 
     public ReviewBuilder rating(@Nullable final Integer rating) {
         this.rating = rating;
@@ -160,11 +200,19 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    /**
+    *  <p>The customer who created the review.</p>
+    */
+
     public ReviewBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The customer who created the review.</p>
+    */
 
     public ReviewBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;

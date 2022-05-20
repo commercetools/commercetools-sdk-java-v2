@@ -77,6 +77,10 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier for the Subscription.</p>
+    */
+
     public SubscriptionDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

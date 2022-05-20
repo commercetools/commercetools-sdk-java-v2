@@ -17,8 +17,7 @@ public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateActi
     String SET_ANONYMOUS_ID = "setAnonymousId";
 
     /**
-    *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to.
-    *  If this field is not set any existing <code>anonymousId</code> is removed.</p>
+    *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p>
     */
 
     @JsonProperty("anonymousId")

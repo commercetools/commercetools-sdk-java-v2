@@ -26,8 +26,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     public String getKey();
 
     /**
-    *  <p>Unique value which must be different from any value used for <code>name</code> in <a href="ctp:api:type:CustomerGroup">CustomerGroup</a> in the Project.
-    *  If not, a <code>DuplicateField</code> <a href="/../api/errors#400-bad-request-1">error</a> is thrown.</p>
+    *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
     */
     @NotNull
     @JsonProperty("groupName")

@@ -28,11 +28,21 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
         return this;
     }
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
+
     public CartScoreTierBuilder price(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
 
     public CartScoreTierBuilder price(@Nullable final com.commercetools.api.models.common.Money price) {
         this.price = price;

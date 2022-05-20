@@ -17,10 +17,18 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     private Boolean previousValue;
 
+    /**
+    *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+    */
+
     public ChangeIsSearchableChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>The name of the updated attribute.</p>
+    */
 
     public ChangeIsSearchableChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

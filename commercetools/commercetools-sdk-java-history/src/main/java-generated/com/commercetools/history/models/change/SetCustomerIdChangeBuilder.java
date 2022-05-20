@@ -15,6 +15,10 @@ public class SetCustomerIdChangeBuilder implements Builder<SetCustomerIdChange> 
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setCustomerId</code></p>
+    */
+
     public SetCustomerIdChangeBuilder change(final String change) {
         this.change = change;
         return this;

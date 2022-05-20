@@ -11,6 +11,10 @@ public class ProductDiscountChangeIsActiveActionBuilder implements Builder<Produ
 
     private Boolean isActive;
 
+    /**
+    *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
+    */
+
     public ProductDiscountChangeIsActiveActionBuilder isActive(final Boolean isActive) {
         this.isActive = isActive;
         return this;

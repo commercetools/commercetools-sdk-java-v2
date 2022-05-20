@@ -20,6 +20,10 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     private com.commercetools.history.models.common.ProductVariantAvailability nextValue;
 
+    /**
+    *  <p>Update action for <code>setVariantAvailability</code></p>
+    */
+
     public SetVariantAvailabilityChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -21,7 +21,7 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
     String REMOVE_DISCOUNT_CODE = "removeDiscountCode";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    *  <p>Reference to a DiscountCode.</p>
     */
     @NotNull
     @Valid

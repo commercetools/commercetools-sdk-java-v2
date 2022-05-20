@@ -36,9 +36,7 @@ public class ProductDiscountSetValidFromActionImpl implements ProductDiscountSet
     }
 
     /**
-    *  <p>Value to set.
-    *  If empty, any existing value will be removed.
-    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated discount values.</p>
+    *  <p>Value to set. If empty, any existing value will be removed. Take Eventual Consistency into account for calculated discount values.</p>
     */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;

@@ -65,11 +65,19 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public StoreBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public StoreBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -77,27 +85,47 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public StoreBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public StoreBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
+    */
 
     public StoreBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+    *  <p>The name of the store</p>
+    */
+
     public StoreBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The name of the store</p>
+    */
 
     public StoreBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
@@ -122,17 +150,29 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
+    */
+
     public StoreBuilder distributionChannels(
             final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {
         this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
         return this;
     }
 
+    /**
+    *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
+    */
+
     public StoreBuilder distributionChannels(
             final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels) {
         this.distributionChannels = distributionChannels;
         return this;
     }
+
+    /**
+    *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
+    */
 
     public StoreBuilder plusDistributionChannels(
             final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {
@@ -143,6 +183,10 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
+    */
+
     public StoreBuilder plusDistributionChannels(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         if (this.distributionChannels == null) {
@@ -153,6 +197,10 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Set of References to a Channel with <code>ProductDistribution</code> role</p>
+    */
+
     public StoreBuilder withDistributionChannels(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.distributionChannels = new ArrayList<>();
@@ -161,17 +209,29 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+    */
+
     public StoreBuilder supplyChannels(
             @Nullable final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {
         this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
         return this;
     }
 
+    /**
+    *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+    */
+
     public StoreBuilder supplyChannels(
             @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
         this.supplyChannels = supplyChannels;
         return this;
     }
+
+    /**
+    *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+    */
 
     public StoreBuilder plusSupplyChannels(
             @Nullable final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {
@@ -182,6 +242,10 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+    */
+
     public StoreBuilder plusSupplyChannels(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         if (this.supplyChannels == null) {
@@ -192,6 +256,10 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
+    */
+
     public StoreBuilder withSupplyChannels(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.supplyChannels = new ArrayList<>();
@@ -200,17 +268,29 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    */
+
     public StoreBuilder productSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
         this.productSelections = new ArrayList<>(Arrays.asList(productSelections));
         return this;
     }
 
+    /**
+    *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    */
+
     public StoreBuilder productSelections(
             @Nullable final java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> productSelections) {
         this.productSelections = productSelections;
         return this;
     }
+
+    /**
+    *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    */
 
     public StoreBuilder plusProductSelections(
             @Nullable final com.commercetools.api.models.store.ProductSelectionSetting... productSelections) {
@@ -221,6 +301,10 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+    *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    */
+
     public StoreBuilder plusProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {
         if (this.productSelections == null) {
@@ -230,6 +314,10 @@ public class StoreBuilder implements Builder<Store> {
                 .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    */
 
     public StoreBuilder withProductSelections(
             Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSettingBuilder> builder) {

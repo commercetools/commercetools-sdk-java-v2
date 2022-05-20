@@ -23,6 +23,10 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
 
     private java.util.List<com.commercetools.api.models.product.ProductProjection> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ProductProjectionPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ProductProjectionPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

@@ -26,11 +26,19 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
         return this;
     }
 
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
+
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
 
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(
             final com.commercetools.history.models.common.TaxRate taxRate) {

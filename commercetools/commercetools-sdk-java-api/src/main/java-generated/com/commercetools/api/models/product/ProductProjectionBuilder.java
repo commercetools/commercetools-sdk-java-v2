@@ -68,10 +68,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     @Nullable
     private com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics;
 
+    /**
+    *  <p>The unique ID of the Product.</p>
+    */
+
     public ProductProjectionBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>The current version of the Product.</p>
+    */
 
     public ProductProjectionBuilder version(final Long version) {
         this.version = version;
@@ -87,6 +95,10 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+    *  <p>User-specific unique identifier of the Product.</p>
+    */
 
     public ProductProjectionBuilder key(@Nullable final String key) {
         this.key = key;
@@ -140,17 +152,29 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+    *  <p>References to categories the product is in.</p>
+    */
+
     public ProductProjectionBuilder categories(
             final com.commercetools.api.models.category.CategoryReference... categories) {
         this.categories = new ArrayList<>(Arrays.asList(categories));
         return this;
     }
 
+    /**
+    *  <p>References to categories the product is in.</p>
+    */
+
     public ProductProjectionBuilder categories(
             final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
         this.categories = categories;
         return this;
     }
+
+    /**
+    *  <p>References to categories the product is in.</p>
+    */
 
     public ProductProjectionBuilder plusCategories(
             final com.commercetools.api.models.category.CategoryReference... categories) {
@@ -161,6 +185,10 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+    *  <p>References to categories the product is in.</p>
+    */
+
     public ProductProjectionBuilder plusCategories(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         if (this.categories == null) {
@@ -169,6 +197,10 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         this.categories.add(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>References to categories the product is in.</p>
+    */
 
     public ProductProjectionBuilder withCategories(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
@@ -320,6 +352,10 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         return this;
     }
 
+    /**
+    *  <p>Statistics about the review ratings taken into account for this product.</p>
+    */
+
     public ProductProjectionBuilder reviewRatingStatistics(
             Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatisticsBuilder> builder) {
         this.reviewRatingStatistics = builder
@@ -327,6 +363,10 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Statistics about the review ratings taken into account for this product.</p>
+    */
 
     public ProductProjectionBuilder reviewRatingStatistics(
             @Nullable final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {

@@ -114,14 +114,14 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/../api/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
@@ -156,15 +156,14 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-    *  <p>Valid <a href="/../api/projects/predicates#productdiscount-predicates">ProductDiscount predicate</a>.</p>
+    *  <p>Valid ProductDiscount predicate.</p>
     */
     public String getPredicate() {
         return this.predicate;
     }
 
     /**
-    *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active.
-    *  A Product Discount with a higher value is prioritized.</p>
+    *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>
     */
     public String getSortOrder() {
         return this.sortOrder;
@@ -185,16 +184,14 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
     }
 
     /**
-    *  <p>Date and time (UTC) from which the Discount is effective.
-    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated discount values.</p>
+    *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
     */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>Date and time (UTC) until which the Discount is effective.
-    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated undiscounted values.</p>
+    *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
     */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;

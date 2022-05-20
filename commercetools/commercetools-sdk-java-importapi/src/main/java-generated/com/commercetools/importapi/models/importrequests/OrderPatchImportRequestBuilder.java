@@ -12,17 +12,29 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     private java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches;
 
+    /**
+    *  <p>The order patches of this request</p>
+    */
+
     public OrderPatchImportRequestBuilder patches(
             final com.commercetools.importapi.models.order_patches.OrderPatchImport... patches) {
         this.patches = new ArrayList<>(Arrays.asList(patches));
         return this;
     }
 
+    /**
+    *  <p>The order patches of this request</p>
+    */
+
     public OrderPatchImportRequestBuilder patches(
             final java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> patches) {
         this.patches = patches;
         return this;
     }
+
+    /**
+    *  <p>The order patches of this request</p>
+    */
 
     public OrderPatchImportRequestBuilder plusPatches(
             final com.commercetools.importapi.models.order_patches.OrderPatchImport... patches) {
@@ -33,6 +45,10 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
         return this;
     }
 
+    /**
+    *  <p>The order patches of this request</p>
+    */
+
     public OrderPatchImportRequestBuilder plusPatches(
             Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {
         if (this.patches == null) {
@@ -42,6 +58,10 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
             builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The order patches of this request</p>
+    */
 
     public OrderPatchImportRequestBuilder withPatches(
             Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder> builder) {

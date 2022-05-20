@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A Record captures the differences in a resource between one version and the next.
-*  (Recall that the version number is not always incremented by one; see <a href="/general-concepts#optimistic-concurrency-control">Optimistic Concurrency Control</a>.)</p>
+*  <p>A Record captures the differences in a resource between one version and the next. (Recall that the version number is not always incremented by one; see Optimistic Concurrency Control.)</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class RecordImpl implements Record, ModelBase {
@@ -120,8 +119,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-    *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.
-    *  The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, <a href="/general-concepts#optimistic-concurrency-control">Optimistic  Concurrency Control</a>).</p>
+    *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
     */
     public java.util.List<com.commercetools.history.models.change.Change> getChanges() {
         return this.changes;
@@ -135,15 +133,14 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-    *  <p>References to the <a href="ctp:api:type:Store">Stores</a> attached to the <a href="ctp:history:type:Change">Change</a>.</p>
+    *  <p>References to the Stores attached to the Change.</p>
     */
     public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
         return this.stores;
     }
 
     /**
-    *  <p><code>true</code> if no change was detected.
-    *  The version number of the resource can be increased even without any change in the resource.</p>
+    *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
     */
     public Boolean getWithoutChanges() {
         return this.withoutChanges;

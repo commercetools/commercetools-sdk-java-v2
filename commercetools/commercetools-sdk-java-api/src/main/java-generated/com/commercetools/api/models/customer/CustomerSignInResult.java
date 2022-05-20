@@ -24,8 +24,7 @@ public interface CustomerSignInResult {
     public Customer getCustomer();
 
     /**
-    *  <p>A cart that is associated to the customer.
-    *  Empty if the customer does not have a cart yet.</p>
+    *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
     */
     @Valid
     @JsonProperty("cart")

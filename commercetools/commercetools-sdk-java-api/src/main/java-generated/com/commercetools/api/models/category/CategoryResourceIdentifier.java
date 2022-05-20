@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Category">Category</a>.</p>
+*  <p>ResourceIdentifier to a Category.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategoryResourceIdentifierImpl.class)
@@ -22,14 +22,14 @@ public interface CategoryResourceIdentifier
     String CATEGORY = "category";
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:Channel">Category</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>Platform-generated unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
     */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>User-defined unique identifier of the referenced <a href="ctp:api:type:Category">Category</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
     */
 
     @JsonProperty("key")

@@ -16,6 +16,10 @@ public class SetMetaTitleChangeBuilder implements Builder<SetMetaTitleChange> {
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setMetaTitle</code></p>
+    */
+
     public SetMetaTitleChangeBuilder change(final String change) {
         this.change = change;
         return this;

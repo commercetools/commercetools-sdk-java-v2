@@ -17,11 +17,19 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
     @Nullable
     private Boolean active;
 
+    /**
+    *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
+    */
+
     public StoreChangeProductSelectionActionBuilder productSelection(
             final com.commercetools.api.models.common.ResourceIdentifier productSelection) {
         this.productSelection = productSelection;
         return this;
     }
+
+    /**
+    *  <p>A current Product Selection of this Store that is to be activated or deactivated.</p>
+    */
 
     public StoreChangeProductSelectionActionBuilder productSelection(
             Function<com.commercetools.api.models.common.ResourceIdentifierBuilder, Builder<? extends com.commercetools.api.models.common.ResourceIdentifier>> builder) {
@@ -29,6 +37,10 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
                 .build();
         return this;
     }
+
+    /**
+    *  <p>If <code>true</code> all Products assigned to the Product Selection become part of the Store's assortment.</p>
+    */
 
     public StoreChangeProductSelectionActionBuilder active(@Nullable final Boolean active) {
         this.active = active;

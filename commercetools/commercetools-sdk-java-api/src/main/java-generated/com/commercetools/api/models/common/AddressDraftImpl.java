@@ -118,7 +118,7 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
     }
 
     /**
-    *  <p>Unique identifier for the Address. Not recommended to set it manually since the Platform overwrites this ID when creating an Address for a <a href="ctp:api:type:Customer">Customer</a>. Use <code>key</code> instead and omit this field to let the Platform generate the ID for the Address.</p>
+    *  <p>Unique identifier for the Address. Not recommended to set it manually since the Platform overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field to let the Platform generate the ID for the Address.</p>
     */
     public String getId() {
         return this.id;
@@ -132,7 +132,7 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
     }
 
     /**
-    *  <p>Two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
     */
     public String getCountry() {
         return this.country;

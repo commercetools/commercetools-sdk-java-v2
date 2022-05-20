@@ -16,6 +16,10 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
 
     private java.util.List<com.commercetools.history.models.common.Reservation> previousValue;
 
+    /**
+    *  <p>Update action for <code>setReservations</code> on inventories</p>
+    */
+
     public SetReservationsChangeBuilder change(final String change) {
         this.change = change;
         return this;

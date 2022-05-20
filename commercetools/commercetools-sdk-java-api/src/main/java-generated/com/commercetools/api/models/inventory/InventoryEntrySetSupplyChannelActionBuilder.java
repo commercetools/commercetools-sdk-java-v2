@@ -15,12 +15,20 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    /**
+    *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+    */
+
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>If absent, the supply channel is removed. This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>
+    */
 
     public InventoryEntrySetSupplyChannelActionBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {

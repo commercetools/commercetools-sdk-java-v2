@@ -46,14 +46,14 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
@@ -74,17 +74,14 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     public String getAnonymousId();
 
     /**
-    *  <p>The identifier that is used by the interface that manages the payment (usually the PSP).
-    *  Cannot be changed once it has been set.
-    *  The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+    *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
     */
 
     @JsonProperty("interfaceId")
     public String getInterfaceId();
 
     /**
-    *  <p>How much money this payment intends to receive from the customer.
-    *  The value usually matches the cart or order gross total.</p>
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
     */
     @NotNull
     @Valid
@@ -110,10 +107,7 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     public List<Transaction> getTransactions();
 
     /**
-    *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP.
-    *  Some interactions may result in a transaction.
-    *  If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction.
-    *  Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+    *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
     */
     @NotNull
     @Valid

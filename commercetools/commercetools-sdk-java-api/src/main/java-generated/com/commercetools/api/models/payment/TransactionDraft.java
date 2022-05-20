@@ -40,16 +40,14 @@ public interface TransactionDraft extends com.commercetools.api.models.Customiza
     public Money getAmount();
 
     /**
-    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-    *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
     */
 
     @JsonProperty("interactionId")
     public String getInteractionId();
 
     /**
-    *  <p>The state of this transaction.
-    *  If not set, defaults to <code>Initial</code>.</p>
+    *  <p>The state of this transaction. If not set, defaults to <code>Initial</code>.</p>
     */
 
     @JsonProperty("state")

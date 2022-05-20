@@ -15,6 +15,10 @@ public class SetRatingChangeBuilder implements Builder<SetRatingChange> {
 
     private Integer nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setRating</code></p>
+    */
+
     public SetRatingChangeBuilder change(final String change) {
         this.change = change;
         return this;

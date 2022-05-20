@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+*  <p>Reference to a State.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class StateReferenceImpl implements StateReference, ModelBase {
@@ -47,14 +47,14 @@ public class StateReferenceImpl implements StateReference, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced State.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Contains the representation of the expanded State. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for States.</p>
+    *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
     */
     public com.commercetools.api.models.state.State getObj() {
         return this.obj;

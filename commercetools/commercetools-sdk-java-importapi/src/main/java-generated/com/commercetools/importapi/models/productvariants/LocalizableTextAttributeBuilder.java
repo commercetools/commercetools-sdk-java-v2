@@ -17,16 +17,38 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
 
     private com.commercetools.importapi.models.common.LocalizedString value;
 
+    /**
+    *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+    */
+
     public LocalizableTextAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
 
     public LocalizableTextAttributeBuilder value(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.value = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
 
     public LocalizableTextAttributeBuilder value(
             final com.commercetools.importapi.models.common.LocalizedString value) {

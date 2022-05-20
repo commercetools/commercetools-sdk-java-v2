@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The request body to <a href="#import-productvariantpatches">import ProductVariantPatches</a>. The data to be imported are represented by <a href="#productvariantpatch">ProductVariantPatch</a>.</p>
+*  <p>The request body to import ProductVariantPatches. The data to be imported are represented by ProductVariantPatch.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductVariantPatchRequestImpl.class)

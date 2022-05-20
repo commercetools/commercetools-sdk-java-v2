@@ -21,7 +21,7 @@ public interface ProductAddedToCategoryMessage extends Message {
     String PRODUCT_ADDED_TO_CATEGORY = "ProductAddedToCategory";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Category">Category</a>.</p>
+    *  <p>Reference to a Category.</p>
     */
     @NotNull
     @Valid

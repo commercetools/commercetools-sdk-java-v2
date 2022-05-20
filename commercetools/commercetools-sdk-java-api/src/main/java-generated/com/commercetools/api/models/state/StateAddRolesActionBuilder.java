@@ -11,16 +11,28 @@ public class StateAddRolesActionBuilder implements Builder<StateAddRolesAction> 
 
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
+    /**
+    *  <p>Value to append to the array.</p>
+    */
+
     public StateAddRolesActionBuilder roles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
+
+    /**
+    *  <p>Value to append to the array.</p>
+    */
 
     public StateAddRolesActionBuilder roles(
             final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
+
+    /**
+    *  <p>Value to append to the array.</p>
+    */
 
     public StateAddRolesActionBuilder plusRoles(final com.commercetools.api.models.state.StateRoleEnum... roles) {
         if (this.roles == null) {

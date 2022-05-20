@@ -208,14 +208,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
@@ -229,10 +229,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>String that uniquely identifies an order.
-    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.
-    *  It should be unique across a project.
-    *  Once it's set it cannot be changed.</p>
+    *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
     */
     public String getOrderNumber() {
         return this.orderNumber;
@@ -296,16 +293,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>Set when the customer is set and the customer is a member of a customer group.
-    *  Used for product variant price selection.</p>
+    *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
-    *  Used for product variant price selection.</p>
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
     */
     public String getCountry() {
         return this.country;
@@ -353,16 +348,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>The sequence number of the last order message produced by changes to this order.
-    *  <code>0</code> means, that no messages were created yet.</p>
+    *  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>
     */
     public Long getLastMessageSequenceNumber() {
         return this.lastMessageSequenceNumber;
     }
 
     /**
-    *  <p>Set when this order was created from a cart.
-    *  The cart will have the state <code>Ordered</code>.</p>
+    *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
     */
     public com.commercetools.api.models.cart.CartReference getCart() {
         return this.cart;

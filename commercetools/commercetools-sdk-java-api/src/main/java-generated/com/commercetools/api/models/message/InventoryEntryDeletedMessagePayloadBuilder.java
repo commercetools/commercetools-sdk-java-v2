@@ -22,11 +22,19 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
         return this;
     }
 
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
+
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
 
     public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {

@@ -97,14 +97,14 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
@@ -129,16 +129,14 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
     }
 
     /**
-    *  <p>Overall amount of stock.
-    *  (available + reserved)</p>
+    *  <p>Overall amount of stock. (available + reserved)</p>
     */
     public Long getQuantityOnStock() {
         return this.quantityOnStock;
     }
 
     /**
-    *  <p>Available amount of stock.
-    *  (available means: <code>quantityOnStock</code> - reserved quantity)</p>
+    *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
     */
     public Long getAvailableQuantity() {
         return this.availableQuantity;

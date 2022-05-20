@@ -24,7 +24,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
     String OVERLAPPING_STANDALONE_PRICE_VALIDITY = "OverlappingStandalonePriceValidity";
 
     /**
-    *  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:StandalonePrice">StandalonePrice</a>.</p>
+    *  <p>Reference to a StandalonePrice.</p>
     */
     @NotNull
     @Valid
@@ -43,14 +43,14 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
     public String getCountry();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>ResourceIdentifier to a CustomerGroup.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>ResourceIdentifier to a Channel.</p>
     */
     @Valid
     @JsonProperty("channel")

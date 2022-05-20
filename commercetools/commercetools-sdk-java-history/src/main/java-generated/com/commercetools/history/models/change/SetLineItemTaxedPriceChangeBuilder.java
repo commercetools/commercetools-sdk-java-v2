@@ -20,6 +20,10 @@ public class SetLineItemTaxedPriceChangeBuilder implements Builder<SetLineItemTa
 
     private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
+    /**
+    *  <p>Update action for <code>setLineItemTaxedPrice</code></p>
+    */
+
     public SetLineItemTaxedPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;

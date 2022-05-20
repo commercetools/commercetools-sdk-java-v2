@@ -12,12 +12,20 @@ public class MyCartAddPaymentActionBuilder implements Builder<MyCartAddPaymentAc
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
+    /**
+    *  <p>ResourceIdentifier to a Payment.</p>
+    */
+
     public MyCartAddPaymentActionBuilder payment(
             Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder> builder) {
         this.payment = builder.apply(com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Payment.</p>
+    */
 
     public MyCartAddPaymentActionBuilder payment(
             final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {

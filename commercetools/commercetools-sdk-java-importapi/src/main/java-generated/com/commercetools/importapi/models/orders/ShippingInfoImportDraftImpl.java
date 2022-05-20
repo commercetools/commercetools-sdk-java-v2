@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with
-*  the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
+*  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, ModelBase {

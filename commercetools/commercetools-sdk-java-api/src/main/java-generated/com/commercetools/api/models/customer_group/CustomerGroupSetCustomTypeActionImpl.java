@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>This action sets or removes the custom type for an existing CustomerGroup.
-*  If present, this action overwrites any existing <a href="/../api/projects/custom-fields">custom</a> type and fields.</p>
+*  <p>This action sets or removes the custom type for an existing CustomerGroup. If present, this action overwrites any existing custom type and fields.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCustomTypeAction, ModelBase {
@@ -45,15 +44,14 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
     }
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the CustomerGroup with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+    *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the CustomerGroup.</p>
+    *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;

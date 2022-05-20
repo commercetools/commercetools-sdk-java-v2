@@ -14,6 +14,10 @@ public class CartDiscountSetValidUntilActionBuilder implements Builder<CartDisco
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    /**
+    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    */
+
     public CartDiscountSetValidUntilActionBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;

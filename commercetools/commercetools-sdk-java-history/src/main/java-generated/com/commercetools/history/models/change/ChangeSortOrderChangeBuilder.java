@@ -15,6 +15,10 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeSortOrder</code></p>
+    */
+
     public ChangeSortOrderChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -33,6 +33,10 @@ public class ProductSetProductVariantKeyActionBuilder implements Builder<Product
         return this;
     }
 
+    /**
+    *  <p>If left blank or set to <code>null</code>, the key is unset/removed.</p>
+    */
+
     public ProductSetProductVariantKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

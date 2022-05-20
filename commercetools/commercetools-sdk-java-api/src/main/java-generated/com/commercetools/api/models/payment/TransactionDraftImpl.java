@@ -66,16 +66,14 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
     }
 
     /**
-    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-    *  If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
     */
     public String getInteractionId() {
         return this.interactionId;
     }
 
     /**
-    *  <p>The state of this transaction.
-    *  If not set, defaults to <code>Initial</code>.</p>
+    *  <p>The state of this transaction. If not set, defaults to <code>Initial</code>.</p>
     */
     public com.commercetools.api.models.payment.TransactionState getState() {
         return this.state;

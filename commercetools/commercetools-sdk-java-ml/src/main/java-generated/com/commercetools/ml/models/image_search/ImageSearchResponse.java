@@ -28,7 +28,7 @@ public interface ImageSearchResponse {
     public Integer getCount();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     @NotNull
     @JsonProperty("offset")

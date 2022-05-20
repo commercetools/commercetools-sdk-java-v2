@@ -14,16 +14,28 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
 
     private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
+    /**
+    *  <p><code>name</code> of the FieldDefinition to update.</p>
+    */
+
     public TypeChangeEnumValueLabelActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public TypeChangeEnumValueLabelActionBuilder value(
             Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValueBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.type.CustomFieldEnumValueBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public TypeChangeEnumValueLabelActionBuilder value(
             final com.commercetools.api.models.type.CustomFieldEnumValue value) {

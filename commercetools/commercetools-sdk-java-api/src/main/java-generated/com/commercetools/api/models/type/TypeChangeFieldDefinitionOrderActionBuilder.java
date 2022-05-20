@@ -11,15 +11,27 @@ public class TypeChangeFieldDefinitionOrderActionBuilder implements Builder<Type
 
     private java.util.List<String> fieldNames;
 
+    /**
+    *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+    */
+
     public TypeChangeFieldDefinitionOrderActionBuilder fieldNames(final String... fieldNames) {
         this.fieldNames = new ArrayList<>(Arrays.asList(fieldNames));
         return this;
     }
 
+    /**
+    *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+    */
+
     public TypeChangeFieldDefinitionOrderActionBuilder fieldNames(final java.util.List<String> fieldNames) {
         this.fieldNames = fieldNames;
         return this;
     }
+
+    /**
+    *  <p>Must match the set of <code>name</code>s of FieldDefinitions (up to order).</p>
+    */
 
     public TypeChangeFieldDefinitionOrderActionBuilder plusFieldNames(final String... fieldNames) {
         if (this.fieldNames == null) {

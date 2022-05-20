@@ -65,14 +65,14 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
@@ -86,10 +86,7 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public ZonedDateTime getCompletedAt();
 
     /**
-    *  <p>String that uniquely identifies an order.
-    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.
-    *  It should be unique across a project.
-    *  Once it's set it cannot be changed.</p>
+    *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
     */
 
     @JsonProperty("orderNumber")
@@ -153,16 +150,14 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public RoundingMode getTaxRoundingMode();
 
     /**
-    *  <p>Set when the customer is set and the customer is a member of a customer group.
-    *  Used for product variant price selection.</p>
+    *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
-    *  Used for product variant price selection.</p>
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
     */
 
     @JsonProperty("country")
@@ -209,16 +204,14 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public List<DiscountCodeInfo> getDiscountCodes();
 
     /**
-    *  <p>The sequence number of the last order message produced by changes to this order.
-    *  <code>0</code> means, that no messages were created yet.</p>
+    *  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>
     */
     @NotNull
     @JsonProperty("lastMessageSequenceNumber")
     public Long getLastMessageSequenceNumber();
 
     /**
-    *  <p>Set when this order was created from a cart.
-    *  The cart will have the state <code>Ordered</code>.</p>
+    *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
     */
     @Valid
     @JsonProperty("cart")

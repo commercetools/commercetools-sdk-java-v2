@@ -56,7 +56,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
@@ -79,7 +79,7 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;

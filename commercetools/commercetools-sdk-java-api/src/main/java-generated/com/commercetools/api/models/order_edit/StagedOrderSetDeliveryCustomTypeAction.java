@@ -27,15 +27,14 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     public String getDeliveryId();
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Delivery with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
+    *  <p>Defines the Type that extends the Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Delivery.</p>
+    *  <p>Sets the Custom Fields fields for the Delivery.</p>
     */
     @Valid
     @JsonProperty("fields")

@@ -18,11 +18,19 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+    *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
+    */
+
     public CartSetCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Defines the Type that extends the Cart with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Cart.</p>
+    */
 
     public CartSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -30,11 +38,19 @@ public class CartSetCustomTypeActionBuilder implements Builder<CartSetCustomType
         return this;
     }
 
+    /**
+    *  <p>Sets the Custom Fields fields for the Cart.</p>
+    */
+
     public CartSetCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Sets the Custom Fields fields for the Cart.</p>
+    */
 
     public CartSetCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

@@ -13,10 +13,18 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
 
     private com.commercetools.api.models.type.TypeTextInputHint inputHint;
 
+    /**
+    *  <p><code>name</code> of the Field Definition to update.</p>
+    */
+
     public TypeChangeInputHintActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public TypeChangeInputHintActionBuilder inputHint(
             final com.commercetools.api.models.type.TypeTextInputHint inputHint) {

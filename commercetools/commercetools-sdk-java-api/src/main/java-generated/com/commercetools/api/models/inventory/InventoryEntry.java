@@ -44,14 +44,14 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
@@ -76,16 +76,14 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     public ChannelReference getSupplyChannel();
 
     /**
-    *  <p>Overall amount of stock.
-    *  (available + reserved)</p>
+    *  <p>Overall amount of stock. (available + reserved)</p>
     */
     @NotNull
     @JsonProperty("quantityOnStock")
     public Long getQuantityOnStock();
 
     /**
-    *  <p>Available amount of stock.
-    *  (available means: <code>quantityOnStock</code> - reserved quantity)</p>
+    *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
     */
     @NotNull
     @JsonProperty("availableQuantity")

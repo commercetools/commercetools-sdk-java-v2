@@ -17,6 +17,10 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     @Nullable
     private com.commercetools.api.models.order.Order obj;
 
+    /**
+    *  <p>Unique ID of the referenced resource.</p>
+    */
+
     public OrderReferenceBuilder id(final String id) {
         this.id = id;
         return this;

@@ -24,15 +24,27 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     @Nullable
     private String anonymousId;
 
+    /**
+    *  <p><code>id</code> of the APIClient which modified the resource.</p>
+    */
+
     public LastModifiedByBuilder clientId(@Nullable final String clientId) {
         this.clientId = clientId;
         return this;
     }
 
+    /**
+    *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+    */
+
     public LastModifiedByBuilder externalUserId(@Nullable final String externalUserId) {
         this.externalUserId = externalUserId;
         return this;
     }
+
+    /**
+    *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+    */
 
     public LastModifiedByBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
@@ -40,11 +52,19 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
         return this;
     }
 
+    /**
+    *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+    */
+
     public LastModifiedByBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
+
+    /**
+    *  <p>Indicates the anonymous session during which the resource was modified.</p>
+    */
 
     public LastModifiedByBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;

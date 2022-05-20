@@ -16,6 +16,10 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     private com.commercetools.history.models.common.GeoLocation previousValue;
 
+    /**
+    *  <p>Update action for <code>setGeoLocation</code></p>
+    */
+
     public SetGeoLocationChangeBuilder change(final String change) {
         this.change = change;
         return this;

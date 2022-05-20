@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
 *  <p>The <code>Authorization</code> header will be set to the content of <code>headerValue</code>. The authentication scheme (such as <code>Basic</code> or <code>Bearer</code>) should be included in the <code>headerValue</code>.</p>
-*  <p>For example, the <code>headerValue</code> for <a href="https://datatracker.ietf.org/doc/html/rfc7617">Basic Authentication</a> should be set to <code>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>.</p>
+*  <p>For example, the <code>headerValue</code> for Basic Authentication should be set to <code>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</code>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class AuthorizationHeaderAuthenticationImpl implements AuthorizationHeaderAuthentication, ModelBase {

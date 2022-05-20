@@ -22,10 +22,18 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    /**
+    *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+    */
+
     public ImportContainerBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+    */
 
     public ImportContainerBuilder resourceType(
             @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
@@ -33,15 +41,27 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
         return this;
     }
 
+    /**
+    *  <p>The version of the ImportContainer.</p>
+    */
+
     public ImportContainerBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+    *  <p>The time when the ImportContainer was created.</p>
+    */
+
     public ImportContainerBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+
+    /**
+    *  <p>The last time when the ImportContainer was modified.</p>
+    */
 
     public ImportContainerBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;

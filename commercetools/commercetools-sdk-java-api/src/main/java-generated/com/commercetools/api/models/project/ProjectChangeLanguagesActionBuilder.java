@@ -11,15 +11,27 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
 
     private java.util.List<String> languages;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ProjectChangeLanguagesActionBuilder languages(final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ProjectChangeLanguagesActionBuilder languages(final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public ProjectChangeLanguagesActionBuilder plusLanguages(final String... languages) {
         if (this.languages == null) {

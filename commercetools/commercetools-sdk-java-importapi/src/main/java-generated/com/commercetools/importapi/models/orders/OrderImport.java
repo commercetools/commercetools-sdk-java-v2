@@ -20,10 +20,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The data representation for an Order to be imported that is persisted as an <a href="/../api/projects/orders#top">Order</a> in the Project.</p>
-*  <p>In commercetools, you can import an Order using the
-*  <a href="https://docs.commercetools.com/http-api-projects-orders-import.html#create-an-order-by-import">Create Order by Import</a>
-*  endpoint method instead of creating it from a Cart.</p>
+*  <p>The data representation for an Order to be imported that is persisted as an Order in the Project.</p>
+*  <p>In commercetools, you can import an Order using the Create Order by Import endpoint method instead of creating it from a Cart.</p>
 *  <p>An OrderImport is a snapshot of an order at the time it was imported.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

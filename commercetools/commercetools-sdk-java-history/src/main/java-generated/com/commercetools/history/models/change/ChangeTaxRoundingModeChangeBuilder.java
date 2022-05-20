@@ -15,6 +15,10 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
 
     private com.commercetools.history.models.common.RoundingMode nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
+    */
+
     public ChangeTaxRoundingModeChangeBuilder change(final String change) {
         this.change = change;
         return this;

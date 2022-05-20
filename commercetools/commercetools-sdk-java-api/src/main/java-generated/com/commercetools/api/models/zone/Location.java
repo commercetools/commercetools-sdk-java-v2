@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A geographical location representing a country and optionally a state within this country.  A location can only be assigned to one Zone.</p>
+*  <p>A geographical location representing a country and optionally a state within this country. A location can only be assigned to one Zone.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = LocationImpl.class)

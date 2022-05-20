@@ -15,12 +15,20 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
     @Nullable
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    /**
+    *  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+
     public ReviewSetCustomerActionBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>The customer who created the review. If <code>customer</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
 
     public ReviewSetCustomerActionBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {

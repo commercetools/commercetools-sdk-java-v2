@@ -150,6 +150,10 @@ public class AddressBuilder implements Builder<Address> {
         return this;
     }
 
+    /**
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+    */
+
     public AddressBuilder country(final String country) {
         this.country = country;
         return this;

@@ -43,11 +43,29 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     @Nullable
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
+
     public CustomLineItemDraftBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
 
     public CustomLineItemDraftBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
@@ -137,12 +155,20 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+    *  <p>References a tax category by key.</p>
+    */
+
     public CustomLineItemDraftBuilder taxCategory(
             Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder> builder) {
         this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>References a tax category by key.</p>
+    */
 
     public CustomLineItemDraftBuilder taxCategory(
             @Nullable final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory) {

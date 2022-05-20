@@ -17,9 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>You can use the query endpoint to get the full representations of products.
-*  REMARK: We suggest to use the performance optimized search endpoint which has a bunch functionalities,
-*  the query API lacks like sorting on custom attributes, etc.</p>
+*  <p>You can use the query endpoint to get the full representations of products. REMARK: We suggest to use the performance optimized search endpoint which has a bunch functionalities, the query API lacks like sorting on custom attributes, etc.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductsGet extends

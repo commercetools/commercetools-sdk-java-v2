@@ -18,6 +18,10 @@ public class SetProductPriceCustomFieldChangeBuilder implements Builder<SetProdu
 
     private com.commercetools.history.models.common.CustomFields nextValue;
 
+    /**
+    *  <p>Update action for <code>setProductPriceCustomField</code></p>
+    */
+
     public SetProductPriceCustomFieldChangeBuilder change(final String change) {
         this.change = change;
         return this;

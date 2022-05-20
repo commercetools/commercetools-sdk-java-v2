@@ -22,6 +22,10 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
         return this;
     }
 
+    /**
+    *  <p>name of the updated attribute</p>
+    */
+
     public ChangeAttributeConstraintChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;

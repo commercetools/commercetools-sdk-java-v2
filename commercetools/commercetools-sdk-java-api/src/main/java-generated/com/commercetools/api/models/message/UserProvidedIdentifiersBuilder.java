@@ -33,6 +33,10 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     @Nullable
     private com.commercetools.api.models.message.ContainerAndKey containerAndKey;
 
+    /**
+    *  <p>User-provided unique identifier of the resource.</p>
+    */
+
     public UserProvidedIdentifiersBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
@@ -58,11 +62,19 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
         return this;
     }
 
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
+
     public UserProvidedIdentifiersBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public UserProvidedIdentifiersBuilder slug(
             @Nullable final com.commercetools.api.models.common.LocalizedString slug) {
@@ -70,11 +82,19 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
         return this;
     }
 
+    /**
+    *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+    */
+
     public UserProvidedIdentifiersBuilder containerAndKey(
             Function<com.commercetools.api.models.message.ContainerAndKeyBuilder, com.commercetools.api.models.message.ContainerAndKeyBuilder> builder) {
         this.containerAndKey = builder.apply(com.commercetools.api.models.message.ContainerAndKeyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+    */
 
     public UserProvidedIdentifiersBuilder containerAndKey(
             @Nullable final com.commercetools.api.models.message.ContainerAndKey containerAndKey) {

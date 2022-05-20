@@ -20,10 +20,18 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+    *  <p>User-defined unique identifier for the ProductSelection.</p>
+    */
+
     public ProductSelectionDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+    */
 
     public ProductSelectionDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -31,16 +39,28 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         return this;
     }
 
+    /**
+    *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+    */
+
     public ProductSelectionDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>Custom Fields of this ProductSelection.</p>
+    */
 
     public ProductSelectionDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields of this ProductSelection.</p>
+    */
 
     public ProductSelectionDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

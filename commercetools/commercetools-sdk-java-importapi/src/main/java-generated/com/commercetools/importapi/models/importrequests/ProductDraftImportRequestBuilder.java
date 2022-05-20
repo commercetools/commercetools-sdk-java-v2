@@ -12,17 +12,29 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     private java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources;
 
+    /**
+    *  <p>The product draft import resources of this request.</p>
+    */
+
     public ProductDraftImportRequestBuilder resources(
             final com.commercetools.importapi.models.productdrafts.ProductDraftImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
 
+    /**
+    *  <p>The product draft import resources of this request.</p>
+    */
+
     public ProductDraftImportRequestBuilder resources(
             final java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources) {
         this.resources = resources;
         return this;
     }
+
+    /**
+    *  <p>The product draft import resources of this request.</p>
+    */
 
     public ProductDraftImportRequestBuilder plusResources(
             final com.commercetools.importapi.models.productdrafts.ProductDraftImport... resources) {
@@ -33,6 +45,10 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
         return this;
     }
 
+    /**
+    *  <p>The product draft import resources of this request.</p>
+    */
+
     public ProductDraftImportRequestBuilder plusResources(
             Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {
         if (this.resources == null) {
@@ -42,6 +58,10 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
             builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The product draft import resources of this request.</p>
+    */
 
     public ProductDraftImportRequestBuilder withResources(
             Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {

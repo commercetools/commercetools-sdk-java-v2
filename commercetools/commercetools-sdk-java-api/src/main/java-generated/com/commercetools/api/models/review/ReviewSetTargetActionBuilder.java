@@ -11,6 +11,10 @@ public class ReviewSetTargetActionBuilder implements Builder<ReviewSetTargetActi
 
     private java.lang.Object target;
 
+    /**
+    *  <p>Identifies the target of the review. Can be a Product or a Channel. If <code>target</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+
     public ReviewSetTargetActionBuilder target(final java.lang.Object target) {
         this.target = target;
         return this;

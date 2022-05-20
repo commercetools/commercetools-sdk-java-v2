@@ -34,17 +34,29 @@ public class CategorySetAssetCustomTypeActionBuilder implements Builder<Category
         return this;
     }
 
+    /**
+    *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+    */
+
     public CategorySetAssetCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+    */
+
     public CategorySetAssetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
+
+    /**
+    *  <p>Sets the Custom Fields fields for the Asset.</p>
+    */
 
     public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
         this.fields = fields;

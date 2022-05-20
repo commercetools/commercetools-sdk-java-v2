@@ -17,16 +17,28 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
     @Nullable
     private com.commercetools.api.models.channel.Channel obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Channel.</p>
+    */
+
     public ChannelReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+    */
 
     public ChannelReferenceBuilder obj(
             Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.ChannelBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+    */
 
     public ChannelReferenceBuilder obj(@Nullable final com.commercetools.api.models.channel.Channel obj) {
         this.obj = obj;

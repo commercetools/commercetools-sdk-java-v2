@@ -16,10 +16,18 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
+    /**
+    *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+    */
+
     public AddPlainEnumValueChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>The name of the attribute updated.</p>
+    */
 
     public AddPlainEnumValueChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

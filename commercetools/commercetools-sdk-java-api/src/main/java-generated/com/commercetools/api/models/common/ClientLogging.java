@@ -14,35 +14,35 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>These objects represent information about which <a href="/../api/projects/api-clients">API Client</a> created or modified a resource. For more information, see <a href="/client-logging">Client Logging</a>.</p>
+*  <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ClientLoggingImpl.class)
 public interface ClientLogging {
 
     /**
-    *  <p><code>id</code> of the <a href="ctp:api:type:ApiClient">APIClient</a> which created the resource.</p>
+    *  <p><code>id</code> of the APIClient which created the resource.</p>
     */
 
     @JsonProperty("clientId")
     public String getClientId();
 
     /**
-    *  <p><a href="/../api/client-logging#external-user-ids">External user ID</a> provided by <code>X-External-User-ID</code> HTTP Header.</p>
+    *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
     */
 
     @JsonProperty("externalUserId")
     public String getExternalUserId();
 
     /**
-    *  <p>Indicates the <a href="ctp:api:type:Customer">Customer</a> who modified the resource using a token from the <a href="/authorization#password-flow">password flow</a>.</p>
+    *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
     */
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();
 
     /**
-    *  <p>Indicates that the resource was modified during an <a href="/../api/authorization#tokens-for-anonymous-sessions">anonymous session</a> with the logged ID.</p>
+    *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
     */
 
     @JsonProperty("anonymousId")

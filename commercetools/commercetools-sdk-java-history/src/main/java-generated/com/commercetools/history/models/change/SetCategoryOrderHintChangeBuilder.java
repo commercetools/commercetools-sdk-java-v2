@@ -20,6 +20,10 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     private com.commercetools.history.models.common.CategoryOrderHints nextValue;
 
+    /**
+    *  <p>Update action for <code>setCategoryOrderHint</code></p>
+    */
+
     public SetCategoryOrderHintChangeBuilder change(final String change) {
         this.change = change;
         return this;

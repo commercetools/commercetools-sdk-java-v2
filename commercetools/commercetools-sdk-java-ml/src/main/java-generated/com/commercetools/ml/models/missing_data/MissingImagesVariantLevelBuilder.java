@@ -13,10 +13,18 @@ public class MissingImagesVariantLevelBuilder implements Builder<MissingImagesVa
 
     private Long total;
 
+    /**
+    *  <p>Number of product variants missing images.</p>
+    */
+
     public MissingImagesVariantLevelBuilder missingImages(final Long missingImages) {
         this.missingImages = missingImages;
         return this;
     }
+
+    /**
+    *  <p>Number of products scanned.</p>
+    */
 
     public MissingImagesVariantLevelBuilder total(final Long total) {
         this.total = total;

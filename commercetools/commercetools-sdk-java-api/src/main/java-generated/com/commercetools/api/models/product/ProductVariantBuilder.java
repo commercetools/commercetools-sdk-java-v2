@@ -47,6 +47,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     @Nullable
     private Boolean scopedPriceDiscounted;
 
+    /**
+    *  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>
+    */
+
     public ProductVariantBuilder id(final Long id) {
         this.id = id;
         return this;
@@ -56,6 +60,10 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         this.sku = sku;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+    */
 
     public ProductVariantBuilder key(@Nullable final String key) {
         this.key = key;

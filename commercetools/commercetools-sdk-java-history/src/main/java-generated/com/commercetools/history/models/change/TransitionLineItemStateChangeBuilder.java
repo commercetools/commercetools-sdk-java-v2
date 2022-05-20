@@ -20,6 +20,10 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
 
     private java.util.List<com.commercetools.history.models.common.ItemState> previousValue;
 
+    /**
+    *  <p>Update action for <code>transitionLineItemState</code></p>
+    */
+
     public TransitionLineItemStateChangeBuilder change(final String change) {
         this.change = change;
         return this;

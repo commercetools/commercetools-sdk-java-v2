@@ -22,6 +22,10 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     @Nullable
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes;
 
+    /**
+    *  <p>User-defined unique identifier for the ProductType.</p>
+    */
+
     public ProductTypeDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

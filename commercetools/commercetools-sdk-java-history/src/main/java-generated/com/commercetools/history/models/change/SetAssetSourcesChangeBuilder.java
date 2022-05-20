@@ -18,6 +18,10 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
 
     private java.util.List<com.commercetools.history.models.common.AssetSource> previousValue;
 
+    /**
+    *  <p>Update action for <code>setAssetSources</code></p>
+    */
+
     public SetAssetSourcesChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -60,6 +60,10 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     @Nullable
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    /**
+    *  <p>A predefined product type assigned to the product. All products must have a product type.</p>
+    */
+
     public ProductDraftBuilder productType(
             Function<com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder, com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder> builder) {
         this.productType = builder
@@ -67,6 +71,10 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
                 .build();
         return this;
     }
+
+    /**
+    *  <p>A predefined product type assigned to the product. All products must have a product type.</p>
+    */
 
     public ProductDraftBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType) {
@@ -85,16 +93,28 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    /**
+    *  <p>Human-readable identifiers usually used as deep-link URLs for the product. A slug must be unique across a project, but a product can have the same slug for different languages. Slugs have a maximum size of 256. Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
+    */
+
     public ProductDraftBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Human-readable identifiers usually used as deep-link URLs for the product. A slug must be unique across a project, but a product can have the same slug for different languages. Slugs have a maximum size of 256. Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
+    */
+
     public ProductDraftBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier for the Product.</p>
+    */
 
     public ProductDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -113,17 +133,29 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    /**
+    *  <p>Categories assigned to the product.</p>
+    */
+
     public ProductDraftBuilder categories(
             @Nullable final com.commercetools.api.models.category.CategoryResourceIdentifier... categories) {
         this.categories = new ArrayList<>(Arrays.asList(categories));
         return this;
     }
 
+    /**
+    *  <p>Categories assigned to the product.</p>
+    */
+
     public ProductDraftBuilder categories(
             @Nullable final java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> categories) {
         this.categories = categories;
         return this;
     }
+
+    /**
+    *  <p>Categories assigned to the product.</p>
+    */
 
     public ProductDraftBuilder plusCategories(
             @Nullable final com.commercetools.api.models.category.CategoryResourceIdentifier... categories) {
@@ -134,6 +166,10 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    /**
+    *  <p>Categories assigned to the product.</p>
+    */
+
     public ProductDraftBuilder plusCategories(
             Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
         if (this.categories == null) {
@@ -143,6 +179,10 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
             builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Categories assigned to the product.</p>
+    */
 
     public ProductDraftBuilder withCategories(
             Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
@@ -201,6 +241,10 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    /**
+    *  <p>The master product variant. Required if the <code>variants</code> array has product variants.</p>
+    */
+
     public ProductDraftBuilder masterVariant(
             Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraftBuilder> builder) {
         this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantDraftBuilder.of())
@@ -208,11 +252,19 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    /**
+    *  <p>The master product variant. Required if the <code>variants</code> array has product variants.</p>
+    */
+
     public ProductDraftBuilder masterVariant(
             @Nullable final com.commercetools.api.models.product.ProductVariantDraft masterVariant) {
         this.masterVariant = masterVariant;
         return this;
     }
+
+    /**
+    *  <p>An array of related product variants.</p>
+    */
 
     public ProductDraftBuilder variants(
             @Nullable final com.commercetools.api.models.product.ProductVariantDraft... variants) {
@@ -220,11 +272,19 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    /**
+    *  <p>An array of related product variants.</p>
+    */
+
     public ProductDraftBuilder variants(
             @Nullable final java.util.List<com.commercetools.api.models.product.ProductVariantDraft> variants) {
         this.variants = variants;
         return this;
     }
+
+    /**
+    *  <p>An array of related product variants.</p>
+    */
 
     public ProductDraftBuilder plusVariants(
             @Nullable final com.commercetools.api.models.product.ProductVariantDraft... variants) {
@@ -235,6 +295,10 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    /**
+    *  <p>An array of related product variants.</p>
+    */
+
     public ProductDraftBuilder plusVariants(
             Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraftBuilder> builder) {
         if (this.variants == null) {
@@ -243,6 +307,10 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         this.variants.add(builder.apply(com.commercetools.api.models.product.ProductVariantDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>An array of related product variants.</p>
+    */
 
     public ProductDraftBuilder withVariants(
             Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraftBuilder> builder) {
@@ -288,10 +356,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         return this;
     }
 
+    /**
+    *  <p>If <code>true</code>, the product is published immediately.</p>
+    */
+
     public ProductDraftBuilder publish(@Nullable final Boolean publish) {
         this.publish = publish;
         return this;
     }
+
+    /**
+    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+    */
 
     public ProductDraftBuilder priceMode(
             @Nullable final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {

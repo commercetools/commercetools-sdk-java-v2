@@ -44,7 +44,7 @@ public class CartSetLineItemSupplyChannelActionImpl implements CartSetLineItemSu
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>ResourceIdentifier to a Channel.</p>
     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;

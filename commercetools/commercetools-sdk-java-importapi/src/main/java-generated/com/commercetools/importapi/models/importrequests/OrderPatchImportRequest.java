@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The request body to <a href="#import-orderpatches">import OrderPatches</a>. The data to be imported are represented by <a href="#orderpatchimport">OrderPatchImport</a>.</p>
+*  <p>The request body to import OrderPatches. The data to be imported are represented by OrderPatchImport.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderPatchImportRequestImpl.class)

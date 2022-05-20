@@ -48,11 +48,29 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
+
     public AttributeDefinitionBuilder label(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
 
     public AttributeDefinitionBuilder label(final com.commercetools.importapi.models.common.LocalizedString label) {
         this.label = label;
@@ -70,11 +88,29 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
+
     public AttributeDefinitionBuilder inputTip(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.inputTip = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
 
     public AttributeDefinitionBuilder inputTip(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString inputTip) {

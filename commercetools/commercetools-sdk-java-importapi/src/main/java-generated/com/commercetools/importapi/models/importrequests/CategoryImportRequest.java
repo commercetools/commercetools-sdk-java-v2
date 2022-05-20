@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The request body to <a href="#import-categories">import Categories</a>. Contains data for <a href="/../api/projects/categories#category">Categories</a> to be created or updated in a commercetools Project.</p>
+*  <p>The request body to import Categories. Contains data for Categories to be created or updated in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategoryImportRequestImpl.class)

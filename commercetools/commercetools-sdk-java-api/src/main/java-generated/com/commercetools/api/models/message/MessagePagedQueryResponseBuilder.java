@@ -23,6 +23,10 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
 
     private java.util.List<com.commercetools.api.models.message.Message> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public MessagePagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class MessagePagedQueryResponseBuilder implements Builder<MessagePagedQue
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public MessagePagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

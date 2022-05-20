@@ -16,6 +16,10 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     private com.commercetools.history.models.common.PaymentInfo previousValue;
 
+    /**
+    *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
+    */
+
     public AddPaymentChangeBuilder change(final String change) {
         this.change = change;
         return this;

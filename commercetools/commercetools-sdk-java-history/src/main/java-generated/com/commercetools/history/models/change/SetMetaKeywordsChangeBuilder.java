@@ -16,6 +16,10 @@ public class SetMetaKeywordsChangeBuilder implements Builder<SetMetaKeywordsChan
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setMetaKeywords</code></p>
+    */
+
     public SetMetaKeywordsChangeBuilder change(final String change) {
         this.change = change;
         return this;

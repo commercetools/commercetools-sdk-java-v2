@@ -29,15 +29,14 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     public Boolean getStaged();
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Price with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the Price.</p>
+    *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Price.</p>
+    *  <p>Sets the Custom Fields fields for the Price.</p>
     */
     @Valid
     @JsonProperty("fields")

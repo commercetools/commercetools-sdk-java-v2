@@ -20,6 +20,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     private java.util.List<com.commercetools.history.models.common.Price> nextValue;
 
+    /**
+    *  <p>Update action for <code>setPrices</code></p>
+    */
+
     public SetPricesChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -17,6 +17,10 @@ public class MoneyBuilder implements Builder<Money> {
 
     private com.commercetools.history.models.common.MoneyType type;
 
+    /**
+    *  <p>Currency code compliant to ISO 4217.</p>
+    */
+
     public MoneyBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;

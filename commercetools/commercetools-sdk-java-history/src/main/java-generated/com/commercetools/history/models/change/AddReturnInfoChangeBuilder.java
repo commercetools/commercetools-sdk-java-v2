@@ -14,6 +14,10 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
 
     private com.commercetools.history.models.common.ReturnInfo nextValue;
 
+    /**
+    *  <p>Update action for <code>addReturnInfo</code></p>
+    */
+
     public AddReturnInfoChangeBuilder change(final String change) {
         this.change = change;
         return this;

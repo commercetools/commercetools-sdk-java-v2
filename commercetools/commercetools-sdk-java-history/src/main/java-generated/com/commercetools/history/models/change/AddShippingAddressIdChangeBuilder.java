@@ -18,6 +18,10 @@ public class AddShippingAddressIdChangeBuilder implements Builder<AddShippingAdd
 
     private com.commercetools.history.models.common.Address address;
 
+    /**
+    *  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>
+    */
+
     public AddShippingAddressIdChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -18,6 +18,10 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     private com.commercetools.history.models.common.Variant nextValue;
 
+    /**
+    *  <p>Update action for <code>removeVariant</code></p>
+    */
+
     public RemoveVariantChangeBuilder change(final String change) {
         this.change = change;
         return this;

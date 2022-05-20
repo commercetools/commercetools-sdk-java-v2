@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A given field is not supported.
-*  This error occurs, for example, if the field <code>variants</code>, which is not supported by <a href="/product#productimport">Product Import</a>, is sent to the Product Import endpoint.</p>
+*  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by Product Import, is sent to the Product Import endpoint.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {

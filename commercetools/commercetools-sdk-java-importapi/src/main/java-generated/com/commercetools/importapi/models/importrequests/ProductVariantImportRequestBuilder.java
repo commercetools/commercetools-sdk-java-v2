@@ -12,17 +12,29 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources;
 
+    /**
+    *  <p>The product variant import resources of this request.</p>
+    */
+
     public ProductVariantImportRequestBuilder resources(
             final com.commercetools.importapi.models.productvariants.ProductVariantImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
 
+    /**
+    *  <p>The product variant import resources of this request.</p>
+    */
+
     public ProductVariantImportRequestBuilder resources(
             final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources) {
         this.resources = resources;
         return this;
     }
+
+    /**
+    *  <p>The product variant import resources of this request.</p>
+    */
 
     public ProductVariantImportRequestBuilder plusResources(
             final com.commercetools.importapi.models.productvariants.ProductVariantImport... resources) {
@@ -33,6 +45,10 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
         return this;
     }
 
+    /**
+    *  <p>The product variant import resources of this request.</p>
+    */
+
     public ProductVariantImportRequestBuilder plusResources(
             Function<com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder, com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder> builder) {
         if (this.resources == null) {
@@ -42,6 +58,10 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
             builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The product variant import resources of this request.</p>
+    */
 
     public ProductVariantImportRequestBuilder withResources(
             Function<com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder, com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder> builder) {

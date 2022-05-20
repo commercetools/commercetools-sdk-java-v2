@@ -57,25 +57,45 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+    *  <p>Platform-generated unique identifier of the StandalonePrice.</p>
+    */
+
     public StandalonePriceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Current version of the StandalonePrice.</p>
+    */
 
     public StandalonePriceBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
+    */
+
     public StandalonePriceBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
+    */
+
     public StandalonePriceBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public StandalonePriceBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -83,11 +103,19 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public StandalonePriceBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public StandalonePriceBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -95,25 +123,45 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public StandalonePriceBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the StandalonePrice.</p>
+    */
 
     public StandalonePriceBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+    *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+    */
+
     public StandalonePriceBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
 
+    /**
+    *  <p>Money value of this Price.</p>
+    */
+
     public StandalonePriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
+
+    /**
+    *  <p>Money value of this Price.</p>
+    */
 
     public StandalonePriceBuilder value(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -121,10 +169,18 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+    *  <p>Country for which this Price is valid.</p>
+    */
+
     public StandalonePriceBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+    *  <p>CustomerGroup for which this Price is valid.</p>
+    */
 
     public StandalonePriceBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -134,11 +190,19 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+    *  <p>CustomerGroup for which this Price is valid.</p>
+    */
+
     public StandalonePriceBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+    *  <p>Product distribution Channel for which this Price is valid.</p>
+    */
 
     public StandalonePriceBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -146,32 +210,56 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+    *  <p>Product distribution Channel for which this Price is valid.</p>
+    */
+
     public StandalonePriceBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
         this.channel = channel;
         return this;
     }
 
+    /**
+    *  <p>Date from which the Price is valid.</p>
+    */
+
     public StandalonePriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+    *  <p>Date until the Price is valid.</p>
+    */
 
     public StandalonePriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
 
+    /**
+    *  <p>Price tiers if any are defined.</p>
+    */
+
     public StandalonePriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
+
+    /**
+    *  <p>Price tiers if any are defined.</p>
+    */
 
     public StandalonePriceBuilder tiers(
             @Nullable final java.util.List<com.commercetools.api.models.common.PriceTier> tiers) {
         this.tiers = tiers;
         return this;
     }
+
+    /**
+    *  <p>Price tiers if any are defined.</p>
+    */
 
     public StandalonePriceBuilder plusTiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
         if (this.tiers == null) {
@@ -180,6 +268,10 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         this.tiers.addAll(Arrays.asList(tiers));
         return this;
     }
+
+    /**
+    *  <p>Price tiers if any are defined.</p>
+    */
 
     public StandalonePriceBuilder plusTiers(
             Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTierBuilder> builder) {
@@ -190,6 +282,10 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+    *  <p>Price tiers if any are defined.</p>
+    */
+
     public StandalonePriceBuilder withTiers(
             Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTierBuilder> builder) {
         this.tiers = new ArrayList<>();
@@ -197,11 +293,19 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+    *  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+    */
+
     public StandalonePriceBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+    */
 
     public StandalonePriceBuilder discounted(
             @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
@@ -209,11 +313,19 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         return this;
     }
 
+    /**
+    *  <p>Custom Fields for the StandalonePrice.</p>
+    */
+
     public StandalonePriceBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields for the StandalonePrice.</p>
+    */
 
     public StandalonePriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

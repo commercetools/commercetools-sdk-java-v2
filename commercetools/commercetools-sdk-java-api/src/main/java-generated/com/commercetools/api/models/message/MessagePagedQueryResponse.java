@@ -18,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessagePagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<Message> {
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     @NotNull
     @JsonProperty("limit")
@@ -32,7 +32,7 @@ public interface MessagePagedQueryResponse extends com.commercetools.api.models.
     public Long getTotal();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     @NotNull
     @JsonProperty("offset")

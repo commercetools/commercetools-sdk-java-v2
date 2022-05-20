@@ -15,6 +15,10 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
 
     private Integer nextValue;
 
+    /**
+    *  <p>Internal Update action for <code>setApplicationVersion</code></p>
+    */
+
     public SetApplicationVersionChangeBuilder change(final String change) {
         this.change = change;
         return this;

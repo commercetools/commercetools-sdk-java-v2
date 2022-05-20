@@ -37,7 +37,7 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Payment">Payment</a>.</p>
+    *  <p>Reference to a Payment.</p>
     */
     public com.commercetools.api.models.payment.PaymentReference getPayment() {
         return this.payment;

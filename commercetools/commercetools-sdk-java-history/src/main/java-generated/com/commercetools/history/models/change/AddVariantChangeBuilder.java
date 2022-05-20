@@ -18,6 +18,10 @@ public class AddVariantChangeBuilder implements Builder<AddVariantChange> {
 
     private com.commercetools.history.models.common.Variant nextValue;
 
+    /**
+    *  <p>Update action for <code>addVariant</code></p>
+    */
+
     public AddVariantChangeBuilder change(final String change) {
         this.change = change;
         return this;

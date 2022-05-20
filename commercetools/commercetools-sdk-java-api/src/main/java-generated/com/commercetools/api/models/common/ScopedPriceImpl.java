@@ -82,21 +82,21 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-    *  <p>Two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>Reference to a CustomerGroup.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>Reference to a Channel.</p>
     */
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
@@ -115,7 +115,7 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;

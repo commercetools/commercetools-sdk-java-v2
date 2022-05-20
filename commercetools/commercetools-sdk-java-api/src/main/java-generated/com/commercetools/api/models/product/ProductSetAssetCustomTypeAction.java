@@ -36,15 +36,14 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
     public String getAssetKey();
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Asset with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+    *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Asset.</p>
+    *  <p>Sets the Custom Fields fields for the Asset.</p>
     */
     @Valid
     @JsonProperty("fields")

@@ -27,7 +27,7 @@ public interface DiscountedPriceDraft {
     public Money getValue();
 
     /**
-    *  <p>Relates the referenced <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> to the discounted price.</p>
+    *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
     */
     @NotNull
     @Valid

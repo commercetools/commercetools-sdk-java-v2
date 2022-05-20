@@ -23,11 +23,19 @@ public class MyShoppingListSetTextLineItemDescriptionActionBuilder
         return this;
     }
 
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
+
     public MyShoppingListSetTextLineItemDescriptionActionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public MyShoppingListSetTextLineItemDescriptionActionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {

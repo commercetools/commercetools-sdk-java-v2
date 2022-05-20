@@ -17,11 +17,19 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     @Nullable
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
+    /**
+    *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+    */
+
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.externalTotalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The total gross amount of the cart (totalNet + taxes).</p>
+    */
 
     public CartSetCartTotalTaxActionBuilder externalTotalGross(
             final com.commercetools.api.models.common.Money externalTotalGross) {

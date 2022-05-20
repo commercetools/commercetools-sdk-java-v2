@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>This is the generic error code for access denied. In case of a wrong scope, an <a href="#invalidscopeerror">InvalidScopeError</a> will be returned.</p>
+*  <p>This is the generic error code for access denied. In case of a wrong scope, an InvalidScopeError will be returned.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AccessDeniedErrorImpl.class)

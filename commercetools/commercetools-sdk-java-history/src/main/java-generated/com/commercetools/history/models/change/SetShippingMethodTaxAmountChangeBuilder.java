@@ -18,6 +18,10 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
 
     private com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue;
 
+    /**
+    *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
+    */
+
     public SetShippingMethodTaxAmountChangeBuilder change(final String change) {
         this.change = change;
         return this;

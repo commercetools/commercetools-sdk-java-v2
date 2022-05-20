@@ -38,11 +38,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     @Nullable
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+    *  <p>Maps to <code>LineItem.productId</code>.</p>
+    */
+
     public LineItemImportDraftBuilder product(
             Function<com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>LineItem.productId</code>.</p>
+    */
 
     public LineItemImportDraftBuilder product(
             @Nullable final com.commercetools.importapi.models.common.ProductKeyReference product) {
@@ -50,16 +58,28 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>LineItem.name</code>.</p>
+    */
+
     public LineItemImportDraftBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>LineItem.name</code>.</p>
+    */
+
     public LineItemImportDraftBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
+    */
 
     public LineItemImportDraftBuilder variant(
             Function<com.commercetools.importapi.models.orders.LineItemProductVariantImportDraftBuilder, com.commercetools.importapi.models.orders.LineItemProductVariantImportDraftBuilder> builder) {
@@ -69,11 +89,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
+    */
+
     public LineItemImportDraftBuilder variant(
             final com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft variant) {
         this.variant = variant;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>LineItem.price</code>.</p>
+    */
 
     public LineItemImportDraftBuilder price(
             Function<com.commercetools.importapi.models.orders.LineItemPriceBuilder, com.commercetools.importapi.models.orders.LineItemPriceBuilder> builder) {
@@ -81,10 +109,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>LineItem.price</code>.</p>
+    */
+
     public LineItemImportDraftBuilder price(final com.commercetools.importapi.models.orders.LineItemPrice price) {
         this.price = price;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>LineItem.quantity</code>.</p>
+    */
 
     public LineItemImportDraftBuilder quantity(final Double quantity) {
         this.quantity = quantity;
@@ -128,6 +164,10 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+    */
+
     public LineItemImportDraftBuilder supplyChannel(
             Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of())
@@ -135,11 +175,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+    */
+
     public LineItemImportDraftBuilder supplyChannel(
             @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+    */
 
     public LineItemImportDraftBuilder distributionChannel(
             Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
@@ -149,11 +197,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+    */
+
     public LineItemImportDraftBuilder distributionChannel(
             @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>LineItem.taxRate</code>.</p>
+    */
 
     public LineItemImportDraftBuilder taxRate(
             Function<com.commercetools.importapi.models.prices.TaxRateBuilder, com.commercetools.importapi.models.prices.TaxRateBuilder> builder) {
@@ -161,11 +217,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>LineItem.taxRate</code>.</p>
+    */
+
     public LineItemImportDraftBuilder taxRate(
             @Nullable final com.commercetools.importapi.models.prices.TaxRate taxRate) {
         this.taxRate = taxRate;
         return this;
     }
+
+    /**
+    *  <p>Maps to LineItem.shippingDetails.</p>
+    */
 
     public LineItemImportDraftBuilder shippingDetails(
             Function<com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder, com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder> builder) {
@@ -174,6 +238,10 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Maps to LineItem.shippingDetails.</p>
+    */
 
     public LineItemImportDraftBuilder shippingDetails(
             @Nullable final com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails) {

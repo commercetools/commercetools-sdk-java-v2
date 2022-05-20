@@ -19,7 +19,7 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
     String CHANGE_ORDER_SEARCH_STATUS = "changeOrderSearchStatus";
 
     /**
-    *  <p>Activates or deactivates the <a href="/../api/projects/order-search">Order Search</a> feature. Activation will trigger building a search index for the Orders in the Project.</p>
+    *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
     */
     @NotNull
     @JsonProperty("status")

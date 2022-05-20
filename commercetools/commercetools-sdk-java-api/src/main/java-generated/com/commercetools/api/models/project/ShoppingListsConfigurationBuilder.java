@@ -14,6 +14,10 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
     @Nullable
     private Long deleteDaysAfterLastModification;
 
+    /**
+    *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
+    */
+
     public ShoppingListsConfigurationBuilder deleteDaysAfterLastModification(
             @Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;

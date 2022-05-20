@@ -16,6 +16,10 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setSupplyChannel</code></p>
+    */
+
     public SetSupplyChannelChangeBuilder change(final String change) {
         this.change = change;
         return this;

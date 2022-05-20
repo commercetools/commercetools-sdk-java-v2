@@ -12,17 +12,29 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ExtensionChangeTriggersActionBuilder triggers(
             final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
         this.triggers = new ArrayList<>(Arrays.asList(triggers));
         return this;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ExtensionChangeTriggersActionBuilder triggers(
             final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
         this.triggers = triggers;
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public ExtensionChangeTriggersActionBuilder plusTriggers(
             final com.commercetools.api.models.extension.ExtensionTrigger... triggers) {
@@ -33,6 +45,10 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
         return this;
     }
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ExtensionChangeTriggersActionBuilder plusTriggers(
             Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {
         if (this.triggers == null) {
@@ -41,6 +57,10 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
         this.triggers.add(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public ExtensionChangeTriggersActionBuilder withTriggers(
             Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTriggerBuilder> builder) {

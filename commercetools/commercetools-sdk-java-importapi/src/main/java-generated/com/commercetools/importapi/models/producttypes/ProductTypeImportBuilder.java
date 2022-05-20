@@ -26,15 +26,27 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductType.name</code>.</p>
+    */
+
     public ProductTypeImportBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductType.description</code>.</p>
+    */
+
     public ProductTypeImportBuilder description(final String description) {
         this.description = description;
         return this;
     }
+
+    /**
+    *  <p>The <code>attributes</code> of ProductType.</p>
+    */
 
     public ProductTypeImportBuilder attributes(
             @Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition... attributes) {
@@ -42,11 +54,19 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
         return this;
     }
 
+    /**
+    *  <p>The <code>attributes</code> of ProductType.</p>
+    */
+
     public ProductTypeImportBuilder attributes(
             @Nullable final java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+    *  <p>The <code>attributes</code> of ProductType.</p>
+    */
 
     public ProductTypeImportBuilder plusAttributes(
             @Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition... attributes) {
@@ -57,6 +77,10 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
         return this;
     }
 
+    /**
+    *  <p>The <code>attributes</code> of ProductType.</p>
+    */
+
     public ProductTypeImportBuilder plusAttributes(
             Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
         if (this.attributes == null) {
@@ -66,6 +90,10 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
             builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The <code>attributes</code> of ProductType.</p>
+    */
 
     public ProductTypeImportBuilder withAttributes(
             Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {

@@ -14,6 +14,10 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
 
     private com.commercetools.history.models.common.Transaction nextValue;
 
+    /**
+    *  <p>Update action for <code>addTransaction</code> on payments</p>
+    */
+
     public AddTransactionChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:InventoryEntry">InventoryEntry</a>.</p>
+*  <p>Reference to a InventoryEntry.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryReferenceImpl.class)
@@ -24,14 +24,14 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     String INVENTORY_ENTRY = "inventory-entry";
 
     /**
-    *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for InventoryEntries.</p>
+    *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
     */
     @Valid
     @JsonProperty("obj")
     public InventoryEntry getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:InventoryEntry">InventoryEntry</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>
     */
     @NotNull
     @JsonProperty("id")

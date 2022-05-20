@@ -19,10 +19,18 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
 
     private Boolean isReturn;
 
+    /**
+    *  <p>The ID to track one parcel.</p>
+    */
+
     public TrackingDataBuilder trackingId(final String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
+
+    /**
+    *  <p>The carrier that delivers the parcel.</p>
+    */
 
     public TrackingDataBuilder carrier(final String carrier) {
         this.carrier = carrier;
@@ -38,6 +46,10 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
         this.providerTransaction = providerTransaction;
         return this;
     }
+
+    /**
+    *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+    */
 
     public TrackingDataBuilder isReturn(final Boolean isReturn) {
         this.isReturn = isReturn;

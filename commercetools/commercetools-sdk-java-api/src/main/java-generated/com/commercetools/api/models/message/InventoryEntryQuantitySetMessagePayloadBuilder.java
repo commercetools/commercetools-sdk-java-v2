@@ -44,11 +44,19 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
         return this;
     }
 
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
+
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
 
     public InventoryEntryQuantitySetMessagePayloadBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Field type for <a href="ctp:api:type:CentPrecisionMoney">CentPrecisionMoney</a> values.</p>
+*  <p>Field type for CentPrecisionMoney values.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomFieldMoneyTypeImpl implements CustomFieldMoneyType, ModelBase {

@@ -45,6 +45,10 @@ public class ProductSetAssetKeyActionBuilder implements Builder<ProductSetAssetK
         return this;
     }
 
+    /**
+    *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+    */
+
     public ProductSetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;

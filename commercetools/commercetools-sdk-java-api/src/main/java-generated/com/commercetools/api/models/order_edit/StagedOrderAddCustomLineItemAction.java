@@ -28,7 +28,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
 
     /**
     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
     */
     @NotNull
     @Valid
@@ -36,7 +36,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public Money getMoney();
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
     */
     @NotNull
     @Valid
@@ -51,14 +51,14 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public String getSlug();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    *  <p>ResourceIdentifier to a TaxCategory.</p>
     */
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
     */
     @Valid
     @JsonProperty("custom")

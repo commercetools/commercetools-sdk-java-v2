@@ -44,60 +44,108 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
     @Nullable
     private java.util.List<String> productTypeIds;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public MissingPricesSearchRequestBuilder limit(@Nullable final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public MissingPricesSearchRequestBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+    *  <p>If true, searches data from staged products in addition to published products.</p>
+    */
+
     public MissingPricesSearchRequestBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+    *  <p>Maximum number of products to scan.</p>
+    */
 
     public MissingPricesSearchRequestBuilder productSetLimit(@Nullable final Long productSetLimit) {
         this.productSetLimit = productSetLimit;
         return this;
     }
 
+    /**
+    *  <p>If true, searches all product variants. If false, only searches master variants.</p>
+    */
+
     public MissingPricesSearchRequestBuilder includeVariants(@Nullable final Boolean includeVariants) {
         this.includeVariants = includeVariants;
         return this;
     }
+
+    /**
+    *  <p>If used, only checks if a product variant has a price in the provided currency code.</p>
+    */
 
     public MissingPricesSearchRequestBuilder currencyCode(@Nullable final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
 
+    /**
+    *  <p>If true, checks if there are prices for the specified date range and time.</p>
+    */
+
     public MissingPricesSearchRequestBuilder checkDate(@Nullable final Boolean checkDate) {
         this.checkDate = checkDate;
         return this;
     }
+
+    /**
+    *  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>
+    */
 
     public MissingPricesSearchRequestBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
 
+    /**
+    *  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>
+    */
+
     public MissingPricesSearchRequestBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
+
+    /**
+    *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
+    */
 
     public MissingPricesSearchRequestBuilder productIds(@Nullable final String... productIds) {
         this.productIds = new ArrayList<>(Arrays.asList(productIds));
         return this;
     }
 
+    /**
+    *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
+    */
+
     public MissingPricesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
         this.productIds = productIds;
         return this;
     }
+
+    /**
+    *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
+    */
 
     public MissingPricesSearchRequestBuilder plusProductIds(@Nullable final String... productIds) {
         if (this.productIds == null) {
@@ -107,15 +155,27 @@ public class MissingPricesSearchRequestBuilder implements Builder<MissingPricesS
         return this;
     }
 
+    /**
+    *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
+    */
+
     public MissingPricesSearchRequestBuilder productTypeIds(@Nullable final String... productTypeIds) {
         this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
 
+    /**
+    *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
+    */
+
     public MissingPricesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
         this.productTypeIds = productTypeIds;
         return this;
     }
+
+    /**
+    *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
+    */
 
     public MissingPricesSearchRequestBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {
         if (this.productTypeIds == null) {

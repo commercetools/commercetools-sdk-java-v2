@@ -30,7 +30,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public Long getQuantity();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>ResourceIdentifier to a State.</p>
     */
     @NotNull
     @Valid
@@ -38,7 +38,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     public StateResourceIdentifier getFromState();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>ResourceIdentifier to a State.</p>
     */
     @NotNull
     @Valid

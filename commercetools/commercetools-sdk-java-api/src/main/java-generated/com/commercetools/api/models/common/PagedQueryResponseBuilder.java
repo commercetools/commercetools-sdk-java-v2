@@ -25,20 +25,36 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     @Nullable
     private java.lang.Object meta;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public PagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public PagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+    *  <p>Actual number of results returned.</p>
+    */
+
     public PagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
+
+    /**
+    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+    */
 
     public PagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;

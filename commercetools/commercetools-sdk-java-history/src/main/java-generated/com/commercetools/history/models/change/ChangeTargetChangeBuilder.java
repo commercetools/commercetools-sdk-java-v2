@@ -16,6 +16,10 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     private com.commercetools.history.models.change_value.ChangeTargetChangeValue previousValue;
 
+    /**
+    *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
+    */
+
     public ChangeTargetChangeBuilder change(final String change) {
         this.change = change;
         return this;

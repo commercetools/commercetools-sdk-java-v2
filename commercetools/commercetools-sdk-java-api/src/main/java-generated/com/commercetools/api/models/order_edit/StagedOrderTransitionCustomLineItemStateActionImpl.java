@@ -61,14 +61,14 @@ public class StagedOrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>ResourceIdentifier to a State.</p>
     */
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
         return this.fromState;
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>ResourceIdentifier to a State.</p>
     */
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
         return this.toState;

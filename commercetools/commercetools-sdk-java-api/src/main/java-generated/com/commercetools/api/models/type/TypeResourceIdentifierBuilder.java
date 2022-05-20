@@ -17,10 +17,18 @@ public class TypeResourceIdentifierBuilder implements Builder<TypeResourceIdenti
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
     public TypeResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
+    */
 
     public TypeResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

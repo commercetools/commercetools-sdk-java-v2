@@ -13,10 +13,18 @@ public class MissingImagesProductLevelBuilder implements Builder<MissingImagesPr
 
     private Long total;
 
+    /**
+    *  <p>Number of products missing images.</p>
+    */
+
     public MissingImagesProductLevelBuilder missingImages(final Long missingImages) {
         this.missingImages = missingImages;
         return this;
     }
+
+    /**
+    *  <p>Number of products scanned.</p>
+    */
 
     public MissingImagesProductLevelBuilder total(final Long total) {
         this.total = total;

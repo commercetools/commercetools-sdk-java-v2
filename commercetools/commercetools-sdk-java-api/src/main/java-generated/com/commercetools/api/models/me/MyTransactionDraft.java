@@ -29,9 +29,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     public ZonedDateTime getTimestamp();
 
     /**
-    *  <p>The type of this transaction.
-    *  Only the <code>Authorization</code> or <code>Charge</code>
-    *  TransactionTypes are allowed here.</p>
+    *  <p>The type of this transaction. Only the <code>Authorization</code> or <code>Charge</code> TransactionTypes are allowed here.</p>
     */
     @NotNull
     @JsonProperty("type")
@@ -43,10 +41,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     public Money getAmount();
 
     /**
-    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
-    *  If a matching interaction was logged in the interfaceInteractions array,
-    *  the corresponding interaction should be findable with this ID.
-    *  The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
+    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the interfaceInteractions array, the corresponding interaction should be findable with this ID. The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
     */
 
     @JsonProperty("interactionId")

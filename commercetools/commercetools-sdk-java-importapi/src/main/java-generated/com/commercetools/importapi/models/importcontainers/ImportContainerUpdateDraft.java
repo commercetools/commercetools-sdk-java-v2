@@ -28,8 +28,7 @@ public interface ImportContainerUpdateDraft {
     public Long getVersion();
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> to be imported.
-    *  If not given, the ImportContainer is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
+    *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
     */
 
     @JsonProperty("resourceType")

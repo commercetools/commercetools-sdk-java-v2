@@ -24,6 +24,10 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     private Integer quantity;
 
+    /**
+    *  <p>The unique ID of this CustomLineItem.</p>
+    */
+
     public CustomLineItemBuilder id(final String id) {
         this.id = id;
         return this;
@@ -73,10 +77,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+    *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+    */
+
     public CustomLineItemBuilder slug(final String slug) {
         this.slug = slug;
         return this;
     }
+
+    /**
+    *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+    */
 
     public CustomLineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;

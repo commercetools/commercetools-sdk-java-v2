@@ -16,6 +16,10 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
 
     private com.commercetools.history.models.common.CustomLineItem previousValue;
 
+    /**
+    *  <p>Update action for adding and removing custom line items</p>
+    */
+
     public AddCustomLineItemChangeBuilder change(final String change) {
         this.change = change;
         return this;

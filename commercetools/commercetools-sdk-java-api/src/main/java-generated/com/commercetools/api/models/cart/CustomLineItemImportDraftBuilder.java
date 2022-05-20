@@ -46,16 +46,28 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
         return this;
     }
 
+    /**
+    *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+    */
+
     public CustomLineItemImportDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+    *  <p>The cost to add to the cart. The amount can be negative.</p>
+    */
 
     public CustomLineItemImportDraftBuilder money(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The cost to add to the cart. The amount can be negative.</p>
+    */
 
     public CustomLineItemImportDraftBuilder money(final com.commercetools.api.models.common.Money money) {
         this.money = money;
@@ -130,11 +142,19 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
         return this;
     }
 
+    /**
+    *  <p>The custom fields.</p>
+    */
+
     public CustomLineItemImportDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The custom fields.</p>
+    */
 
     public CustomLineItemImportDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

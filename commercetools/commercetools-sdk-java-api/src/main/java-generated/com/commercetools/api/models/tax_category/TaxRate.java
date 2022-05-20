@@ -18,8 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxRate {
 
     /**
-    *  <p>Present if the TaxRate is part of a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.
-    *  Absent for external TaxRates in <a href="ctp:api:type:LineItem">LineItem</a>, <a href="ctp:api:type:CustomLineItem">CustomLineItem</a>, and <a href="ctp:api:type:ShippingInfo">ShippingInfo</a>.</p>
+    *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
     */
 
     @JsonProperty("id")
@@ -40,14 +39,14 @@ public interface TaxRate {
     public Double getAmount();
 
     /**
-    *  <p>If <code>true</code>, tax is included in <a href="ctp:api:type:Price">Prices</a> and the <code>taxedPrice</code> is present on <a href="ctp:api:type:LineItem">LineItems</a>. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
+    *  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
     */
     @NotNull
     @JsonProperty("includedInPrice")
     public Boolean getIncludedInPrice();
 
     /**
-    *  <p>Country in which the tax rate is applied in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> format.</p>
+    *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
     */
     @NotNull
     @JsonProperty("country")
@@ -61,7 +60,7 @@ public interface TaxRate {
     public String getState();
 
     /**
-    *  <p>Used to calculate the <a href="/../api/projects/carts#taxedprice">taxPortions</a> field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+    *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
     */
     @Valid
     @JsonProperty("subRates")

@@ -12,17 +12,29 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
 
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
+    /**
+    *  <p>The actions to edit the <code>resource</code>.</p>
+    */
+
     public OrderEditSetStagedActionsActionBuilder stagedActions(
             final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
         this.stagedActions = new ArrayList<>(Arrays.asList(stagedActions));
         return this;
     }
 
+    /**
+    *  <p>The actions to edit the <code>resource</code>.</p>
+    */
+
     public OrderEditSetStagedActionsActionBuilder stagedActions(
             final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
         this.stagedActions = stagedActions;
         return this;
     }
+
+    /**
+    *  <p>The actions to edit the <code>resource</code>.</p>
+    */
 
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
             final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
@@ -33,6 +45,10 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
         return this;
     }
 
+    /**
+    *  <p>The actions to edit the <code>resource</code>.</p>
+    */
+
     public OrderEditSetStagedActionsActionBuilder plusStagedActions(
             Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
         if (this.stagedActions == null) {
@@ -42,6 +58,10 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
                 .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The actions to edit the <code>resource</code>.</p>
+    */
 
     public OrderEditSetStagedActionsActionBuilder withStagedActions(
             Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {

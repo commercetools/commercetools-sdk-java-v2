@@ -44,14 +44,14 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public String getCountry();
 
     /**
-    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which the given Price is valid.</p>
+    *  <p>CustomerGroup for which the given Price is valid.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
     /**
-    *  <p><code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a> for which the given Price is valid.</p>
+    *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
     */
     @Valid
     @JsonProperty("channel")
@@ -72,7 +72,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public ZonedDateTime getValidUntil();
 
     /**
-    *  <p><a href="ctp:api:type:DiscountedPrice">DiscountedPrice</a> you specify for the given Price.</p>
+    *  <p>DiscountedPrice you specify for the given Price.</p>
     */
     @Valid
     @JsonProperty("discounted")
@@ -86,7 +86,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     public CustomFields getCustom();
 
     /**
-    *  <p>Price tier applied when the minimum quantity for the <a href="ctp:api:type:LineItem">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
+    *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
     */
     @Valid
     @JsonProperty("tiers")

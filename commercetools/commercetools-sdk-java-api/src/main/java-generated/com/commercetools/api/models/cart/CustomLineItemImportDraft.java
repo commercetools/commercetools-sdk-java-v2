@@ -30,8 +30,7 @@ public interface CustomLineItemImportDraft
     public LocalizedString getName();
 
     /**
-    *  <p>The amount of a CustomLineItem in the cart.
-    *  Must be a positive integer.</p>
+    *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
     */
     @NotNull
     @JsonProperty("quantity")

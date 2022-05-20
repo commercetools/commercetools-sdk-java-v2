@@ -21,15 +21,14 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the Store with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the Store.</p>
+    *  <p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p>
     */
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the Store.</p>
+    *  <p>Sets the Custom Fields fields for the Store.</p>
     */
     @Valid
     @JsonProperty("fields")

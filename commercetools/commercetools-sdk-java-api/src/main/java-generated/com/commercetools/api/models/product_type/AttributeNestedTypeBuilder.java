@@ -12,12 +12,20 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
 
     private com.commercetools.api.models.product_type.ProductTypeReference typeReference;
 
+    /**
+    *  <p>Reference to a ProductType.</p>
+    */
+
     public AttributeNestedTypeBuilder typeReference(
             Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
         this.typeReference = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a ProductType.</p>
+    */
 
     public AttributeNestedTypeBuilder typeReference(
             final com.commercetools.api.models.product_type.ProductTypeReference typeReference) {

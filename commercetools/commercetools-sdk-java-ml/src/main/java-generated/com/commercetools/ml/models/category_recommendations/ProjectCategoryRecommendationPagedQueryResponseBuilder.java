@@ -31,6 +31,10 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
+
     public ProjectCategoryRecommendationPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;

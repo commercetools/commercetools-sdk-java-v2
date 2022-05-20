@@ -29,6 +29,10 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
+
     public GeneralCategoryRecommendationPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;

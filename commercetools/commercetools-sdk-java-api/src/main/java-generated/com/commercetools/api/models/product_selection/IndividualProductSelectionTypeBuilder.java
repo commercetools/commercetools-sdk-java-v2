@@ -12,11 +12,19 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+    *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+    */
+
     public IndividualProductSelectionTypeBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+    */
 
     public IndividualProductSelectionTypeBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;

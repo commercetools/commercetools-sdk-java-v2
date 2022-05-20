@@ -16,8 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
 *  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
-*  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted.
-*  Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p>
+*  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
@@ -109,18 +108,14 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>LineItem.supplyChannel</code>.
-    *  The Reference to the Supply <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
-    *  If referenced Supply Channel does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+    *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
         return this.supplyChannel;
     }
 
     /**
-    *  <p>Maps to <code>LineItem.distributionChannel</code>.
-    *  The Reference to the Distribution <a href="/../api/projects/channels#channel">Channel</a> with which the LineItem is associated.
-    *  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+    *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
     */
     public com.commercetools.importapi.models.common.ChannelKeyReference getDistributionChannel() {
         return this.distributionChannel;

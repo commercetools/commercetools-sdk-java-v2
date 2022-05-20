@@ -14,11 +14,19 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft taxRate;
 
+    /**
+    *  <p>The total gross amount of the item (totalNet + taxes).</p>
+    */
+
     public ExternalTaxAmountDraftBuilder totalGross(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The total gross amount of the item (totalNet + taxes).</p>
+    */
 
     public ExternalTaxAmountDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
         this.totalGross = totalGross;

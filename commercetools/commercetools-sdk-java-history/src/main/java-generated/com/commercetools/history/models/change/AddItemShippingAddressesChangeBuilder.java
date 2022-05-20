@@ -16,6 +16,10 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+    *  <p>Update action for <code>addItemShippingAddress</code></p>
+    */
+
     public AddItemShippingAddressesChangeBuilder change(final String change) {
         this.change = change;
         return this;

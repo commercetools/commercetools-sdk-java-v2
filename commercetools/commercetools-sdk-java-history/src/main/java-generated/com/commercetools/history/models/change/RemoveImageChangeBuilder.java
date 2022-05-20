@@ -18,6 +18,10 @@ public class RemoveImageChangeBuilder implements Builder<RemoveImageChange> {
 
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
+    /**
+    *  <p>Update actions for removing images</p>
+    */
+
     public RemoveImageChangeBuilder change(final String change) {
         this.change = change;
         return this;

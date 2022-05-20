@@ -57,11 +57,19 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+    *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
+    */
+
     public CategoryDraftBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
+    */
 
     public CategoryDraftBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
@@ -80,6 +88,10 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+    *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
+    */
+
     public CategoryDraftBuilder parent(
             Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
         this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
@@ -87,11 +99,19 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+    *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
+    */
+
     public CategoryDraftBuilder parent(
             @Nullable final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {
         this.parent = parent;
         return this;
     }
+
+    /**
+    *  <p>An attribute as base for a custom category order in one level. A random value will be assigned by API if not set.</p>
+    */
 
     public CategoryDraftBuilder orderHint(@Nullable final String orderHint) {
         this.orderHint = orderHint;
@@ -139,11 +159,19 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         return this;
     }
 
+    /**
+    *  <p>The custom fields.</p>
+    */
+
     public CategoryDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The custom fields.</p>
+    */
 
     public CategoryDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
@@ -184,6 +212,10 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier for the Category.</p>
+    */
 
     public CategoryDraftBuilder key(@Nullable final String key) {
         this.key = key;

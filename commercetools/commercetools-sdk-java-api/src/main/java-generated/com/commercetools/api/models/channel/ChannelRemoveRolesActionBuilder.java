@@ -11,16 +11,28 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
 
     private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
+    /**
+    *  <p>Value to remove from the array.</p>
+    */
+
     public ChannelRemoveRolesActionBuilder roles(final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
+
+    /**
+    *  <p>Value to remove from the array.</p>
+    */
 
     public ChannelRemoveRolesActionBuilder roles(
             final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
         this.roles = roles;
         return this;
     }
+
+    /**
+    *  <p>Value to remove from the array.</p>
+    */
 
     public ChannelRemoveRolesActionBuilder plusRoles(
             final com.commercetools.api.models.channel.ChannelRoleEnum... roles) {

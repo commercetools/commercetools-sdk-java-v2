@@ -14,16 +14,28 @@ public class TypeChangeFieldDefinitionLabelActionBuilder implements Builder<Type
 
     private com.commercetools.api.models.common.LocalizedString label;
 
+    /**
+    *  <p><code>name</code> of the FieldDefinition to update.</p>
+    */
+
     public TypeChangeFieldDefinitionLabelActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public TypeChangeFieldDefinitionLabelActionBuilder label(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public TypeChangeFieldDefinitionLabelActionBuilder label(
             final com.commercetools.api.models.common.LocalizedString label) {

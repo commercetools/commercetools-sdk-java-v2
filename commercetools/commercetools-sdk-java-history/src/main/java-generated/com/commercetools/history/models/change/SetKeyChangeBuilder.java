@@ -15,6 +15,10 @@ public class SetKeyChangeBuilder implements Builder<SetKeyChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setKey</code></p>
+    */
+
     public SetKeyChangeBuilder change(final String change) {
         this.change = change;
         return this;

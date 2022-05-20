@@ -13,6 +13,10 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
 
     private Long version;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Cart from which the Platform creates an Order.</p>
+    */
+
     public MyOrderFromCartDraftBuilder id(final String id) {
         this.id = id;
         return this;

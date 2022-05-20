@@ -18,6 +18,10 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
+    /**
+    *  <p>Update actions for adding an external image</p>
+    */
+
     public AddExternalImageChangeBuilder change(final String change) {
         this.change = change;
         return this;

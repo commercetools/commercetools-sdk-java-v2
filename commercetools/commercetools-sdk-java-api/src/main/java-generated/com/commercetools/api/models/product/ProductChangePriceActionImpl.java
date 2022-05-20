@@ -44,7 +44,7 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
     }
 
     /**
-    *  <p>ID of the <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrice</a></p>
+    *  <p>ID of the EmbeddedPrice</p>
     */
     public String getPriceId() {
         return this.priceId;

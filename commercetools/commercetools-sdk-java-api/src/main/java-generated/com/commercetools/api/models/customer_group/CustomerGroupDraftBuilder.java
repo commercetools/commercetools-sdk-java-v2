@@ -20,21 +20,37 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+    *  <p>User-defined unique identifier for the CustomerGroup.</p>
+    */
+
     public CustomerGroupDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
+    */
 
     public CustomerGroupDraftBuilder groupName(final String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+    /**
+    *  <p>Custom Fields for the CustomerGroup.</p>
+    */
+
     public CustomerGroupDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields for the CustomerGroup.</p>
+    */
 
     public CustomerGroupDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

@@ -16,6 +16,10 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setTarget</code></p>
+    */
+
     public SetTargetChangeBuilder change(final String change) {
         this.change = change;
         return this;

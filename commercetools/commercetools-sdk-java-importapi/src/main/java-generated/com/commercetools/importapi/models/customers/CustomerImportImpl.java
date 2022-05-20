@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The data representation for a Customer to be imported that is persisted as a <a href="/../api/projects/customers#top">Customer</a> in the Project.</p>
+*  <p>The data representation for a Customer to be imported that is persisted as a Customer in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerImportImpl implements CustomerImport, ModelBase {
@@ -139,7 +139,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
     */
     public java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> getStores() {
         return this.stores;
@@ -216,8 +216,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-    *  <p>The Reference to the <a href="/../api/projects/customerGroups#customergroup">CustomerGroup</a> with which the Customer is associated.
-    *  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+    *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
     */
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;

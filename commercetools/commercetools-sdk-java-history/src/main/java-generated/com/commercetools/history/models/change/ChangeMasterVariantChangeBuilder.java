@@ -18,6 +18,10 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
 
     private com.commercetools.history.models.common.Variant nextValue;
 
+    /**
+    *  <p>Update action for <code>changeMasterVariant</code></p>
+    */
+
     public ChangeMasterVariantChangeBuilder change(final String change) {
         this.change = change;
         return this;

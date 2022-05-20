@@ -15,6 +15,10 @@ public class SetMaxApplicationsChangeBuilder implements Builder<SetMaxApplicatio
 
     private Integer nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setMaxApplications</code></p>
+    */
+
     public SetMaxApplicationsChangeBuilder change(final String change) {
         this.change = change;
         return this;

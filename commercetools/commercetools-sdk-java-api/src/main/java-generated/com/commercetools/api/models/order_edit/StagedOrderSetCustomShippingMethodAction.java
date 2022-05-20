@@ -33,7 +33,7 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     public ShippingRateDraft getShippingRate();
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    *  <p>ResourceIdentifier to a TaxCategory.</p>
     */
     @Valid
     @JsonProperty("taxCategory")

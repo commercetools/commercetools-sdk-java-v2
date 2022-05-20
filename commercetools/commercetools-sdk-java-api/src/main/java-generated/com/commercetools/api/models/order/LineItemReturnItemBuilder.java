@@ -32,6 +32,10 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
 
     private String lineItemId;
 
+    /**
+    *  <p>Platform-generated unique identifier of the ReturnItem.</p>
+    */
+
     public LineItemReturnItemBuilder id(final String id) {
         this.id = id;
         return this;
@@ -59,11 +63,19 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
         return this;
     }
 
+    /**
+    *  <p>Custom Fields of this return item.</p>
+    */
+
     public LineItemReturnItemBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields of this return item.</p>
+    */
 
     public LineItemReturnItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

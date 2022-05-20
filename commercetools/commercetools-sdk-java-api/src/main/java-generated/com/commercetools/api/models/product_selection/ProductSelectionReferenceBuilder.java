@@ -17,16 +17,28 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
     @Nullable
     private com.commercetools.api.models.product_selection.ProductSelection obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced ProductSelection.</p>
+    */
+
     public ProductSelectionReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+    */
 
     public ProductSelectionReferenceBuilder obj(
             Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+    */
 
     public ProductSelectionReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.product_selection.ProductSelection obj) {

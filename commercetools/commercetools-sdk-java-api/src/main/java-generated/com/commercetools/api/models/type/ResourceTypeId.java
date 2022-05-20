@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>IDs indicating the <a href="/../api/projects/types#list-of-customizable-data-types">customizable resources and data types</a>.</p>
+*  <p>IDs indicating the customizable resources and data types.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ResourceTypeId {

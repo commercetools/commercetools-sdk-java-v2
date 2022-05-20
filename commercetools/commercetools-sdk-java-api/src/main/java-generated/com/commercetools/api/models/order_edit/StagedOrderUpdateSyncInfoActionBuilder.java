@@ -20,12 +20,20 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     @Nullable
     private java.time.ZonedDateTime syncedAt;
 
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
+
     public StagedOrderUpdateSyncInfoActionBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
 
     public StagedOrderUpdateSyncInfoActionBuilder channel(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {

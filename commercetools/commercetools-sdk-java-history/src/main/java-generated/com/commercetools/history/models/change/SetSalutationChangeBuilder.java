@@ -15,6 +15,10 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setSalutation</code></p>
+    */
+
     public SetSalutationChangeBuilder change(final String change) {
         this.change = change;
         return this;

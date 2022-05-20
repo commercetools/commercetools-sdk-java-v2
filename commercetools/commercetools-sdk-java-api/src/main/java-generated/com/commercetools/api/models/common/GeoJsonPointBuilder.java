@@ -11,15 +11,27 @@ public class GeoJsonPointBuilder implements Builder<GeoJsonPoint> {
 
     private java.util.List<Double> coordinates;
 
+    /**
+    *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+    */
+
     public GeoJsonPointBuilder coordinates(final Double... coordinates) {
         this.coordinates = new ArrayList<>(Arrays.asList(coordinates));
         return this;
     }
 
+    /**
+    *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+    */
+
     public GeoJsonPointBuilder coordinates(final java.util.List<Double> coordinates) {
         this.coordinates = coordinates;
         return this;
     }
+
+    /**
+    *  <p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p>
+    */
 
     public GeoJsonPointBuilder plusCoordinates(final Double... coordinates) {
         if (this.coordinates == null) {

@@ -52,9 +52,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for the store.
-    *  The <code>key</code> is mandatory and immutable.
-    *  It is used to reference the store.</p>
+    *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
     */
     public String getKey() {
         return this.key;
@@ -86,9 +84,7 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
     }
 
     /**
-    *  <p>Set of ResourceIdentifiers of Product Selections along with settings.
-    *  If <code>productSelections</code> is empty all products in the project are available in this Store.
-    *  If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    *  <p>Set of ResourceIdentifiers of Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
     */
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {
         return this.productSelections;

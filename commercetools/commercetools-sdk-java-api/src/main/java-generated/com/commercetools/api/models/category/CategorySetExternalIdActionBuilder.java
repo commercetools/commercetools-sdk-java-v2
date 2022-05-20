@@ -14,6 +14,10 @@ public class CategorySetExternalIdActionBuilder implements Builder<CategorySetEx
     @Nullable
     private String externalId;
 
+    /**
+    *  <p>If not defined, the external ID is unset.</p>
+    */
+
     public CategorySetExternalIdActionBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;

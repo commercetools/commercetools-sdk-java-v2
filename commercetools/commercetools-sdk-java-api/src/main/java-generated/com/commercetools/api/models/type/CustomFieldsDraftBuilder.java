@@ -17,22 +17,38 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+    *  <p><code>id</code> or <code>key</code> of the Type.</p>
+    */
+
     public CustomFieldsDraftBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p><code>id</code> or <code>key</code> of the Type.</p>
+    */
+
     public CustomFieldsDraftBuilder type(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
+
+    /**
+    *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+    */
 
     public CustomFieldsDraftBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+    */
 
     public CustomFieldsDraftBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;

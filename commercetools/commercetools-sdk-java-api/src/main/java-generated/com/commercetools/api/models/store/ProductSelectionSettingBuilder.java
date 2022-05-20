@@ -14,6 +14,10 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     private Boolean active;
 
+    /**
+    *  <p>Reference to a Product Selection</p>
+    */
+
     public ProductSelectionSettingBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
         this.productSelection = builder
@@ -22,11 +26,19 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
         return this;
     }
 
+    /**
+    *  <p>Reference to a Product Selection</p>
+    */
+
     public ProductSelectionSettingBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
         this.productSelection = productSelection;
         return this;
     }
+
+    /**
+    *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
+    */
 
     public ProductSelectionSettingBuilder active(final Boolean active) {
         this.active = active;

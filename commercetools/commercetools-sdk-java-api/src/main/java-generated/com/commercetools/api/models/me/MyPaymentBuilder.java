@@ -31,6 +31,10 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+    *  <p>Platform-generated unique identifier of the MyPayment.</p>
+    */
+
     public MyPaymentBuilder id(final String id) {
         this.id = id;
         return this;
@@ -41,26 +45,46 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
         return this;
     }
 
+    /**
+    *  <p>A reference to the customer this payment belongs to.</p>
+    */
+
     public MyPaymentBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>A reference to the customer this payment belongs to.</p>
+    */
+
     public MyPaymentBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
+
+    /**
+    *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+    */
 
     public MyPaymentBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
 
+    /**
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+    */
+
     public MyPaymentBuilder amountPlanned(final com.commercetools.api.models.common.TypedMoney amountPlanned) {
         this.amountPlanned = amountPlanned;
         return this;
     }
+
+    /**
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+    */
 
     public MyPaymentBuilder amountPlanned(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -81,16 +105,28 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
         return this;
     }
 
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
+
     public MyPaymentBuilder transactions(final com.commercetools.api.models.payment.Transaction... transactions) {
         this.transactions = new ArrayList<>(Arrays.asList(transactions));
         return this;
     }
+
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
 
     public MyPaymentBuilder transactions(
             final java.util.List<com.commercetools.api.models.payment.Transaction> transactions) {
         this.transactions = transactions;
         return this;
     }
+
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
 
     public MyPaymentBuilder plusTransactions(final com.commercetools.api.models.payment.Transaction... transactions) {
         if (this.transactions == null) {
@@ -100,6 +136,10 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
         return this;
     }
 
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
+
     public MyPaymentBuilder plusTransactions(
             Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
         if (this.transactions == null) {
@@ -108,6 +148,10 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
         this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
 
     public MyPaymentBuilder withTransactions(
             Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {

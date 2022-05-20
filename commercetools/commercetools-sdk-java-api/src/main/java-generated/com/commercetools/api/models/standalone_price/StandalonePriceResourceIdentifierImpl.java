@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/../api/types#resourceidentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:StandalonePrice">StandalonePrice</a>.</p>
+*  <p>ResourceIdentifier to a StandalonePrice.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class StandalonePriceResourceIdentifierImpl implements StandalonePriceResourceIdentifier, ModelBase {
@@ -39,7 +39,7 @@ public class StandalonePriceResourceIdentifierImpl implements StandalonePriceRes
     }
 
     /**
-    *  <p>Type of referenced resource. If given, it must match the expected <a href="ctp:api:type:ReferenceTypeId">ReferenceTypeId</a> of the referenced resource.</p>
+    *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
     */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;

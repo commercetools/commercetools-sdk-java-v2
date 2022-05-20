@@ -14,17 +14,29 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
 
+    /**
+    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+    */
+
     public ProductSelectionAssignmentBuilder product(
             Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+    */
+
     public ProductSelectionAssignmentBuilder product(
             final com.commercetools.api.models.product.ProductReference product) {
         this.product = product;
         return this;
     }
+
+    /**
+    *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+    */
 
     public ProductSelectionAssignmentBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
@@ -33,6 +45,10 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+    */
 
     public ProductSelectionAssignmentBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {

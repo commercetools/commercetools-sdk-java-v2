@@ -21,8 +21,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see <a href="/../api/projects/products#price-selection">price selection</a>.
-*  Creating a Standalone Price is rejected if there already exists a Standalone Price for the same SKU with exactly the same price scope, or with overlapping validity periods within the same price scope. A Price without validity period does not conflict with a Price defined for a time period.</p>
+*  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection. Creating a Standalone Price is rejected if there already exists a Standalone Price for the same SKU with exactly the same price scope, or with overlapping validity periods within the same price scope. A Price without validity period does not conflict with a Price defined for a time period.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceDraftImpl.class)
@@ -36,8 +35,7 @@ public interface StandalonePriceDraft {
     public String getKey();
 
     /**
-    *  <p>Specifies to which <a href="ctp:api:type:ProductVariant">ProductVariant</a> the Platform associates this Price.
-    *  It is not validated to exist in product variants.</p>
+    *  <p>Specifies to which ProductVariant the Platform associates this Price. It is not validated to exist in product variants.</p>
     */
     @NotNull
     @JsonProperty("sku")
@@ -59,14 +57,14 @@ public interface StandalonePriceDraft {
     public String getCountry();
 
     /**
-    *  <p>Sets the <a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which this Price is valid.</p>
+    *  <p>Sets the CustomerGroup for which this Price is valid.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-    *  <p>Sets the product distribution <a href="ctp:api:type:Channel">Channel</a> for which this Price is valid.</p>
+    *  <p>Sets the product distribution Channel for which this Price is valid.</p>
     */
     @Valid
     @JsonProperty("channel")

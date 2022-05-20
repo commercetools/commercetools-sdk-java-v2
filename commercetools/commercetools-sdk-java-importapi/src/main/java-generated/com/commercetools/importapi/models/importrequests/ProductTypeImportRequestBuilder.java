@@ -12,17 +12,29 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     private java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources;
 
+    /**
+    *  <p>The product type import resources of this request.</p>
+    */
+
     public ProductTypeImportRequestBuilder resources(
             final com.commercetools.importapi.models.producttypes.ProductTypeImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
 
+    /**
+    *  <p>The product type import resources of this request.</p>
+    */
+
     public ProductTypeImportRequestBuilder resources(
             final java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources) {
         this.resources = resources;
         return this;
     }
+
+    /**
+    *  <p>The product type import resources of this request.</p>
+    */
 
     public ProductTypeImportRequestBuilder plusResources(
             final com.commercetools.importapi.models.producttypes.ProductTypeImport... resources) {
@@ -33,6 +45,10 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
         return this;
     }
 
+    /**
+    *  <p>The product type import resources of this request.</p>
+    */
+
     public ProductTypeImportRequestBuilder plusResources(
             Function<com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder, com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder> builder) {
         if (this.resources == null) {
@@ -42,6 +58,10 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
             builder.apply(com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The product type import resources of this request.</p>
+    */
 
     public ProductTypeImportRequestBuilder withResources(
             Function<com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder, com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder> builder) {

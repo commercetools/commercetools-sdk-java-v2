@@ -37,7 +37,7 @@ public class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSetMessa
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>Reference to a CustomerGroup.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;

@@ -18,6 +18,10 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
 
     private com.commercetools.history.models.common.TrackingData previousValue;
 
+    /**
+    *  <p>Update action for <code>setParcelTrackingData</code></p>
+    */
+
     public SetParcelTrackingDataChangeBuilder change(final String change) {
         this.change = change;
         return this;

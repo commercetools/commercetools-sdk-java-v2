@@ -50,14 +50,14 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
@@ -69,8 +69,7 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     public LocalizedString getName();
 
     /**
-    *  <p>human-readable identifiers usually used as deep-link URL to the related category.
-    *  Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+    *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
     */
     @NotNull
     @Valid

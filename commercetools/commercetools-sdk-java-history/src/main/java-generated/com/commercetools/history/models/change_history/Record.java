@@ -18,8 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A Record captures the differences in a resource between one version and the next.
-*  (Recall that the version number is not always incremented by one; see <a href="/general-concepts#optimistic-concurrency-control">Optimistic Concurrency Control</a>.)</p>
+*  <p>A Record captures the differences in a resource between one version and the next. (Recall that the version number is not always incremented by one; see Optimistic Concurrency Control.)</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = RecordImpl.class)
@@ -78,8 +77,7 @@ public interface Record {
     public Label getPreviousLabel();
 
     /**
-    *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.
-    *  The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, <a href="/general-concepts#optimistic-concurrency-control">Optimistic  Concurrency Control</a>).</p>
+    *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
     */
     @NotNull
     @Valid
@@ -95,7 +93,7 @@ public interface Record {
     public Reference getResource();
 
     /**
-    *  <p>References to the <a href="ctp:api:type:Store">Stores</a> attached to the <a href="ctp:history:type:Change">Change</a>.</p>
+    *  <p>References to the Stores attached to the Change.</p>
     */
     @NotNull
     @Valid
@@ -103,8 +101,7 @@ public interface Record {
     public List<KeyReference> getStores();
 
     /**
-    *  <p><code>true</code> if no change was detected.
-    *  The version number of the resource can be increased even without any change in the resource.</p>
+    *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
     */
     @NotNull
     @JsonProperty("withoutChanges")

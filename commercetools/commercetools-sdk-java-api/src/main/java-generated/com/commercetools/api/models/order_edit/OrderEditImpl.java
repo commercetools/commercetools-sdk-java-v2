@@ -93,14 +93,14 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
@@ -121,8 +121,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-    *  <p>The actions to apply to the Order.
-    *  Cannot be updated after the edit has been applied.</p>
+    *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
     */
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
         return this.stagedActions;
@@ -133,8 +132,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-    *  <p>Contains a preview of the changes in case of unapplied edit.
-    *  For applied edits, it contains the summary of the changes.</p>
+    *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
     */
     public com.commercetools.api.models.order_edit.OrderEditResult getResult() {
         return this.result;

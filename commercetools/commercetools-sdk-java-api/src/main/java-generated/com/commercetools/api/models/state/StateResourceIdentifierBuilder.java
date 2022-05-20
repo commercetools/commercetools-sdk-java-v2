@@ -17,10 +17,18 @@ public class StateResourceIdentifierBuilder implements Builder<StateResourceIden
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
     public StateResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the referenced State. Either <code>id</code> or <code>key</code> is required.</p>
+    */
 
     public StateResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

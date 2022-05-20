@@ -17,6 +17,10 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
     @Nullable
     private Boolean active;
 
+    /**
+    *  <p>Resource Identifier of a Product Selection</p>
+    */
+
     public StoreAddProductSelectionActionBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder> builder) {
         this.productSelection = builder
@@ -25,11 +29,19 @@ public class StoreAddProductSelectionActionBuilder implements Builder<StoreAddPr
         return this;
     }
 
+    /**
+    *  <p>Resource Identifier of a Product Selection</p>
+    */
+
     public StoreAddProductSelectionActionBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {
         this.productSelection = productSelection;
         return this;
     }
+
+    /**
+    *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+    */
 
     public StoreAddProductSelectionActionBuilder active(@Nullable final Boolean active) {
         this.active = active;

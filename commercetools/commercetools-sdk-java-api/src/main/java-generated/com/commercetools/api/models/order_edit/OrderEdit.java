@@ -50,14 +50,14 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
@@ -79,8 +79,7 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
     public OrderReference getResource();
 
     /**
-    *  <p>The actions to apply to the Order.
-    *  Cannot be updated after the edit has been applied.</p>
+    *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
     */
     @NotNull
     @Valid
@@ -92,8 +91,7 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
     public CustomFields getCustom();
 
     /**
-    *  <p>Contains a preview of the changes in case of unapplied edit.
-    *  For applied edits, it contains the summary of the changes.</p>
+    *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
     */
     @NotNull
     @Valid

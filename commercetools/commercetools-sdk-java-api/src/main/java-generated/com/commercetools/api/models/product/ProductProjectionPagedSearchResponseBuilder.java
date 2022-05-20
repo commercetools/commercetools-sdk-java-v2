@@ -25,6 +25,10 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
 
     private com.commercetools.api.models.product.FacetResults facets;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ProductProjectionPagedSearchResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -39,6 +43,10 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ProductProjectionPagedSearchResponseBuilder offset(final Long offset) {
         this.offset = offset;

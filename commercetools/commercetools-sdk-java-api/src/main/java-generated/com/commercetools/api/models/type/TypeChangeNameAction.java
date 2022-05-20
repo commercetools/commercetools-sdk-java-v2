@@ -21,8 +21,7 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
     String CHANGE_NAME = "changeName";
 
     /**
-    *  <p>New value to set.
-    *  Must not be empty.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     @NotNull
     @Valid

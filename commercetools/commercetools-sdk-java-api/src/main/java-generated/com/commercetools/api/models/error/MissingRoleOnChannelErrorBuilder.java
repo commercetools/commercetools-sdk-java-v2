@@ -39,6 +39,10 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
+
     public MissingRoleOnChannelErrorBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
@@ -46,11 +50,19 @@ public class MissingRoleOnChannelErrorBuilder implements Builder<MissingRoleOnCh
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
+
     public MissingRoleOnChannelErrorBuilder channel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
         this.channel = channel;
         return this;
     }
+
+    /**
+    *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
+    */
 
     public MissingRoleOnChannelErrorBuilder missingRole(
             final com.commercetools.api.models.channel.ChannelRoleEnum missingRole) {

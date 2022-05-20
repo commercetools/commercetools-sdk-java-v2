@@ -22,11 +22,19 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     private Boolean force;
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public ReviewStateTransitionMessagePayloadBuilder oldState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public ReviewStateTransitionMessagePayloadBuilder oldState(
             final com.commercetools.api.models.state.StateReference oldState) {
@@ -34,11 +42,19 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
         return this;
     }
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public ReviewStateTransitionMessagePayloadBuilder newState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.newState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public ReviewStateTransitionMessagePayloadBuilder newState(
             final com.commercetools.api.models.state.StateReference newState) {
@@ -56,11 +72,19 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
         return this;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
+
     public ReviewStateTransitionMessagePayloadBuilder target(
             final com.commercetools.api.models.common.Reference target) {
         this.target = target;
         return this;
     }
+
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
 
     public ReviewStateTransitionMessagePayloadBuilder target(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {

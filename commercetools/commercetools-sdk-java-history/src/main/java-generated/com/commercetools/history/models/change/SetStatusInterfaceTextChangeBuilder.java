@@ -15,6 +15,10 @@ public class SetStatusInterfaceTextChangeBuilder implements Builder<SetStatusInt
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setStatusInterfaceText</code></p>
+    */
+
     public SetStatusInterfaceTextChangeBuilder change(final String change) {
         this.change = change;
         return this;

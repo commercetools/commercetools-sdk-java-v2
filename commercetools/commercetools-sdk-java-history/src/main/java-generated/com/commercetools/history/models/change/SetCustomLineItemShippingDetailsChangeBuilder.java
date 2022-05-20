@@ -18,6 +18,10 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
 
     private com.commercetools.history.models.common.ItemShippingDetails previousValue;
 
+    /**
+    *  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>
+    */
+
     public SetCustomLineItemShippingDetailsChangeBuilder change(final String change) {
         this.change = change;
         return this;

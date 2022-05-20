@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Specifies the status of the <a href="/../api/projects/order-search">Order Search</a> index.</p>
+*  <p>Specifies the status of the Order Search index.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface OrderSearchStatus {

@@ -19,6 +19,10 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
     @Nullable
     private Boolean staged;
 
+    /**
+    *  <p>ID of the EmbeddedPrice</p>
+    */
+
     public ProductChangePriceActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;

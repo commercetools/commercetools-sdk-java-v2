@@ -15,6 +15,10 @@ public class SetOrderNumberChangeBuilder implements Builder<SetOrderNumberChange
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setOrderNumber</code></p>
+    */
+
     public SetOrderNumberChangeBuilder change(final String change) {
         this.change = change;
         return this;

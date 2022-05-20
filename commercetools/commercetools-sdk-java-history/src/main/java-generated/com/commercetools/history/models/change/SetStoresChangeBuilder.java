@@ -16,6 +16,10 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setStores</code></p>
+    */
+
     public SetStoresChangeBuilder change(final String change) {
         this.change = change;
         return this;

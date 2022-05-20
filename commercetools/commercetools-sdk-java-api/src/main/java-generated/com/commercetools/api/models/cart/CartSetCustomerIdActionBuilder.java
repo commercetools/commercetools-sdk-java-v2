@@ -14,6 +14,10 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
     @Nullable
     private String customerId;
 
+    /**
+    *  <p>If set, a customer with the given ID must exist in the project.</p>
+    */
+
     public CartSetCustomerIdActionBuilder customerId(@Nullable final String customerId) {
         this.customerId = customerId;
         return this;

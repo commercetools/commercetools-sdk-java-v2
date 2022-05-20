@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The data representation for a ProductVariant to be imported that is persisted as a <a href="/../api/projects/products#productvariant">ProductVariant</a> in the Project.</p>
+*  <p>The data representation for a ProductVariant to be imported that is persisted as a ProductVariant in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductVariantImportImpl.class)
@@ -39,8 +39,7 @@ public interface ProductVariantImport extends ImportResource {
     public Boolean getIsMasterVariant();
 
     /**
-    *  <p>Maps to <code>ProductVariant.attributes</code>.
-    *  The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be <code>unresolved</code>.</p>
+    *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the commercetools project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
     */
     @Valid
     @JsonProperty("attributes")
@@ -61,18 +60,14 @@ public interface ProductVariantImport extends ImportResource {
     public List<Asset> getAssets();
 
     /**
-    *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data.
-    *  If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged.
-    *  However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+    *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
     */
 
     @JsonProperty("publish")
     public Boolean getPublish();
 
     /**
-    *  <p>The <a href="/../api/projects/products#productvariant">Product</a> to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>.
-    *  The Reference to the <a href="/../api/projects/products#product">Product</a> with which the ProductVariant is associated.
-    *  If referenced Product does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Product is created.</p>
+    *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
     */
     @NotNull
     @Valid

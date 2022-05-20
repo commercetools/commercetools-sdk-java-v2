@@ -29,9 +29,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public String getKey();
 
     /**
-    *  <p>Roles of the Channel.
-    *  Each channel must have at least one role.
-    *  If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+    *  <p>Roles of the Channel. Each channel must have at least one role. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
     */
 
     @JsonProperty("roles")
@@ -66,8 +64,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     public CustomFieldsDraft getCustom();
 
     /**
-    *  <p>GeoJSON geometry object encoding the geo location of the Channel.
-    *  Currently, only the <a href="ctp:api:type:GeoJsonPoint">Point</a> type is supported.</p>
+    *  <p>GeoJSON geometry object encoding the geo location of the Channel. Currently, only the Point type is supported.</p>
     */
     @Valid
     @JsonProperty("geoLocation")

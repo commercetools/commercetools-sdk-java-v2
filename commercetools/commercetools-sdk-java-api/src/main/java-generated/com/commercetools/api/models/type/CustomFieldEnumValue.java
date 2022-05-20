@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Defines an allowed value of a <a href="ctp:api:type:CustomFieldEnumType">CustomFieldEnumType</a> field.</p>
+*  <p>Defines an allowed value of a CustomFieldEnumType field.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldEnumValueImpl.class)

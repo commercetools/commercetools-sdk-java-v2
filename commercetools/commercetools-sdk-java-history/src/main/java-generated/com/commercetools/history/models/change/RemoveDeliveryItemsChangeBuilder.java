@@ -14,6 +14,10 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
 
     private com.commercetools.history.models.common.Delivery previousValue;
 
+    /**
+    *  <p>Update action for <code>removeDelivery</code></p>
+    */
+
     public RemoveDeliveryItemsChangeBuilder change(final String change) {
         this.change = change;
         return this;

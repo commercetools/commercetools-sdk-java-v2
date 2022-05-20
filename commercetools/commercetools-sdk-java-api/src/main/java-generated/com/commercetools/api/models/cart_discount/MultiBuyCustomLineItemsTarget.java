@@ -19,8 +19,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     String MULTI_BUY_CUSTOM_LINE_ITEMS = "multiBuyCustomLineItems";
 
     /**
-    *  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are
-    *  matched by the predicate.</p>
+    *  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are matched by the predicate.</p>
     */
     @NotNull
     @JsonProperty("predicate")

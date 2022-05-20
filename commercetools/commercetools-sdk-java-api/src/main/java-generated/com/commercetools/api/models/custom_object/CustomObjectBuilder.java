@@ -32,25 +32,45 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
 
     private java.lang.Object value;
 
+    /**
+    *  <p>Platform-generated unique identifier of the CustomObject.</p>
+    */
+
     public CustomObjectBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Current version of the CustomObject.</p>
+    */
 
     public CustomObjectBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) the CustomObject was initially created.</p>
+    */
+
     public CustomObjectBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) the CustomObject was last updated.</p>
+    */
+
     public CustomObjectBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public CustomObjectBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -58,11 +78,19 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public CustomObjectBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public CustomObjectBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -70,20 +98,36 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public CustomObjectBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>Namespace to group CustomObjects.</p>
+    */
 
     public CustomObjectBuilder container(final String container) {
         this.container = container;
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+    */
+
     public CustomObjectBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+    */
 
     public CustomObjectBuilder value(final java.lang.Object value) {
         this.value = value;

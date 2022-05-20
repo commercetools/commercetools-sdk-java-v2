@@ -17,10 +17,18 @@ public class CategoryResourceIdentifierBuilder implements Builder<CategoryResour
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
     public CategoryResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the referenced Category. Either <code>id</code> or <code>key</code> is required.</p>
+    */
 
     public CategoryResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

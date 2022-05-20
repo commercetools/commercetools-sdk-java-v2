@@ -14,6 +14,10 @@ public class CartDiscountSetValidFromActionBuilder implements Builder<CartDiscou
     @Nullable
     private java.time.ZonedDateTime validFrom;
 
+    /**
+    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    */
+
     public CartDiscountSetValidFromActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;

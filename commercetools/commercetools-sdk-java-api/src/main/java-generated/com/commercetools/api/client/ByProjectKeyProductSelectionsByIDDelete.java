@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Deletion will only succeed if the Product Selection is not assigned to any <a href="/../api/projects/stores#store">Store</a>.</p>
+*  <p>Deletion will only succeed if the Product Selection is not assigned to any Store.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductSelectionsByIDDelete extends

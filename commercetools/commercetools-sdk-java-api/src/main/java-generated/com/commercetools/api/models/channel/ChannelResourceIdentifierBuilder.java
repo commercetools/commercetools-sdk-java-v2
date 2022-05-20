@@ -17,10 +17,18 @@ public class ChannelResourceIdentifierBuilder implements Builder<ChannelResource
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Channel. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
     public ChannelResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the referenced Channel. Either <code>id</code> or <code>key</code> is required.</p>
+    */
 
     public ChannelResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

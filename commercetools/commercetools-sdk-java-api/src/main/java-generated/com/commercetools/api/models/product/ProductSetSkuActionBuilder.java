@@ -24,6 +24,10 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
         return this;
     }
 
+    /**
+    *  <p>SKU must be unique. If left blank or set to <code>null</code>, the sku is unset/removed.</p>
+    */
+
     public ProductSetSkuActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;

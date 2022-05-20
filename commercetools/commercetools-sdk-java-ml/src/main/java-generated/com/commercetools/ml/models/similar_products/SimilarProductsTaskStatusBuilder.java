@@ -24,10 +24,18 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
         return this;
     }
 
+    /**
+    *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
+    */
+
     public SimilarProductsTaskStatusBuilder expires(@Nullable final java.time.ZonedDateTime expires) {
         this.expires = expires;
         return this;
     }
+
+    /**
+    *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+    */
 
     public SimilarProductsTaskStatusBuilder result(
             Function<com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder> builder) {
@@ -36,6 +44,10 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
                 .build();
         return this;
     }
+
+    /**
+    *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+    */
 
     public SimilarProductsTaskStatusBuilder result(
             final com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult result) {

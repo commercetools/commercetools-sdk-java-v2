@@ -25,6 +25,10 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
         return this;
     }
 
+    /**
+    *  <p>A valid JSON object, based on FieldDefinition.</p>
+    */
+
     public CustomFieldsBuilder fields(final java.lang.Object fields) {
         this.fields = fields;
         return this;

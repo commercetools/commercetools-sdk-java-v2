@@ -85,14 +85,14 @@ public class PriceImpl implements Price, ModelBase {
     }
 
     /**
-    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which this Price is valid.</p>
+    *  <p>CustomerGroup for which this Price is valid.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a> for which this Price is valid.</p>
+    *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
     */
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
@@ -113,16 +113,14 @@ public class PriceImpl implements Price, ModelBase {
     }
 
     /**
-    *  <p>Is set if a <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> has been applied.
-    *  If set, the commercetools Platform uses the DiscountedPrice value for the <a href="/projects/carts#lineitem-price-selection">LineItem Price selection</a>.
-    *  When a <a href="/../api/projects/productDiscounts#productdiscountvaluerelative">relative discount</a> has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with <a href="https://en.wikipedia.org/wiki/Rounding#Round_half_down">half down rounding</a>.</p>
+    *  <p>Is set if a ProductDiscount has been applied. If set, the commercetools Platform uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>
     */
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
     /**
-    *  <p>Present if different Prices for certain <a href="ctp:api:type:LineItem">LineItem</a> quantities have been specified.</p>
+    *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
     */
     public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
         return this.tiers;

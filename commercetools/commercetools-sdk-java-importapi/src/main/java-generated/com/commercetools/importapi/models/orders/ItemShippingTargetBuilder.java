@@ -13,10 +13,18 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     private Double quantity;
 
+    /**
+    *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+    */
+
     public ItemShippingTargetBuilder addressKey(final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+    */
 
     public ItemShippingTargetBuilder quantity(final Double quantity) {
         this.quantity = quantity;

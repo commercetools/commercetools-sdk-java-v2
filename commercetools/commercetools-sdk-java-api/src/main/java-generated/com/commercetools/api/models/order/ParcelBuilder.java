@@ -28,6 +28,10 @@ public class ParcelBuilder implements Builder<Parcel> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Parcel.</p>
+    */
+
     public ParcelBuilder id(final String id) {
         this.id = id;
         return this;
@@ -61,15 +65,27 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
+
     public ParcelBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
 
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
+
     public ParcelBuilder items(@Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
 
     public ParcelBuilder plusItems(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
         if (this.items == null) {
@@ -78,6 +94,10 @@ public class ParcelBuilder implements Builder<Parcel> {
         this.items.addAll(Arrays.asList(items));
         return this;
     }
+
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
 
     public ParcelBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
@@ -88,6 +108,10 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
+
     public ParcelBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         this.items = new ArrayList<>();
@@ -95,11 +119,19 @@ public class ParcelBuilder implements Builder<Parcel> {
         return this;
     }
 
+    /**
+    *  <p>Custom Fields of this parcel.</p>
+    */
+
     public ParcelBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields of this parcel.</p>
+    */
 
     public ParcelBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

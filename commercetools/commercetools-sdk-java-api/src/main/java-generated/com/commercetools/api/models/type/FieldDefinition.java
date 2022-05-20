@@ -15,8 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Defines a <a href="/../api/projects/custom-fields">Custom Field</a> and its meta-information.
-*  This FieldDefinition is similar to an <a href="ctp:api:type:AttributeDefinition">AttributeDefinition</a> of <a href="/../api/projects/productTypes">Product Types</a>.</p>
+*  <p>Defines a Custom Field and its meta-information. This FieldDefinition is similar to an AttributeDefinition of Product Types.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = FieldDefinitionImpl.class)
@@ -31,9 +30,7 @@ public interface FieldDefinition {
     public FieldType getType();
 
     /**
-    *  <p>Name of the Custom Field to define.
-    *  Must be unique for a given <a href="ctp:api:type:ResourceTypeId">ResourceTypeId</a>.
-    *  In case there is a FieldDefinition with the same <code>name</code> in another <a href="ctp:api:type:Type">Type</a>, both FieldDefinitions must have the same <code>type</code>.</p>
+    *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>.</p>
     */
     @NotNull
     @JsonProperty("name")
@@ -55,9 +52,7 @@ public interface FieldDefinition {
     public Boolean getRequired();
 
     /**
-    *  <p>Must be either <code>SingleLine</code> or <code>MultiLine</code>.
-    *  Defines the visual representation of the field in user interfaces like the Merchant Center.
-    *  It is only relevant for string-based <a href="ctp:api:type:FieldType">FieldTypes</a> like <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> and <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a>.</p>
+    *  <p>Must be either <code>SingleLine</code> or <code>MultiLine</code>. Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
     */
 
     @JsonProperty("inputHint")

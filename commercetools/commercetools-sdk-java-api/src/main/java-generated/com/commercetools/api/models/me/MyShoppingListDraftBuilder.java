@@ -133,17 +133,29 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
         return this;
     }
 
+    /**
+    *  <p>The custom fields.</p>
+    */
+
     public MyShoppingListDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>The custom fields.</p>
+    */
+
     public MyShoppingListDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+    *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+    */
 
     public MyShoppingListDraftBuilder deleteDaysAfterLastModification(
             @Nullable final Long deleteDaysAfterLastModification) {

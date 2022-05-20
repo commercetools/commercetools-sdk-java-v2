@@ -15,6 +15,10 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeName</code></p>
+    */
+
     public ChangeNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -11,6 +11,10 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
 
     private com.commercetools.importapi.models.common.ReferenceType referenceTypeId;
 
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+
     public AttributeReferenceTypeBuilder referenceTypeId(
             final com.commercetools.importapi.models.common.ReferenceType referenceTypeId) {
         this.referenceTypeId = referenceTypeId;

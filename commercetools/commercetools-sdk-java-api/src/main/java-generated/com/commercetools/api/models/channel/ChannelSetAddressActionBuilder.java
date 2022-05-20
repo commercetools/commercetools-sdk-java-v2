@@ -15,11 +15,19 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
     @Nullable
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public ChannelSetAddressActionBuilder address(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
 
     public ChannelSetAddressActionBuilder address(
             @Nullable final com.commercetools.api.models.common.BaseAddress address) {

@@ -51,6 +51,10 @@ public class PaymentBuilder implements Builder<Payment> {
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Payment.</p>
+    */
+
     public PaymentBuilder id(final String id) {
         this.id = id;
         return this;
@@ -71,11 +75,19 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public PaymentBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public PaymentBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -83,16 +95,28 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public PaymentBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public PaymentBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>A reference to the customer this payment belongs to.</p>
+    */
 
     public PaymentBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
@@ -100,25 +124,45 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
+    /**
+    *  <p>A reference to the customer this payment belongs to.</p>
+    */
+
     public PaymentBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
+
+    /**
+    *  <p>Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</p>
+    */
 
     public PaymentBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
 
+    /**
+    *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+    */
+
     public PaymentBuilder interfaceId(@Nullable final String interfaceId) {
         this.interfaceId = interfaceId;
         return this;
     }
 
+    /**
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+    */
+
     public PaymentBuilder amountPlanned(final com.commercetools.api.models.common.TypedMoney amountPlanned) {
         this.amountPlanned = amountPlanned;
         return this;
     }
+
+    /**
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+    */
 
     public PaymentBuilder amountPlanned(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -150,16 +194,28 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
+
     public PaymentBuilder transactions(final com.commercetools.api.models.payment.Transaction... transactions) {
         this.transactions = new ArrayList<>(Arrays.asList(transactions));
         return this;
     }
+
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
 
     public PaymentBuilder transactions(
             final java.util.List<com.commercetools.api.models.payment.Transaction> transactions) {
         this.transactions = transactions;
         return this;
     }
+
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
 
     public PaymentBuilder plusTransactions(final com.commercetools.api.models.payment.Transaction... transactions) {
         if (this.transactions == null) {
@@ -168,6 +224,10 @@ public class PaymentBuilder implements Builder<Payment> {
         this.transactions.addAll(Arrays.asList(transactions));
         return this;
     }
+
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
 
     public PaymentBuilder plusTransactions(
             Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
@@ -178,6 +238,10 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
+    /**
+    *  <p>A list of financial transactions of different TransactionTypes with different TransactionStates.</p>
+    */
+
     public PaymentBuilder withTransactions(
             Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder> builder) {
         this.transactions = new ArrayList<>();
@@ -185,17 +249,29 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
+    /**
+    *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+    */
+
     public PaymentBuilder interfaceInteractions(
             final com.commercetools.api.models.type.CustomFields... interfaceInteractions) {
         this.interfaceInteractions = new ArrayList<>(Arrays.asList(interfaceInteractions));
         return this;
     }
 
+    /**
+    *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+    */
+
     public PaymentBuilder interfaceInteractions(
             final java.util.List<com.commercetools.api.models.type.CustomFields> interfaceInteractions) {
         this.interfaceInteractions = interfaceInteractions;
         return this;
     }
+
+    /**
+    *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+    */
 
     public PaymentBuilder plusInterfaceInteractions(
             final com.commercetools.api.models.type.CustomFields... interfaceInteractions) {
@@ -206,6 +282,10 @@ public class PaymentBuilder implements Builder<Payment> {
         return this;
     }
 
+    /**
+    *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+    */
+
     public PaymentBuilder plusInterfaceInteractions(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         if (this.interfaceInteractions == null) {
@@ -215,6 +295,10 @@ public class PaymentBuilder implements Builder<Payment> {
                 .add(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+    */
 
     public PaymentBuilder withInterfaceInteractions(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -234,6 +318,10 @@ public class PaymentBuilder implements Builder<Payment> {
         this.custom = custom;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the Payment.</p>
+    */
 
     public PaymentBuilder key(@Nullable final String key) {
         this.key = key;

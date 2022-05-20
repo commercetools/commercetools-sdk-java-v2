@@ -53,14 +53,14 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
@@ -75,7 +75,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     }
 
     /**
-    *  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+    *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;

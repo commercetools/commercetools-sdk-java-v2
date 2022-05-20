@@ -15,6 +15,10 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder
     @Nullable
     private Long maxApplicationsPerCustomer;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public DiscountCodeSetMaxApplicationsPerCustomerActionBuilder maxApplicationsPerCustomer(
             @Nullable final Long maxApplicationsPerCustomer) {
         this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;

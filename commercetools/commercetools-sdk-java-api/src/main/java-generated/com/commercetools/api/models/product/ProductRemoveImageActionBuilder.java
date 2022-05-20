@@ -32,6 +32,10 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
         return this;
     }
 
+    /**
+    *  <p>The URL of the image.</p>
+    */
+
     public ProductRemoveImageActionBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;

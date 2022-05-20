@@ -15,6 +15,10 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
 
     private Boolean nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeInitial</code></p>
+    */
+
     public ChangeInitialChangeBuilder change(final String change) {
         this.change = change;
         return this;

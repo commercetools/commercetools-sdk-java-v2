@@ -20,6 +20,10 @@ public class SetLineItemDistributionChannelChangeBuilder implements Builder<SetL
 
     private com.commercetools.history.models.common.Reference previousValue;
 
+    /**
+    *  <p>Update action for <code>setLineItemDistributionChannel</code></p>
+    */
+
     public SetLineItemDistributionChannelChangeBuilder change(final String change) {
         this.change = change;
         return this;

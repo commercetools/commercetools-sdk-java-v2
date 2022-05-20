@@ -19,6 +19,10 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+    *  <p>Update action for <code>setLineItemCustomType</code></p>
+    */
+
     public SetShoppingListLineItemCustomTypeChangeBuilder change(final String change) {
         this.change = change;
         return this;

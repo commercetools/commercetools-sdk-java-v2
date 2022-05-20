@@ -16,6 +16,10 @@ public class SetDefaultBillingAddressChangeBuilder implements Builder<SetDefault
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+    *  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>
+    */
+
     public SetDefaultBillingAddressChangeBuilder change(final String change) {
         this.change = change;
         return this;

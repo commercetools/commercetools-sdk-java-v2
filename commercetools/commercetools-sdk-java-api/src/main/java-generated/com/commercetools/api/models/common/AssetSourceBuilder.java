@@ -23,15 +23,27 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     @Nullable
     private String contentType;
 
+    /**
+    *  <p>URI of the AssetSource.</p>
+    */
+
     public AssetSourceBuilder uri(final String uri) {
         this.uri = uri;
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier of the AssetSource.</p>
+    */
+
     public AssetSourceBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>Width and height of the AssetSource.</p>
+    */
 
     public AssetSourceBuilder dimensions(
             Function<com.commercetools.api.models.common.AssetDimensionsBuilder, com.commercetools.api.models.common.AssetDimensionsBuilder> builder) {
@@ -39,11 +51,19 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         return this;
     }
 
+    /**
+    *  <p>Width and height of the AssetSource.</p>
+    */
+
     public AssetSourceBuilder dimensions(
             @Nullable final com.commercetools.api.models.common.AssetDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
     }
+
+    /**
+    *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
+    */
 
     public AssetSourceBuilder contentType(@Nullable final String contentType) {
         this.contentType = contentType;

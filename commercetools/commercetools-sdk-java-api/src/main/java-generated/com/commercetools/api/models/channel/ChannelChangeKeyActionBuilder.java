@@ -11,6 +11,10 @@ public class ChannelChangeKeyActionBuilder implements Builder<ChannelChangeKeyAc
 
     private String key;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ChannelChangeKeyActionBuilder key(final String key) {
         this.key = key;
         return this;

@@ -19,11 +19,19 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
 
     private Boolean force;
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public OrderStateTransitionMessagePayloadBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public OrderStateTransitionMessagePayloadBuilder state(
             final com.commercetools.api.models.state.StateReference state) {
@@ -31,11 +39,19 @@ public class OrderStateTransitionMessagePayloadBuilder implements Builder<OrderS
         return this;
     }
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public OrderStateTransitionMessagePayloadBuilder oldState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public OrderStateTransitionMessagePayloadBuilder oldState(
             @Nullable final com.commercetools.api.models.state.StateReference oldState) {

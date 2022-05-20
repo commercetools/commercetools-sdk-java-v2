@@ -22,20 +22,36 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
 
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
+    /**
+    *  <p>A valid custom line item target predicate. The discount will be applied to custom line items that are matched by the predicate.</p>
+    */
+
     public MultiBuyCustomLineItemsTargetBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;
     }
+
+    /**
+    *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+    */
 
     public MultiBuyCustomLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {
         this.triggerQuantity = triggerQuantity;
         return this;
     }
 
+    /**
+    *  <p>Quantity of line items that are discounted per application of this discount.</p>
+    */
+
     public MultiBuyCustomLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {
         this.discountedQuantity = discountedQuantity;
         return this;
     }
+
+    /**
+    *  <p>Maximum number of applications of this discount.</p>
+    */
 
     public MultiBuyCustomLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;

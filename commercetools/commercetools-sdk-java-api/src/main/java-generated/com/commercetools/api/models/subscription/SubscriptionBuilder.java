@@ -39,6 +39,10 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     private com.commercetools.api.models.subscription.SubscriptionHealthStatus status;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Subscription.</p>
+    */
+
     public SubscriptionBuilder id(final String id) {
         this.id = id;
         return this;
@@ -59,11 +63,19 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+    */
+
     public SubscriptionBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+    */
 
     public SubscriptionBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -71,11 +83,19 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+    */
+
     public SubscriptionBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+    */
 
     public SubscriptionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -130,6 +150,10 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         this.destination = builder.apply(com.commercetools.api.models.subscription.DestinationBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the Subscription.</p>
+    */
 
     public SubscriptionBuilder key(@Nullable final String key) {
         this.key = key;

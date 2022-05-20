@@ -27,15 +27,27 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     private Boolean isPlatformClient;
 
+    /**
+    *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+    */
+
     public ModifiedByBuilder id(final String id) {
         this.id = id;
         return this;
     }
 
+    /**
+    *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+    */
+
     public ModifiedByBuilder type(final String type) {
         this.type = type;
         return this;
     }
+
+    /**
+    *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+    */
 
     public ModifiedByBuilder customer(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -43,20 +55,36 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
         return this;
     }
 
+    /**
+    *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+    */
+
     public ModifiedByBuilder customer(@Nullable final com.commercetools.history.models.common.Reference customer) {
         this.customer = customer;
         return this;
     }
+
+    /**
+    *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+    */
 
     public ModifiedByBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
 
+    /**
+    *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+    */
+
     public ModifiedByBuilder clientId(@Nullable final String clientId) {
         this.clientId = clientId;
         return this;
     }
+
+    /**
+    *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+    */
 
     public ModifiedByBuilder isPlatformClient(final Boolean isPlatformClient) {
         this.isPlatformClient = isPlatformClient;

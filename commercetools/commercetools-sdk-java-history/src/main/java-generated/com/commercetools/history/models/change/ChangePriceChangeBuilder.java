@@ -20,6 +20,10 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    /**
+    *  <p>Update action for changing prices</p>
+    */
+
     public ChangePriceChangeBuilder change(final String change) {
         this.change = change;
         return this;

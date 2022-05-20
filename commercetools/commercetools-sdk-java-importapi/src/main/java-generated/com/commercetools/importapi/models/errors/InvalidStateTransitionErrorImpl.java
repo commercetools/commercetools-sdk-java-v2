@@ -48,14 +48,14 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-    *  <p>Every <a href="/import-operation">Import Operation</a> is assigned with one of the following states.</p>
+    *  <p>Every Import Operation is assigned with one of the following states.</p>
     */
     public com.commercetools.importapi.models.common.ProcessingState getCurrentState() {
         return this.currentState;
     }
 
     /**
-    *  <p>Every <a href="/import-operation">Import Operation</a> is assigned with one of the following states.</p>
+    *  <p>Every Import Operation is assigned with one of the following states.</p>
     */
     public com.commercetools.importapi.models.common.ProcessingState getNewState() {
         return this.newState;

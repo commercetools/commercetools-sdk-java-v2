@@ -17,16 +17,28 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
     @Nullable
     private com.commercetools.api.models.discount_code.DiscountCode obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced DiscountCode.</p>
+    */
+
     public DiscountCodeReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+    */
 
     public DiscountCodeReferenceBuilder obj(
             Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCodeBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+    */
 
     public DiscountCodeReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.discount_code.DiscountCode obj) {

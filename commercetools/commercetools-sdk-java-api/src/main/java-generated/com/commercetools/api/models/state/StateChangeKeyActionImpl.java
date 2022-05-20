@@ -36,8 +36,7 @@ public class StateChangeKeyActionImpl implements StateChangeKeyAction, ModelBase
     }
 
     /**
-    *  <p>New value to set.
-    *  Must not be empty.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     public String getKey() {
         return this.key;

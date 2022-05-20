@@ -23,6 +23,10 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
 
     private java.lang.Object previousValue;
 
+    /**
+    *  <p>Update action for <code>setLineItemCustomField</code></p>
+    */
+
     public SetShoppingListLineItemCustomFieldChangeBuilder change(final String change) {
         this.change = change;
         return this;

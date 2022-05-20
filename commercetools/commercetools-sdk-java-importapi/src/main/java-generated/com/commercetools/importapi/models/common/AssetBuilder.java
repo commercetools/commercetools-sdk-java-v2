@@ -27,6 +27,10 @@ public class AssetBuilder implements Builder<Asset> {
     @Nullable
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+    *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
+    */
+
     public AssetBuilder key(final String key) {
         this.key = key;
         return this;
@@ -66,22 +70,58 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
+
     public AssetBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
+
     public AssetBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
 
     public AssetBuilder description(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
 
     public AssetBuilder description(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString description) {
@@ -107,11 +147,19 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+    *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+    */
+
     public AssetBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+    */
 
     public AssetBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;

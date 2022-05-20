@@ -21,7 +21,7 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
     String SET_CUSTOMER_GROUP = "setCustomerGroup";
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>ResourceIdentifier to a CustomerGroup.</p>
     */
     @Valid
     @JsonProperty("customerGroup")

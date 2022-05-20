@@ -17,6 +17,10 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
 
     private String newPassword;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Customer.</p>
+    */
+
     public CustomerChangePasswordBuilder id(final String id) {
         this.id = id;
         return this;

@@ -12,6 +12,10 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
 
     private com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference;
 
+    /**
+    *  <p>References a product type by key.</p>
+    */
+
     public AttributeNestedTypeBuilder typeReference(
             Function<com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder> builder) {
         this.typeReference = builder
@@ -19,6 +23,10 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
                 .build();
         return this;
     }
+
+    /**
+    *  <p>References a product type by key.</p>
+    */
 
     public AttributeNestedTypeBuilder typeReference(
             final com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference) {

@@ -18,8 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReviewRatingStatistics {
 
     /**
-    *  <p>Average rating of one target
-    *  This number is rounded with 5 decimals.</p>
+    *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
     */
     @NotNull
     @JsonProperty("averageRating")
@@ -47,9 +46,7 @@ public interface ReviewRatingStatistics {
     public Integer getCount();
 
     /**
-    *  <p>The full distribution of the ratings.
-    *  The keys are the different ratings and the values are the count of reviews having this rating.
-    *  Only the used ratings appear in this object.</p>
+    *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
     */
     @NotNull
     @Valid

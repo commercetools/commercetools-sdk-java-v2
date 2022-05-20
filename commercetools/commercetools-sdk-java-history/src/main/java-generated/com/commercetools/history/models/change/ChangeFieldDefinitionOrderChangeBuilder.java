@@ -16,6 +16,10 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
 
     private java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> nextValue;
 
+    /**
+    *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+    */
+
     public ChangeFieldDefinitionOrderChangeBuilder change(final String change) {
         this.change = change;
         return this;

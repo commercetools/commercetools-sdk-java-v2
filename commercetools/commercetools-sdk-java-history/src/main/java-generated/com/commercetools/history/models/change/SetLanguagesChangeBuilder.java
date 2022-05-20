@@ -15,6 +15,10 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
 
     private java.util.List<String> nextValue;
 
+    /**
+    *  <p>Update action for <code>setLanguages</code> on stores</p>
+    */
+
     public SetLanguagesChangeBuilder change(final String change) {
         this.change = change;
         return this;

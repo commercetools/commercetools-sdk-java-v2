@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>It is used to calculate the <a href="/../api/projects/carts#taxedprice">taxPortions</a> field in a Cart or Order.</p>
+*  <p>It is used to calculate the taxPortions field in a Cart or Order.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = SubRateImpl.class)

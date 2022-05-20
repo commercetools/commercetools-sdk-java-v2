@@ -15,6 +15,10 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
 
     private com.commercetools.history.models.common.OrderState previousValue;
 
+    /**
+    *  <p>Update action for <code>changeOrderState</code></p>
+    */
+
     public ChangeOrderStateChangeBuilder change(final String change) {
         this.change = change;
         return this;

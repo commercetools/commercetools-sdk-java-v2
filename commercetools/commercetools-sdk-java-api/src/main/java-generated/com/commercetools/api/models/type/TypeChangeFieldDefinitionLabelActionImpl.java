@@ -40,15 +40,14 @@ public class TypeChangeFieldDefinitionLabelActionImpl implements TypeChangeField
     }
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</p>
+    *  <p><code>name</code> of the FieldDefinition to update.</p>
     */
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-    *  <p>New value to set.
-    *  Must not be empty.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;

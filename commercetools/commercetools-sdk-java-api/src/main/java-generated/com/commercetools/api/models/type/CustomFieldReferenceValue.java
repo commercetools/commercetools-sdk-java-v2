@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Defines which resource type a <a href="ctp:api:type:CustomFieldReferenceType">CustomFieldReferenceType</a> can reference.</p>
+*  <p>Defines which resource type a CustomFieldReferenceType can reference.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface CustomFieldReferenceValue {

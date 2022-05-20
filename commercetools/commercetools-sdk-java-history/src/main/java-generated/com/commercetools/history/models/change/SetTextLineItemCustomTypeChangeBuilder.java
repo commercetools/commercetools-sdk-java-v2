@@ -18,6 +18,10 @@ public class SetTextLineItemCustomTypeChangeBuilder implements Builder<SetTextLi
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+    *  <p>Update action for <code>setTextLineItemCustomType</code></p>
+    */
+
     public SetTextLineItemCustomTypeChangeBuilder change(final String change) {
         this.change = change;
         return this;

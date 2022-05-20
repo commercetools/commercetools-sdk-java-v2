@@ -33,7 +33,7 @@ public interface PriceDraftImport {
     public TypedMoney getValue();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
     */
 
     @JsonProperty("country")

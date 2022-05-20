@@ -25,6 +25,10 @@ public class MissingPricesBuilder implements Builder<MissingPrices> {
         return this;
     }
 
+    /**
+    *  <p>Id of the <code>ProductVariant</code>.</p>
+    */
+
     public MissingPricesBuilder variantId(final Long variantId) {
         this.variantId = variantId;
         return this;

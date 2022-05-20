@@ -19,15 +19,14 @@ public interface ChannelSetAddressCustomFieldAction extends ChannelUpdateAction 
     String SET_ADDRESS_CUSTOM_FIELD = "setAddressCustomField";
 
     /**
-    *  <p>Name of the <a href="/../api/projects/custom-fields">Custom Field</a>.</p>
+    *  <p>Name of the Custom Field.</p>
     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>.
-    *  If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Trying to remove a field that does not exist will fail with an <a href="/../api/errors#general-400-invalid-operation">InvalidOperation</a> error.</p>
+    *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
     */
 
     @JsonProperty("value")

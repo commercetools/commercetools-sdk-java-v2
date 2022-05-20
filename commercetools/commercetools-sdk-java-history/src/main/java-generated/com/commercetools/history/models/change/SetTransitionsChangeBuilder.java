@@ -16,6 +16,10 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setTransitions</code></p>
+    */
+
     public SetTransitionsChangeBuilder change(final String change) {
         this.change = change;
         return this;

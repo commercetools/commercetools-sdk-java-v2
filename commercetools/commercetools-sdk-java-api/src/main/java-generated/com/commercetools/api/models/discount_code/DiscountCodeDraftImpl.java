@@ -85,8 +85,7 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the DiscountCode that can be <a href="/../api/projects/carts#add-discountcode">added to the Cart</a> to apply the related <a href="ctp:api:type:CartDiscount">CartDiscounts</a>.
-    *  It cannot be modified after the DiscountCode is created.</p>
+    *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
     */
     public String getCode() {
         return this.code;

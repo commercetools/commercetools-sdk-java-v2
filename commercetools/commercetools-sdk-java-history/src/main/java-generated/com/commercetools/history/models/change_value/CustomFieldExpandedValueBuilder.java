@@ -16,6 +16,10 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
 
     private com.commercetools.history.models.common.LocalizedString label;
 
+    /**
+    *  <p>Name of a custom field.</p>
+    */
+
     public CustomFieldExpandedValueBuilder name(final String name) {
         this.name = name;
         return this;

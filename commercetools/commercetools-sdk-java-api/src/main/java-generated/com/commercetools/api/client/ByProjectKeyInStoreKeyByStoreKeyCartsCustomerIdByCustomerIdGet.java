@@ -18,10 +18,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
 *  <p>Retrieves the active cart of the customer that has been modified most recently in a specific Store.</p>
-*  <p>If the cart exists in the commercetools project but does not have the store field, or the store field
-*  references a different store, this method returns a ResourceNotFound error.</p>
-*  <p>The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date,
-*  send an Update request with the Recalculate update action instead.</p>
+*  <p>If the cart exists in the commercetools project but does not have the store field, or the store field references a different store, this method returns a ResourceNotFound error.</p>
+*  <p>The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet extends

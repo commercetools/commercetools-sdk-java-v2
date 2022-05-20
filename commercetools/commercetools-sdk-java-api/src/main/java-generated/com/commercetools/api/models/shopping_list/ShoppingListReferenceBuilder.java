@@ -17,16 +17,28 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
     @Nullable
     private com.commercetools.api.models.shopping_list.ShoppingList obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced ShoppingList.</p>
+    */
+
     public ShoppingListReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+    */
 
     public ShoppingListReferenceBuilder obj(
             Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingListBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+    */
 
     public ShoppingListReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.shopping_list.ShoppingList obj) {

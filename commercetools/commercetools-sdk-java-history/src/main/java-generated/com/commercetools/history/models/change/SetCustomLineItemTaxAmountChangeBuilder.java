@@ -22,6 +22,10 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
 
     private com.commercetools.history.models.common.TaxRate previousValue;
 
+    /**
+    *  <p>Update action for <code>setCustomLineItemTaxAmount</code></p>
+    */
+
     public SetCustomLineItemTaxAmountChangeBuilder change(final String change) {
         this.change = change;
         return this;
@@ -51,11 +55,19 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
         return this;
     }
 
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
+
     public SetCustomLineItemTaxAmountChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
 
     public SetCustomLineItemTaxAmountChangeBuilder nextValue(
             final com.commercetools.history.models.common.TaxRate nextValue) {
@@ -63,11 +75,19 @@ public class SetCustomLineItemTaxAmountChangeBuilder implements Builder<SetCusto
         return this;
     }
 
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
+
     public SetCustomLineItemTaxAmountChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+    */
 
     public SetCustomLineItemTaxAmountChangeBuilder previousValue(
             final com.commercetools.history.models.common.TaxRate previousValue) {

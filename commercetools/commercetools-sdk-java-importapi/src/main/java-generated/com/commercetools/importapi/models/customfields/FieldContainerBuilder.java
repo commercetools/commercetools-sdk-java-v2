@@ -11,11 +11,19 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
 
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values = new HashMap<>();
 
+    /**
+    *  <p>Mapping from the custom field name to the actual value.</p>
+    */
+
     public FieldContainerBuilder values(
             final Map<String, com.commercetools.importapi.models.customfields.CustomField> values) {
         this.values = values;
         return this;
     }
+
+    /**
+    *  <p>Mapping from the custom field name to the actual value.</p>
+    */
 
     public FieldContainerBuilder addValue(final String key,
             final com.commercetools.importapi.models.customfields.CustomField value) {

@@ -15,6 +15,10 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
 
     private com.commercetools.history.models.common.TaxCalculationMode nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
+    */
+
     public ChangeTaxCalculationModeChangeBuilder change(final String change) {
         this.change = change;
         return this;

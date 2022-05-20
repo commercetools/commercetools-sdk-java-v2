@@ -14,6 +14,10 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
 
     private com.commercetools.history.models.common.DiscountCodeInfo nextValue;
 
+    /**
+    *  <p>Update action for <code>addDiscountCode</code></p>
+    */
+
     public AddDiscountCodeChangeBuilder change(final String change) {
         this.change = change;
         return this;

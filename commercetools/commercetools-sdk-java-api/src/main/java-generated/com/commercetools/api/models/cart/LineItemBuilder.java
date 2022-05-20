@@ -66,6 +66,10 @@ public class LineItemBuilder implements Builder<LineItem> {
     @Nullable
     private java.time.ZonedDateTime lastModifiedAt;
 
+    /**
+    *  <p>Platform-generated unique identifier of the LineItem.</p>
+    */
+
     public LineItemBuilder id(final String id) {
         this.id = id;
         return this;
@@ -76,10 +80,18 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier of the Product. Only present on Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item is created or updated on the Cart. On Order resources this field is only present when the <code>key</code> is available on the specific Product at the time the Order is created from the Cart. This field is in general not present on Carts that had no updates until 3 December 2021 and on Orders created before this date.</p>
+    */
+
     public LineItemBuilder productKey(@Nullable final String productKey) {
         this.productKey = productKey;
         return this;
     }
+
+    /**
+    *  <p>The product name.</p>
+    */
 
     public LineItemBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -87,16 +99,28 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+    *  <p>The product name.</p>
+    */
+
     public LineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>The slug of a product is inserted on the fly. It is always up-to-date and can therefore be used to link to the product detail page of the product. It is empty if the product has been deleted. The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>
+    */
 
     public LineItemBuilder productSlug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.productSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The slug of a product is inserted on the fly. It is always up-to-date and can therefore be used to link to the product detail page of the product. It is empty if the product has been deleted. The slug is also empty if the cart or order is retrieved via Reference Expansion or is a snapshot in a Message.</p>
+    */
 
     public LineItemBuilder productSlug(
             @Nullable final com.commercetools.api.models.common.LocalizedString productSlug) {
@@ -117,16 +141,28 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+    *  <p>The variant data is saved when the variant is added to the cart, and not updated automatically. It can manually be updated with the Recalculate update action.</p>
+    */
+
     public LineItemBuilder variant(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         this.variant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>The variant data is saved when the variant is added to the cart, and not updated automatically. It can manually be updated with the Recalculate update action.</p>
+    */
+
     public LineItemBuilder variant(final com.commercetools.api.models.product.ProductVariant variant) {
         this.variant = variant;
         return this;
     }
+
+    /**
+    *  <p>The price of a line item is selected from the product variant according to the Product's priceMode value. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+    */
 
     public LineItemBuilder price(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
@@ -134,10 +170,18 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+    *  <p>The price of a line item is selected from the product variant according to the Product's priceMode value. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+    */
+
     public LineItemBuilder price(final com.commercetools.api.models.common.Price price) {
         this.price = price;
         return this;
     }
+
+    /**
+    *  <p>Set once the <code>taxRate</code> is set.</p>
+    */
 
     public LineItemBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
@@ -145,15 +189,27 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+    *  <p>Set once the <code>taxRate</code> is set.</p>
+    */
+
     public LineItemBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
         return this;
     }
 
+    /**
+    *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+    */
+
     public LineItemBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
+
+    /**
+    *  <p>The total price of this line item. If the line item is discounted, then the <code>totalPrice</code> is the DiscountedLineItemPriceForQuantity multiplied by <code>quantity</code>. Otherwise the total price is the product price multiplied by the <code>quantity</code>. <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property.</p>
+    */
 
     public LineItemBuilder totalPrice(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -161,10 +217,18 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+    */
+
     public LineItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
+
+    /**
+    *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+    */
 
     public LineItemBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
@@ -205,16 +269,28 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+    *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+    */
+
     public LineItemBuilder taxRate(
             Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
+    */
+
     public LineItemBuilder taxRate(@Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
         return this;
     }
+
+    /**
+    *  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>
+    */
 
     public LineItemBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -222,11 +298,19 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+    *  <p>The supply channel identifies the inventory entries that should be reserved. The channel has the role InventorySupply.</p>
+    */
+
     public LineItemBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+
+    /**
+    *  <p>The distribution channel is used to select a ProductPrice. The channel has the role ProductDistribution.</p>
+    */
 
     public LineItemBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -234,6 +318,10 @@ public class LineItemBuilder implements Builder<LineItem> {
                 .build();
         return this;
     }
+
+    /**
+    *  <p>The distribution channel is used to select a ProductPrice. The channel has the role ProductDistribution.</p>
+    */
 
     public LineItemBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference distributionChannel) {
@@ -301,17 +389,29 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+    *  <p>Container for line item specific address(es).</p>
+    */
+
     public LineItemBuilder shippingDetails(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsBuilder, com.commercetools.api.models.cart.ItemShippingDetailsBuilder> builder) {
         this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Container for line item specific address(es).</p>
+    */
+
     public LineItemBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
     }
+
+    /**
+    *  <p>The date when the LineItem was last modified by one of the following actions setLineItemShippingDetails, addLineItem, removeLineItem, or changeLineItemQuantity. Optional only for backwards compatible reasons. When the LineItem is created lastModifiedAt is set to addedAt.</p>
+    */
 
     public LineItemBuilder lastModifiedAt(@Nullable final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;

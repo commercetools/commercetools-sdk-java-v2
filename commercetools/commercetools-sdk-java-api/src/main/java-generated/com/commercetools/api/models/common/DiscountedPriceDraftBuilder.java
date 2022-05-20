@@ -14,16 +14,28 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
 
     private com.commercetools.api.models.product_discount.ProductDiscountReference discount;
 
+    /**
+    *  <p>Sets the money value for the discounted price.</p>
+    */
+
     public DiscountedPriceDraftBuilder value(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Sets the money value for the discounted price.</p>
+    */
+
     public DiscountedPriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
     }
+
+    /**
+    *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+    */
 
     public DiscountedPriceDraftBuilder discount(
             Function<com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder, com.commercetools.api.models.product_discount.ProductDiscountReferenceBuilder> builder) {
@@ -32,6 +44,10 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+    */
 
     public DiscountedPriceDraftBuilder discount(
             final com.commercetools.api.models.product_discount.ProductDiscountReference discount) {

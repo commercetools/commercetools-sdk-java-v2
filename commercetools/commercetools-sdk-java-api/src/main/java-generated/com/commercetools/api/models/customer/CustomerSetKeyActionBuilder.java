@@ -14,6 +14,10 @@ public class CustomerSetKeyActionBuilder implements Builder<CustomerSetKeyAction
     @Nullable
     private String key;
 
+    /**
+    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+
     public CustomerSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

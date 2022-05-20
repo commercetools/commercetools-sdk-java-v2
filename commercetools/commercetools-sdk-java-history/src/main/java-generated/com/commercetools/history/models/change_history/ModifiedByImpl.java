@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Information about the user or the API client who performed the change. This is a variant of
-*  <a href="/types#lastmodifiedby">LastModifiedBy</a>.</p>
+*  <p>Information about the user or the API client who performed the change. This is a variant of LastModifiedBy.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ModifiedByImpl implements ModifiedBy, ModelBase {
@@ -50,50 +49,42 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-    *  <p><a href="/general-concepts#identifier">ID</a> of the Merchant Center user who made the change.
-    *  Present only if the change was made in the Merchant Center.</p>
+    *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Indicates whether the change was made by a user or the API client with or without an
-    *  <a href="/client-logging#external-user-ids">External user ID</a>.</p>
+    *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
     */
     public String getType() {
         return this.type;
     }
 
     /**
-    *  <p><a href="/types#reference">Reference</a> to the
-    *  <a href="/projects/customers#customer">Customer</a> who made the change. Present only if
-    *  the change was made using a token from the <a href="/authorization#password-flow">Password
-    *  Flow</a>.</p>
+    *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
     */
     public com.commercetools.history.models.common.Reference getCustomer() {
         return this.customer;
     }
 
     /**
-    *  <p>Present only if the change was made using a token from an <a href="/authorization#tokens-for-anonymous-sessions">Anonymous
-    *  Session</a>.</p>
+    *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
     */
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
     /**
-    *  <p><a href="/general-concepts#identifier">ID</a> of the <a href="/projects/api-clients#apiclient">API
-    *  Client</a> that made the change. Present only if
-    *  the change was made using an API Client.</p>
+    *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
     */
     public String getClientId() {
         return this.clientId;
     }
 
     /**
-    *  <p><code>true</code> if the change was made via Merchant Center or <a href="https://impex.europe-west1.gcp.commercetools.com/">ImpEx</a>.</p>
+    *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
     */
     public Boolean getIsPlatformClient() {
         return this.isPlatformClient;

@@ -14,8 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Adds a value to an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a>.
-*  This update action can be used to update an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition and a <a href="ctp:api:type:CustomFieldSetType">SetType</a> FieldDefinition of <a href="ctp:api:type:CustomFieldEnumType">EnumType</a>.</p>
+*  <p>Adds a value to an EnumType. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeAddEnumValueActionImpl.class)
@@ -24,7 +23,7 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
     String ADD_ENUM_VALUE = "addEnumValue";
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
+    *  <p><code>name</code> of the Field Definition to update.</p>
     */
     @NotNull
     @JsonProperty("fieldName")

@@ -15,6 +15,10 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
+
     public CustomerGroupSetMessagePayloadBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
         this.customerGroup = builder
@@ -22,6 +26,10 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
 
     public CustomerGroupSetMessagePayloadBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {

@@ -123,16 +123,14 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
     }
 
     /**
-    *  <p>The index of the address in the addresses array.
-    *  The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+    *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
     */
     public Long getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
 
     /**
-    *  <p>The index of the address in the addresses array.
-    *  The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+    *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
     */
     public Long getDefaultBillingAddress() {
         return this.defaultBillingAddress;

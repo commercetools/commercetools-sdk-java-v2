@@ -14,20 +14,36 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
 
     private java.util.List<String> keys;
 
+    /**
+    *  <p><code>name</code> of the Field Definition to update.</p>
+    */
+
     public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+    *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+    */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final String... keys) {
         this.keys = new ArrayList<>(Arrays.asList(keys));
         return this;
     }
 
+    /**
+    *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+    */
+
     public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final java.util.List<String> keys) {
         this.keys = keys;
         return this;
     }
+
+    /**
+    *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+    */
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder plusKeys(final String... keys) {
         if (this.keys == null) {

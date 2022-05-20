@@ -15,18 +15,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-*  <pre><code class="language-json">{
-*    &quot;en&quot;: [
-*      { &quot;text&quot;: &quot;Multi tool&quot; },
-*      { &quot;text&quot;: &quot;Swiss Army Knife&quot;, &quot;suggestTokenizer&quot;: { &quot;type&quot;: &quot;whitespace&quot; } }
+*  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+*  <pre><code>{
+*    "en": [
+*      { "text": "Multi tool" },
+*      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
 *    ],
-*    &quot;de&quot;: [
+*    "de": [
 *      {
-*        &quot;text&quot;: &quot;Schweizer Messer&quot;,
-*        &quot;suggestTokenizer&quot;: {
-*          &quot;type&quot;: &quot;custom&quot;,
-*          &quot;inputs&quot;: [&quot;schweizer messer&quot;, &quot;offiziersmesser&quot;, &quot;sackmesser&quot;]
+*        "text": "Schweizer Messer",
+*        "suggestTokenizer": {
+*          "type": "custom",
+*          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
 *        }
 *      }
 *    ]

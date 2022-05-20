@@ -19,11 +19,19 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
         return this;
     }
 
+    /**
+    *  <p>The attribute in conflict.</p>
+    */
+
     public DuplicateAttributeValueErrorBuilder attribute(
             final com.commercetools.importapi.models.productvariants.Attribute attribute) {
         this.attribute = attribute;
         return this;
     }
+
+    /**
+    *  <p>The attribute in conflict.</p>
+    */
 
     public DuplicateAttributeValueErrorBuilder attribute(
             Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {

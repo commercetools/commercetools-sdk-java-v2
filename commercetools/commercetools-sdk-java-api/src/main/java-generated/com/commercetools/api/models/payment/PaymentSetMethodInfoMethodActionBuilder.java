@@ -14,6 +14,10 @@ public class PaymentSetMethodInfoMethodActionBuilder implements Builder<PaymentS
     @Nullable
     private String method;
 
+    /**
+    *  <p>If not provided, the method is unset.</p>
+    */
+
     public PaymentSetMethodInfoMethodActionBuilder method(@Nullable final String method) {
         this.method = method;
         return this;

@@ -58,12 +58,20 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+    */
+
     public ProductDraftImportBuilder productType(
             Function<com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder> builder) {
         this.productType = builder.apply(com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+    */
 
     public ProductDraftImportBuilder productType(
             final com.commercetools.importapi.models.common.ProductTypeKeyReference productType) {
@@ -82,16 +90,28 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+    */
+
     public ProductDraftImportBuilder slug(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+    */
+
     public ProductDraftImportBuilder slug(final com.commercetools.importapi.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Product.description</code>.</p>
+    */
 
     public ProductDraftImportBuilder description(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -99,11 +119,19 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Product.description</code>.</p>
+    */
+
     public ProductDraftImportBuilder description(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+    *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+    */
 
     public ProductDraftImportBuilder categories(
             @Nullable final com.commercetools.importapi.models.common.CategoryKeyReference... categories) {
@@ -111,11 +139,19 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+    */
+
     public ProductDraftImportBuilder categories(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
         this.categories = categories;
         return this;
     }
+
+    /**
+    *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+    */
 
     public ProductDraftImportBuilder plusCategories(
             @Nullable final com.commercetools.importapi.models.common.CategoryKeyReference... categories) {
@@ -126,6 +162,10 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+    */
+
     public ProductDraftImportBuilder plusCategories(
             Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
         if (this.categories == null) {
@@ -136,6 +176,10 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+    */
+
     public ProductDraftImportBuilder withCategories(
             Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
         this.categories = new ArrayList<>();
@@ -144,17 +188,44 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
+
     public ProductDraftImportBuilder metaTitle(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.metaTitle = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
+
     public ProductDraftImportBuilder metaTitle(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
+
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
 
     public ProductDraftImportBuilder metaDescription(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -163,11 +234,29 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
+
     public ProductDraftImportBuilder metaDescription(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
+
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
 
     public ProductDraftImportBuilder metaKeywords(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -176,11 +265,24 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
+    *  }
+    *  </code></pre>
+    */
+
     public ProductDraftImportBuilder metaKeywords(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
+
+    /**
+    *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+    */
 
     public ProductDraftImportBuilder masterVariant(
             Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder> builder) {
@@ -190,11 +292,19 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+    */
+
     public ProductDraftImportBuilder masterVariant(
             @Nullable final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport masterVariant) {
         this.masterVariant = masterVariant;
         return this;
     }
+
+    /**
+    *  <p>An array of related Product Variants.</p>
+    */
 
     public ProductDraftImportBuilder variants(
             @Nullable final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport... variants) {
@@ -202,11 +312,19 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>An array of related Product Variants.</p>
+    */
+
     public ProductDraftImportBuilder variants(
             @Nullable final java.util.List<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> variants) {
         this.variants = variants;
         return this;
     }
+
+    /**
+    *  <p>An array of related Product Variants.</p>
+    */
 
     public ProductDraftImportBuilder plusVariants(
             @Nullable final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport... variants) {
@@ -217,6 +335,10 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>An array of related Product Variants.</p>
+    */
+
     public ProductDraftImportBuilder plusVariants(
             Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder> builder) {
         if (this.variants == null) {
@@ -228,6 +350,10 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>An array of related Product Variants.</p>
+    */
+
     public ProductDraftImportBuilder withVariants(
             Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder> builder) {
         this.variants = new ArrayList<>();
@@ -237,6 +363,10 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+    */
+
     public ProductDraftImportBuilder taxCategory(
             Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder> builder) {
         this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of())
@@ -244,11 +374,35 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+    */
+
     public ProductDraftImportBuilder taxCategory(
             @Nullable final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
+
+    /**
+    *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+    *  <pre><code>{
+    *    "en": [
+    *      { "text": "Multi tool" },
+    *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
+    *    ],
+    *    "de": [
+    *      {
+    *        "text": "Schweizer Messer",
+    *        "suggestTokenizer": {
+    *          "type": "custom",
+    *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
+    *        }
+    *      }
+    *    ]
+    *  }
+    *  </code></pre>
+    */
 
     public ProductDraftImportBuilder searchKeywords(
             Function<com.commercetools.importapi.models.products.SearchKeywordsBuilder, com.commercetools.importapi.models.products.SearchKeywordsBuilder> builder) {
@@ -257,11 +411,35 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+    *  <pre><code>{
+    *    "en": [
+    *      { "text": "Multi tool" },
+    *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
+    *    ],
+    *    "de": [
+    *      {
+    *        "text": "Schweizer Messer",
+    *        "suggestTokenizer": {
+    *          "type": "custom",
+    *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
+    *        }
+    *      }
+    *    ]
+    *  }
+    *  </code></pre>
+    */
+
     public ProductDraftImportBuilder searchKeywords(
             @Nullable final com.commercetools.importapi.models.products.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
         return this;
     }
+
+    /**
+    *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+    */
 
     public ProductDraftImportBuilder state(
             Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
@@ -269,11 +447,19 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         return this;
     }
 
+    /**
+    *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+    */
+
     public ProductDraftImportBuilder state(
             @Nullable final com.commercetools.importapi.models.common.StateKeyReference state) {
         this.state = state;
         return this;
     }
+
+    /**
+    *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+    */
 
     public ProductDraftImportBuilder publish(@Nullable final Boolean publish) {
         this.publish = publish;

@@ -19,8 +19,7 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
     String CHANGE_IS_ACTIVE = "changeIsActive";
 
     /**
-    *  <p>New value to set.
-    *  If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
+    *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
     */
     @NotNull
     @JsonProperty("isActive")

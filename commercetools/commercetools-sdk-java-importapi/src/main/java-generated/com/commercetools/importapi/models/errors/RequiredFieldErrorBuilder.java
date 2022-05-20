@@ -18,6 +18,10 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
         return this;
     }
 
+    /**
+    *  <p>The name of the field.</p>
+    */
+
     public RequiredFieldErrorBuilder field(final String field) {
         this.field = field;
         return this;

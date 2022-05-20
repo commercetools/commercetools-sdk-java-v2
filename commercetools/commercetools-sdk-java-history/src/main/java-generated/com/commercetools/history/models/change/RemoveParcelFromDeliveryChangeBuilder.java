@@ -16,6 +16,10 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     private com.commercetools.history.models.common.Parcel previousValue;
 
+    /**
+    *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+    */
+
     public RemoveParcelFromDeliveryChangeBuilder change(final String change) {
         this.change = change;
         return this;

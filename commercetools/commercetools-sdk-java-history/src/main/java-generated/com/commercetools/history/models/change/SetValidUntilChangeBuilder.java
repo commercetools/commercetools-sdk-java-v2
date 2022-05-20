@@ -15,6 +15,10 @@ public class SetValidUntilChangeBuilder implements Builder<SetValidUntilChange> 
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setValidUntil</code></p>
+    */
+
     public SetValidUntilChangeBuilder change(final String change) {
         this.change = change;
         return this;

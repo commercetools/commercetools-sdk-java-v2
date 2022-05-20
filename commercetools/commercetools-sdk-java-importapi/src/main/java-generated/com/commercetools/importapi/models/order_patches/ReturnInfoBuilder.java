@@ -58,10 +58,18 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+    */
+
     public ReturnInfoBuilder returnTrackingId(@Nullable final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+    */
 
     public ReturnInfoBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {
         this.returnDate = returnDate;

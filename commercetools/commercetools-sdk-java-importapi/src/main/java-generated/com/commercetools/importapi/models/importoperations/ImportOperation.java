@@ -32,7 +32,7 @@ public interface ImportOperation {
     public Long getVersion();
 
     /**
-    *  <p>The key of the <a href="/import-container#importcontainer">importContainer</a>.</p>
+    *  <p>The key of the importContainer.</p>
     */
     @NotNull
     @JsonProperty("importContainerKey")
@@ -67,7 +67,7 @@ public interface ImportOperation {
     public Long getResourceVersion();
 
     /**
-    *  <p>Contains an error if the import of the resource was not successful. See <a href="/error">Errors</a>.</p>
+    *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
     */
     @Valid
     @JsonProperty("errors")

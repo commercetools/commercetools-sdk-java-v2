@@ -20,6 +20,10 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+    *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+    */
+
     public SetCustomLineItemMoneyChangeBuilder change(final String change) {
         this.change = change;
         return this;

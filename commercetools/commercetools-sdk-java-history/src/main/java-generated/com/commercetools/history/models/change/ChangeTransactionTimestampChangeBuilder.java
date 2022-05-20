@@ -18,6 +18,10 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
 
     private String previousValue;
 
+    /**
+    *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
+    */
+
     public ChangeTransactionTimestampChangeBuilder change(final String change) {
         this.change = change;
         return this;

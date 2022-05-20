@@ -14,11 +14,19 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
 
     private Boolean staged;
 
+    /**
+    *  <p>Reference to a Category.</p>
+    */
+
     public ProductAddedToCategoryMessagePayloadBuilder category(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Category.</p>
+    */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
             final com.commercetools.api.models.category.CategoryReference category) {

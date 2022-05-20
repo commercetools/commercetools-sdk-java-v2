@@ -44,11 +44,19 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+    */
+
     public ShoppingListLineItemBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+    */
 
     public ShoppingListLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
@@ -60,16 +68,28 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+    *  <p>Platform-generated unique identifier of the ShoppingListLineItem.</p>
+    */
+
     public ShoppingListLineItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public ShoppingListLineItemBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public ShoppingListLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
@@ -81,11 +101,19 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
+
     public ShoppingListLineItemBuilder productSlug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.productSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public ShoppingListLineItemBuilder productSlug(
             @Nullable final com.commercetools.api.models.common.LocalizedString productSlug) {
@@ -93,12 +121,20 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+    *  <p>Reference to a ProductType.</p>
+    */
+
     public ShoppingListLineItemBuilder productType(
             Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
         this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a ProductType.</p>
+    */
 
     public ShoppingListLineItemBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeReference productType) {

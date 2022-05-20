@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Changes the <code>inputHint</code> of <a href="ctp:api:type:CustomFieldStringType">CustomFieldStringType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a>, a <a href="ctp:api:type:CustomFieldLocalizedStringType">CustomFieldLocalizedStringType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a>, and <a href="ctp:api:type:CustomFieldSetType">CustomFieldSetType</a> <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> of these string-based FieldTypes.</p>
+*  <p>Changes the <code>inputHint</code> of CustomFieldStringType FieldDefinition, a CustomFieldLocalizedStringType FieldDefinition, and CustomFieldSetType FieldDefinition of these string-based FieldTypes.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TypeChangeInputHintActionImpl.class)
@@ -22,15 +22,14 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
     String CHANGE_INPUT_HINT = "changeInputHint";
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
+    *  <p><code>name</code> of the Field Definition to update.</p>
     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-    *  <p>New value to set.
-    *  Must not be empty.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     @NotNull
     @JsonProperty("inputHint")

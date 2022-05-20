@@ -17,16 +17,28 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
     @Nullable
     private com.commercetools.api.models.custom_object.CustomObject obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced CustomObject.</p>
+    */
+
     public CustomObjectReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+    */
 
     public CustomObjectReferenceBuilder obj(
             Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObjectBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+    */
 
     public CustomObjectReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.custom_object.CustomObject obj) {

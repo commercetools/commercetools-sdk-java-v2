@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Changes the <code>label</code> of a <a href="ctp:api:type:CustomFieldLocalizedEnumValue">LocalizedEnumValue</a> of an <a href="ctp:api:type:CustomFieldLocalizedEnumType">LocalizedEnumType</a> FieldDefinition.</p>
+*  <p>Changes the <code>label</code> of a LocalizedEnumValue of an LocalizedEnumType FieldDefinition.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLocalizedEnumValueLabelAction, ModelBase {
@@ -43,15 +43,14 @@ public class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLo
     }
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</p>
+    *  <p><code>name</code> of the FieldDefinition to update.</p>
     */
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-    *  <p>New value to set.
-    *  Must not be empty.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue() {
         return this.value;

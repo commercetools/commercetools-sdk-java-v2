@@ -14,6 +14,10 @@ public class ProductSelectionSetKeyActionBuilder implements Builder<ProductSelec
     @Nullable
     private String key;
 
+    /**
+    *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+    */
+
     public ProductSelectionSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

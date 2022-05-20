@@ -16,6 +16,10 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     private com.commercetools.history.models.common.SyncInfo nextValue;
 
+    /**
+    *  <p>Update action for <code>updateSyncInfo</code></p>
+    */
+
     public UpdateSyncInfoChangeBuilder change(final String change) {
         this.change = change;
         return this;

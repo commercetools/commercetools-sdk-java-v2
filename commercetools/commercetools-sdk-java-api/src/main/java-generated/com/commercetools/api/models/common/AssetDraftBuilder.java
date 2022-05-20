@@ -62,16 +62,28 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
         return this;
     }
 
+    /**
+    *  <p>Name of the Asset.</p>
+    */
+
     public AssetDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Name of the Asset.</p>
+    */
+
     public AssetDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>Description of the Asset.</p>
+    */
 
     public AssetDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -79,21 +91,37 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
         return this;
     }
 
+    /**
+    *  <p>Description of the Asset.</p>
+    */
+
     public AssetDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+    *  <p>Keywords for categorizing and organizing Assets.</p>
+    */
+
     public AssetDraftBuilder tags(@Nullable final String... tags) {
         this.tags = new ArrayList<>(Arrays.asList(tags));
         return this;
     }
 
+    /**
+    *  <p>Keywords for categorizing and organizing Assets.</p>
+    */
+
     public AssetDraftBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
         return this;
     }
+
+    /**
+    *  <p>Keywords for categorizing and organizing Assets.</p>
+    */
 
     public AssetDraftBuilder plusTags(@Nullable final String... tags) {
         if (this.tags == null) {
@@ -103,16 +131,28 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
         return this;
     }
 
+    /**
+    *  <p>Custom Fields defined for the Asset.</p>
+    */
+
     public AssetDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Custom Fields defined for the Asset.</p>
+    */
+
     public AssetDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier for the Asset.</p>
+    */
 
     public AssetDraftBuilder key(@Nullable final String key) {
         this.key = key;

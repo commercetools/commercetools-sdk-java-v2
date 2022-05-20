@@ -21,6 +21,10 @@ public class ReplicaCartDraftBuilder implements Builder<ReplicaCartDraft> {
         return this;
     }
 
+    /**
+    *  <p>User-specific unique identifier of the cart.</p>
+    */
+
     public ReplicaCartDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:StandalonePrice">StandalonePrice</a>.</p>
+*  <p>Reference to a StandalonePrice.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceReferenceImpl.class)
@@ -23,7 +23,7 @@ public interface StandalonePriceReference extends Reference {
     String STANDALONE_PRICE = "standalone-price";
 
     /**
-    *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for StandalonePrice.</p>
+    *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
     */
     @Valid
     @JsonProperty("obj")

@@ -39,9 +39,7 @@ public class LocalizableTextAttributeImpl implements LocalizableTextAttribute, M
     }
 
     /**
-    *  <p>The name of this attribute must match a name of the product types attribute definitions.
-    *  The name is required if this type is used in a product variant and must not be set when
-    *  used in a product variant patch.</p>
+    *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
     */
     public String getName() {
         return this.name;
@@ -52,10 +50,10 @@ public class LocalizableTextAttributeImpl implements LocalizableTextAttribute, M
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
     *  }
     *  </code></pre>
     */

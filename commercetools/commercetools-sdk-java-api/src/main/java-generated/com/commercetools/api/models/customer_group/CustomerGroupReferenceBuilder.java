@@ -17,16 +17,28 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroup obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced CustomerGroup.</p>
+    */
+
     public CustomerGroupReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+    */
 
     public CustomerGroupReferenceBuilder obj(
             Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroupBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.customer_group.CustomerGroupBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+    */
 
     public CustomerGroupReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroup obj) {

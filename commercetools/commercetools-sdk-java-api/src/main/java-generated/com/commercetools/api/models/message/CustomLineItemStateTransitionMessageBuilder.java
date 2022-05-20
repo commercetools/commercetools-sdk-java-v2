@@ -45,6 +45,10 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
 
     private com.commercetools.api.models.state.StateReference toState;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
+
     public CustomLineItemStateTransitionMessageBuilder id(final String id) {
         this.id = id;
         return this;
@@ -65,11 +69,19 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public CustomLineItemStateTransitionMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public CustomLineItemStateTransitionMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -77,11 +89,19 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public CustomLineItemStateTransitionMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public CustomLineItemStateTransitionMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -94,11 +114,19 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
         return this;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
+
     public CustomLineItemStateTransitionMessageBuilder resource(
             final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
+
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
 
     public CustomLineItemStateTransitionMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -140,11 +168,19 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
         return this;
     }
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public CustomLineItemStateTransitionMessageBuilder fromState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.fromState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public CustomLineItemStateTransitionMessageBuilder fromState(
             final com.commercetools.api.models.state.StateReference fromState) {
@@ -152,11 +188,19 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
         return this;
     }
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public CustomLineItemStateTransitionMessageBuilder toState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.toState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public CustomLineItemStateTransitionMessageBuilder toState(
             final com.commercetools.api.models.state.StateReference toState) {

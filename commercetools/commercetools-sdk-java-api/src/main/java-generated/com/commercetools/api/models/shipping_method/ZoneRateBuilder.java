@@ -25,17 +25,29 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return this;
     }
 
+    /**
+    *  <p>The array does not contain two shipping rates with the same currency.</p>
+    */
+
     public ZoneRateBuilder shippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRate... shippingRates) {
         this.shippingRates = new ArrayList<>(Arrays.asList(shippingRates));
         return this;
     }
 
+    /**
+    *  <p>The array does not contain two shipping rates with the same currency.</p>
+    */
+
     public ZoneRateBuilder shippingRates(
             final java.util.List<com.commercetools.api.models.shipping_method.ShippingRate> shippingRates) {
         this.shippingRates = shippingRates;
         return this;
     }
+
+    /**
+    *  <p>The array does not contain two shipping rates with the same currency.</p>
+    */
 
     public ZoneRateBuilder plusShippingRates(
             final com.commercetools.api.models.shipping_method.ShippingRate... shippingRates) {
@@ -46,6 +58,10 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         return this;
     }
 
+    /**
+    *  <p>The array does not contain two shipping rates with the same currency.</p>
+    */
+
     public ZoneRateBuilder plusShippingRates(
             Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {
         if (this.shippingRates == null) {
@@ -55,6 +71,10 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
                 .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The array does not contain two shipping rates with the same currency.</p>
+    */
 
     public ZoneRateBuilder withShippingRates(
             Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRateBuilder> builder) {

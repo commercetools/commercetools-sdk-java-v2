@@ -52,6 +52,10 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
         return this;
     }
 
+    /**
+    *  <p>Position of the new asset inside the existing list (from <code>0</code> to the size of the list)</p>
+    */
+
     public ProductAddAssetActionBuilder position(@Nullable final Integer position) {
         this.position = position;
         return this;

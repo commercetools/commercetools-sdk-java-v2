@@ -12,11 +12,19 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    /**
+    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+    */
+
     public AssignedProductReferenceBuilder product(
             Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+    */
 
     public AssignedProductReferenceBuilder product(
             final com.commercetools.api.models.product.ProductReference product) {

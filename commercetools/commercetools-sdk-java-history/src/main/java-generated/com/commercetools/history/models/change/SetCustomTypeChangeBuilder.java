@@ -16,6 +16,10 @@ public class SetCustomTypeChangeBuilder implements Builder<SetCustomTypeChange> 
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+    *  <p>Update action for setting a custom type</p>
+    */
+
     public SetCustomTypeChangeBuilder change(final String change) {
         this.change = change;
         return this;

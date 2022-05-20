@@ -100,17 +100,29 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
         return this;
     }
 
+    /**
+    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+    */
+
     public MyCustomerDraftBuilder addresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
         return this;
     }
 
+    /**
+    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+    */
+
     public MyCustomerDraftBuilder addresses(
             @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
         this.addresses = addresses;
         return this;
     }
+
+    /**
+    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+    */
 
     public MyCustomerDraftBuilder plusAddresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
@@ -121,6 +133,10 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
         return this;
     }
 
+    /**
+    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+    */
+
     public MyCustomerDraftBuilder plusAddresses(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         if (this.addresses == null) {
@@ -130,6 +146,10 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
         return this;
     }
 
+    /**
+    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+    */
+
     public MyCustomerDraftBuilder withAddresses(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.addresses = new ArrayList<>();
@@ -137,21 +157,37 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
         return this;
     }
 
+    /**
+    *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+    */
+
     public MyCustomerDraftBuilder defaultShippingAddress(@Nullable final Long defaultShippingAddress) {
         this.defaultShippingAddress = defaultShippingAddress;
         return this;
     }
+
+    /**
+    *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+    */
 
     public MyCustomerDraftBuilder defaultBillingAddress(@Nullable final Long defaultBillingAddress) {
         this.defaultBillingAddress = defaultBillingAddress;
         return this;
     }
 
+    /**
+    *  <p>The custom fields.</p>
+    */
+
     public MyCustomerDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The custom fields.</p>
+    */
 
     public MyCustomerDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;

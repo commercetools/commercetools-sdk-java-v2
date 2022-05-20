@@ -15,6 +15,10 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
 
     private Boolean nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setIsValid</code></p>
+    */
+
     public SetIsValidChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -18,6 +18,10 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+    *  <p>Update action for <code>setAssetDescription</code></p>
+    */
+
     public SetAssetDescriptionChangeBuilder change(final String change) {
         this.change = change;
         return this;

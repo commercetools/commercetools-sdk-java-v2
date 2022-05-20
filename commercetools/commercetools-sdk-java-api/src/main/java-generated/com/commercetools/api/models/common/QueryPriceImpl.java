@@ -85,14 +85,14 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-    *  <p><a href="ctp:api:type:CustomerGroup">CustomerGroup</a> for which the given Price is valid.</p>
+    *  <p>CustomerGroup for which the given Price is valid.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><code>ProductDistribution</code> <a href="ctp:api:type:Channel">Channel</a> for which the given Price is valid.</p>
+    *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
     */
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
@@ -113,7 +113,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-    *  <p><a href="ctp:api:type:DiscountedPrice">DiscountedPrice</a> you specify for the given Price.</p>
+    *  <p>DiscountedPrice you specify for the given Price.</p>
     */
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
@@ -127,7 +127,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
     }
 
     /**
-    *  <p>Price tier applied when the minimum quantity for the <a href="ctp:api:type:LineItem">LineItem</a> of a ProductVariant with the related Price is reached in a Cart.</p>
+    *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
     */
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
         return this.tiers;

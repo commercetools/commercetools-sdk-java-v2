@@ -16,6 +16,10 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>transitionState</code></p>
+    */
+
     public TransitionStateChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -41,6 +41,10 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a TaxCategory.</p>
+    */
+
     public StagedOrderSetCustomShippingMethodActionBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
         this.taxCategory = builder
@@ -48,6 +52,10 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a TaxCategory.</p>
+    */
 
     public StagedOrderSetCustomShippingMethodActionBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {

@@ -30,6 +30,10 @@ public class MissingImagesPagedQueryResultBuilder implements Builder<MissingImag
         return this;
     }
 
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
+
     public MissingImagesPagedQueryResultBuilder offset(final Long offset) {
         this.offset = offset;
         return this;

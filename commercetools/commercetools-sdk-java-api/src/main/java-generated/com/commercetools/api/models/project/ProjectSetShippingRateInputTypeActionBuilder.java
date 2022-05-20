@@ -15,11 +15,19 @@ public class ProjectSetShippingRateInputTypeActionBuilder implements Builder<Pro
     @Nullable
     private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(
             @Nullable final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
         this.shippingRateInputType = shippingRateInputType;
         return this;
     }
+
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
 
     public ProjectSetShippingRateInputTypeActionBuilder shippingRateInputType(
             Function<com.commercetools.api.models.project.ShippingRateInputTypeBuilder, Builder<? extends com.commercetools.api.models.project.ShippingRateInputType>> builder) {

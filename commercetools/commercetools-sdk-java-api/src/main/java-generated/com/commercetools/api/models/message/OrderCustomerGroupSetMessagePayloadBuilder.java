@@ -18,6 +18,10 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
+
     public OrderCustomerGroupSetMessagePayloadBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
         this.customerGroup = builder
@@ -26,11 +30,19 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
         return this;
     }
 
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
+
     public OrderCustomerGroupSetMessagePayloadBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
 
     public OrderCustomerGroupSetMessagePayloadBuilder oldCustomerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -39,6 +51,10 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a CustomerGroup.</p>
+    */
 
     public OrderCustomerGroupSetMessagePayloadBuilder oldCustomerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {

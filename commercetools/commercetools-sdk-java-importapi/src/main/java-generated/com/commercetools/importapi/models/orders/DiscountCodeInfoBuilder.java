@@ -17,6 +17,10 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     @Nullable
     private com.commercetools.importapi.models.orders.DiscountCodeState state;
 
+    /**
+    *  <p>References a discount code by key.</p>
+    */
+
     public DiscountCodeInfoBuilder discountCode(
             Function<com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder, com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder> builder) {
         this.discountCode = builder
@@ -25,11 +29,19 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
         return this;
     }
 
+    /**
+    *  <p>References a discount code by key.</p>
+    */
+
     public DiscountCodeInfoBuilder discountCode(
             final com.commercetools.importapi.models.common.DiscountCodeKeyReference discountCode) {
         this.discountCode = discountCode;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
+    */
 
     public DiscountCodeInfoBuilder state(
             @Nullable final com.commercetools.importapi.models.orders.DiscountCodeState state) {

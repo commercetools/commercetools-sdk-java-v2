@@ -27,10 +27,18 @@ public class MissingImagesBuilder implements Builder<MissingImages> {
         return this;
     }
 
+    /**
+    *  <p>ID of the variant</p>
+    */
+
     public MissingImagesBuilder variantId(final Long variantId) {
         this.variantId = variantId;
         return this;
     }
+
+    /**
+    *  <p>Number of images the variant contains.</p>
+    */
 
     public MissingImagesBuilder imageCount(final Long imageCount) {
         this.imageCount = imageCount;

@@ -18,6 +18,10 @@ public class MissingImagesCountBuilder implements Builder<MissingImagesCount> {
         return this;
     }
 
+    /**
+    *  <p>Number of products scanned.</p>
+    */
+
     public MissingImagesCountBuilder total(final Long total) {
         this.total = total;
         return this;

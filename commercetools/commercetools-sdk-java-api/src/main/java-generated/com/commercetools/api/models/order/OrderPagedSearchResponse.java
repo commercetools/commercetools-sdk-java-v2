@@ -25,14 +25,14 @@ public interface OrderPagedSearchResponse {
     public Long getTotal();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
 
     @JsonProperty("offset")
     public Long getOffset();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
 
     @JsonProperty("limit")

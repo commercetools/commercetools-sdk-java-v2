@@ -24,16 +24,28 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     @Nullable
     private Long variantCount;
 
+    /**
+    *  <p>Localized product name used for similarity estimation.</p>
+    */
+
     public SimilarProductMetaBuilder name(
             Function<com.commercetools.ml.models.common.LocalizedStringBuilder, com.commercetools.ml.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.ml.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Localized product name used for similarity estimation.</p>
+    */
+
     public SimilarProductMetaBuilder name(@Nullable final com.commercetools.ml.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>Localized product description used for similarity estimation.</p>
+    */
 
     public SimilarProductMetaBuilder description(
             Function<com.commercetools.ml.models.common.LocalizedStringBuilder, com.commercetools.ml.models.common.LocalizedStringBuilder> builder) {
@@ -41,11 +53,19 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
         return this;
     }
 
+    /**
+    *  <p>Localized product description used for similarity estimation.</p>
+    */
+
     public SimilarProductMetaBuilder description(
             @Nullable final com.commercetools.ml.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+    *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+    */
 
     public SimilarProductMetaBuilder price(
             Function<com.commercetools.ml.models.common.MoneyBuilder, com.commercetools.ml.models.common.MoneyBuilder> builder) {
@@ -53,10 +73,18 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
         return this;
     }
 
+    /**
+    *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+    */
+
     public SimilarProductMetaBuilder price(@Nullable final com.commercetools.ml.models.common.Money price) {
         this.price = price;
         return this;
     }
+
+    /**
+    *  <p>Total number of variants associated with the product.</p>
+    */
 
     public SimilarProductMetaBuilder variantCount(@Nullable final Long variantCount) {
         this.variantCount = variantCount;

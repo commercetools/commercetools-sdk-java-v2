@@ -18,6 +18,10 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    /**
+    *  <p>ResourceIdentifier to a ShippingMethod.</p>
+    */
+
     public CartSetShippingMethodActionBuilder shippingMethod(
             Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder> builder) {
         this.shippingMethod = builder
@@ -25,6 +29,10 @@ public class CartSetShippingMethodActionBuilder implements Builder<CartSetShippi
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a ShippingMethod.</p>
+    */
 
     public CartSetShippingMethodActionBuilder shippingMethod(
             @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {

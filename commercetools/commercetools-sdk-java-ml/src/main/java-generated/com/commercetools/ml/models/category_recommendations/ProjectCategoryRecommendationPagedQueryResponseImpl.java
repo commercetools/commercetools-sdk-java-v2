@@ -52,7 +52,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     public Long getOffset() {
         return this.offset;

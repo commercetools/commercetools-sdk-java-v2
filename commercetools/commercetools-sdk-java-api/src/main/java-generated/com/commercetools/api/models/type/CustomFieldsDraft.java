@@ -14,14 +14,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The representation used when creating or updating a <a href="/../api/projects/types#list-of-customizable-data-types">customizable data type</a> with Custom Fields.</p>
+*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomFieldsDraftImpl.class)
 public interface CustomFieldsDraft {
 
     /**
-    *  <p><code>id</code> or <code>key</code> of the <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p><code>id</code> or <code>key</code> of the Type.</p>
     */
     @NotNull
     @Valid
@@ -29,7 +29,7 @@ public interface CustomFieldsDraft {
     public TypeResourceIdentifier getType();
 
     /**
-    *  <p>Object containing the Custom Fields for the <a href="/../api/projects/types#list-of-customizable-data-types">customized resource or data type</a>.</p>
+    *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
     */
     @Valid
     @JsonProperty("fields")

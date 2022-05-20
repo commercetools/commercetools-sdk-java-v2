@@ -33,8 +33,8 @@ public interface TypedMoney extends Money {
     /**
     *  <p>Number of digits after the decimal separator:</p>
     *  <ul>
-    *  <li>Equal to the default number of fraction digits for a currency in <a href="ctp:api:type:CentPrecisionMoney">CentPrecisionMoney</a>.</li>
-    *  <li>Greater than the default number of fraction digits for a currency in <a href="ctp:api:type:HighPrecisionMoney">HighPrecisionMoney</a>.</li>
+    *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
+    *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
     *  </ul>
     */
     @NotNull

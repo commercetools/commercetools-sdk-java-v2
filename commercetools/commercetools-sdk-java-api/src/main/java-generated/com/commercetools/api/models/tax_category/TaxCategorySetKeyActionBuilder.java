@@ -14,6 +14,10 @@ public class TaxCategorySetKeyActionBuilder implements Builder<TaxCategorySetKey
     @Nullable
     private String key;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public TaxCategorySetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

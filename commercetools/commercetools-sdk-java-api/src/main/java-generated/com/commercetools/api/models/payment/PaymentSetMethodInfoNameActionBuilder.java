@@ -15,11 +15,19 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+    *  <p>If not provided, the name is unset.</p>
+    */
+
     public PaymentSetMethodInfoNameActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>If not provided, the name is unset.</p>
+    */
 
     public PaymentSetMethodInfoNameActionBuilder name(
             @Nullable final com.commercetools.api.models.common.LocalizedString name) {

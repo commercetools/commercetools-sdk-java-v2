@@ -17,10 +17,18 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     private java.lang.Object previousValue;
 
+    /**
+    *  <p>Update action for <code>setProperty</code> on custom objects</p>
+    */
+
     public SetPropertyChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>Value path to the property that was changed</p>
+    */
 
     public SetPropertyChangeBuilder path(final String path) {
         this.path = path;

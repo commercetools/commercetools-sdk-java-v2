@@ -20,20 +20,36 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
     @Nullable
     private Long version;
 
+    /**
+    *  <p>Namespace to group CustomObjects.</p>
+    */
+
     public CustomObjectDraftBuilder container(final String container) {
         this.container = container;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+    */
 
     public CustomObjectDraftBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
+    /**
+    *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+    */
+
     public CustomObjectDraftBuilder value(final java.lang.Object value) {
         this.value = value;
         return this;
     }
+
+    /**
+    *  <p>Current version of the CustomObject.</p>
+    */
 
     public CustomObjectDraftBuilder version(@Nullable final Long version) {
         this.version = version;

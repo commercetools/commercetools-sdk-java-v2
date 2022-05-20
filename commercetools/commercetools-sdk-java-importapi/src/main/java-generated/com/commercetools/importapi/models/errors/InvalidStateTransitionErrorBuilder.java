@@ -20,11 +20,19 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
         return this;
     }
 
+    /**
+    *  <p>Every Import Operation is assigned with one of the following states.</p>
+    */
+
     public InvalidStateTransitionErrorBuilder currentState(
             final com.commercetools.importapi.models.common.ProcessingState currentState) {
         this.currentState = currentState;
         return this;
     }
+
+    /**
+    *  <p>Every Import Operation is assigned with one of the following states.</p>
+    */
 
     public InvalidStateTransitionErrorBuilder newState(
             final com.commercetools.importapi.models.common.ProcessingState newState) {

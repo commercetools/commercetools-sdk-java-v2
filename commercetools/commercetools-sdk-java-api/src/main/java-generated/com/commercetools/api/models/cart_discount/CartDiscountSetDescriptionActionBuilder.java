@@ -15,11 +15,19 @@ public class CartDiscountSetDescriptionActionBuilder implements Builder<CartDisc
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+    *  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>
+    */
+
     public CartDiscountSetDescriptionActionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>
+    */
 
     public CartDiscountSetDescriptionActionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {

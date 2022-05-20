@@ -33,8 +33,7 @@ public interface ProductDiscountMatchQuery {
     public Integer getVariantId();
 
     /**
-    *  <p>Controls which <a href="/../api/projects/productProjections#current--staged">projected representation</a> is applied for the query.
-    *  Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
+    *  <p>Controls which projected representation is applied for the query. Set to <code>true</code> for the <code>staged</code> Product Projection of the specified Product Variant, set to <code>false</code> for the <code>current</code> one.</p>
     */
     @NotNull
     @JsonProperty("staged")

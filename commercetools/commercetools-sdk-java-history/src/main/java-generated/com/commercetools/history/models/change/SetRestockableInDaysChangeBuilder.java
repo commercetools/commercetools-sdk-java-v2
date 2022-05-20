@@ -15,6 +15,10 @@ public class SetRestockableInDaysChangeBuilder implements Builder<SetRestockable
 
     private Integer nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setRestockableInDays</code></p>
+    */
+
     public SetRestockableInDaysChangeBuilder change(final String change) {
         this.change = change;
         return this;

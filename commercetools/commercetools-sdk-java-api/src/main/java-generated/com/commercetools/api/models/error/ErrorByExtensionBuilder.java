@@ -16,10 +16,18 @@ public class ErrorByExtensionBuilder implements Builder<ErrorByExtension> {
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Extension.</p>
+    */
+
     public ErrorByExtensionBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the Extension.</p>
+    */
 
     public ErrorByExtensionBuilder key(@Nullable final String key) {
         this.key = key;

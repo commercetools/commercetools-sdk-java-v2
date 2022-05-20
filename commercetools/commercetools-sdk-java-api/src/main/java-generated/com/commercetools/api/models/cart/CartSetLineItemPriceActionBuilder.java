@@ -22,11 +22,21 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
         return this;
     }
 
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
+
     public CartSetLineItemPriceActionBuilder externalPrice(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+    */
 
     public CartSetLineItemPriceActionBuilder externalPrice(
             @Nullable final com.commercetools.api.models.common.Money externalPrice) {

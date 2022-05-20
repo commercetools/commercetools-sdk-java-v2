@@ -15,10 +15,18 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     private java.lang.Object nextValue;
 
+    /**
+    *  <p>Update action for <code>addProperty</code> on custom objects</p>
+    */
+
     public AddPropertyChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>Value path to the property that was added</p>
+    */
 
     public AddPropertyChangeBuilder path(final String path) {
         this.path = path;

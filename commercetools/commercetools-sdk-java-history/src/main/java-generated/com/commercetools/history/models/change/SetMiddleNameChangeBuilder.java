@@ -15,6 +15,10 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setMiddleName</code></p>
+    */
+
     public SetMiddleNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

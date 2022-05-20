@@ -28,6 +28,10 @@ public class CategoryAddAssetActionBuilder implements Builder<CategoryAddAssetAc
         return this;
     }
 
+    /**
+    *  <p>When specified, the value might be <code>0</code> and should be lower than the total of the assets list.</p>
+    */
+
     public CategoryAddAssetActionBuilder position(@Nullable final Integer position) {
         this.position = position;
         return this;

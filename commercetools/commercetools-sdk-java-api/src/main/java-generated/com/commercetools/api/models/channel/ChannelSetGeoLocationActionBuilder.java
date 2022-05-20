@@ -15,11 +15,19 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
     @Nullable
     private com.commercetools.api.models.common.GeoJson geoLocation;
 
+    /**
+    *  <p>Value to set.</p>
+    */
+
     public ChannelSetGeoLocationActionBuilder geoLocation(
             @Nullable final com.commercetools.api.models.common.GeoJson geoLocation) {
         this.geoLocation = geoLocation;
         return this;
     }
+
+    /**
+    *  <p>Value to set.</p>
+    */
 
     public ChannelSetGeoLocationActionBuilder geoLocation(
             Function<com.commercetools.api.models.common.GeoJsonBuilder, Builder<? extends com.commercetools.api.models.common.GeoJson>> builder) {

@@ -30,10 +30,18 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
         return this;
     }
 
+    /**
+    *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
+    */
+
     public TaxedItemPriceBuilder totalGross(final com.commercetools.api.models.common.TypedMoney totalGross) {
         this.totalGross = totalGross;
         return this;
     }
+
+    /**
+    *  <p>TaxedItemPrice fields can not be used in query predicates.</p>
+    */
 
     public TaxedItemPriceBuilder totalGross(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -41,10 +49,18 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
         return this;
     }
 
+    /**
+    *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+    */
+
     public TaxedItemPriceBuilder totalTax(@Nullable final com.commercetools.api.models.common.TypedMoney totalTax) {
         this.totalTax = totalTax;
         return this;
     }
+
+    /**
+    *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+    */
 
     public TaxedItemPriceBuilder totalTax(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {

@@ -17,10 +17,18 @@ public class StoreResourceIdentifierBuilder implements Builder<StoreResourceIden
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+    */
+
     public StoreResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+    */
 
     public StoreResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

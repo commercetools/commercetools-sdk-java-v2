@@ -18,6 +18,10 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+    *  <p>Update action for <code>setAssetCustomType</code></p>
+    */
+
     public SetAssetCustomTypeChangeBuilder change(final String change) {
         this.change = change;
         return this;

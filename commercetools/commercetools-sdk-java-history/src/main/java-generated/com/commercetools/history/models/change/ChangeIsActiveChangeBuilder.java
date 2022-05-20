@@ -15,6 +15,10 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
 
     private Boolean nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeIsActive</code></p>
+    */
+
     public ChangeIsActiveChangeBuilder change(final String change) {
         this.change = change;
         return this;

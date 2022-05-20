@@ -12,11 +12,19 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
+
     public ProductDiscountChangeNameActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>New value to set. Must not be empty.</p>
+    */
 
     public ProductDiscountChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;

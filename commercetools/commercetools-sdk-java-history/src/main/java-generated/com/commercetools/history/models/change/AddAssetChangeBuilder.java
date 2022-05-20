@@ -16,6 +16,10 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
 
     private com.commercetools.history.models.common.Asset previousValue;
 
+    /**
+    *  <p>Update action for <code>addAsset</code></p>
+    */
+
     public AddAssetChangeBuilder change(final String change) {
         this.change = change;
         return this;

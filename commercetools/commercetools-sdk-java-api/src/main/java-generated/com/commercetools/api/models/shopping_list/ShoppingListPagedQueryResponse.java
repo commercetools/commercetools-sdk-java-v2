@@ -19,7 +19,7 @@ public interface ShoppingListPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ShoppingList> {
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     @NotNull
     @JsonProperty("limit")
@@ -33,7 +33,7 @@ public interface ShoppingListPagedQueryResponse
     public Long getTotal();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     @NotNull
     @JsonProperty("offset")

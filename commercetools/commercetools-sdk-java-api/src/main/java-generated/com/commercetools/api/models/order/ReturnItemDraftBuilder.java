@@ -54,11 +54,19 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
         return this;
     }
 
+    /**
+    *  <p>Custom Fields of this return item.</p>
+    */
+
     public ReturnItemDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields of this return item.</p>
+    */
 
     public ReturnItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;

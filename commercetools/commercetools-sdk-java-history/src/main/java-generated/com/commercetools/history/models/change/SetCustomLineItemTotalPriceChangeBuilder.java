@@ -20,6 +20,10 @@ public class SetCustomLineItemTotalPriceChangeBuilder implements Builder<SetCust
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+    *  <p>Update action for <code>setCustomLineItemTotalPrice</code></p>
+    */
+
     public SetCustomLineItemTotalPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -34,6 +34,10 @@ public class ProductMoveImageToPositionActionBuilder implements Builder<ProductM
         return this;
     }
 
+    /**
+    *  <p>The URL of the image</p>
+    */
+
     public ProductMoveImageToPositionActionBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;

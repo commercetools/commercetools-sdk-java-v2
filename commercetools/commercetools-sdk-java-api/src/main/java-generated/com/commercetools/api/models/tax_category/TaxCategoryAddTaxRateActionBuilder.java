@@ -12,11 +12,19 @@ public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAd
 
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
+    /**
+    *  <p>Value to append to the <code>rates</code> array.</p>
+    */
+
     public TaxCategoryAddTaxRateActionBuilder taxRate(
             Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Value to append to the <code>rates</code> array.</p>
+    */
 
     public TaxCategoryAddTaxRateActionBuilder taxRate(
             final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {

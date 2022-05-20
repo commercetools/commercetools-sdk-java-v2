@@ -11,6 +11,10 @@ public class CustomerGroupChangeNameActionBuilder implements Builder<CustomerGro
 
     private String name;
 
+    /**
+    *  <p>New name of the CustomerGroup.</p>
+    */
+
     public CustomerGroupChangeNameActionBuilder name(final String name) {
         this.name = name;
         return this;

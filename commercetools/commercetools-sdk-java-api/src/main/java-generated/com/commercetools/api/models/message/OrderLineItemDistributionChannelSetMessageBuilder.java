@@ -41,6 +41,10 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
+
     public OrderLineItemDistributionChannelSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
@@ -62,11 +66,19 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public OrderLineItemDistributionChannelSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -74,11 +86,19 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public OrderLineItemDistributionChannelSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public OrderLineItemDistributionChannelSetMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -91,11 +111,19 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         return this;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
+
     public OrderLineItemDistributionChannelSetMessageBuilder resource(
             final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
+
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
 
     public OrderLineItemDistributionChannelSetMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -127,12 +155,20 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         return this;
     }
 
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
+
     public OrderLineItemDistributionChannelSetMessageBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
 
     public OrderLineItemDistributionChannelSetMessageBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference distributionChannel) {

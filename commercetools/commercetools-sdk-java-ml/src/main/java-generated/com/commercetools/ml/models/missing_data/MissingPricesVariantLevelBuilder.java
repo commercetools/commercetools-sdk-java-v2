@@ -13,10 +13,18 @@ public class MissingPricesVariantLevelBuilder implements Builder<MissingPricesVa
 
     private Long missingPrices;
 
+    /**
+    *  <p>Number of product variants scanned.</p>
+    */
+
     public MissingPricesVariantLevelBuilder total(final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of product variants missing prices.</p>
+    */
 
     public MissingPricesVariantLevelBuilder missingPrices(final Long missingPrices) {
         this.missingPrices = missingPrices;

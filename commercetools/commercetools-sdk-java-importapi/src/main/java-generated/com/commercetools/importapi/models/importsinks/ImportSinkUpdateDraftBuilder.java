@@ -16,10 +16,18 @@ public class ImportSinkUpdateDraftBuilder implements Builder<ImportSinkUpdateDra
     @Nullable
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
+    /**
+    *  <p>Current version of the ImportSink.</p>
+    */
+
     public ImportSinkUpdateDraftBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+    *  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
+    */
 
     public ImportSinkUpdateDraftBuilder resourceType(
             @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {

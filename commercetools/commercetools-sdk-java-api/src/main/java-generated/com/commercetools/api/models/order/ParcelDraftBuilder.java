@@ -48,16 +48,28 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         return this;
     }
 
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
+
     public ParcelDraftBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
+
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
 
     public ParcelDraftBuilder items(
             @Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
+
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
 
     public ParcelDraftBuilder plusItems(@Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
         if (this.items == null) {
@@ -66,6 +78,10 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         this.items.addAll(Arrays.asList(items));
         return this;
     }
+
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
 
     public ParcelDraftBuilder plusItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
@@ -76,6 +92,10 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         return this;
     }
 
+    /**
+    *  <p>The delivery items contained in this parcel.</p>
+    */
+
     public ParcelDraftBuilder withItems(
             Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItemBuilder> builder) {
         this.items = new ArrayList<>();
@@ -83,11 +103,19 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         return this;
     }
 
+    /**
+    *  <p>Custom Fields of this parcel.</p>
+    */
+
     public ParcelDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Custom Fields of this parcel.</p>
+    */
 
     public ParcelDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;

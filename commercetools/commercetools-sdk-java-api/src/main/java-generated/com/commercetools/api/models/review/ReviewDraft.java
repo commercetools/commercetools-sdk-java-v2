@@ -29,8 +29,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     public String getKey();
 
     /**
-    *  <p>If set, this value must be unique among reviews.
-    *  For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> and <code>product's id</code>.</p>
+    *  <p>If set, this value must be unique among reviews. For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> and <code>product's id</code>.</p>
     */
 
     @JsonProperty("uniquenessValue")
@@ -49,8 +48,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     public String getText();
 
     /**
-    *  <p>Identifies the target of the review.
-    *  Can be a Product or a Channel</p>
+    *  <p>Identifies the target of the review. Can be a Product or a Channel</p>
     */
 
     @JsonProperty("target")
@@ -61,10 +59,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     public StateResourceIdentifier getState();
 
     /**
-    *  <p>Number between -100 and 100 included.
-    *  Rating of the targeted object, like a product.
-    *  This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1)
-    *  A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
+    *  <p>Number between -100 and 100 included. Rating of the targeted object, like a product. This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1) A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
     */
 
     @JsonProperty("rating")

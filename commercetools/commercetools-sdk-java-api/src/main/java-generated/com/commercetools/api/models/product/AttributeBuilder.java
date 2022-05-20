@@ -18,6 +18,10 @@ public class AttributeBuilder implements Builder<Attribute> {
         return this;
     }
 
+    /**
+    *  <p>A valid JSON value, based on an AttributeDefinition.</p>
+    */
+
     public AttributeBuilder value(final java.lang.Object value) {
         this.value = value;
         return this;

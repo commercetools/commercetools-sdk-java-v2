@@ -21,11 +21,19 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
+    /**
+    *  <p>Current status of resource indexing. Present on Projects from 1 February 2019.</p>
+    */
+
     public SearchIndexingConfigurationValuesBuilder status(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status) {
         this.status = status;
         return this;
     }
+
+    /**
+    *  <p>Date and time (UTC) the Project was last updated. Only present on Projects last modified after 1 February 2019.</p>
+    */
 
     public SearchIndexingConfigurationValuesBuilder lastModifiedAt(
             @Nullable final java.time.ZonedDateTime lastModifiedAt) {
@@ -33,11 +41,19 @@ public class SearchIndexingConfigurationValuesBuilder implements Builder<SearchI
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public SearchIndexingConfigurationValuesBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public SearchIndexingConfigurationValuesBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {

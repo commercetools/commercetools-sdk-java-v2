@@ -14,14 +14,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Response to a query request for <a href="#record">Record</a>.</p>
+*  <p>Response to a query request for Record.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = RecordPagedQueryResponseImpl.class)
 public interface RecordPagedQueryResponse {
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     @NotNull
     @JsonProperty("limit")
@@ -35,15 +35,14 @@ public interface RecordPagedQueryResponse {
     public Integer getCount();
 
     /**
-    *  <p>Total number of results matching the query.
-    *  This number is an estimation and not <a href="/general-concepts#strong-consistency">strongly consistent</a>.</p>
+    *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
     */
     @NotNull
     @JsonProperty("total")
     public Integer getTotal();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     @NotNull
     @JsonProperty("offset")

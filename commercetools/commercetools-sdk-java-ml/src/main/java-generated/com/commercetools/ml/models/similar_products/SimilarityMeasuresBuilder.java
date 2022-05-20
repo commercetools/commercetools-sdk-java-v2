@@ -26,25 +26,45 @@ public class SimilarityMeasuresBuilder implements Builder<SimilarityMeasures> {
     @Nullable
     private Long price;
 
+    /**
+    *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
+    */
+
     public SimilarityMeasuresBuilder name(@Nullable final Long name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+    */
 
     public SimilarityMeasuresBuilder description(@Nullable final Long description) {
         this.description = description;
         return this;
     }
 
+    /**
+    *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+    */
+
     public SimilarityMeasuresBuilder attribute(@Nullable final Long attribute) {
         this.attribute = attribute;
         return this;
     }
 
+    /**
+    *  <p>Importance of the number of product variants in overall similarity.</p>
+    */
+
     public SimilarityMeasuresBuilder variantCount(@Nullable final Long variantCount) {
         this.variantCount = variantCount;
         return this;
     }
+
+    /**
+    *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
+    */
 
     public SimilarityMeasuresBuilder price(@Nullable final Long price) {
         this.price = price;

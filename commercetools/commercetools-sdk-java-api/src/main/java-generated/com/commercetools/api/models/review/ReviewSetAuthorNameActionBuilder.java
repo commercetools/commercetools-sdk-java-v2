@@ -14,6 +14,10 @@ public class ReviewSetAuthorNameActionBuilder implements Builder<ReviewSetAuthor
     @Nullable
     private String authorName;
 
+    /**
+    *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+    */
+
     public ReviewSetAuthorNameActionBuilder authorName(@Nullable final String authorName) {
         this.authorName = authorName;
         return this;

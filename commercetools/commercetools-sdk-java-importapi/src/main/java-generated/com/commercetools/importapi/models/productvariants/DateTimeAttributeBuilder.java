@@ -16,6 +16,10 @@ public class DateTimeAttributeBuilder implements Builder<DateTimeAttribute> {
 
     private java.time.ZonedDateTime value;
 
+    /**
+    *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+    */
+
     public DateTimeAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;

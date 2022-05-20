@@ -18,6 +18,10 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
 
     private String previousValue;
 
+    /**
+    *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
+    */
+
     public ChangeTransactionInteractionIdChangeBuilder change(final String change) {
         this.change = change;
         return this;

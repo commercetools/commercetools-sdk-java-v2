@@ -23,12 +23,20 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
+
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Channel.</p>
+    */
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference distributionChannel) {

@@ -30,6 +30,10 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
         return this;
     }
 
+    /**
+    *  <p>The currency code compliant to ISO 4217.</p>
+    */
+
     public HighPrecisionMoneyBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;

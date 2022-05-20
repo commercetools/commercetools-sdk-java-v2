@@ -14,6 +14,10 @@ public class ShippingMethodSetKeyActionBuilder implements Builder<ShippingMethod
     @Nullable
     private String key;
 
+    /**
+    *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
+    */
+
     public ShippingMethodSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

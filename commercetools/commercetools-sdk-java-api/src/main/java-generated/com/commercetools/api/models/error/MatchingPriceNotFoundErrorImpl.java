@@ -86,14 +86,14 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>Reference to a CustomerGroup.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>Reference to a Channel.</p>
     */
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;

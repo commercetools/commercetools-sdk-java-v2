@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+*  <p>Reference to a DiscountCode.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeReferenceImpl.class)
@@ -24,14 +24,14 @@ public interface DiscountCodeReference extends Reference, com.commercetools.api.
     String DISCOUNT_CODE = "discount-code";
 
     /**
-    *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for DiscountCodes.</p>
+    *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
     */
     @Valid
     @JsonProperty("obj")
     public DiscountCode getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced DiscountCode.</p>
     */
     @NotNull
     @JsonProperty("id")

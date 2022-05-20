@@ -15,6 +15,10 @@ public class ChangeEmailChangeBuilder implements Builder<ChangeEmailChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeEmail</code></p>
+    */
+
     public ChangeEmailChangeBuilder change(final String change) {
         this.change = change;
         return this;

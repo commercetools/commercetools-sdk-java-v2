@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+*  <p>ResourceIdentifier to a TaxCategory.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryResourceIdentifierImpl.class)
@@ -22,14 +22,14 @@ public interface TaxCategoryResourceIdentifier
     String TAX_CATEGORY = "tax-category";
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:TaxCategory">TaxCategory</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>Platform-generated unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
     */
 
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>User-defined unique identifier of the referenced <a href="ctp:api:type:TaxCategory">TaxCategory</a>. Either <code>id</code> or <code>key</code> is required.</p>
+    *  <p>User-defined unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
     */
 
     @JsonProperty("key")

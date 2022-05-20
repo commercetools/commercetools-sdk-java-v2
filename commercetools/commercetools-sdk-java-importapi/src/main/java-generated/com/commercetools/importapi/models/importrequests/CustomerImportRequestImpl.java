@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The request body to <a href="#import-customers">import Customers</a>. Contains data for <a href="/../api/projects/customers#customer">Customers</a> to be created or updated in a commercetools Project.</p>
+*  <p>The request body to import Customers. Contains data for Customers to be created or updated in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CustomerImportRequestImpl implements CustomerImportRequest, ModelBase {

@@ -43,23 +43,21 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-specific unique identifier for the store.
-    *  The <code>key</code> is mandatory and immutable.
-    *  It is used to reference the store.</p>
+    *  <p>User-specific unique identifier for the store. The <code>key</code> is mandatory and immutable. It is used to reference the store.</p>
     */
     @NotNull
     @JsonProperty("key")
@@ -91,9 +89,7 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     public List<ChannelReference> getSupplyChannels();
 
     /**
-    *  <p>Set of References to Product Selections along with settings.
-    *  If <code>productSelections</code> is empty all products in the project are available in this Store.
-    *  If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
+    *  <p>Set of References to Product Selections along with settings. If <code>productSelections</code> is empty all products in the project are available in this Store. If <code>productSelections</code> is not empty but there exists no <code>active</code> Product Selection then no Product is available in this Store.</p>
     */
     @Valid
     @JsonProperty("productSelections")

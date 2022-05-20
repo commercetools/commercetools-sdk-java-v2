@@ -18,16 +18,14 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
     String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
 
     /**
-    *  <p>Value to set.
-    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated undiscounted values.</p>
+    *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
     */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-    *  <p>Value to set.
-    *  Take <a href="/../api/general-concepts#eventual-consistency">Eventual Consistency</a> into account for calculated undiscounted values.</p>
+    *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
     */
 
     @JsonProperty("validUntil")

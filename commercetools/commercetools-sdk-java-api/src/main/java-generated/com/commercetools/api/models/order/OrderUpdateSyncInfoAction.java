@@ -22,7 +22,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     String UPDATE_SYNC_INFO = "updateSyncInfo";
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>ResourceIdentifier to a Channel.</p>
     */
     @NotNull
     @Valid

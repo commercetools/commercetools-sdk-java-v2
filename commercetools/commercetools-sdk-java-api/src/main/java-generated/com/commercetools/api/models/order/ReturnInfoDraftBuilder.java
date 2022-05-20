@@ -55,6 +55,10 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
         return this;
     }
 
+    /**
+    *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+    */
+
     public ReturnInfoDraftBuilder returnTrackingId(@Nullable final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;
         return this;

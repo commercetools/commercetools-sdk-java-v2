@@ -16,6 +16,10 @@ public class SetShippingRateChangeBuilder implements Builder<SetShippingRateChan
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+    *  <p>Update action for <code>setShippingRate</code></p>
+    */
+
     public SetShippingRateChangeBuilder change(final String change) {
         this.change = change;
         return this;

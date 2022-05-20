@@ -27,7 +27,7 @@ public interface DiscountedPrice {
     public TypedMoney getValue();
 
     /**
-    *  <p><a href="ctp:api:type:ProductDiscount">ProductDiscount</a> related to the discounted price.</p>
+    *  <p>ProductDiscount related to the discounted price.</p>
     */
     @NotNull
     @Valid

@@ -17,10 +17,18 @@ public class CartDiscountSetValidFromAndUntilActionBuilder implements Builder<Ca
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    /**
+    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    */
+
     public CartDiscountSetValidFromAndUntilActionBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+    *  <p>If absent, the field with the value is removed in case a value was set before.</p>
+    */
 
     public CartDiscountSetValidFromAndUntilActionBuilder validUntil(
             @Nullable final java.time.ZonedDateTime validUntil) {

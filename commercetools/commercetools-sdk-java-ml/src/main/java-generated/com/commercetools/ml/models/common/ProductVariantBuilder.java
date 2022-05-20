@@ -16,21 +16,37 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     private Integer variantId;
 
+    /**
+    *  <p>The product that contains this variant.</p>
+    */
+
     public ProductVariantBuilder product(
             Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>The product that contains this variant.</p>
+    */
+
     public ProductVariantBuilder product(final com.commercetools.ml.models.common.ProductReference product) {
         this.product = product;
         return this;
     }
 
+    /**
+    *  <p>The state of the product variant.</p>
+    */
+
     public ProductVariantBuilder staged(final Boolean staged) {
         this.staged = staged;
         return this;
     }
+
+    /**
+    *  <p>The id of the product variant.</p>
+    */
 
     public ProductVariantBuilder variantId(final Integer variantId) {
         this.variantId = variantId;

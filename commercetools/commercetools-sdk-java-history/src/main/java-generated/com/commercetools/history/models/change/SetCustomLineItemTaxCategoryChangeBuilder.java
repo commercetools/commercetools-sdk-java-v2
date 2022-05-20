@@ -20,6 +20,10 @@ public class SetCustomLineItemTaxCategoryChangeBuilder implements Builder<SetCus
 
     private com.commercetools.history.models.common.Reference previousValue;
 
+    /**
+    *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
+    */
+
     public SetCustomLineItemTaxCategoryChangeBuilder change(final String change) {
         this.change = change;
         return this;

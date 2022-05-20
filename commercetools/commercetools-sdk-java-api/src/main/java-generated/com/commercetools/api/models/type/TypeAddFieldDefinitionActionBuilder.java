@@ -12,11 +12,19 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
 
     private com.commercetools.api.models.type.FieldDefinition fieldDefinition;
 
+    /**
+    *  <p>Value to append to the array.</p>
+    */
+
     public TypeAddFieldDefinitionActionBuilder fieldDefinition(
             Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
         this.fieldDefinition = builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Value to append to the array.</p>
+    */
 
     public TypeAddFieldDefinitionActionBuilder fieldDefinition(
             final com.commercetools.api.models.type.FieldDefinition fieldDefinition) {

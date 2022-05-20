@@ -16,6 +16,10 @@ public class SetDeleteDaysAfterLastModificationChangeBuilder
 
     private Integer nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
+    */
+
     public SetDeleteDaysAfterLastModificationChangeBuilder change(final String change) {
         this.change = change;
         return this;

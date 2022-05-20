@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The given combination of values of a <a href="/../api/projects/products#productvariant">Product Variant</a> conflicts with an existing one.
-*  Every <a href="/../api/projects/products#productvariant">Product Variant</a> must have a distinct combination of SKU, prices, and custom attribute values.</p>
+*  <p>The given combination of values of a Product Variant conflicts with an existing one. Every Product Variant must have a distinct combination of SKU, prices, and custom attribute values.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesError, ModelBase {

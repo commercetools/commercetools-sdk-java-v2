@@ -20,12 +20,20 @@ public class OrderUpdateSyncInfoActionBuilder implements Builder<OrderUpdateSync
     @Nullable
     private java.time.ZonedDateTime syncedAt;
 
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
+
     public OrderUpdateSyncInfoActionBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a Channel.</p>
+    */
 
     public OrderUpdateSyncInfoActionBuilder channel(
             final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {

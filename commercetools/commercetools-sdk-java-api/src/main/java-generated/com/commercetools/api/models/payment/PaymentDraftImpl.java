@@ -104,17 +104,14 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-    *  <p>The identifier that is used by the interface that manages the payment (usually the PSP).
-    *  Cannot be changed once it has been set.
-    *  The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
+    *  <p>The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo <code>paymentInterface</code> must be unique.</p>
     */
     public String getInterfaceId() {
         return this.interfaceId;
     }
 
     /**
-    *  <p>How much money this payment intends to receive from the customer.
-    *  The value usually matches the cart or order gross total.</p>
+    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
     */
     public com.commercetools.api.models.common.Money getAmountPlanned() {
         return this.amountPlanned;
@@ -122,7 +119,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
 
     /**
     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
     */
     public com.commercetools.api.models.common.Money getAmountAuthorized() {
         return this.amountAuthorized;
@@ -134,7 +131,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
 
     /**
     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
     */
     public com.commercetools.api.models.common.Money getAmountPaid() {
         return this.amountPaid;
@@ -142,7 +139,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
 
     /**
     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-    *  <p>For storing money values in fractions of the minor unit in a currency, use <a href="ctp:api:type:HighPrecisionMoneyDraft">HighPrecisionMoneyDraft</a> instead.</p>
+    *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
     */
     public com.commercetools.api.models.common.Money getAmountRefunded() {
         return this.amountRefunded;
@@ -164,10 +161,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
     }
 
     /**
-    *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP.
-    *  Some interactions may result in a transaction.
-    *  If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction.
-    *  Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
+    *  <p>Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the <code>interactionId</code> in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.</p>
     */
     public java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> getInterfaceInteractions() {
         return this.interfaceInteractions;

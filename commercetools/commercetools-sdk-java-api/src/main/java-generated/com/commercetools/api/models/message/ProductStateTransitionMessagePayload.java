@@ -21,7 +21,7 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
     String PRODUCT_STATE_TRANSITION = "ProductStateTransition";
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Reference to a State.</p>
     */
     @NotNull
     @Valid

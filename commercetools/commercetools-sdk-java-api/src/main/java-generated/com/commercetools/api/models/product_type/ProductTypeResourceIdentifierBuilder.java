@@ -17,10 +17,18 @@ public class ProductTypeResourceIdentifierBuilder implements Builder<ProductType
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced ProductType. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
     public ProductTypeResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the referenced ProductType. Either <code>id</code> or <code>key</code> is required.</p>
+    */
 
     public ProductTypeResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

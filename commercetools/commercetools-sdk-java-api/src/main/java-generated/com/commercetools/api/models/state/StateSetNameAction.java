@@ -21,8 +21,7 @@ public interface StateSetNameAction extends StateUpdateAction {
     String SET_NAME = "setName";
 
     /**
-    *  <p>Value to set.
-    *  If empty, any existing value will be removed.</p>
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
     */
     @NotNull
     @Valid

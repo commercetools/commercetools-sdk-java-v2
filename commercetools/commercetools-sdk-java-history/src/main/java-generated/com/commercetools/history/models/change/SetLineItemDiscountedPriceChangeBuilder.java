@@ -20,6 +20,10 @@ public class SetLineItemDiscountedPriceChangeBuilder implements Builder<SetLineI
 
     private com.commercetools.history.models.common.DiscountedLineItemPrice previousValue;
 
+    /**
+    *  <p>Update action for <code>setLineItemDiscountedPrice</code></p>
+    */
+
     public SetLineItemDiscountedPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;

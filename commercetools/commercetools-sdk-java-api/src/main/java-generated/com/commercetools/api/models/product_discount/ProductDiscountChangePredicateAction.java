@@ -19,7 +19,7 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     String CHANGE_PREDICATE = "changePredicate";
 
     /**
-    *  <p>New value to set. Must be a valid <a href="/../api/projects/predicates#productdiscount-predicates">ProductDiscount predicate</a>.</p>
+    *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
     */
     @NotNull
     @JsonProperty("predicate")

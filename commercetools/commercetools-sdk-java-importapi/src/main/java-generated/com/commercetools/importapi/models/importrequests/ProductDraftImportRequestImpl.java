@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The request body to <a href="#import-productdrafts">import ProductDrafts</a>. Contains data for <a href="/../api/projects/products#productdraft">Products</a> to be created or updated in a commercetools Project.</p>
+*  <p>The request body to import ProductDrafts. Contains data for Products to be created or updated in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ProductDraftImportRequestImpl implements ProductDraftImportRequest, ModelBase {

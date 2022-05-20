@@ -40,6 +40,10 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
         return this;
     }
 
+    /**
+    *  <p>ResourceIdentifier to a TaxCategory.</p>
+    */
+
     public CartSetCustomShippingMethodActionBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
         this.taxCategory = builder
@@ -47,6 +51,10 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a TaxCategory.</p>
+    */
 
     public CartSetCustomShippingMethodActionBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {

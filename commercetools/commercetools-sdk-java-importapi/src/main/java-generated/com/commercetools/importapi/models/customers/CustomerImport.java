@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The data representation for a Customer to be imported that is persisted as a <a href="/../api/projects/customers#top">Customer</a> in the Project.</p>
+*  <p>The data representation for a Customer to be imported that is persisted as a Customer in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerImportImpl.class)
@@ -47,7 +47,7 @@ public interface CustomerImport extends ImportResource {
     public String getPassword();
 
     /**
-    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
     */
     @Valid
     @JsonProperty("stores")
@@ -124,8 +124,7 @@ public interface CustomerImport extends ImportResource {
     public Boolean getIsEmailVerified();
 
     /**
-    *  <p>The Reference to the <a href="/../api/projects/customerGroups#customergroup">CustomerGroup</a> with which the Customer is associated.
-    *  If referenced CustomerGroup does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+    *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
     */
     @Valid
     @JsonProperty("customerGroup")

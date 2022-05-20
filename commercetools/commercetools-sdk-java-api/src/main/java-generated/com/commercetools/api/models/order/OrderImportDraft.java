@@ -30,9 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderImportDraft extends com.commercetools.api.models.CustomizableDraft<OrderImportDraft> {
 
     /**
-    *  <p>String that unique identifies an order.
-    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.
-    *  It should be unique within a project.</p>
+    *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
     */
 
     @JsonProperty("orderNumber")
@@ -72,8 +70,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public Money getTotalPrice();
 
     /**
-    *  <p>Order Import does not support calculation of taxes.
-    *  When setting the draft the taxedPrice is to be provided.</p>
+    *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
     */
     @Valid
     @JsonProperty("taxedPrice")
@@ -88,16 +85,14 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public BaseAddress getBillingAddress();
 
     /**
-    *  <p>Set when the customer is set and the customer is a member of a customer group.
-    *  Used for product variant price selection.</p>
+    *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
     */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.
-    *  Used for product variant price selection.</p>
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
     */
 
     @JsonProperty("country")

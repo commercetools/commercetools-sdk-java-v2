@@ -22,16 +22,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportSink {
 
     /**
-    *  <p>User-defined unique identifier for the ImportSink.
-    *  Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+    *  <p>User-defined unique identifier for the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>The <a href="#importresourcetype">resource type</a> the ImportSink is able to handle.
-    *  If not present, the ImportSink is able to import all of the supported <a href="#importresourcetype">ImportResourceTypes</a>.</p>
+    *  <p>The resource type the ImportSink is able to handle. If not present, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
     */
 
     @JsonProperty("resourceType")

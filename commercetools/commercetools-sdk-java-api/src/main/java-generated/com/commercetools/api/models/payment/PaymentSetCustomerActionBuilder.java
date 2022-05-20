@@ -15,12 +15,20 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
     @Nullable
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    /**
+    *  <p>A reference to the customer this payment belongs to.</p>
+    */
+
     public PaymentSetCustomerActionBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>A reference to the customer this payment belongs to.</p>
+    */
 
     public PaymentSetCustomerActionBuilder customer(
             @Nullable final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {

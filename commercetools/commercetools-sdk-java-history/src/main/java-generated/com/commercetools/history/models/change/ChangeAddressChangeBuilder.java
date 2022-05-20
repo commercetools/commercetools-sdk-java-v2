@@ -16,6 +16,10 @@ public class ChangeAddressChangeBuilder implements Builder<ChangeAddressChange> 
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+    *  <p>Update action <code>changeAddress</code> action.</p>
+    */
+
     public ChangeAddressChangeBuilder change(final String change) {
         this.change = change;
         return this;

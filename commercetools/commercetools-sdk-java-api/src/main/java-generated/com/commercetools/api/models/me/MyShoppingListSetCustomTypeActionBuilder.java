@@ -18,11 +18,19 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+    *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+    */
+
     public MyShoppingListSetCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Defines the Type that extends the MyShoppingList with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyShoppingList.</p>
+    */
 
     public MyShoppingListSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -30,11 +38,19 @@ public class MyShoppingListSetCustomTypeActionBuilder implements Builder<MyShopp
         return this;
     }
 
+    /**
+    *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
+    */
+
     public MyShoppingListSetCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Sets the Custom Fields fields for the MyShoppingList.</p>
+    */
 
     public MyShoppingListSetCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

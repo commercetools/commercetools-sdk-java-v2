@@ -16,6 +16,10 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     private com.commercetools.history.models.common.Parcel nextValue;
 
+    /**
+    *  <p>Update action for <code>addParcelToDelivery</code></p>
+    */
+
     public AddParcelToDeliveryChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -18,6 +18,10 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     private java.util.List<String> previousValue;
 
+    /**
+    *  <p>Update action for <code>setAssetTags</code></p>
+    */
+
     public SetAssetTagsChangeBuilder change(final String change) {
         this.change = change;
         return this;

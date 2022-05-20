@@ -18,6 +18,10 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
+    /**
+    *  <p>Update action for <code>setDeliveryItems</code></p>
+    */
+
     public SetDeliveryItemsChangeBuilder change(final String change) {
         this.change = change;
         return this;

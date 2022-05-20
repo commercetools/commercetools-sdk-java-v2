@@ -13,6 +13,10 @@ public class SubRateBuilder implements Builder<SubRate> {
 
     private Double amount;
 
+    /**
+    *  <p>Name of the SubRate.</p>
+    */
+
     public SubRateBuilder name(final String name) {
         this.name = name;
         return this;

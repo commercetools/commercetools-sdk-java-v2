@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The data representation for a Category to be imported that is persisted as a <a href="/../api/projects/categories#category">Category</a> in the Project.</p>
+*  <p>The data representation for a Category to be imported that is persisted as a Category in the Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class CategoryImportImpl implements CategoryImport, ModelBase {
@@ -85,8 +85,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>Category.slug</code>.
-    *  Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+    *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
     */
     public com.commercetools.importapi.models.common.LocalizedString getSlug() {
         return this.slug;
@@ -100,9 +99,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>Category.parent</code>.
-    *  The Reference to the parent <a href="/../api/projects/categories#category">Category</a> with which the Category is associated.
-    *  If referenced Category does not exist, the <code>state</code> of the <a href="/import-operation#importoperation">ImportOperation</a> will be set to <code>unresolved</code> until the necessary Category is created.</p>
+    *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
     */
     public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {
         return this.parent;

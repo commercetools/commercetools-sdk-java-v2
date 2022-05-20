@@ -42,7 +42,7 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Category">Category</a>.</p>
+    *  <p>Reference to a Category.</p>
     */
     public com.commercetools.api.models.category.CategoryReference getCategory() {
         return this.category;

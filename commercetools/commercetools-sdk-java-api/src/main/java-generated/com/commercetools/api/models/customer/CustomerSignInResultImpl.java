@@ -36,8 +36,7 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
     }
 
     /**
-    *  <p>A cart that is associated to the customer.
-    *  Empty if the customer does not have a cart yet.</p>
+    *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
     */
     public com.commercetools.api.models.cart.Cart getCart() {
         return this.cart;

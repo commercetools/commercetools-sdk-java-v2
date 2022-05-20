@@ -23,25 +23,45 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
 
     private java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ProductSelectionPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ProductSelectionPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+    *  <p>Actual number of results returned.</p>
+    */
+
     public ProductSelectionPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+    */
+
     public ProductSelectionPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>ProductSelections matching the query.</p>
+    */
 
     public ProductSelectionPagedQueryResponseBuilder results(
             final com.commercetools.api.models.product_selection.ProductSelection... results) {
@@ -49,11 +69,19 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
         return this;
     }
 
+    /**
+    *  <p>ProductSelections matching the query.</p>
+    */
+
     public ProductSelectionPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.product_selection.ProductSelection> results) {
         this.results = results;
         return this;
     }
+
+    /**
+    *  <p>ProductSelections matching the query.</p>
+    */
 
     public ProductSelectionPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.product_selection.ProductSelection... results) {
@@ -64,6 +92,10 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
         return this;
     }
 
+    /**
+    *  <p>ProductSelections matching the query.</p>
+    */
+
     public ProductSelectionPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {
         if (this.results == null) {
@@ -73,6 +105,10 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
             builder.apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>ProductSelections matching the query.</p>
+    */
 
     public ProductSelectionPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {

@@ -27,8 +27,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public LocalizedString getName();
 
     /**
-    *  <p>The amount of a CustomLineItemin the cart.
-    *  Must be a positive integer.</p>
+    *  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>
     */
     @NotNull
     @JsonProperty("quantity")

@@ -35,6 +35,10 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+    */
+
     public ProductVariantDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

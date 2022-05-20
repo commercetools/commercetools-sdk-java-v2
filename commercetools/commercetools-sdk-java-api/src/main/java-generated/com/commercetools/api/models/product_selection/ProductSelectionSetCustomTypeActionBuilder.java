@@ -18,11 +18,19 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+    *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
+    */
+
     public ProductSelectionSetCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Defines the Type that extends the ProductSelection with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ProductSelection.</p>
+    */
 
     public ProductSelectionSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -30,11 +38,19 @@ public class ProductSelectionSetCustomTypeActionBuilder implements Builder<Produ
         return this;
     }
 
+    /**
+    *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
+    */
+
     public ProductSelectionSetCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Sets the Custom Fields fields for the ProductSelection.</p>
+    */
 
     public ProductSelectionSetCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

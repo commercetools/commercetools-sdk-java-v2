@@ -58,6 +58,10 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier for the CartDiscount.</p>
+    */
+
     public CartDiscountDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
@@ -88,10 +92,18 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         return this;
     }
 
+    /**
+    *  <p>A valid Cart predicate.</p>
+    */
+
     public CartDiscountDraftBuilder cartPredicate(final String cartPredicate) {
         this.cartPredicate = cartPredicate;
         return this;
     }
+
+    /**
+    *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+    */
 
     public CartDiscountDraftBuilder target(
             @Nullable final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
@@ -99,16 +111,28 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         return this;
     }
 
+    /**
+    *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+    */
+
     public CartDiscountDraftBuilder target(
             Function<com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountTarget>> builder) {
         this.target = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountTargetBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>The string must contain a number between 0 and 1. A discount with greater sort order is prioritized higher than a discount with lower sort order. The sort order must be unambiguous among all cart discounts.</p>
+    */
+
     public CartDiscountDraftBuilder sortOrder(final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
+
+    /**
+    *  <p>Only active discount can be applied to the cart. Defaults to <code>true</code>.</p>
+    */
 
     public CartDiscountDraftBuilder isActive(@Nullable final Boolean isActive) {
         this.isActive = isActive;
@@ -125,10 +149,18 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         return this;
     }
 
+    /**
+    *  <p>States whether the discount can only be used in a connection with a DiscountCode. Defaults to <code>false</code>.</p>
+    */
+
     public CartDiscountDraftBuilder requiresDiscountCode(@Nullable final Boolean requiresDiscountCode) {
         this.requiresDiscountCode = requiresDiscountCode;
         return this;
     }
+
+    /**
+    *  <p>Specifies whether the application of this discount causes the following discounts to be ignored. Defaults to Stacking.</p>
+    */
 
     public CartDiscountDraftBuilder stackingMode(
             @Nullable final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {

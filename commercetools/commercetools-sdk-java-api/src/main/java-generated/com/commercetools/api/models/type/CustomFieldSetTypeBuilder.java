@@ -12,10 +12,18 @@ public class CustomFieldSetTypeBuilder implements Builder<CustomFieldSetType> {
 
     private com.commercetools.api.models.type.FieldType elementType;
 
+    /**
+    *  <p>Field type of the elements in the set.</p>
+    */
+
     public CustomFieldSetTypeBuilder elementType(final com.commercetools.api.models.type.FieldType elementType) {
         this.elementType = elementType;
         return this;
     }
+
+    /**
+    *  <p>Field type of the elements in the set.</p>
+    */
 
     public CustomFieldSetTypeBuilder elementType(
             Function<com.commercetools.api.models.type.FieldTypeBuilder, Builder<? extends com.commercetools.api.models.type.FieldType>> builder) {

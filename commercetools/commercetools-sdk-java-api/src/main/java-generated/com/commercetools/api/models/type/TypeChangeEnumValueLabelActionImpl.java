@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Changes the <code>label</code> of an <a href="ctp:api:type:CustomFieldEnumValue">EnumValue</a> of an <a href="ctp:api:type:CustomFieldEnumType">EnumType</a> FieldDefinition.</p>
+*  <p>Changes the <code>label</code> of an EnumValue of an EnumType FieldDefinition.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumValueLabelAction, ModelBase {
@@ -43,15 +43,14 @@ public class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumValueLa
     }
 
     /**
-    *  <p><code>name</code> of the <a href="ctp:api:type:FieldDefinition">FieldDefinition</a> to update.</p>
+    *  <p><code>name</code> of the FieldDefinition to update.</p>
     */
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-    *  <p>New value to set.
-    *  Must not be empty.</p>
+    *  <p>New value to set. Must not be empty.</p>
     */
     public com.commercetools.api.models.type.CustomFieldEnumValue getValue() {
         return this.value;

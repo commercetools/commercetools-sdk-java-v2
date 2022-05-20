@@ -15,11 +15,19 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
     @Nullable
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public ProjectSetExternalOAuthActionBuilder externalOAuth(
             Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuthBuilder> builder) {
         this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
 
     public ProjectSetExternalOAuthActionBuilder externalOAuth(
             @Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {

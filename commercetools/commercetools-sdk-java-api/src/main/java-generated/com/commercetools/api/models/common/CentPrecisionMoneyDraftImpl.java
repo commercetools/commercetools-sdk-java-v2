@@ -42,8 +42,8 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
     /**
     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
     *  <ul>
-    *  <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-    *  <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+    *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+    *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
     *  </ul>
     */
     public Long getCentAmount() {
@@ -51,7 +51,7 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
     }
 
     /**
-    *  <p>Currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    *  <p>Currency code compliant to ISO 4217.</p>
     */
     public String getCurrencyCode() {
         return this.currencyCode;

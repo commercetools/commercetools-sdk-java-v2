@@ -16,6 +16,10 @@ public class SetTaxCategoryChangeBuilder implements Builder<SetTaxCategoryChange
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setTaxCategory</code></p>
+    */
+
     public SetTaxCategoryChangeBuilder change(final String change) {
         this.change = change;
         return this;

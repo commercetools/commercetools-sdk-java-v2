@@ -53,23 +53,21 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     }
 
     /**
-    *  <p>Tax rate.
-    *  Must be supplied if no <code>subRates</code> are specified.
-    *  If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
+    *  <p>Tax rate. Must be supplied if no <code>subRates</code> are specified. If <code>subRates</code> are specified, this field can be omitted or it must be the sum of amounts of all <code>subRates</code>.</p>
     */
     public Double getAmount() {
         return this.amount;
     }
 
     /**
-    *  <p>Set to <code>true</code>, if tax should be included in <a href="ctp:api:type:Price">Prices</a> and the <code>taxedPrice</code> should be present on <a href="ctp:api:type:LineItem">Line Items</a>. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
+    *  <p>Set to <code>true</code>, if tax should be included in Prices and the <code>taxedPrice</code> should be present on Line Items. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
     */
     public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }
 
     /**
-    *  <p>Country in which the tax rate is applied in <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> format.</p>
+    *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
     */
     public String getCountry() {
         return this.country;
@@ -83,7 +81,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     }
 
     /**
-    *  <p>Used to calculate the <a href="/../api/projects/carts#taxedprice">taxPortions</a> field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+    *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
     */
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
         return this.subRates;

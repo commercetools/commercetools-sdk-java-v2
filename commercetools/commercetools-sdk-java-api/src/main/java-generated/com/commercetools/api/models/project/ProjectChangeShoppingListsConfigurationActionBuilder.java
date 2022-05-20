@@ -13,6 +13,10 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
 
     private com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration;
 
+    /**
+    *  <p>Configuration for the Shopping Lists feature.</p>
+    */
+
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(
             Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder> builder) {
         this.shoppingListsConfiguration = builder
@@ -20,6 +24,10 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Configuration for the Shopping Lists feature.</p>
+    */
 
     public ProjectChangeShoppingListsConfigurationActionBuilder shoppingListsConfiguration(
             final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingListsConfiguration) {

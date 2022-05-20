@@ -20,15 +20,27 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
 
     private java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> previousValue;
 
+    /**
+    *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
+    */
+
     public ChangeLocalizedEnumValueOrderChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
 
+    /**
+    *  <p>The name of the field definition updated.</p>
+    */
+
     public ChangeLocalizedEnumValueOrderChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+    *  <p>The name of the attribute updated.</p>
+    */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

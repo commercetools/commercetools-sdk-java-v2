@@ -16,6 +16,10 @@ public class ProductRemovePriceActionBuilder implements Builder<ProductRemovePri
     @Nullable
     private Boolean staged;
 
+    /**
+    *  <p>ID of the EmbeddedPrice</p>
+    */
+
     public ProductRemovePriceActionBuilder priceId(final String priceId) {
         this.priceId = priceId;
         return this;

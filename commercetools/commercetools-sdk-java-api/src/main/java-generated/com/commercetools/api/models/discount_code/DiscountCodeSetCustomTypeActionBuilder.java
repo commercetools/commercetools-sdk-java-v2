@@ -18,11 +18,19 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+    *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+    */
+
     public DiscountCodeSetCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
         this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Defines the Type that extends the DiscountCode with Custom Fields. If absent, any existing Type and Custom Fields are removed from the DiscountCode.</p>
+    */
 
     public DiscountCodeSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -30,11 +38,19 @@ public class DiscountCodeSetCustomTypeActionBuilder implements Builder<DiscountC
         return this;
     }
 
+    /**
+    *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
+    */
+
     public DiscountCodeSetCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Sets the Custom Fields fields for the DiscountCode.</p>
+    */
 
     public DiscountCodeSetCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

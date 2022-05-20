@@ -41,10 +41,18 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     @Nullable
     private String comment;
 
+    /**
+    *  <p>Platform-generated unique identifier of the OrderEdit.</p>
+    */
+
     public OrderEditBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>The current version of the OrderEdit.</p>
+    */
 
     public OrderEditBuilder version(final Long version) {
         this.version = version;
@@ -61,11 +69,19 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public OrderEditBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public OrderEditBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -73,21 +89,37 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public OrderEditBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public OrderEditBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier of the OrderEdit.</p>
+    */
+
     public OrderEditBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>The order to be updated with this edit.</p>
+    */
 
     public OrderEditBuilder resource(
             Function<com.commercetools.api.models.order.OrderReferenceBuilder, com.commercetools.api.models.order.OrderReferenceBuilder> builder) {
@@ -95,10 +127,18 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this;
     }
 
+    /**
+    *  <p>The order to be updated with this edit.</p>
+    */
+
     public OrderEditBuilder resource(final com.commercetools.api.models.order.OrderReference resource) {
         this.resource = resource;
         return this;
     }
+
+    /**
+    *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+    */
 
     public OrderEditBuilder stagedActions(
             final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
@@ -106,11 +146,19 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this;
     }
 
+    /**
+    *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+    */
+
     public OrderEditBuilder stagedActions(
             final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
         this.stagedActions = stagedActions;
         return this;
     }
+
+    /**
+    *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+    */
 
     public OrderEditBuilder plusStagedActions(
             final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
@@ -121,6 +169,10 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this;
     }
 
+    /**
+    *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+    */
+
     public OrderEditBuilder plusStagedActions(
             Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
         if (this.stagedActions == null) {
@@ -130,6 +182,10 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
                 .add(builder.apply(com.commercetools.api.models.order.StagedOrderUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+    */
 
     public OrderEditBuilder withStagedActions(
             Function<com.commercetools.api.models.order.StagedOrderUpdateActionBuilder, Builder<? extends com.commercetools.api.models.order.StagedOrderUpdateAction>> builder) {
@@ -150,16 +206,28 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this;
     }
 
+    /**
+    *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+    */
+
     public OrderEditBuilder result(final com.commercetools.api.models.order_edit.OrderEditResult result) {
         this.result = result;
         return this;
     }
+
+    /**
+    *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+    */
 
     public OrderEditBuilder result(
             Function<com.commercetools.api.models.order_edit.OrderEditResultBuilder, Builder<? extends com.commercetools.api.models.order_edit.OrderEditResult>> builder) {
         this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditResultBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>This field can be used to add textual information regarding the edit.</p>
+    */
 
     public OrderEditBuilder comment(@Nullable final String comment) {
         this.comment = comment;

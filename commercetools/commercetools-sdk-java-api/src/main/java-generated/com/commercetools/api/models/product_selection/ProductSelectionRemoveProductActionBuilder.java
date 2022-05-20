@@ -12,12 +12,20 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
 
     private com.commercetools.api.models.product.ProductResourceIdentifier product;
 
+    /**
+    *  <p>ResourceIdentifier to Product</p>
+    */
+
     public ProductSelectionRemoveProductActionBuilder product(
             Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifierBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to Product</p>
+    */
 
     public ProductSelectionRemoveProductActionBuilder product(
             final com.commercetools.api.models.product.ProductResourceIdentifier product) {

@@ -12,17 +12,29 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
+    /**
+    *  <p>New value to set.</p>
+    */
+
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
         this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
         return this;
     }
 
+    /**
+    *  <p>New value to set.</p>
+    */
+
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts(
             final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
         this.cartDiscounts = cartDiscounts;
         return this;
     }
+
+    /**
+    *  <p>New value to set.</p>
+    */
 
     public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
             final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier... cartDiscounts) {
@@ -32,6 +44,10 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
         this.cartDiscounts.addAll(Arrays.asList(cartDiscounts));
         return this;
     }
+
+    /**
+    *  <p>New value to set.</p>
+    */
 
     public DiscountCodeChangeCartDiscountsActionBuilder plusCartDiscounts(
             Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {
@@ -43,6 +59,10 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
                     .build());
         return this;
     }
+
+    /**
+    *  <p>New value to set.</p>
+    */
 
     public DiscountCodeChangeCartDiscountsActionBuilder withCartDiscounts(
             Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder> builder) {

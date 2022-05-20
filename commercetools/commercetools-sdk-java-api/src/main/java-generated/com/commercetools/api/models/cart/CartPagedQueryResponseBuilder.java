@@ -23,6 +23,10 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
 
     private java.util.List<com.commercetools.api.models.cart.Cart> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public CartPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public CartPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

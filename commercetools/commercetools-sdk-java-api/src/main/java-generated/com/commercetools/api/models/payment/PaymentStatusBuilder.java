@@ -21,10 +21,18 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
     @Nullable
     private com.commercetools.api.models.state.StateReference state;
 
+    /**
+    *  <p>A code describing the current status returned by the interface that processes the payment.</p>
+    */
+
     public PaymentStatusBuilder interfaceCode(@Nullable final String interfaceCode) {
         this.interfaceCode = interfaceCode;
         return this;
     }
+
+    /**
+    *  <p>A text describing the current status returned by the interface that processes the payment.</p>
+    */
 
     public PaymentStatusBuilder interfaceText(@Nullable final String interfaceText) {
         this.interfaceText = interfaceText;

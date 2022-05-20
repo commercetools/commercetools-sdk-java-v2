@@ -18,6 +18,10 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+    *  <p>Update action for <code>changeTextLineItemName</code></p>
+    */
+
     public ChangeTextLineItemNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

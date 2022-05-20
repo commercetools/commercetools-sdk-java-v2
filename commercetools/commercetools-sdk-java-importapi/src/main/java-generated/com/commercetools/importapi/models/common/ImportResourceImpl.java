@@ -15,10 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A representation of the resource to import.
-*  Import resources are similar to commercetools draft types, but they only support key references.
-*  In general, import resources are more granular then the normal commercetools resource.
-*  They are optimized for incremental updates and therefore have a slightly different structure.</p>
+*  <p>A representation of the resource to import. Import resources are similar to commercetools draft types, but they only support key references. In general, import resources are more granular then the normal commercetools resource. They are optimized for incremental updates and therefore have a slightly different structure.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ImportResourceImpl implements ImportResource, ModelBase {

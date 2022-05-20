@@ -12,6 +12,10 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
 
+    /**
+    *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+    */
+
     public AssignedProductSelectionBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
         this.productSelection = builder
@@ -19,6 +23,10 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to the ProductSelection that this assignment is part of.</p>
+    */
 
     public AssignedProductSelectionBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {

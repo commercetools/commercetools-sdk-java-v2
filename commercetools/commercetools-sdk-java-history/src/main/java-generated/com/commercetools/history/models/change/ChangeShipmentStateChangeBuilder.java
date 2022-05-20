@@ -15,6 +15,10 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
 
     private com.commercetools.history.models.common.ShipmentState previousValue;
 
+    /**
+    *  <p>Update action for <code>changeShipmentState</code></p>
+    */
+
     public ChangeShipmentStateChangeBuilder change(final String change) {
         this.change = change;
         return this;

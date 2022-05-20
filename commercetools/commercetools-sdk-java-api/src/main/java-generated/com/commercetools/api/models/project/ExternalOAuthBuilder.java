@@ -13,10 +13,18 @@ public class ExternalOAuthBuilder implements Builder<ExternalOAuth> {
 
     private String authorizationHeader;
 
+    /**
+    *  <p>URL with authorization header.</p>
+    */
+
     public ExternalOAuthBuilder url(final String url) {
         this.url = url;
         return this;
     }
+
+    /**
+    *  <p>Partially hidden on retrieval.</p>
+    */
 
     public ExternalOAuthBuilder authorizationHeader(final String authorizationHeader) {
         this.authorizationHeader = authorizationHeader;

@@ -50,25 +50,45 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
     @Nullable
     private java.time.ZonedDateTime validUntil;
 
+    /**
+    *  <p>Platform-generated unique identifier of the ProductDiscount.</p>
+    */
+
     public ProductDiscountBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Current version of the ProductDiscount.</p>
+    */
 
     public ProductDiscountBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
+    */
+
     public ProductDiscountBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
+    */
+
     public ProductDiscountBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ProductDiscountBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -76,11 +96,19 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductDiscountBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ProductDiscountBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -88,10 +116,18 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductDiscountBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>Name of the ProductDiscount.</p>
+    */
 
     public ProductDiscountBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -99,15 +135,27 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         return this;
     }
 
+    /**
+    *  <p>Name of the ProductDiscount.</p>
+    */
+
     public ProductDiscountBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
+    /**
+    *  <p>User-defined unique identifier of the ProductDiscount.</p>
+    */
+
     public ProductDiscountBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>Description of the ProductDiscount.</p>
+    */
 
     public ProductDiscountBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -115,17 +163,29 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         return this;
     }
 
+    /**
+    *  <p>Description of the ProductDiscount.</p>
+    */
+
     public ProductDiscountBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    /**
+    *  <p>Type of Discount and its corresponding value.</p>
+    */
+
     public ProductDiscountBuilder value(
             final com.commercetools.api.models.product_discount.ProductDiscountValue value) {
         this.value = value;
         return this;
     }
+
+    /**
+    *  <p>Type of Discount and its corresponding value.</p>
+    */
 
     public ProductDiscountBuilder value(
             Function<com.commercetools.api.models.product_discount.ProductDiscountValueBuilder, Builder<? extends com.commercetools.api.models.product_discount.ProductDiscountValue>> builder) {
@@ -134,31 +194,55 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         return this;
     }
 
+    /**
+    *  <p>Valid ProductDiscount predicate.</p>
+    */
+
     public ProductDiscountBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;
     }
+
+    /**
+    *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>
+    */
 
     public ProductDiscountBuilder sortOrder(final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
 
+    /**
+    *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+    */
+
     public ProductDiscountBuilder isActive(final Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
+
+    /**
+    *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+    */
 
     public ProductDiscountBuilder references(final com.commercetools.api.models.common.Reference... references) {
         this.references = new ArrayList<>(Arrays.asList(references));
         return this;
     }
 
+    /**
+    *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+    */
+
     public ProductDiscountBuilder references(
             final java.util.List<com.commercetools.api.models.common.Reference> references) {
         this.references = references;
         return this;
     }
+
+    /**
+    *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+    */
 
     public ProductDiscountBuilder plusReferences(final com.commercetools.api.models.common.Reference... references) {
         if (this.references == null) {
@@ -167,6 +251,10 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         this.references.addAll(Arrays.asList(references));
         return this;
     }
+
+    /**
+    *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+    */
 
     public ProductDiscountBuilder plusReferences(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -177,6 +265,10 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         return this;
     }
 
+    /**
+    *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+    */
+
     public ProductDiscountBuilder withReferences(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.references = new ArrayList<>();
@@ -184,10 +276,18 @@ public class ProductDiscountBuilder implements Builder<ProductDiscount> {
         return this;
     }
 
+    /**
+    *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+    */
+
     public ProductDiscountBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
+
+    /**
+    *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+    */
 
     public ProductDiscountBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;

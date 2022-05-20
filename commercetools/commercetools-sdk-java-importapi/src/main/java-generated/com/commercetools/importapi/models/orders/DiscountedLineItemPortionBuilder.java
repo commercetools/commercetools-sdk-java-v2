@@ -14,12 +14,20 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     private com.commercetools.importapi.models.common.Money discountedAmount;
 
+    /**
+    *  <p>References a cart discount by key.</p>
+    */
+
     public DiscountedLineItemPortionBuilder discount(
             Function<com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder> builder) {
         this.discount = builder.apply(com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>References a cart discount by key.</p>
+    */
 
     public DiscountedLineItemPortionBuilder discount(
             final com.commercetools.importapi.models.common.CartDiscountKeyReference discount) {

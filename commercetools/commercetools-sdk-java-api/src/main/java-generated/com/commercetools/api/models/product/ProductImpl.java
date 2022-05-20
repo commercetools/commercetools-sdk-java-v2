@@ -97,22 +97,21 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier of the Product.
-    *  <em>Product keys are different from ProductVariant keys.</em></p>
+    *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
     */
     public String getKey() {
         return this.key;
@@ -145,7 +144,7 @@ public class ProductImpl implements Product, ModelBase {
     }
 
     /**
-    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
+    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
     */
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
         return this.priceMode;

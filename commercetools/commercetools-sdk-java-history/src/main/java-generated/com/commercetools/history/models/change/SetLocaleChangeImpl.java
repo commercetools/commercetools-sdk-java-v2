@@ -51,14 +51,14 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
     }
 
     /**
-    *  <p>A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</p>
+    *  <p>A locale of IETF language tag.</p>
     */
     public String getPreviousValue() {
         return this.previousValue;
     }
 
     /**
-    *  <p>A locale of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>.</p>
+    *  <p>A locale of IETF language tag.</p>
     */
     public String getNextValue() {
         return this.nextValue;

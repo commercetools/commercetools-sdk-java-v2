@@ -64,8 +64,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
     }
 
     /**
-    *  <p>The amount of a CustomLineItem in the cart.
-    *  Must be a positive integer.</p>
+    *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
     */
     public Long getQuantity() {
         return this.quantity;

@@ -15,6 +15,10 @@ public class ChangeOrderHintChangeBuilder implements Builder<ChangeOrderHintChan
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeOrderHint</code></p>
+    */
+
     public ChangeOrderHintChangeBuilder change(final String change) {
         this.change = change;
         return this;

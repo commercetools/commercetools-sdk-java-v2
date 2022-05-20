@@ -21,7 +21,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>ResourceIdentifier to a State.</p>
     */
     @NotNull
     @Valid

@@ -12,17 +12,29 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     private java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets;
 
+    /**
+    *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+    */
+
     public ItemShippingDetailsDraftBuilder targets(
             final com.commercetools.importapi.models.orders.ItemShippingTarget... targets) {
         this.targets = new ArrayList<>(Arrays.asList(targets));
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+    */
+
     public ItemShippingDetailsDraftBuilder targets(
             final java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets) {
         this.targets = targets;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+    */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
             final com.commercetools.importapi.models.orders.ItemShippingTarget... targets) {
@@ -33,6 +45,10 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+    */
+
     public ItemShippingDetailsDraftBuilder plusTargets(
             Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTargetBuilder> builder) {
         if (this.targets == null) {
@@ -42,6 +58,10 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
                 .add(builder.apply(com.commercetools.importapi.models.orders.ItemShippingTargetBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+    */
 
     public ItemShippingDetailsDraftBuilder withTargets(
             Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTargetBuilder> builder) {

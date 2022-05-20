@@ -14,16 +14,28 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
 
     private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
+    /**
+    *  <p><code>name</code> of the FieldDefinition to update.</p>
+    */
+
     public TypeAddLocalizedEnumValueActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
+
+    /**
+    *  <p>Value to append to the array.</p>
+    */
 
     public TypeAddLocalizedEnumValueActionBuilder value(
             Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder> builder) {
         this.value = builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Value to append to the array.</p>
+    */
 
     public TypeAddLocalizedEnumValueActionBuilder value(
             final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {

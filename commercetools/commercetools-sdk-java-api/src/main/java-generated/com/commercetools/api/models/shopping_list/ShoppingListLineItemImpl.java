@@ -72,7 +72,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a <a href="ctp:api:type:Type">Type</a>.</p>
+    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
@@ -90,7 +90,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
@@ -101,14 +101,14 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getProductSlug() {
         return this.productSlug;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:ProductType">ProductType</a>.</p>
+    *  <p>Reference to a ProductType.</p>
     */
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;

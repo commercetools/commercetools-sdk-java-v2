@@ -16,6 +16,10 @@ public class ChangeAmountAuthorizedChangeBuilder implements Builder<ChangeAmount
 
     private com.commercetools.history.models.common.Money nextValue;
 
+    /**
+    *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
+    */
+
     public ChangeAmountAuthorizedChangeBuilder change(final String change) {
         this.change = change;
         return this;

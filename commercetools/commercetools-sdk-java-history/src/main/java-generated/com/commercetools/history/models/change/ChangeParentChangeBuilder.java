@@ -16,6 +16,10 @@ public class ChangeParentChangeBuilder implements Builder<ChangeParentChange> {
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeParent</code></p>
+    */
+
     public ChangeParentChangeBuilder change(final String change) {
         this.change = change;
         return this;

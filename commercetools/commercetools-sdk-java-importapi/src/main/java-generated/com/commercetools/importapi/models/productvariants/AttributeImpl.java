@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>This type represents the value of an attribute of a product variant.
-*  The name and type property must match the name and type property of an attribute definition of the product type.</p>
+*  <p>This type represents the value of an attribute of a product variant. The name and type property must match the name and type property of an attribute definition of the product type.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class AttributeImpl implements Attribute, ModelBase {
@@ -35,9 +34,7 @@ public class AttributeImpl implements Attribute, ModelBase {
     }
 
     /**
-    *  <p>The name of this attribute must match a name of the product types attribute definitions.
-    *  The name is required if this type is used in a product variant and must not be set when
-    *  used in a product variant patch.</p>
+    *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
     */
     public String getName() {
         return this.name;

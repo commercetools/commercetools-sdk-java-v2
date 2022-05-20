@@ -63,15 +63,27 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         return this;
     }
 
+    /**
+    *  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>
+    */
+
     public LineItemDraftBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
+    /**
+    *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
+    */
+
     public LineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
+
+    /**
+    *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+    */
 
     public LineItemDraftBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -80,11 +92,19 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         return this;
     }
 
+    /**
+    *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+    */
+
     public LineItemDraftBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
+
+    /**
+    *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+    */
 
     public LineItemDraftBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -94,11 +114,19 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         return this;
     }
 
+    /**
+    *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+    */
+
     public LineItemDraftBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
+
+    /**
+    *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+    */
 
     public LineItemDraftBuilder externalTaxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
@@ -107,11 +135,19 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         return this;
     }
 
+    /**
+    *  <p>An external tax rate can be set if the cart has the <code>External</code> TaxMode.</p>
+    */
+
     public LineItemDraftBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
+
+    /**
+    *  <p>The custom fields.</p>
+    */
 
     public LineItemDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -119,10 +155,18 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         return this;
     }
 
+    /**
+    *  <p>The custom fields.</p>
+    */
+
     public LineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+    *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+    */
 
     public LineItemDraftBuilder externalPrice(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -130,10 +174,18 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         return this;
     }
 
+    /**
+    *  <p>Sets the line item <code>price</code> to the given value and sets the line item <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+    */
+
     public LineItemDraftBuilder externalPrice(@Nullable final com.commercetools.api.models.common.Money externalPrice) {
         this.externalPrice = externalPrice;
         return this;
     }
+
+    /**
+    *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+    */
 
     public LineItemDraftBuilder externalTotalPrice(
             Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
@@ -143,11 +195,19 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         return this;
     }
 
+    /**
+    *  <p>Sets the line item <code>price</code> and <code>totalPrice</code> to the given values and sets the line item <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+    */
+
     public LineItemDraftBuilder externalTotalPrice(
             @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.externalTotalPrice = externalTotalPrice;
         return this;
     }
+
+    /**
+    *  <p>Container for line item specific address(es).</p>
+    */
 
     public LineItemDraftBuilder shippingDetails(
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
@@ -155,6 +215,10 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Container for line item specific address(es).</p>
+    */
 
     public LineItemDraftBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {

@@ -15,6 +15,10 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
+    /**
+    *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+    */
+
     public ProductSetTaxCategoryActionBuilder taxCategory(
             Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder> builder) {
         this.taxCategory = builder
@@ -22,6 +26,10 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
                 .build();
         return this;
     }
+
+    /**
+    *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
+    */
 
     public ProductSetTaxCategoryActionBuilder taxCategory(
             @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {

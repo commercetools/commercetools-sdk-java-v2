@@ -12,17 +12,29 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets;
 
+    /**
+    *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+    */
+
     public ItemShippingDetailsDraftBuilder targets(
             final com.commercetools.api.models.cart.ItemShippingTarget... targets) {
         this.targets = new ArrayList<>(Arrays.asList(targets));
         return this;
     }
 
+    /**
+    *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+    */
+
     public ItemShippingDetailsDraftBuilder targets(
             final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets) {
         this.targets = targets;
         return this;
     }
+
+    /**
+    *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+    */
 
     public ItemShippingDetailsDraftBuilder plusTargets(
             final com.commercetools.api.models.cart.ItemShippingTarget... targets) {
@@ -33,6 +45,10 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return this;
     }
 
+    /**
+    *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+    */
+
     public ItemShippingDetailsDraftBuilder plusTargets(
             Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {
         if (this.targets == null) {
@@ -41,6 +57,10 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         this.targets.add(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have <code>shippingDetails</code> where the <code>targets</code> sum does not match the quantity of the line item or custom line item. For the order creation and order updates the <code>targets</code> sum must match the quantity.</p>
+    */
 
     public ItemShippingDetailsDraftBuilder withTargets(
             Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTargetBuilder> builder) {

@@ -15,6 +15,10 @@ public class SetLastNameChangeBuilder implements Builder<SetLastNameChange> {
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setLastName</code></p>
+    */
+
     public SetLastNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

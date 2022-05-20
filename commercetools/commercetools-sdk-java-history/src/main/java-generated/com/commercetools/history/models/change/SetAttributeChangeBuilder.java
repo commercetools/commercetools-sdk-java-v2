@@ -18,6 +18,10 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     private com.commercetools.history.models.change_value.AttributeValue nextValue;
 
+    /**
+    *  <p>Update action for <code>setAttribute</code></p>
+    */
+
     public SetAttributeChangeBuilder change(final String change) {
         this.change = change;
         return this;

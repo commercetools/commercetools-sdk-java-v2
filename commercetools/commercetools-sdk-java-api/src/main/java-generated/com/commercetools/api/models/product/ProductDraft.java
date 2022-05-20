@@ -23,8 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductDraft {
 
     /**
-    *  <p>A predefined product type assigned to the product.
-    *  All products must have a product type.</p>
+    *  <p>A predefined product type assigned to the product. All products must have a product type.</p>
     */
     @NotNull
     @Valid
@@ -37,10 +36,7 @@ public interface ProductDraft {
     public LocalizedString getName();
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URLs for the product.
-    *  A slug must be unique across a project, but a product can have the same slug for different languages.
-    *  Slugs have a maximum size of 256.
-    *  Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
+    *  <p>Human-readable identifiers usually used as deep-link URLs for the product. A slug must be unique across a project, but a product can have the same slug for different languages. Slugs have a maximum size of 256. Valid characters are: alphabetic characters (<code>A-Z, a-z</code>), numeric characters (<code>0-9</code>), underscores (<code>_</code>) and hyphens (<code>-</code>).</p>
     */
     @NotNull
     @Valid
@@ -82,8 +78,7 @@ public interface ProductDraft {
     public LocalizedString getMetaKeywords();
 
     /**
-    *  <p>The master product variant.
-    *  Required if the <code>variants</code> array has product variants.</p>
+    *  <p>The master product variant. Required if the <code>variants</code> array has product variants.</p>
     */
     @Valid
     @JsonProperty("masterVariant")
@@ -116,7 +111,7 @@ public interface ProductDraft {
     public Boolean getPublish();
 
     /**
-    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> <a href="ctp:api:type:ProductPriceModeEnum">ProductPriceMode</a> is used.</p>
+    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
     */
 
     @JsonProperty("priceMode")

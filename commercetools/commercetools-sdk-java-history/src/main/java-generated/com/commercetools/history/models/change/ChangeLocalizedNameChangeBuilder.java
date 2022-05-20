@@ -16,6 +16,10 @@ public class ChangeLocalizedNameChangeBuilder implements Builder<ChangeLocalized
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeName</code></p>
+    */
+
     public ChangeLocalizedNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

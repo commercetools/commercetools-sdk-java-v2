@@ -61,10 +61,18 @@ public class CategoryBuilder implements Builder<Category> {
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Category.</p>
+    */
+
     public CategoryBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>The current version of the category.</p>
+    */
 
     public CategoryBuilder version(final Long version) {
         this.version = version;
@@ -81,11 +89,19 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+    */
+
     public CategoryBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+    */
 
     public CategoryBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -93,11 +109,19 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public CategoryBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public CategoryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -115,11 +139,19 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+    *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+    */
+
     public CategoryBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>human-readable identifiers usually used as deep-link URL to the related category. Each slug is unique across a project, but a category can have the same slug for different languages.</p>
+    */
 
     public CategoryBuilder slug(final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
@@ -138,16 +170,28 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+    *  <p>Contains the parent path towards the root category.</p>
+    */
+
     public CategoryBuilder ancestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
         this.ancestors = new ArrayList<>(Arrays.asList(ancestors));
         return this;
     }
+
+    /**
+    *  <p>Contains the parent path towards the root category.</p>
+    */
 
     public CategoryBuilder ancestors(
             final java.util.List<com.commercetools.api.models.category.CategoryReference> ancestors) {
         this.ancestors = ancestors;
         return this;
     }
+
+    /**
+    *  <p>Contains the parent path towards the root category.</p>
+    */
 
     public CategoryBuilder plusAncestors(final com.commercetools.api.models.category.CategoryReference... ancestors) {
         if (this.ancestors == null) {
@@ -156,6 +200,10 @@ public class CategoryBuilder implements Builder<Category> {
         this.ancestors.addAll(Arrays.asList(ancestors));
         return this;
     }
+
+    /**
+    *  <p>Contains the parent path towards the root category.</p>
+    */
 
     public CategoryBuilder plusAncestors(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
@@ -166,6 +214,10 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+    *  <p>Contains the parent path towards the root category.</p>
+    */
+
     public CategoryBuilder withAncestors(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         this.ancestors = new ArrayList<>();
@@ -173,16 +225,28 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+    *  <p>A category that is the parent of this category in the category tree.</p>
+    */
+
     public CategoryBuilder parent(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         this.parent = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>A category that is the parent of this category in the category tree.</p>
+    */
+
     public CategoryBuilder parent(@Nullable final com.commercetools.api.models.category.CategoryReference parent) {
         this.parent = parent;
         return this;
     }
+
+    /**
+    *  <p>An attribute as base for a custom category order in one level.</p>
+    */
 
     public CategoryBuilder orderHint(final String orderHint) {
         this.orderHint = orderHint;
@@ -240,15 +304,27 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+    *  <p>Can be used to store images, icons or movies related to this category.</p>
+    */
+
     public CategoryBuilder assets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
         this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
 
+    /**
+    *  <p>Can be used to store images, icons or movies related to this category.</p>
+    */
+
     public CategoryBuilder assets(@Nullable final java.util.List<com.commercetools.api.models.common.Asset> assets) {
         this.assets = assets;
         return this;
     }
+
+    /**
+    *  <p>Can be used to store images, icons or movies related to this category.</p>
+    */
 
     public CategoryBuilder plusAssets(@Nullable final com.commercetools.api.models.common.Asset... assets) {
         if (this.assets == null) {
@@ -257,6 +333,10 @@ public class CategoryBuilder implements Builder<Category> {
         this.assets.addAll(Arrays.asList(assets));
         return this;
     }
+
+    /**
+    *  <p>Can be used to store images, icons or movies related to this category.</p>
+    */
 
     public CategoryBuilder plusAssets(
             Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
@@ -267,12 +347,20 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+    *  <p>Can be used to store images, icons or movies related to this category.</p>
+    */
+
     public CategoryBuilder withAssets(
             Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.AssetBuilder> builder) {
         this.assets = new ArrayList<>();
         this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the Category.</p>
+    */
 
     public CategoryBuilder key(@Nullable final String key) {
         this.key = key;

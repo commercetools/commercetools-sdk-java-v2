@@ -15,6 +15,10 @@ public class SetAnonymousIdChangeBuilder implements Builder<SetAnonymousIdChange
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setAnonymousId</code></p>
+    */
+
     public SetAnonymousIdChangeBuilder change(final String change) {
         this.change = change;
         return this;

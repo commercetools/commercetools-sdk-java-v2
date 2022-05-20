@@ -19,7 +19,7 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
     String CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED = "changeCountryTaxRateFallbackEnabled";
 
     /**
-    *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See <a href="ctp:api:type:CartsConfiguration">CartsConfiguration</a>.</p>
+    *  <p>When <code>true</code>, country <em>- no state</em> Tax Rate is used as fallback. See CartsConfiguration.</p>
     */
     @NotNull
     @JsonProperty("countryTaxRateFallbackEnabled")

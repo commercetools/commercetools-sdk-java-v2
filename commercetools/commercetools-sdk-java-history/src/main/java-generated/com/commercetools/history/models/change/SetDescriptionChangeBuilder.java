@@ -15,6 +15,10 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setDescription</code></p>
+    */
+
     public SetDescriptionChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -45,8 +45,8 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
     /**
     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
     *  <ul>
-    *  <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-    *  <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+    *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+    *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
     *  </ul>
     */
     public Long getCentAmount() {
@@ -54,7 +54,7 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
     }
 
     /**
-    *  <p>Currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    *  <p>Currency code compliant to ISO 4217.</p>
     */
     public String getCurrencyCode() {
         return this.currencyCode;
@@ -70,8 +70,8 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
     /**
     *  <p>Number of digits after the decimal separator:</p>
     *  <ul>
-    *  <li>Equal to the default number of fraction digits for a currency in <a href="ctp:api:type:CentPrecisionMoney">CentPrecisionMoney</a>.</li>
-    *  <li>Greater than the default number of fraction digits for a currency in <a href="ctp:api:type:HighPrecisionMoney">HighPrecisionMoney</a>.</li>
+    *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
+    *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
     *  </ul>
     */
     public Integer getFractionDigits() {

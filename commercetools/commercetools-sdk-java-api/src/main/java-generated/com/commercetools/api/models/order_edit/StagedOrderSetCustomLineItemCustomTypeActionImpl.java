@@ -49,15 +49,14 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
     }
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the CustomLineItem with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+    *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the CustomLineItem.</p>
+    *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;

@@ -19,11 +19,19 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
         return this;
     }
 
+    /**
+    *  <p>The offending variant values.</p>
+    */
+
     public DuplicateVariantValuesErrorBuilder variantValues(
             Function<com.commercetools.importapi.models.errors.VariantValuesBuilder, com.commercetools.importapi.models.errors.VariantValuesBuilder> builder) {
         this.variantValues = builder.apply(com.commercetools.importapi.models.errors.VariantValuesBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The offending variant values.</p>
+    */
 
     public DuplicateVariantValuesErrorBuilder variantValues(
             final com.commercetools.importapi.models.errors.VariantValues variantValues) {

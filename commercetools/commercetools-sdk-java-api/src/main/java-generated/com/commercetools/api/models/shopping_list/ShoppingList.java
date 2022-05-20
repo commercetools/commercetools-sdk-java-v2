@@ -51,14 +51,14 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
@@ -100,9 +100,7 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
     public LocalizedString getName();
 
     /**
-    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list.
-    *  Each slug is unique across a project, but a shopping list can have the same slug for different languages.
-    *  The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
     */
     @Valid
     @JsonProperty("slug")

@@ -44,7 +44,7 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:Channel">Channel</a>.</p>
+    *  <p>Reference to a Channel.</p>
     */
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;

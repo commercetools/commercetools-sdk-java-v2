@@ -59,8 +59,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-    *  <p>Items which are shipped in this delivery regardless their distribution over several parcels.
-    *  Can also be specified individually for each Parcel.</p>
+    *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
     */
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;

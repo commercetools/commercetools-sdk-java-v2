@@ -35,10 +35,18 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
         return this;
     }
 
+    /**
+    *  <p>The URL of the image.</p>
+    */
+
     public ProductSetImageLabelActionBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
+
+    /**
+    *  <p>The new image label. If left blank or set to null, the label is removed.</p>
+    */
 
     public ProductSetImageLabelActionBuilder label(@Nullable final String label) {
         this.label = label;

@@ -17,16 +17,28 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
     @Nullable
     private com.commercetools.api.models.inventory.InventoryEntry obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced InventoryEntry.</p>
+    */
+
     public InventoryEntryReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+    */
 
     public InventoryEntryReferenceBuilder obj(
             Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntryBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+    */
 
     public InventoryEntryReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.inventory.InventoryEntry obj) {

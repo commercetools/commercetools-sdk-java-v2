@@ -12,17 +12,29 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     private java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources;
 
+    /**
+    *  <p>The category import resources of this request.</p>
+    */
+
     public CategoryImportRequestBuilder resources(
             final com.commercetools.importapi.models.categories.CategoryImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
 
+    /**
+    *  <p>The category import resources of this request.</p>
+    */
+
     public CategoryImportRequestBuilder resources(
             final java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources) {
         this.resources = resources;
         return this;
     }
+
+    /**
+    *  <p>The category import resources of this request.</p>
+    */
 
     public CategoryImportRequestBuilder plusResources(
             final com.commercetools.importapi.models.categories.CategoryImport... resources) {
@@ -33,6 +45,10 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
         return this;
     }
 
+    /**
+    *  <p>The category import resources of this request.</p>
+    */
+
     public CategoryImportRequestBuilder plusResources(
             Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImportBuilder> builder) {
         if (this.resources == null) {
@@ -42,6 +58,10 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
                 .add(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>The category import resources of this request.</p>
+    */
 
     public CategoryImportRequestBuilder withResources(
             Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImportBuilder> builder) {

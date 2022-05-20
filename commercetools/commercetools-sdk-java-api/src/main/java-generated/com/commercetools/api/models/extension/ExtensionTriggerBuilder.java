@@ -13,22 +13,38 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
 
     private java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions;
 
+    /**
+    *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, and <code>customer</code> are supported.</p>
+    */
+
     public ExtensionTriggerBuilder resourceTypeId(
             final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
         return this;
     }
 
+    /**
+    *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+    */
+
     public ExtensionTriggerBuilder actions(final com.commercetools.api.models.extension.ExtensionAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
+
+    /**
+    *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+    */
 
     public ExtensionTriggerBuilder actions(
             final java.util.List<com.commercetools.api.models.extension.ExtensionAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+    *  <p><code>Create</code> and <code>Update</code> requests are supported.</p>
+    */
 
     public ExtensionTriggerBuilder plusActions(
             final com.commercetools.api.models.extension.ExtensionAction... actions) {

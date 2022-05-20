@@ -24,6 +24,10 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
         return this;
     }
 
+    /**
+    *  <p>A number in the range [0..1]</p>
+    */
+
     public TaxPortionBuilder rate(final Double rate) {
         this.rate = rate;
         return this;

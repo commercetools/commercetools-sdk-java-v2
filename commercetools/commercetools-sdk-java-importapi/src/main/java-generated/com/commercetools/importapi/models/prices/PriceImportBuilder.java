@@ -52,10 +52,18 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Price.value</code>.</p>
+    */
+
     public PriceImportBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Price.value</code>.</p>
+    */
 
     public PriceImportBuilder value(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
@@ -63,20 +71,36 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Price.county</code>.</p>
+    */
+
     public PriceImportBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Price.validFrom</code>.</p>
+    */
 
     public PriceImportBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Price.validUntil</code>.</p>
+    */
+
     public PriceImportBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
+
+    /**
+    *  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+    */
 
     public PriceImportBuilder customerGroup(
             Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder> builder) {
@@ -86,11 +110,19 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
+    /**
+    *  <p>The Reference to the CustomerGroup with which the EmbeddedPrice is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+    */
+
     public PriceImportBuilder customerGroup(
             @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+    *  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+    */
 
     public PriceImportBuilder channel(
             Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
@@ -98,11 +130,19 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
+    /**
+    *  <p>The Reference to the Channel with which the EmbeddedPrice is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+    */
+
     public PriceImportBuilder channel(
             @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference channel) {
         this.channel = channel;
         return this;
     }
+
+    /**
+    *  <p>Sets a discounted price from an external service.</p>
+    */
 
     public PriceImportBuilder discounted(
             Function<com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPriceBuilder> builder) {
@@ -110,27 +150,47 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
+    /**
+    *  <p>Sets a discounted price from an external service.</p>
+    */
+
     public PriceImportBuilder discounted(
             @Nullable final com.commercetools.importapi.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
 
+    /**
+    *  <p>Only the EmbeddedPrice updates will be published to <code>staged</code> and <code>current</code> projection.</p>
+    */
+
     public PriceImportBuilder publish(@Nullable final Boolean publish) {
         this.publish = publish;
         return this;
     }
+
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
 
     public PriceImportBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
 
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
+
     public PriceImportBuilder tiers(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
         this.tiers = tiers;
         return this;
     }
+
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
 
     public PriceImportBuilder plusTiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
         if (this.tiers == null) {
@@ -139,6 +199,10 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         this.tiers.addAll(Arrays.asList(tiers));
         return this;
     }
+
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
 
     public PriceImportBuilder plusTiers(
             Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
@@ -149,6 +213,10 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
+
     public PriceImportBuilder withTiers(
             Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
         this.tiers = new ArrayList<>();
@@ -156,16 +224,28 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
+    /**
+    *  <p>The custom fields for this price.</p>
+    */
+
     public PriceImportBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>The custom fields for this price.</p>
+    */
+
     public PriceImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;
         return this;
     }
+
+    /**
+    *  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+    */
 
     public PriceImportBuilder productVariant(
             Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder> builder) {
@@ -175,17 +255,29 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         return this;
     }
 
+    /**
+    *  <p>The ProductVariant in which this EmbeddedPrice is contained. The Reference to the ProductVariant with which the EmbeddedPrice is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+    */
+
     public PriceImportBuilder productVariant(
             final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
         return this;
     }
 
+    /**
+    *  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+    */
+
     public PriceImportBuilder product(
             Function<com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The Product in which the Product Variant containing this EmbeddedPrice is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the EmbeddedPrice is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+    */
 
     public PriceImportBuilder product(final com.commercetools.importapi.models.common.ProductKeyReference product) {
         this.product = product;

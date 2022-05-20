@@ -16,6 +16,10 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
 
     private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
 
+    /**
+    *  <p>Update action for <code>addDelivery</code></p>
+    */
+
     public AddDeliveryChangeBuilder change(final String change) {
         this.change = change;
         return this;

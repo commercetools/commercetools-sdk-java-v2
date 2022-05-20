@@ -22,6 +22,10 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     private java.lang.Object previousValue;
 
+    /**
+    *  <p>Update action for <code>setAssetCustomField</code></p>
+    */
+
     public SetAssetCustomFieldChangeBuilder change(final String change) {
         this.change = change;
         return this;

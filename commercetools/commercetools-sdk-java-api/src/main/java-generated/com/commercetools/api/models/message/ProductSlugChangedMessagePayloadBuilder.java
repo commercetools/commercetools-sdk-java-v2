@@ -17,11 +17,19 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
     @Nullable
     private com.commercetools.api.models.common.LocalizedString oldSlug;
 
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
+
     public ProductSlugChangedMessagePayloadBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public ProductSlugChangedMessagePayloadBuilder slug(
             final com.commercetools.api.models.common.LocalizedString slug) {
@@ -29,11 +37,19 @@ public class ProductSlugChangedMessagePayloadBuilder implements Builder<ProductS
         return this;
     }
 
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
+
     public ProductSlugChangedMessagePayloadBuilder oldSlug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.oldSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+    */
 
     public ProductSlugChangedMessagePayloadBuilder oldSlug(
             @Nullable final com.commercetools.api.models.common.LocalizedString oldSlug) {

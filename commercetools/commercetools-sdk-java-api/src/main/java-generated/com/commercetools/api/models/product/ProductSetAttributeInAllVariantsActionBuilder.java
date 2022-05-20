@@ -24,6 +24,10 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+    *  <p>The same update behavior as for Set Attribute applies.</p>
+    */
+
     public ProductSetAttributeInAllVariantsActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;

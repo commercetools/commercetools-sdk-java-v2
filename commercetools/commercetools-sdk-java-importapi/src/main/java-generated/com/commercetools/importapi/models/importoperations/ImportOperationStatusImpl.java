@@ -36,22 +36,21 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
     }
 
     /**
-    *  <p>The ID of the <a href="#importoperation">ImportOperation</a>.</p>
+    *  <p>The ID of the ImportOperation.</p>
     */
     public String getOperationId() {
         return this.operationId;
     }
 
     /**
-    *  <p>The validation state of the <a href="#importoperation">ImportOperation</a>.</p>
+    *  <p>The validation state of the ImportOperation.</p>
     */
     public com.commercetools.importapi.models.importoperations.ImportOperationState getState() {
         return this.state;
     }
 
     /**
-    *  <p>The validation errors for the <a href="#importoperation">ImportOperation</a>.
-    *  See <a href="/error">Errors</a>.</p>
+    *  <p>The validation errors for the ImportOperation. See Errors.</p>
     */
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;

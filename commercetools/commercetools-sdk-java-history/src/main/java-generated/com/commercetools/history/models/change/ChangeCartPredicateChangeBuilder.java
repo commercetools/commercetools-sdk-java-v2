@@ -15,6 +15,10 @@ public class ChangeCartPredicateChangeBuilder implements Builder<ChangeCartPredi
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>changeCartPredicate</code></p>
+    */
+
     public ChangeCartPredicateChangeBuilder change(final String change) {
         this.change = change;
         return this;

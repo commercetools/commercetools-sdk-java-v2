@@ -45,10 +45,18 @@ public class ProductBuilder implements Builder<Product> {
     @Nullable
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Product.</p>
+    */
+
     public ProductBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>The current version of the product.</p>
+    */
 
     public ProductBuilder version(final Long version) {
         this.version = version;
@@ -65,11 +73,19 @@ public class ProductBuilder implements Builder<Product> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ProductBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -77,16 +93,28 @@ public class ProductBuilder implements Builder<Product> {
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ProductBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
+    */
 
     public ProductBuilder key(@Nullable final String key) {
         this.key = key;
@@ -106,11 +134,19 @@ public class ProductBuilder implements Builder<Product> {
         return this;
     }
 
+    /**
+    *  <p>The product data in the master catalog.</p>
+    */
+
     public ProductBuilder masterData(
             Function<com.commercetools.api.models.product.ProductCatalogDataBuilder, com.commercetools.api.models.product.ProductCatalogDataBuilder> builder) {
         this.masterData = builder.apply(com.commercetools.api.models.product.ProductCatalogDataBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The product data in the master catalog.</p>
+    */
 
     public ProductBuilder masterData(final com.commercetools.api.models.product.ProductCatalogData masterData) {
         this.masterData = masterData;
@@ -141,6 +177,10 @@ public class ProductBuilder implements Builder<Product> {
         return this;
     }
 
+    /**
+    *  <p>Statistics about the review ratings taken into account for this product.</p>
+    */
+
     public ProductBuilder reviewRatingStatistics(
             Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatisticsBuilder> builder) {
         this.reviewRatingStatistics = builder
@@ -149,11 +189,19 @@ public class ProductBuilder implements Builder<Product> {
         return this;
     }
 
+    /**
+    *  <p>Statistics about the review ratings taken into account for this product.</p>
+    */
+
     public ProductBuilder reviewRatingStatistics(
             @Nullable final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
         this.reviewRatingStatistics = reviewRatingStatistics;
         return this;
     }
+
+    /**
+    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+    */
 
     public ProductBuilder priceMode(
             @Nullable final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {

@@ -28,11 +28,19 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
         return this;
     }
 
+    /**
+    *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+    */
+
     public CustomerSignInResultBuilder cart(
             Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
         this.cart = builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p>
+    */
 
     public CustomerSignInResultBuilder cart(@Nullable final com.commercetools.api.models.cart.Cart cart) {
         this.cart = cart;

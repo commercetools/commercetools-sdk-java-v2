@@ -17,10 +17,18 @@ public class CustomerGroupResourceIdentifierBuilder implements Builder<CustomerG
     @Nullable
     private String key;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+    */
+
     public CustomerGroupResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+    */
 
     public CustomerGroupResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

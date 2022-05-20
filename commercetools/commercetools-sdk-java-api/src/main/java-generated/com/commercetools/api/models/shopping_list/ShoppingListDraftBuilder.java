@@ -44,11 +44,19 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    /**
+    *  <p>The custom fields.</p>
+    */
+
     public ShoppingListDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The custom fields.</p>
+    */
 
     public ShoppingListDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
@@ -68,6 +76,10 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
         return this;
     }
 
+    /**
+    *  <p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p>
+    */
+
     public ShoppingListDraftBuilder deleteDaysAfterLastModification(
             @Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
@@ -85,6 +97,10 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
         this.description = description;
         return this;
     }
+
+    /**
+    *  <p>User-defined unique identifier for the ShoppingList.</p>
+    */
 
     public ShoppingListDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -141,11 +157,19 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
         return this;
     }
 
+    /**
+    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+    */
+
     public ShoppingListDraftBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Human-readable identifiers usually used as deep-link URL to the related shopping list. Each slug is unique across a project, but a shopping list can have the same slug for different languages. The slug must match the pattern [a-zA-Z0-9_-]{2,256}.</p>
+    */
 
     public ShoppingListDraftBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
@@ -190,6 +214,10 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
                 .add(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</p>
+    */
 
     public ShoppingListDraftBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;

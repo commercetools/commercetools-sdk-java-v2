@@ -17,16 +17,28 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
     @Nullable
     private com.commercetools.api.models.standalone_price.StandalonePrice obj;
 
+    /**
+    *  <p>Unique ID of the referenced resource.</p>
+    */
+
     public StandalonePriceReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+    */
 
     public StandalonePriceReferenceBuilder obj(
             Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.standalone_price.StandalonePriceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+    */
 
     public StandalonePriceReferenceBuilder obj(
             @Nullable final com.commercetools.api.models.standalone_price.StandalonePrice obj) {

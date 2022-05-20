@@ -37,7 +37,7 @@ public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCust
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
+    *  <p>ResourceIdentifier to a CustomerGroup.</p>
     */
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;

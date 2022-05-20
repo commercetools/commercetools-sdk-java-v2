@@ -14,10 +14,18 @@ public class ResultItemBuilder implements Builder<ResultItem> {
 
     private java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants;
 
+    /**
+    *  <p>The URL of the image.</p>
+    */
+
     public ResultItemBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
+
+    /**
+    *  <p>An array of product variants containing the image URL.</p>
+    */
 
     public ResultItemBuilder productVariants(
             final com.commercetools.ml.models.common.ProductVariant... productVariants) {
@@ -25,11 +33,19 @@ public class ResultItemBuilder implements Builder<ResultItem> {
         return this;
     }
 
+    /**
+    *  <p>An array of product variants containing the image URL.</p>
+    */
+
     public ResultItemBuilder productVariants(
             final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
         this.productVariants = productVariants;
         return this;
     }
+
+    /**
+    *  <p>An array of product variants containing the image URL.</p>
+    */
 
     public ResultItemBuilder plusProductVariants(
             final com.commercetools.ml.models.common.ProductVariant... productVariants) {
@@ -40,6 +56,10 @@ public class ResultItemBuilder implements Builder<ResultItem> {
         return this;
     }
 
+    /**
+    *  <p>An array of product variants containing the image URL.</p>
+    */
+
     public ResultItemBuilder plusProductVariants(
             Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
         if (this.productVariants == null) {
@@ -48,6 +68,10 @@ public class ResultItemBuilder implements Builder<ResultItem> {
         this.productVariants.add(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>An array of product variants containing the image URL.</p>
+    */
 
     public ResultItemBuilder withProductVariants(
             Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {

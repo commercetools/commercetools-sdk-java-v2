@@ -14,6 +14,10 @@ public class RemoveAssetChangeBuilder implements Builder<RemoveAssetChange> {
 
     private com.commercetools.history.models.common.Asset previousValue;
 
+    /**
+    *  <p>Update action for <code>removeAsset</code></p>
+    */
+
     public RemoveAssetChangeBuilder change(final String change) {
         this.change = change;
         return this;

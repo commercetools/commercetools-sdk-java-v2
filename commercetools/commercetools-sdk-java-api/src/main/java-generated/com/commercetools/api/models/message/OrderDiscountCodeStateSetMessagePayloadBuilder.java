@@ -20,12 +20,20 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     @Nullable
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
+    /**
+    *  <p>Reference to a DiscountCode.</p>
+    */
+
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
             Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
         this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a DiscountCode.</p>
+    */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
             final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {

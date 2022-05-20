@@ -40,14 +40,14 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
     }
 
     /**
-    *  <p>Name of the <a href="ctp:api:type:FieldDefinition">Field Definition</a> to update.</p>
+    *  <p>Name of the Field Definition to update.</p>
     */
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-    *  <p>JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values are the corresponding strings used for that language.</p>
+    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
     */
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;

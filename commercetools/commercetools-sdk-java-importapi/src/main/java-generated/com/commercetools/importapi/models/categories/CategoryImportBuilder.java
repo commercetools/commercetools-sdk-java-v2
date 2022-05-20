@@ -50,16 +50,28 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Category.name</code>.</p>
+    */
+
     public CategoryImportBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Category.name</code>.</p>
+    */
+
     public CategoryImportBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+    */
 
     public CategoryImportBuilder slug(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -67,10 +79,18 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+    */
+
     public CategoryImportBuilder slug(final com.commercetools.importapi.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Category.description</code>.</p>
+    */
 
     public CategoryImportBuilder description(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -78,11 +98,19 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Category.description</code>.</p>
+    */
+
     public CategoryImportBuilder description(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+    */
 
     public CategoryImportBuilder parent(
             Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder> builder) {
@@ -90,21 +118,37 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+    */
+
     public CategoryImportBuilder parent(
             @Nullable final com.commercetools.importapi.models.common.CategoryKeyReference parent) {
         this.parent = parent;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Category.orderHint</code>.</p>
+    */
+
     public CategoryImportBuilder orderHint(@Nullable final String orderHint) {
         this.orderHint = orderHint;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Category.externalId</code>.</p>
+    */
+
     public CategoryImportBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Category.metaTitle</code>.</p>
+    */
 
     public CategoryImportBuilder metaTitle(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -112,11 +156,19 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Category.metaTitle</code>.</p>
+    */
+
     public CategoryImportBuilder metaTitle(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Category.metaDescription</code>.</p>
+    */
 
     public CategoryImportBuilder metaDescription(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -125,11 +177,19 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Category.metaDescription</code>.</p>
+    */
+
     public CategoryImportBuilder metaDescription(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+    */
 
     public CategoryImportBuilder metaKeywords(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
@@ -137,6 +197,10 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+    */
 
     public CategoryImportBuilder metaKeywords(
             @Nullable final com.commercetools.importapi.models.common.LocalizedString metaKeywords) {
@@ -179,11 +243,19 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
         return this;
     }
 
+    /**
+    *  <p>The custom fields for this Category.</p>
+    */
+
     public CategoryImportBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The custom fields for this Category.</p>
+    */
 
     public CategoryImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;

@@ -24,25 +24,45 @@ public class ProductSelectionProductPagedQueryResponseBuilder
 
     private java.util.List<com.commercetools.api.models.product_selection.AssignedProductReference> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public ProductSelectionProductPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public ProductSelectionProductPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
 
+    /**
+    *  <p>Actual number of results returned.</p>
+    */
+
     public ProductSelectionProductPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
 
+    /**
+    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+    */
+
     public ProductSelectionProductPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>References to Products that are assigned to the ProductSelection.</p>
+    */
 
     public ProductSelectionProductPagedQueryResponseBuilder results(
             final com.commercetools.api.models.product_selection.AssignedProductReference... results) {
@@ -50,11 +70,19 @@ public class ProductSelectionProductPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+    *  <p>References to Products that are assigned to the ProductSelection.</p>
+    */
+
     public ProductSelectionProductPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.product_selection.AssignedProductReference> results) {
         this.results = results;
         return this;
     }
+
+    /**
+    *  <p>References to Products that are assigned to the ProductSelection.</p>
+    */
 
     public ProductSelectionProductPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.product_selection.AssignedProductReference... results) {
@@ -65,6 +93,10 @@ public class ProductSelectionProductPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+    *  <p>References to Products that are assigned to the ProductSelection.</p>
+    */
+
     public ProductSelectionProductPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.product_selection.AssignedProductReferenceBuilder, com.commercetools.api.models.product_selection.AssignedProductReferenceBuilder> builder) {
         if (this.results == null) {
@@ -74,6 +106,10 @@ public class ProductSelectionProductPagedQueryResponseBuilder
             builder.apply(com.commercetools.api.models.product_selection.AssignedProductReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>References to Products that are assigned to the ProductSelection.</p>
+    */
 
     public ProductSelectionProductPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.product_selection.AssignedProductReferenceBuilder, com.commercetools.api.models.product_selection.AssignedProductReferenceBuilder> builder) {

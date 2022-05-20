@@ -14,10 +14,18 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     private com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue;
 
+    /**
+    *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+    */
+
     public AddInterfaceInteractionChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>Only available if <code>expand</code> is set to true</p>
+    */
 
     public AddInterfaceInteractionChangeBuilder nextValue(
             Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder> builder) {
@@ -26,6 +34,10 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Only available if <code>expand</code> is set to true</p>
+    */
 
     public AddInterfaceInteractionChangeBuilder nextValue(
             final com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue) {

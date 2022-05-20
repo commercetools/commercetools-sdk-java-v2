@@ -19,8 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Asset {
 
     /**
-    *  <p>User-defined identifier for the asset.
-    *  Asset keys are unique inside their container (a product variant or a category).</p>
+    *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
     */
     @NotNull
     @JsonProperty("key")
@@ -32,10 +31,10 @@ public interface Asset {
     public List<AssetSource> getSources();
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
     *  }
     *  </code></pre>
     */
@@ -45,10 +44,10 @@ public interface Asset {
     public LocalizedString getName();
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
-    *  <pre><code class="language-json">{
-    *    &quot;de&quot;: &quot;Hundefutter&quot;,
-    *    &quot;en&quot;: &quot;dog food&quot;
+    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+    *  <pre><code>{
+    *    "de": "Hundefutter",
+    *    "en": "dog food"
     *  }
     *  </code></pre>
     */

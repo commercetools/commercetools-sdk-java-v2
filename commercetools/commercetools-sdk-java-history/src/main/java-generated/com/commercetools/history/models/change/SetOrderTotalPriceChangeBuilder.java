@@ -16,6 +16,10 @@ public class SetOrderTotalPriceChangeBuilder implements Builder<SetOrderTotalPri
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+    *  <p>Update action for <code>setOrderTotalPrice</code></p>
+    */
+
     public SetOrderTotalPriceChangeBuilder change(final String change) {
         this.change = change;
         return this;

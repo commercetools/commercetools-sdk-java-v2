@@ -51,8 +51,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the ProductVariant.
-    *  <em>ProductVariant keys are different from Product keys.</em></p>
+    *  <p>User-defined unique identifier for the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
     */
     public String getKey() {
         return this.key;

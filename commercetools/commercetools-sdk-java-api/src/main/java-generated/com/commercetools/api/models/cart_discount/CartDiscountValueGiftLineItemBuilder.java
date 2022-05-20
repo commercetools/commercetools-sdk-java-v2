@@ -22,11 +22,19 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
+    /**
+    *  <p>Reference to a Product.</p>
+    */
+
     public CartDiscountValueGiftLineItemBuilder product(
             Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Product.</p>
+    */
 
     public CartDiscountValueGiftLineItemBuilder product(
             final com.commercetools.api.models.product.ProductReference product) {
@@ -39,11 +47,19 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
         return this;
     }
 
+    /**
+    *  <p>The channel must have the role <code>InventorySupply</code></p>
+    */
+
     public CartDiscountValueGiftLineItemBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The channel must have the role <code>InventorySupply</code></p>
+    */
 
     public CartDiscountValueGiftLineItemBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
@@ -51,12 +67,20 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
         return this;
     }
 
+    /**
+    *  <p>The channel must have the role <code>ProductDistribution</code></p>
+    */
+
     public CartDiscountValueGiftLineItemBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>The channel must have the role <code>ProductDistribution</code></p>
+    */
 
     public CartDiscountValueGiftLineItemBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference distributionChannel) {

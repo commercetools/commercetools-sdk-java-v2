@@ -41,15 +41,14 @@ public class InventoryEntrySetCustomTypeActionImpl implements InventoryEntrySetC
     }
 
     /**
-    *  <p>Defines the <a href="ctp:api:type:Type">Type</a> that extends the InventoryEntry with <a href="/../api/projects/custom-fields">Custom Fields</a>.
-    *  If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
+    *  <p>Defines the Type that extends the InventoryEntry with Custom Fields. If absent, any existing Type and Custom Fields are removed from the InventoryEntry.</p>
     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-    *  <p>Sets the <a href="/../api/projects/custom-fields">Custom Fields</a> fields for the InventoryEntry.</p>
+    *  <p>Sets the Custom Fields fields for the InventoryEntry.</p>
     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;

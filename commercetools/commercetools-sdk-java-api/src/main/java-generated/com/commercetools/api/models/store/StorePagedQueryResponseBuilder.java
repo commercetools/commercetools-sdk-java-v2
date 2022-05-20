@@ -23,6 +23,10 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
 
     private java.util.List<com.commercetools.api.models.store.Store> results;
 
+    /**
+    *  <p>Number of results requested.</p>
+    */
+
     public StorePagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
@@ -37,6 +41,10 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
         this.total = total;
         return this;
     }
+
+    /**
+    *  <p>Number of elements skipped.</p>
+    */
 
     public StorePagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;

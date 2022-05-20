@@ -12,11 +12,19 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
 
     private com.commercetools.api.models.payment.PaymentReference payment;
 
+    /**
+    *  <p>Reference to a Payment.</p>
+    */
+
     public OrderPaymentAddedMessagePayloadBuilder payment(
             Function<com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReferenceBuilder> builder) {
         this.payment = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Payment.</p>
+    */
 
     public OrderPaymentAddedMessagePayloadBuilder payment(
             final com.commercetools.api.models.payment.PaymentReference payment) {

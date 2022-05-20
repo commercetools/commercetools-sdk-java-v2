@@ -17,16 +17,28 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
     @Nullable
     private com.commercetools.api.models.payment.Payment obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Payment.</p>
+    */
+
     public PaymentReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+    */
 
     public PaymentReferenceBuilder obj(
             Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+    */
 
     public PaymentReferenceBuilder obj(@Nullable final com.commercetools.api.models.payment.Payment obj) {
         this.obj = obj;

@@ -18,6 +18,10 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+    *  <p>Update action for <code>setDeliveryAddress</code></p>
+    */
+
     public SetDeliveryAddressChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -18,10 +18,18 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+    *  <p>Update action for <code>setInputTip</code> on product types</p>
+    */
+
     public SetInputTipChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>The name of the updated attribute.</p>
+    */
 
     public SetInputTipChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

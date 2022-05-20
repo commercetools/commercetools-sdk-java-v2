@@ -22,6 +22,10 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
 
     private java.lang.Object previousValue;
 
+    /**
+    *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
+    */
+
     public SetCustomLineItemCustomFieldChangeBuilder change(final String change) {
         this.change = change;
         return this;

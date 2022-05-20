@@ -57,7 +57,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+    *  <p>ResourceIdentifier to a TaxCategory.</p>
     */
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;

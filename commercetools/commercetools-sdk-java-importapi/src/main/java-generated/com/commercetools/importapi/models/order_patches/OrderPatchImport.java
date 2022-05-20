@@ -14,8 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Representation for an update of an <a href="/../api/projects/orders#order">Order</a>. Use this type to import updates for existing
-*  <a href="/../api/projects/orders#order">Orders</a> in a commercetools Project.</p>
+*  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a commercetools Project.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderPatchImportImpl.class)

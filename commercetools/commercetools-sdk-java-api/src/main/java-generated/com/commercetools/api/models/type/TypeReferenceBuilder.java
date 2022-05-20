@@ -17,16 +17,28 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
     @Nullable
     private com.commercetools.api.models.type.Type obj;
 
+    /**
+    *  <p>Platform-generated unique identifier of the referenced Type.</p>
+    */
+
     public TypeReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+    */
 
     public TypeReferenceBuilder obj(
             Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.TypeBuilder> builder) {
         this.obj = builder.apply(com.commercetools.api.models.type.TypeBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+    */
 
     public TypeReferenceBuilder obj(@Nullable final com.commercetools.api.models.type.Type obj) {
         this.obj = obj;

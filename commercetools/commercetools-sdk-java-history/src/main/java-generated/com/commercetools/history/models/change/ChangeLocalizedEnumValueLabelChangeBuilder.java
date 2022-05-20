@@ -22,20 +22,36 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+    *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
+    */
+
     public ChangeLocalizedEnumValueLabelChangeBuilder change(final String change) {
         this.change = change;
         return this;
     }
+
+    /**
+    *  <p>The name of the field definition updated.</p>
+    */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
 
+    /**
+    *  <p>The name of the attribute updated.</p>
+    */
+
     public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
+
+    /**
+    *  <p>Key of the values that was updated</p>
+    */
 
     public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {
         this.valueKey = valueKey;

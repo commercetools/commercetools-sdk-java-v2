@@ -14,16 +14,28 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
 
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
+    /**
+    *  <p>ID of the TaxRate to replace.</p>
+    */
+
     public TaxCategoryReplaceTaxRateActionBuilder taxRateId(final String taxRateId) {
         this.taxRateId = taxRateId;
         return this;
     }
+
+    /**
+    *  <p>New TaxRate to replace with.</p>
+    */
 
     public TaxCategoryReplaceTaxRateActionBuilder taxRate(
             Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraftBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>New TaxRate to replace with.</p>
+    */
 
     public TaxCategoryReplaceTaxRateActionBuilder taxRate(
             final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {

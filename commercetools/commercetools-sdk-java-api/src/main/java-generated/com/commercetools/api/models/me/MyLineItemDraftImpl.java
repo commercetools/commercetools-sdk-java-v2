@@ -71,25 +71,21 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
-    *  <p>When the line item was added to the cart. Optional for backwards
-    *  compatibility reasons only.</p>
+    *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
     */
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
     /**
-    *  <p>By providing supply channel information, you can unique identify
-    *  inventory entries that should be reserved.
-    *  The provided channel should have the InventorySupply role.</p>
+    *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
     /**
-    *  <p>The channel is used to select a ProductPrice.
-    *  The provided channel should have the ProductDistribution role.</p>
+    *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;

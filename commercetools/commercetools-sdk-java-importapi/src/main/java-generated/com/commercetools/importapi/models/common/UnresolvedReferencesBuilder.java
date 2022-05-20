@@ -18,6 +18,10 @@ public class UnresolvedReferencesBuilder implements Builder<UnresolvedReferences
         return this;
     }
 
+    /**
+    *  <p>The type of the referenced resource.</p>
+    */
+
     public UnresolvedReferencesBuilder typeId(final com.commercetools.importapi.models.common.ReferenceType typeId) {
         this.typeId = typeId;
         return this;

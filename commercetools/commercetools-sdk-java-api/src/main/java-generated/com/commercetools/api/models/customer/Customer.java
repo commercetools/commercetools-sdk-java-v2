@@ -52,32 +52,28 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for <a href="/client-logging#events-tracked">events not tracked</a>.</p>
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer.
-    *  It should be unique across a project.
-    *  Once the field was set it cannot be changed anymore.</p>
+    *  <p>The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.</p>
     */
 
     @JsonProperty("customerNumber")
     public String getCustomerNumber();
 
     /**
-    *  <p>The customer's email address and the main identifier of uniqueness for a customer account.
-    *  Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project.
-    *  For more information, see Email uniquenes.</p>
+    *  <p>The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, <em>or</em> for the entire project. For more information, see Email uniquenes.</p>
     */
     @NotNull
     @JsonProperty("email")
@@ -176,9 +172,7 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     public String getKey();
 
     /**
-    *  <p>References to the stores the customer account is associated with.
-    *  If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers.
-    *  If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
+    *  <p>References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.</p>
     */
     @Valid
     @JsonProperty("stores")

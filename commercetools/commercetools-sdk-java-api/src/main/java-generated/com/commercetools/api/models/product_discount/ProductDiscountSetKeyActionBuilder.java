@@ -14,6 +14,10 @@ public class ProductDiscountSetKeyActionBuilder implements Builder<ProductDiscou
     @Nullable
     private String key;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public ProductDiscountSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;

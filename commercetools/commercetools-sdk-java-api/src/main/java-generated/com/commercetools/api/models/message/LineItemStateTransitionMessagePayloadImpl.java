@@ -64,14 +64,14 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Reference to a State.</p>
     */
     public com.commercetools.api.models.state.StateReference getFromState() {
         return this.fromState;
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:State">State</a>.</p>
+    *  <p>Reference to a State.</p>
     */
     public com.commercetools.api.models.state.StateReference getToState() {
         return this.toState;

@@ -14,10 +14,18 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
 
     private java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions;
 
+    /**
+    *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+    */
+
     public CustomerGroupUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
+
+    /**
+    *  <p>Update actions to be performed on the CustomerGroup.</p>
+    */
 
     public CustomerGroupUpdateBuilder actions(
             final com.commercetools.api.models.customer_group.CustomerGroupUpdateAction... actions) {
@@ -25,11 +33,19 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
         return this;
     }
 
+    /**
+    *  <p>Update actions to be performed on the CustomerGroup.</p>
+    */
+
     public CustomerGroupUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
+
+    /**
+    *  <p>Update actions to be performed on the CustomerGroup.</p>
+    */
 
     public CustomerGroupUpdateBuilder plusActions(
             final com.commercetools.api.models.customer_group.CustomerGroupUpdateAction... actions) {
@@ -40,6 +56,10 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
         return this;
     }
 
+    /**
+    *  <p>Update actions to be performed on the CustomerGroup.</p>
+    */
+
     public CustomerGroupUpdateBuilder plusActions(
             Function<com.commercetools.api.models.customer_group.CustomerGroupUpdateActionBuilder, Builder<? extends com.commercetools.api.models.customer_group.CustomerGroupUpdateAction>> builder) {
         if (this.actions == null) {
@@ -49,6 +69,10 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
             builder.apply(com.commercetools.api.models.customer_group.CustomerGroupUpdateActionBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Update actions to be performed on the CustomerGroup.</p>
+    */
 
     public CustomerGroupUpdateBuilder withActions(
             Function<com.commercetools.api.models.customer_group.CustomerGroupUpdateActionBuilder, Builder<? extends com.commercetools.api.models.customer_group.CustomerGroupUpdateAction>> builder) {

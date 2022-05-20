@@ -26,16 +26,28 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     @Nullable
     private Integer quantity;
 
+    /**
+    *  <p>Defaults to the current date and time.</p>
+    */
+
     public TextLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
+
+    /**
+    *  <p>The custom fields.</p>
+    */
 
     public TextLineItemDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>The custom fields.</p>
+    */
 
     public TextLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
@@ -64,6 +76,10 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
         this.name = name;
         return this;
     }
+
+    /**
+    *  <p>Defaults to <code>1</code>.</p>
+    */
 
     public TextLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
         this.quantity = quantity;

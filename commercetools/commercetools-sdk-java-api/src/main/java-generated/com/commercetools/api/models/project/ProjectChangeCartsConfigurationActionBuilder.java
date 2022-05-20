@@ -12,12 +12,20 @@ public class ProjectChangeCartsConfigurationActionBuilder implements Builder<Pro
 
     private com.commercetools.api.models.project.CartsConfiguration cartsConfiguration;
 
+    /**
+    *  <p>Configuration for the Carts feature.</p>
+    */
+
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(
             Function<com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder> builder) {
         this.cartsConfiguration = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of())
                 .build();
         return this;
     }
+
+    /**
+    *  <p>Configuration for the Carts feature.</p>
+    */
 
     public ProjectChangeCartsConfigurationActionBuilder cartsConfiguration(
             final com.commercetools.api.models.project.CartsConfiguration cartsConfiguration) {

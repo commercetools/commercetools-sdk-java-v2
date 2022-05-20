@@ -15,6 +15,10 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
 
     private Integer nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>
+    */
+
     public SetMaxApplicationsPerCustomerChangeBuilder change(final String change) {
         this.change = change;
         return this;

@@ -58,16 +58,14 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     public List<BaseAddress> getAddresses();
 
     /**
-    *  <p>The index of the address in the addresses array.
-    *  The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+    *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
     */
 
     @JsonProperty("defaultShippingAddress")
     public Long getDefaultShippingAddress();
 
     /**
-    *  <p>The index of the address in the addresses array.
-    *  The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+    *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
     */
 
     @JsonProperty("defaultBillingAddress")

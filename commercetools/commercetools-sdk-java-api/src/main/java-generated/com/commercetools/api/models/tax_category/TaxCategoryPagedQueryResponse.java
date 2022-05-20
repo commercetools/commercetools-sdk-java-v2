@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="/../api/general-concepts#pagedqueryresult">PagedQueryResult</a> with <code>results</code> containing an array of <a href="ctp:api:type:TaxCategory">TaxCategory</a>.</p>
+*  <p>PagedQueryResult with <code>results</code> containing an array of TaxCategory.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryPagedQueryResponseImpl.class)
@@ -22,14 +22,14 @@ public interface TaxCategoryPagedQueryResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<TaxCategory> {
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#limit">results requested</a>.</p>
+    *  <p>Number of results requested.</p>
     */
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     @NotNull
     @JsonProperty("offset")
@@ -43,18 +43,14 @@ public interface TaxCategoryPagedQueryResponse
     public Long getCount();
 
     /**
-    *  <p>Total number of results matching the query.
-    *  This number is an estimation that is not <a href="/../api/general-concepts#strong-consistency">strongly consistent</a>.
-    *  This field is returned by default.
-    *  For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>.
-    *  When the results are filtered with a <a href="/../api/predicates/query">Query Predicate</a>, <code>total</code> is subject to a <a href="/../api/limits#queries">limit</a>.</p>
+    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
     */
 
     @JsonProperty("total")
     public Long getTotal();
 
     /**
-    *  <p><a href="ctp:api:type:TaxCategory">TaxCategories</a> matching the query.</p>
+    *  <p>TaxCategories matching the query.</p>
     */
     @NotNull
     @Valid

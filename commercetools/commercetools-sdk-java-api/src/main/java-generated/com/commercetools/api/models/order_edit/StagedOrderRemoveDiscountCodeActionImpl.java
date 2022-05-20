@@ -37,7 +37,7 @@ public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemov
     }
 
     /**
-    *  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
+    *  <p>Reference to a DiscountCode.</p>
     */
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p><a href="/../api/types#reference">Reference</a> to a <a href="ctp:api:type:StandalonePrice">StandalonePrice</a>.</p>
+*  <p>Reference to a StandalonePrice.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class StandalonePriceReferenceImpl implements StandalonePriceReference, ModelBase {
@@ -54,7 +54,7 @@ public class StandalonePriceReferenceImpl implements StandalonePriceReference, M
     }
 
     /**
-    *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for StandalonePrice.</p>
+    *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
     */
     public com.commercetools.api.models.standalone_price.StandalonePrice getObj() {
         return this.obj;

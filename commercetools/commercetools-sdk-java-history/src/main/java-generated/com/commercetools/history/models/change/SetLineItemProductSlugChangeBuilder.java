@@ -20,6 +20,10 @@ public class SetLineItemProductSlugChangeBuilder implements Builder<SetLineItemP
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+    *  <p>Update action for <code>setLineItemProductSlug</code></p>
+    */
+
     public SetLineItemProductSlugChangeBuilder change(final String change) {
         this.change = change;
         return this;

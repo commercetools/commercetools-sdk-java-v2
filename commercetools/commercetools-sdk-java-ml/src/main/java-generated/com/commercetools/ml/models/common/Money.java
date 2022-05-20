@@ -21,7 +21,7 @@ public interface Money {
     public Long getCentAmount();
 
     /**
-    *  <p>The currency code compliant to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>.</p>
+    *  <p>The currency code compliant to ISO 4217.</p>
     */
     @NotNull
     @JsonProperty("currencyCode")

@@ -21,6 +21,10 @@ public class SetLineItemDiscountedPricePerQuantityChangeBuilder
 
     private com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity previousValue;
 
+    /**
+    *  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>
+    */
+
     public SetLineItemDiscountedPricePerQuantityChangeBuilder change(final String change) {
         this.change = change;
         return this;

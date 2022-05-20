@@ -16,10 +16,18 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     @Nullable
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
+    /**
+    *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+    */
+
     public ImportContainerDraftBuilder key(final String key) {
         this.key = key;
         return this;
     }
+
+    /**
+    *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+    */
 
     public ImportContainerDraftBuilder resourceType(
             @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {

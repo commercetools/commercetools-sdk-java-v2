@@ -38,10 +38,18 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     @Nullable
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+    *  <p>Maps to <code>Price.value</code>.</p>
+    */
+
     public LineItemPriceBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Price.value</code>.</p>
+    */
 
     public LineItemPriceBuilder value(
             Function<com.commercetools.importapi.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.importapi.models.common.TypedMoney>> builder) {
@@ -49,20 +57,36 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Price.county</code>.</p>
+    */
+
     public LineItemPriceBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Price.validFrom</code>.</p>
+    */
 
     public LineItemPriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Price.validUntil</code>.</p>
+    */
+
     public LineItemPriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
+
+    /**
+    *  <p>References a customer group by key.</p>
+    */
 
     public LineItemPriceBuilder customerGroup(
             Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder> builder) {
@@ -72,11 +96,19 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    /**
+    *  <p>References a customer group by key.</p>
+    */
+
     public LineItemPriceBuilder customerGroup(
             @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
+
+    /**
+    *  <p>References a channel by key.</p>
+    */
 
     public LineItemPriceBuilder channel(
             Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
@@ -84,11 +116,19 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    /**
+    *  <p>References a channel by key.</p>
+    */
+
     public LineItemPriceBuilder channel(
             @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference channel) {
         this.channel = channel;
         return this;
     }
+
+    /**
+    *  <p>Sets a discounted price from an external service.</p>
+    */
 
     public LineItemPriceBuilder discounted(
             Function<com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPriceBuilder> builder) {
@@ -96,22 +136,38 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    /**
+    *  <p>Sets a discounted price from an external service.</p>
+    */
+
     public LineItemPriceBuilder discounted(
             @Nullable final com.commercetools.importapi.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
 
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
+
     public LineItemPriceBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
+
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
 
     public LineItemPriceBuilder tiers(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
         this.tiers = tiers;
         return this;
     }
+
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
 
     public LineItemPriceBuilder plusTiers(
             @Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -122,6 +178,10 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
+
     public LineItemPriceBuilder plusTiers(
             Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
         if (this.tiers == null) {
@@ -131,6 +191,10 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    /**
+    *  <p>The tiered prices for this price.</p>
+    */
+
     public LineItemPriceBuilder withTiers(
             Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder> builder) {
         this.tiers = new ArrayList<>();
@@ -138,11 +202,19 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>Price.custom</code>.</p>
+    */
+
     public LineItemPriceBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>Price.custom</code>.</p>
+    */
 
     public LineItemPriceBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
         this.custom = custom;

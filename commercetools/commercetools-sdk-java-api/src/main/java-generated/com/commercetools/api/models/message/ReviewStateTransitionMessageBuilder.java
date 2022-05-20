@@ -47,6 +47,10 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
 
     private Boolean force;
 
+    /**
+    *  <p>Platform-generated unique identifier of the Message.</p>
+    */
+
     public ReviewStateTransitionMessageBuilder id(final String id) {
         this.id = id;
         return this;
@@ -67,11 +71,19 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ReviewStateTransitionMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ReviewStateTransitionMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -79,11 +91,19 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this;
     }
 
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
+
     public ReviewStateTransitionMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+    */
 
     public ReviewStateTransitionMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -96,10 +116,18 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
+
     public ReviewStateTransitionMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
+
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
 
     public ReviewStateTransitionMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
@@ -126,11 +154,19 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this;
     }
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public ReviewStateTransitionMessageBuilder oldState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public ReviewStateTransitionMessageBuilder oldState(
             final com.commercetools.api.models.state.StateReference oldState) {
@@ -138,11 +174,19 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this;
     }
 
+    /**
+    *  <p>Reference to a State.</p>
+    */
+
     public ReviewStateTransitionMessageBuilder newState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.newState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a State.</p>
+    */
 
     public ReviewStateTransitionMessageBuilder newState(
             final com.commercetools.api.models.state.StateReference newState) {
@@ -160,10 +204,18 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this;
     }
 
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
+
     public ReviewStateTransitionMessageBuilder target(final com.commercetools.api.models.common.Reference target) {
         this.target = target;
         return this;
     }
+
+    /**
+    *  <p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+    */
 
     public ReviewStateTransitionMessageBuilder target(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {

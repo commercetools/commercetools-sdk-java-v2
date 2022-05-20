@@ -83,7 +83,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-    *  <p>A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>A three-digit currency code as per ISO 3166-1 alpha-2.</p>
     */
     public String getCurrency() {
         return this.currency;
@@ -94,7 +94,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-    *  <p>A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</p>
+    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
     */
     public String getCountry() {
         return this.country;
@@ -142,16 +142,14 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.
-    *  If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
+    *  <p>The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState. If a ChangeSubscription for carts exists, a <code>ResourceDeleted</code> notification will be sent.</p>
     */
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses.
-    *  Each address must contain a key which is unique in this cart.</p>
+    *  <p>Contains addresses for orders with multiple shipping addresses. Each address must contain a key which is unique in this cart.</p>
     */
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
         return this.itemShippingAddresses;

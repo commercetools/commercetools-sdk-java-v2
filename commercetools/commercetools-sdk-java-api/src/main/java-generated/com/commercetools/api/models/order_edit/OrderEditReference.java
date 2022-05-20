@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p><a href="ctp:api:type:Reference">Reference</a> to a <a href="ctp:api:type:OrderEdit">OrderEdit</a>.</p>
+*  <p>Reference to a OrderEdit.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderEditReferenceImpl.class)
@@ -24,14 +24,14 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     String ORDER_EDIT = "order-edit";
 
     /**
-    *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with <a href="/../api/general-concepts#reference-expansion">Reference Expansion</a> for OrderEdits.</p>
+    *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
     */
     @Valid
     @JsonProperty("obj")
     public OrderEdit getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced <a href="ctp:api:type:OrderEdit">OrderEdit</a>.</p>
+    *  <p>Platform-generated unique identifier of the referenced OrderEdit.</p>
     */
     @NotNull
     @JsonProperty("id")

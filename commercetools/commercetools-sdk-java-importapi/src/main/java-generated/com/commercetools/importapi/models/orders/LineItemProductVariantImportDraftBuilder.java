@@ -27,6 +27,10 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
 
+    /**
+    *  <p>Maps to <code>ProductVariant.product</code>.</p>
+    */
+
     public LineItemProductVariantImportDraftBuilder productVariant(
             Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder> builder) {
         this.productVariant = builder
@@ -35,16 +39,28 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariant.product</code>.</p>
+    */
+
     public LineItemProductVariantImportDraftBuilder productVariant(
             @Nullable final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
+    */
+
     public LineItemProductVariantImportDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+    */
 
     public LineItemProductVariantImportDraftBuilder prices(
             @Nullable final com.commercetools.importapi.models.orders.LineItemPrice... prices) {
@@ -52,11 +68,19 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+    */
+
     public LineItemProductVariantImportDraftBuilder prices(
             @Nullable final java.util.List<com.commercetools.importapi.models.orders.LineItemPrice> prices) {
         this.prices = prices;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+    */
 
     public LineItemProductVariantImportDraftBuilder plusPrices(
             @Nullable final com.commercetools.importapi.models.orders.LineItemPrice... prices) {
@@ -67,6 +91,10 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+    */
+
     public LineItemProductVariantImportDraftBuilder plusPrices(
             Function<com.commercetools.importapi.models.orders.LineItemPriceBuilder, com.commercetools.importapi.models.orders.LineItemPriceBuilder> builder) {
         if (this.prices == null) {
@@ -76,6 +104,10 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+    */
+
     public LineItemProductVariantImportDraftBuilder withPrices(
             Function<com.commercetools.importapi.models.orders.LineItemPriceBuilder, com.commercetools.importapi.models.orders.LineItemPriceBuilder> builder) {
         this.prices = new ArrayList<>();
@@ -83,17 +115,29 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+    */
+
     public LineItemProductVariantImportDraftBuilder attributes(
             @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+    */
+
     public LineItemProductVariantImportDraftBuilder attributes(
             @Nullable final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+    */
 
     public LineItemProductVariantImportDraftBuilder plusAttributes(
             @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
@@ -104,6 +148,10 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+    */
+
     public LineItemProductVariantImportDraftBuilder plusAttributes(
             Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
         if (this.attributes == null) {
@@ -114,6 +162,10 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+    */
+
     public LineItemProductVariantImportDraftBuilder withAttributes(
             Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
         this.attributes = new ArrayList<>();
@@ -122,17 +174,29 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+    */
+
     public LineItemProductVariantImportDraftBuilder images(
             @Nullable final com.commercetools.importapi.models.common.Image... images) {
         this.images = new ArrayList<>(Arrays.asList(images));
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+    */
+
     public LineItemProductVariantImportDraftBuilder images(
             @Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
         this.images = images;
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+    */
 
     public LineItemProductVariantImportDraftBuilder plusImages(
             @Nullable final com.commercetools.importapi.models.common.Image... images) {
@@ -143,6 +207,10 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+    */
+
     public LineItemProductVariantImportDraftBuilder plusImages(
             Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {
         if (this.images == null) {
@@ -151,6 +219,10 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());
         return this;
     }
+
+    /**
+    *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+    */
 
     public LineItemProductVariantImportDraftBuilder withImages(
             Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder> builder) {

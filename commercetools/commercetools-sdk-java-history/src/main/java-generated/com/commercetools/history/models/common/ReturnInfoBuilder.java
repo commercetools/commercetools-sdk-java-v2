@@ -50,6 +50,10 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
         return this;
     }
 
+    /**
+    *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+    */
+
     public ReturnInfoBuilder returnTrackingId(final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;
         return this;

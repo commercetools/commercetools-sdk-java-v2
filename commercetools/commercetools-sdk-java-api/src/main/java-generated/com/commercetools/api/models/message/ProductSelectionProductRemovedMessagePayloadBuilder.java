@@ -13,11 +13,19 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    /**
+    *  <p>Reference to a Product.</p>
+    */
+
     public ProductSelectionProductRemovedMessagePayloadBuilder product(
             Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Reference to a Product.</p>
+    */
 
     public ProductSelectionProductRemovedMessagePayloadBuilder product(
             final com.commercetools.api.models.product.ProductReference product) {

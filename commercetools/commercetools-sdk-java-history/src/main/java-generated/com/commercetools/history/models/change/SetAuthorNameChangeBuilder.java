@@ -15,6 +15,10 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setAuthorName</code></p>
+    */
+
     public SetAuthorNameChangeBuilder change(final String change) {
         this.change = change;
         return this;

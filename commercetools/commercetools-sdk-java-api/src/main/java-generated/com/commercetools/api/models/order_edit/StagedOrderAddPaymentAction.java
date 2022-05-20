@@ -22,7 +22,7 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-    *  <p><a href="ctp:api:type:ResourceIdentifier">ResourceIdentifier</a> to a <a href="ctp:api:type:Payment">Payment</a>.</p>
+    *  <p>ResourceIdentifier to a Payment.</p>
     */
     @NotNull
     @Valid

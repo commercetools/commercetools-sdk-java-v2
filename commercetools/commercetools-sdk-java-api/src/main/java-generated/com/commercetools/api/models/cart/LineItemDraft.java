@@ -30,34 +30,28 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public String getSku();
 
     /**
-    *  <p>The amount of a <code>LineItem</code>in the cart.
-    *  Must be a positive integer.</p>
+    *  <p>The amount of a <code>LineItem</code>in the cart. Must be a positive integer.</p>
     */
 
     @JsonProperty("quantity")
     public Long getQuantity();
 
     /**
-    *  <p>When the line item was added to the cart. Optional for backwards
-    *  compatibility reasons only.</p>
+    *  <p>When the line item was added to the cart. Optional for backwards compatibility reasons only.</p>
     */
 
     @JsonProperty("addedAt")
     public ZonedDateTime getAddedAt();
 
     /**
-    *  <p>By providing supply channel information, you can unique identify
-    *  inventory entries that should be reserved.
-    *  The provided channel should have
-    *  the InventorySupply role.</p>
+    *  <p>By providing supply channel information, you can unique identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-    *  <p>The channel is used to select a ProductPrice.
-    *  The provided channel should have the ProductDistribution role.</p>
+    *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
     */
     @Valid
     @JsonProperty("distributionChannel")

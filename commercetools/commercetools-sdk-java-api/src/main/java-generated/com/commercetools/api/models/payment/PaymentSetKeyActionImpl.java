@@ -36,9 +36,7 @@ public class PaymentSetKeyActionImpl implements PaymentSetKeyAction, ModelBase {
     }
 
     /**
-    *  <p>User-specific unique identifier for the payment (max.
-    *  256 characters).
-    *  If not provided an existing key will be removed.</p>
+    *  <p>User-specific unique identifier for the payment (max. 256 characters). If not provided an existing key will be removed.</p>
     */
     public String getKey() {
         return this.key;

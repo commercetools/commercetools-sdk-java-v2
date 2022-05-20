@@ -19,25 +19,45 @@ public class ReviewRatingStatisticsBuilder implements Builder<ReviewRatingStatis
 
     private java.lang.Object ratingsDistribution;
 
+    /**
+    *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
+    */
+
     public ReviewRatingStatisticsBuilder averageRating(final Double averageRating) {
         this.averageRating = averageRating;
         return this;
     }
+
+    /**
+    *  <p>Highest rating of one target</p>
+    */
 
     public ReviewRatingStatisticsBuilder highestRating(final Double highestRating) {
         this.highestRating = highestRating;
         return this;
     }
 
+    /**
+    *  <p>Lowest rating of one target</p>
+    */
+
     public ReviewRatingStatisticsBuilder lowestRating(final Double lowestRating) {
         this.lowestRating = lowestRating;
         return this;
     }
 
+    /**
+    *  <p>Number of ratings taken into account</p>
+    */
+
     public ReviewRatingStatisticsBuilder count(final Integer count) {
         this.count = count;
         return this;
     }
+
+    /**
+    *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+    */
 
     public ReviewRatingStatisticsBuilder ratingsDistribution(final java.lang.Object ratingsDistribution) {
         this.ratingsDistribution = ratingsDistribution;

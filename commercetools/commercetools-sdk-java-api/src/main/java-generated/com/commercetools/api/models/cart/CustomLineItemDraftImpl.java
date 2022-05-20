@@ -60,8 +60,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     }
 
     /**
-    *  <p>The amount of a CustomLineItemin the cart.
-    *  Must be a positive integer.</p>
+    *  <p>The amount of a CustomLineItemin the cart. Must be a positive integer.</p>
     */
     public Long getQuantity() {
         return this.quantity;

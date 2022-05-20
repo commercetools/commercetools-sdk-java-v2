@@ -20,6 +20,10 @@ public class SetOrderLineItemCustomTypeChangeBuilder implements Builder<SetOrder
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+    *  <p>Update action for <code>setLineItemCustomType</code></p>
+    */
+
     public SetOrderLineItemCustomTypeChangeBuilder change(final String change) {
         this.change = change;
         return this;

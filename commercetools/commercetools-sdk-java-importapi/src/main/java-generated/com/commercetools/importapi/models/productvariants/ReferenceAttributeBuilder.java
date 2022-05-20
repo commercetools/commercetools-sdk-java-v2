@@ -17,15 +17,27 @@ public class ReferenceAttributeBuilder implements Builder<ReferenceAttribute> {
 
     private com.commercetools.importapi.models.common.KeyReference value;
 
+    /**
+    *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+    */
+
     public ReferenceAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
 
+    /**
+    *  <p>References a resource by key.</p>
+    */
+
     public ReferenceAttributeBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
         return this;
     }
+
+    /**
+    *  <p>References a resource by key.</p>
+    */
 
     public ReferenceAttributeBuilder value(
             Function<com.commercetools.importapi.models.common.KeyReferenceBuilder, Builder<? extends com.commercetools.importapi.models.common.KeyReference>> builder) {

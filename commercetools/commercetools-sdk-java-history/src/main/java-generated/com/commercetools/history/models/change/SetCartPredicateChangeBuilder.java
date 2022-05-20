@@ -15,6 +15,10 @@ public class SetCartPredicateChangeBuilder implements Builder<SetCartPredicateCh
 
     private String nextValue;
 
+    /**
+    *  <p>Shape of the action for <code>setCartPredicate</code></p>
+    */
+
     public SetCartPredicateChangeBuilder change(final String change) {
         this.change = change;
         return this;

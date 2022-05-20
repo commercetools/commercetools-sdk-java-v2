@@ -27,6 +27,10 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
         return this;
     }
 
+    /**
+    *  <p>Can be used to reference an external order instance, file etc.</p>
+    */
+
     public SyncInfoBuilder externalId(final String externalId) {
         this.externalId = externalId;
         return this;

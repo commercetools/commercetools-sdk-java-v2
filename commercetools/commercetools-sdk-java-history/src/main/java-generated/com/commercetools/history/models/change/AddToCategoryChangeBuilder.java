@@ -18,6 +18,10 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+    *  <p>Update action for <code>addToCategory</code></p>
+    */
+
     public AddToCategoryChangeBuilder change(final String change) {
         this.change = change;
         return this;

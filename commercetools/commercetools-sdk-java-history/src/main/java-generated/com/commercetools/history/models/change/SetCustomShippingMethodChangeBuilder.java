@@ -16,6 +16,10 @@ public class SetCustomShippingMethodChangeBuilder implements Builder<SetCustomSh
 
     private com.commercetools.history.models.change_value.CustomShippingMethodChangeValue previousValue;
 
+    /**
+    *  <p>Update action for <code>setCustomShippingMethod</code></p>
+    */
+
     public SetCustomShippingMethodChangeBuilder change(final String change) {
         this.change = change;
         return this;

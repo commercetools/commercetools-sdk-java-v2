@@ -12,11 +12,19 @@ public class StateSetDescriptionActionBuilder implements Builder<StateSetDescrip
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
+
     public StateSetDescriptionActionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>Value to set. If empty, any existing value will be removed.</p>
+    */
 
     public StateSetDescriptionActionBuilder description(
             final com.commercetools.api.models.common.LocalizedString description) {

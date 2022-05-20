@@ -20,9 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantImportDraft {
 
     /**
-    *  <p>The sequential ID of the variant within the product.
-    *  The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set,
-    *  or alternatively you can just specify SKU of the product variant.</p>
+    *  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>
     */
 
     @JsonProperty("id")
@@ -36,25 +34,21 @@ public interface ProductVariantImportDraft {
     public String getSku();
 
     /**
-    *  <p>The <a href="ctp:api:type:EmbeddedPrice">EmbeddedPrices</a> of the variant.
-    *  The prices should not contain two prices for the same price scope (same currency, country and customer group).
-    *  If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+    *  <p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
     */
     @Valid
     @JsonProperty("prices")
     public List<PriceDraft> getPrices();
 
     /**
-    *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original
-    *  product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+    *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
     */
     @Valid
     @JsonProperty("attributes")
     public List<Attribute> getAttributes();
 
     /**
-    *  <p>If this property is defined, then it will override the <code>images</code> property from the original
-    *  product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+    *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
     */
     @Valid
     @JsonProperty("images")

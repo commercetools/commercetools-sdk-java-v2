@@ -17,11 +17,19 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     @Nullable
     private Boolean force;
 
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
+
     public OrderTransitionStateActionBuilder state(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
         return this;
     }
+
+    /**
+    *  <p>ResourceIdentifier to a State.</p>
+    */
 
     public OrderTransitionStateActionBuilder state(
             final com.commercetools.api.models.state.StateResourceIdentifier state) {

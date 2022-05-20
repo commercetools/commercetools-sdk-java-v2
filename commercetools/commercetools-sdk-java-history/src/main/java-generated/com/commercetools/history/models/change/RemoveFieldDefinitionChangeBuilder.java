@@ -14,6 +14,10 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
 
     private com.commercetools.history.models.common.FieldDefinition previousValue;
 
+    /**
+    *  <p>Update action for <code>removeFieldDefinition</code> on payments</p>
+    */
+
     public RemoveFieldDefinitionChangeBuilder change(final String change) {
         this.change = change;
         return this;

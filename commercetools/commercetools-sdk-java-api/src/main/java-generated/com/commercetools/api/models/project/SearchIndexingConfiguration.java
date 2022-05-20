@@ -20,14 +20,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SearchIndexingConfiguration {
 
     /**
-    *  <p>Configuration for the <a href="/../api/projects/products-search">Product Projection Search</a> and <a href="/../api/projects/products-suggestions">Product Suggestions</a> endpoints.</p>
+    *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
     */
     @Valid
     @JsonProperty("products")
     public SearchIndexingConfigurationValues getProducts();
 
     /**
-    *  <p>Configuration for the <a href="/../api/projects/order-search">Order Search</a> feature.</p>
+    *  <p>Configuration for the Order Search feature.</p>
     */
     @Valid
     @JsonProperty("orders")

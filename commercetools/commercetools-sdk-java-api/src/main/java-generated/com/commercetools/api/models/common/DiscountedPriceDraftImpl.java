@@ -39,7 +39,7 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
     }
 
     /**
-    *  <p>Relates the referenced <a href="ctp:api:type:ProductDiscount">ProductDiscount</a> to the discounted price.</p>
+    *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
     */
     public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount() {
         return this.discount;

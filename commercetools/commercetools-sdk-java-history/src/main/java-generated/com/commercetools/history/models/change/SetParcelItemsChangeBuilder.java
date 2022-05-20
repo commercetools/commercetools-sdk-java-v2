@@ -18,6 +18,10 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
+    /**
+    *  <p>Update action for <code>setParcelItems</code></p>
+    */
+
     public SetParcelItemsChangeBuilder change(final String change) {
         this.change = change;
         return this;

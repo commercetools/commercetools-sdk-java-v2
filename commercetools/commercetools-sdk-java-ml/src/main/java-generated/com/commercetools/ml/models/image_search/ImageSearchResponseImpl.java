@@ -49,7 +49,7 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
     }
 
     /**
-    *  <p>Number of <a href="/../api/general-concepts#offset">elements skipped</a>.</p>
+    *  <p>Number of elements skipped.</p>
     */
     public Double getOffset() {
         return this.offset;

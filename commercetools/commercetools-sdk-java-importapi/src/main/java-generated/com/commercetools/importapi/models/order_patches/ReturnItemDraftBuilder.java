@@ -44,6 +44,10 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
         return this;
     }
 
+    /**
+    *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+    */
+
     public ReturnItemDraftBuilder shipmentState(
             final com.commercetools.importapi.models.order_patches.ReturnShipmentState shipmentState) {
         this.shipmentState = shipmentState;

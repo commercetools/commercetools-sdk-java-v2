@@ -62,69 +62,69 @@
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    private Boolean publish;</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    @JsonCreator</span>
-<span class="source-line-no">053</span><span id="line.53">    ProductDraftImpl(</span>
-<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType,</span>
-<span class="source-line-no">055</span><span id="line.55">            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,</span>
-<span class="source-line-no">056</span><span id="line.56">            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,</span>
-<span class="source-line-no">057</span><span id="line.57">            @JsonProperty("key") final String key,</span>
-<span class="source-line-no">058</span><span id="line.58">            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,</span>
-<span class="source-line-no">059</span><span id="line.59">            @JsonProperty("categories") final java.util.List&lt;com.commercetools.api.models.category.CategoryResourceIdentifier&gt; categories,</span>
-<span class="source-line-no">060</span><span id="line.60">            @JsonProperty("categoryOrderHints") final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints,</span>
-<span class="source-line-no">061</span><span id="line.61">            @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle,</span>
-<span class="source-line-no">062</span><span id="line.62">            @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,</span>
-<span class="source-line-no">063</span><span id="line.63">            @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,</span>
-<span class="source-line-no">064</span><span id="line.64">            @JsonProperty("masterVariant") final com.commercetools.api.models.product.ProductVariantDraft masterVariant,</span>
-<span class="source-line-no">065</span><span id="line.65">            @JsonProperty("variants") final java.util.List&lt;com.commercetools.api.models.product.ProductVariantDraft&gt; variants,</span>
-<span class="source-line-no">066</span><span id="line.66">            @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,</span>
-<span class="source-line-no">067</span><span id="line.67">            @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,</span>
-<span class="source-line-no">068</span><span id="line.68">            @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,</span>
-<span class="source-line-no">069</span><span id="line.69">            @JsonProperty("publish") final Boolean publish) {</span>
-<span class="source-line-no">070</span><span id="line.70">        this.productType = productType;</span>
-<span class="source-line-no">071</span><span id="line.71">        this.name = name;</span>
-<span class="source-line-no">072</span><span id="line.72">        this.slug = slug;</span>
-<span class="source-line-no">073</span><span id="line.73">        this.key = key;</span>
-<span class="source-line-no">074</span><span id="line.74">        this.description = description;</span>
-<span class="source-line-no">075</span><span id="line.75">        this.categories = categories;</span>
-<span class="source-line-no">076</span><span id="line.76">        this.categoryOrderHints = categoryOrderHints;</span>
-<span class="source-line-no">077</span><span id="line.77">        this.metaTitle = metaTitle;</span>
-<span class="source-line-no">078</span><span id="line.78">        this.metaDescription = metaDescription;</span>
-<span class="source-line-no">079</span><span id="line.79">        this.metaKeywords = metaKeywords;</span>
-<span class="source-line-no">080</span><span id="line.80">        this.masterVariant = masterVariant;</span>
-<span class="source-line-no">081</span><span id="line.81">        this.variants = variants;</span>
-<span class="source-line-no">082</span><span id="line.82">        this.taxCategory = taxCategory;</span>
-<span class="source-line-no">083</span><span id="line.83">        this.searchKeywords = searchKeywords;</span>
-<span class="source-line-no">084</span><span id="line.84">        this.state = state;</span>
-<span class="source-line-no">085</span><span id="line.85">        this.publish = publish;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public ProductDraftImpl() {</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    /**</span>
-<span class="source-line-no">092</span><span id="line.92">    *  &lt;p&gt;A predefined product type assigned to the product.</span>
-<span class="source-line-no">093</span><span id="line.93">    *  All products must have a product type.&lt;/p&gt;</span>
-<span class="source-line-no">094</span><span id="line.94">    */</span>
-<span class="source-line-no">095</span><span id="line.95">    public com.commercetools.api.models.product_type.ProductTypeResourceIdentifier getProductType() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return this.productType;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return this.name;</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    /**</span>
-<span class="source-line-no">104</span><span id="line.104">    *  &lt;p&gt;Human-readable identifiers usually used as deep-link URLs for the product.</span>
-<span class="source-line-no">105</span><span id="line.105">    *  A slug must be unique across a project, but a product can have the same slug for different languages.</span>
-<span class="source-line-no">106</span><span id="line.106">    *  Slugs have a maximum size of 256.</span>
-<span class="source-line-no">107</span><span id="line.107">    *  Valid characters are: alphabetic characters (&lt;code&gt;A-Z, a-z&lt;/code&gt;), numeric characters (&lt;code&gt;0-9&lt;/code&gt;), underscores (&lt;code&gt;_&lt;/code&gt;) and hyphens (&lt;code&gt;-&lt;/code&gt;).&lt;/p&gt;</span>
+<span class="source-line-no">052</span><span id="line.52">    private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    @JsonCreator</span>
+<span class="source-line-no">055</span><span id="line.55">    ProductDraftImpl(</span>
+<span class="source-line-no">056</span><span id="line.56">            @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType,</span>
+<span class="source-line-no">057</span><span id="line.57">            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,</span>
+<span class="source-line-no">058</span><span id="line.58">            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,</span>
+<span class="source-line-no">059</span><span id="line.59">            @JsonProperty("key") final String key,</span>
+<span class="source-line-no">060</span><span id="line.60">            @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,</span>
+<span class="source-line-no">061</span><span id="line.61">            @JsonProperty("categories") final java.util.List&lt;com.commercetools.api.models.category.CategoryResourceIdentifier&gt; categories,</span>
+<span class="source-line-no">062</span><span id="line.62">            @JsonProperty("categoryOrderHints") final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints,</span>
+<span class="source-line-no">063</span><span id="line.63">            @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle,</span>
+<span class="source-line-no">064</span><span id="line.64">            @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,</span>
+<span class="source-line-no">065</span><span id="line.65">            @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,</span>
+<span class="source-line-no">066</span><span id="line.66">            @JsonProperty("masterVariant") final com.commercetools.api.models.product.ProductVariantDraft masterVariant,</span>
+<span class="source-line-no">067</span><span id="line.67">            @JsonProperty("variants") final java.util.List&lt;com.commercetools.api.models.product.ProductVariantDraft&gt; variants,</span>
+<span class="source-line-no">068</span><span id="line.68">            @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,</span>
+<span class="source-line-no">069</span><span id="line.69">            @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,</span>
+<span class="source-line-no">070</span><span id="line.70">            @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,</span>
+<span class="source-line-no">071</span><span id="line.71">            @JsonProperty("publish") final Boolean publish,</span>
+<span class="source-line-no">072</span><span id="line.72">            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {</span>
+<span class="source-line-no">073</span><span id="line.73">        this.productType = productType;</span>
+<span class="source-line-no">074</span><span id="line.74">        this.name = name;</span>
+<span class="source-line-no">075</span><span id="line.75">        this.slug = slug;</span>
+<span class="source-line-no">076</span><span id="line.76">        this.key = key;</span>
+<span class="source-line-no">077</span><span id="line.77">        this.description = description;</span>
+<span class="source-line-no">078</span><span id="line.78">        this.categories = categories;</span>
+<span class="source-line-no">079</span><span id="line.79">        this.categoryOrderHints = categoryOrderHints;</span>
+<span class="source-line-no">080</span><span id="line.80">        this.metaTitle = metaTitle;</span>
+<span class="source-line-no">081</span><span id="line.81">        this.metaDescription = metaDescription;</span>
+<span class="source-line-no">082</span><span id="line.82">        this.metaKeywords = metaKeywords;</span>
+<span class="source-line-no">083</span><span id="line.83">        this.masterVariant = masterVariant;</span>
+<span class="source-line-no">084</span><span id="line.84">        this.variants = variants;</span>
+<span class="source-line-no">085</span><span id="line.85">        this.taxCategory = taxCategory;</span>
+<span class="source-line-no">086</span><span id="line.86">        this.searchKeywords = searchKeywords;</span>
+<span class="source-line-no">087</span><span id="line.87">        this.state = state;</span>
+<span class="source-line-no">088</span><span id="line.88">        this.publish = publish;</span>
+<span class="source-line-no">089</span><span id="line.89">        this.priceMode = priceMode;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public ProductDraftImpl() {</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    /**</span>
+<span class="source-line-no">096</span><span id="line.96">    *  &lt;p&gt;A predefined product type assigned to the product. All products must have a product type.&lt;/p&gt;</span>
+<span class="source-line-no">097</span><span id="line.97">    */</span>
+<span class="source-line-no">098</span><span id="line.98">    public com.commercetools.api.models.product_type.ProductTypeResourceIdentifier getProductType() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return this.productType;</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">103</span><span id="line.103">        return this.name;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    /**</span>
+<span class="source-line-no">107</span><span id="line.107">    *  &lt;p&gt;Human-readable identifiers usually used as deep-link URLs for the product. A slug must be unique across a project, but a product can have the same slug for different languages. Slugs have a maximum size of 256. Valid characters are: alphabetic characters (&lt;code&gt;A-Z, a-z&lt;/code&gt;), numeric characters (&lt;code&gt;0-9&lt;/code&gt;), underscores (&lt;code&gt;_&lt;/code&gt;) and hyphens (&lt;code&gt;-&lt;/code&gt;).&lt;/p&gt;</span>
 <span class="source-line-no">108</span><span id="line.108">    */</span>
 <span class="source-line-no">109</span><span id="line.109">    public com.commercetools.api.models.common.LocalizedString getSlug() {</span>
 <span class="source-line-no">110</span><span id="line.110">        return this.slug;</span>
 <span class="source-line-no">111</span><span id="line.111">    }</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
 <span class="source-line-no">113</span><span id="line.113">    /**</span>
-<span class="source-line-no">114</span><span id="line.114">    *  &lt;p&gt;User-specific unique identifier for the product.&lt;/p&gt;</span>
+<span class="source-line-no">114</span><span id="line.114">    *  &lt;p&gt;User-defined unique identifier for the Product.&lt;/p&gt;</span>
 <span class="source-line-no">115</span><span id="line.115">    */</span>
 <span class="source-line-no">116</span><span id="line.116">    public String getKey() {</span>
 <span class="source-line-no">117</span><span id="line.117">        return this.key;</span>
@@ -158,166 +158,178 @@
 <span class="source-line-no">145</span><span id="line.145">    }</span>
 <span class="source-line-no">146</span><span id="line.146"></span>
 <span class="source-line-no">147</span><span id="line.147">    /**</span>
-<span class="source-line-no">148</span><span id="line.148">    *  &lt;p&gt;The master product variant.</span>
-<span class="source-line-no">149</span><span id="line.149">    *  Required if the &lt;code&gt;variants&lt;/code&gt; array has product variants.&lt;/p&gt;</span>
-<span class="source-line-no">150</span><span id="line.150">    */</span>
-<span class="source-line-no">151</span><span id="line.151">    public com.commercetools.api.models.product.ProductVariantDraft getMasterVariant() {</span>
-<span class="source-line-no">152</span><span id="line.152">        return this.masterVariant;</span>
-<span class="source-line-no">153</span><span id="line.153">    }</span>
-<span class="source-line-no">154</span><span id="line.154"></span>
-<span class="source-line-no">155</span><span id="line.155">    /**</span>
-<span class="source-line-no">156</span><span id="line.156">    *  &lt;p&gt;An array of related product variants.&lt;/p&gt;</span>
-<span class="source-line-no">157</span><span id="line.157">    */</span>
-<span class="source-line-no">158</span><span id="line.158">    public java.util.List&lt;com.commercetools.api.models.product.ProductVariantDraft&gt; getVariants() {</span>
-<span class="source-line-no">159</span><span id="line.159">        return this.variants;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
-<span class="source-line-no">163</span><span id="line.163">        return this.taxCategory;</span>
-<span class="source-line-no">164</span><span id="line.164">    }</span>
-<span class="source-line-no">165</span><span id="line.165"></span>
-<span class="source-line-no">166</span><span id="line.166">    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {</span>
-<span class="source-line-no">167</span><span id="line.167">        return this.searchKeywords;</span>
-<span class="source-line-no">168</span><span id="line.168">    }</span>
-<span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    public com.commercetools.api.models.state.StateResourceIdentifier getState() {</span>
-<span class="source-line-no">171</span><span id="line.171">        return this.state;</span>
-<span class="source-line-no">172</span><span id="line.172">    }</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">    /**</span>
-<span class="source-line-no">175</span><span id="line.175">    *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, the product is published immediately.&lt;/p&gt;</span>
-<span class="source-line-no">176</span><span id="line.176">    */</span>
-<span class="source-line-no">177</span><span id="line.177">    public Boolean getPublish() {</span>
-<span class="source-line-no">178</span><span id="line.178">        return this.publish;</span>
-<span class="source-line-no">179</span><span id="line.179">    }</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public void setProductType(</span>
-<span class="source-line-no">182</span><span id="line.182">            final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType) {</span>
-<span class="source-line-no">183</span><span id="line.183">        this.productType = productType;</span>
-<span class="source-line-no">184</span><span id="line.184">    }</span>
-<span class="source-line-no">185</span><span id="line.185"></span>
-<span class="source-line-no">186</span><span id="line.186">    public void setName(final com.commercetools.api.models.common.LocalizedString name) {</span>
-<span class="source-line-no">187</span><span id="line.187">        this.name = name;</span>
-<span class="source-line-no">188</span><span id="line.188">    }</span>
-<span class="source-line-no">189</span><span id="line.189"></span>
-<span class="source-line-no">190</span><span id="line.190">    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug) {</span>
-<span class="source-line-no">191</span><span id="line.191">        this.slug = slug;</span>
-<span class="source-line-no">192</span><span id="line.192">    }</span>
-<span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">    public void setKey(final String key) {</span>
-<span class="source-line-no">195</span><span id="line.195">        this.key = key;</span>
-<span class="source-line-no">196</span><span id="line.196">    }</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {</span>
-<span class="source-line-no">199</span><span id="line.199">        this.description = description;</span>
-<span class="source-line-no">200</span><span id="line.200">    }</span>
-<span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    public void setCategories(final com.commercetools.api.models.category.CategoryResourceIdentifier... categories) {</span>
-<span class="source-line-no">203</span><span id="line.203">        this.categories = new ArrayList&lt;&gt;(Arrays.asList(categories));</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    public void setCategories(</span>
-<span class="source-line-no">207</span><span id="line.207">            final java.util.List&lt;com.commercetools.api.models.category.CategoryResourceIdentifier&gt; categories) {</span>
-<span class="source-line-no">208</span><span id="line.208">        this.categories = categories;</span>
-<span class="source-line-no">209</span><span id="line.209">    }</span>
-<span class="source-line-no">210</span><span id="line.210"></span>
-<span class="source-line-no">211</span><span id="line.211">    public void setCategoryOrderHints(</span>
-<span class="source-line-no">212</span><span id="line.212">            final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {</span>
-<span class="source-line-no">213</span><span id="line.213">        this.categoryOrderHints = categoryOrderHints;</span>
-<span class="source-line-no">214</span><span id="line.214">    }</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">    public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle) {</span>
-<span class="source-line-no">217</span><span id="line.217">        this.metaTitle = metaTitle;</span>
-<span class="source-line-no">218</span><span id="line.218">    }</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">    public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription) {</span>
-<span class="source-line-no">221</span><span id="line.221">        this.metaDescription = metaDescription;</span>
-<span class="source-line-no">222</span><span id="line.222">    }</span>
-<span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">    public void setMetaKeywords(final com.commercetools.api.models.common.LocalizedString metaKeywords) {</span>
-<span class="source-line-no">225</span><span id="line.225">        this.metaKeywords = metaKeywords;</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    public void setMasterVariant(final com.commercetools.api.models.product.ProductVariantDraft masterVariant) {</span>
-<span class="source-line-no">229</span><span id="line.229">        this.masterVariant = masterVariant;</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    public void setVariants(final com.commercetools.api.models.product.ProductVariantDraft... variants) {</span>
-<span class="source-line-no">233</span><span id="line.233">        this.variants = new ArrayList&lt;&gt;(Arrays.asList(variants));</span>
-<span class="source-line-no">234</span><span id="line.234">    }</span>
-<span class="source-line-no">235</span><span id="line.235"></span>
-<span class="source-line-no">236</span><span id="line.236">    public void setVariants(final java.util.List&lt;com.commercetools.api.models.product.ProductVariantDraft&gt; variants) {</span>
-<span class="source-line-no">237</span><span id="line.237">        this.variants = variants;</span>
-<span class="source-line-no">238</span><span id="line.238">    }</span>
-<span class="source-line-no">239</span><span id="line.239"></span>
-<span class="source-line-no">240</span><span id="line.240">    public void setTaxCategory(</span>
-<span class="source-line-no">241</span><span id="line.241">            final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
-<span class="source-line-no">242</span><span id="line.242">        this.taxCategory = taxCategory;</span>
-<span class="source-line-no">243</span><span id="line.243">    }</span>
-<span class="source-line-no">244</span><span id="line.244"></span>
-<span class="source-line-no">245</span><span id="line.245">    public void setSearchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords) {</span>
-<span class="source-line-no">246</span><span id="line.246">        this.searchKeywords = searchKeywords;</span>
-<span class="source-line-no">247</span><span id="line.247">    }</span>
-<span class="source-line-no">248</span><span id="line.248"></span>
-<span class="source-line-no">249</span><span id="line.249">    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state) {</span>
-<span class="source-line-no">250</span><span id="line.250">        this.state = state;</span>
-<span class="source-line-no">251</span><span id="line.251">    }</span>
-<span class="source-line-no">252</span><span id="line.252"></span>
-<span class="source-line-no">253</span><span id="line.253">    public void setPublish(final Boolean publish) {</span>
-<span class="source-line-no">254</span><span id="line.254">        this.publish = publish;</span>
-<span class="source-line-no">255</span><span id="line.255">    }</span>
-<span class="source-line-no">256</span><span id="line.256"></span>
-<span class="source-line-no">257</span><span id="line.257">    @Override</span>
-<span class="source-line-no">258</span><span id="line.258">    public boolean equals(Object o) {</span>
-<span class="source-line-no">259</span><span id="line.259">        if (this == o)</span>
-<span class="source-line-no">260</span><span id="line.260">            return true;</span>
-<span class="source-line-no">261</span><span id="line.261"></span>
-<span class="source-line-no">262</span><span id="line.262">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">263</span><span id="line.263">            return false;</span>
-<span class="source-line-no">264</span><span id="line.264"></span>
-<span class="source-line-no">265</span><span id="line.265">        ProductDraftImpl that = (ProductDraftImpl) o;</span>
+<span class="source-line-no">148</span><span id="line.148">    *  &lt;p&gt;The master product variant. Required if the &lt;code&gt;variants&lt;/code&gt; array has product variants.&lt;/p&gt;</span>
+<span class="source-line-no">149</span><span id="line.149">    */</span>
+<span class="source-line-no">150</span><span id="line.150">    public com.commercetools.api.models.product.ProductVariantDraft getMasterVariant() {</span>
+<span class="source-line-no">151</span><span id="line.151">        return this.masterVariant;</span>
+<span class="source-line-no">152</span><span id="line.152">    }</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    /**</span>
+<span class="source-line-no">155</span><span id="line.155">    *  &lt;p&gt;An array of related product variants.&lt;/p&gt;</span>
+<span class="source-line-no">156</span><span id="line.156">    */</span>
+<span class="source-line-no">157</span><span id="line.157">    public java.util.List&lt;com.commercetools.api.models.product.ProductVariantDraft&gt; getVariants() {</span>
+<span class="source-line-no">158</span><span id="line.158">        return this.variants;</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
+<span class="source-line-no">162</span><span id="line.162">        return this.taxCategory;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {</span>
+<span class="source-line-no">166</span><span id="line.166">        return this.searchKeywords;</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    public com.commercetools.api.models.state.StateResourceIdentifier getState() {</span>
+<span class="source-line-no">170</span><span id="line.170">        return this.state;</span>
+<span class="source-line-no">171</span><span id="line.171">    }</span>
+<span class="source-line-no">172</span><span id="line.172"></span>
+<span class="source-line-no">173</span><span id="line.173">    /**</span>
+<span class="source-line-no">174</span><span id="line.174">    *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, the product is published immediately.&lt;/p&gt;</span>
+<span class="source-line-no">175</span><span id="line.175">    */</span>
+<span class="source-line-no">176</span><span id="line.176">    public Boolean getPublish() {</span>
+<span class="source-line-no">177</span><span id="line.177">        return this.publish;</span>
+<span class="source-line-no">178</span><span id="line.178">    }</span>
+<span class="source-line-no">179</span><span id="line.179"></span>
+<span class="source-line-no">180</span><span id="line.180">    /**</span>
+<span class="source-line-no">181</span><span id="line.181">    *  &lt;p&gt;Specifies which type of prices should be used when looking up a price for this product. If not set, &lt;code&gt;Embedded&lt;/code&gt; ProductPriceMode is used.&lt;/p&gt;</span>
+<span class="source-line-no">182</span><span id="line.182">    */</span>
+<span class="source-line-no">183</span><span id="line.183">    public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {</span>
+<span class="source-line-no">184</span><span id="line.184">        return this.priceMode;</span>
+<span class="source-line-no">185</span><span id="line.185">    }</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">    public void setProductType(</span>
+<span class="source-line-no">188</span><span id="line.188">            final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType) {</span>
+<span class="source-line-no">189</span><span id="line.189">        this.productType = productType;</span>
+<span class="source-line-no">190</span><span id="line.190">    }</span>
+<span class="source-line-no">191</span><span id="line.191"></span>
+<span class="source-line-no">192</span><span id="line.192">    public void setName(final com.commercetools.api.models.common.LocalizedString name) {</span>
+<span class="source-line-no">193</span><span id="line.193">        this.name = name;</span>
+<span class="source-line-no">194</span><span id="line.194">    }</span>
+<span class="source-line-no">195</span><span id="line.195"></span>
+<span class="source-line-no">196</span><span id="line.196">    public void setSlug(final com.commercetools.api.models.common.LocalizedString slug) {</span>
+<span class="source-line-no">197</span><span id="line.197">        this.slug = slug;</span>
+<span class="source-line-no">198</span><span id="line.198">    }</span>
+<span class="source-line-no">199</span><span id="line.199"></span>
+<span class="source-line-no">200</span><span id="line.200">    public void setKey(final String key) {</span>
+<span class="source-line-no">201</span><span id="line.201">        this.key = key;</span>
+<span class="source-line-no">202</span><span id="line.202">    }</span>
+<span class="source-line-no">203</span><span id="line.203"></span>
+<span class="source-line-no">204</span><span id="line.204">    public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {</span>
+<span class="source-line-no">205</span><span id="line.205">        this.description = description;</span>
+<span class="source-line-no">206</span><span id="line.206">    }</span>
+<span class="source-line-no">207</span><span id="line.207"></span>
+<span class="source-line-no">208</span><span id="line.208">    public void setCategories(final com.commercetools.api.models.category.CategoryResourceIdentifier... categories) {</span>
+<span class="source-line-no">209</span><span id="line.209">        this.categories = new ArrayList&lt;&gt;(Arrays.asList(categories));</span>
+<span class="source-line-no">210</span><span id="line.210">    }</span>
+<span class="source-line-no">211</span><span id="line.211"></span>
+<span class="source-line-no">212</span><span id="line.212">    public void setCategories(</span>
+<span class="source-line-no">213</span><span id="line.213">            final java.util.List&lt;com.commercetools.api.models.category.CategoryResourceIdentifier&gt; categories) {</span>
+<span class="source-line-no">214</span><span id="line.214">        this.categories = categories;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    public void setCategoryOrderHints(</span>
+<span class="source-line-no">218</span><span id="line.218">            final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints) {</span>
+<span class="source-line-no">219</span><span id="line.219">        this.categoryOrderHints = categoryOrderHints;</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    public void setMetaTitle(final com.commercetools.api.models.common.LocalizedString metaTitle) {</span>
+<span class="source-line-no">223</span><span id="line.223">        this.metaTitle = metaTitle;</span>
+<span class="source-line-no">224</span><span id="line.224">    }</span>
+<span class="source-line-no">225</span><span id="line.225"></span>
+<span class="source-line-no">226</span><span id="line.226">    public void setMetaDescription(final com.commercetools.api.models.common.LocalizedString metaDescription) {</span>
+<span class="source-line-no">227</span><span id="line.227">        this.metaDescription = metaDescription;</span>
+<span class="source-line-no">228</span><span id="line.228">    }</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">    public void setMetaKeywords(final com.commercetools.api.models.common.LocalizedString metaKeywords) {</span>
+<span class="source-line-no">231</span><span id="line.231">        this.metaKeywords = metaKeywords;</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    public void setMasterVariant(final com.commercetools.api.models.product.ProductVariantDraft masterVariant) {</span>
+<span class="source-line-no">235</span><span id="line.235">        this.masterVariant = masterVariant;</span>
+<span class="source-line-no">236</span><span id="line.236">    }</span>
+<span class="source-line-no">237</span><span id="line.237"></span>
+<span class="source-line-no">238</span><span id="line.238">    public void setVariants(final com.commercetools.api.models.product.ProductVariantDraft... variants) {</span>
+<span class="source-line-no">239</span><span id="line.239">        this.variants = new ArrayList&lt;&gt;(Arrays.asList(variants));</span>
+<span class="source-line-no">240</span><span id="line.240">    }</span>
+<span class="source-line-no">241</span><span id="line.241"></span>
+<span class="source-line-no">242</span><span id="line.242">    public void setVariants(final java.util.List&lt;com.commercetools.api.models.product.ProductVariantDraft&gt; variants) {</span>
+<span class="source-line-no">243</span><span id="line.243">        this.variants = variants;</span>
+<span class="source-line-no">244</span><span id="line.244">    }</span>
+<span class="source-line-no">245</span><span id="line.245"></span>
+<span class="source-line-no">246</span><span id="line.246">    public void setTaxCategory(</span>
+<span class="source-line-no">247</span><span id="line.247">            final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
+<span class="source-line-no">248</span><span id="line.248">        this.taxCategory = taxCategory;</span>
+<span class="source-line-no">249</span><span id="line.249">    }</span>
+<span class="source-line-no">250</span><span id="line.250"></span>
+<span class="source-line-no">251</span><span id="line.251">    public void setSearchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords) {</span>
+<span class="source-line-no">252</span><span id="line.252">        this.searchKeywords = searchKeywords;</span>
+<span class="source-line-no">253</span><span id="line.253">    }</span>
+<span class="source-line-no">254</span><span id="line.254"></span>
+<span class="source-line-no">255</span><span id="line.255">    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state) {</span>
+<span class="source-line-no">256</span><span id="line.256">        this.state = state;</span>
+<span class="source-line-no">257</span><span id="line.257">    }</span>
+<span class="source-line-no">258</span><span id="line.258"></span>
+<span class="source-line-no">259</span><span id="line.259">    public void setPublish(final Boolean publish) {</span>
+<span class="source-line-no">260</span><span id="line.260">        this.publish = publish;</span>
+<span class="source-line-no">261</span><span id="line.261">    }</span>
+<span class="source-line-no">262</span><span id="line.262"></span>
+<span class="source-line-no">263</span><span id="line.263">    public void setPriceMode(final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {</span>
+<span class="source-line-no">264</span><span id="line.264">        this.priceMode = priceMode;</span>
+<span class="source-line-no">265</span><span id="line.265">    }</span>
 <span class="source-line-no">266</span><span id="line.266"></span>
-<span class="source-line-no">267</span><span id="line.267">        return new EqualsBuilder().append(productType, that.productType)</span>
-<span class="source-line-no">268</span><span id="line.268">                .append(name, that.name)</span>
-<span class="source-line-no">269</span><span id="line.269">                .append(slug, that.slug)</span>
-<span class="source-line-no">270</span><span id="line.270">                .append(key, that.key)</span>
-<span class="source-line-no">271</span><span id="line.271">                .append(description, that.description)</span>
-<span class="source-line-no">272</span><span id="line.272">                .append(categories, that.categories)</span>
-<span class="source-line-no">273</span><span id="line.273">                .append(categoryOrderHints, that.categoryOrderHints)</span>
-<span class="source-line-no">274</span><span id="line.274">                .append(metaTitle, that.metaTitle)</span>
-<span class="source-line-no">275</span><span id="line.275">                .append(metaDescription, that.metaDescription)</span>
-<span class="source-line-no">276</span><span id="line.276">                .append(metaKeywords, that.metaKeywords)</span>
-<span class="source-line-no">277</span><span id="line.277">                .append(masterVariant, that.masterVariant)</span>
-<span class="source-line-no">278</span><span id="line.278">                .append(variants, that.variants)</span>
-<span class="source-line-no">279</span><span id="line.279">                .append(taxCategory, that.taxCategory)</span>
-<span class="source-line-no">280</span><span id="line.280">                .append(searchKeywords, that.searchKeywords)</span>
-<span class="source-line-no">281</span><span id="line.281">                .append(state, that.state)</span>
-<span class="source-line-no">282</span><span id="line.282">                .append(publish, that.publish)</span>
-<span class="source-line-no">283</span><span id="line.283">                .isEquals();</span>
-<span class="source-line-no">284</span><span id="line.284">    }</span>
-<span class="source-line-no">285</span><span id="line.285"></span>
-<span class="source-line-no">286</span><span id="line.286">    @Override</span>
-<span class="source-line-no">287</span><span id="line.287">    public int hashCode() {</span>
-<span class="source-line-no">288</span><span id="line.288">        return new HashCodeBuilder(17, 37).append(productType)</span>
-<span class="source-line-no">289</span><span id="line.289">                .append(name)</span>
-<span class="source-line-no">290</span><span id="line.290">                .append(slug)</span>
-<span class="source-line-no">291</span><span id="line.291">                .append(key)</span>
-<span class="source-line-no">292</span><span id="line.292">                .append(description)</span>
-<span class="source-line-no">293</span><span id="line.293">                .append(categories)</span>
-<span class="source-line-no">294</span><span id="line.294">                .append(categoryOrderHints)</span>
-<span class="source-line-no">295</span><span id="line.295">                .append(metaTitle)</span>
-<span class="source-line-no">296</span><span id="line.296">                .append(metaDescription)</span>
-<span class="source-line-no">297</span><span id="line.297">                .append(metaKeywords)</span>
-<span class="source-line-no">298</span><span id="line.298">                .append(masterVariant)</span>
-<span class="source-line-no">299</span><span id="line.299">                .append(variants)</span>
-<span class="source-line-no">300</span><span id="line.300">                .append(taxCategory)</span>
-<span class="source-line-no">301</span><span id="line.301">                .append(searchKeywords)</span>
-<span class="source-line-no">302</span><span id="line.302">                .append(state)</span>
-<span class="source-line-no">303</span><span id="line.303">                .append(publish)</span>
-<span class="source-line-no">304</span><span id="line.304">                .toHashCode();</span>
-<span class="source-line-no">305</span><span id="line.305">    }</span>
-<span class="source-line-no">306</span><span id="line.306"></span>
-<span class="source-line-no">307</span><span id="line.307">}</span>
+<span class="source-line-no">267</span><span id="line.267">    @Override</span>
+<span class="source-line-no">268</span><span id="line.268">    public boolean equals(Object o) {</span>
+<span class="source-line-no">269</span><span id="line.269">        if (this == o)</span>
+<span class="source-line-no">270</span><span id="line.270">            return true;</span>
+<span class="source-line-no">271</span><span id="line.271"></span>
+<span class="source-line-no">272</span><span id="line.272">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">273</span><span id="line.273">            return false;</span>
+<span class="source-line-no">274</span><span id="line.274"></span>
+<span class="source-line-no">275</span><span id="line.275">        ProductDraftImpl that = (ProductDraftImpl) o;</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">        return new EqualsBuilder().append(productType, that.productType)</span>
+<span class="source-line-no">278</span><span id="line.278">                .append(name, that.name)</span>
+<span class="source-line-no">279</span><span id="line.279">                .append(slug, that.slug)</span>
+<span class="source-line-no">280</span><span id="line.280">                .append(key, that.key)</span>
+<span class="source-line-no">281</span><span id="line.281">                .append(description, that.description)</span>
+<span class="source-line-no">282</span><span id="line.282">                .append(categories, that.categories)</span>
+<span class="source-line-no">283</span><span id="line.283">                .append(categoryOrderHints, that.categoryOrderHints)</span>
+<span class="source-line-no">284</span><span id="line.284">                .append(metaTitle, that.metaTitle)</span>
+<span class="source-line-no">285</span><span id="line.285">                .append(metaDescription, that.metaDescription)</span>
+<span class="source-line-no">286</span><span id="line.286">                .append(metaKeywords, that.metaKeywords)</span>
+<span class="source-line-no">287</span><span id="line.287">                .append(masterVariant, that.masterVariant)</span>
+<span class="source-line-no">288</span><span id="line.288">                .append(variants, that.variants)</span>
+<span class="source-line-no">289</span><span id="line.289">                .append(taxCategory, that.taxCategory)</span>
+<span class="source-line-no">290</span><span id="line.290">                .append(searchKeywords, that.searchKeywords)</span>
+<span class="source-line-no">291</span><span id="line.291">                .append(state, that.state)</span>
+<span class="source-line-no">292</span><span id="line.292">                .append(publish, that.publish)</span>
+<span class="source-line-no">293</span><span id="line.293">                .append(priceMode, that.priceMode)</span>
+<span class="source-line-no">294</span><span id="line.294">                .isEquals();</span>
+<span class="source-line-no">295</span><span id="line.295">    }</span>
+<span class="source-line-no">296</span><span id="line.296"></span>
+<span class="source-line-no">297</span><span id="line.297">    @Override</span>
+<span class="source-line-no">298</span><span id="line.298">    public int hashCode() {</span>
+<span class="source-line-no">299</span><span id="line.299">        return new HashCodeBuilder(17, 37).append(productType)</span>
+<span class="source-line-no">300</span><span id="line.300">                .append(name)</span>
+<span class="source-line-no">301</span><span id="line.301">                .append(slug)</span>
+<span class="source-line-no">302</span><span id="line.302">                .append(key)</span>
+<span class="source-line-no">303</span><span id="line.303">                .append(description)</span>
+<span class="source-line-no">304</span><span id="line.304">                .append(categories)</span>
+<span class="source-line-no">305</span><span id="line.305">                .append(categoryOrderHints)</span>
+<span class="source-line-no">306</span><span id="line.306">                .append(metaTitle)</span>
+<span class="source-line-no">307</span><span id="line.307">                .append(metaDescription)</span>
+<span class="source-line-no">308</span><span id="line.308">                .append(metaKeywords)</span>
+<span class="source-line-no">309</span><span id="line.309">                .append(masterVariant)</span>
+<span class="source-line-no">310</span><span id="line.310">                .append(variants)</span>
+<span class="source-line-no">311</span><span id="line.311">                .append(taxCategory)</span>
+<span class="source-line-no">312</span><span id="line.312">                .append(searchKeywords)</span>
+<span class="source-line-no">313</span><span id="line.313">                .append(state)</span>
+<span class="source-line-no">314</span><span id="line.314">                .append(publish)</span>
+<span class="source-line-no">315</span><span id="line.315">                .append(priceMode)</span>
+<span class="source-line-no">316</span><span id="line.316">                .toHashCode();</span>
+<span class="source-line-no">317</span><span id="line.317">    }</span>
+<span class="source-line-no">318</span><span id="line.318"></span>
+<span class="source-line-no">319</span><span id="line.319">}</span>
 
 
 

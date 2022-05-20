@@ -53,93 +53,97 @@
 <span class="source-line-no">040</span><span id="line.40">        return this;</span>
 <span class="source-line-no">041</span><span id="line.41">    }</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public ShippingRateBuilder isMatching(final Boolean isMatching) {</span>
-<span class="source-line-no">044</span><span id="line.44">        this.isMatching = isMatching;</span>
-<span class="source-line-no">045</span><span id="line.45">        return this;</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public ShippingRateBuilder tiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {</span>
-<span class="source-line-no">049</span><span id="line.49">        this.tiers = new ArrayList&lt;&gt;(Arrays.asList(tiers));</span>
-<span class="source-line-no">050</span><span id="line.50">        return this;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public ShippingRateBuilder tiers(</span>
-<span class="source-line-no">054</span><span id="line.54">            final java.util.List&lt;com.commercetools.history.models.common.ShippingRatePriceTier&gt; tiers) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.tiers = tiers;</span>
-<span class="source-line-no">056</span><span id="line.56">        return this;</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public ShippingRateBuilder plusTiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {</span>
-<span class="source-line-no">060</span><span id="line.60">        if (this.tiers == null) {</span>
-<span class="source-line-no">061</span><span id="line.61">            this.tiers = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">062</span><span id="line.62">        }</span>
-<span class="source-line-no">063</span><span id="line.63">        this.tiers.addAll(Arrays.asList(tiers));</span>
-<span class="source-line-no">064</span><span id="line.64">        return this;</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public ShippingRateBuilder plusTiers(</span>
-<span class="source-line-no">068</span><span id="line.68">            Function&lt;com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder&gt; builder) {</span>
-<span class="source-line-no">069</span><span id="line.69">        if (this.tiers == null) {</span>
-<span class="source-line-no">070</span><span id="line.70">            this.tiers = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">071</span><span id="line.71">        }</span>
-<span class="source-line-no">072</span><span id="line.72">        this.tiers</span>
-<span class="source-line-no">073</span><span id="line.73">                .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());</span>
-<span class="source-line-no">074</span><span id="line.74">        return this;</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public ShippingRateBuilder withTiers(</span>
-<span class="source-line-no">078</span><span id="line.78">            Function&lt;com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder&gt; builder) {</span>
-<span class="source-line-no">079</span><span id="line.79">        this.tiers = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">080</span><span id="line.80">        this.tiers</span>
-<span class="source-line-no">081</span><span id="line.81">                .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());</span>
-<span class="source-line-no">082</span><span id="line.82">        return this;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public com.commercetools.history.models.common.Money getPrice() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return this.price;</span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">    *  &lt;p&gt;Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.&lt;/p&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">    */</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public ShippingRateBuilder isMatching(final Boolean isMatching) {</span>
+<span class="source-line-no">048</span><span id="line.48">        this.isMatching = isMatching;</span>
+<span class="source-line-no">049</span><span id="line.49">        return this;</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public ShippingRateBuilder tiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {</span>
+<span class="source-line-no">053</span><span id="line.53">        this.tiers = new ArrayList&lt;&gt;(Arrays.asList(tiers));</span>
+<span class="source-line-no">054</span><span id="line.54">        return this;</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    public ShippingRateBuilder tiers(</span>
+<span class="source-line-no">058</span><span id="line.58">            final java.util.List&lt;com.commercetools.history.models.common.ShippingRatePriceTier&gt; tiers) {</span>
+<span class="source-line-no">059</span><span id="line.59">        this.tiers = tiers;</span>
+<span class="source-line-no">060</span><span id="line.60">        return this;</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public ShippingRateBuilder plusTiers(final com.commercetools.history.models.common.ShippingRatePriceTier... tiers) {</span>
+<span class="source-line-no">064</span><span id="line.64">        if (this.tiers == null) {</span>
+<span class="source-line-no">065</span><span id="line.65">            this.tiers = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">066</span><span id="line.66">        }</span>
+<span class="source-line-no">067</span><span id="line.67">        this.tiers.addAll(Arrays.asList(tiers));</span>
+<span class="source-line-no">068</span><span id="line.68">        return this;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public ShippingRateBuilder plusTiers(</span>
+<span class="source-line-no">072</span><span id="line.72">            Function&lt;com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder&gt; builder) {</span>
+<span class="source-line-no">073</span><span id="line.73">        if (this.tiers == null) {</span>
+<span class="source-line-no">074</span><span id="line.74">            this.tiers = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">075</span><span id="line.75">        }</span>
+<span class="source-line-no">076</span><span id="line.76">        this.tiers</span>
+<span class="source-line-no">077</span><span id="line.77">                .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());</span>
+<span class="source-line-no">078</span><span id="line.78">        return this;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public ShippingRateBuilder withTiers(</span>
+<span class="source-line-no">082</span><span id="line.82">            Function&lt;com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTierBuilder&gt; builder) {</span>
+<span class="source-line-no">083</span><span id="line.83">        this.tiers = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">084</span><span id="line.84">        this.tiers</span>
+<span class="source-line-no">085</span><span id="line.85">                .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());</span>
+<span class="source-line-no">086</span><span id="line.86">        return this;</span>
 <span class="source-line-no">087</span><span id="line.87">    }</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public com.commercetools.history.models.common.Money getFreeAbove() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return this.freeAbove;</span>
+<span class="source-line-no">089</span><span id="line.89">    public com.commercetools.history.models.common.Money getPrice() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return this.price;</span>
 <span class="source-line-no">091</span><span id="line.91">    }</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public Boolean getIsMatching() {</span>
-<span class="source-line-no">094</span><span id="line.94">        return this.isMatching;</span>
+<span class="source-line-no">093</span><span id="line.93">    public com.commercetools.history.models.common.Money getFreeAbove() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return this.freeAbove;</span>
 <span class="source-line-no">095</span><span id="line.95">    }</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public java.util.List&lt;com.commercetools.history.models.common.ShippingRatePriceTier&gt; getTiers() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return this.tiers;</span>
+<span class="source-line-no">097</span><span id="line.97">    public Boolean getIsMatching() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.isMatching;</span>
 <span class="source-line-no">099</span><span id="line.99">    }</span>
 <span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public ShippingRate build() {</span>
-<span class="source-line-no">102</span><span id="line.102">        Objects.requireNonNull(price, ShippingRate.class + ": price is missing");</span>
-<span class="source-line-no">103</span><span id="line.103">        Objects.requireNonNull(freeAbove, ShippingRate.class + ": freeAbove is missing");</span>
-<span class="source-line-no">104</span><span id="line.104">        Objects.requireNonNull(isMatching, ShippingRate.class + ": isMatching is missing");</span>
-<span class="source-line-no">105</span><span id="line.105">        Objects.requireNonNull(tiers, ShippingRate.class + ": tiers is missing");</span>
-<span class="source-line-no">106</span><span id="line.106">        return new ShippingRateImpl(price, freeAbove, isMatching, tiers);</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    /**</span>
-<span class="source-line-no">110</span><span id="line.110">     * builds ShippingRate without checking for non null required values</span>
-<span class="source-line-no">111</span><span id="line.111">     */</span>
-<span class="source-line-no">112</span><span id="line.112">    public ShippingRate buildUnchecked() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return new ShippingRateImpl(price, freeAbove, isMatching, tiers);</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public static ShippingRateBuilder of() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return new ShippingRateBuilder();</span>
+<span class="source-line-no">101</span><span id="line.101">    public java.util.List&lt;com.commercetools.history.models.common.ShippingRatePriceTier&gt; getTiers() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return this.tiers;</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public ShippingRate build() {</span>
+<span class="source-line-no">106</span><span id="line.106">        Objects.requireNonNull(price, ShippingRate.class + ": price is missing");</span>
+<span class="source-line-no">107</span><span id="line.107">        Objects.requireNonNull(freeAbove, ShippingRate.class + ": freeAbove is missing");</span>
+<span class="source-line-no">108</span><span id="line.108">        Objects.requireNonNull(isMatching, ShippingRate.class + ": isMatching is missing");</span>
+<span class="source-line-no">109</span><span id="line.109">        Objects.requireNonNull(tiers, ShippingRate.class + ": tiers is missing");</span>
+<span class="source-line-no">110</span><span id="line.110">        return new ShippingRateImpl(price, freeAbove, isMatching, tiers);</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    /**</span>
+<span class="source-line-no">114</span><span id="line.114">     * builds ShippingRate without checking for non null required values</span>
+<span class="source-line-no">115</span><span id="line.115">     */</span>
+<span class="source-line-no">116</span><span id="line.116">    public ShippingRate buildUnchecked() {</span>
+<span class="source-line-no">117</span><span id="line.117">        return new ShippingRateImpl(price, freeAbove, isMatching, tiers);</span>
 <span class="source-line-no">118</span><span id="line.118">    }</span>
 <span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    public static ShippingRateBuilder of(final ShippingRate template) {</span>
-<span class="source-line-no">121</span><span id="line.121">        ShippingRateBuilder builder = new ShippingRateBuilder();</span>
-<span class="source-line-no">122</span><span id="line.122">        builder.price = template.getPrice();</span>
-<span class="source-line-no">123</span><span id="line.123">        builder.freeAbove = template.getFreeAbove();</span>
-<span class="source-line-no">124</span><span id="line.124">        builder.isMatching = template.getIsMatching();</span>
-<span class="source-line-no">125</span><span id="line.125">        builder.tiers = template.getTiers();</span>
-<span class="source-line-no">126</span><span id="line.126">        return builder;</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">}</span>
+<span class="source-line-no">120</span><span id="line.120">    public static ShippingRateBuilder of() {</span>
+<span class="source-line-no">121</span><span id="line.121">        return new ShippingRateBuilder();</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    public static ShippingRateBuilder of(final ShippingRate template) {</span>
+<span class="source-line-no">125</span><span id="line.125">        ShippingRateBuilder builder = new ShippingRateBuilder();</span>
+<span class="source-line-no">126</span><span id="line.126">        builder.price = template.getPrice();</span>
+<span class="source-line-no">127</span><span id="line.127">        builder.freeAbove = template.getFreeAbove();</span>
+<span class="source-line-no">128</span><span id="line.128">        builder.isMatching = template.getIsMatching();</span>
+<span class="source-line-no">129</span><span id="line.129">        builder.tiers = template.getTiers();</span>
+<span class="source-line-no">130</span><span id="line.130">        return builder;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">}</span>
 
 
 

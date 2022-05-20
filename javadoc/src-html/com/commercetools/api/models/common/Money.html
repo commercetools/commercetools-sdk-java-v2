@@ -26,18 +26,18 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16">*  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.</span>
-<span class="source-line-no">017</span><span id="line.17">*  For storing money values in fractions of the minor unit in a currency, use &lt;a href="ctp:api:type:HighPrecisionMoneyDraft"&gt;HighPrecisionMoneyDraft&lt;/a&gt; instead.&lt;/p&gt;</span>
+<span class="source-line-no">016</span><span id="line.16">*  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">017</span><span id="line.17">*  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
 <span class="source-line-no">018</span><span id="line.18">*/</span>
 <span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">020</span><span id="line.20">@JsonDeserialize(as = MoneyImpl.class)</span>
 <span class="source-line-no">021</span><span id="line.21">public interface Money extends com.commercetools.api.models.common.MonetaryAmountConvertable {</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    /**</span>
-<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;amount in the smallest indivisible unit of a currency, such as&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;Amount in the smallest indivisible unit of a currency, such as:&lt;/p&gt;</span>
 <span class="source-line-no">025</span><span id="line.25">    *  &lt;ul&gt;</span>
-<span class="source-line-no">026</span><span id="line.26">    *  &lt;li&gt;cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as 500).&lt;/li&gt;</span>
-<span class="source-line-no">027</span><span id="line.27">    *  &lt;li&gt;the value in the major unit for currencies without minor units, like JPY (5 JPY is specified as 5).&lt;/li&gt;</span>
+<span class="source-line-no">026</span><span id="line.26">    *   &lt;li&gt;Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as &lt;code&gt;500&lt;/code&gt;).&lt;/li&gt;</span>
+<span class="source-line-no">027</span><span id="line.27">    *   &lt;li&gt;The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as &lt;code&gt;5&lt;/code&gt;).&lt;/li&gt;</span>
 <span class="source-line-no">028</span><span id="line.28">    *  &lt;/ul&gt;</span>
 <span class="source-line-no">029</span><span id="line.29">    */</span>
 <span class="source-line-no">030</span><span id="line.30">    @NotNull</span>
@@ -45,7 +45,7 @@
 <span class="source-line-no">032</span><span id="line.32">    public Long getCentAmount();</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
 <span class="source-line-no">034</span><span id="line.34">    /**</span>
-<span class="source-line-no">035</span><span id="line.35">    *  &lt;p&gt;The currency code compliant to &lt;a href="https://en.wikipedia.org/wiki/ISO_4217"&gt;ISO 4217&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">    *  &lt;p&gt;Currency code compliant to ISO 4217.&lt;/p&gt;</span>
 <span class="source-line-no">036</span><span id="line.36">    */</span>
 <span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
 <span class="source-line-no">038</span><span id="line.38">    @JsonProperty("currencyCode")</span>

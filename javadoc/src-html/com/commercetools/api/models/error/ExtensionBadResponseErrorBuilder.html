@@ -55,88 +55,96 @@
 <span class="source-line-no">042</span><span id="line.42">        return this;</span>
 <span class="source-line-no">043</span><span id="line.43">    }</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public ExtensionBadResponseErrorBuilder localizedMessage(</span>
-<span class="source-line-no">046</span><span id="line.46">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">047</span><span id="line.47">        this.localizedMessage = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">048</span><span id="line.48">        return this;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public ExtensionBadResponseErrorBuilder localizedMessage(</span>
-<span class="source-line-no">052</span><span id="line.52">            @Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {</span>
-<span class="source-line-no">053</span><span id="line.53">        this.localizedMessage = localizedMessage;</span>
-<span class="source-line-no">054</span><span id="line.54">        return this;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final java.lang.Object extensionExtraInfo) {</span>
-<span class="source-line-no">058</span><span id="line.58">        this.extensionExtraInfo = extensionExtraInfo;</span>
-<span class="source-line-no">059</span><span id="line.59">        return this;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public ExtensionBadResponseErrorBuilder errorByExtension(</span>
-<span class="source-line-no">063</span><span id="line.63">            Function&lt;com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtensionBuilder&gt; builder) {</span>
-<span class="source-line-no">064</span><span id="line.64">        this.errorByExtension = builder.apply(com.commercetools.api.models.error.ErrorByExtensionBuilder.of()).build();</span>
-<span class="source-line-no">065</span><span id="line.65">        return this;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public ExtensionBadResponseErrorBuilder errorByExtension(</span>
-<span class="source-line-no">069</span><span id="line.69">            final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {</span>
-<span class="source-line-no">070</span><span id="line.70">        this.errorByExtension = errorByExtension;</span>
-<span class="source-line-no">071</span><span id="line.71">        return this;</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public String getMessage() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return this.message;</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public Map&lt;String, java.lang.Object&gt; getValues() {</span>
-<span class="source-line-no">079</span><span id="line.79">        return this.values;</span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">    *  &lt;p&gt;JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">    */</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public ExtensionBadResponseErrorBuilder localizedMessage(</span>
+<span class="source-line-no">050</span><span id="line.50">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">051</span><span id="line.51">        this.localizedMessage = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">052</span><span id="line.52">        return this;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    /**</span>
+<span class="source-line-no">056</span><span id="line.56">    *  &lt;p&gt;JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">    */</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public ExtensionBadResponseErrorBuilder localizedMessage(</span>
+<span class="source-line-no">060</span><span id="line.60">            @Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {</span>
+<span class="source-line-no">061</span><span id="line.61">        this.localizedMessage = localizedMessage;</span>
+<span class="source-line-no">062</span><span id="line.62">        return this;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public ExtensionBadResponseErrorBuilder extensionExtraInfo(@Nullable final java.lang.Object extensionExtraInfo) {</span>
+<span class="source-line-no">066</span><span id="line.66">        this.extensionExtraInfo = extensionExtraInfo;</span>
+<span class="source-line-no">067</span><span id="line.67">        return this;</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    public ExtensionBadResponseErrorBuilder errorByExtension(</span>
+<span class="source-line-no">071</span><span id="line.71">            Function&lt;com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtensionBuilder&gt; builder) {</span>
+<span class="source-line-no">072</span><span id="line.72">        this.errorByExtension = builder.apply(com.commercetools.api.models.error.ErrorByExtensionBuilder.of()).build();</span>
+<span class="source-line-no">073</span><span id="line.73">        return this;</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public ExtensionBadResponseErrorBuilder errorByExtension(</span>
+<span class="source-line-no">077</span><span id="line.77">            final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.errorByExtension = errorByExtension;</span>
+<span class="source-line-no">079</span><span id="line.79">        return this;</span>
 <span class="source-line-no">080</span><span id="line.80">    }</span>
 <span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    @Nullable</span>
-<span class="source-line-no">083</span><span id="line.83">    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.localizedMessage;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    @Nullable</span>
-<span class="source-line-no">088</span><span id="line.88">    public java.lang.Object getExtensionExtraInfo() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return this.extensionExtraInfo;</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return this.errorByExtension;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public ExtensionBadResponseError build() {</span>
-<span class="source-line-no">097</span><span id="line.97">        Objects.requireNonNull(message, ExtensionBadResponseError.class + ": message is missing");</span>
-<span class="source-line-no">098</span><span id="line.98">        Objects.requireNonNull(values, ExtensionBadResponseError.class + ": values are missing");</span>
-<span class="source-line-no">099</span><span id="line.99">        Objects.requireNonNull(errorByExtension, ExtensionBadResponseError.class + ": errorByExtension is missing");</span>
-<span class="source-line-no">100</span><span id="line.100">        return new ExtensionBadResponseErrorImpl(message, values, localizedMessage, extensionExtraInfo,</span>
-<span class="source-line-no">101</span><span id="line.101">            errorByExtension);</span>
+<span class="source-line-no">082</span><span id="line.82">    public String getMessage() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.message;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public Map&lt;String, java.lang.Object&gt; getValues() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return this.values;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    @Nullable</span>
+<span class="source-line-no">091</span><span id="line.91">    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return this.localizedMessage;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    @Nullable</span>
+<span class="source-line-no">096</span><span id="line.96">    public java.lang.Object getExtensionExtraInfo() {</span>
+<span class="source-line-no">097</span><span id="line.97">        return this.extensionExtraInfo;</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {</span>
+<span class="source-line-no">101</span><span id="line.101">        return this.errorByExtension;</span>
 <span class="source-line-no">102</span><span id="line.102">    }</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    /**</span>
-<span class="source-line-no">105</span><span id="line.105">     * builds ExtensionBadResponseError without checking for non null required values</span>
-<span class="source-line-no">106</span><span id="line.106">     */</span>
-<span class="source-line-no">107</span><span id="line.107">    public ExtensionBadResponseError buildUnchecked() {</span>
+<span class="source-line-no">104</span><span id="line.104">    public ExtensionBadResponseError build() {</span>
+<span class="source-line-no">105</span><span id="line.105">        Objects.requireNonNull(message, ExtensionBadResponseError.class + ": message is missing");</span>
+<span class="source-line-no">106</span><span id="line.106">        Objects.requireNonNull(values, ExtensionBadResponseError.class + ": values are missing");</span>
+<span class="source-line-no">107</span><span id="line.107">        Objects.requireNonNull(errorByExtension, ExtensionBadResponseError.class + ": errorByExtension is missing");</span>
 <span class="source-line-no">108</span><span id="line.108">        return new ExtensionBadResponseErrorImpl(message, values, localizedMessage, extensionExtraInfo,</span>
 <span class="source-line-no">109</span><span id="line.109">            errorByExtension);</span>
 <span class="source-line-no">110</span><span id="line.110">    }</span>
 <span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public static ExtensionBadResponseErrorBuilder of() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return new ExtensionBadResponseErrorBuilder();</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public static ExtensionBadResponseErrorBuilder of(final ExtensionBadResponseError template) {</span>
-<span class="source-line-no">117</span><span id="line.117">        ExtensionBadResponseErrorBuilder builder = new ExtensionBadResponseErrorBuilder();</span>
-<span class="source-line-no">118</span><span id="line.118">        builder.message = template.getMessage();</span>
-<span class="source-line-no">119</span><span id="line.119">        builder.values = template.values();</span>
-<span class="source-line-no">120</span><span id="line.120">        builder.localizedMessage = template.getLocalizedMessage();</span>
-<span class="source-line-no">121</span><span id="line.121">        builder.extensionExtraInfo = template.getExtensionExtraInfo();</span>
-<span class="source-line-no">122</span><span id="line.122">        builder.errorByExtension = template.getErrorByExtension();</span>
-<span class="source-line-no">123</span><span id="line.123">        return builder;</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">}</span>
+<span class="source-line-no">112</span><span id="line.112">    /**</span>
+<span class="source-line-no">113</span><span id="line.113">     * builds ExtensionBadResponseError without checking for non null required values</span>
+<span class="source-line-no">114</span><span id="line.114">     */</span>
+<span class="source-line-no">115</span><span id="line.115">    public ExtensionBadResponseError buildUnchecked() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return new ExtensionBadResponseErrorImpl(message, values, localizedMessage, extensionExtraInfo,</span>
+<span class="source-line-no">117</span><span id="line.117">            errorByExtension);</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    public static ExtensionBadResponseErrorBuilder of() {</span>
+<span class="source-line-no">121</span><span id="line.121">        return new ExtensionBadResponseErrorBuilder();</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    public static ExtensionBadResponseErrorBuilder of(final ExtensionBadResponseError template) {</span>
+<span class="source-line-no">125</span><span id="line.125">        ExtensionBadResponseErrorBuilder builder = new ExtensionBadResponseErrorBuilder();</span>
+<span class="source-line-no">126</span><span id="line.126">        builder.message = template.getMessage();</span>
+<span class="source-line-no">127</span><span id="line.127">        builder.values = template.values();</span>
+<span class="source-line-no">128</span><span id="line.128">        builder.localizedMessage = template.getLocalizedMessage();</span>
+<span class="source-line-no">129</span><span id="line.129">        builder.extensionExtraInfo = template.getExtensionExtraInfo();</span>
+<span class="source-line-no">130</span><span id="line.130">        builder.errorByExtension = template.getErrorByExtension();</span>
+<span class="source-line-no">131</span><span id="line.131">        return builder;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">}</span>
 
 
 

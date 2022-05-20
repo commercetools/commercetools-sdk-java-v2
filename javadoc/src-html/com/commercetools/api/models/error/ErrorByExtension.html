@@ -29,49 +29,56 @@
 <span class="source-line-no">016</span><span id="line.16">@JsonDeserialize(as = ErrorByExtensionImpl.class)</span>
 <span class="source-line-no">017</span><span id="line.17">public interface ErrorByExtension {</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    @NotNull</span>
-<span class="source-line-no">020</span><span id="line.20">    @JsonProperty("id")</span>
-<span class="source-line-no">021</span><span id="line.21">    public String getId();</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    @JsonProperty("key")</span>
-<span class="source-line-no">024</span><span id="line.24">    public String getKey();</span>
+<span class="source-line-no">019</span><span id="line.19">    /**</span>
+<span class="source-line-no">020</span><span id="line.20">    *  &lt;p&gt;Platform-generated unique identifier of the Extension.&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21">    */</span>
+<span class="source-line-no">022</span><span id="line.22">    @NotNull</span>
+<span class="source-line-no">023</span><span id="line.23">    @JsonProperty("id")</span>
+<span class="source-line-no">024</span><span id="line.24">    public String getId();</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    public void setId(final String id);</span>
-<span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    public void setKey(final String key);</span>
+<span class="source-line-no">026</span><span id="line.26">    /**</span>
+<span class="source-line-no">027</span><span id="line.27">    *  &lt;p&gt;User-defined unique identifier of the Extension.&lt;/p&gt;</span>
+<span class="source-line-no">028</span><span id="line.28">    */</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public static ErrorByExtension of() {</span>
-<span class="source-line-no">031</span><span id="line.31">        return new ErrorByExtensionImpl();</span>
-<span class="source-line-no">032</span><span id="line.32">    }</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    public static ErrorByExtension of(final ErrorByExtension template) {</span>
-<span class="source-line-no">035</span><span id="line.35">        ErrorByExtensionImpl instance = new ErrorByExtensionImpl();</span>
-<span class="source-line-no">036</span><span id="line.36">        instance.setId(template.getId());</span>
-<span class="source-line-no">037</span><span id="line.37">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">038</span><span id="line.38">        return instance;</span>
+<span class="source-line-no">030</span><span id="line.30">    @JsonProperty("key")</span>
+<span class="source-line-no">031</span><span id="line.31">    public String getKey();</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    public void setId(final String id);</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    public void setKey(final String key);</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public static ErrorByExtension of() {</span>
+<span class="source-line-no">038</span><span id="line.38">        return new ErrorByExtensionImpl();</span>
 <span class="source-line-no">039</span><span id="line.39">    }</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public static ErrorByExtensionBuilder builder() {</span>
-<span class="source-line-no">042</span><span id="line.42">        return ErrorByExtensionBuilder.of();</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public static ErrorByExtensionBuilder builder(final ErrorByExtension template) {</span>
-<span class="source-line-no">046</span><span id="line.46">        return ErrorByExtensionBuilder.of(template);</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    default &lt;T&gt; T withErrorByExtension(Function&lt;ErrorByExtension, T&gt; helper) {</span>
-<span class="source-line-no">050</span><span id="line.50">        return helper.apply(this);</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ErrorByExtension&gt; typeReference() {</span>
-<span class="source-line-no">054</span><span id="line.54">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ErrorByExtension&gt;() {</span>
-<span class="source-line-no">055</span><span id="line.55">            @Override</span>
-<span class="source-line-no">056</span><span id="line.56">            public String toString() {</span>
-<span class="source-line-no">057</span><span id="line.57">                return "TypeReference&lt;ErrorByExtension&gt;";</span>
-<span class="source-line-no">058</span><span id="line.58">            }</span>
-<span class="source-line-no">059</span><span id="line.59">        };</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61">}</span>
+<span class="source-line-no">041</span><span id="line.41">    public static ErrorByExtension of(final ErrorByExtension template) {</span>
+<span class="source-line-no">042</span><span id="line.42">        ErrorByExtensionImpl instance = new ErrorByExtensionImpl();</span>
+<span class="source-line-no">043</span><span id="line.43">        instance.setId(template.getId());</span>
+<span class="source-line-no">044</span><span id="line.44">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">045</span><span id="line.45">        return instance;</span>
+<span class="source-line-no">046</span><span id="line.46">    }</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    public static ErrorByExtensionBuilder builder() {</span>
+<span class="source-line-no">049</span><span id="line.49">        return ErrorByExtensionBuilder.of();</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public static ErrorByExtensionBuilder builder(final ErrorByExtension template) {</span>
+<span class="source-line-no">053</span><span id="line.53">        return ErrorByExtensionBuilder.of(template);</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    default &lt;T&gt; T withErrorByExtension(Function&lt;ErrorByExtension, T&gt; helper) {</span>
+<span class="source-line-no">057</span><span id="line.57">        return helper.apply(this);</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ErrorByExtension&gt; typeReference() {</span>
+<span class="source-line-no">061</span><span id="line.61">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ErrorByExtension&gt;() {</span>
+<span class="source-line-no">062</span><span id="line.62">            @Override</span>
+<span class="source-line-no">063</span><span id="line.63">            public String toString() {</span>
+<span class="source-line-no">064</span><span id="line.64">                return "TypeReference&lt;ErrorByExtension&gt;";</span>
+<span class="source-line-no">065</span><span id="line.65">            }</span>
+<span class="source-line-no">066</span><span id="line.66">        };</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68">}</span>
 
 
 

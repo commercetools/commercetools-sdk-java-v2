@@ -27,98 +27,96 @@
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17">*  &lt;p&gt;&lt;a href="/../api/general-concepts#pagedqueryresult"&gt;PagedQueryResult&lt;/a&gt; for &lt;a href="#importcontainer"&gt;ImportContainers&lt;/a&gt;.</span>
-<span class="source-line-no">018</span><span id="line.18">*  Used as a response to a query request for &lt;a href="#importcontainer"&gt;ImportContainers&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19">*/</span>
-<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">021</span><span id="line.21">@JsonDeserialize(as = ImportContainerPagedResponseImpl.class)</span>
-<span class="source-line-no">022</span><span id="line.22">public interface ImportContainerPagedResponse {</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    /**</span>
-<span class="source-line-no">025</span><span id="line.25">    *  &lt;p&gt;The number of results requested in the query request.&lt;/p&gt;</span>
-<span class="source-line-no">026</span><span id="line.26">    */</span>
-<span class="source-line-no">027</span><span id="line.27">    @NotNull</span>
-<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("limit")</span>
-<span class="source-line-no">029</span><span id="line.29">    public Integer getLimit();</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    /**</span>
-<span class="source-line-no">032</span><span id="line.32">    *  &lt;p&gt;The number of elements skipped, not a page number.</span>
-<span class="source-line-no">033</span><span id="line.33">    *  Supplied by the client or the server default.&lt;/p&gt;</span>
-<span class="source-line-no">034</span><span id="line.34">    */</span>
-<span class="source-line-no">035</span><span id="line.35">    @NotNull</span>
-<span class="source-line-no">036</span><span id="line.36">    @JsonProperty("offset")</span>
-<span class="source-line-no">037</span><span id="line.37">    public Long getOffset();</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    /**</span>
-<span class="source-line-no">040</span><span id="line.40">    *  &lt;p&gt;The actual number of results returned.&lt;/p&gt;</span>
-<span class="source-line-no">041</span><span id="line.41">    */</span>
-<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
-<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("count")</span>
-<span class="source-line-no">044</span><span id="line.44">    public Long getCount();</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">    *  &lt;p&gt;The total number of results matching the query.&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">    */</span>
-<span class="source-line-no">049</span><span id="line.49">    @NotNull</span>
-<span class="source-line-no">050</span><span id="line.50">    @JsonProperty("total")</span>
-<span class="source-line-no">051</span><span id="line.51">    public Long getTotal();</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">    *  &lt;p&gt;The array of Import Containers matching the query.&lt;/p&gt;</span>
-<span class="source-line-no">055</span><span id="line.55">    */</span>
-<span class="source-line-no">056</span><span id="line.56">    @NotNull</span>
-<span class="source-line-no">057</span><span id="line.57">    @Valid</span>
-<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("results")</span>
-<span class="source-line-no">059</span><span id="line.59">    public List&lt;ImportContainer&gt; getResults();</span>
+<span class="source-line-no">017</span><span id="line.17">*  &lt;p&gt;PagedQueryResult for ImportContainers. Used as a response to a query request for ImportContainers.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18">*/</span>
+<span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">020</span><span id="line.20">@JsonDeserialize(as = ImportContainerPagedResponseImpl.class)</span>
+<span class="source-line-no">021</span><span id="line.21">public interface ImportContainerPagedResponse {</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    /**</span>
+<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;Number of results requested.&lt;/p&gt;</span>
+<span class="source-line-no">025</span><span id="line.25">    */</span>
+<span class="source-line-no">026</span><span id="line.26">    @NotNull</span>
+<span class="source-line-no">027</span><span id="line.27">    @JsonProperty("limit")</span>
+<span class="source-line-no">028</span><span id="line.28">    public Integer getLimit();</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    /**</span>
+<span class="source-line-no">031</span><span id="line.31">    *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
+<span class="source-line-no">032</span><span id="line.32">    */</span>
+<span class="source-line-no">033</span><span id="line.33">    @NotNull</span>
+<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("offset")</span>
+<span class="source-line-no">035</span><span id="line.35">    public Long getOffset();</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    /**</span>
+<span class="source-line-no">038</span><span id="line.38">    *  &lt;p&gt;The actual number of results returned.&lt;/p&gt;</span>
+<span class="source-line-no">039</span><span id="line.39">    */</span>
+<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
+<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("count")</span>
+<span class="source-line-no">042</span><span id="line.42">    public Long getCount();</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">    *  &lt;p&gt;The total number of results matching the query.&lt;/p&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">    */</span>
+<span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("total")</span>
+<span class="source-line-no">049</span><span id="line.49">    public Long getTotal();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">    *  &lt;p&gt;The array of Import Containers matching the query.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">    */</span>
+<span class="source-line-no">054</span><span id="line.54">    @NotNull</span>
+<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
+<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("results")</span>
+<span class="source-line-no">057</span><span id="line.57">    public List&lt;ImportContainer&gt; getResults();</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public void setLimit(final Integer limit);</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setLimit(final Integer limit);</span>
+<span class="source-line-no">061</span><span id="line.61">    public void setOffset(final Long offset);</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setOffset(final Long offset);</span>
+<span class="source-line-no">063</span><span id="line.63">    public void setCount(final Long count);</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public void setCount(final Long count);</span>
+<span class="source-line-no">065</span><span id="line.65">    public void setTotal(final Long total);</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public void setTotal(final Long total);</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    @JsonIgnore</span>
-<span class="source-line-no">070</span><span id="line.70">    public void setResults(final ImportContainer... results);</span>
+<span class="source-line-no">067</span><span id="line.67">    @JsonIgnore</span>
+<span class="source-line-no">068</span><span id="line.68">    public void setResults(final ImportContainer... results);</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    public void setResults(final List&lt;ImportContainer&gt; results);</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public void setResults(final List&lt;ImportContainer&gt; results);</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public static ImportContainerPagedResponse of() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return new ImportContainerPagedResponseImpl();</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public static ImportContainerPagedResponse of(final ImportContainerPagedResponse template) {</span>
-<span class="source-line-no">079</span><span id="line.79">        ImportContainerPagedResponseImpl instance = new ImportContainerPagedResponseImpl();</span>
-<span class="source-line-no">080</span><span id="line.80">        instance.setLimit(template.getLimit());</span>
-<span class="source-line-no">081</span><span id="line.81">        instance.setOffset(template.getOffset());</span>
-<span class="source-line-no">082</span><span id="line.82">        instance.setCount(template.getCount());</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setTotal(template.getTotal());</span>
-<span class="source-line-no">084</span><span id="line.84">        instance.setResults(template.getResults());</span>
-<span class="source-line-no">085</span><span id="line.85">        return instance;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public static ImportContainerPagedResponseBuilder builder() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return ImportContainerPagedResponseBuilder.of();</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public static ImportContainerPagedResponseBuilder builder(final ImportContainerPagedResponse template) {</span>
-<span class="source-line-no">093</span><span id="line.93">        return ImportContainerPagedResponseBuilder.of(template);</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    default &lt;T&gt; T withImportContainerPagedResponse(Function&lt;ImportContainerPagedResponse, T&gt; helper) {</span>
-<span class="source-line-no">097</span><span id="line.97">        return helper.apply(this);</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ImportContainerPagedResponse&gt; typeReference() {</span>
-<span class="source-line-no">101</span><span id="line.101">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ImportContainerPagedResponse&gt;() {</span>
-<span class="source-line-no">102</span><span id="line.102">            @Override</span>
-<span class="source-line-no">103</span><span id="line.103">            public String toString() {</span>
-<span class="source-line-no">104</span><span id="line.104">                return "TypeReference&lt;ImportContainerPagedResponse&gt;";</span>
-<span class="source-line-no">105</span><span id="line.105">            }</span>
-<span class="source-line-no">106</span><span id="line.106">        };</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108">}</span>
+<span class="source-line-no">072</span><span id="line.72">    public static ImportContainerPagedResponse of() {</span>
+<span class="source-line-no">073</span><span id="line.73">        return new ImportContainerPagedResponseImpl();</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public static ImportContainerPagedResponse of(final ImportContainerPagedResponse template) {</span>
+<span class="source-line-no">077</span><span id="line.77">        ImportContainerPagedResponseImpl instance = new ImportContainerPagedResponseImpl();</span>
+<span class="source-line-no">078</span><span id="line.78">        instance.setLimit(template.getLimit());</span>
+<span class="source-line-no">079</span><span id="line.79">        instance.setOffset(template.getOffset());</span>
+<span class="source-line-no">080</span><span id="line.80">        instance.setCount(template.getCount());</span>
+<span class="source-line-no">081</span><span id="line.81">        instance.setTotal(template.getTotal());</span>
+<span class="source-line-no">082</span><span id="line.82">        instance.setResults(template.getResults());</span>
+<span class="source-line-no">083</span><span id="line.83">        return instance;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public static ImportContainerPagedResponseBuilder builder() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return ImportContainerPagedResponseBuilder.of();</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public static ImportContainerPagedResponseBuilder builder(final ImportContainerPagedResponse template) {</span>
+<span class="source-line-no">091</span><span id="line.91">        return ImportContainerPagedResponseBuilder.of(template);</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    default &lt;T&gt; T withImportContainerPagedResponse(Function&lt;ImportContainerPagedResponse, T&gt; helper) {</span>
+<span class="source-line-no">095</span><span id="line.95">        return helper.apply(this);</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ImportContainerPagedResponse&gt; typeReference() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ImportContainerPagedResponse&gt;() {</span>
+<span class="source-line-no">100</span><span id="line.100">            @Override</span>
+<span class="source-line-no">101</span><span id="line.101">            public String toString() {</span>
+<span class="source-line-no">102</span><span id="line.102">                return "TypeReference&lt;ImportContainerPagedResponse&gt;";</span>
+<span class="source-line-no">103</span><span id="line.103">            }</span>
+<span class="source-line-no">104</span><span id="line.104">        };</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106">}</span>
 
 
 

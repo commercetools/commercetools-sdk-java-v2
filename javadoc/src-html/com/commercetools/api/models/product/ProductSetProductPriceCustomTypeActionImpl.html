@@ -69,65 +69,64 @@
 <span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
 <span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">    *  &lt;p&gt;Defines the &lt;a href="ctp:api:type:Type"&gt;Type&lt;/a&gt; that extends the Price with &lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt;.</span>
-<span class="source-line-no">060</span><span id="line.60">    *  If absent, any existing Type and Custom Fields are removed from the Price.&lt;/p&gt;</span>
-<span class="source-line-no">061</span><span id="line.61">    */</span>
-<span class="source-line-no">062</span><span id="line.62">    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return this.type;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;Sets the &lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt; fields for the Price.&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">    */</span>
-<span class="source-line-no">069</span><span id="line.69">    public com.commercetools.api.models.type.FieldContainer getFields() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return this.fields;</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public void setPriceId(final String priceId) {</span>
-<span class="source-line-no">074</span><span id="line.74">        this.priceId = priceId;</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public void setStaged(final Boolean staged) {</span>
-<span class="source-line-no">078</span><span id="line.78">        this.staged = staged;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {</span>
-<span class="source-line-no">082</span><span id="line.82">        this.type = type;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {</span>
-<span class="source-line-no">086</span><span id="line.86">        this.fields = fields;</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    @Override</span>
-<span class="source-line-no">090</span><span id="line.90">    public boolean equals(Object o) {</span>
-<span class="source-line-no">091</span><span id="line.91">        if (this == o)</span>
-<span class="source-line-no">092</span><span id="line.92">            return true;</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">095</span><span id="line.95">            return false;</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">        ProductSetProductPriceCustomTypeActionImpl that = (ProductSetProductPriceCustomTypeActionImpl) o;</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">100</span><span id="line.100">                .append(priceId, that.priceId)</span>
-<span class="source-line-no">101</span><span id="line.101">                .append(staged, that.staged)</span>
-<span class="source-line-no">102</span><span id="line.102">                .append(type, that.type)</span>
-<span class="source-line-no">103</span><span id="line.103">                .append(fields, that.fields)</span>
-<span class="source-line-no">104</span><span id="line.104">                .isEquals();</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    @Override</span>
-<span class="source-line-no">108</span><span id="line.108">    public int hashCode() {</span>
-<span class="source-line-no">109</span><span id="line.109">        return new HashCodeBuilder(17, 37).append(action)</span>
-<span class="source-line-no">110</span><span id="line.110">                .append(priceId)</span>
-<span class="source-line-no">111</span><span id="line.111">                .append(staged)</span>
-<span class="source-line-no">112</span><span id="line.112">                .append(type)</span>
-<span class="source-line-no">113</span><span id="line.113">                .append(fields)</span>
-<span class="source-line-no">114</span><span id="line.114">                .toHashCode();</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">}</span>
+<span class="source-line-no">059</span><span id="line.59">    *  &lt;p&gt;Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">    */</span>
+<span class="source-line-no">061</span><span id="line.61">    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {</span>
+<span class="source-line-no">062</span><span id="line.62">        return this.type;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">    *  &lt;p&gt;Sets the Custom Fields fields for the Price.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">    */</span>
+<span class="source-line-no">068</span><span id="line.68">    public com.commercetools.api.models.type.FieldContainer getFields() {</span>
+<span class="source-line-no">069</span><span id="line.69">        return this.fields;</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public void setPriceId(final String priceId) {</span>
+<span class="source-line-no">073</span><span id="line.73">        this.priceId = priceId;</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public void setStaged(final Boolean staged) {</span>
+<span class="source-line-no">077</span><span id="line.77">        this.staged = staged;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {</span>
+<span class="source-line-no">081</span><span id="line.81">        this.type = type;</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public void setFields(final com.commercetools.api.models.type.FieldContainer fields) {</span>
+<span class="source-line-no">085</span><span id="line.85">        this.fields = fields;</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    @Override</span>
+<span class="source-line-no">089</span><span id="line.89">    public boolean equals(Object o) {</span>
+<span class="source-line-no">090</span><span id="line.90">        if (this == o)</span>
+<span class="source-line-no">091</span><span id="line.91">            return true;</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">094</span><span id="line.94">            return false;</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">        ProductSetProductPriceCustomTypeActionImpl that = (ProductSetProductPriceCustomTypeActionImpl) o;</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">099</span><span id="line.99">                .append(priceId, that.priceId)</span>
+<span class="source-line-no">100</span><span id="line.100">                .append(staged, that.staged)</span>
+<span class="source-line-no">101</span><span id="line.101">                .append(type, that.type)</span>
+<span class="source-line-no">102</span><span id="line.102">                .append(fields, that.fields)</span>
+<span class="source-line-no">103</span><span id="line.103">                .isEquals();</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    @Override</span>
+<span class="source-line-no">107</span><span id="line.107">    public int hashCode() {</span>
+<span class="source-line-no">108</span><span id="line.108">        return new HashCodeBuilder(17, 37).append(action)</span>
+<span class="source-line-no">109</span><span id="line.109">                .append(priceId)</span>
+<span class="source-line-no">110</span><span id="line.110">                .append(staged)</span>
+<span class="source-line-no">111</span><span id="line.111">                .append(type)</span>
+<span class="source-line-no">112</span><span id="line.112">                .append(fields)</span>
+<span class="source-line-no">113</span><span id="line.113">                .toHashCode();</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">}</span>
 
 
 

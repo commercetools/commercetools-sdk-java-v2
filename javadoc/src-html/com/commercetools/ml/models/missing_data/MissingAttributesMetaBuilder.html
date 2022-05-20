@@ -58,63 +58,75 @@
 <span class="source-line-no">045</span><span id="line.45">        return this;</span>
 <span class="source-line-no">046</span><span id="line.46">    }</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public MissingAttributesMetaBuilder productTypeIds(@Nullable final String... productTypeIds) {</span>
-<span class="source-line-no">049</span><span id="line.49">        this.productTypeIds = new ArrayList&lt;&gt;(Arrays.asList(productTypeIds));</span>
-<span class="source-line-no">050</span><span id="line.50">        return this;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public MissingAttributesMetaBuilder productTypeIds(@Nullable final java.util.List&lt;String&gt; productTypeIds) {</span>
-<span class="source-line-no">054</span><span id="line.54">        this.productTypeIds = productTypeIds;</span>
-<span class="source-line-no">055</span><span id="line.55">        return this;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public MissingAttributesMetaBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {</span>
-<span class="source-line-no">059</span><span id="line.59">        if (this.productTypeIds == null) {</span>
-<span class="source-line-no">060</span><span id="line.60">            this.productTypeIds = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">061</span><span id="line.61">        }</span>
-<span class="source-line-no">062</span><span id="line.62">        this.productTypeIds.addAll(Arrays.asList(productTypeIds));</span>
+<span class="source-line-no">048</span><span id="line.48">    /**</span>
+<span class="source-line-no">049</span><span id="line.49">    *  &lt;p&gt;The IDs of the product types containing the requested &lt;code&gt;attributeName&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">    */</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public MissingAttributesMetaBuilder productTypeIds(@Nullable final String... productTypeIds) {</span>
+<span class="source-line-no">053</span><span id="line.53">        this.productTypeIds = new ArrayList&lt;&gt;(Arrays.asList(productTypeIds));</span>
+<span class="source-line-no">054</span><span id="line.54">        return this;</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    /**</span>
+<span class="source-line-no">058</span><span id="line.58">    *  &lt;p&gt;The IDs of the product types containing the requested &lt;code&gt;attributeName&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">059</span><span id="line.59">    */</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public MissingAttributesMetaBuilder productTypeIds(@Nullable final java.util.List&lt;String&gt; productTypeIds) {</span>
+<span class="source-line-no">062</span><span id="line.62">        this.productTypeIds = productTypeIds;</span>
 <span class="source-line-no">063</span><span id="line.63">        return this;</span>
 <span class="source-line-no">064</span><span id="line.64">    }</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public com.commercetools.ml.models.missing_data.MissingAttributesDetails getProductLevel() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return this.productLevel;</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">066</span><span id="line.66">    /**</span>
+<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;The IDs of the product types containing the requested &lt;code&gt;attributeName&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">    */</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public com.commercetools.ml.models.missing_data.MissingAttributesDetails getVariantLevel() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return this.variantLevel;</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    @Nullable</span>
-<span class="source-line-no">075</span><span id="line.75">    public java.util.List&lt;String&gt; getProductTypeIds() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return this.productTypeIds;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public MissingAttributesMeta build() {</span>
-<span class="source-line-no">080</span><span id="line.80">        Objects.requireNonNull(productLevel, MissingAttributesMeta.class + ": productLevel is missing");</span>
-<span class="source-line-no">081</span><span id="line.81">        Objects.requireNonNull(variantLevel, MissingAttributesMeta.class + ": variantLevel is missing");</span>
-<span class="source-line-no">082</span><span id="line.82">        return new MissingAttributesMetaImpl(productLevel, variantLevel, productTypeIds);</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     * builds MissingAttributesMeta without checking for non null required values</span>
-<span class="source-line-no">087</span><span id="line.87">     */</span>
-<span class="source-line-no">088</span><span id="line.88">    public MissingAttributesMeta buildUnchecked() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return new MissingAttributesMetaImpl(productLevel, variantLevel, productTypeIds);</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public static MissingAttributesMetaBuilder of() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return new MissingAttributesMetaBuilder();</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public static MissingAttributesMetaBuilder of(final MissingAttributesMeta template) {</span>
-<span class="source-line-no">097</span><span id="line.97">        MissingAttributesMetaBuilder builder = new MissingAttributesMetaBuilder();</span>
-<span class="source-line-no">098</span><span id="line.98">        builder.productLevel = template.getProductLevel();</span>
-<span class="source-line-no">099</span><span id="line.99">        builder.variantLevel = template.getVariantLevel();</span>
-<span class="source-line-no">100</span><span id="line.100">        builder.productTypeIds = template.getProductTypeIds();</span>
-<span class="source-line-no">101</span><span id="line.101">        return builder;</span>
+<span class="source-line-no">070</span><span id="line.70">    public MissingAttributesMetaBuilder plusProductTypeIds(@Nullable final String... productTypeIds) {</span>
+<span class="source-line-no">071</span><span id="line.71">        if (this.productTypeIds == null) {</span>
+<span class="source-line-no">072</span><span id="line.72">            this.productTypeIds = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">073</span><span id="line.73">        }</span>
+<span class="source-line-no">074</span><span id="line.74">        this.productTypeIds.addAll(Arrays.asList(productTypeIds));</span>
+<span class="source-line-no">075</span><span id="line.75">        return this;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public com.commercetools.ml.models.missing_data.MissingAttributesDetails getProductLevel() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return this.productLevel;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public com.commercetools.ml.models.missing_data.MissingAttributesDetails getVariantLevel() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.variantLevel;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    @Nullable</span>
+<span class="source-line-no">087</span><span id="line.87">    public java.util.List&lt;String&gt; getProductTypeIds() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return this.productTypeIds;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public MissingAttributesMeta build() {</span>
+<span class="source-line-no">092</span><span id="line.92">        Objects.requireNonNull(productLevel, MissingAttributesMeta.class + ": productLevel is missing");</span>
+<span class="source-line-no">093</span><span id="line.93">        Objects.requireNonNull(variantLevel, MissingAttributesMeta.class + ": variantLevel is missing");</span>
+<span class="source-line-no">094</span><span id="line.94">        return new MissingAttributesMetaImpl(productLevel, variantLevel, productTypeIds);</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    /**</span>
+<span class="source-line-no">098</span><span id="line.98">     * builds MissingAttributesMeta without checking for non null required values</span>
+<span class="source-line-no">099</span><span id="line.99">     */</span>
+<span class="source-line-no">100</span><span id="line.100">    public MissingAttributesMeta buildUnchecked() {</span>
+<span class="source-line-no">101</span><span id="line.101">        return new MissingAttributesMetaImpl(productLevel, variantLevel, productTypeIds);</span>
 <span class="source-line-no">102</span><span id="line.102">    }</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">}</span>
+<span class="source-line-no">104</span><span id="line.104">    public static MissingAttributesMetaBuilder of() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return new MissingAttributesMetaBuilder();</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public static MissingAttributesMetaBuilder of(final MissingAttributesMeta template) {</span>
+<span class="source-line-no">109</span><span id="line.109">        MissingAttributesMetaBuilder builder = new MissingAttributesMetaBuilder();</span>
+<span class="source-line-no">110</span><span id="line.110">        builder.productLevel = template.getProductLevel();</span>
+<span class="source-line-no">111</span><span id="line.111">        builder.variantLevel = template.getVariantLevel();</span>
+<span class="source-line-no">112</span><span id="line.112">        builder.productTypeIds = template.getProductTypeIds();</span>
+<span class="source-line-no">113</span><span id="line.113">        return builder;</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">}</span>
 
 
 

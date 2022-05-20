@@ -36,112 +36,120 @@
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    private java.util.List&lt;com.commercetools.api.models.payment.Payment&gt; results;</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    public PaymentPagedQueryResponseBuilder limit(final Long limit) {</span>
-<span class="source-line-no">027</span><span id="line.27">        this.limit = limit;</span>
-<span class="source-line-no">028</span><span id="line.28">        return this;</span>
-<span class="source-line-no">029</span><span id="line.29">    }</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    public PaymentPagedQueryResponseBuilder count(final Long count) {</span>
-<span class="source-line-no">032</span><span id="line.32">        this.count = count;</span>
-<span class="source-line-no">033</span><span id="line.33">        return this;</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public PaymentPagedQueryResponseBuilder total(@Nullable final Long total) {</span>
-<span class="source-line-no">037</span><span id="line.37">        this.total = total;</span>
-<span class="source-line-no">038</span><span id="line.38">        return this;</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public PaymentPagedQueryResponseBuilder offset(final Long offset) {</span>
-<span class="source-line-no">042</span><span id="line.42">        this.offset = offset;</span>
-<span class="source-line-no">043</span><span id="line.43">        return this;</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public PaymentPagedQueryResponseBuilder results(final com.commercetools.api.models.payment.Payment... results) {</span>
-<span class="source-line-no">047</span><span id="line.47">        this.results = new ArrayList&lt;&gt;(Arrays.asList(results));</span>
-<span class="source-line-no">048</span><span id="line.48">        return this;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public PaymentPagedQueryResponseBuilder results(</span>
-<span class="source-line-no">052</span><span id="line.52">            final java.util.List&lt;com.commercetools.api.models.payment.Payment&gt; results) {</span>
-<span class="source-line-no">053</span><span id="line.53">        this.results = results;</span>
-<span class="source-line-no">054</span><span id="line.54">        return this;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public PaymentPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.payment.Payment... results) {</span>
-<span class="source-line-no">058</span><span id="line.58">        if (this.results == null) {</span>
-<span class="source-line-no">059</span><span id="line.59">            this.results = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">060</span><span id="line.60">        }</span>
-<span class="source-line-no">061</span><span id="line.61">        this.results.addAll(Arrays.asList(results));</span>
+<span class="source-line-no">026</span><span id="line.26">    /**</span>
+<span class="source-line-no">027</span><span id="line.27">    *  &lt;p&gt;Number of results requested.&lt;/p&gt;</span>
+<span class="source-line-no">028</span><span id="line.28">    */</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    public PaymentPagedQueryResponseBuilder limit(final Long limit) {</span>
+<span class="source-line-no">031</span><span id="line.31">        this.limit = limit;</span>
+<span class="source-line-no">032</span><span id="line.32">        return this;</span>
+<span class="source-line-no">033</span><span id="line.33">    }</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    public PaymentPagedQueryResponseBuilder count(final Long count) {</span>
+<span class="source-line-no">036</span><span id="line.36">        this.count = count;</span>
+<span class="source-line-no">037</span><span id="line.37">        return this;</span>
+<span class="source-line-no">038</span><span id="line.38">    }</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    public PaymentPagedQueryResponseBuilder total(@Nullable final Long total) {</span>
+<span class="source-line-no">041</span><span id="line.41">        this.total = total;</span>
+<span class="source-line-no">042</span><span id="line.42">        return this;</span>
+<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">    *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">    */</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public PaymentPagedQueryResponseBuilder offset(final Long offset) {</span>
+<span class="source-line-no">050</span><span id="line.50">        this.offset = offset;</span>
+<span class="source-line-no">051</span><span id="line.51">        return this;</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public PaymentPagedQueryResponseBuilder results(final com.commercetools.api.models.payment.Payment... results) {</span>
+<span class="source-line-no">055</span><span id="line.55">        this.results = new ArrayList&lt;&gt;(Arrays.asList(results));</span>
+<span class="source-line-no">056</span><span id="line.56">        return this;</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public PaymentPagedQueryResponseBuilder results(</span>
+<span class="source-line-no">060</span><span id="line.60">            final java.util.List&lt;com.commercetools.api.models.payment.Payment&gt; results) {</span>
+<span class="source-line-no">061</span><span id="line.61">        this.results = results;</span>
 <span class="source-line-no">062</span><span id="line.62">        return this;</span>
 <span class="source-line-no">063</span><span id="line.63">    }</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public PaymentPagedQueryResponseBuilder plusResults(</span>
-<span class="source-line-no">066</span><span id="line.66">            Function&lt;com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder&gt; builder) {</span>
-<span class="source-line-no">067</span><span id="line.67">        if (this.results == null) {</span>
-<span class="source-line-no">068</span><span id="line.68">            this.results = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">069</span><span id="line.69">        }</span>
-<span class="source-line-no">070</span><span id="line.70">        this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());</span>
-<span class="source-line-no">071</span><span id="line.71">        return this;</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public PaymentPagedQueryResponseBuilder withResults(</span>
-<span class="source-line-no">075</span><span id="line.75">            Function&lt;com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder&gt; builder) {</span>
-<span class="source-line-no">076</span><span id="line.76">        this.results = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">077</span><span id="line.77">        this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());</span>
-<span class="source-line-no">078</span><span id="line.78">        return this;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public Long getLimit() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return this.limit;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public Long getCount() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return this.count;</span>
+<span class="source-line-no">065</span><span id="line.65">    public PaymentPagedQueryResponseBuilder plusResults(final com.commercetools.api.models.payment.Payment... results) {</span>
+<span class="source-line-no">066</span><span id="line.66">        if (this.results == null) {</span>
+<span class="source-line-no">067</span><span id="line.67">            this.results = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">068</span><span id="line.68">        }</span>
+<span class="source-line-no">069</span><span id="line.69">        this.results.addAll(Arrays.asList(results));</span>
+<span class="source-line-no">070</span><span id="line.70">        return this;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public PaymentPagedQueryResponseBuilder plusResults(</span>
+<span class="source-line-no">074</span><span id="line.74">            Function&lt;com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder&gt; builder) {</span>
+<span class="source-line-no">075</span><span id="line.75">        if (this.results == null) {</span>
+<span class="source-line-no">076</span><span id="line.76">            this.results = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">077</span><span id="line.77">        }</span>
+<span class="source-line-no">078</span><span id="line.78">        this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());</span>
+<span class="source-line-no">079</span><span id="line.79">        return this;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public PaymentPagedQueryResponseBuilder withResults(</span>
+<span class="source-line-no">083</span><span id="line.83">            Function&lt;com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.PaymentBuilder&gt; builder) {</span>
+<span class="source-line-no">084</span><span id="line.84">        this.results = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">085</span><span id="line.85">        this.results.add(builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of()).build());</span>
+<span class="source-line-no">086</span><span id="line.86">        return this;</span>
 <span class="source-line-no">087</span><span id="line.87">    }</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    @Nullable</span>
-<span class="source-line-no">090</span><span id="line.90">    public Long getTotal() {</span>
-<span class="source-line-no">091</span><span id="line.91">        return this.total;</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public Long getOffset() {</span>
-<span class="source-line-no">095</span><span id="line.95">        return this.offset;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public java.util.List&lt;com.commercetools.api.models.payment.Payment&gt; getResults() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return this.results;</span>
+<span class="source-line-no">089</span><span id="line.89">    public Long getLimit() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return this.limit;</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public Long getCount() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return this.count;</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    @Nullable</span>
+<span class="source-line-no">098</span><span id="line.98">    public Long getTotal() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return this.total;</span>
 <span class="source-line-no">100</span><span id="line.100">    }</span>
 <span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public PaymentPagedQueryResponse build() {</span>
-<span class="source-line-no">103</span><span id="line.103">        Objects.requireNonNull(limit, PaymentPagedQueryResponse.class + ": limit is missing");</span>
-<span class="source-line-no">104</span><span id="line.104">        Objects.requireNonNull(count, PaymentPagedQueryResponse.class + ": count is missing");</span>
-<span class="source-line-no">105</span><span id="line.105">        Objects.requireNonNull(offset, PaymentPagedQueryResponse.class + ": offset is missing");</span>
-<span class="source-line-no">106</span><span id="line.106">        Objects.requireNonNull(results, PaymentPagedQueryResponse.class + ": results is missing");</span>
-<span class="source-line-no">107</span><span id="line.107">        return new PaymentPagedQueryResponseImpl(limit, count, total, offset, results);</span>
+<span class="source-line-no">102</span><span id="line.102">    public Long getOffset() {</span>
+<span class="source-line-no">103</span><span id="line.103">        return this.offset;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public java.util.List&lt;com.commercetools.api.models.payment.Payment&gt; getResults() {</span>
+<span class="source-line-no">107</span><span id="line.107">        return this.results;</span>
 <span class="source-line-no">108</span><span id="line.108">    }</span>
 <span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    /**</span>
-<span class="source-line-no">111</span><span id="line.111">     * builds PaymentPagedQueryResponse without checking for non null required values</span>
-<span class="source-line-no">112</span><span id="line.112">     */</span>
-<span class="source-line-no">113</span><span id="line.113">    public PaymentPagedQueryResponse buildUnchecked() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return new PaymentPagedQueryResponseImpl(limit, count, total, offset, results);</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public static PaymentPagedQueryResponseBuilder of() {</span>
-<span class="source-line-no">118</span><span id="line.118">        return new PaymentPagedQueryResponseBuilder();</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public static PaymentPagedQueryResponseBuilder of(final PaymentPagedQueryResponse template) {</span>
-<span class="source-line-no">122</span><span id="line.122">        PaymentPagedQueryResponseBuilder builder = new PaymentPagedQueryResponseBuilder();</span>
-<span class="source-line-no">123</span><span id="line.123">        builder.limit = template.getLimit();</span>
-<span class="source-line-no">124</span><span id="line.124">        builder.count = template.getCount();</span>
-<span class="source-line-no">125</span><span id="line.125">        builder.total = template.getTotal();</span>
-<span class="source-line-no">126</span><span id="line.126">        builder.offset = template.getOffset();</span>
-<span class="source-line-no">127</span><span id="line.127">        builder.results = template.getResults();</span>
-<span class="source-line-no">128</span><span id="line.128">        return builder;</span>
-<span class="source-line-no">129</span><span id="line.129">    }</span>
-<span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">}</span>
+<span class="source-line-no">110</span><span id="line.110">    public PaymentPagedQueryResponse build() {</span>
+<span class="source-line-no">111</span><span id="line.111">        Objects.requireNonNull(limit, PaymentPagedQueryResponse.class + ": limit is missing");</span>
+<span class="source-line-no">112</span><span id="line.112">        Objects.requireNonNull(count, PaymentPagedQueryResponse.class + ": count is missing");</span>
+<span class="source-line-no">113</span><span id="line.113">        Objects.requireNonNull(offset, PaymentPagedQueryResponse.class + ": offset is missing");</span>
+<span class="source-line-no">114</span><span id="line.114">        Objects.requireNonNull(results, PaymentPagedQueryResponse.class + ": results is missing");</span>
+<span class="source-line-no">115</span><span id="line.115">        return new PaymentPagedQueryResponseImpl(limit, count, total, offset, results);</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    /**</span>
+<span class="source-line-no">119</span><span id="line.119">     * builds PaymentPagedQueryResponse without checking for non null required values</span>
+<span class="source-line-no">120</span><span id="line.120">     */</span>
+<span class="source-line-no">121</span><span id="line.121">    public PaymentPagedQueryResponse buildUnchecked() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return new PaymentPagedQueryResponseImpl(limit, count, total, offset, results);</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    public static PaymentPagedQueryResponseBuilder of() {</span>
+<span class="source-line-no">126</span><span id="line.126">        return new PaymentPagedQueryResponseBuilder();</span>
+<span class="source-line-no">127</span><span id="line.127">    }</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public static PaymentPagedQueryResponseBuilder of(final PaymentPagedQueryResponse template) {</span>
+<span class="source-line-no">130</span><span id="line.130">        PaymentPagedQueryResponseBuilder builder = new PaymentPagedQueryResponseBuilder();</span>
+<span class="source-line-no">131</span><span id="line.131">        builder.limit = template.getLimit();</span>
+<span class="source-line-no">132</span><span id="line.132">        builder.count = template.getCount();</span>
+<span class="source-line-no">133</span><span id="line.133">        builder.total = template.getTotal();</span>
+<span class="source-line-no">134</span><span id="line.134">        builder.offset = template.getOffset();</span>
+<span class="source-line-no">135</span><span id="line.135">        builder.results = template.getResults();</span>
+<span class="source-line-no">136</span><span id="line.136">        return builder;</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">}</span>
 
 
 

@@ -41,7 +41,7 @@
 <span class="source-line-no">028</span><span id="line.28">        com.commercetools.api.models.Customizable&lt;ShippingMethod&gt; {</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
 <span class="source-line-no">030</span><span id="line.30">    /**</span>
-<span class="source-line-no">031</span><span id="line.31">    *  &lt;p&gt;The unique ID of the shipping method.&lt;/p&gt;</span>
+<span class="source-line-no">031</span><span id="line.31">    *  &lt;p&gt;Platform-generated unique identifier of the ShippingMethod.&lt;/p&gt;</span>
 <span class="source-line-no">032</span><span id="line.32">    */</span>
 <span class="source-line-no">033</span><span id="line.33">    @NotNull</span>
 <span class="source-line-no">034</span><span id="line.34">    @JsonProperty("id")</span>
@@ -63,21 +63,21 @@
 <span class="source-line-no">050</span><span id="line.50">    public ZonedDateTime getLastModifiedAt();</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
 <span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
 <span class="source-line-no">054</span><span id="line.54">    */</span>
 <span class="source-line-no">055</span><span id="line.55">    @Valid</span>
 <span class="source-line-no">056</span><span id="line.56">    @JsonProperty("lastModifiedBy")</span>
 <span class="source-line-no">057</span><span id="line.57">    public LastModifiedBy getLastModifiedBy();</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
 <span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
 <span class="source-line-no">061</span><span id="line.61">    */</span>
 <span class="source-line-no">062</span><span id="line.62">    @Valid</span>
 <span class="source-line-no">063</span><span id="line.63">    @JsonProperty("createdBy")</span>
 <span class="source-line-no">064</span><span id="line.64">    public CreatedBy getCreatedBy();</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;User-specific unique identifier for the shipping method&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;User-defined unique identifier of the ShippingMethod.&lt;/p&gt;</span>
 <span class="source-line-no">068</span><span id="line.68">    */</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    @JsonProperty("key")</span>

@@ -50,125 +50,137 @@
 <span class="source-line-no">037</span><span id="line.37">        return this;</span>
 <span class="source-line-no">038</span><span id="line.38">    }</span>
 <span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public AttributeDefinitionBuilder name(final String name) {</span>
-<span class="source-line-no">041</span><span id="line.41">        this.name = name;</span>
-<span class="source-line-no">042</span><span id="line.42">        return this;</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public AttributeDefinitionBuilder label(</span>
-<span class="source-line-no">046</span><span id="line.46">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">047</span><span id="line.47">        this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">048</span><span id="line.48">        return this;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public AttributeDefinitionBuilder label(final com.commercetools.history.models.common.LocalizedString label) {</span>
-<span class="source-line-no">052</span><span id="line.52">        this.label = label;</span>
-<span class="source-line-no">053</span><span id="line.53">        return this;</span>
-<span class="source-line-no">054</span><span id="line.54">    }</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.isRequired = isRequired;</span>
-<span class="source-line-no">058</span><span id="line.58">        return this;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public AttributeDefinitionBuilder attributeConstraint(</span>
-<span class="source-line-no">062</span><span id="line.62">            final com.commercetools.history.models.common.AttributeConstraintEnum attributeConstraint) {</span>
-<span class="source-line-no">063</span><span id="line.63">        this.attributeConstraint = attributeConstraint;</span>
-<span class="source-line-no">064</span><span id="line.64">        return this;</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public AttributeDefinitionBuilder inputTip(</span>
-<span class="source-line-no">068</span><span id="line.68">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">069</span><span id="line.69">        this.inputTip = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">070</span><span id="line.70">        return this;</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public AttributeDefinitionBuilder inputTip(final com.commercetools.history.models.common.LocalizedString inputTip) {</span>
-<span class="source-line-no">074</span><span id="line.74">        this.inputTip = inputTip;</span>
-<span class="source-line-no">075</span><span id="line.75">        return this;</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public AttributeDefinitionBuilder inputHint(final com.commercetools.history.models.common.TextInputHint inputHint) {</span>
-<span class="source-line-no">079</span><span id="line.79">        this.inputHint = inputHint;</span>
-<span class="source-line-no">080</span><span id="line.80">        return this;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public AttributeDefinitionBuilder isSearchable(final Boolean isSearchable) {</span>
-<span class="source-line-no">084</span><span id="line.84">        this.isSearchable = isSearchable;</span>
-<span class="source-line-no">085</span><span id="line.85">        return this;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public com.commercetools.history.models.common.AttributeType getType() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return this.type;</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public String getName() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return this.name;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public com.commercetools.history.models.common.LocalizedString getLabel() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return this.label;</span>
+<span class="source-line-no">040</span><span id="line.40">    /**</span>
+<span class="source-line-no">041</span><span id="line.41">    *  &lt;p&gt;The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (&lt;code&gt;_&lt;/code&gt;) and the hyphen-minus (&lt;code&gt;-&lt;/code&gt;). When using the same &lt;code&gt;name&lt;/code&gt; for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an &lt;code&gt;enum&lt;/code&gt; or &lt;code&gt;lenum&lt;/code&gt; type and sets thereof.&lt;/p&gt;</span>
+<span class="source-line-no">042</span><span id="line.42">    */</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    public AttributeDefinitionBuilder name(final String name) {</span>
+<span class="source-line-no">045</span><span id="line.45">        this.name = name;</span>
+<span class="source-line-no">046</span><span id="line.46">        return this;</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public AttributeDefinitionBuilder label(</span>
+<span class="source-line-no">050</span><span id="line.50">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">051</span><span id="line.51">        this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">052</span><span id="line.52">        return this;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public AttributeDefinitionBuilder label(final com.commercetools.history.models.common.LocalizedString label) {</span>
+<span class="source-line-no">056</span><span id="line.56">        this.label = label;</span>
+<span class="source-line-no">057</span><span id="line.57">        return this;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    /**</span>
+<span class="source-line-no">061</span><span id="line.61">    *  &lt;p&gt;Whether the attribute is required to have a value.&lt;/p&gt;</span>
+<span class="source-line-no">062</span><span id="line.62">    */</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {</span>
+<span class="source-line-no">065</span><span id="line.65">        this.isRequired = isRequired;</span>
+<span class="source-line-no">066</span><span id="line.66">        return this;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public AttributeDefinitionBuilder attributeConstraint(</span>
+<span class="source-line-no">070</span><span id="line.70">            final com.commercetools.history.models.common.AttributeConstraintEnum attributeConstraint) {</span>
+<span class="source-line-no">071</span><span id="line.71">        this.attributeConstraint = attributeConstraint;</span>
+<span class="source-line-no">072</span><span id="line.72">        return this;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public AttributeDefinitionBuilder inputTip(</span>
+<span class="source-line-no">076</span><span id="line.76">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">077</span><span id="line.77">        this.inputTip = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">078</span><span id="line.78">        return this;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public AttributeDefinitionBuilder inputTip(final com.commercetools.history.models.common.LocalizedString inputTip) {</span>
+<span class="source-line-no">082</span><span id="line.82">        this.inputTip = inputTip;</span>
+<span class="source-line-no">083</span><span id="line.83">        return this;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public AttributeDefinitionBuilder inputHint(final com.commercetools.history.models.common.TextInputHint inputHint) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.inputHint = inputHint;</span>
+<span class="source-line-no">088</span><span id="line.88">        return this;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    /**</span>
+<span class="source-line-no">092</span><span id="line.92">    *  &lt;p&gt;Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp;amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is &lt;strong&gt;restricted to 10922 characters&lt;/strong&gt;. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.&lt;/p&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">    */</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public AttributeDefinitionBuilder isSearchable(final Boolean isSearchable) {</span>
+<span class="source-line-no">096</span><span id="line.96">        this.isSearchable = isSearchable;</span>
+<span class="source-line-no">097</span><span id="line.97">        return this;</span>
 <span class="source-line-no">098</span><span id="line.98">    }</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public Boolean getIsRequired() {</span>
-<span class="source-line-no">101</span><span id="line.101">        return this.isRequired;</span>
+<span class="source-line-no">100</span><span id="line.100">    public com.commercetools.history.models.common.AttributeType getType() {</span>
+<span class="source-line-no">101</span><span id="line.101">        return this.type;</span>
 <span class="source-line-no">102</span><span id="line.102">    }</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public com.commercetools.history.models.common.AttributeConstraintEnum getAttributeConstraint() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return this.attributeConstraint;</span>
+<span class="source-line-no">104</span><span id="line.104">    public String getName() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return this.name;</span>
 <span class="source-line-no">106</span><span id="line.106">    }</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public com.commercetools.history.models.common.LocalizedString getInputTip() {</span>
-<span class="source-line-no">109</span><span id="line.109">        return this.inputTip;</span>
+<span class="source-line-no">108</span><span id="line.108">    public com.commercetools.history.models.common.LocalizedString getLabel() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return this.label;</span>
 <span class="source-line-no">110</span><span id="line.110">    }</span>
 <span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public com.commercetools.history.models.common.TextInputHint getInputHint() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return this.inputHint;</span>
+<span class="source-line-no">112</span><span id="line.112">    public Boolean getIsRequired() {</span>
+<span class="source-line-no">113</span><span id="line.113">        return this.isRequired;</span>
 <span class="source-line-no">114</span><span id="line.114">    }</span>
 <span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public Boolean getIsSearchable() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return this.isSearchable;</span>
+<span class="source-line-no">116</span><span id="line.116">    public com.commercetools.history.models.common.AttributeConstraintEnum getAttributeConstraint() {</span>
+<span class="source-line-no">117</span><span id="line.117">        return this.attributeConstraint;</span>
 <span class="source-line-no">118</span><span id="line.118">    }</span>
 <span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    public AttributeDefinition build() {</span>
-<span class="source-line-no">121</span><span id="line.121">        Objects.requireNonNull(type, AttributeDefinition.class + ": type is missing");</span>
-<span class="source-line-no">122</span><span id="line.122">        Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");</span>
-<span class="source-line-no">123</span><span id="line.123">        Objects.requireNonNull(label, AttributeDefinition.class + ": label is missing");</span>
-<span class="source-line-no">124</span><span id="line.124">        Objects.requireNonNull(isRequired, AttributeDefinition.class + ": isRequired is missing");</span>
-<span class="source-line-no">125</span><span id="line.125">        Objects.requireNonNull(attributeConstraint, AttributeDefinition.class + ": attributeConstraint is missing");</span>
-<span class="source-line-no">126</span><span id="line.126">        Objects.requireNonNull(inputTip, AttributeDefinition.class + ": inputTip is missing");</span>
-<span class="source-line-no">127</span><span id="line.127">        Objects.requireNonNull(inputHint, AttributeDefinition.class + ": inputHint is missing");</span>
-<span class="source-line-no">128</span><span id="line.128">        Objects.requireNonNull(isSearchable, AttributeDefinition.class + ": isSearchable is missing");</span>
-<span class="source-line-no">129</span><span id="line.129">        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,</span>
-<span class="source-line-no">130</span><span id="line.130">            isSearchable);</span>
-<span class="source-line-no">131</span><span id="line.131">    }</span>
-<span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    /**</span>
-<span class="source-line-no">134</span><span id="line.134">     * builds AttributeDefinition without checking for non null required values</span>
-<span class="source-line-no">135</span><span id="line.135">     */</span>
-<span class="source-line-no">136</span><span id="line.136">    public AttributeDefinition buildUnchecked() {</span>
-<span class="source-line-no">137</span><span id="line.137">        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,</span>
-<span class="source-line-no">138</span><span id="line.138">            isSearchable);</span>
-<span class="source-line-no">139</span><span id="line.139">    }</span>
-<span class="source-line-no">140</span><span id="line.140"></span>
-<span class="source-line-no">141</span><span id="line.141">    public static AttributeDefinitionBuilder of() {</span>
-<span class="source-line-no">142</span><span id="line.142">        return new AttributeDefinitionBuilder();</span>
+<span class="source-line-no">120</span><span id="line.120">    public com.commercetools.history.models.common.LocalizedString getInputTip() {</span>
+<span class="source-line-no">121</span><span id="line.121">        return this.inputTip;</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    public com.commercetools.history.models.common.TextInputHint getInputHint() {</span>
+<span class="source-line-no">125</span><span id="line.125">        return this.inputHint;</span>
+<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">    public Boolean getIsSearchable() {</span>
+<span class="source-line-no">129</span><span id="line.129">        return this.isSearchable;</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    public AttributeDefinition build() {</span>
+<span class="source-line-no">133</span><span id="line.133">        Objects.requireNonNull(type, AttributeDefinition.class + ": type is missing");</span>
+<span class="source-line-no">134</span><span id="line.134">        Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");</span>
+<span class="source-line-no">135</span><span id="line.135">        Objects.requireNonNull(label, AttributeDefinition.class + ": label is missing");</span>
+<span class="source-line-no">136</span><span id="line.136">        Objects.requireNonNull(isRequired, AttributeDefinition.class + ": isRequired is missing");</span>
+<span class="source-line-no">137</span><span id="line.137">        Objects.requireNonNull(attributeConstraint, AttributeDefinition.class + ": attributeConstraint is missing");</span>
+<span class="source-line-no">138</span><span id="line.138">        Objects.requireNonNull(inputTip, AttributeDefinition.class + ": inputTip is missing");</span>
+<span class="source-line-no">139</span><span id="line.139">        Objects.requireNonNull(inputHint, AttributeDefinition.class + ": inputHint is missing");</span>
+<span class="source-line-no">140</span><span id="line.140">        Objects.requireNonNull(isSearchable, AttributeDefinition.class + ": isSearchable is missing");</span>
+<span class="source-line-no">141</span><span id="line.141">        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,</span>
+<span class="source-line-no">142</span><span id="line.142">            isSearchable);</span>
 <span class="source-line-no">143</span><span id="line.143">    }</span>
 <span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    public static AttributeDefinitionBuilder of(final AttributeDefinition template) {</span>
-<span class="source-line-no">146</span><span id="line.146">        AttributeDefinitionBuilder builder = new AttributeDefinitionBuilder();</span>
-<span class="source-line-no">147</span><span id="line.147">        builder.type = template.getType();</span>
-<span class="source-line-no">148</span><span id="line.148">        builder.name = template.getName();</span>
-<span class="source-line-no">149</span><span id="line.149">        builder.label = template.getLabel();</span>
-<span class="source-line-no">150</span><span id="line.150">        builder.isRequired = template.getIsRequired();</span>
-<span class="source-line-no">151</span><span id="line.151">        builder.attributeConstraint = template.getAttributeConstraint();</span>
-<span class="source-line-no">152</span><span id="line.152">        builder.inputTip = template.getInputTip();</span>
-<span class="source-line-no">153</span><span id="line.153">        builder.inputHint = template.getInputHint();</span>
-<span class="source-line-no">154</span><span id="line.154">        builder.isSearchable = template.getIsSearchable();</span>
-<span class="source-line-no">155</span><span id="line.155">        return builder;</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">}</span>
+<span class="source-line-no">145</span><span id="line.145">    /**</span>
+<span class="source-line-no">146</span><span id="line.146">     * builds AttributeDefinition without checking for non null required values</span>
+<span class="source-line-no">147</span><span id="line.147">     */</span>
+<span class="source-line-no">148</span><span id="line.148">    public AttributeDefinition buildUnchecked() {</span>
+<span class="source-line-no">149</span><span id="line.149">        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,</span>
+<span class="source-line-no">150</span><span id="line.150">            isSearchable);</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public static AttributeDefinitionBuilder of() {</span>
+<span class="source-line-no">154</span><span id="line.154">        return new AttributeDefinitionBuilder();</span>
+<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    public static AttributeDefinitionBuilder of(final AttributeDefinition template) {</span>
+<span class="source-line-no">158</span><span id="line.158">        AttributeDefinitionBuilder builder = new AttributeDefinitionBuilder();</span>
+<span class="source-line-no">159</span><span id="line.159">        builder.type = template.getType();</span>
+<span class="source-line-no">160</span><span id="line.160">        builder.name = template.getName();</span>
+<span class="source-line-no">161</span><span id="line.161">        builder.label = template.getLabel();</span>
+<span class="source-line-no">162</span><span id="line.162">        builder.isRequired = template.getIsRequired();</span>
+<span class="source-line-no">163</span><span id="line.163">        builder.attributeConstraint = template.getAttributeConstraint();</span>
+<span class="source-line-no">164</span><span id="line.164">        builder.inputTip = template.getInputTip();</span>
+<span class="source-line-no">165</span><span id="line.165">        builder.inputHint = template.getInputHint();</span>
+<span class="source-line-no">166</span><span id="line.166">        builder.isSearchable = template.getIsSearchable();</span>
+<span class="source-line-no">167</span><span id="line.167">        return builder;</span>
+<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">}</span>
 
 
 

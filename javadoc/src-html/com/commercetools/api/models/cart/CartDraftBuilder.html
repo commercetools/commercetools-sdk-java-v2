@@ -99,484 +99,612 @@
 <span class="source-line-no">086</span><span id="line.86">    @Nullable</span>
 <span class="source-line-no">087</span><span id="line.87">    private java.util.List&lt;String&gt; discountCodes;</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public CartDraftBuilder currency(final String currency) {</span>
-<span class="source-line-no">090</span><span id="line.90">        this.currency = currency;</span>
-<span class="source-line-no">091</span><span id="line.91">        return this;</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public CartDraftBuilder key(@Nullable final String key) {</span>
-<span class="source-line-no">095</span><span id="line.95">        this.key = key;</span>
-<span class="source-line-no">096</span><span id="line.96">        return this;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public CartDraftBuilder customerId(@Nullable final String customerId) {</span>
-<span class="source-line-no">100</span><span id="line.100">        this.customerId = customerId;</span>
-<span class="source-line-no">101</span><span id="line.101">        return this;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public CartDraftBuilder customerEmail(@Nullable final String customerEmail) {</span>
-<span class="source-line-no">105</span><span id="line.105">        this.customerEmail = customerEmail;</span>
-<span class="source-line-no">106</span><span id="line.106">        return this;</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public CartDraftBuilder customerGroup(</span>
-<span class="source-line-no">110</span><span id="line.110">            Function&lt;com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">111</span><span id="line.111">        this.customerGroup = builder</span>
-<span class="source-line-no">112</span><span id="line.112">                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())</span>
-<span class="source-line-no">113</span><span id="line.113">                .build();</span>
-<span class="source-line-no">114</span><span id="line.114">        return this;</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public CartDraftBuilder customerGroup(</span>
-<span class="source-line-no">118</span><span id="line.118">            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {</span>
-<span class="source-line-no">119</span><span id="line.119">        this.customerGroup = customerGroup;</span>
-<span class="source-line-no">120</span><span id="line.120">        return this;</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public CartDraftBuilder anonymousId(@Nullable final String anonymousId) {</span>
-<span class="source-line-no">124</span><span id="line.124">        this.anonymousId = anonymousId;</span>
-<span class="source-line-no">125</span><span id="line.125">        return this;</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public CartDraftBuilder store(</span>
-<span class="source-line-no">129</span><span id="line.129">            Function&lt;com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">130</span><span id="line.130">        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();</span>
-<span class="source-line-no">131</span><span id="line.131">        return this;</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    public CartDraftBuilder store(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {</span>
-<span class="source-line-no">135</span><span id="line.135">        this.store = store;</span>
-<span class="source-line-no">136</span><span id="line.136">        return this;</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public CartDraftBuilder country(@Nullable final String country) {</span>
-<span class="source-line-no">140</span><span id="line.140">        this.country = country;</span>
-<span class="source-line-no">141</span><span id="line.141">        return this;</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    public CartDraftBuilder inventoryMode(</span>
-<span class="source-line-no">145</span><span id="line.145">            @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {</span>
-<span class="source-line-no">146</span><span id="line.146">        this.inventoryMode = inventoryMode;</span>
-<span class="source-line-no">147</span><span id="line.147">        return this;</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public CartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {</span>
-<span class="source-line-no">151</span><span id="line.151">        this.taxMode = taxMode;</span>
-<span class="source-line-no">152</span><span id="line.152">        return this;</span>
-<span class="source-line-no">153</span><span id="line.153">    }</span>
-<span class="source-line-no">154</span><span id="line.154"></span>
-<span class="source-line-no">155</span><span id="line.155">    public CartDraftBuilder taxRoundingMode(</span>
-<span class="source-line-no">156</span><span id="line.156">            @Nullable final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {</span>
-<span class="source-line-no">157</span><span id="line.157">        this.taxRoundingMode = taxRoundingMode;</span>
-<span class="source-line-no">158</span><span id="line.158">        return this;</span>
-<span class="source-line-no">159</span><span id="line.159">    }</span>
-<span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    public CartDraftBuilder taxCalculationMode(</span>
-<span class="source-line-no">162</span><span id="line.162">            @Nullable final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {</span>
-<span class="source-line-no">163</span><span id="line.163">        this.taxCalculationMode = taxCalculationMode;</span>
-<span class="source-line-no">164</span><span id="line.164">        return this;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public CartDraftBuilder lineItems(@Nullable final com.commercetools.api.models.cart.LineItemDraft... lineItems) {</span>
-<span class="source-line-no">168</span><span id="line.168">        this.lineItems = new ArrayList&lt;&gt;(Arrays.asList(lineItems));</span>
-<span class="source-line-no">169</span><span id="line.169">        return this;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public CartDraftBuilder lineItems(</span>
-<span class="source-line-no">173</span><span id="line.173">            @Nullable final java.util.List&lt;com.commercetools.api.models.cart.LineItemDraft&gt; lineItems) {</span>
-<span class="source-line-no">174</span><span id="line.174">        this.lineItems = lineItems;</span>
-<span class="source-line-no">175</span><span id="line.175">        return this;</span>
-<span class="source-line-no">176</span><span id="line.176">    }</span>
-<span class="source-line-no">177</span><span id="line.177"></span>
-<span class="source-line-no">178</span><span id="line.178">    public CartDraftBuilder plusLineItems(</span>
-<span class="source-line-no">179</span><span id="line.179">            @Nullable final com.commercetools.api.models.cart.LineItemDraft... lineItems) {</span>
-<span class="source-line-no">180</span><span id="line.180">        if (this.lineItems == null) {</span>
-<span class="source-line-no">181</span><span id="line.181">            this.lineItems = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">182</span><span id="line.182">        }</span>
-<span class="source-line-no">183</span><span id="line.183">        this.lineItems.addAll(Arrays.asList(lineItems));</span>
-<span class="source-line-no">184</span><span id="line.184">        return this;</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    public CartDraftBuilder plusLineItems(</span>
-<span class="source-line-no">188</span><span id="line.188">            Function&lt;com.commercetools.api.models.cart.LineItemDraftBuilder, com.commercetools.api.models.cart.LineItemDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">189</span><span id="line.189">        if (this.lineItems == null) {</span>
-<span class="source-line-no">190</span><span id="line.190">            this.lineItems = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">191</span><span id="line.191">        }</span>
-<span class="source-line-no">192</span><span id="line.192">        this.lineItems.add(builder.apply(com.commercetools.api.models.cart.LineItemDraftBuilder.of()).build());</span>
-<span class="source-line-no">193</span><span id="line.193">        return this;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public CartDraftBuilder withLineItems(</span>
-<span class="source-line-no">197</span><span id="line.197">            Function&lt;com.commercetools.api.models.cart.LineItemDraftBuilder, com.commercetools.api.models.cart.LineItemDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">198</span><span id="line.198">        this.lineItems = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">199</span><span id="line.199">        this.lineItems.add(builder.apply(com.commercetools.api.models.cart.LineItemDraftBuilder.of()).build());</span>
-<span class="source-line-no">200</span><span id="line.200">        return this;</span>
-<span class="source-line-no">201</span><span id="line.201">    }</span>
+<span class="source-line-no">089</span><span id="line.89">    /**</span>
+<span class="source-line-no">090</span><span id="line.90">    *  &lt;p&gt;A three-digit currency code as per ISO 4217.&lt;/p&gt;</span>
+<span class="source-line-no">091</span><span id="line.91">    */</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public CartDraftBuilder currency(final String currency) {</span>
+<span class="source-line-no">094</span><span id="line.94">        this.currency = currency;</span>
+<span class="source-line-no">095</span><span id="line.95">        return this;</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    /**</span>
+<span class="source-line-no">099</span><span id="line.99">    *  &lt;p&gt;User-defined unique identifier for the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">    */</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public CartDraftBuilder key(@Nullable final String key) {</span>
+<span class="source-line-no">103</span><span id="line.103">        this.key = key;</span>
+<span class="source-line-no">104</span><span id="line.104">        return this;</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    /**</span>
+<span class="source-line-no">108</span><span id="line.108">    *  &lt;p&gt;Id of an existing Customer.&lt;/p&gt;</span>
+<span class="source-line-no">109</span><span id="line.109">    */</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    public CartDraftBuilder customerId(@Nullable final String customerId) {</span>
+<span class="source-line-no">112</span><span id="line.112">        this.customerId = customerId;</span>
+<span class="source-line-no">113</span><span id="line.113">        return this;</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    public CartDraftBuilder customerEmail(@Nullable final String customerEmail) {</span>
+<span class="source-line-no">117</span><span id="line.117">        this.customerEmail = customerEmail;</span>
+<span class="source-line-no">118</span><span id="line.118">        return this;</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    /**</span>
+<span class="source-line-no">122</span><span id="line.122">    *  &lt;p&gt;Will be set automatically when the &lt;code&gt;customerId&lt;/code&gt; is set and the customer is a member of a customer group. Can be set explicitly when no &lt;code&gt;customerId&lt;/code&gt; is present.&lt;/p&gt;</span>
+<span class="source-line-no">123</span><span id="line.123">    */</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    public CartDraftBuilder customerGroup(</span>
+<span class="source-line-no">126</span><span id="line.126">            Function&lt;com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">127</span><span id="line.127">        this.customerGroup = builder</span>
+<span class="source-line-no">128</span><span id="line.128">                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())</span>
+<span class="source-line-no">129</span><span id="line.129">                .build();</span>
+<span class="source-line-no">130</span><span id="line.130">        return this;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    /**</span>
+<span class="source-line-no">134</span><span id="line.134">    *  &lt;p&gt;Will be set automatically when the &lt;code&gt;customerId&lt;/code&gt; is set and the customer is a member of a customer group. Can be set explicitly when no &lt;code&gt;customerId&lt;/code&gt; is present.&lt;/p&gt;</span>
+<span class="source-line-no">135</span><span id="line.135">    */</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    public CartDraftBuilder customerGroup(</span>
+<span class="source-line-no">138</span><span id="line.138">            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {</span>
+<span class="source-line-no">139</span><span id="line.139">        this.customerGroup = customerGroup;</span>
+<span class="source-line-no">140</span><span id="line.140">        return this;</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    /**</span>
+<span class="source-line-no">144</span><span id="line.144">    *  &lt;p&gt;Assigns the new cart to an anonymous session (the customer has not signed up/in yet).&lt;/p&gt;</span>
+<span class="source-line-no">145</span><span id="line.145">    */</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    public CartDraftBuilder anonymousId(@Nullable final String anonymousId) {</span>
+<span class="source-line-no">148</span><span id="line.148">        this.anonymousId = anonymousId;</span>
+<span class="source-line-no">149</span><span id="line.149">        return this;</span>
+<span class="source-line-no">150</span><span id="line.150">    }</span>
+<span class="source-line-no">151</span><span id="line.151"></span>
+<span class="source-line-no">152</span><span id="line.152">    /**</span>
+<span class="source-line-no">153</span><span id="line.153">    *  &lt;p&gt;Assigns the new cart to the store. The store assignment can not be modified.&lt;/p&gt;</span>
+<span class="source-line-no">154</span><span id="line.154">    */</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">    public CartDraftBuilder store(</span>
+<span class="source-line-no">157</span><span id="line.157">            Function&lt;com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">158</span><span id="line.158">        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();</span>
+<span class="source-line-no">159</span><span id="line.159">        return this;</span>
+<span class="source-line-no">160</span><span id="line.160">    }</span>
+<span class="source-line-no">161</span><span id="line.161"></span>
+<span class="source-line-no">162</span><span id="line.162">    /**</span>
+<span class="source-line-no">163</span><span id="line.163">    *  &lt;p&gt;Assigns the new cart to the store. The store assignment can not be modified.&lt;/p&gt;</span>
+<span class="source-line-no">164</span><span id="line.164">    */</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    public CartDraftBuilder store(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier store) {</span>
+<span class="source-line-no">167</span><span id="line.167">        this.store = store;</span>
+<span class="source-line-no">168</span><span id="line.168">        return this;</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    /**</span>
+<span class="source-line-no">172</span><span id="line.172">    *  &lt;p&gt;A two-digit country code as per ISO 3166-1 alpha-2.&lt;/p&gt;</span>
+<span class="source-line-no">173</span><span id="line.173">    */</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    public CartDraftBuilder country(@Nullable final String country) {</span>
+<span class="source-line-no">176</span><span id="line.176">        this.country = country;</span>
+<span class="source-line-no">177</span><span id="line.177">        return this;</span>
+<span class="source-line-no">178</span><span id="line.178">    }</span>
+<span class="source-line-no">179</span><span id="line.179"></span>
+<span class="source-line-no">180</span><span id="line.180">    /**</span>
+<span class="source-line-no">181</span><span id="line.181">    *  &lt;p&gt;Default inventory mode is &lt;code&gt;None&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">182</span><span id="line.182">    */</span>
+<span class="source-line-no">183</span><span id="line.183"></span>
+<span class="source-line-no">184</span><span id="line.184">    public CartDraftBuilder inventoryMode(</span>
+<span class="source-line-no">185</span><span id="line.185">            @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {</span>
+<span class="source-line-no">186</span><span id="line.186">        this.inventoryMode = inventoryMode;</span>
+<span class="source-line-no">187</span><span id="line.187">        return this;</span>
+<span class="source-line-no">188</span><span id="line.188">    }</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    /**</span>
+<span class="source-line-no">191</span><span id="line.191">    *  &lt;p&gt;The default tax mode is &lt;code&gt;Platform&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">192</span><span id="line.192">    */</span>
+<span class="source-line-no">193</span><span id="line.193"></span>
+<span class="source-line-no">194</span><span id="line.194">    public CartDraftBuilder taxMode(@Nullable final com.commercetools.api.models.cart.TaxMode taxMode) {</span>
+<span class="source-line-no">195</span><span id="line.195">        this.taxMode = taxMode;</span>
+<span class="source-line-no">196</span><span id="line.196">        return this;</span>
+<span class="source-line-no">197</span><span id="line.197">    }</span>
+<span class="source-line-no">198</span><span id="line.198"></span>
+<span class="source-line-no">199</span><span id="line.199">    /**</span>
+<span class="source-line-no">200</span><span id="line.200">    *  &lt;p&gt;The default tax rounding mode is &lt;code&gt;HalfEven&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">201</span><span id="line.201">    */</span>
 <span class="source-line-no">202</span><span id="line.202"></span>
-<span class="source-line-no">203</span><span id="line.203">    public CartDraftBuilder customLineItems(</span>
-<span class="source-line-no">204</span><span id="line.204">            @Nullable final com.commercetools.api.models.cart.CustomLineItemDraft... customLineItems) {</span>
-<span class="source-line-no">205</span><span id="line.205">        this.customLineItems = new ArrayList&lt;&gt;(Arrays.asList(customLineItems));</span>
+<span class="source-line-no">203</span><span id="line.203">    public CartDraftBuilder taxRoundingMode(</span>
+<span class="source-line-no">204</span><span id="line.204">            @Nullable final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {</span>
+<span class="source-line-no">205</span><span id="line.205">        this.taxRoundingMode = taxRoundingMode;</span>
 <span class="source-line-no">206</span><span id="line.206">        return this;</span>
 <span class="source-line-no">207</span><span id="line.207">    }</span>
 <span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public CartDraftBuilder customLineItems(</span>
-<span class="source-line-no">210</span><span id="line.210">            @Nullable final java.util.List&lt;com.commercetools.api.models.cart.CustomLineItemDraft&gt; customLineItems) {</span>
-<span class="source-line-no">211</span><span id="line.211">        this.customLineItems = customLineItems;</span>
-<span class="source-line-no">212</span><span id="line.212">        return this;</span>
-<span class="source-line-no">213</span><span id="line.213">    }</span>
-<span class="source-line-no">214</span><span id="line.214"></span>
-<span class="source-line-no">215</span><span id="line.215">    public CartDraftBuilder plusCustomLineItems(</span>
-<span class="source-line-no">216</span><span id="line.216">            @Nullable final com.commercetools.api.models.cart.CustomLineItemDraft... customLineItems) {</span>
-<span class="source-line-no">217</span><span id="line.217">        if (this.customLineItems == null) {</span>
-<span class="source-line-no">218</span><span id="line.218">            this.customLineItems = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">219</span><span id="line.219">        }</span>
-<span class="source-line-no">220</span><span id="line.220">        this.customLineItems.addAll(Arrays.asList(customLineItems));</span>
+<span class="source-line-no">209</span><span id="line.209">    /**</span>
+<span class="source-line-no">210</span><span id="line.210">    *  &lt;p&gt;The default tax calculation mode is &lt;code&gt;LineItemLevel&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">211</span><span id="line.211">    */</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public CartDraftBuilder taxCalculationMode(</span>
+<span class="source-line-no">214</span><span id="line.214">            @Nullable final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {</span>
+<span class="source-line-no">215</span><span id="line.215">        this.taxCalculationMode = taxCalculationMode;</span>
+<span class="source-line-no">216</span><span id="line.216">        return this;</span>
+<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">    public CartDraftBuilder lineItems(@Nullable final com.commercetools.api.models.cart.LineItemDraft... lineItems) {</span>
+<span class="source-line-no">220</span><span id="line.220">        this.lineItems = new ArrayList&lt;&gt;(Arrays.asList(lineItems));</span>
 <span class="source-line-no">221</span><span id="line.221">        return this;</span>
 <span class="source-line-no">222</span><span id="line.222">    }</span>
 <span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">    public CartDraftBuilder plusCustomLineItems(</span>
-<span class="source-line-no">225</span><span id="line.225">            Function&lt;com.commercetools.api.models.cart.CustomLineItemDraftBuilder, com.commercetools.api.models.cart.CustomLineItemDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">226</span><span id="line.226">        if (this.customLineItems == null) {</span>
-<span class="source-line-no">227</span><span id="line.227">            this.customLineItems = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">228</span><span id="line.228">        }</span>
-<span class="source-line-no">229</span><span id="line.229">        this.customLineItems</span>
-<span class="source-line-no">230</span><span id="line.230">                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemDraftBuilder.of()).build());</span>
-<span class="source-line-no">231</span><span id="line.231">        return this;</span>
-<span class="source-line-no">232</span><span id="line.232">    }</span>
-<span class="source-line-no">233</span><span id="line.233"></span>
-<span class="source-line-no">234</span><span id="line.234">    public CartDraftBuilder withCustomLineItems(</span>
-<span class="source-line-no">235</span><span id="line.235">            Function&lt;com.commercetools.api.models.cart.CustomLineItemDraftBuilder, com.commercetools.api.models.cart.CustomLineItemDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">236</span><span id="line.236">        this.customLineItems = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">237</span><span id="line.237">        this.customLineItems</span>
-<span class="source-line-no">238</span><span id="line.238">                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemDraftBuilder.of()).build());</span>
-<span class="source-line-no">239</span><span id="line.239">        return this;</span>
-<span class="source-line-no">240</span><span id="line.240">    }</span>
-<span class="source-line-no">241</span><span id="line.241"></span>
-<span class="source-line-no">242</span><span id="line.242">    public CartDraftBuilder shippingAddress(</span>
-<span class="source-line-no">243</span><span id="line.243">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
-<span class="source-line-no">244</span><span id="line.244">        this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();</span>
+<span class="source-line-no">224</span><span id="line.224">    public CartDraftBuilder lineItems(</span>
+<span class="source-line-no">225</span><span id="line.225">            @Nullable final java.util.List&lt;com.commercetools.api.models.cart.LineItemDraft&gt; lineItems) {</span>
+<span class="source-line-no">226</span><span id="line.226">        this.lineItems = lineItems;</span>
+<span class="source-line-no">227</span><span id="line.227">        return this;</span>
+<span class="source-line-no">228</span><span id="line.228">    }</span>
+<span class="source-line-no">229</span><span id="line.229"></span>
+<span class="source-line-no">230</span><span id="line.230">    public CartDraftBuilder plusLineItems(</span>
+<span class="source-line-no">231</span><span id="line.231">            @Nullable final com.commercetools.api.models.cart.LineItemDraft... lineItems) {</span>
+<span class="source-line-no">232</span><span id="line.232">        if (this.lineItems == null) {</span>
+<span class="source-line-no">233</span><span id="line.233">            this.lineItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">234</span><span id="line.234">        }</span>
+<span class="source-line-no">235</span><span id="line.235">        this.lineItems.addAll(Arrays.asList(lineItems));</span>
+<span class="source-line-no">236</span><span id="line.236">        return this;</span>
+<span class="source-line-no">237</span><span id="line.237">    }</span>
+<span class="source-line-no">238</span><span id="line.238"></span>
+<span class="source-line-no">239</span><span id="line.239">    public CartDraftBuilder plusLineItems(</span>
+<span class="source-line-no">240</span><span id="line.240">            Function&lt;com.commercetools.api.models.cart.LineItemDraftBuilder, com.commercetools.api.models.cart.LineItemDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">241</span><span id="line.241">        if (this.lineItems == null) {</span>
+<span class="source-line-no">242</span><span id="line.242">            this.lineItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">243</span><span id="line.243">        }</span>
+<span class="source-line-no">244</span><span id="line.244">        this.lineItems.add(builder.apply(com.commercetools.api.models.cart.LineItemDraftBuilder.of()).build());</span>
 <span class="source-line-no">245</span><span id="line.245">        return this;</span>
 <span class="source-line-no">246</span><span id="line.246">    }</span>
 <span class="source-line-no">247</span><span id="line.247"></span>
-<span class="source-line-no">248</span><span id="line.248">    public CartDraftBuilder shippingAddress(</span>
-<span class="source-line-no">249</span><span id="line.249">            @Nullable final com.commercetools.api.models.common.BaseAddress shippingAddress) {</span>
-<span class="source-line-no">250</span><span id="line.250">        this.shippingAddress = shippingAddress;</span>
-<span class="source-line-no">251</span><span id="line.251">        return this;</span>
-<span class="source-line-no">252</span><span id="line.252">    }</span>
-<span class="source-line-no">253</span><span id="line.253"></span>
-<span class="source-line-no">254</span><span id="line.254">    public CartDraftBuilder billingAddress(</span>
-<span class="source-line-no">255</span><span id="line.255">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
-<span class="source-line-no">256</span><span id="line.256">        this.billingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();</span>
-<span class="source-line-no">257</span><span id="line.257">        return this;</span>
-<span class="source-line-no">258</span><span id="line.258">    }</span>
-<span class="source-line-no">259</span><span id="line.259"></span>
-<span class="source-line-no">260</span><span id="line.260">    public CartDraftBuilder billingAddress(</span>
-<span class="source-line-no">261</span><span id="line.261">            @Nullable final com.commercetools.api.models.common.BaseAddress billingAddress) {</span>
-<span class="source-line-no">262</span><span id="line.262">        this.billingAddress = billingAddress;</span>
-<span class="source-line-no">263</span><span id="line.263">        return this;</span>
-<span class="source-line-no">264</span><span id="line.264">    }</span>
-<span class="source-line-no">265</span><span id="line.265"></span>
-<span class="source-line-no">266</span><span id="line.266">    public CartDraftBuilder shippingMethod(</span>
-<span class="source-line-no">267</span><span id="line.267">            Function&lt;com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">268</span><span id="line.268">        this.shippingMethod = builder</span>
-<span class="source-line-no">269</span><span id="line.269">                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of())</span>
-<span class="source-line-no">270</span><span id="line.270">                .build();</span>
-<span class="source-line-no">271</span><span id="line.271">        return this;</span>
-<span class="source-line-no">272</span><span id="line.272">    }</span>
-<span class="source-line-no">273</span><span id="line.273"></span>
-<span class="source-line-no">274</span><span id="line.274">    public CartDraftBuilder shippingMethod(</span>
-<span class="source-line-no">275</span><span id="line.275">            @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {</span>
-<span class="source-line-no">276</span><span id="line.276">        this.shippingMethod = shippingMethod;</span>
-<span class="source-line-no">277</span><span id="line.277">        return this;</span>
-<span class="source-line-no">278</span><span id="line.278">    }</span>
-<span class="source-line-no">279</span><span id="line.279"></span>
-<span class="source-line-no">280</span><span id="line.280">    public CartDraftBuilder externalTaxRateForShippingMethod(</span>
-<span class="source-line-no">281</span><span id="line.281">            Function&lt;com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">282</span><span id="line.282">        this.externalTaxRateForShippingMethod = builder</span>
-<span class="source-line-no">283</span><span id="line.283">                .apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())</span>
-<span class="source-line-no">284</span><span id="line.284">                .build();</span>
-<span class="source-line-no">285</span><span id="line.285">        return this;</span>
-<span class="source-line-no">286</span><span id="line.286">    }</span>
-<span class="source-line-no">287</span><span id="line.287"></span>
-<span class="source-line-no">288</span><span id="line.288">    public CartDraftBuilder externalTaxRateForShippingMethod(</span>
-<span class="source-line-no">289</span><span id="line.289">            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod) {</span>
-<span class="source-line-no">290</span><span id="line.290">        this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;</span>
+<span class="source-line-no">248</span><span id="line.248">    public CartDraftBuilder withLineItems(</span>
+<span class="source-line-no">249</span><span id="line.249">            Function&lt;com.commercetools.api.models.cart.LineItemDraftBuilder, com.commercetools.api.models.cart.LineItemDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">250</span><span id="line.250">        this.lineItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">251</span><span id="line.251">        this.lineItems.add(builder.apply(com.commercetools.api.models.cart.LineItemDraftBuilder.of()).build());</span>
+<span class="source-line-no">252</span><span id="line.252">        return this;</span>
+<span class="source-line-no">253</span><span id="line.253">    }</span>
+<span class="source-line-no">254</span><span id="line.254"></span>
+<span class="source-line-no">255</span><span id="line.255">    public CartDraftBuilder customLineItems(</span>
+<span class="source-line-no">256</span><span id="line.256">            @Nullable final com.commercetools.api.models.cart.CustomLineItemDraft... customLineItems) {</span>
+<span class="source-line-no">257</span><span id="line.257">        this.customLineItems = new ArrayList&lt;&gt;(Arrays.asList(customLineItems));</span>
+<span class="source-line-no">258</span><span id="line.258">        return this;</span>
+<span class="source-line-no">259</span><span id="line.259">    }</span>
+<span class="source-line-no">260</span><span id="line.260"></span>
+<span class="source-line-no">261</span><span id="line.261">    public CartDraftBuilder customLineItems(</span>
+<span class="source-line-no">262</span><span id="line.262">            @Nullable final java.util.List&lt;com.commercetools.api.models.cart.CustomLineItemDraft&gt; customLineItems) {</span>
+<span class="source-line-no">263</span><span id="line.263">        this.customLineItems = customLineItems;</span>
+<span class="source-line-no">264</span><span id="line.264">        return this;</span>
+<span class="source-line-no">265</span><span id="line.265">    }</span>
+<span class="source-line-no">266</span><span id="line.266"></span>
+<span class="source-line-no">267</span><span id="line.267">    public CartDraftBuilder plusCustomLineItems(</span>
+<span class="source-line-no">268</span><span id="line.268">            @Nullable final com.commercetools.api.models.cart.CustomLineItemDraft... customLineItems) {</span>
+<span class="source-line-no">269</span><span id="line.269">        if (this.customLineItems == null) {</span>
+<span class="source-line-no">270</span><span id="line.270">            this.customLineItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">271</span><span id="line.271">        }</span>
+<span class="source-line-no">272</span><span id="line.272">        this.customLineItems.addAll(Arrays.asList(customLineItems));</span>
+<span class="source-line-no">273</span><span id="line.273">        return this;</span>
+<span class="source-line-no">274</span><span id="line.274">    }</span>
+<span class="source-line-no">275</span><span id="line.275"></span>
+<span class="source-line-no">276</span><span id="line.276">    public CartDraftBuilder plusCustomLineItems(</span>
+<span class="source-line-no">277</span><span id="line.277">            Function&lt;com.commercetools.api.models.cart.CustomLineItemDraftBuilder, com.commercetools.api.models.cart.CustomLineItemDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">278</span><span id="line.278">        if (this.customLineItems == null) {</span>
+<span class="source-line-no">279</span><span id="line.279">            this.customLineItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">280</span><span id="line.280">        }</span>
+<span class="source-line-no">281</span><span id="line.281">        this.customLineItems</span>
+<span class="source-line-no">282</span><span id="line.282">                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemDraftBuilder.of()).build());</span>
+<span class="source-line-no">283</span><span id="line.283">        return this;</span>
+<span class="source-line-no">284</span><span id="line.284">    }</span>
+<span class="source-line-no">285</span><span id="line.285"></span>
+<span class="source-line-no">286</span><span id="line.286">    public CartDraftBuilder withCustomLineItems(</span>
+<span class="source-line-no">287</span><span id="line.287">            Function&lt;com.commercetools.api.models.cart.CustomLineItemDraftBuilder, com.commercetools.api.models.cart.CustomLineItemDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">288</span><span id="line.288">        this.customLineItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">289</span><span id="line.289">        this.customLineItems</span>
+<span class="source-line-no">290</span><span id="line.290">                .add(builder.apply(com.commercetools.api.models.cart.CustomLineItemDraftBuilder.of()).build());</span>
 <span class="source-line-no">291</span><span id="line.291">        return this;</span>
 <span class="source-line-no">292</span><span id="line.292">    }</span>
 <span class="source-line-no">293</span><span id="line.293"></span>
-<span class="source-line-no">294</span><span id="line.294">    public CartDraftBuilder custom(</span>
-<span class="source-line-no">295</span><span id="line.295">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">296</span><span id="line.296">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
-<span class="source-line-no">297</span><span id="line.297">        return this;</span>
-<span class="source-line-no">298</span><span id="line.298">    }</span>
-<span class="source-line-no">299</span><span id="line.299"></span>
-<span class="source-line-no">300</span><span id="line.300">    public CartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">301</span><span id="line.301">        this.custom = custom;</span>
-<span class="source-line-no">302</span><span id="line.302">        return this;</span>
-<span class="source-line-no">303</span><span id="line.303">    }</span>
-<span class="source-line-no">304</span><span id="line.304"></span>
-<span class="source-line-no">305</span><span id="line.305">    public CartDraftBuilder locale(@Nullable final String locale) {</span>
-<span class="source-line-no">306</span><span id="line.306">        this.locale = locale;</span>
-<span class="source-line-no">307</span><span id="line.307">        return this;</span>
-<span class="source-line-no">308</span><span id="line.308">    }</span>
-<span class="source-line-no">309</span><span id="line.309"></span>
-<span class="source-line-no">310</span><span id="line.310">    public CartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {</span>
-<span class="source-line-no">311</span><span id="line.311">        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;</span>
-<span class="source-line-no">312</span><span id="line.312">        return this;</span>
-<span class="source-line-no">313</span><span id="line.313">    }</span>
-<span class="source-line-no">314</span><span id="line.314"></span>
-<span class="source-line-no">315</span><span id="line.315">    public CartDraftBuilder origin(@Nullable final com.commercetools.api.models.cart.CartOrigin origin) {</span>
-<span class="source-line-no">316</span><span id="line.316">        this.origin = origin;</span>
+<span class="source-line-no">294</span><span id="line.294">    /**</span>
+<span class="source-line-no">295</span><span id="line.295">    *  &lt;p&gt;The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.&lt;/p&gt;</span>
+<span class="source-line-no">296</span><span id="line.296">    */</span>
+<span class="source-line-no">297</span><span id="line.297"></span>
+<span class="source-line-no">298</span><span id="line.298">    public CartDraftBuilder shippingAddress(</span>
+<span class="source-line-no">299</span><span id="line.299">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
+<span class="source-line-no">300</span><span id="line.300">        this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();</span>
+<span class="source-line-no">301</span><span id="line.301">        return this;</span>
+<span class="source-line-no">302</span><span id="line.302">    }</span>
+<span class="source-line-no">303</span><span id="line.303"></span>
+<span class="source-line-no">304</span><span id="line.304">    /**</span>
+<span class="source-line-no">305</span><span id="line.305">    *  &lt;p&gt;The shipping address is used to determine the eligible shipping methods and rates as well as the tax rate of the line items.&lt;/p&gt;</span>
+<span class="source-line-no">306</span><span id="line.306">    */</span>
+<span class="source-line-no">307</span><span id="line.307"></span>
+<span class="source-line-no">308</span><span id="line.308">    public CartDraftBuilder shippingAddress(</span>
+<span class="source-line-no">309</span><span id="line.309">            @Nullable final com.commercetools.api.models.common.BaseAddress shippingAddress) {</span>
+<span class="source-line-no">310</span><span id="line.310">        this.shippingAddress = shippingAddress;</span>
+<span class="source-line-no">311</span><span id="line.311">        return this;</span>
+<span class="source-line-no">312</span><span id="line.312">    }</span>
+<span class="source-line-no">313</span><span id="line.313"></span>
+<span class="source-line-no">314</span><span id="line.314">    public CartDraftBuilder billingAddress(</span>
+<span class="source-line-no">315</span><span id="line.315">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
+<span class="source-line-no">316</span><span id="line.316">        this.billingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();</span>
 <span class="source-line-no">317</span><span id="line.317">        return this;</span>
 <span class="source-line-no">318</span><span id="line.318">    }</span>
 <span class="source-line-no">319</span><span id="line.319"></span>
-<span class="source-line-no">320</span><span id="line.320">    public CartDraftBuilder shippingRateInput(</span>
-<span class="source-line-no">321</span><span id="line.321">            @Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {</span>
-<span class="source-line-no">322</span><span id="line.322">        this.shippingRateInput = shippingRateInput;</span>
+<span class="source-line-no">320</span><span id="line.320">    public CartDraftBuilder billingAddress(</span>
+<span class="source-line-no">321</span><span id="line.321">            @Nullable final com.commercetools.api.models.common.BaseAddress billingAddress) {</span>
+<span class="source-line-no">322</span><span id="line.322">        this.billingAddress = billingAddress;</span>
 <span class="source-line-no">323</span><span id="line.323">        return this;</span>
 <span class="source-line-no">324</span><span id="line.324">    }</span>
 <span class="source-line-no">325</span><span id="line.325"></span>
-<span class="source-line-no">326</span><span id="line.326">    public CartDraftBuilder shippingRateInput(</span>
-<span class="source-line-no">327</span><span id="line.327">            Function&lt;com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder&lt;? extends com.commercetools.api.models.cart.ShippingRateInputDraft&gt;&gt; builder) {</span>
-<span class="source-line-no">328</span><span id="line.328">        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputDraftBuilder.of())</span>
-<span class="source-line-no">329</span><span id="line.329">                .build();</span>
-<span class="source-line-no">330</span><span id="line.330">        return this;</span>
-<span class="source-line-no">331</span><span id="line.331">    }</span>
-<span class="source-line-no">332</span><span id="line.332"></span>
-<span class="source-line-no">333</span><span id="line.333">    public CartDraftBuilder itemShippingAddresses(</span>
-<span class="source-line-no">334</span><span id="line.334">            @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {</span>
-<span class="source-line-no">335</span><span id="line.335">        this.itemShippingAddresses = new ArrayList&lt;&gt;(Arrays.asList(itemShippingAddresses));</span>
-<span class="source-line-no">336</span><span id="line.336">        return this;</span>
-<span class="source-line-no">337</span><span id="line.337">    }</span>
-<span class="source-line-no">338</span><span id="line.338"></span>
-<span class="source-line-no">339</span><span id="line.339">    public CartDraftBuilder itemShippingAddresses(</span>
-<span class="source-line-no">340</span><span id="line.340">            @Nullable final java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; itemShippingAddresses) {</span>
-<span class="source-line-no">341</span><span id="line.341">        this.itemShippingAddresses = itemShippingAddresses;</span>
-<span class="source-line-no">342</span><span id="line.342">        return this;</span>
-<span class="source-line-no">343</span><span id="line.343">    }</span>
-<span class="source-line-no">344</span><span id="line.344"></span>
-<span class="source-line-no">345</span><span id="line.345">    public CartDraftBuilder plusItemShippingAddresses(</span>
-<span class="source-line-no">346</span><span id="line.346">            @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {</span>
-<span class="source-line-no">347</span><span id="line.347">        if (this.itemShippingAddresses == null) {</span>
-<span class="source-line-no">348</span><span id="line.348">            this.itemShippingAddresses = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">349</span><span id="line.349">        }</span>
-<span class="source-line-no">350</span><span id="line.350">        this.itemShippingAddresses.addAll(Arrays.asList(itemShippingAddresses));</span>
-<span class="source-line-no">351</span><span id="line.351">        return this;</span>
-<span class="source-line-no">352</span><span id="line.352">    }</span>
-<span class="source-line-no">353</span><span id="line.353"></span>
-<span class="source-line-no">354</span><span id="line.354">    public CartDraftBuilder plusItemShippingAddresses(</span>
-<span class="source-line-no">355</span><span id="line.355">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
-<span class="source-line-no">356</span><span id="line.356">        if (this.itemShippingAddresses == null) {</span>
-<span class="source-line-no">357</span><span id="line.357">            this.itemShippingAddresses = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">358</span><span id="line.358">        }</span>
-<span class="source-line-no">359</span><span id="line.359">        this.itemShippingAddresses</span>
-<span class="source-line-no">360</span><span id="line.360">                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());</span>
-<span class="source-line-no">361</span><span id="line.361">        return this;</span>
-<span class="source-line-no">362</span><span id="line.362">    }</span>
-<span class="source-line-no">363</span><span id="line.363"></span>
-<span class="source-line-no">364</span><span id="line.364">    public CartDraftBuilder withItemShippingAddresses(</span>
-<span class="source-line-no">365</span><span id="line.365">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
-<span class="source-line-no">366</span><span id="line.366">        this.itemShippingAddresses = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">367</span><span id="line.367">        this.itemShippingAddresses</span>
-<span class="source-line-no">368</span><span id="line.368">                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());</span>
+<span class="source-line-no">326</span><span id="line.326">    public CartDraftBuilder shippingMethod(</span>
+<span class="source-line-no">327</span><span id="line.327">            Function&lt;com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">328</span><span id="line.328">        this.shippingMethod = builder</span>
+<span class="source-line-no">329</span><span id="line.329">                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of())</span>
+<span class="source-line-no">330</span><span id="line.330">                .build();</span>
+<span class="source-line-no">331</span><span id="line.331">        return this;</span>
+<span class="source-line-no">332</span><span id="line.332">    }</span>
+<span class="source-line-no">333</span><span id="line.333"></span>
+<span class="source-line-no">334</span><span id="line.334">    public CartDraftBuilder shippingMethod(</span>
+<span class="source-line-no">335</span><span id="line.335">            @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {</span>
+<span class="source-line-no">336</span><span id="line.336">        this.shippingMethod = shippingMethod;</span>
+<span class="source-line-no">337</span><span id="line.337">        return this;</span>
+<span class="source-line-no">338</span><span id="line.338">    }</span>
+<span class="source-line-no">339</span><span id="line.339"></span>
+<span class="source-line-no">340</span><span id="line.340">    /**</span>
+<span class="source-line-no">341</span><span id="line.341">    *  &lt;p&gt;An external tax rate can be set for the &lt;code&gt;shippingMethod&lt;/code&gt; if the cart has the &lt;code&gt;External&lt;/code&gt; TaxMode.&lt;/p&gt;</span>
+<span class="source-line-no">342</span><span id="line.342">    */</span>
+<span class="source-line-no">343</span><span id="line.343"></span>
+<span class="source-line-no">344</span><span id="line.344">    public CartDraftBuilder externalTaxRateForShippingMethod(</span>
+<span class="source-line-no">345</span><span id="line.345">            Function&lt;com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">346</span><span id="line.346">        this.externalTaxRateForShippingMethod = builder</span>
+<span class="source-line-no">347</span><span id="line.347">                .apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())</span>
+<span class="source-line-no">348</span><span id="line.348">                .build();</span>
+<span class="source-line-no">349</span><span id="line.349">        return this;</span>
+<span class="source-line-no">350</span><span id="line.350">    }</span>
+<span class="source-line-no">351</span><span id="line.351"></span>
+<span class="source-line-no">352</span><span id="line.352">    /**</span>
+<span class="source-line-no">353</span><span id="line.353">    *  &lt;p&gt;An external tax rate can be set for the &lt;code&gt;shippingMethod&lt;/code&gt; if the cart has the &lt;code&gt;External&lt;/code&gt; TaxMode.&lt;/p&gt;</span>
+<span class="source-line-no">354</span><span id="line.354">    */</span>
+<span class="source-line-no">355</span><span id="line.355"></span>
+<span class="source-line-no">356</span><span id="line.356">    public CartDraftBuilder externalTaxRateForShippingMethod(</span>
+<span class="source-line-no">357</span><span id="line.357">            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod) {</span>
+<span class="source-line-no">358</span><span id="line.358">        this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;</span>
+<span class="source-line-no">359</span><span id="line.359">        return this;</span>
+<span class="source-line-no">360</span><span id="line.360">    }</span>
+<span class="source-line-no">361</span><span id="line.361"></span>
+<span class="source-line-no">362</span><span id="line.362">    /**</span>
+<span class="source-line-no">363</span><span id="line.363">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
+<span class="source-line-no">364</span><span id="line.364">    */</span>
+<span class="source-line-no">365</span><span id="line.365"></span>
+<span class="source-line-no">366</span><span id="line.366">    public CartDraftBuilder custom(</span>
+<span class="source-line-no">367</span><span id="line.367">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">368</span><span id="line.368">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
 <span class="source-line-no">369</span><span id="line.369">        return this;</span>
 <span class="source-line-no">370</span><span id="line.370">    }</span>
 <span class="source-line-no">371</span><span id="line.371"></span>
-<span class="source-line-no">372</span><span id="line.372">    public CartDraftBuilder discountCodes(@Nullable final String... discountCodes) {</span>
-<span class="source-line-no">373</span><span id="line.373">        this.discountCodes = new ArrayList&lt;&gt;(Arrays.asList(discountCodes));</span>
-<span class="source-line-no">374</span><span id="line.374">        return this;</span>
-<span class="source-line-no">375</span><span id="line.375">    }</span>
-<span class="source-line-no">376</span><span id="line.376"></span>
-<span class="source-line-no">377</span><span id="line.377">    public CartDraftBuilder discountCodes(@Nullable final java.util.List&lt;String&gt; discountCodes) {</span>
-<span class="source-line-no">378</span><span id="line.378">        this.discountCodes = discountCodes;</span>
-<span class="source-line-no">379</span><span id="line.379">        return this;</span>
-<span class="source-line-no">380</span><span id="line.380">    }</span>
-<span class="source-line-no">381</span><span id="line.381"></span>
-<span class="source-line-no">382</span><span id="line.382">    public CartDraftBuilder plusDiscountCodes(@Nullable final String... discountCodes) {</span>
-<span class="source-line-no">383</span><span id="line.383">        if (this.discountCodes == null) {</span>
-<span class="source-line-no">384</span><span id="line.384">            this.discountCodes = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">385</span><span id="line.385">        }</span>
-<span class="source-line-no">386</span><span id="line.386">        this.discountCodes.addAll(Arrays.asList(discountCodes));</span>
+<span class="source-line-no">372</span><span id="line.372">    /**</span>
+<span class="source-line-no">373</span><span id="line.373">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
+<span class="source-line-no">374</span><span id="line.374">    */</span>
+<span class="source-line-no">375</span><span id="line.375"></span>
+<span class="source-line-no">376</span><span id="line.376">    public CartDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">377</span><span id="line.377">        this.custom = custom;</span>
+<span class="source-line-no">378</span><span id="line.378">        return this;</span>
+<span class="source-line-no">379</span><span id="line.379">    }</span>
+<span class="source-line-no">380</span><span id="line.380"></span>
+<span class="source-line-no">381</span><span id="line.381">    /**</span>
+<span class="source-line-no">382</span><span id="line.382">    *  &lt;p&gt;Must be one of the languages supported for this project&lt;/p&gt;</span>
+<span class="source-line-no">383</span><span id="line.383">    */</span>
+<span class="source-line-no">384</span><span id="line.384"></span>
+<span class="source-line-no">385</span><span id="line.385">    public CartDraftBuilder locale(@Nullable final String locale) {</span>
+<span class="source-line-no">386</span><span id="line.386">        this.locale = locale;</span>
 <span class="source-line-no">387</span><span id="line.387">        return this;</span>
 <span class="source-line-no">388</span><span id="line.388">    }</span>
 <span class="source-line-no">389</span><span id="line.389"></span>
-<span class="source-line-no">390</span><span id="line.390">    public String getCurrency() {</span>
-<span class="source-line-no">391</span><span id="line.391">        return this.currency;</span>
-<span class="source-line-no">392</span><span id="line.392">    }</span>
+<span class="source-line-no">390</span><span id="line.390">    /**</span>
+<span class="source-line-no">391</span><span id="line.391">    *  &lt;p&gt;The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the &lt;code&gt;Active&lt;/code&gt; CartState. If a ChangeSubscription for carts exists, a &lt;code&gt;ResourceDeleted&lt;/code&gt; notification will be sent.&lt;/p&gt;</span>
+<span class="source-line-no">392</span><span id="line.392">    */</span>
 <span class="source-line-no">393</span><span id="line.393"></span>
-<span class="source-line-no">394</span><span id="line.394">    @Nullable</span>
-<span class="source-line-no">395</span><span id="line.395">    public String getKey() {</span>
-<span class="source-line-no">396</span><span id="line.396">        return this.key;</span>
+<span class="source-line-no">394</span><span id="line.394">    public CartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {</span>
+<span class="source-line-no">395</span><span id="line.395">        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;</span>
+<span class="source-line-no">396</span><span id="line.396">        return this;</span>
 <span class="source-line-no">397</span><span id="line.397">    }</span>
 <span class="source-line-no">398</span><span id="line.398"></span>
-<span class="source-line-no">399</span><span id="line.399">    @Nullable</span>
-<span class="source-line-no">400</span><span id="line.400">    public String getCustomerId() {</span>
-<span class="source-line-no">401</span><span id="line.401">        return this.customerId;</span>
-<span class="source-line-no">402</span><span id="line.402">    }</span>
-<span class="source-line-no">403</span><span id="line.403"></span>
-<span class="source-line-no">404</span><span id="line.404">    @Nullable</span>
-<span class="source-line-no">405</span><span id="line.405">    public String getCustomerEmail() {</span>
-<span class="source-line-no">406</span><span id="line.406">        return this.customerEmail;</span>
-<span class="source-line-no">407</span><span id="line.407">    }</span>
-<span class="source-line-no">408</span><span id="line.408"></span>
-<span class="source-line-no">409</span><span id="line.409">    @Nullable</span>
-<span class="source-line-no">410</span><span id="line.410">    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {</span>
-<span class="source-line-no">411</span><span id="line.411">        return this.customerGroup;</span>
-<span class="source-line-no">412</span><span id="line.412">    }</span>
-<span class="source-line-no">413</span><span id="line.413"></span>
-<span class="source-line-no">414</span><span id="line.414">    @Nullable</span>
-<span class="source-line-no">415</span><span id="line.415">    public String getAnonymousId() {</span>
-<span class="source-line-no">416</span><span id="line.416">        return this.anonymousId;</span>
-<span class="source-line-no">417</span><span id="line.417">    }</span>
-<span class="source-line-no">418</span><span id="line.418"></span>
-<span class="source-line-no">419</span><span id="line.419">    @Nullable</span>
-<span class="source-line-no">420</span><span id="line.420">    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {</span>
-<span class="source-line-no">421</span><span id="line.421">        return this.store;</span>
-<span class="source-line-no">422</span><span id="line.422">    }</span>
-<span class="source-line-no">423</span><span id="line.423"></span>
-<span class="source-line-no">424</span><span id="line.424">    @Nullable</span>
-<span class="source-line-no">425</span><span id="line.425">    public String getCountry() {</span>
-<span class="source-line-no">426</span><span id="line.426">        return this.country;</span>
+<span class="source-line-no">399</span><span id="line.399">    /**</span>
+<span class="source-line-no">400</span><span id="line.400">    *  &lt;p&gt;The default origin is &lt;code&gt;Customer&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">401</span><span id="line.401">    */</span>
+<span class="source-line-no">402</span><span id="line.402"></span>
+<span class="source-line-no">403</span><span id="line.403">    public CartDraftBuilder origin(@Nullable final com.commercetools.api.models.cart.CartOrigin origin) {</span>
+<span class="source-line-no">404</span><span id="line.404">        this.origin = origin;</span>
+<span class="source-line-no">405</span><span id="line.405">        return this;</span>
+<span class="source-line-no">406</span><span id="line.406">    }</span>
+<span class="source-line-no">407</span><span id="line.407"></span>
+<span class="source-line-no">408</span><span id="line.408">    /**</span>
+<span class="source-line-no">409</span><span id="line.409">    *  &lt;p&gt;The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.&lt;/p&gt;</span>
+<span class="source-line-no">410</span><span id="line.410">    */</span>
+<span class="source-line-no">411</span><span id="line.411"></span>
+<span class="source-line-no">412</span><span id="line.412">    public CartDraftBuilder shippingRateInput(</span>
+<span class="source-line-no">413</span><span id="line.413">            @Nullable final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {</span>
+<span class="source-line-no">414</span><span id="line.414">        this.shippingRateInput = shippingRateInput;</span>
+<span class="source-line-no">415</span><span id="line.415">        return this;</span>
+<span class="source-line-no">416</span><span id="line.416">    }</span>
+<span class="source-line-no">417</span><span id="line.417"></span>
+<span class="source-line-no">418</span><span id="line.418">    /**</span>
+<span class="source-line-no">419</span><span id="line.419">    *  &lt;p&gt;The shippingRateInput is used as an input to select a ShippingRatePriceTier. Based on the definition of ShippingRateInputType. If CartClassification is defined, it must be ClassificationShippingRateInput. If CartScore is defined, it must be ScoreShippingRateInput. Otherwise it can not bet set.&lt;/p&gt;</span>
+<span class="source-line-no">420</span><span id="line.420">    */</span>
+<span class="source-line-no">421</span><span id="line.421"></span>
+<span class="source-line-no">422</span><span id="line.422">    public CartDraftBuilder shippingRateInput(</span>
+<span class="source-line-no">423</span><span id="line.423">            Function&lt;com.commercetools.api.models.cart.ShippingRateInputDraftBuilder, Builder&lt;? extends com.commercetools.api.models.cart.ShippingRateInputDraft&gt;&gt; builder) {</span>
+<span class="source-line-no">424</span><span id="line.424">        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputDraftBuilder.of())</span>
+<span class="source-line-no">425</span><span id="line.425">                .build();</span>
+<span class="source-line-no">426</span><span id="line.426">        return this;</span>
 <span class="source-line-no">427</span><span id="line.427">    }</span>
 <span class="source-line-no">428</span><span id="line.428"></span>
-<span class="source-line-no">429</span><span id="line.429">    @Nullable</span>
-<span class="source-line-no">430</span><span id="line.430">    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {</span>
-<span class="source-line-no">431</span><span id="line.431">        return this.inventoryMode;</span>
-<span class="source-line-no">432</span><span id="line.432">    }</span>
-<span class="source-line-no">433</span><span id="line.433"></span>
-<span class="source-line-no">434</span><span id="line.434">    @Nullable</span>
-<span class="source-line-no">435</span><span id="line.435">    public com.commercetools.api.models.cart.TaxMode getTaxMode() {</span>
-<span class="source-line-no">436</span><span id="line.436">        return this.taxMode;</span>
+<span class="source-line-no">429</span><span id="line.429">    /**</span>
+<span class="source-line-no">430</span><span id="line.430">    *  &lt;p&gt;Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their &lt;code&gt;shippingDetails&lt;/code&gt;. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's &lt;code&gt;shippingAddress&lt;/code&gt; is used for this.&lt;/p&gt;</span>
+<span class="source-line-no">431</span><span id="line.431">    */</span>
+<span class="source-line-no">432</span><span id="line.432"></span>
+<span class="source-line-no">433</span><span id="line.433">    public CartDraftBuilder itemShippingAddresses(</span>
+<span class="source-line-no">434</span><span id="line.434">            @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {</span>
+<span class="source-line-no">435</span><span id="line.435">        this.itemShippingAddresses = new ArrayList&lt;&gt;(Arrays.asList(itemShippingAddresses));</span>
+<span class="source-line-no">436</span><span id="line.436">        return this;</span>
 <span class="source-line-no">437</span><span id="line.437">    }</span>
 <span class="source-line-no">438</span><span id="line.438"></span>
-<span class="source-line-no">439</span><span id="line.439">    @Nullable</span>
-<span class="source-line-no">440</span><span id="line.440">    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {</span>
-<span class="source-line-no">441</span><span id="line.441">        return this.taxRoundingMode;</span>
-<span class="source-line-no">442</span><span id="line.442">    }</span>
-<span class="source-line-no">443</span><span id="line.443"></span>
-<span class="source-line-no">444</span><span id="line.444">    @Nullable</span>
-<span class="source-line-no">445</span><span id="line.445">    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {</span>
-<span class="source-line-no">446</span><span id="line.446">        return this.taxCalculationMode;</span>
+<span class="source-line-no">439</span><span id="line.439">    /**</span>
+<span class="source-line-no">440</span><span id="line.440">    *  &lt;p&gt;Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their &lt;code&gt;shippingDetails&lt;/code&gt;. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's &lt;code&gt;shippingAddress&lt;/code&gt; is used for this.&lt;/p&gt;</span>
+<span class="source-line-no">441</span><span id="line.441">    */</span>
+<span class="source-line-no">442</span><span id="line.442"></span>
+<span class="source-line-no">443</span><span id="line.443">    public CartDraftBuilder itemShippingAddresses(</span>
+<span class="source-line-no">444</span><span id="line.444">            @Nullable final java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; itemShippingAddresses) {</span>
+<span class="source-line-no">445</span><span id="line.445">        this.itemShippingAddresses = itemShippingAddresses;</span>
+<span class="source-line-no">446</span><span id="line.446">        return this;</span>
 <span class="source-line-no">447</span><span id="line.447">    }</span>
 <span class="source-line-no">448</span><span id="line.448"></span>
-<span class="source-line-no">449</span><span id="line.449">    @Nullable</span>
-<span class="source-line-no">450</span><span id="line.450">    public java.util.List&lt;com.commercetools.api.models.cart.LineItemDraft&gt; getLineItems() {</span>
-<span class="source-line-no">451</span><span id="line.451">        return this.lineItems;</span>
-<span class="source-line-no">452</span><span id="line.452">    }</span>
-<span class="source-line-no">453</span><span id="line.453"></span>
-<span class="source-line-no">454</span><span id="line.454">    @Nullable</span>
-<span class="source-line-no">455</span><span id="line.455">    public java.util.List&lt;com.commercetools.api.models.cart.CustomLineItemDraft&gt; getCustomLineItems() {</span>
-<span class="source-line-no">456</span><span id="line.456">        return this.customLineItems;</span>
-<span class="source-line-no">457</span><span id="line.457">    }</span>
-<span class="source-line-no">458</span><span id="line.458"></span>
-<span class="source-line-no">459</span><span id="line.459">    @Nullable</span>
-<span class="source-line-no">460</span><span id="line.460">    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {</span>
-<span class="source-line-no">461</span><span id="line.461">        return this.shippingAddress;</span>
-<span class="source-line-no">462</span><span id="line.462">    }</span>
-<span class="source-line-no">463</span><span id="line.463"></span>
-<span class="source-line-no">464</span><span id="line.464">    @Nullable</span>
-<span class="source-line-no">465</span><span id="line.465">    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {</span>
-<span class="source-line-no">466</span><span id="line.466">        return this.billingAddress;</span>
-<span class="source-line-no">467</span><span id="line.467">    }</span>
-<span class="source-line-no">468</span><span id="line.468"></span>
-<span class="source-line-no">469</span><span id="line.469">    @Nullable</span>
-<span class="source-line-no">470</span><span id="line.470">    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {</span>
-<span class="source-line-no">471</span><span id="line.471">        return this.shippingMethod;</span>
-<span class="source-line-no">472</span><span id="line.472">    }</span>
-<span class="source-line-no">473</span><span id="line.473"></span>
-<span class="source-line-no">474</span><span id="line.474">    @Nullable</span>
-<span class="source-line-no">475</span><span id="line.475">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod() {</span>
-<span class="source-line-no">476</span><span id="line.476">        return this.externalTaxRateForShippingMethod;</span>
-<span class="source-line-no">477</span><span id="line.477">    }</span>
-<span class="source-line-no">478</span><span id="line.478"></span>
-<span class="source-line-no">479</span><span id="line.479">    @Nullable</span>
-<span class="source-line-no">480</span><span id="line.480">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">481</span><span id="line.481">        return this.custom;</span>
-<span class="source-line-no">482</span><span id="line.482">    }</span>
-<span class="source-line-no">483</span><span id="line.483"></span>
-<span class="source-line-no">484</span><span id="line.484">    @Nullable</span>
-<span class="source-line-no">485</span><span id="line.485">    public String getLocale() {</span>
-<span class="source-line-no">486</span><span id="line.486">        return this.locale;</span>
-<span class="source-line-no">487</span><span id="line.487">    }</span>
-<span class="source-line-no">488</span><span id="line.488"></span>
-<span class="source-line-no">489</span><span id="line.489">    @Nullable</span>
-<span class="source-line-no">490</span><span id="line.490">    public Long getDeleteDaysAfterLastModification() {</span>
-<span class="source-line-no">491</span><span id="line.491">        return this.deleteDaysAfterLastModification;</span>
-<span class="source-line-no">492</span><span id="line.492">    }</span>
-<span class="source-line-no">493</span><span id="line.493"></span>
-<span class="source-line-no">494</span><span id="line.494">    @Nullable</span>
-<span class="source-line-no">495</span><span id="line.495">    public com.commercetools.api.models.cart.CartOrigin getOrigin() {</span>
-<span class="source-line-no">496</span><span id="line.496">        return this.origin;</span>
-<span class="source-line-no">497</span><span id="line.497">    }</span>
-<span class="source-line-no">498</span><span id="line.498"></span>
-<span class="source-line-no">499</span><span id="line.499">    @Nullable</span>
-<span class="source-line-no">500</span><span id="line.500">    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {</span>
-<span class="source-line-no">501</span><span id="line.501">        return this.shippingRateInput;</span>
-<span class="source-line-no">502</span><span id="line.502">    }</span>
-<span class="source-line-no">503</span><span id="line.503"></span>
-<span class="source-line-no">504</span><span id="line.504">    @Nullable</span>
-<span class="source-line-no">505</span><span id="line.505">    public java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; getItemShippingAddresses() {</span>
-<span class="source-line-no">506</span><span id="line.506">        return this.itemShippingAddresses;</span>
-<span class="source-line-no">507</span><span id="line.507">    }</span>
-<span class="source-line-no">508</span><span id="line.508"></span>
-<span class="source-line-no">509</span><span id="line.509">    @Nullable</span>
-<span class="source-line-no">510</span><span id="line.510">    public java.util.List&lt;String&gt; getDiscountCodes() {</span>
-<span class="source-line-no">511</span><span id="line.511">        return this.discountCodes;</span>
-<span class="source-line-no">512</span><span id="line.512">    }</span>
-<span class="source-line-no">513</span><span id="line.513"></span>
-<span class="source-line-no">514</span><span id="line.514">    public CartDraft build() {</span>
-<span class="source-line-no">515</span><span id="line.515">        Objects.requireNonNull(currency, CartDraft.class + ": currency is missing");</span>
-<span class="source-line-no">516</span><span id="line.516">        return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,</span>
-<span class="source-line-no">517</span><span id="line.517">            inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,</span>
-<span class="source-line-no">518</span><span id="line.518">            billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,</span>
-<span class="source-line-no">519</span><span id="line.519">            deleteDaysAfterLastModification, origin, shippingRateInput, itemShippingAddresses, discountCodes);</span>
+<span class="source-line-no">449</span><span id="line.449">    /**</span>
+<span class="source-line-no">450</span><span id="line.450">    *  &lt;p&gt;Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their &lt;code&gt;shippingDetails&lt;/code&gt;. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's &lt;code&gt;shippingAddress&lt;/code&gt; is used for this.&lt;/p&gt;</span>
+<span class="source-line-no">451</span><span id="line.451">    */</span>
+<span class="source-line-no">452</span><span id="line.452"></span>
+<span class="source-line-no">453</span><span id="line.453">    public CartDraftBuilder plusItemShippingAddresses(</span>
+<span class="source-line-no">454</span><span id="line.454">            @Nullable final com.commercetools.api.models.common.BaseAddress... itemShippingAddresses) {</span>
+<span class="source-line-no">455</span><span id="line.455">        if (this.itemShippingAddresses == null) {</span>
+<span class="source-line-no">456</span><span id="line.456">            this.itemShippingAddresses = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">457</span><span id="line.457">        }</span>
+<span class="source-line-no">458</span><span id="line.458">        this.itemShippingAddresses.addAll(Arrays.asList(itemShippingAddresses));</span>
+<span class="source-line-no">459</span><span id="line.459">        return this;</span>
+<span class="source-line-no">460</span><span id="line.460">    }</span>
+<span class="source-line-no">461</span><span id="line.461"></span>
+<span class="source-line-no">462</span><span id="line.462">    /**</span>
+<span class="source-line-no">463</span><span id="line.463">    *  &lt;p&gt;Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their &lt;code&gt;shippingDetails&lt;/code&gt;. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's &lt;code&gt;shippingAddress&lt;/code&gt; is used for this.&lt;/p&gt;</span>
+<span class="source-line-no">464</span><span id="line.464">    */</span>
+<span class="source-line-no">465</span><span id="line.465"></span>
+<span class="source-line-no">466</span><span id="line.466">    public CartDraftBuilder plusItemShippingAddresses(</span>
+<span class="source-line-no">467</span><span id="line.467">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
+<span class="source-line-no">468</span><span id="line.468">        if (this.itemShippingAddresses == null) {</span>
+<span class="source-line-no">469</span><span id="line.469">            this.itemShippingAddresses = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">470</span><span id="line.470">        }</span>
+<span class="source-line-no">471</span><span id="line.471">        this.itemShippingAddresses</span>
+<span class="source-line-no">472</span><span id="line.472">                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());</span>
+<span class="source-line-no">473</span><span id="line.473">        return this;</span>
+<span class="source-line-no">474</span><span id="line.474">    }</span>
+<span class="source-line-no">475</span><span id="line.475"></span>
+<span class="source-line-no">476</span><span id="line.476">    /**</span>
+<span class="source-line-no">477</span><span id="line.477">    *  &lt;p&gt;Contains addresses for carts with multiple shipping addresses. Each address must contain a key which is unique in this cart. Line items will use these keys to reference the addresses under their &lt;code&gt;shippingDetails&lt;/code&gt;. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's &lt;code&gt;shippingAddress&lt;/code&gt; is used for this.&lt;/p&gt;</span>
+<span class="source-line-no">478</span><span id="line.478">    */</span>
+<span class="source-line-no">479</span><span id="line.479"></span>
+<span class="source-line-no">480</span><span id="line.480">    public CartDraftBuilder withItemShippingAddresses(</span>
+<span class="source-line-no">481</span><span id="line.481">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
+<span class="source-line-no">482</span><span id="line.482">        this.itemShippingAddresses = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">483</span><span id="line.483">        this.itemShippingAddresses</span>
+<span class="source-line-no">484</span><span id="line.484">                .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());</span>
+<span class="source-line-no">485</span><span id="line.485">        return this;</span>
+<span class="source-line-no">486</span><span id="line.486">    }</span>
+<span class="source-line-no">487</span><span id="line.487"></span>
+<span class="source-line-no">488</span><span id="line.488">    /**</span>
+<span class="source-line-no">489</span><span id="line.489">    *  &lt;p&gt;The code of existing DiscountCodes.&lt;/p&gt;</span>
+<span class="source-line-no">490</span><span id="line.490">    */</span>
+<span class="source-line-no">491</span><span id="line.491"></span>
+<span class="source-line-no">492</span><span id="line.492">    public CartDraftBuilder discountCodes(@Nullable final String... discountCodes) {</span>
+<span class="source-line-no">493</span><span id="line.493">        this.discountCodes = new ArrayList&lt;&gt;(Arrays.asList(discountCodes));</span>
+<span class="source-line-no">494</span><span id="line.494">        return this;</span>
+<span class="source-line-no">495</span><span id="line.495">    }</span>
+<span class="source-line-no">496</span><span id="line.496"></span>
+<span class="source-line-no">497</span><span id="line.497">    /**</span>
+<span class="source-line-no">498</span><span id="line.498">    *  &lt;p&gt;The code of existing DiscountCodes.&lt;/p&gt;</span>
+<span class="source-line-no">499</span><span id="line.499">    */</span>
+<span class="source-line-no">500</span><span id="line.500"></span>
+<span class="source-line-no">501</span><span id="line.501">    public CartDraftBuilder discountCodes(@Nullable final java.util.List&lt;String&gt; discountCodes) {</span>
+<span class="source-line-no">502</span><span id="line.502">        this.discountCodes = discountCodes;</span>
+<span class="source-line-no">503</span><span id="line.503">        return this;</span>
+<span class="source-line-no">504</span><span id="line.504">    }</span>
+<span class="source-line-no">505</span><span id="line.505"></span>
+<span class="source-line-no">506</span><span id="line.506">    /**</span>
+<span class="source-line-no">507</span><span id="line.507">    *  &lt;p&gt;The code of existing DiscountCodes.&lt;/p&gt;</span>
+<span class="source-line-no">508</span><span id="line.508">    */</span>
+<span class="source-line-no">509</span><span id="line.509"></span>
+<span class="source-line-no">510</span><span id="line.510">    public CartDraftBuilder plusDiscountCodes(@Nullable final String... discountCodes) {</span>
+<span class="source-line-no">511</span><span id="line.511">        if (this.discountCodes == null) {</span>
+<span class="source-line-no">512</span><span id="line.512">            this.discountCodes = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">513</span><span id="line.513">        }</span>
+<span class="source-line-no">514</span><span id="line.514">        this.discountCodes.addAll(Arrays.asList(discountCodes));</span>
+<span class="source-line-no">515</span><span id="line.515">        return this;</span>
+<span class="source-line-no">516</span><span id="line.516">    }</span>
+<span class="source-line-no">517</span><span id="line.517"></span>
+<span class="source-line-no">518</span><span id="line.518">    public String getCurrency() {</span>
+<span class="source-line-no">519</span><span id="line.519">        return this.currency;</span>
 <span class="source-line-no">520</span><span id="line.520">    }</span>
 <span class="source-line-no">521</span><span id="line.521"></span>
-<span class="source-line-no">522</span><span id="line.522">    /**</span>
-<span class="source-line-no">523</span><span id="line.523">     * builds CartDraft without checking for non null required values</span>
-<span class="source-line-no">524</span><span id="line.524">     */</span>
-<span class="source-line-no">525</span><span id="line.525">    public CartDraft buildUnchecked() {</span>
-<span class="source-line-no">526</span><span id="line.526">        return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,</span>
-<span class="source-line-no">527</span><span id="line.527">            inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,</span>
-<span class="source-line-no">528</span><span id="line.528">            billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,</span>
-<span class="source-line-no">529</span><span id="line.529">            deleteDaysAfterLastModification, origin, shippingRateInput, itemShippingAddresses, discountCodes);</span>
+<span class="source-line-no">522</span><span id="line.522">    @Nullable</span>
+<span class="source-line-no">523</span><span id="line.523">    public String getKey() {</span>
+<span class="source-line-no">524</span><span id="line.524">        return this.key;</span>
+<span class="source-line-no">525</span><span id="line.525">    }</span>
+<span class="source-line-no">526</span><span id="line.526"></span>
+<span class="source-line-no">527</span><span id="line.527">    @Nullable</span>
+<span class="source-line-no">528</span><span id="line.528">    public String getCustomerId() {</span>
+<span class="source-line-no">529</span><span id="line.529">        return this.customerId;</span>
 <span class="source-line-no">530</span><span id="line.530">    }</span>
 <span class="source-line-no">531</span><span id="line.531"></span>
-<span class="source-line-no">532</span><span id="line.532">    public static CartDraftBuilder of() {</span>
-<span class="source-line-no">533</span><span id="line.533">        return new CartDraftBuilder();</span>
-<span class="source-line-no">534</span><span id="line.534">    }</span>
-<span class="source-line-no">535</span><span id="line.535"></span>
-<span class="source-line-no">536</span><span id="line.536">    public static CartDraftBuilder of(final CartDraft template) {</span>
-<span class="source-line-no">537</span><span id="line.537">        CartDraftBuilder builder = new CartDraftBuilder();</span>
-<span class="source-line-no">538</span><span id="line.538">        builder.currency = template.getCurrency();</span>
-<span class="source-line-no">539</span><span id="line.539">        builder.key = template.getKey();</span>
-<span class="source-line-no">540</span><span id="line.540">        builder.customerId = template.getCustomerId();</span>
-<span class="source-line-no">541</span><span id="line.541">        builder.customerEmail = template.getCustomerEmail();</span>
-<span class="source-line-no">542</span><span id="line.542">        builder.customerGroup = template.getCustomerGroup();</span>
-<span class="source-line-no">543</span><span id="line.543">        builder.anonymousId = template.getAnonymousId();</span>
-<span class="source-line-no">544</span><span id="line.544">        builder.store = template.getStore();</span>
-<span class="source-line-no">545</span><span id="line.545">        builder.country = template.getCountry();</span>
-<span class="source-line-no">546</span><span id="line.546">        builder.inventoryMode = template.getInventoryMode();</span>
-<span class="source-line-no">547</span><span id="line.547">        builder.taxMode = template.getTaxMode();</span>
-<span class="source-line-no">548</span><span id="line.548">        builder.taxRoundingMode = template.getTaxRoundingMode();</span>
-<span class="source-line-no">549</span><span id="line.549">        builder.taxCalculationMode = template.getTaxCalculationMode();</span>
-<span class="source-line-no">550</span><span id="line.550">        builder.lineItems = template.getLineItems();</span>
-<span class="source-line-no">551</span><span id="line.551">        builder.customLineItems = template.getCustomLineItems();</span>
-<span class="source-line-no">552</span><span id="line.552">        builder.shippingAddress = template.getShippingAddress();</span>
-<span class="source-line-no">553</span><span id="line.553">        builder.billingAddress = template.getBillingAddress();</span>
-<span class="source-line-no">554</span><span id="line.554">        builder.shippingMethod = template.getShippingMethod();</span>
-<span class="source-line-no">555</span><span id="line.555">        builder.externalTaxRateForShippingMethod = template.getExternalTaxRateForShippingMethod();</span>
-<span class="source-line-no">556</span><span id="line.556">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">557</span><span id="line.557">        builder.locale = template.getLocale();</span>
-<span class="source-line-no">558</span><span id="line.558">        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();</span>
-<span class="source-line-no">559</span><span id="line.559">        builder.origin = template.getOrigin();</span>
-<span class="source-line-no">560</span><span id="line.560">        builder.shippingRateInput = template.getShippingRateInput();</span>
-<span class="source-line-no">561</span><span id="line.561">        builder.itemShippingAddresses = template.getItemShippingAddresses();</span>
-<span class="source-line-no">562</span><span id="line.562">        builder.discountCodes = template.getDiscountCodes();</span>
-<span class="source-line-no">563</span><span id="line.563">        return builder;</span>
-<span class="source-line-no">564</span><span id="line.564">    }</span>
-<span class="source-line-no">565</span><span id="line.565"></span>
-<span class="source-line-no">566</span><span id="line.566">}</span>
+<span class="source-line-no">532</span><span id="line.532">    @Nullable</span>
+<span class="source-line-no">533</span><span id="line.533">    public String getCustomerEmail() {</span>
+<span class="source-line-no">534</span><span id="line.534">        return this.customerEmail;</span>
+<span class="source-line-no">535</span><span id="line.535">    }</span>
+<span class="source-line-no">536</span><span id="line.536"></span>
+<span class="source-line-no">537</span><span id="line.537">    @Nullable</span>
+<span class="source-line-no">538</span><span id="line.538">    public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {</span>
+<span class="source-line-no">539</span><span id="line.539">        return this.customerGroup;</span>
+<span class="source-line-no">540</span><span id="line.540">    }</span>
+<span class="source-line-no">541</span><span id="line.541"></span>
+<span class="source-line-no">542</span><span id="line.542">    @Nullable</span>
+<span class="source-line-no">543</span><span id="line.543">    public String getAnonymousId() {</span>
+<span class="source-line-no">544</span><span id="line.544">        return this.anonymousId;</span>
+<span class="source-line-no">545</span><span id="line.545">    }</span>
+<span class="source-line-no">546</span><span id="line.546"></span>
+<span class="source-line-no">547</span><span id="line.547">    @Nullable</span>
+<span class="source-line-no">548</span><span id="line.548">    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {</span>
+<span class="source-line-no">549</span><span id="line.549">        return this.store;</span>
+<span class="source-line-no">550</span><span id="line.550">    }</span>
+<span class="source-line-no">551</span><span id="line.551"></span>
+<span class="source-line-no">552</span><span id="line.552">    @Nullable</span>
+<span class="source-line-no">553</span><span id="line.553">    public String getCountry() {</span>
+<span class="source-line-no">554</span><span id="line.554">        return this.country;</span>
+<span class="source-line-no">555</span><span id="line.555">    }</span>
+<span class="source-line-no">556</span><span id="line.556"></span>
+<span class="source-line-no">557</span><span id="line.557">    @Nullable</span>
+<span class="source-line-no">558</span><span id="line.558">    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {</span>
+<span class="source-line-no">559</span><span id="line.559">        return this.inventoryMode;</span>
+<span class="source-line-no">560</span><span id="line.560">    }</span>
+<span class="source-line-no">561</span><span id="line.561"></span>
+<span class="source-line-no">562</span><span id="line.562">    @Nullable</span>
+<span class="source-line-no">563</span><span id="line.563">    public com.commercetools.api.models.cart.TaxMode getTaxMode() {</span>
+<span class="source-line-no">564</span><span id="line.564">        return this.taxMode;</span>
+<span class="source-line-no">565</span><span id="line.565">    }</span>
+<span class="source-line-no">566</span><span id="line.566"></span>
+<span class="source-line-no">567</span><span id="line.567">    @Nullable</span>
+<span class="source-line-no">568</span><span id="line.568">    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {</span>
+<span class="source-line-no">569</span><span id="line.569">        return this.taxRoundingMode;</span>
+<span class="source-line-no">570</span><span id="line.570">    }</span>
+<span class="source-line-no">571</span><span id="line.571"></span>
+<span class="source-line-no">572</span><span id="line.572">    @Nullable</span>
+<span class="source-line-no">573</span><span id="line.573">    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {</span>
+<span class="source-line-no">574</span><span id="line.574">        return this.taxCalculationMode;</span>
+<span class="source-line-no">575</span><span id="line.575">    }</span>
+<span class="source-line-no">576</span><span id="line.576"></span>
+<span class="source-line-no">577</span><span id="line.577">    @Nullable</span>
+<span class="source-line-no">578</span><span id="line.578">    public java.util.List&lt;com.commercetools.api.models.cart.LineItemDraft&gt; getLineItems() {</span>
+<span class="source-line-no">579</span><span id="line.579">        return this.lineItems;</span>
+<span class="source-line-no">580</span><span id="line.580">    }</span>
+<span class="source-line-no">581</span><span id="line.581"></span>
+<span class="source-line-no">582</span><span id="line.582">    @Nullable</span>
+<span class="source-line-no">583</span><span id="line.583">    public java.util.List&lt;com.commercetools.api.models.cart.CustomLineItemDraft&gt; getCustomLineItems() {</span>
+<span class="source-line-no">584</span><span id="line.584">        return this.customLineItems;</span>
+<span class="source-line-no">585</span><span id="line.585">    }</span>
+<span class="source-line-no">586</span><span id="line.586"></span>
+<span class="source-line-no">587</span><span id="line.587">    @Nullable</span>
+<span class="source-line-no">588</span><span id="line.588">    public com.commercetools.api.models.common.BaseAddress getShippingAddress() {</span>
+<span class="source-line-no">589</span><span id="line.589">        return this.shippingAddress;</span>
+<span class="source-line-no">590</span><span id="line.590">    }</span>
+<span class="source-line-no">591</span><span id="line.591"></span>
+<span class="source-line-no">592</span><span id="line.592">    @Nullable</span>
+<span class="source-line-no">593</span><span id="line.593">    public com.commercetools.api.models.common.BaseAddress getBillingAddress() {</span>
+<span class="source-line-no">594</span><span id="line.594">        return this.billingAddress;</span>
+<span class="source-line-no">595</span><span id="line.595">    }</span>
+<span class="source-line-no">596</span><span id="line.596"></span>
+<span class="source-line-no">597</span><span id="line.597">    @Nullable</span>
+<span class="source-line-no">598</span><span id="line.598">    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {</span>
+<span class="source-line-no">599</span><span id="line.599">        return this.shippingMethod;</span>
+<span class="source-line-no">600</span><span id="line.600">    }</span>
+<span class="source-line-no">601</span><span id="line.601"></span>
+<span class="source-line-no">602</span><span id="line.602">    @Nullable</span>
+<span class="source-line-no">603</span><span id="line.603">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRateForShippingMethod() {</span>
+<span class="source-line-no">604</span><span id="line.604">        return this.externalTaxRateForShippingMethod;</span>
+<span class="source-line-no">605</span><span id="line.605">    }</span>
+<span class="source-line-no">606</span><span id="line.606"></span>
+<span class="source-line-no">607</span><span id="line.607">    @Nullable</span>
+<span class="source-line-no">608</span><span id="line.608">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">609</span><span id="line.609">        return this.custom;</span>
+<span class="source-line-no">610</span><span id="line.610">    }</span>
+<span class="source-line-no">611</span><span id="line.611"></span>
+<span class="source-line-no">612</span><span id="line.612">    @Nullable</span>
+<span class="source-line-no">613</span><span id="line.613">    public String getLocale() {</span>
+<span class="source-line-no">614</span><span id="line.614">        return this.locale;</span>
+<span class="source-line-no">615</span><span id="line.615">    }</span>
+<span class="source-line-no">616</span><span id="line.616"></span>
+<span class="source-line-no">617</span><span id="line.617">    @Nullable</span>
+<span class="source-line-no">618</span><span id="line.618">    public Long getDeleteDaysAfterLastModification() {</span>
+<span class="source-line-no">619</span><span id="line.619">        return this.deleteDaysAfterLastModification;</span>
+<span class="source-line-no">620</span><span id="line.620">    }</span>
+<span class="source-line-no">621</span><span id="line.621"></span>
+<span class="source-line-no">622</span><span id="line.622">    @Nullable</span>
+<span class="source-line-no">623</span><span id="line.623">    public com.commercetools.api.models.cart.CartOrigin getOrigin() {</span>
+<span class="source-line-no">624</span><span id="line.624">        return this.origin;</span>
+<span class="source-line-no">625</span><span id="line.625">    }</span>
+<span class="source-line-no">626</span><span id="line.626"></span>
+<span class="source-line-no">627</span><span id="line.627">    @Nullable</span>
+<span class="source-line-no">628</span><span id="line.628">    public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {</span>
+<span class="source-line-no">629</span><span id="line.629">        return this.shippingRateInput;</span>
+<span class="source-line-no">630</span><span id="line.630">    }</span>
+<span class="source-line-no">631</span><span id="line.631"></span>
+<span class="source-line-no">632</span><span id="line.632">    @Nullable</span>
+<span class="source-line-no">633</span><span id="line.633">    public java.util.List&lt;com.commercetools.api.models.common.BaseAddress&gt; getItemShippingAddresses() {</span>
+<span class="source-line-no">634</span><span id="line.634">        return this.itemShippingAddresses;</span>
+<span class="source-line-no">635</span><span id="line.635">    }</span>
+<span class="source-line-no">636</span><span id="line.636"></span>
+<span class="source-line-no">637</span><span id="line.637">    @Nullable</span>
+<span class="source-line-no">638</span><span id="line.638">    public java.util.List&lt;String&gt; getDiscountCodes() {</span>
+<span class="source-line-no">639</span><span id="line.639">        return this.discountCodes;</span>
+<span class="source-line-no">640</span><span id="line.640">    }</span>
+<span class="source-line-no">641</span><span id="line.641"></span>
+<span class="source-line-no">642</span><span id="line.642">    public CartDraft build() {</span>
+<span class="source-line-no">643</span><span id="line.643">        Objects.requireNonNull(currency, CartDraft.class + ": currency is missing");</span>
+<span class="source-line-no">644</span><span id="line.644">        return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,</span>
+<span class="source-line-no">645</span><span id="line.645">            inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,</span>
+<span class="source-line-no">646</span><span id="line.646">            billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,</span>
+<span class="source-line-no">647</span><span id="line.647">            deleteDaysAfterLastModification, origin, shippingRateInput, itemShippingAddresses, discountCodes);</span>
+<span class="source-line-no">648</span><span id="line.648">    }</span>
+<span class="source-line-no">649</span><span id="line.649"></span>
+<span class="source-line-no">650</span><span id="line.650">    /**</span>
+<span class="source-line-no">651</span><span id="line.651">     * builds CartDraft without checking for non null required values</span>
+<span class="source-line-no">652</span><span id="line.652">     */</span>
+<span class="source-line-no">653</span><span id="line.653">    public CartDraft buildUnchecked() {</span>
+<span class="source-line-no">654</span><span id="line.654">        return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,</span>
+<span class="source-line-no">655</span><span id="line.655">            inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,</span>
+<span class="source-line-no">656</span><span id="line.656">            billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,</span>
+<span class="source-line-no">657</span><span id="line.657">            deleteDaysAfterLastModification, origin, shippingRateInput, itemShippingAddresses, discountCodes);</span>
+<span class="source-line-no">658</span><span id="line.658">    }</span>
+<span class="source-line-no">659</span><span id="line.659"></span>
+<span class="source-line-no">660</span><span id="line.660">    public static CartDraftBuilder of() {</span>
+<span class="source-line-no">661</span><span id="line.661">        return new CartDraftBuilder();</span>
+<span class="source-line-no">662</span><span id="line.662">    }</span>
+<span class="source-line-no">663</span><span id="line.663"></span>
+<span class="source-line-no">664</span><span id="line.664">    public static CartDraftBuilder of(final CartDraft template) {</span>
+<span class="source-line-no">665</span><span id="line.665">        CartDraftBuilder builder = new CartDraftBuilder();</span>
+<span class="source-line-no">666</span><span id="line.666">        builder.currency = template.getCurrency();</span>
+<span class="source-line-no">667</span><span id="line.667">        builder.key = template.getKey();</span>
+<span class="source-line-no">668</span><span id="line.668">        builder.customerId = template.getCustomerId();</span>
+<span class="source-line-no">669</span><span id="line.669">        builder.customerEmail = template.getCustomerEmail();</span>
+<span class="source-line-no">670</span><span id="line.670">        builder.customerGroup = template.getCustomerGroup();</span>
+<span class="source-line-no">671</span><span id="line.671">        builder.anonymousId = template.getAnonymousId();</span>
+<span class="source-line-no">672</span><span id="line.672">        builder.store = template.getStore();</span>
+<span class="source-line-no">673</span><span id="line.673">        builder.country = template.getCountry();</span>
+<span class="source-line-no">674</span><span id="line.674">        builder.inventoryMode = template.getInventoryMode();</span>
+<span class="source-line-no">675</span><span id="line.675">        builder.taxMode = template.getTaxMode();</span>
+<span class="source-line-no">676</span><span id="line.676">        builder.taxRoundingMode = template.getTaxRoundingMode();</span>
+<span class="source-line-no">677</span><span id="line.677">        builder.taxCalculationMode = template.getTaxCalculationMode();</span>
+<span class="source-line-no">678</span><span id="line.678">        builder.lineItems = template.getLineItems();</span>
+<span class="source-line-no">679</span><span id="line.679">        builder.customLineItems = template.getCustomLineItems();</span>
+<span class="source-line-no">680</span><span id="line.680">        builder.shippingAddress = template.getShippingAddress();</span>
+<span class="source-line-no">681</span><span id="line.681">        builder.billingAddress = template.getBillingAddress();</span>
+<span class="source-line-no">682</span><span id="line.682">        builder.shippingMethod = template.getShippingMethod();</span>
+<span class="source-line-no">683</span><span id="line.683">        builder.externalTaxRateForShippingMethod = template.getExternalTaxRateForShippingMethod();</span>
+<span class="source-line-no">684</span><span id="line.684">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">685</span><span id="line.685">        builder.locale = template.getLocale();</span>
+<span class="source-line-no">686</span><span id="line.686">        builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();</span>
+<span class="source-line-no">687</span><span id="line.687">        builder.origin = template.getOrigin();</span>
+<span class="source-line-no">688</span><span id="line.688">        builder.shippingRateInput = template.getShippingRateInput();</span>
+<span class="source-line-no">689</span><span id="line.689">        builder.itemShippingAddresses = template.getItemShippingAddresses();</span>
+<span class="source-line-no">690</span><span id="line.690">        builder.discountCodes = template.getDiscountCodes();</span>
+<span class="source-line-no">691</span><span id="line.691">        return builder;</span>
+<span class="source-line-no">692</span><span id="line.692">    }</span>
+<span class="source-line-no">693</span><span id="line.693"></span>
+<span class="source-line-no">694</span><span id="line.694">}</span>
 
 
 

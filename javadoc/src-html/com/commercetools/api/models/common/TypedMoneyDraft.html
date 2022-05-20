@@ -18,58 +18,52 @@
 <span class="source-line-no">005</span><span id="line.5">import java.util.*;</span>
 <span class="source-line-no">006</span><span id="line.6">import java.util.function.Function;</span>
 <span class="source-line-no">007</span><span id="line.7"></span>
-<span class="source-line-no">008</span><span id="line.8">import javax.validation.constraints.NotNull;</span>
-<span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">011</span><span id="line.11">import com.fasterxml.jackson.databind.annotation.*;</span>
+<span class="source-line-no">008</span><span id="line.8">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">009</span><span id="line.9">import com.fasterxml.jackson.databind.annotation.*;</span>
+<span class="source-line-no">010</span><span id="line.10"></span>
+<span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">@JsonSubTypes({</span>
-<span class="source-line-no">016</span><span id="line.16">        @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyDraftImpl.class, name = CentPrecisionMoneyDraft.CENT_PRECISION),</span>
-<span class="source-line-no">017</span><span id="line.17">        @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyDraftImpl.class, name = HighPrecisionMoneyDraft.HIGH_PRECISION) })</span>
-<span class="source-line-no">018</span><span id="line.18">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyDraftImpl.class, visible = true)</span>
-<span class="source-line-no">019</span><span id="line.19">@JsonDeserialize(as = TypedMoneyDraftImpl.class)</span>
-<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">021</span><span id="line.21">public interface TypedMoneyDraft extends Money {</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    /**</span>
-<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;The platform supports two different types of Money, one for amounts in cent precision and another one for sub-cent amounts up to 12 fraction digits.&lt;/p&gt;</span>
-<span class="source-line-no">025</span><span id="line.25">    */</span>
-<span class="source-line-no">026</span><span id="line.26">    @NotNull</span>
-<span class="source-line-no">027</span><span id="line.27">    @JsonProperty("type")</span>
-<span class="source-line-no">028</span><span id="line.28">    public MoneyType getType();</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    /**</span>
-<span class="source-line-no">031</span><span id="line.31">    *  &lt;p&gt;Must be equal to the default number of fraction digits for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">032</span><span id="line.32">    */</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("fractionDigits")</span>
-<span class="source-line-no">035</span><span id="line.35">    public Integer getFractionDigits();</span>
+<span class="source-line-no">013</span><span id="line.13">@JsonSubTypes({</span>
+<span class="source-line-no">014</span><span id="line.14">        @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyDraftImpl.class, name = CentPrecisionMoneyDraft.CENT_PRECISION),</span>
+<span class="source-line-no">015</span><span id="line.15">        @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyDraftImpl.class, name = HighPrecisionMoneyDraft.HIGH_PRECISION) })</span>
+<span class="source-line-no">016</span><span id="line.16">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyDraftImpl.class, visible = true)</span>
+<span class="source-line-no">017</span><span id="line.17">@JsonDeserialize(as = TypedMoneyDraftImpl.class)</span>
+<span class="source-line-no">018</span><span id="line.18">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">019</span><span id="line.19">public interface TypedMoneyDraft extends Money {</span>
+<span class="source-line-no">020</span><span id="line.20"></span>
+<span class="source-line-no">021</span><span id="line.21">    @JsonProperty("type")</span>
+<span class="source-line-no">022</span><span id="line.22">    public MoneyType getType();</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    /**</span>
+<span class="source-line-no">025</span><span id="line.25">    *  &lt;p&gt;Must be equal to the default number of fraction digits for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">026</span><span id="line.26">    */</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("fractionDigits")</span>
+<span class="source-line-no">029</span><span id="line.29">    public Integer getFractionDigits();</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    public void setFractionDigits(final Integer fractionDigits);</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    public static com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder centPrecisionBuilder() {</span>
+<span class="source-line-no">034</span><span id="line.34">        return com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder.of();</span>
+<span class="source-line-no">035</span><span id="line.35">    }</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public void setFractionDigits(final Integer fractionDigits);</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public static com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder centPrecisionBuilder() {</span>
-<span class="source-line-no">040</span><span id="line.40">        return com.commercetools.api.models.common.CentPrecisionMoneyDraftBuilder.of();</span>
-<span class="source-line-no">041</span><span id="line.41">    }</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public static com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder highPrecisionBuilder() {</span>
-<span class="source-line-no">044</span><span id="line.44">        return com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder.of();</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    default &lt;T&gt; T withTypedMoneyDraft(Function&lt;TypedMoneyDraft, T&gt; helper) {</span>
-<span class="source-line-no">048</span><span id="line.48">        return helper.apply(this);</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoneyDraft&gt; typeReference() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoneyDraft&gt;() {</span>
-<span class="source-line-no">053</span><span id="line.53">            @Override</span>
-<span class="source-line-no">054</span><span id="line.54">            public String toString() {</span>
-<span class="source-line-no">055</span><span id="line.55">                return "TypeReference&lt;TypedMoneyDraft&gt;";</span>
-<span class="source-line-no">056</span><span id="line.56">            }</span>
-<span class="source-line-no">057</span><span id="line.57">        };</span>
-<span class="source-line-no">058</span><span id="line.58">    }</span>
-<span class="source-line-no">059</span><span id="line.59">}</span>
+<span class="source-line-no">037</span><span id="line.37">    public static com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder highPrecisionBuilder() {</span>
+<span class="source-line-no">038</span><span id="line.38">        return com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder.of();</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    default &lt;T&gt; T withTypedMoneyDraft(Function&lt;TypedMoneyDraft, T&gt; helper) {</span>
+<span class="source-line-no">042</span><span id="line.42">        return helper.apply(this);</span>
+<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoneyDraft&gt; typeReference() {</span>
+<span class="source-line-no">046</span><span id="line.46">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoneyDraft&gt;() {</span>
+<span class="source-line-no">047</span><span id="line.47">            @Override</span>
+<span class="source-line-no">048</span><span id="line.48">            public String toString() {</span>
+<span class="source-line-no">049</span><span id="line.49">                return "TypeReference&lt;TypedMoneyDraft&gt;";</span>
+<span class="source-line-no">050</span><span id="line.50">            }</span>
+<span class="source-line-no">051</span><span id="line.51">        };</span>
+<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">053</span><span id="line.53">}</span>
 
 
 

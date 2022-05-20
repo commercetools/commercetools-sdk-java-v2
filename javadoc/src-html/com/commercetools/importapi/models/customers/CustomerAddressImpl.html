@@ -126,271 +126,270 @@
 <span class="source-line-no">113</span><span id="line.113">    }</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
 <span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">    *  &lt;p&gt;User-defined identifier for the address.</span>
-<span class="source-line-no">117</span><span id="line.117">    *  Must follow the pattern &lt;code&gt;[a-zA-Z0-9_\-]{2,256}&lt;/code&gt; and must be unique per customer.&lt;/p&gt;</span>
-<span class="source-line-no">118</span><span id="line.118">    */</span>
-<span class="source-line-no">119</span><span id="line.119">    public String getKey() {</span>
-<span class="source-line-no">120</span><span id="line.120">        return this.key;</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public String getTitle() {</span>
-<span class="source-line-no">124</span><span id="line.124">        return this.title;</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    public String getSalutation() {</span>
-<span class="source-line-no">128</span><span id="line.128">        return this.salutation;</span>
-<span class="source-line-no">129</span><span id="line.129">    }</span>
-<span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    public String getFirstName() {</span>
-<span class="source-line-no">132</span><span id="line.132">        return this.firstName;</span>
-<span class="source-line-no">133</span><span id="line.133">    }</span>
-<span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    public String getLastName() {</span>
-<span class="source-line-no">136</span><span id="line.136">        return this.lastName;</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public String getStreetName() {</span>
-<span class="source-line-no">140</span><span id="line.140">        return this.streetName;</span>
-<span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    public String getStreetNumber() {</span>
-<span class="source-line-no">144</span><span id="line.144">        return this.streetNumber;</span>
-<span class="source-line-no">145</span><span id="line.145">    }</span>
-<span class="source-line-no">146</span><span id="line.146"></span>
-<span class="source-line-no">147</span><span id="line.147">    public String getAdditionalStreetInfo() {</span>
-<span class="source-line-no">148</span><span id="line.148">        return this.additionalStreetInfo;</span>
-<span class="source-line-no">149</span><span id="line.149">    }</span>
-<span class="source-line-no">150</span><span id="line.150"></span>
-<span class="source-line-no">151</span><span id="line.151">    public String getPostalCode() {</span>
-<span class="source-line-no">152</span><span id="line.152">        return this.postalCode;</span>
-<span class="source-line-no">153</span><span id="line.153">    }</span>
-<span class="source-line-no">154</span><span id="line.154"></span>
-<span class="source-line-no">155</span><span id="line.155">    public String getCity() {</span>
-<span class="source-line-no">156</span><span id="line.156">        return this.city;</span>
-<span class="source-line-no">157</span><span id="line.157">    }</span>
-<span class="source-line-no">158</span><span id="line.158"></span>
-<span class="source-line-no">159</span><span id="line.159">    public String getRegion() {</span>
-<span class="source-line-no">160</span><span id="line.160">        return this.region;</span>
-<span class="source-line-no">161</span><span id="line.161">    }</span>
-<span class="source-line-no">162</span><span id="line.162"></span>
-<span class="source-line-no">163</span><span id="line.163">    public String getState() {</span>
-<span class="source-line-no">164</span><span id="line.164">        return this.state;</span>
-<span class="source-line-no">165</span><span id="line.165">    }</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    /**</span>
-<span class="source-line-no">168</span><span id="line.168">    *  &lt;p&gt;A two-digit country code as per &lt;a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"&gt;ISO 3166-1 alpha-2&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">169</span><span id="line.169">    */</span>
-<span class="source-line-no">170</span><span id="line.170">    public String getCountry() {</span>
-<span class="source-line-no">171</span><span id="line.171">        return this.country;</span>
-<span class="source-line-no">172</span><span id="line.172">    }</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">    public String getCompany() {</span>
-<span class="source-line-no">175</span><span id="line.175">        return this.company;</span>
-<span class="source-line-no">176</span><span id="line.176">    }</span>
-<span class="source-line-no">177</span><span id="line.177"></span>
-<span class="source-line-no">178</span><span id="line.178">    public String getDepartment() {</span>
-<span class="source-line-no">179</span><span id="line.179">        return this.department;</span>
-<span class="source-line-no">180</span><span id="line.180">    }</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    public String getBuilding() {</span>
-<span class="source-line-no">183</span><span id="line.183">        return this.building;</span>
-<span class="source-line-no">184</span><span id="line.184">    }</span>
-<span class="source-line-no">185</span><span id="line.185"></span>
-<span class="source-line-no">186</span><span id="line.186">    public String getApartment() {</span>
-<span class="source-line-no">187</span><span id="line.187">        return this.apartment;</span>
-<span class="source-line-no">188</span><span id="line.188">    }</span>
-<span class="source-line-no">189</span><span id="line.189"></span>
-<span class="source-line-no">190</span><span id="line.190">    public String getPOBox() {</span>
-<span class="source-line-no">191</span><span id="line.191">        return this.pOBox;</span>
-<span class="source-line-no">192</span><span id="line.192">    }</span>
-<span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">    public String getPhone() {</span>
-<span class="source-line-no">195</span><span id="line.195">        return this.phone;</span>
-<span class="source-line-no">196</span><span id="line.196">    }</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    public String getMobile() {</span>
-<span class="source-line-no">199</span><span id="line.199">        return this.mobile;</span>
-<span class="source-line-no">200</span><span id="line.200">    }</span>
-<span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    public String getEmail() {</span>
-<span class="source-line-no">203</span><span id="line.203">        return this.email;</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    public String getFax() {</span>
-<span class="source-line-no">207</span><span id="line.207">        return this.fax;</span>
-<span class="source-line-no">208</span><span id="line.208">    }</span>
-<span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    public String getAdditionalAddressInfo() {</span>
-<span class="source-line-no">211</span><span id="line.211">        return this.additionalAddressInfo;</span>
-<span class="source-line-no">212</span><span id="line.212">    }</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">    public String getExternalId() {</span>
-<span class="source-line-no">215</span><span id="line.215">        return this.externalId;</span>
-<span class="source-line-no">216</span><span id="line.216">    }</span>
-<span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">    public void setKey(final String key) {</span>
-<span class="source-line-no">219</span><span id="line.219">        this.key = key;</span>
-<span class="source-line-no">220</span><span id="line.220">    }</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">    public void setTitle(final String title) {</span>
-<span class="source-line-no">223</span><span id="line.223">        this.title = title;</span>
-<span class="source-line-no">224</span><span id="line.224">    }</span>
-<span class="source-line-no">225</span><span id="line.225"></span>
-<span class="source-line-no">226</span><span id="line.226">    public void setSalutation(final String salutation) {</span>
-<span class="source-line-no">227</span><span id="line.227">        this.salutation = salutation;</span>
-<span class="source-line-no">228</span><span id="line.228">    }</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">    public void setFirstName(final String firstName) {</span>
-<span class="source-line-no">231</span><span id="line.231">        this.firstName = firstName;</span>
-<span class="source-line-no">232</span><span id="line.232">    }</span>
-<span class="source-line-no">233</span><span id="line.233"></span>
-<span class="source-line-no">234</span><span id="line.234">    public void setLastName(final String lastName) {</span>
-<span class="source-line-no">235</span><span id="line.235">        this.lastName = lastName;</span>
-<span class="source-line-no">236</span><span id="line.236">    }</span>
-<span class="source-line-no">237</span><span id="line.237"></span>
-<span class="source-line-no">238</span><span id="line.238">    public void setStreetName(final String streetName) {</span>
-<span class="source-line-no">239</span><span id="line.239">        this.streetName = streetName;</span>
-<span class="source-line-no">240</span><span id="line.240">    }</span>
-<span class="source-line-no">241</span><span id="line.241"></span>
-<span class="source-line-no">242</span><span id="line.242">    public void setStreetNumber(final String streetNumber) {</span>
-<span class="source-line-no">243</span><span id="line.243">        this.streetNumber = streetNumber;</span>
-<span class="source-line-no">244</span><span id="line.244">    }</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">    public void setAdditionalStreetInfo(final String additionalStreetInfo) {</span>
-<span class="source-line-no">247</span><span id="line.247">        this.additionalStreetInfo = additionalStreetInfo;</span>
-<span class="source-line-no">248</span><span id="line.248">    }</span>
-<span class="source-line-no">249</span><span id="line.249"></span>
-<span class="source-line-no">250</span><span id="line.250">    public void setPostalCode(final String postalCode) {</span>
-<span class="source-line-no">251</span><span id="line.251">        this.postalCode = postalCode;</span>
-<span class="source-line-no">252</span><span id="line.252">    }</span>
-<span class="source-line-no">253</span><span id="line.253"></span>
-<span class="source-line-no">254</span><span id="line.254">    public void setCity(final String city) {</span>
-<span class="source-line-no">255</span><span id="line.255">        this.city = city;</span>
-<span class="source-line-no">256</span><span id="line.256">    }</span>
-<span class="source-line-no">257</span><span id="line.257"></span>
-<span class="source-line-no">258</span><span id="line.258">    public void setRegion(final String region) {</span>
-<span class="source-line-no">259</span><span id="line.259">        this.region = region;</span>
-<span class="source-line-no">260</span><span id="line.260">    }</span>
-<span class="source-line-no">261</span><span id="line.261"></span>
-<span class="source-line-no">262</span><span id="line.262">    public void setState(final String state) {</span>
-<span class="source-line-no">263</span><span id="line.263">        this.state = state;</span>
-<span class="source-line-no">264</span><span id="line.264">    }</span>
-<span class="source-line-no">265</span><span id="line.265"></span>
-<span class="source-line-no">266</span><span id="line.266">    public void setCountry(final String country) {</span>
-<span class="source-line-no">267</span><span id="line.267">        this.country = country;</span>
-<span class="source-line-no">268</span><span id="line.268">    }</span>
-<span class="source-line-no">269</span><span id="line.269"></span>
-<span class="source-line-no">270</span><span id="line.270">    public void setCompany(final String company) {</span>
-<span class="source-line-no">271</span><span id="line.271">        this.company = company;</span>
-<span class="source-line-no">272</span><span id="line.272">    }</span>
-<span class="source-line-no">273</span><span id="line.273"></span>
-<span class="source-line-no">274</span><span id="line.274">    public void setDepartment(final String department) {</span>
-<span class="source-line-no">275</span><span id="line.275">        this.department = department;</span>
-<span class="source-line-no">276</span><span id="line.276">    }</span>
-<span class="source-line-no">277</span><span id="line.277"></span>
-<span class="source-line-no">278</span><span id="line.278">    public void setBuilding(final String building) {</span>
-<span class="source-line-no">279</span><span id="line.279">        this.building = building;</span>
-<span class="source-line-no">280</span><span id="line.280">    }</span>
-<span class="source-line-no">281</span><span id="line.281"></span>
-<span class="source-line-no">282</span><span id="line.282">    public void setApartment(final String apartment) {</span>
-<span class="source-line-no">283</span><span id="line.283">        this.apartment = apartment;</span>
-<span class="source-line-no">284</span><span id="line.284">    }</span>
-<span class="source-line-no">285</span><span id="line.285"></span>
-<span class="source-line-no">286</span><span id="line.286">    public void setPOBox(final String pOBox) {</span>
-<span class="source-line-no">287</span><span id="line.287">        this.pOBox = pOBox;</span>
-<span class="source-line-no">288</span><span id="line.288">    }</span>
-<span class="source-line-no">289</span><span id="line.289"></span>
-<span class="source-line-no">290</span><span id="line.290">    public void setPhone(final String phone) {</span>
-<span class="source-line-no">291</span><span id="line.291">        this.phone = phone;</span>
-<span class="source-line-no">292</span><span id="line.292">    }</span>
-<span class="source-line-no">293</span><span id="line.293"></span>
-<span class="source-line-no">294</span><span id="line.294">    public void setMobile(final String mobile) {</span>
-<span class="source-line-no">295</span><span id="line.295">        this.mobile = mobile;</span>
-<span class="source-line-no">296</span><span id="line.296">    }</span>
-<span class="source-line-no">297</span><span id="line.297"></span>
-<span class="source-line-no">298</span><span id="line.298">    public void setEmail(final String email) {</span>
-<span class="source-line-no">299</span><span id="line.299">        this.email = email;</span>
-<span class="source-line-no">300</span><span id="line.300">    }</span>
-<span class="source-line-no">301</span><span id="line.301"></span>
-<span class="source-line-no">302</span><span id="line.302">    public void setFax(final String fax) {</span>
-<span class="source-line-no">303</span><span id="line.303">        this.fax = fax;</span>
-<span class="source-line-no">304</span><span id="line.304">    }</span>
-<span class="source-line-no">305</span><span id="line.305"></span>
-<span class="source-line-no">306</span><span id="line.306">    public void setAdditionalAddressInfo(final String additionalAddressInfo) {</span>
-<span class="source-line-no">307</span><span id="line.307">        this.additionalAddressInfo = additionalAddressInfo;</span>
-<span class="source-line-no">308</span><span id="line.308">    }</span>
-<span class="source-line-no">309</span><span id="line.309"></span>
-<span class="source-line-no">310</span><span id="line.310">    public void setExternalId(final String externalId) {</span>
-<span class="source-line-no">311</span><span id="line.311">        this.externalId = externalId;</span>
-<span class="source-line-no">312</span><span id="line.312">    }</span>
-<span class="source-line-no">313</span><span id="line.313"></span>
-<span class="source-line-no">314</span><span id="line.314">    @Override</span>
-<span class="source-line-no">315</span><span id="line.315">    public boolean equals(Object o) {</span>
-<span class="source-line-no">316</span><span id="line.316">        if (this == o)</span>
-<span class="source-line-no">317</span><span id="line.317">            return true;</span>
-<span class="source-line-no">318</span><span id="line.318"></span>
-<span class="source-line-no">319</span><span id="line.319">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">320</span><span id="line.320">            return false;</span>
-<span class="source-line-no">321</span><span id="line.321"></span>
-<span class="source-line-no">322</span><span id="line.322">        CustomerAddressImpl that = (CustomerAddressImpl) o;</span>
-<span class="source-line-no">323</span><span id="line.323"></span>
-<span class="source-line-no">324</span><span id="line.324">        return new EqualsBuilder().append(key, that.key)</span>
-<span class="source-line-no">325</span><span id="line.325">                .append(title, that.title)</span>
-<span class="source-line-no">326</span><span id="line.326">                .append(salutation, that.salutation)</span>
-<span class="source-line-no">327</span><span id="line.327">                .append(firstName, that.firstName)</span>
-<span class="source-line-no">328</span><span id="line.328">                .append(lastName, that.lastName)</span>
-<span class="source-line-no">329</span><span id="line.329">                .append(streetName, that.streetName)</span>
-<span class="source-line-no">330</span><span id="line.330">                .append(streetNumber, that.streetNumber)</span>
-<span class="source-line-no">331</span><span id="line.331">                .append(additionalStreetInfo, that.additionalStreetInfo)</span>
-<span class="source-line-no">332</span><span id="line.332">                .append(postalCode, that.postalCode)</span>
-<span class="source-line-no">333</span><span id="line.333">                .append(city, that.city)</span>
-<span class="source-line-no">334</span><span id="line.334">                .append(region, that.region)</span>
-<span class="source-line-no">335</span><span id="line.335">                .append(state, that.state)</span>
-<span class="source-line-no">336</span><span id="line.336">                .append(country, that.country)</span>
-<span class="source-line-no">337</span><span id="line.337">                .append(company, that.company)</span>
-<span class="source-line-no">338</span><span id="line.338">                .append(department, that.department)</span>
-<span class="source-line-no">339</span><span id="line.339">                .append(building, that.building)</span>
-<span class="source-line-no">340</span><span id="line.340">                .append(apartment, that.apartment)</span>
-<span class="source-line-no">341</span><span id="line.341">                .append(pOBox, that.pOBox)</span>
-<span class="source-line-no">342</span><span id="line.342">                .append(phone, that.phone)</span>
-<span class="source-line-no">343</span><span id="line.343">                .append(mobile, that.mobile)</span>
-<span class="source-line-no">344</span><span id="line.344">                .append(email, that.email)</span>
-<span class="source-line-no">345</span><span id="line.345">                .append(fax, that.fax)</span>
-<span class="source-line-no">346</span><span id="line.346">                .append(additionalAddressInfo, that.additionalAddressInfo)</span>
-<span class="source-line-no">347</span><span id="line.347">                .append(externalId, that.externalId)</span>
-<span class="source-line-no">348</span><span id="line.348">                .isEquals();</span>
-<span class="source-line-no">349</span><span id="line.349">    }</span>
-<span class="source-line-no">350</span><span id="line.350"></span>
-<span class="source-line-no">351</span><span id="line.351">    @Override</span>
-<span class="source-line-no">352</span><span id="line.352">    public int hashCode() {</span>
-<span class="source-line-no">353</span><span id="line.353">        return new HashCodeBuilder(17, 37).append(key)</span>
-<span class="source-line-no">354</span><span id="line.354">                .append(title)</span>
-<span class="source-line-no">355</span><span id="line.355">                .append(salutation)</span>
-<span class="source-line-no">356</span><span id="line.356">                .append(firstName)</span>
-<span class="source-line-no">357</span><span id="line.357">                .append(lastName)</span>
-<span class="source-line-no">358</span><span id="line.358">                .append(streetName)</span>
-<span class="source-line-no">359</span><span id="line.359">                .append(streetNumber)</span>
-<span class="source-line-no">360</span><span id="line.360">                .append(additionalStreetInfo)</span>
-<span class="source-line-no">361</span><span id="line.361">                .append(postalCode)</span>
-<span class="source-line-no">362</span><span id="line.362">                .append(city)</span>
-<span class="source-line-no">363</span><span id="line.363">                .append(region)</span>
-<span class="source-line-no">364</span><span id="line.364">                .append(state)</span>
-<span class="source-line-no">365</span><span id="line.365">                .append(country)</span>
-<span class="source-line-no">366</span><span id="line.366">                .append(company)</span>
-<span class="source-line-no">367</span><span id="line.367">                .append(department)</span>
-<span class="source-line-no">368</span><span id="line.368">                .append(building)</span>
-<span class="source-line-no">369</span><span id="line.369">                .append(apartment)</span>
-<span class="source-line-no">370</span><span id="line.370">                .append(pOBox)</span>
-<span class="source-line-no">371</span><span id="line.371">                .append(phone)</span>
-<span class="source-line-no">372</span><span id="line.372">                .append(mobile)</span>
-<span class="source-line-no">373</span><span id="line.373">                .append(email)</span>
-<span class="source-line-no">374</span><span id="line.374">                .append(fax)</span>
-<span class="source-line-no">375</span><span id="line.375">                .append(additionalAddressInfo)</span>
-<span class="source-line-no">376</span><span id="line.376">                .append(externalId)</span>
-<span class="source-line-no">377</span><span id="line.377">                .toHashCode();</span>
-<span class="source-line-no">378</span><span id="line.378">    }</span>
-<span class="source-line-no">379</span><span id="line.379"></span>
-<span class="source-line-no">380</span><span id="line.380">}</span>
+<span class="source-line-no">116</span><span id="line.116">    *  &lt;p&gt;User-defined identifier for the address. Must follow the pattern &lt;code&gt;[a-zA-Z0-9_\-]{2,256}&lt;/code&gt; and must be unique per customer.&lt;/p&gt;</span>
+<span class="source-line-no">117</span><span id="line.117">    */</span>
+<span class="source-line-no">118</span><span id="line.118">    public String getKey() {</span>
+<span class="source-line-no">119</span><span id="line.119">        return this.key;</span>
+<span class="source-line-no">120</span><span id="line.120">    }</span>
+<span class="source-line-no">121</span><span id="line.121"></span>
+<span class="source-line-no">122</span><span id="line.122">    public String getTitle() {</span>
+<span class="source-line-no">123</span><span id="line.123">        return this.title;</span>
+<span class="source-line-no">124</span><span id="line.124">    }</span>
+<span class="source-line-no">125</span><span id="line.125"></span>
+<span class="source-line-no">126</span><span id="line.126">    public String getSalutation() {</span>
+<span class="source-line-no">127</span><span id="line.127">        return this.salutation;</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    public String getFirstName() {</span>
+<span class="source-line-no">131</span><span id="line.131">        return this.firstName;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    public String getLastName() {</span>
+<span class="source-line-no">135</span><span id="line.135">        return this.lastName;</span>
+<span class="source-line-no">136</span><span id="line.136">    }</span>
+<span class="source-line-no">137</span><span id="line.137"></span>
+<span class="source-line-no">138</span><span id="line.138">    public String getStreetName() {</span>
+<span class="source-line-no">139</span><span id="line.139">        return this.streetName;</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    public String getStreetNumber() {</span>
+<span class="source-line-no">143</span><span id="line.143">        return this.streetNumber;</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    public String getAdditionalStreetInfo() {</span>
+<span class="source-line-no">147</span><span id="line.147">        return this.additionalStreetInfo;</span>
+<span class="source-line-no">148</span><span id="line.148">    }</span>
+<span class="source-line-no">149</span><span id="line.149"></span>
+<span class="source-line-no">150</span><span id="line.150">    public String getPostalCode() {</span>
+<span class="source-line-no">151</span><span id="line.151">        return this.postalCode;</span>
+<span class="source-line-no">152</span><span id="line.152">    }</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    public String getCity() {</span>
+<span class="source-line-no">155</span><span id="line.155">        return this.city;</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    public String getRegion() {</span>
+<span class="source-line-no">159</span><span id="line.159">        return this.region;</span>
+<span class="source-line-no">160</span><span id="line.160">    }</span>
+<span class="source-line-no">161</span><span id="line.161"></span>
+<span class="source-line-no">162</span><span id="line.162">    public String getState() {</span>
+<span class="source-line-no">163</span><span id="line.163">        return this.state;</span>
+<span class="source-line-no">164</span><span id="line.164">    }</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    /**</span>
+<span class="source-line-no">167</span><span id="line.167">    *  &lt;p&gt;A two-digit country code as per ISO 3166-1 alpha-2.&lt;/p&gt;</span>
+<span class="source-line-no">168</span><span id="line.168">    */</span>
+<span class="source-line-no">169</span><span id="line.169">    public String getCountry() {</span>
+<span class="source-line-no">170</span><span id="line.170">        return this.country;</span>
+<span class="source-line-no">171</span><span id="line.171">    }</span>
+<span class="source-line-no">172</span><span id="line.172"></span>
+<span class="source-line-no">173</span><span id="line.173">    public String getCompany() {</span>
+<span class="source-line-no">174</span><span id="line.174">        return this.company;</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    public String getDepartment() {</span>
+<span class="source-line-no">178</span><span id="line.178">        return this.department;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public String getBuilding() {</span>
+<span class="source-line-no">182</span><span id="line.182">        return this.building;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public String getApartment() {</span>
+<span class="source-line-no">186</span><span id="line.186">        return this.apartment;</span>
+<span class="source-line-no">187</span><span id="line.187">    }</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public String getPOBox() {</span>
+<span class="source-line-no">190</span><span id="line.190">        return this.pOBox;</span>
+<span class="source-line-no">191</span><span id="line.191">    }</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    public String getPhone() {</span>
+<span class="source-line-no">194</span><span id="line.194">        return this.phone;</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    public String getMobile() {</span>
+<span class="source-line-no">198</span><span id="line.198">        return this.mobile;</span>
+<span class="source-line-no">199</span><span id="line.199">    }</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    public String getEmail() {</span>
+<span class="source-line-no">202</span><span id="line.202">        return this.email;</span>
+<span class="source-line-no">203</span><span id="line.203">    }</span>
+<span class="source-line-no">204</span><span id="line.204"></span>
+<span class="source-line-no">205</span><span id="line.205">    public String getFax() {</span>
+<span class="source-line-no">206</span><span id="line.206">        return this.fax;</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">    public String getAdditionalAddressInfo() {</span>
+<span class="source-line-no">210</span><span id="line.210">        return this.additionalAddressInfo;</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public String getExternalId() {</span>
+<span class="source-line-no">214</span><span id="line.214">        return this.externalId;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    public void setKey(final String key) {</span>
+<span class="source-line-no">218</span><span id="line.218">        this.key = key;</span>
+<span class="source-line-no">219</span><span id="line.219">    }</span>
+<span class="source-line-no">220</span><span id="line.220"></span>
+<span class="source-line-no">221</span><span id="line.221">    public void setTitle(final String title) {</span>
+<span class="source-line-no">222</span><span id="line.222">        this.title = title;</span>
+<span class="source-line-no">223</span><span id="line.223">    }</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">    public void setSalutation(final String salutation) {</span>
+<span class="source-line-no">226</span><span id="line.226">        this.salutation = salutation;</span>
+<span class="source-line-no">227</span><span id="line.227">    }</span>
+<span class="source-line-no">228</span><span id="line.228"></span>
+<span class="source-line-no">229</span><span id="line.229">    public void setFirstName(final String firstName) {</span>
+<span class="source-line-no">230</span><span id="line.230">        this.firstName = firstName;</span>
+<span class="source-line-no">231</span><span id="line.231">    }</span>
+<span class="source-line-no">232</span><span id="line.232"></span>
+<span class="source-line-no">233</span><span id="line.233">    public void setLastName(final String lastName) {</span>
+<span class="source-line-no">234</span><span id="line.234">        this.lastName = lastName;</span>
+<span class="source-line-no">235</span><span id="line.235">    }</span>
+<span class="source-line-no">236</span><span id="line.236"></span>
+<span class="source-line-no">237</span><span id="line.237">    public void setStreetName(final String streetName) {</span>
+<span class="source-line-no">238</span><span id="line.238">        this.streetName = streetName;</span>
+<span class="source-line-no">239</span><span id="line.239">    }</span>
+<span class="source-line-no">240</span><span id="line.240"></span>
+<span class="source-line-no">241</span><span id="line.241">    public void setStreetNumber(final String streetNumber) {</span>
+<span class="source-line-no">242</span><span id="line.242">        this.streetNumber = streetNumber;</span>
+<span class="source-line-no">243</span><span id="line.243">    }</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">    public void setAdditionalStreetInfo(final String additionalStreetInfo) {</span>
+<span class="source-line-no">246</span><span id="line.246">        this.additionalStreetInfo = additionalStreetInfo;</span>
+<span class="source-line-no">247</span><span id="line.247">    }</span>
+<span class="source-line-no">248</span><span id="line.248"></span>
+<span class="source-line-no">249</span><span id="line.249">    public void setPostalCode(final String postalCode) {</span>
+<span class="source-line-no">250</span><span id="line.250">        this.postalCode = postalCode;</span>
+<span class="source-line-no">251</span><span id="line.251">    }</span>
+<span class="source-line-no">252</span><span id="line.252"></span>
+<span class="source-line-no">253</span><span id="line.253">    public void setCity(final String city) {</span>
+<span class="source-line-no">254</span><span id="line.254">        this.city = city;</span>
+<span class="source-line-no">255</span><span id="line.255">    }</span>
+<span class="source-line-no">256</span><span id="line.256"></span>
+<span class="source-line-no">257</span><span id="line.257">    public void setRegion(final String region) {</span>
+<span class="source-line-no">258</span><span id="line.258">        this.region = region;</span>
+<span class="source-line-no">259</span><span id="line.259">    }</span>
+<span class="source-line-no">260</span><span id="line.260"></span>
+<span class="source-line-no">261</span><span id="line.261">    public void setState(final String state) {</span>
+<span class="source-line-no">262</span><span id="line.262">        this.state = state;</span>
+<span class="source-line-no">263</span><span id="line.263">    }</span>
+<span class="source-line-no">264</span><span id="line.264"></span>
+<span class="source-line-no">265</span><span id="line.265">    public void setCountry(final String country) {</span>
+<span class="source-line-no">266</span><span id="line.266">        this.country = country;</span>
+<span class="source-line-no">267</span><span id="line.267">    }</span>
+<span class="source-line-no">268</span><span id="line.268"></span>
+<span class="source-line-no">269</span><span id="line.269">    public void setCompany(final String company) {</span>
+<span class="source-line-no">270</span><span id="line.270">        this.company = company;</span>
+<span class="source-line-no">271</span><span id="line.271">    }</span>
+<span class="source-line-no">272</span><span id="line.272"></span>
+<span class="source-line-no">273</span><span id="line.273">    public void setDepartment(final String department) {</span>
+<span class="source-line-no">274</span><span id="line.274">        this.department = department;</span>
+<span class="source-line-no">275</span><span id="line.275">    }</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">    public void setBuilding(final String building) {</span>
+<span class="source-line-no">278</span><span id="line.278">        this.building = building;</span>
+<span class="source-line-no">279</span><span id="line.279">    }</span>
+<span class="source-line-no">280</span><span id="line.280"></span>
+<span class="source-line-no">281</span><span id="line.281">    public void setApartment(final String apartment) {</span>
+<span class="source-line-no">282</span><span id="line.282">        this.apartment = apartment;</span>
+<span class="source-line-no">283</span><span id="line.283">    }</span>
+<span class="source-line-no">284</span><span id="line.284"></span>
+<span class="source-line-no">285</span><span id="line.285">    public void setPOBox(final String pOBox) {</span>
+<span class="source-line-no">286</span><span id="line.286">        this.pOBox = pOBox;</span>
+<span class="source-line-no">287</span><span id="line.287">    }</span>
+<span class="source-line-no">288</span><span id="line.288"></span>
+<span class="source-line-no">289</span><span id="line.289">    public void setPhone(final String phone) {</span>
+<span class="source-line-no">290</span><span id="line.290">        this.phone = phone;</span>
+<span class="source-line-no">291</span><span id="line.291">    }</span>
+<span class="source-line-no">292</span><span id="line.292"></span>
+<span class="source-line-no">293</span><span id="line.293">    public void setMobile(final String mobile) {</span>
+<span class="source-line-no">294</span><span id="line.294">        this.mobile = mobile;</span>
+<span class="source-line-no">295</span><span id="line.295">    }</span>
+<span class="source-line-no">296</span><span id="line.296"></span>
+<span class="source-line-no">297</span><span id="line.297">    public void setEmail(final String email) {</span>
+<span class="source-line-no">298</span><span id="line.298">        this.email = email;</span>
+<span class="source-line-no">299</span><span id="line.299">    }</span>
+<span class="source-line-no">300</span><span id="line.300"></span>
+<span class="source-line-no">301</span><span id="line.301">    public void setFax(final String fax) {</span>
+<span class="source-line-no">302</span><span id="line.302">        this.fax = fax;</span>
+<span class="source-line-no">303</span><span id="line.303">    }</span>
+<span class="source-line-no">304</span><span id="line.304"></span>
+<span class="source-line-no">305</span><span id="line.305">    public void setAdditionalAddressInfo(final String additionalAddressInfo) {</span>
+<span class="source-line-no">306</span><span id="line.306">        this.additionalAddressInfo = additionalAddressInfo;</span>
+<span class="source-line-no">307</span><span id="line.307">    }</span>
+<span class="source-line-no">308</span><span id="line.308"></span>
+<span class="source-line-no">309</span><span id="line.309">    public void setExternalId(final String externalId) {</span>
+<span class="source-line-no">310</span><span id="line.310">        this.externalId = externalId;</span>
+<span class="source-line-no">311</span><span id="line.311">    }</span>
+<span class="source-line-no">312</span><span id="line.312"></span>
+<span class="source-line-no">313</span><span id="line.313">    @Override</span>
+<span class="source-line-no">314</span><span id="line.314">    public boolean equals(Object o) {</span>
+<span class="source-line-no">315</span><span id="line.315">        if (this == o)</span>
+<span class="source-line-no">316</span><span id="line.316">            return true;</span>
+<span class="source-line-no">317</span><span id="line.317"></span>
+<span class="source-line-no">318</span><span id="line.318">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">319</span><span id="line.319">            return false;</span>
+<span class="source-line-no">320</span><span id="line.320"></span>
+<span class="source-line-no">321</span><span id="line.321">        CustomerAddressImpl that = (CustomerAddressImpl) o;</span>
+<span class="source-line-no">322</span><span id="line.322"></span>
+<span class="source-line-no">323</span><span id="line.323">        return new EqualsBuilder().append(key, that.key)</span>
+<span class="source-line-no">324</span><span id="line.324">                .append(title, that.title)</span>
+<span class="source-line-no">325</span><span id="line.325">                .append(salutation, that.salutation)</span>
+<span class="source-line-no">326</span><span id="line.326">                .append(firstName, that.firstName)</span>
+<span class="source-line-no">327</span><span id="line.327">                .append(lastName, that.lastName)</span>
+<span class="source-line-no">328</span><span id="line.328">                .append(streetName, that.streetName)</span>
+<span class="source-line-no">329</span><span id="line.329">                .append(streetNumber, that.streetNumber)</span>
+<span class="source-line-no">330</span><span id="line.330">                .append(additionalStreetInfo, that.additionalStreetInfo)</span>
+<span class="source-line-no">331</span><span id="line.331">                .append(postalCode, that.postalCode)</span>
+<span class="source-line-no">332</span><span id="line.332">                .append(city, that.city)</span>
+<span class="source-line-no">333</span><span id="line.333">                .append(region, that.region)</span>
+<span class="source-line-no">334</span><span id="line.334">                .append(state, that.state)</span>
+<span class="source-line-no">335</span><span id="line.335">                .append(country, that.country)</span>
+<span class="source-line-no">336</span><span id="line.336">                .append(company, that.company)</span>
+<span class="source-line-no">337</span><span id="line.337">                .append(department, that.department)</span>
+<span class="source-line-no">338</span><span id="line.338">                .append(building, that.building)</span>
+<span class="source-line-no">339</span><span id="line.339">                .append(apartment, that.apartment)</span>
+<span class="source-line-no">340</span><span id="line.340">                .append(pOBox, that.pOBox)</span>
+<span class="source-line-no">341</span><span id="line.341">                .append(phone, that.phone)</span>
+<span class="source-line-no">342</span><span id="line.342">                .append(mobile, that.mobile)</span>
+<span class="source-line-no">343</span><span id="line.343">                .append(email, that.email)</span>
+<span class="source-line-no">344</span><span id="line.344">                .append(fax, that.fax)</span>
+<span class="source-line-no">345</span><span id="line.345">                .append(additionalAddressInfo, that.additionalAddressInfo)</span>
+<span class="source-line-no">346</span><span id="line.346">                .append(externalId, that.externalId)</span>
+<span class="source-line-no">347</span><span id="line.347">                .isEquals();</span>
+<span class="source-line-no">348</span><span id="line.348">    }</span>
+<span class="source-line-no">349</span><span id="line.349"></span>
+<span class="source-line-no">350</span><span id="line.350">    @Override</span>
+<span class="source-line-no">351</span><span id="line.351">    public int hashCode() {</span>
+<span class="source-line-no">352</span><span id="line.352">        return new HashCodeBuilder(17, 37).append(key)</span>
+<span class="source-line-no">353</span><span id="line.353">                .append(title)</span>
+<span class="source-line-no">354</span><span id="line.354">                .append(salutation)</span>
+<span class="source-line-no">355</span><span id="line.355">                .append(firstName)</span>
+<span class="source-line-no">356</span><span id="line.356">                .append(lastName)</span>
+<span class="source-line-no">357</span><span id="line.357">                .append(streetName)</span>
+<span class="source-line-no">358</span><span id="line.358">                .append(streetNumber)</span>
+<span class="source-line-no">359</span><span id="line.359">                .append(additionalStreetInfo)</span>
+<span class="source-line-no">360</span><span id="line.360">                .append(postalCode)</span>
+<span class="source-line-no">361</span><span id="line.361">                .append(city)</span>
+<span class="source-line-no">362</span><span id="line.362">                .append(region)</span>
+<span class="source-line-no">363</span><span id="line.363">                .append(state)</span>
+<span class="source-line-no">364</span><span id="line.364">                .append(country)</span>
+<span class="source-line-no">365</span><span id="line.365">                .append(company)</span>
+<span class="source-line-no">366</span><span id="line.366">                .append(department)</span>
+<span class="source-line-no">367</span><span id="line.367">                .append(building)</span>
+<span class="source-line-no">368</span><span id="line.368">                .append(apartment)</span>
+<span class="source-line-no">369</span><span id="line.369">                .append(pOBox)</span>
+<span class="source-line-no">370</span><span id="line.370">                .append(phone)</span>
+<span class="source-line-no">371</span><span id="line.371">                .append(mobile)</span>
+<span class="source-line-no">372</span><span id="line.372">                .append(email)</span>
+<span class="source-line-no">373</span><span id="line.373">                .append(fax)</span>
+<span class="source-line-no">374</span><span id="line.374">                .append(additionalAddressInfo)</span>
+<span class="source-line-no">375</span><span id="line.375">                .append(externalId)</span>
+<span class="source-line-no">376</span><span id="line.376">                .toHashCode();</span>
+<span class="source-line-no">377</span><span id="line.377">    }</span>
+<span class="source-line-no">378</span><span id="line.378"></span>
+<span class="source-line-no">379</span><span id="line.379">}</span>
 
 
 

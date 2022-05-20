@@ -42,7 +42,7 @@
 <span class="source-line-no">029</span><span id="line.29">        com.commercetools.api.models.Customizable&lt;Channel&gt; {</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
 <span class="source-line-no">031</span><span id="line.31">    /**</span>
-<span class="source-line-no">032</span><span id="line.32">    *  &lt;p&gt;Unique ID of the Channel.&lt;/p&gt;</span>
+<span class="source-line-no">032</span><span id="line.32">    *  &lt;p&gt;Platform-generated unique identifier of the Channel.&lt;/p&gt;</span>
 <span class="source-line-no">033</span><span id="line.33">    */</span>
 <span class="source-line-no">034</span><span id="line.34">    @NotNull</span>
 <span class="source-line-no">035</span><span id="line.35">    @JsonProperty("id")</span>
@@ -70,21 +70,21 @@
 <span class="source-line-no">057</span><span id="line.57">    public ZonedDateTime getLastModifiedAt();</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
 <span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">    *  &lt;p&gt;Present on resources updated after 1 February 2019 except for &lt;a href="/../api/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">    *  &lt;p&gt;Present on resources updated after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
 <span class="source-line-no">061</span><span id="line.61">    */</span>
 <span class="source-line-no">062</span><span id="line.62">    @Valid</span>
 <span class="source-line-no">063</span><span id="line.63">    @JsonProperty("lastModifiedBy")</span>
 <span class="source-line-no">064</span><span id="line.64">    public LastModifiedBy getLastModifiedBy();</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/../api/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
 <span class="source-line-no">068</span><span id="line.68">    */</span>
 <span class="source-line-no">069</span><span id="line.69">    @Valid</span>
 <span class="source-line-no">070</span><span id="line.70">    @JsonProperty("createdBy")</span>
 <span class="source-line-no">071</span><span id="line.71">    public CreatedBy getCreatedBy();</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
 <span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">    *  &lt;p&gt;User-defined unique identifier for the Channel.&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">    *  &lt;p&gt;User-defined unique identifier of the Channel.&lt;/p&gt;</span>
 <span class="source-line-no">075</span><span id="line.75">    */</span>
 <span class="source-line-no">076</span><span id="line.76">    @NotNull</span>
 <span class="source-line-no">077</span><span id="line.77">    @JsonProperty("key")</span>

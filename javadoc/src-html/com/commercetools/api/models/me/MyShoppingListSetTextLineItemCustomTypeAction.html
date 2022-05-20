@@ -39,62 +39,61 @@
 <span class="source-line-no">026</span><span id="line.26">    public String getTextLineItemId();</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
 <span class="source-line-no">028</span><span id="line.28">    /**</span>
-<span class="source-line-no">029</span><span id="line.29">    *  &lt;p&gt;Defines the &lt;a href="ctp:api:type:Type"&gt;Type&lt;/a&gt; that extends the TextLineItem with &lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt;.</span>
-<span class="source-line-no">030</span><span id="line.30">    *  If absent, any existing Type and Custom Fields are removed from the TextLineItem.&lt;/p&gt;</span>
-<span class="source-line-no">031</span><span id="line.31">    */</span>
-<span class="source-line-no">032</span><span id="line.32">    @Valid</span>
-<span class="source-line-no">033</span><span id="line.33">    @JsonProperty("type")</span>
-<span class="source-line-no">034</span><span id="line.34">    public TypeResourceIdentifier getType();</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">    *  &lt;p&gt;Sets the &lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt; fields for the TextLineItem.&lt;/p&gt;</span>
-<span class="source-line-no">038</span><span id="line.38">    */</span>
-<span class="source-line-no">039</span><span id="line.39">    @Valid</span>
-<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("fields")</span>
-<span class="source-line-no">041</span><span id="line.41">    public FieldContainer getFields();</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public void setTextLineItemId(final String textLineItemId);</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public void setType(final TypeResourceIdentifier type);</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public void setFields(final FieldContainer fields);</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public static MyShoppingListSetTextLineItemCustomTypeAction of() {</span>
-<span class="source-line-no">050</span><span id="line.50">        return new MyShoppingListSetTextLineItemCustomTypeActionImpl();</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public static MyShoppingListSetTextLineItemCustomTypeAction of(</span>
-<span class="source-line-no">054</span><span id="line.54">            final MyShoppingListSetTextLineItemCustomTypeAction template) {</span>
-<span class="source-line-no">055</span><span id="line.55">        MyShoppingListSetTextLineItemCustomTypeActionImpl instance = new MyShoppingListSetTextLineItemCustomTypeActionImpl();</span>
-<span class="source-line-no">056</span><span id="line.56">        instance.setTextLineItemId(template.getTextLineItemId());</span>
-<span class="source-line-no">057</span><span id="line.57">        instance.setType(template.getType());</span>
-<span class="source-line-no">058</span><span id="line.58">        instance.setFields(template.getFields());</span>
-<span class="source-line-no">059</span><span id="line.59">        return instance;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public static MyShoppingListSetTextLineItemCustomTypeActionBuilder builder() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return MyShoppingListSetTextLineItemCustomTypeActionBuilder.of();</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public static MyShoppingListSetTextLineItemCustomTypeActionBuilder builder(</span>
-<span class="source-line-no">067</span><span id="line.67">            final MyShoppingListSetTextLineItemCustomTypeAction template) {</span>
-<span class="source-line-no">068</span><span id="line.68">        return MyShoppingListSetTextLineItemCustomTypeActionBuilder.of(template);</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    default &lt;T&gt; T withMyShoppingListSetTextLineItemCustomTypeAction(</span>
-<span class="source-line-no">072</span><span id="line.72">            Function&lt;MyShoppingListSetTextLineItemCustomTypeAction, T&gt; helper) {</span>
-<span class="source-line-no">073</span><span id="line.73">        return helper.apply(this);</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public static com.fasterxml.jackson.core.type.TypeReference&lt;MyShoppingListSetTextLineItemCustomTypeAction&gt; typeReference() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return new com.fasterxml.jackson.core.type.TypeReference&lt;MyShoppingListSetTextLineItemCustomTypeAction&gt;() {</span>
-<span class="source-line-no">078</span><span id="line.78">            @Override</span>
-<span class="source-line-no">079</span><span id="line.79">            public String toString() {</span>
-<span class="source-line-no">080</span><span id="line.80">                return "TypeReference&lt;MyShoppingListSetTextLineItemCustomTypeAction&gt;";</span>
-<span class="source-line-no">081</span><span id="line.81">            }</span>
-<span class="source-line-no">082</span><span id="line.82">        };</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84">}</span>
+<span class="source-line-no">029</span><span id="line.29">    *  &lt;p&gt;Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">030</span><span id="line.30">    */</span>
+<span class="source-line-no">031</span><span id="line.31">    @Valid</span>
+<span class="source-line-no">032</span><span id="line.32">    @JsonProperty("type")</span>
+<span class="source-line-no">033</span><span id="line.33">    public TypeResourceIdentifier getType();</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    /**</span>
+<span class="source-line-no">036</span><span id="line.36">    *  &lt;p&gt;Sets the Custom Fields fields for the TextLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">037</span><span id="line.37">    */</span>
+<span class="source-line-no">038</span><span id="line.38">    @Valid</span>
+<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("fields")</span>
+<span class="source-line-no">040</span><span id="line.40">    public FieldContainer getFields();</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    public void setTextLineItemId(final String textLineItemId);</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    public void setType(final TypeResourceIdentifier type);</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    public void setFields(final FieldContainer fields);</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    public static MyShoppingListSetTextLineItemCustomTypeAction of() {</span>
+<span class="source-line-no">049</span><span id="line.49">        return new MyShoppingListSetTextLineItemCustomTypeActionImpl();</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public static MyShoppingListSetTextLineItemCustomTypeAction of(</span>
+<span class="source-line-no">053</span><span id="line.53">            final MyShoppingListSetTextLineItemCustomTypeAction template) {</span>
+<span class="source-line-no">054</span><span id="line.54">        MyShoppingListSetTextLineItemCustomTypeActionImpl instance = new MyShoppingListSetTextLineItemCustomTypeActionImpl();</span>
+<span class="source-line-no">055</span><span id="line.55">        instance.setTextLineItemId(template.getTextLineItemId());</span>
+<span class="source-line-no">056</span><span id="line.56">        instance.setType(template.getType());</span>
+<span class="source-line-no">057</span><span id="line.57">        instance.setFields(template.getFields());</span>
+<span class="source-line-no">058</span><span id="line.58">        return instance;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public static MyShoppingListSetTextLineItemCustomTypeActionBuilder builder() {</span>
+<span class="source-line-no">062</span><span id="line.62">        return MyShoppingListSetTextLineItemCustomTypeActionBuilder.of();</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public static MyShoppingListSetTextLineItemCustomTypeActionBuilder builder(</span>
+<span class="source-line-no">066</span><span id="line.66">            final MyShoppingListSetTextLineItemCustomTypeAction template) {</span>
+<span class="source-line-no">067</span><span id="line.67">        return MyShoppingListSetTextLineItemCustomTypeActionBuilder.of(template);</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    default &lt;T&gt; T withMyShoppingListSetTextLineItemCustomTypeAction(</span>
+<span class="source-line-no">071</span><span id="line.71">            Function&lt;MyShoppingListSetTextLineItemCustomTypeAction, T&gt; helper) {</span>
+<span class="source-line-no">072</span><span id="line.72">        return helper.apply(this);</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public static com.fasterxml.jackson.core.type.TypeReference&lt;MyShoppingListSetTextLineItemCustomTypeAction&gt; typeReference() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return new com.fasterxml.jackson.core.type.TypeReference&lt;MyShoppingListSetTextLineItemCustomTypeAction&gt;() {</span>
+<span class="source-line-no">077</span><span id="line.77">            @Override</span>
+<span class="source-line-no">078</span><span id="line.78">            public String toString() {</span>
+<span class="source-line-no">079</span><span id="line.79">                return "TypeReference&lt;MyShoppingListSetTextLineItemCustomTypeAction&gt;";</span>
+<span class="source-line-no">080</span><span id="line.80">            }</span>
+<span class="source-line-no">081</span><span id="line.81">        };</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83">}</span>
 
 
 

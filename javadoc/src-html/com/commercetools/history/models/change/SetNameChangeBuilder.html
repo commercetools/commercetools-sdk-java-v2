@@ -29,73 +29,77 @@
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">    private com.commercetools.history.models.common.LocalizedString nextValue;</span>
 <span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    public SetNameChangeBuilder change(final String change) {</span>
-<span class="source-line-no">020</span><span id="line.20">        this.change = change;</span>
-<span class="source-line-no">021</span><span id="line.21">        return this;</span>
-<span class="source-line-no">022</span><span id="line.22">    }</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    public SetNameChangeBuilder previousValue(</span>
-<span class="source-line-no">025</span><span id="line.25">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">026</span><span id="line.26">        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">027</span><span id="line.27">        return this;</span>
-<span class="source-line-no">028</span><span id="line.28">    }</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public SetNameChangeBuilder previousValue(</span>
-<span class="source-line-no">031</span><span id="line.31">            final com.commercetools.history.models.common.LocalizedString previousValue) {</span>
-<span class="source-line-no">032</span><span id="line.32">        this.previousValue = previousValue;</span>
-<span class="source-line-no">033</span><span id="line.33">        return this;</span>
-<span class="source-line-no">034</span><span id="line.34">    }</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public SetNameChangeBuilder nextValue(</span>
-<span class="source-line-no">037</span><span id="line.37">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">038</span><span id="line.38">        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">039</span><span id="line.39">        return this;</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public SetNameChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {</span>
-<span class="source-line-no">043</span><span id="line.43">        this.nextValue = nextValue;</span>
-<span class="source-line-no">044</span><span id="line.44">        return this;</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public String getChange() {</span>
-<span class="source-line-no">048</span><span id="line.48">        return this.change;</span>
+<span class="source-line-no">019</span><span id="line.19">    /**</span>
+<span class="source-line-no">020</span><span id="line.20">    *  &lt;p&gt;Shape of the action for &lt;code&gt;setName&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21">    */</span>
+<span class="source-line-no">022</span><span id="line.22"></span>
+<span class="source-line-no">023</span><span id="line.23">    public SetNameChangeBuilder change(final String change) {</span>
+<span class="source-line-no">024</span><span id="line.24">        this.change = change;</span>
+<span class="source-line-no">025</span><span id="line.25">        return this;</span>
+<span class="source-line-no">026</span><span id="line.26">    }</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    public SetNameChangeBuilder previousValue(</span>
+<span class="source-line-no">029</span><span id="line.29">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">030</span><span id="line.30">        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">031</span><span id="line.31">        return this;</span>
+<span class="source-line-no">032</span><span id="line.32">    }</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    public SetNameChangeBuilder previousValue(</span>
+<span class="source-line-no">035</span><span id="line.35">            final com.commercetools.history.models.common.LocalizedString previousValue) {</span>
+<span class="source-line-no">036</span><span id="line.36">        this.previousValue = previousValue;</span>
+<span class="source-line-no">037</span><span id="line.37">        return this;</span>
+<span class="source-line-no">038</span><span id="line.38">    }</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    public SetNameChangeBuilder nextValue(</span>
+<span class="source-line-no">041</span><span id="line.41">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">042</span><span id="line.42">        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">043</span><span id="line.43">        return this;</span>
+<span class="source-line-no">044</span><span id="line.44">    }</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    public SetNameChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {</span>
+<span class="source-line-no">047</span><span id="line.47">        this.nextValue = nextValue;</span>
+<span class="source-line-no">048</span><span id="line.48">        return this;</span>
 <span class="source-line-no">049</span><span id="line.49">    }</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return this.previousValue;</span>
+<span class="source-line-no">051</span><span id="line.51">    public String getChange() {</span>
+<span class="source-line-no">052</span><span id="line.52">        return this.change;</span>
 <span class="source-line-no">053</span><span id="line.53">    }</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public com.commercetools.history.models.common.LocalizedString getNextValue() {</span>
-<span class="source-line-no">056</span><span id="line.56">        return this.nextValue;</span>
+<span class="source-line-no">055</span><span id="line.55">    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return this.previousValue;</span>
 <span class="source-line-no">057</span><span id="line.57">    }</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public SetNameChange build() {</span>
-<span class="source-line-no">060</span><span id="line.60">        Objects.requireNonNull(change, SetNameChange.class + ": change is missing");</span>
-<span class="source-line-no">061</span><span id="line.61">        Objects.requireNonNull(previousValue, SetNameChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">062</span><span id="line.62">        Objects.requireNonNull(nextValue, SetNameChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">063</span><span id="line.63">        return new SetNameChangeImpl(change, previousValue, nextValue);</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     * builds SetNameChange without checking for non null required values</span>
-<span class="source-line-no">068</span><span id="line.68">     */</span>
-<span class="source-line-no">069</span><span id="line.69">    public SetNameChange buildUnchecked() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return new SetNameChangeImpl(change, previousValue, nextValue);</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public static SetNameChangeBuilder of() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return new SetNameChangeBuilder();</span>
+<span class="source-line-no">059</span><span id="line.59">    public com.commercetools.history.models.common.LocalizedString getNextValue() {</span>
+<span class="source-line-no">060</span><span id="line.60">        return this.nextValue;</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public SetNameChange build() {</span>
+<span class="source-line-no">064</span><span id="line.64">        Objects.requireNonNull(change, SetNameChange.class + ": change is missing");</span>
+<span class="source-line-no">065</span><span id="line.65">        Objects.requireNonNull(previousValue, SetNameChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">066</span><span id="line.66">        Objects.requireNonNull(nextValue, SetNameChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">067</span><span id="line.67">        return new SetNameChangeImpl(change, previousValue, nextValue);</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    /**</span>
+<span class="source-line-no">071</span><span id="line.71">     * builds SetNameChange without checking for non null required values</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
+<span class="source-line-no">073</span><span id="line.73">    public SetNameChange buildUnchecked() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return new SetNameChangeImpl(change, previousValue, nextValue);</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public static SetNameChangeBuilder of(final SetNameChange template) {</span>
-<span class="source-line-no">078</span><span id="line.78">        SetNameChangeBuilder builder = new SetNameChangeBuilder();</span>
-<span class="source-line-no">079</span><span id="line.79">        builder.change = template.getChange();</span>
-<span class="source-line-no">080</span><span id="line.80">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">081</span><span id="line.81">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">082</span><span id="line.82">        return builder;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">}</span>
+<span class="source-line-no">077</span><span id="line.77">    public static SetNameChangeBuilder of() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return new SetNameChangeBuilder();</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public static SetNameChangeBuilder of(final SetNameChange template) {</span>
+<span class="source-line-no">082</span><span id="line.82">        SetNameChangeBuilder builder = new SetNameChangeBuilder();</span>
+<span class="source-line-no">083</span><span id="line.83">        builder.change = template.getChange();</span>
+<span class="source-line-no">084</span><span id="line.84">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">085</span><span id="line.85">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">086</span><span id="line.86">        return builder;</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">}</span>
 
 
 

@@ -53,51 +53,49 @@
 <span class="source-line-no">040</span><span id="line.40">    }</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
 <span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">    *  &lt;p&gt;Name of the &lt;a href="/../api/projects/custom-fields"&gt;Custom Field&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">    *  &lt;p&gt;Name of the Custom Field.&lt;/p&gt;</span>
 <span class="source-line-no">044</span><span id="line.44">    */</span>
 <span class="source-line-no">045</span><span id="line.45">    public String getName() {</span>
 <span class="source-line-no">046</span><span id="line.46">        return this.name;</span>
 <span class="source-line-no">047</span><span id="line.47">    }</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">    *  &lt;p&gt;If &lt;code&gt;value&lt;/code&gt; is absent or &lt;code&gt;null&lt;/code&gt;, this field will be removed if it exists.</span>
-<span class="source-line-no">051</span><span id="line.51">    *  Trying to remove a field that does not exist will fail with an &lt;a href="/../api/errors#general-400-invalid-operation"&gt;InvalidOperation&lt;/a&gt; error.</span>
-<span class="source-line-no">052</span><span id="line.52">    *  If &lt;code&gt;value&lt;/code&gt; is provided, it is set for the field defined by &lt;code&gt;name&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">053</span><span id="line.53">    */</span>
-<span class="source-line-no">054</span><span id="line.54">    public java.lang.Object getValue() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return this.value;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public void setName(final String name) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.name = name;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public void setValue(final java.lang.Object value) {</span>
-<span class="source-line-no">063</span><span id="line.63">        this.value = value;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    @Override</span>
-<span class="source-line-no">067</span><span id="line.67">    public boolean equals(Object o) {</span>
-<span class="source-line-no">068</span><span id="line.68">        if (this == o)</span>
-<span class="source-line-no">069</span><span id="line.69">            return true;</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">072</span><span id="line.72">            return false;</span>
+<span class="source-line-no">050</span><span id="line.50">    *  &lt;p&gt;If &lt;code&gt;value&lt;/code&gt; is absent or &lt;code&gt;null&lt;/code&gt;, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If &lt;code&gt;value&lt;/code&gt; is provided, it is set for the field defined by &lt;code&gt;name&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">    */</span>
+<span class="source-line-no">052</span><span id="line.52">    public java.lang.Object getValue() {</span>
+<span class="source-line-no">053</span><span id="line.53">        return this.value;</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public void setName(final String name) {</span>
+<span class="source-line-no">057</span><span id="line.57">        this.name = name;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public void setValue(final java.lang.Object value) {</span>
+<span class="source-line-no">061</span><span id="line.61">        this.value = value;</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    @Override</span>
+<span class="source-line-no">065</span><span id="line.65">    public boolean equals(Object o) {</span>
+<span class="source-line-no">066</span><span id="line.66">        if (this == o)</span>
+<span class="source-line-no">067</span><span id="line.67">            return true;</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">070</span><span id="line.70">            return false;</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">        PaymentSetCustomFieldActionImpl that = (PaymentSetCustomFieldActionImpl) o;</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">        PaymentSetCustomFieldActionImpl that = (PaymentSetCustomFieldActionImpl) o;</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">077</span><span id="line.77">                .append(name, that.name)</span>
-<span class="source-line-no">078</span><span id="line.78">                .append(value, that.value)</span>
-<span class="source-line-no">079</span><span id="line.79">                .isEquals();</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    @Override</span>
-<span class="source-line-no">083</span><span id="line.83">    public int hashCode() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return new HashCodeBuilder(17, 37).append(action).append(name).append(value).toHashCode();</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">}</span>
+<span class="source-line-no">074</span><span id="line.74">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">075</span><span id="line.75">                .append(name, that.name)</span>
+<span class="source-line-no">076</span><span id="line.76">                .append(value, that.value)</span>
+<span class="source-line-no">077</span><span id="line.77">                .isEquals();</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    @Override</span>
+<span class="source-line-no">081</span><span id="line.81">    public int hashCode() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return new HashCodeBuilder(17, 37).append(action).append(name).append(value).toHashCode();</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">}</span>
 
 
 

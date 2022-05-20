@@ -76,9 +76,9 @@
 <span class="source-line-no">063</span><span id="line.63">    /**</span>
 <span class="source-line-no">064</span><span id="line.64">    *  &lt;p&gt;Define the list of States of the same &lt;code&gt;type&lt;/code&gt; to which the current State can be transitioned to.&lt;/p&gt;</span>
 <span class="source-line-no">065</span><span id="line.65">    *  &lt;ul&gt;</span>
-<span class="source-line-no">066</span><span id="line.66">    *  &lt;li&gt;If, for example, the current State is the &lt;em&gt;Initial&lt;/em&gt; State of &lt;a href="ctp:api:type:StateTypeEnum"&gt;StateType&lt;/a&gt; &lt;code&gt;OrderState&lt;/code&gt; and you want to allow the transition &lt;em&gt;Initial&lt;/em&gt; -&amp;gt; &lt;em&gt;Shipped&lt;/em&gt;, then add the &lt;a href="ctp:api:type:StateResourceIdentifier"&gt;StateResourceIdentifier&lt;/a&gt; to the &lt;em&gt;Shipped&lt;/em&gt; &lt;code&gt;OrderState&lt;/code&gt; to this list.&lt;/li&gt;</span>
-<span class="source-line-no">067</span><span id="line.67">    *  &lt;li&gt;Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.&lt;/li&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">    *  &lt;li&gt;Do not set this field at all to turn off validation and allowing transitions to any other State of the same &lt;code&gt;type&lt;/code&gt; as the current State.&lt;/li&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">    *   &lt;li&gt;If, for example, the current State is the &lt;em&gt;Initial&lt;/em&gt; State of StateType &lt;code&gt;OrderState&lt;/code&gt; and you want to allow the transition &lt;em&gt;Initial&lt;/em&gt; -&amp;gt; &lt;em&gt;Shipped&lt;/em&gt;, then add the StateResourceIdentifier to the &lt;em&gt;Shipped&lt;/em&gt; &lt;code&gt;OrderState&lt;/code&gt; to this list.&lt;/li&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">    *   &lt;li&gt;Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.&lt;/li&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">    *   &lt;li&gt;Do not set this field at all to turn off validation and allowing transitions to any other State of the same &lt;code&gt;type&lt;/code&gt; as the current State.&lt;/li&gt;</span>
 <span class="source-line-no">069</span><span id="line.69">    *  &lt;/ul&gt;</span>
 <span class="source-line-no">070</span><span id="line.70">    */</span>
 <span class="source-line-no">071</span><span id="line.71">    @Valid</span>

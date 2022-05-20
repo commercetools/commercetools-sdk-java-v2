@@ -27,14 +27,14 @@
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17">*  &lt;p&gt;Response to a query request for &lt;a href="#record"&gt;Record&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">017</span><span id="line.17">*  &lt;p&gt;Response to a query request for Record.&lt;/p&gt;</span>
 <span class="source-line-no">018</span><span id="line.18">*/</span>
 <span class="source-line-no">019</span><span id="line.19">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">020</span><span id="line.20">@JsonDeserialize(as = RecordPagedQueryResponseImpl.class)</span>
 <span class="source-line-no">021</span><span id="line.21">public interface RecordPagedQueryResponse {</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    /**</span>
-<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;Maximum number of results requested in the query request.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;Number of results requested.&lt;/p&gt;</span>
 <span class="source-line-no">025</span><span id="line.25">    */</span>
 <span class="source-line-no">026</span><span id="line.26">    @NotNull</span>
 <span class="source-line-no">027</span><span id="line.27">    @JsonProperty("limit")</span>
@@ -48,73 +48,72 @@
 <span class="source-line-no">035</span><span id="line.35">    public Integer getCount();</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
 <span class="source-line-no">037</span><span id="line.37">    /**</span>
-<span class="source-line-no">038</span><span id="line.38">    *  &lt;p&gt;Total number of results matching the query.</span>
-<span class="source-line-no">039</span><span id="line.39">    *  This number is an estimation and not &lt;a href="/general-concepts#strong-consistency"&gt;strongly consistent&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">040</span><span id="line.40">    */</span>
-<span class="source-line-no">041</span><span id="line.41">    @NotNull</span>
-<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("total")</span>
-<span class="source-line-no">043</span><span id="line.43">    public Integer getTotal();</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">    *  &lt;p&gt;The number of elements skipped, not a page number. Supplied by the client or the server default.&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line.47">    */</span>
-<span class="source-line-no">048</span><span id="line.48">    @NotNull</span>
-<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("offset")</span>
-<span class="source-line-no">050</span><span id="line.50">    public Integer getOffset();</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    @NotNull</span>
-<span class="source-line-no">053</span><span id="line.53">    @Valid</span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("results")</span>
-<span class="source-line-no">055</span><span id="line.55">    public List&lt;Record&gt; getResults();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public void setLimit(final Integer limit);</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public void setCount(final Integer count);</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setTotal(final Integer total);</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setOffset(final Integer offset);</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    @JsonIgnore</span>
-<span class="source-line-no">066</span><span id="line.66">    public void setResults(final Record... results);</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public void setResults(final List&lt;Record&gt; results);</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public static RecordPagedQueryResponse of() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return new RecordPagedQueryResponseImpl();</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public static RecordPagedQueryResponse of(final RecordPagedQueryResponse template) {</span>
-<span class="source-line-no">075</span><span id="line.75">        RecordPagedQueryResponseImpl instance = new RecordPagedQueryResponseImpl();</span>
-<span class="source-line-no">076</span><span id="line.76">        instance.setLimit(template.getLimit());</span>
-<span class="source-line-no">077</span><span id="line.77">        instance.setCount(template.getCount());</span>
-<span class="source-line-no">078</span><span id="line.78">        instance.setTotal(template.getTotal());</span>
-<span class="source-line-no">079</span><span id="line.79">        instance.setOffset(template.getOffset());</span>
-<span class="source-line-no">080</span><span id="line.80">        instance.setResults(template.getResults());</span>
-<span class="source-line-no">081</span><span id="line.81">        return instance;</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public static RecordPagedQueryResponseBuilder builder() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return RecordPagedQueryResponseBuilder.of();</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public static RecordPagedQueryResponseBuilder builder(final RecordPagedQueryResponse template) {</span>
-<span class="source-line-no">089</span><span id="line.89">        return RecordPagedQueryResponseBuilder.of(template);</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    default &lt;T&gt; T withRecordPagedQueryResponse(Function&lt;RecordPagedQueryResponse, T&gt; helper) {</span>
-<span class="source-line-no">093</span><span id="line.93">        return helper.apply(this);</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public static com.fasterxml.jackson.core.type.TypeReference&lt;RecordPagedQueryResponse&gt; typeReference() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return new com.fasterxml.jackson.core.type.TypeReference&lt;RecordPagedQueryResponse&gt;() {</span>
-<span class="source-line-no">098</span><span id="line.98">            @Override</span>
-<span class="source-line-no">099</span><span id="line.99">            public String toString() {</span>
-<span class="source-line-no">100</span><span id="line.100">                return "TypeReference&lt;RecordPagedQueryResponse&gt;";</span>
-<span class="source-line-no">101</span><span id="line.101">            }</span>
-<span class="source-line-no">102</span><span id="line.102">        };</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104">}</span>
+<span class="source-line-no">038</span><span id="line.38">    *  &lt;p&gt;Total number of results matching the query. This number is an estimation and not strongly consistent.&lt;/p&gt;</span>
+<span class="source-line-no">039</span><span id="line.39">    */</span>
+<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
+<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("total")</span>
+<span class="source-line-no">042</span><span id="line.42">    public Integer getTotal();</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">    *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">    */</span>
+<span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("offset")</span>
+<span class="source-line-no">049</span><span id="line.49">    public Integer getOffset();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    @NotNull</span>
+<span class="source-line-no">052</span><span id="line.52">    @Valid</span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("results")</span>
+<span class="source-line-no">054</span><span id="line.54">    public List&lt;Record&gt; getResults();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public void setLimit(final Integer limit);</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    public void setCount(final Integer count);</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public void setTotal(final Integer total);</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public void setOffset(final Integer offset);</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    @JsonIgnore</span>
+<span class="source-line-no">065</span><span id="line.65">    public void setResults(final Record... results);</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public void setResults(final List&lt;Record&gt; results);</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public static RecordPagedQueryResponse of() {</span>
+<span class="source-line-no">070</span><span id="line.70">        return new RecordPagedQueryResponseImpl();</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public static RecordPagedQueryResponse of(final RecordPagedQueryResponse template) {</span>
+<span class="source-line-no">074</span><span id="line.74">        RecordPagedQueryResponseImpl instance = new RecordPagedQueryResponseImpl();</span>
+<span class="source-line-no">075</span><span id="line.75">        instance.setLimit(template.getLimit());</span>
+<span class="source-line-no">076</span><span id="line.76">        instance.setCount(template.getCount());</span>
+<span class="source-line-no">077</span><span id="line.77">        instance.setTotal(template.getTotal());</span>
+<span class="source-line-no">078</span><span id="line.78">        instance.setOffset(template.getOffset());</span>
+<span class="source-line-no">079</span><span id="line.79">        instance.setResults(template.getResults());</span>
+<span class="source-line-no">080</span><span id="line.80">        return instance;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public static RecordPagedQueryResponseBuilder builder() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return RecordPagedQueryResponseBuilder.of();</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public static RecordPagedQueryResponseBuilder builder(final RecordPagedQueryResponse template) {</span>
+<span class="source-line-no">088</span><span id="line.88">        return RecordPagedQueryResponseBuilder.of(template);</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    default &lt;T&gt; T withRecordPagedQueryResponse(Function&lt;RecordPagedQueryResponse, T&gt; helper) {</span>
+<span class="source-line-no">092</span><span id="line.92">        return helper.apply(this);</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public static com.fasterxml.jackson.core.type.TypeReference&lt;RecordPagedQueryResponse&gt; typeReference() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return new com.fasterxml.jackson.core.type.TypeReference&lt;RecordPagedQueryResponse&gt;() {</span>
+<span class="source-line-no">097</span><span id="line.97">            @Override</span>
+<span class="source-line-no">098</span><span id="line.98">            public String toString() {</span>
+<span class="source-line-no">099</span><span id="line.99">                return "TypeReference&lt;RecordPagedQueryResponse&gt;";</span>
+<span class="source-line-no">100</span><span id="line.100">            }</span>
+<span class="source-line-no">101</span><span id="line.101">        };</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103">}</span>
 
 
 

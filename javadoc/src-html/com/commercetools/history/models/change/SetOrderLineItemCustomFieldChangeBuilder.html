@@ -37,113 +37,117 @@
 <span class="source-line-no">024</span><span id="line.24"></span>
 <span class="source-line-no">025</span><span id="line.25">    private java.lang.Object previousValue;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    public SetOrderLineItemCustomFieldChangeBuilder change(final String change) {</span>
-<span class="source-line-no">028</span><span id="line.28">        this.change = change;</span>
-<span class="source-line-no">029</span><span id="line.29">        return this;</span>
-<span class="source-line-no">030</span><span id="line.30">    }</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    public SetOrderLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {</span>
-<span class="source-line-no">033</span><span id="line.33">        this.customTypeId = customTypeId;</span>
-<span class="source-line-no">034</span><span id="line.34">        return this;</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public SetOrderLineItemCustomFieldChangeBuilder name(final String name) {</span>
-<span class="source-line-no">038</span><span id="line.38">        this.name = name;</span>
-<span class="source-line-no">039</span><span id="line.39">        return this;</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public SetOrderLineItemCustomFieldChangeBuilder variant(final String variant) {</span>
-<span class="source-line-no">043</span><span id="line.43">        this.variant = variant;</span>
-<span class="source-line-no">044</span><span id="line.44">        return this;</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public SetOrderLineItemCustomFieldChangeBuilder lineItem(</span>
-<span class="source-line-no">048</span><span id="line.48">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">049</span><span id="line.49">        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">050</span><span id="line.50">        return this;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public SetOrderLineItemCustomFieldChangeBuilder lineItem(</span>
-<span class="source-line-no">054</span><span id="line.54">            final com.commercetools.history.models.common.LocalizedString lineItem) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.lineItem = lineItem;</span>
-<span class="source-line-no">056</span><span id="line.56">        return this;</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public SetOrderLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {</span>
-<span class="source-line-no">060</span><span id="line.60">        this.nextValue = nextValue;</span>
-<span class="source-line-no">061</span><span id="line.61">        return this;</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public SetOrderLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {</span>
-<span class="source-line-no">065</span><span id="line.65">        this.previousValue = previousValue;</span>
-<span class="source-line-no">066</span><span id="line.66">        return this;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public String getChange() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return this.change;</span>
+<span class="source-line-no">027</span><span id="line.27">    /**</span>
+<span class="source-line-no">028</span><span id="line.28">    *  &lt;p&gt;Update action for &lt;code&gt;setLineItemCustomField&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">029</span><span id="line.29">    */</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    public SetOrderLineItemCustomFieldChangeBuilder change(final String change) {</span>
+<span class="source-line-no">032</span><span id="line.32">        this.change = change;</span>
+<span class="source-line-no">033</span><span id="line.33">        return this;</span>
+<span class="source-line-no">034</span><span id="line.34">    }</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    public SetOrderLineItemCustomFieldChangeBuilder customTypeId(final String customTypeId) {</span>
+<span class="source-line-no">037</span><span id="line.37">        this.customTypeId = customTypeId;</span>
+<span class="source-line-no">038</span><span id="line.38">        return this;</span>
+<span class="source-line-no">039</span><span id="line.39">    }</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    public SetOrderLineItemCustomFieldChangeBuilder name(final String name) {</span>
+<span class="source-line-no">042</span><span id="line.42">        this.name = name;</span>
+<span class="source-line-no">043</span><span id="line.43">        return this;</span>
+<span class="source-line-no">044</span><span id="line.44">    }</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    public SetOrderLineItemCustomFieldChangeBuilder variant(final String variant) {</span>
+<span class="source-line-no">047</span><span id="line.47">        this.variant = variant;</span>
+<span class="source-line-no">048</span><span id="line.48">        return this;</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public SetOrderLineItemCustomFieldChangeBuilder lineItem(</span>
+<span class="source-line-no">052</span><span id="line.52">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">053</span><span id="line.53">        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">054</span><span id="line.54">        return this;</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    public SetOrderLineItemCustomFieldChangeBuilder lineItem(</span>
+<span class="source-line-no">058</span><span id="line.58">            final com.commercetools.history.models.common.LocalizedString lineItem) {</span>
+<span class="source-line-no">059</span><span id="line.59">        this.lineItem = lineItem;</span>
+<span class="source-line-no">060</span><span id="line.60">        return this;</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public SetOrderLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {</span>
+<span class="source-line-no">064</span><span id="line.64">        this.nextValue = nextValue;</span>
+<span class="source-line-no">065</span><span id="line.65">        return this;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public SetOrderLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {</span>
+<span class="source-line-no">069</span><span id="line.69">        this.previousValue = previousValue;</span>
+<span class="source-line-no">070</span><span id="line.70">        return this;</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public String getCustomTypeId() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return this.customTypeId;</span>
+<span class="source-line-no">073</span><span id="line.73">    public String getChange() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return this.change;</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public String getName() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return this.name;</span>
+<span class="source-line-no">077</span><span id="line.77">    public String getCustomTypeId() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return this.customTypeId;</span>
 <span class="source-line-no">079</span><span id="line.79">    }</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public String getVariant() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return this.variant;</span>
+<span class="source-line-no">081</span><span id="line.81">    public String getName() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return this.name;</span>
 <span class="source-line-no">083</span><span id="line.83">    }</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public com.commercetools.history.models.common.LocalizedString getLineItem() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return this.lineItem;</span>
+<span class="source-line-no">085</span><span id="line.85">    public String getVariant() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return this.variant;</span>
 <span class="source-line-no">087</span><span id="line.87">    }</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public java.lang.Object getNextValue() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return this.nextValue;</span>
+<span class="source-line-no">089</span><span id="line.89">    public com.commercetools.history.models.common.LocalizedString getLineItem() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return this.lineItem;</span>
 <span class="source-line-no">091</span><span id="line.91">    }</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public java.lang.Object getPreviousValue() {</span>
-<span class="source-line-no">094</span><span id="line.94">        return this.previousValue;</span>
+<span class="source-line-no">093</span><span id="line.93">    public java.lang.Object getNextValue() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return this.nextValue;</span>
 <span class="source-line-no">095</span><span id="line.95">    }</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public SetOrderLineItemCustomFieldChange build() {</span>
-<span class="source-line-no">098</span><span id="line.98">        Objects.requireNonNull(change, SetOrderLineItemCustomFieldChange.class + ": change is missing");</span>
-<span class="source-line-no">099</span><span id="line.99">        Objects.requireNonNull(customTypeId, SetOrderLineItemCustomFieldChange.class + ": customTypeId is missing");</span>
-<span class="source-line-no">100</span><span id="line.100">        Objects.requireNonNull(name, SetOrderLineItemCustomFieldChange.class + ": name is missing");</span>
-<span class="source-line-no">101</span><span id="line.101">        Objects.requireNonNull(variant, SetOrderLineItemCustomFieldChange.class + ": variant is missing");</span>
-<span class="source-line-no">102</span><span id="line.102">        Objects.requireNonNull(lineItem, SetOrderLineItemCustomFieldChange.class + ": lineItem is missing");</span>
-<span class="source-line-no">103</span><span id="line.103">        Objects.requireNonNull(nextValue, SetOrderLineItemCustomFieldChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">104</span><span id="line.104">        Objects.requireNonNull(previousValue, SetOrderLineItemCustomFieldChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">105</span><span id="line.105">        return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,</span>
-<span class="source-line-no">106</span><span id="line.106">            previousValue);</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    /**</span>
-<span class="source-line-no">110</span><span id="line.110">     * builds SetOrderLineItemCustomFieldChange without checking for non null required values</span>
-<span class="source-line-no">111</span><span id="line.111">     */</span>
-<span class="source-line-no">112</span><span id="line.112">    public SetOrderLineItemCustomFieldChange buildUnchecked() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,</span>
-<span class="source-line-no">114</span><span id="line.114">            previousValue);</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public static SetOrderLineItemCustomFieldChangeBuilder of() {</span>
-<span class="source-line-no">118</span><span id="line.118">        return new SetOrderLineItemCustomFieldChangeBuilder();</span>
+<span class="source-line-no">097</span><span id="line.97">    public java.lang.Object getPreviousValue() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.previousValue;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public SetOrderLineItemCustomFieldChange build() {</span>
+<span class="source-line-no">102</span><span id="line.102">        Objects.requireNonNull(change, SetOrderLineItemCustomFieldChange.class + ": change is missing");</span>
+<span class="source-line-no">103</span><span id="line.103">        Objects.requireNonNull(customTypeId, SetOrderLineItemCustomFieldChange.class + ": customTypeId is missing");</span>
+<span class="source-line-no">104</span><span id="line.104">        Objects.requireNonNull(name, SetOrderLineItemCustomFieldChange.class + ": name is missing");</span>
+<span class="source-line-no">105</span><span id="line.105">        Objects.requireNonNull(variant, SetOrderLineItemCustomFieldChange.class + ": variant is missing");</span>
+<span class="source-line-no">106</span><span id="line.106">        Objects.requireNonNull(lineItem, SetOrderLineItemCustomFieldChange.class + ": lineItem is missing");</span>
+<span class="source-line-no">107</span><span id="line.107">        Objects.requireNonNull(nextValue, SetOrderLineItemCustomFieldChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">108</span><span id="line.108">        Objects.requireNonNull(previousValue, SetOrderLineItemCustomFieldChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">109</span><span id="line.109">        return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,</span>
+<span class="source-line-no">110</span><span id="line.110">            previousValue);</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    /**</span>
+<span class="source-line-no">114</span><span id="line.114">     * builds SetOrderLineItemCustomFieldChange without checking for non null required values</span>
+<span class="source-line-no">115</span><span id="line.115">     */</span>
+<span class="source-line-no">116</span><span id="line.116">    public SetOrderLineItemCustomFieldChange buildUnchecked() {</span>
+<span class="source-line-no">117</span><span id="line.117">        return new SetOrderLineItemCustomFieldChangeImpl(change, customTypeId, name, variant, lineItem, nextValue,</span>
+<span class="source-line-no">118</span><span id="line.118">            previousValue);</span>
 <span class="source-line-no">119</span><span id="line.119">    }</span>
 <span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public static SetOrderLineItemCustomFieldChangeBuilder of(final SetOrderLineItemCustomFieldChange template) {</span>
-<span class="source-line-no">122</span><span id="line.122">        SetOrderLineItemCustomFieldChangeBuilder builder = new SetOrderLineItemCustomFieldChangeBuilder();</span>
-<span class="source-line-no">123</span><span id="line.123">        builder.change = template.getChange();</span>
-<span class="source-line-no">124</span><span id="line.124">        builder.customTypeId = template.getCustomTypeId();</span>
-<span class="source-line-no">125</span><span id="line.125">        builder.name = template.getName();</span>
-<span class="source-line-no">126</span><span id="line.126">        builder.variant = template.getVariant();</span>
-<span class="source-line-no">127</span><span id="line.127">        builder.lineItem = template.getLineItem();</span>
-<span class="source-line-no">128</span><span id="line.128">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">129</span><span id="line.129">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">130</span><span id="line.130">        return builder;</span>
-<span class="source-line-no">131</span><span id="line.131">    }</span>
-<span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">}</span>
+<span class="source-line-no">121</span><span id="line.121">    public static SetOrderLineItemCustomFieldChangeBuilder of() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return new SetOrderLineItemCustomFieldChangeBuilder();</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    public static SetOrderLineItemCustomFieldChangeBuilder of(final SetOrderLineItemCustomFieldChange template) {</span>
+<span class="source-line-no">126</span><span id="line.126">        SetOrderLineItemCustomFieldChangeBuilder builder = new SetOrderLineItemCustomFieldChangeBuilder();</span>
+<span class="source-line-no">127</span><span id="line.127">        builder.change = template.getChange();</span>
+<span class="source-line-no">128</span><span id="line.128">        builder.customTypeId = template.getCustomTypeId();</span>
+<span class="source-line-no">129</span><span id="line.129">        builder.name = template.getName();</span>
+<span class="source-line-no">130</span><span id="line.130">        builder.variant = template.getVariant();</span>
+<span class="source-line-no">131</span><span id="line.131">        builder.lineItem = template.getLineItem();</span>
+<span class="source-line-no">132</span><span id="line.132">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">133</span><span id="line.133">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">134</span><span id="line.134">        return builder;</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">}</span>
 
 
 

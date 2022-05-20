@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;Response to a query request for &lt;a href="#record"&gt;Record&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;Response to a query request for Record.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19">*/</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, ModelBase {</span>
@@ -58,7 +58,7 @@
 <span class="source-line-no">045</span><span id="line.45">    }</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
 <span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">    *  &lt;p&gt;Maximum number of results requested in the query request.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">    *  &lt;p&gt;Number of results requested.&lt;/p&gt;</span>
 <span class="source-line-no">049</span><span id="line.49">    */</span>
 <span class="source-line-no">050</span><span id="line.50">    public Integer getLimit() {</span>
 <span class="source-line-no">051</span><span id="line.51">        return this.limit;</span>
@@ -72,77 +72,76 @@
 <span class="source-line-no">059</span><span id="line.59">    }</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">    *  &lt;p&gt;Total number of results matching the query.</span>
-<span class="source-line-no">063</span><span id="line.63">    *  This number is an estimation and not &lt;a href="/general-concepts#strong-consistency"&gt;strongly consistent&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">064</span><span id="line.64">    */</span>
-<span class="source-line-no">065</span><span id="line.65">    public Integer getTotal() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return this.total;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">    *  &lt;p&gt;The number of elements skipped, not a page number. Supplied by the client or the server default.&lt;/p&gt;</span>
-<span class="source-line-no">071</span><span id="line.71">    */</span>
-<span class="source-line-no">072</span><span id="line.72">    public Integer getOffset() {</span>
-<span class="source-line-no">073</span><span id="line.73">        return this.offset;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public java.util.List&lt;com.commercetools.history.models.change_history.Record&gt; getResults() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return this.results;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public void setLimit(final Integer limit) {</span>
-<span class="source-line-no">081</span><span id="line.81">        this.limit = limit;</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public void setCount(final Integer count) {</span>
-<span class="source-line-no">085</span><span id="line.85">        this.count = count;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public void setTotal(final Integer total) {</span>
-<span class="source-line-no">089</span><span id="line.89">        this.total = total;</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public void setOffset(final Integer offset) {</span>
-<span class="source-line-no">093</span><span id="line.93">        this.offset = offset;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public void setResults(final com.commercetools.history.models.change_history.Record... results) {</span>
-<span class="source-line-no">097</span><span id="line.97">        this.results = new ArrayList&lt;&gt;(Arrays.asList(results));</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public void setResults(final java.util.List&lt;com.commercetools.history.models.change_history.Record&gt; results) {</span>
-<span class="source-line-no">101</span><span id="line.101">        this.results = results;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    @Override</span>
-<span class="source-line-no">105</span><span id="line.105">    public boolean equals(Object o) {</span>
-<span class="source-line-no">106</span><span id="line.106">        if (this == o)</span>
-<span class="source-line-no">107</span><span id="line.107">            return true;</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">110</span><span id="line.110">            return false;</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">        RecordPagedQueryResponseImpl that = (RecordPagedQueryResponseImpl) o;</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">        return new EqualsBuilder().append(limit, that.limit)</span>
-<span class="source-line-no">115</span><span id="line.115">                .append(count, that.count)</span>
-<span class="source-line-no">116</span><span id="line.116">                .append(total, that.total)</span>
-<span class="source-line-no">117</span><span id="line.117">                .append(offset, that.offset)</span>
-<span class="source-line-no">118</span><span id="line.118">                .append(results, that.results)</span>
-<span class="source-line-no">119</span><span id="line.119">                .isEquals();</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    @Override</span>
-<span class="source-line-no">123</span><span id="line.123">    public int hashCode() {</span>
-<span class="source-line-no">124</span><span id="line.124">        return new HashCodeBuilder(17, 37).append(limit)</span>
-<span class="source-line-no">125</span><span id="line.125">                .append(count)</span>
-<span class="source-line-no">126</span><span id="line.126">                .append(total)</span>
-<span class="source-line-no">127</span><span id="line.127">                .append(offset)</span>
-<span class="source-line-no">128</span><span id="line.128">                .append(results)</span>
-<span class="source-line-no">129</span><span id="line.129">                .toHashCode();</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">}</span>
+<span class="source-line-no">062</span><span id="line.62">    *  &lt;p&gt;Total number of results matching the query. This number is an estimation and not strongly consistent.&lt;/p&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">    */</span>
+<span class="source-line-no">064</span><span id="line.64">    public Integer getTotal() {</span>
+<span class="source-line-no">065</span><span id="line.65">        return this.total;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    /**</span>
+<span class="source-line-no">069</span><span id="line.69">    *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">    */</span>
+<span class="source-line-no">071</span><span id="line.71">    public Integer getOffset() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return this.offset;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public java.util.List&lt;com.commercetools.history.models.change_history.Record&gt; getResults() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return this.results;</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setLimit(final Integer limit) {</span>
+<span class="source-line-no">080</span><span id="line.80">        this.limit = limit;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public void setCount(final Integer count) {</span>
+<span class="source-line-no">084</span><span id="line.84">        this.count = count;</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public void setTotal(final Integer total) {</span>
+<span class="source-line-no">088</span><span id="line.88">        this.total = total;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public void setOffset(final Integer offset) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.offset = offset;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public void setResults(final com.commercetools.history.models.change_history.Record... results) {</span>
+<span class="source-line-no">096</span><span id="line.96">        this.results = new ArrayList&lt;&gt;(Arrays.asList(results));</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public void setResults(final java.util.List&lt;com.commercetools.history.models.change_history.Record&gt; results) {</span>
+<span class="source-line-no">100</span><span id="line.100">        this.results = results;</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    @Override</span>
+<span class="source-line-no">104</span><span id="line.104">    public boolean equals(Object o) {</span>
+<span class="source-line-no">105</span><span id="line.105">        if (this == o)</span>
+<span class="source-line-no">106</span><span id="line.106">            return true;</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">109</span><span id="line.109">            return false;</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">        RecordPagedQueryResponseImpl that = (RecordPagedQueryResponseImpl) o;</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">        return new EqualsBuilder().append(limit, that.limit)</span>
+<span class="source-line-no">114</span><span id="line.114">                .append(count, that.count)</span>
+<span class="source-line-no">115</span><span id="line.115">                .append(total, that.total)</span>
+<span class="source-line-no">116</span><span id="line.116">                .append(offset, that.offset)</span>
+<span class="source-line-no">117</span><span id="line.117">                .append(results, that.results)</span>
+<span class="source-line-no">118</span><span id="line.118">                .isEquals();</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    @Override</span>
+<span class="source-line-no">122</span><span id="line.122">    public int hashCode() {</span>
+<span class="source-line-no">123</span><span id="line.123">        return new HashCodeBuilder(17, 37).append(limit)</span>
+<span class="source-line-no">124</span><span id="line.124">                .append(count)</span>
+<span class="source-line-no">125</span><span id="line.125">                .append(total)</span>
+<span class="source-line-no">126</span><span id="line.126">                .append(offset)</span>
+<span class="source-line-no">127</span><span id="line.127">                .append(results)</span>
+<span class="source-line-no">128</span><span id="line.128">                .toHashCode();</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">}</span>
 
 
 

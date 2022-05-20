@@ -34,7 +34,7 @@
 <span class="source-line-no">021</span><span id="line.21">public interface OrderFromCartDraft {</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    /**</span>
-<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;The unique id of the cart from which an order is created.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;Platform-generated unique identifier of the Cart from which you can create an Order.&lt;/p&gt;</span>
 <span class="source-line-no">025</span><span id="line.25">    */</span>
 <span class="source-line-no">026</span><span id="line.26">    @Deprecated</span>
 <span class="source-line-no">027</span><span id="line.27">    @JsonProperty("id")</span>
@@ -52,100 +52,94 @@
 <span class="source-line-no">039</span><span id="line.39">    public Long getVersion();</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
 <span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">    *  &lt;p&gt;String that uniquely identifies an order.</span>
-<span class="source-line-no">043</span><span id="line.43">    *  It can be used to create more human-readable (in contrast to ID) identifier for the order.</span>
-<span class="source-line-no">044</span><span id="line.44">    *  It should be unique across a project.</span>
-<span class="source-line-no">045</span><span id="line.45">    *  Once it's set it cannot be changed.</span>
-<span class="source-line-no">046</span><span id="line.46">    *  For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression &lt;code&gt;[a-z0-9_\-]{2,36}&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line.47">    */</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("orderNumber")</span>
-<span class="source-line-no">050</span><span id="line.50">    public String getOrderNumber();</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("paymentState")</span>
-<span class="source-line-no">053</span><span id="line.53">    public PaymentState getPaymentState();</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("shipmentState")</span>
-<span class="source-line-no">056</span><span id="line.56">    public ShipmentState getShipmentState();</span>
+<span class="source-line-no">042</span><span id="line.42">    *  &lt;p&gt;String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression &lt;code&gt;[a-z0-9_\-]{2,36}&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">    */</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("orderNumber")</span>
+<span class="source-line-no">046</span><span id="line.46">    public String getOrderNumber();</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("paymentState")</span>
+<span class="source-line-no">049</span><span id="line.49">    public PaymentState getPaymentState();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("shipmentState")</span>
+<span class="source-line-no">052</span><span id="line.52">    public ShipmentState getShipmentState();</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;Order will be created with &lt;code&gt;Open&lt;/code&gt; status by default.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">    */</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">    *  &lt;p&gt;Order will be created with &lt;code&gt;Open&lt;/code&gt; status by default.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">    */</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("orderState")</span>
-<span class="source-line-no">063</span><span id="line.63">    public OrderState getOrderState();</span>
+<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("orderState")</span>
+<span class="source-line-no">059</span><span id="line.59">    public OrderState getOrderState();</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    @Valid</span>
+<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("state")</span>
+<span class="source-line-no">063</span><span id="line.63">    public StateResourceIdentifier getState();</span>
 <span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    @Valid</span>
-<span class="source-line-no">066</span><span id="line.66">    @JsonProperty("state")</span>
-<span class="source-line-no">067</span><span id="line.67">    public StateResourceIdentifier getState();</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">    *  &lt;p&gt;&lt;a href="/../api/projects/custom-fields"&gt;Custom Fields&lt;/a&gt; for the Order. The Custom Field type must match the type of the Custom Fields in the referenced &lt;a href="/../api/projects/carts#cart"&gt;Cart&lt;/a&gt;.</span>
-<span class="source-line-no">071</span><span id="line.71">    *  If specified, the Custom Fields are merged with the Custom Fields on the referenced &lt;a href="/../api/projects/carts#cart"&gt;Cart&lt;/a&gt; and added to the Order.</span>
-<span class="source-line-no">072</span><span id="line.72">    *  If empty, the Custom Fields on the referenced &lt;a href="/../api/projects/carts#cart"&gt;Cart&lt;/a&gt; are added to the Order automatically.&lt;/p&gt;</span>
-<span class="source-line-no">073</span><span id="line.73">    */</span>
-<span class="source-line-no">074</span><span id="line.74">    @Valid</span>
-<span class="source-line-no">075</span><span id="line.75">    @JsonProperty("custom")</span>
-<span class="source-line-no">076</span><span id="line.76">    public CustomFieldsDraft getCustom();</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    @Deprecated</span>
-<span class="source-line-no">079</span><span id="line.79">    public void setId(final String id);</span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">    *  &lt;p&gt;Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">    */</span>
+<span class="source-line-no">068</span><span id="line.68">    @Valid</span>
+<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("custom")</span>
+<span class="source-line-no">070</span><span id="line.70">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    @Deprecated</span>
+<span class="source-line-no">073</span><span id="line.73">    public void setId(final String id);</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setCart(final CartResourceIdentifier cart);</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public void setVersion(final Long version);</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setOrderNumber(final String orderNumber);</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public void setCart(final CartResourceIdentifier cart);</span>
+<span class="source-line-no">081</span><span id="line.81">    public void setPaymentState(final PaymentState paymentState);</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public void setVersion(final Long version);</span>
+<span class="source-line-no">083</span><span id="line.83">    public void setShipmentState(final ShipmentState shipmentState);</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public void setOrderNumber(final String orderNumber);</span>
+<span class="source-line-no">085</span><span id="line.85">    public void setOrderState(final OrderState orderState);</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setPaymentState(final PaymentState paymentState);</span>
+<span class="source-line-no">087</span><span id="line.87">    public void setState(final StateResourceIdentifier state);</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public void setShipmentState(final ShipmentState shipmentState);</span>
+<span class="source-line-no">089</span><span id="line.89">    public void setCustom(final CustomFieldsDraft custom);</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setOrderState(final OrderState orderState);</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public void setState(final StateResourceIdentifier state);</span>
+<span class="source-line-no">091</span><span id="line.91">    public static OrderFromCartDraft of() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return new OrderFromCartDraftImpl();</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public void setCustom(final CustomFieldsDraft custom);</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public static OrderFromCartDraft of() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return new OrderFromCartDraftImpl();</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public static OrderFromCartDraft of(final OrderFromCartDraft template) {</span>
-<span class="source-line-no">102</span><span id="line.102">        OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();</span>
-<span class="source-line-no">103</span><span id="line.103">        instance.setId(template.getId());</span>
-<span class="source-line-no">104</span><span id="line.104">        instance.setCart(template.getCart());</span>
-<span class="source-line-no">105</span><span id="line.105">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">106</span><span id="line.106">        instance.setOrderNumber(template.getOrderNumber());</span>
-<span class="source-line-no">107</span><span id="line.107">        instance.setPaymentState(template.getPaymentState());</span>
-<span class="source-line-no">108</span><span id="line.108">        instance.setShipmentState(template.getShipmentState());</span>
-<span class="source-line-no">109</span><span id="line.109">        instance.setOrderState(template.getOrderState());</span>
-<span class="source-line-no">110</span><span id="line.110">        instance.setState(template.getState());</span>
-<span class="source-line-no">111</span><span id="line.111">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">112</span><span id="line.112">        return instance;</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public static OrderFromCartDraftBuilder builder() {</span>
-<span class="source-line-no">116</span><span id="line.116">        return OrderFromCartDraftBuilder.of();</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public static OrderFromCartDraftBuilder builder(final OrderFromCartDraft template) {</span>
-<span class="source-line-no">120</span><span id="line.120">        return OrderFromCartDraftBuilder.of(template);</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    default &lt;T&gt; T withOrderFromCartDraft(Function&lt;OrderFromCartDraft, T&gt; helper) {</span>
-<span class="source-line-no">124</span><span id="line.124">        return helper.apply(this);</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderFromCartDraft&gt; typeReference() {</span>
-<span class="source-line-no">128</span><span id="line.128">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderFromCartDraft&gt;() {</span>
-<span class="source-line-no">129</span><span id="line.129">            @Override</span>
-<span class="source-line-no">130</span><span id="line.130">            public String toString() {</span>
-<span class="source-line-no">131</span><span id="line.131">                return "TypeReference&lt;OrderFromCartDraft&gt;";</span>
-<span class="source-line-no">132</span><span id="line.132">            }</span>
-<span class="source-line-no">133</span><span id="line.133">        };</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135">}</span>
+<span class="source-line-no">095</span><span id="line.95">    public static OrderFromCartDraft of(final OrderFromCartDraft template) {</span>
+<span class="source-line-no">096</span><span id="line.96">        OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();</span>
+<span class="source-line-no">097</span><span id="line.97">        instance.setId(template.getId());</span>
+<span class="source-line-no">098</span><span id="line.98">        instance.setCart(template.getCart());</span>
+<span class="source-line-no">099</span><span id="line.99">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">100</span><span id="line.100">        instance.setOrderNumber(template.getOrderNumber());</span>
+<span class="source-line-no">101</span><span id="line.101">        instance.setPaymentState(template.getPaymentState());</span>
+<span class="source-line-no">102</span><span id="line.102">        instance.setShipmentState(template.getShipmentState());</span>
+<span class="source-line-no">103</span><span id="line.103">        instance.setOrderState(template.getOrderState());</span>
+<span class="source-line-no">104</span><span id="line.104">        instance.setState(template.getState());</span>
+<span class="source-line-no">105</span><span id="line.105">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">106</span><span id="line.106">        return instance;</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public static OrderFromCartDraftBuilder builder() {</span>
+<span class="source-line-no">110</span><span id="line.110">        return OrderFromCartDraftBuilder.of();</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public static OrderFromCartDraftBuilder builder(final OrderFromCartDraft template) {</span>
+<span class="source-line-no">114</span><span id="line.114">        return OrderFromCartDraftBuilder.of(template);</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    default &lt;T&gt; T withOrderFromCartDraft(Function&lt;OrderFromCartDraft, T&gt; helper) {</span>
+<span class="source-line-no">118</span><span id="line.118">        return helper.apply(this);</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderFromCartDraft&gt; typeReference() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderFromCartDraft&gt;() {</span>
+<span class="source-line-no">123</span><span id="line.123">            @Override</span>
+<span class="source-line-no">124</span><span id="line.124">            public String toString() {</span>
+<span class="source-line-no">125</span><span id="line.125">                return "TypeReference&lt;OrderFromCartDraft&gt;";</span>
+<span class="source-line-no">126</span><span id="line.126">            }</span>
+<span class="source-line-no">127</span><span id="line.127">        };</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129">}</span>
 
 
 

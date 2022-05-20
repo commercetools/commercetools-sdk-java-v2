@@ -163,7 +163,11 @@
 <span class="source-line-no">150</span><span id="line.150">    public ByProjectKeyInStoreKeyByStoreKeyRequestBuilder inStoreKeyWithStoreKeyValue(String storeKey) {</span>
 <span class="source-line-no">151</span><span id="line.151">        return new ByProjectKeyInStoreKeyByStoreKeyRequestBuilder(apiHttpClient, projectKey, storeKey);</span>
 <span class="source-line-no">152</span><span id="line.152">    }</span>
-<span class="source-line-no">153</span><span id="line.153">}</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    public ByProjectKeyStandalonePricesRequestBuilder standalonePrices() {</span>
+<span class="source-line-no">155</span><span id="line.155">        return new ByProjectKeyStandalonePricesRequestBuilder(apiHttpClient, projectKey);</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157">}</span>
 
 
 

@@ -40,104 +40,103 @@
 <span class="source-line-no">027</span><span id="line.27">    public LocalizedString getName();</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
 <span class="source-line-no">029</span><span id="line.29">    /**</span>
-<span class="source-line-no">030</span><span id="line.30">    *  &lt;p&gt;The amount of a CustomLineItemin the cart.</span>
-<span class="source-line-no">031</span><span id="line.31">    *  Must be a positive integer.&lt;/p&gt;</span>
-<span class="source-line-no">032</span><span id="line.32">    */</span>
-<span class="source-line-no">033</span><span id="line.33">    @NotNull</span>
-<span class="source-line-no">034</span><span id="line.34">    @JsonProperty("quantity")</span>
-<span class="source-line-no">035</span><span id="line.35">    public Long getQuantity();</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
-<span class="source-line-no">038</span><span id="line.38">    @Valid</span>
-<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("money")</span>
-<span class="source-line-no">040</span><span id="line.40">    public Money getMoney();</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
-<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("slug")</span>
-<span class="source-line-no">044</span><span id="line.44">    public String getSlug();</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">    *  &lt;p&gt;The given tax category will be used to select a tax rate when a cart has the TaxMode &lt;code&gt;Platform&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">    */</span>
-<span class="source-line-no">049</span><span id="line.49">    @Valid</span>
-<span class="source-line-no">050</span><span id="line.50">    @JsonProperty("taxCategory")</span>
-<span class="source-line-no">051</span><span id="line.51">    public TaxCategoryResourceIdentifier getTaxCategory();</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">    *  &lt;p&gt;An external tax rate can be set if the cart has the &lt;code&gt;External&lt;/code&gt; TaxMode.&lt;/p&gt;</span>
-<span class="source-line-no">055</span><span id="line.55">    */</span>
-<span class="source-line-no">056</span><span id="line.56">    @Valid</span>
-<span class="source-line-no">057</span><span id="line.57">    @JsonProperty("externalTaxRate")</span>
-<span class="source-line-no">058</span><span id="line.58">    public ExternalTaxRateDraft getExternalTaxRate();</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    /**</span>
-<span class="source-line-no">061</span><span id="line.61">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
-<span class="source-line-no">062</span><span id="line.62">    */</span>
-<span class="source-line-no">063</span><span id="line.63">    @Valid</span>
-<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("custom")</span>
-<span class="source-line-no">065</span><span id="line.65">    public CustomFieldsDraft getCustom();</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    /**</span>
-<span class="source-line-no">068</span><span id="line.68">    *  &lt;p&gt;Container for custom line item specific address(es).&lt;/p&gt;</span>
-<span class="source-line-no">069</span><span id="line.69">    */</span>
-<span class="source-line-no">070</span><span id="line.70">    @Valid</span>
-<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("shippingDetails")</span>
-<span class="source-line-no">072</span><span id="line.72">    public ItemShippingDetailsDraft getShippingDetails();</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setName(final LocalizedString name);</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setQuantity(final Long quantity);</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setMoney(final Money money);</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public void setSlug(final String slug);</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public void setCustom(final CustomFieldsDraft custom);</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public static CustomLineItemDraft of() {</span>
-<span class="source-line-no">091</span><span id="line.91">        return new CustomLineItemDraftImpl();</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public static CustomLineItemDraft of(final CustomLineItemDraft template) {</span>
-<span class="source-line-no">095</span><span id="line.95">        CustomLineItemDraftImpl instance = new CustomLineItemDraftImpl();</span>
-<span class="source-line-no">096</span><span id="line.96">        instance.setName(template.getName());</span>
-<span class="source-line-no">097</span><span id="line.97">        instance.setQuantity(template.getQuantity());</span>
-<span class="source-line-no">098</span><span id="line.98">        instance.setMoney(template.getMoney());</span>
-<span class="source-line-no">099</span><span id="line.99">        instance.setSlug(template.getSlug());</span>
-<span class="source-line-no">100</span><span id="line.100">        instance.setTaxCategory(template.getTaxCategory());</span>
-<span class="source-line-no">101</span><span id="line.101">        instance.setExternalTaxRate(template.getExternalTaxRate());</span>
-<span class="source-line-no">102</span><span id="line.102">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">103</span><span id="line.103">        instance.setShippingDetails(template.getShippingDetails());</span>
-<span class="source-line-no">104</span><span id="line.104">        return instance;</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public static CustomLineItemDraftBuilder builder() {</span>
-<span class="source-line-no">108</span><span id="line.108">        return CustomLineItemDraftBuilder.of();</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public static CustomLineItemDraftBuilder builder(final CustomLineItemDraft template) {</span>
-<span class="source-line-no">112</span><span id="line.112">        return CustomLineItemDraftBuilder.of(template);</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    default &lt;T&gt; T withCustomLineItemDraft(Function&lt;CustomLineItemDraft, T&gt; helper) {</span>
-<span class="source-line-no">116</span><span id="line.116">        return helper.apply(this);</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomLineItemDraft&gt; typeReference() {</span>
-<span class="source-line-no">120</span><span id="line.120">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomLineItemDraft&gt;() {</span>
-<span class="source-line-no">121</span><span id="line.121">            @Override</span>
-<span class="source-line-no">122</span><span id="line.122">            public String toString() {</span>
-<span class="source-line-no">123</span><span id="line.123">                return "TypeReference&lt;CustomLineItemDraft&gt;";</span>
-<span class="source-line-no">124</span><span id="line.124">            }</span>
-<span class="source-line-no">125</span><span id="line.125">        };</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127">}</span>
+<span class="source-line-no">030</span><span id="line.30">    *  &lt;p&gt;The amount of a CustomLineItemin the cart. Must be a positive integer.&lt;/p&gt;</span>
+<span class="source-line-no">031</span><span id="line.31">    */</span>
+<span class="source-line-no">032</span><span id="line.32">    @NotNull</span>
+<span class="source-line-no">033</span><span id="line.33">    @JsonProperty("quantity")</span>
+<span class="source-line-no">034</span><span id="line.34">    public Long getQuantity();</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    @NotNull</span>
+<span class="source-line-no">037</span><span id="line.37">    @Valid</span>
+<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("money")</span>
+<span class="source-line-no">039</span><span id="line.39">    public Money getMoney();</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    @NotNull</span>
+<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("slug")</span>
+<span class="source-line-no">043</span><span id="line.43">    public String getSlug();</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">    *  &lt;p&gt;The given tax category will be used to select a tax rate when a cart has the TaxMode &lt;code&gt;Platform&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">    */</span>
+<span class="source-line-no">048</span><span id="line.48">    @Valid</span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("taxCategory")</span>
+<span class="source-line-no">050</span><span id="line.50">    public TaxCategoryResourceIdentifier getTaxCategory();</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    /**</span>
+<span class="source-line-no">053</span><span id="line.53">    *  &lt;p&gt;An external tax rate can be set if the cart has the &lt;code&gt;External&lt;/code&gt; TaxMode.&lt;/p&gt;</span>
+<span class="source-line-no">054</span><span id="line.54">    */</span>
+<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
+<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("externalTaxRate")</span>
+<span class="source-line-no">057</span><span id="line.57">    public ExternalTaxRateDraft getExternalTaxRate();</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    /**</span>
+<span class="source-line-no">060</span><span id="line.60">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">    */</span>
+<span class="source-line-no">062</span><span id="line.62">    @Valid</span>
+<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("custom")</span>
+<span class="source-line-no">064</span><span id="line.64">    public CustomFieldsDraft getCustom();</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    /**</span>
+<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;Container for custom line item specific address(es).&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">    */</span>
+<span class="source-line-no">069</span><span id="line.69">    @Valid</span>
+<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("shippingDetails")</span>
+<span class="source-line-no">071</span><span id="line.71">    public ItemShippingDetailsDraft getShippingDetails();</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public void setName(final LocalizedString name);</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setQuantity(final Long quantity);</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public void setMoney(final Money money);</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setSlug(final String slug);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public void setCustom(final CustomFieldsDraft custom);</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public static CustomLineItemDraft of() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return new CustomLineItemDraftImpl();</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public static CustomLineItemDraft of(final CustomLineItemDraft template) {</span>
+<span class="source-line-no">094</span><span id="line.94">        CustomLineItemDraftImpl instance = new CustomLineItemDraftImpl();</span>
+<span class="source-line-no">095</span><span id="line.95">        instance.setName(template.getName());</span>
+<span class="source-line-no">096</span><span id="line.96">        instance.setQuantity(template.getQuantity());</span>
+<span class="source-line-no">097</span><span id="line.97">        instance.setMoney(template.getMoney());</span>
+<span class="source-line-no">098</span><span id="line.98">        instance.setSlug(template.getSlug());</span>
+<span class="source-line-no">099</span><span id="line.99">        instance.setTaxCategory(template.getTaxCategory());</span>
+<span class="source-line-no">100</span><span id="line.100">        instance.setExternalTaxRate(template.getExternalTaxRate());</span>
+<span class="source-line-no">101</span><span id="line.101">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">102</span><span id="line.102">        instance.setShippingDetails(template.getShippingDetails());</span>
+<span class="source-line-no">103</span><span id="line.103">        return instance;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public static CustomLineItemDraftBuilder builder() {</span>
+<span class="source-line-no">107</span><span id="line.107">        return CustomLineItemDraftBuilder.of();</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    public static CustomLineItemDraftBuilder builder(final CustomLineItemDraft template) {</span>
+<span class="source-line-no">111</span><span id="line.111">        return CustomLineItemDraftBuilder.of(template);</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    default &lt;T&gt; T withCustomLineItemDraft(Function&lt;CustomLineItemDraft, T&gt; helper) {</span>
+<span class="source-line-no">115</span><span id="line.115">        return helper.apply(this);</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomLineItemDraft&gt; typeReference() {</span>
+<span class="source-line-no">119</span><span id="line.119">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomLineItemDraft&gt;() {</span>
+<span class="source-line-no">120</span><span id="line.120">            @Override</span>
+<span class="source-line-no">121</span><span id="line.121">            public String toString() {</span>
+<span class="source-line-no">122</span><span id="line.122">                return "TypeReference&lt;CustomLineItemDraft&gt;";</span>
+<span class="source-line-no">123</span><span id="line.123">            }</span>
+<span class="source-line-no">124</span><span id="line.124">        };</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126">}</span>
 
 
 

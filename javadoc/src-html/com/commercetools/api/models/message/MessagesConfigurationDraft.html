@@ -26,21 +26,21 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16">*  &lt;p&gt;Defines the configuration for the &lt;a href="/../api/projects/messages"&gt;Messages Query&lt;/a&gt; feature for the Project.&lt;/p&gt;</span>
+<span class="source-line-no">016</span><span id="line.16">*  &lt;p&gt;Defines the configuration for the Messages Query feature for the Project.&lt;/p&gt;</span>
 <span class="source-line-no">017</span><span id="line.17">*/</span>
 <span class="source-line-no">018</span><span id="line.18">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">019</span><span id="line.19">@JsonDeserialize(as = MessagesConfigurationDraftImpl.class)</span>
 <span class="source-line-no">020</span><span id="line.20">public interface MessagesConfigurationDraft {</span>
 <span class="source-line-no">021</span><span id="line.21"></span>
 <span class="source-line-no">022</span><span id="line.22">    /**</span>
-<span class="source-line-no">023</span><span id="line.23">    *  &lt;p&gt;Setting to &lt;code&gt;true&lt;/code&gt; activates the &lt;a href="/../api/projects/messages"&gt;Messages Query&lt;/a&gt; feature.&lt;/p&gt;</span>
+<span class="source-line-no">023</span><span id="line.23">    *  &lt;p&gt;Setting to &lt;code&gt;true&lt;/code&gt; activates the Messages Query feature.&lt;/p&gt;</span>
 <span class="source-line-no">024</span><span id="line.24">    */</span>
 <span class="source-line-no">025</span><span id="line.25">    @NotNull</span>
 <span class="source-line-no">026</span><span id="line.26">    @JsonProperty("enabled")</span>
 <span class="source-line-no">027</span><span id="line.27">    public Boolean getEnabled();</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
 <span class="source-line-no">029</span><span id="line.29">    /**</span>
-<span class="source-line-no">030</span><span id="line.30">    *  &lt;p&gt;Specifies the number of days each Message should be available via the &lt;a href="/../api/projects/messages"&gt;Messages Query&lt;/a&gt; API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.&lt;/p&gt;</span>
+<span class="source-line-no">030</span><span id="line.30">    *  &lt;p&gt;Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.&lt;/p&gt;</span>
 <span class="source-line-no">031</span><span id="line.31">    */</span>
 <span class="source-line-no">032</span><span id="line.32">    @NotNull</span>
 <span class="source-line-no">033</span><span id="line.33">    @JsonProperty("deleteDaysAfterCreation")</span>

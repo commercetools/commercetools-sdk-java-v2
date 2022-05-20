@@ -31,52 +31,49 @@
 <span class="source-line-no">018</span><span id="line.18">public interface ItemShippingDetailsDraft {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    /**</span>
-<span class="source-line-no">021</span><span id="line.21">    *  &lt;p&gt;Used to capture one or more (custom) line item specific shipping addresses.</span>
-<span class="source-line-no">022</span><span id="line.22">    *  By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item.</span>
-<span class="source-line-no">023</span><span id="line.23">    *  A cart can have &lt;code&gt;shippingDetails&lt;/code&gt; where the &lt;code&gt;targets&lt;/code&gt; sum does not match the quantity of the line item or custom line item.</span>
-<span class="source-line-no">024</span><span id="line.24">    *  For the order creation and order updates the &lt;code&gt;targets&lt;/code&gt; sum must match the quantity.&lt;/p&gt;</span>
-<span class="source-line-no">025</span><span id="line.25">    */</span>
-<span class="source-line-no">026</span><span id="line.26">    @NotNull</span>
-<span class="source-line-no">027</span><span id="line.27">    @Valid</span>
-<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("targets")</span>
-<span class="source-line-no">029</span><span id="line.29">    public List&lt;ItemShippingTarget&gt; getTargets();</span>
+<span class="source-line-no">021</span><span id="line.21">    *  &lt;p&gt;Used to capture one or more (custom) line item specific shipping addresses. By specifying sub-quantities, it is possible to set multiple shipping addresses for one line item. A cart can have &lt;code&gt;shippingDetails&lt;/code&gt; where the &lt;code&gt;targets&lt;/code&gt; sum does not match the quantity of the line item or custom line item. For the order creation and order updates the &lt;code&gt;targets&lt;/code&gt; sum must match the quantity.&lt;/p&gt;</span>
+<span class="source-line-no">022</span><span id="line.22">    */</span>
+<span class="source-line-no">023</span><span id="line.23">    @NotNull</span>
+<span class="source-line-no">024</span><span id="line.24">    @Valid</span>
+<span class="source-line-no">025</span><span id="line.25">    @JsonProperty("targets")</span>
+<span class="source-line-no">026</span><span id="line.26">    public List&lt;ItemShippingTarget&gt; getTargets();</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    @JsonIgnore</span>
+<span class="source-line-no">029</span><span id="line.29">    public void setTargets(final ItemShippingTarget... targets);</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    @JsonIgnore</span>
-<span class="source-line-no">032</span><span id="line.32">    public void setTargets(final ItemShippingTarget... targets);</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    public void setTargets(final List&lt;ItemShippingTarget&gt; targets);</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public static ItemShippingDetailsDraft of() {</span>
-<span class="source-line-no">037</span><span id="line.37">        return new ItemShippingDetailsDraftImpl();</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public static ItemShippingDetailsDraft of(final ItemShippingDetailsDraft template) {</span>
-<span class="source-line-no">041</span><span id="line.41">        ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();</span>
-<span class="source-line-no">042</span><span id="line.42">        instance.setTargets(template.getTargets());</span>
-<span class="source-line-no">043</span><span id="line.43">        return instance;</span>
-<span class="source-line-no">044</span><span id="line.44">    }</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public static ItemShippingDetailsDraftBuilder builder() {</span>
-<span class="source-line-no">047</span><span id="line.47">        return ItemShippingDetailsDraftBuilder.of();</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public static ItemShippingDetailsDraftBuilder builder(final ItemShippingDetailsDraft template) {</span>
-<span class="source-line-no">051</span><span id="line.51">        return ItemShippingDetailsDraftBuilder.of(template);</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    default &lt;T&gt; T withItemShippingDetailsDraft(Function&lt;ItemShippingDetailsDraft, T&gt; helper) {</span>
-<span class="source-line-no">055</span><span id="line.55">        return helper.apply(this);</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ItemShippingDetailsDraft&gt; typeReference() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ItemShippingDetailsDraft&gt;() {</span>
-<span class="source-line-no">060</span><span id="line.60">            @Override</span>
-<span class="source-line-no">061</span><span id="line.61">            public String toString() {</span>
-<span class="source-line-no">062</span><span id="line.62">                return "TypeReference&lt;ItemShippingDetailsDraft&gt;";</span>
-<span class="source-line-no">063</span><span id="line.63">            }</span>
-<span class="source-line-no">064</span><span id="line.64">        };</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66">}</span>
+<span class="source-line-no">031</span><span id="line.31">    public void setTargets(final List&lt;ItemShippingTarget&gt; targets);</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    public static ItemShippingDetailsDraft of() {</span>
+<span class="source-line-no">034</span><span id="line.34">        return new ItemShippingDetailsDraftImpl();</span>
+<span class="source-line-no">035</span><span id="line.35">    }</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public static ItemShippingDetailsDraft of(final ItemShippingDetailsDraft template) {</span>
+<span class="source-line-no">038</span><span id="line.38">        ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();</span>
+<span class="source-line-no">039</span><span id="line.39">        instance.setTargets(template.getTargets());</span>
+<span class="source-line-no">040</span><span id="line.40">        return instance;</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public static ItemShippingDetailsDraftBuilder builder() {</span>
+<span class="source-line-no">044</span><span id="line.44">        return ItemShippingDetailsDraftBuilder.of();</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public static ItemShippingDetailsDraftBuilder builder(final ItemShippingDetailsDraft template) {</span>
+<span class="source-line-no">048</span><span id="line.48">        return ItemShippingDetailsDraftBuilder.of(template);</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    default &lt;T&gt; T withItemShippingDetailsDraft(Function&lt;ItemShippingDetailsDraft, T&gt; helper) {</span>
+<span class="source-line-no">052</span><span id="line.52">        return helper.apply(this);</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ItemShippingDetailsDraft&gt; typeReference() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ItemShippingDetailsDraft&gt;() {</span>
+<span class="source-line-no">057</span><span id="line.57">            @Override</span>
+<span class="source-line-no">058</span><span id="line.58">            public String toString() {</span>
+<span class="source-line-no">059</span><span id="line.59">                return "TypeReference&lt;ItemShippingDetailsDraft&gt;";</span>
+<span class="source-line-no">060</span><span id="line.60">            }</span>
+<span class="source-line-no">061</span><span id="line.61">        };</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63">}</span>
 
 
 

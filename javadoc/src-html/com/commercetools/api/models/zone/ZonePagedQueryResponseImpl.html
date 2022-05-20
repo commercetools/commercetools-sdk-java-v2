@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;&lt;a href="/general-concepts#pagedqueryresult"&gt;PagedQueryResult&lt;/a&gt; with &lt;code&gt;results&lt;/code&gt; containing an array of &lt;a href="ctp:api:type:Zone"&gt;Zone&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;PagedQueryResult with &lt;code&gt;results&lt;/code&gt; containing an array of Zone.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19">*/</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class ZonePagedQueryResponseImpl implements ZonePagedQueryResponse, ModelBase {</span>
@@ -58,98 +58,93 @@
 <span class="source-line-no">045</span><span id="line.45">    }</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
 <span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">    *  &lt;p&gt;Number of results requested in the query request.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">    *  &lt;p&gt;Number of results requested.&lt;/p&gt;</span>
 <span class="source-line-no">049</span><span id="line.49">    */</span>
 <span class="source-line-no">050</span><span id="line.50">    public Long getLimit() {</span>
 <span class="source-line-no">051</span><span id="line.51">        return this.limit;</span>
 <span class="source-line-no">052</span><span id="line.52">    }</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;Offset supplied by the client or the server default.</span>
-<span class="source-line-no">056</span><span id="line.56">    *  It is the number of elements skipped, not a page number.&lt;/p&gt;</span>
-<span class="source-line-no">057</span><span id="line.57">    */</span>
-<span class="source-line-no">058</span><span id="line.58">    public Long getOffset() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return this.offset;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    /**</span>
-<span class="source-line-no">063</span><span id="line.63">    *  &lt;p&gt;Actual number of results returned.&lt;/p&gt;</span>
-<span class="source-line-no">064</span><span id="line.64">    */</span>
-<span class="source-line-no">065</span><span id="line.65">    public Long getCount() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return this.count;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">    *  &lt;p&gt;Total number of results matching the query.</span>
-<span class="source-line-no">071</span><span id="line.71">    *  This number is an estimation that is not &lt;a href="/../api/general-concepts#strong-consistency"&gt;strongly consistent&lt;/a&gt;.</span>
-<span class="source-line-no">072</span><span id="line.72">    *  This field is returned by default.</span>
-<span class="source-line-no">073</span><span id="line.73">    *  For improved performance, calculating this field can be deactivated by using the query parameter &lt;code&gt;withTotal=false&lt;/code&gt;.</span>
-<span class="source-line-no">074</span><span id="line.74">    *  When the results are filtered with a &lt;a href="/../api/predicates/query"&gt;Query Predicate&lt;/a&gt;, &lt;code&gt;total&lt;/code&gt; is subject to a &lt;a href="/../api/limits#queries"&gt;limit&lt;/a&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">    */</span>
-<span class="source-line-no">076</span><span id="line.76">    public Long getTotal() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return this.total;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">    *  &lt;p&gt;&lt;a href="ctp:api:type:Zone"&gt;Zones&lt;/a&gt; matching the query.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">    */</span>
-<span class="source-line-no">083</span><span id="line.83">    public java.util.List&lt;com.commercetools.api.models.zone.Zone&gt; getResults() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.results;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setLimit(final Long limit) {</span>
-<span class="source-line-no">088</span><span id="line.88">        this.limit = limit;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setOffset(final Long offset) {</span>
-<span class="source-line-no">092</span><span id="line.92">        this.offset = offset;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public void setCount(final Long count) {</span>
-<span class="source-line-no">096</span><span id="line.96">        this.count = count;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public void setTotal(final Long total) {</span>
-<span class="source-line-no">100</span><span id="line.100">        this.total = total;</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public void setResults(final com.commercetools.api.models.zone.Zone... results) {</span>
-<span class="source-line-no">104</span><span id="line.104">        this.results = new ArrayList&lt;&gt;(Arrays.asList(results));</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public void setResults(final java.util.List&lt;com.commercetools.api.models.zone.Zone&gt; results) {</span>
-<span class="source-line-no">108</span><span id="line.108">        this.results = results;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">    */</span>
+<span class="source-line-no">057</span><span id="line.57">    public Long getOffset() {</span>
+<span class="source-line-no">058</span><span id="line.58">        return this.offset;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    /**</span>
+<span class="source-line-no">062</span><span id="line.62">    *  &lt;p&gt;Actual number of results returned.&lt;/p&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">    */</span>
+<span class="source-line-no">064</span><span id="line.64">    public Long getCount() {</span>
+<span class="source-line-no">065</span><span id="line.65">        return this.count;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    /**</span>
+<span class="source-line-no">069</span><span id="line.69">    *  &lt;p&gt;Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter &lt;code&gt;withTotal=false&lt;/code&gt;. When the results are filtered with a Query Predicate, &lt;code&gt;total&lt;/code&gt; is subject to a limit.&lt;/p&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">    */</span>
+<span class="source-line-no">071</span><span id="line.71">    public Long getTotal() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return this.total;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    /**</span>
+<span class="source-line-no">076</span><span id="line.76">    *  &lt;p&gt;Zones matching the query.&lt;/p&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">    */</span>
+<span class="source-line-no">078</span><span id="line.78">    public java.util.List&lt;com.commercetools.api.models.zone.Zone&gt; getResults() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return this.results;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public void setLimit(final Long limit) {</span>
+<span class="source-line-no">083</span><span id="line.83">        this.limit = limit;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public void setOffset(final Long offset) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.offset = offset;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public void setCount(final Long count) {</span>
+<span class="source-line-no">091</span><span id="line.91">        this.count = count;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public void setTotal(final Long total) {</span>
+<span class="source-line-no">095</span><span id="line.95">        this.total = total;</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public void setResults(final com.commercetools.api.models.zone.Zone... results) {</span>
+<span class="source-line-no">099</span><span id="line.99">        this.results = new ArrayList&lt;&gt;(Arrays.asList(results));</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public void setResults(final java.util.List&lt;com.commercetools.api.models.zone.Zone&gt; results) {</span>
+<span class="source-line-no">103</span><span id="line.103">        this.results = results;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    @Override</span>
+<span class="source-line-no">107</span><span id="line.107">    public boolean equals(Object o) {</span>
+<span class="source-line-no">108</span><span id="line.108">        if (this == o)</span>
+<span class="source-line-no">109</span><span id="line.109">            return true;</span>
 <span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    @Override</span>
-<span class="source-line-no">112</span><span id="line.112">    public boolean equals(Object o) {</span>
-<span class="source-line-no">113</span><span id="line.113">        if (this == o)</span>
-<span class="source-line-no">114</span><span id="line.114">            return true;</span>
+<span class="source-line-no">111</span><span id="line.111">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">112</span><span id="line.112">            return false;</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">        ZonePagedQueryResponseImpl that = (ZonePagedQueryResponseImpl) o;</span>
 <span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">117</span><span id="line.117">            return false;</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">        ZonePagedQueryResponseImpl that = (ZonePagedQueryResponseImpl) o;</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">        return new EqualsBuilder().append(limit, that.limit)</span>
-<span class="source-line-no">122</span><span id="line.122">                .append(offset, that.offset)</span>
-<span class="source-line-no">123</span><span id="line.123">                .append(count, that.count)</span>
-<span class="source-line-no">124</span><span id="line.124">                .append(total, that.total)</span>
-<span class="source-line-no">125</span><span id="line.125">                .append(results, that.results)</span>
-<span class="source-line-no">126</span><span id="line.126">                .isEquals();</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    @Override</span>
-<span class="source-line-no">130</span><span id="line.130">    public int hashCode() {</span>
-<span class="source-line-no">131</span><span id="line.131">        return new HashCodeBuilder(17, 37).append(limit)</span>
-<span class="source-line-no">132</span><span id="line.132">                .append(offset)</span>
-<span class="source-line-no">133</span><span id="line.133">                .append(count)</span>
-<span class="source-line-no">134</span><span id="line.134">                .append(total)</span>
-<span class="source-line-no">135</span><span id="line.135">                .append(results)</span>
-<span class="source-line-no">136</span><span id="line.136">                .toHashCode();</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">}</span>
+<span class="source-line-no">116</span><span id="line.116">        return new EqualsBuilder().append(limit, that.limit)</span>
+<span class="source-line-no">117</span><span id="line.117">                .append(offset, that.offset)</span>
+<span class="source-line-no">118</span><span id="line.118">                .append(count, that.count)</span>
+<span class="source-line-no">119</span><span id="line.119">                .append(total, that.total)</span>
+<span class="source-line-no">120</span><span id="line.120">                .append(results, that.results)</span>
+<span class="source-line-no">121</span><span id="line.121">                .isEquals();</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    @Override</span>
+<span class="source-line-no">125</span><span id="line.125">    public int hashCode() {</span>
+<span class="source-line-no">126</span><span id="line.126">        return new HashCodeBuilder(17, 37).append(limit)</span>
+<span class="source-line-no">127</span><span id="line.127">                .append(offset)</span>
+<span class="source-line-no">128</span><span id="line.128">                .append(count)</span>
+<span class="source-line-no">129</span><span id="line.129">                .append(total)</span>
+<span class="source-line-no">130</span><span id="line.130">                .append(results)</span>
+<span class="source-line-no">131</span><span id="line.131">                .toHashCode();</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">}</span>
 
 
 

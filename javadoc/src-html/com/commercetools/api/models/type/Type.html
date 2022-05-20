@@ -37,7 +37,7 @@
 <span class="source-line-no">024</span><span id="line.24">        com.commercetools.api.models.Referencable&lt;Type&gt;, com.commercetools.api.models.ResourceIdentifiable&lt;Type&gt; {</span>
 <span class="source-line-no">025</span><span id="line.25"></span>
 <span class="source-line-no">026</span><span id="line.26">    /**</span>
-<span class="source-line-no">027</span><span id="line.27">    *  &lt;p&gt;Unique ID of the Type.&lt;/p&gt;</span>
+<span class="source-line-no">027</span><span id="line.27">    *  &lt;p&gt;Platform-generated unique identifier of the Type.&lt;/p&gt;</span>
 <span class="source-line-no">028</span><span id="line.28">    */</span>
 <span class="source-line-no">029</span><span id="line.29">    @NotNull</span>
 <span class="source-line-no">030</span><span id="line.30">    @JsonProperty("id")</span>
@@ -65,21 +65,21 @@
 <span class="source-line-no">052</span><span id="line.52">    public ZonedDateTime getLastModifiedAt();</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/../api/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
 <span class="source-line-no">056</span><span id="line.56">    */</span>
 <span class="source-line-no">057</span><span id="line.57">    @Valid</span>
 <span class="source-line-no">058</span><span id="line.58">    @JsonProperty("lastModifiedBy")</span>
 <span class="source-line-no">059</span><span id="line.59">    public LastModifiedBy getLastModifiedBy();</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for &lt;a href="/../api/client-logging#events-tracked"&gt;events not tracked&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">062</span><span id="line.62">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
 <span class="source-line-no">063</span><span id="line.63">    */</span>
 <span class="source-line-no">064</span><span id="line.64">    @Valid</span>
 <span class="source-line-no">065</span><span id="line.65">    @JsonProperty("createdBy")</span>
 <span class="source-line-no">066</span><span id="line.66">    public CreatedBy getCreatedBy();</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
 <span class="source-line-no">068</span><span id="line.68">    /**</span>
-<span class="source-line-no">069</span><span id="line.69">    *  &lt;p&gt;User-defined unique identifier for the Type.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">    *  &lt;p&gt;User-defined unique identifier of the Type.&lt;/p&gt;</span>
 <span class="source-line-no">070</span><span id="line.70">    */</span>
 <span class="source-line-no">071</span><span id="line.71">    @NotNull</span>
 <span class="source-line-no">072</span><span id="line.72">    @JsonProperty("key")</span>

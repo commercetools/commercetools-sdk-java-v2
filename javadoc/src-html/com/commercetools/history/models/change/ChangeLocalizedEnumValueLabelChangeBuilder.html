@@ -35,109 +35,125 @@
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    private com.commercetools.history.models.common.LocalizedString nextValue;</span>
 <span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    public ChangeLocalizedEnumValueLabelChangeBuilder change(final String change) {</span>
-<span class="source-line-no">026</span><span id="line.26">        this.change = change;</span>
-<span class="source-line-no">027</span><span id="line.27">        return this;</span>
-<span class="source-line-no">028</span><span id="line.28">    }</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {</span>
-<span class="source-line-no">031</span><span id="line.31">        this.fieldName = fieldName;</span>
-<span class="source-line-no">032</span><span id="line.32">        return this;</span>
-<span class="source-line-no">033</span><span id="line.33">    }</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {</span>
-<span class="source-line-no">036</span><span id="line.36">        this.attributeName = attributeName;</span>
-<span class="source-line-no">037</span><span id="line.37">        return this;</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {</span>
-<span class="source-line-no">041</span><span id="line.41">        this.valueKey = valueKey;</span>
-<span class="source-line-no">042</span><span id="line.42">        return this;</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(</span>
-<span class="source-line-no">046</span><span id="line.46">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">047</span><span id="line.47">        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">048</span><span id="line.48">        return this;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(</span>
-<span class="source-line-no">052</span><span id="line.52">            final com.commercetools.history.models.common.LocalizedString previousValue) {</span>
-<span class="source-line-no">053</span><span id="line.53">        this.previousValue = previousValue;</span>
-<span class="source-line-no">054</span><span id="line.54">        return this;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(</span>
-<span class="source-line-no">058</span><span id="line.58">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">060</span><span id="line.60">        return this;</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(</span>
-<span class="source-line-no">064</span><span id="line.64">            final com.commercetools.history.models.common.LocalizedString nextValue) {</span>
-<span class="source-line-no">065</span><span id="line.65">        this.nextValue = nextValue;</span>
-<span class="source-line-no">066</span><span id="line.66">        return this;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public String getChange() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return this.change;</span>
+<span class="source-line-no">025</span><span id="line.25">    /**</span>
+<span class="source-line-no">026</span><span id="line.26">    *  &lt;p&gt;Update action for &lt;code&gt;changeLocalizedEnumValueLabel&lt;/code&gt; on types&lt;/p&gt;</span>
+<span class="source-line-no">027</span><span id="line.27">    */</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    public ChangeLocalizedEnumValueLabelChangeBuilder change(final String change) {</span>
+<span class="source-line-no">030</span><span id="line.30">        this.change = change;</span>
+<span class="source-line-no">031</span><span id="line.31">        return this;</span>
+<span class="source-line-no">032</span><span id="line.32">    }</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    /**</span>
+<span class="source-line-no">035</span><span id="line.35">    *  &lt;p&gt;The name of the field definition updated.&lt;/p&gt;</span>
+<span class="source-line-no">036</span><span id="line.36">    */</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {</span>
+<span class="source-line-no">039</span><span id="line.39">        this.fieldName = fieldName;</span>
+<span class="source-line-no">040</span><span id="line.40">        return this;</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">    *  &lt;p&gt;The name of the attribute updated.&lt;/p&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">    */</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {</span>
+<span class="source-line-no">048</span><span id="line.48">        this.attributeName = attributeName;</span>
+<span class="source-line-no">049</span><span id="line.49">        return this;</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    /**</span>
+<span class="source-line-no">053</span><span id="line.53">    *  &lt;p&gt;Key of the values that was updated&lt;/p&gt;</span>
+<span class="source-line-no">054</span><span id="line.54">    */</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {</span>
+<span class="source-line-no">057</span><span id="line.57">        this.valueKey = valueKey;</span>
+<span class="source-line-no">058</span><span id="line.58">        return this;</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(</span>
+<span class="source-line-no">062</span><span id="line.62">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">063</span><span id="line.63">        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">064</span><span id="line.64">        return this;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public ChangeLocalizedEnumValueLabelChangeBuilder previousValue(</span>
+<span class="source-line-no">068</span><span id="line.68">            final com.commercetools.history.models.common.LocalizedString previousValue) {</span>
+<span class="source-line-no">069</span><span id="line.69">        this.previousValue = previousValue;</span>
+<span class="source-line-no">070</span><span id="line.70">        return this;</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public String getFieldName() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return this.fieldName;</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public String getAttributeName() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return this.attributeName;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public String getValueKey() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return this.valueKey;</span>
+<span class="source-line-no">073</span><span id="line.73">    public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(</span>
+<span class="source-line-no">074</span><span id="line.74">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">075</span><span id="line.75">        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">076</span><span id="line.76">        return this;</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(</span>
+<span class="source-line-no">080</span><span id="line.80">            final com.commercetools.history.models.common.LocalizedString nextValue) {</span>
+<span class="source-line-no">081</span><span id="line.81">        this.nextValue = nextValue;</span>
+<span class="source-line-no">082</span><span id="line.82">        return this;</span>
 <span class="source-line-no">083</span><span id="line.83">    }</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return this.previousValue;</span>
+<span class="source-line-no">085</span><span id="line.85">    public String getChange() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return this.change;</span>
 <span class="source-line-no">087</span><span id="line.87">    }</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public com.commercetools.history.models.common.LocalizedString getNextValue() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return this.nextValue;</span>
+<span class="source-line-no">089</span><span id="line.89">    public String getFieldName() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return this.fieldName;</span>
 <span class="source-line-no">091</span><span id="line.91">    }</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public ChangeLocalizedEnumValueLabelChange build() {</span>
-<span class="source-line-no">094</span><span id="line.94">        Objects.requireNonNull(change, ChangeLocalizedEnumValueLabelChange.class + ": change is missing");</span>
-<span class="source-line-no">095</span><span id="line.95">        Objects.requireNonNull(fieldName, ChangeLocalizedEnumValueLabelChange.class + ": fieldName is missing");</span>
-<span class="source-line-no">096</span><span id="line.96">        Objects.requireNonNull(attributeName, ChangeLocalizedEnumValueLabelChange.class + ": attributeName is missing");</span>
-<span class="source-line-no">097</span><span id="line.97">        Objects.requireNonNull(valueKey, ChangeLocalizedEnumValueLabelChange.class + ": valueKey is missing");</span>
-<span class="source-line-no">098</span><span id="line.98">        Objects.requireNonNull(previousValue, ChangeLocalizedEnumValueLabelChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">099</span><span id="line.99">        Objects.requireNonNull(nextValue, ChangeLocalizedEnumValueLabelChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">100</span><span id="line.100">        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,</span>
-<span class="source-line-no">101</span><span id="line.101">            nextValue);</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    /**</span>
-<span class="source-line-no">105</span><span id="line.105">     * builds ChangeLocalizedEnumValueLabelChange without checking for non null required values</span>
-<span class="source-line-no">106</span><span id="line.106">     */</span>
-<span class="source-line-no">107</span><span id="line.107">    public ChangeLocalizedEnumValueLabelChange buildUnchecked() {</span>
-<span class="source-line-no">108</span><span id="line.108">        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,</span>
-<span class="source-line-no">109</span><span id="line.109">            nextValue);</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public static ChangeLocalizedEnumValueLabelChangeBuilder of() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return new ChangeLocalizedEnumValueLabelChangeBuilder();</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public static ChangeLocalizedEnumValueLabelChangeBuilder of(final ChangeLocalizedEnumValueLabelChange template) {</span>
-<span class="source-line-no">117</span><span id="line.117">        ChangeLocalizedEnumValueLabelChangeBuilder builder = new ChangeLocalizedEnumValueLabelChangeBuilder();</span>
-<span class="source-line-no">118</span><span id="line.118">        builder.change = template.getChange();</span>
-<span class="source-line-no">119</span><span id="line.119">        builder.fieldName = template.getFieldName();</span>
-<span class="source-line-no">120</span><span id="line.120">        builder.attributeName = template.getAttributeName();</span>
-<span class="source-line-no">121</span><span id="line.121">        builder.valueKey = template.getValueKey();</span>
-<span class="source-line-no">122</span><span id="line.122">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">123</span><span id="line.123">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">124</span><span id="line.124">        return builder;</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">}</span>
+<span class="source-line-no">093</span><span id="line.93">    public String getAttributeName() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return this.attributeName;</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public String getValueKey() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.valueKey;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return this.previousValue;</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public com.commercetools.history.models.common.LocalizedString getNextValue() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return this.nextValue;</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    public ChangeLocalizedEnumValueLabelChange build() {</span>
+<span class="source-line-no">110</span><span id="line.110">        Objects.requireNonNull(change, ChangeLocalizedEnumValueLabelChange.class + ": change is missing");</span>
+<span class="source-line-no">111</span><span id="line.111">        Objects.requireNonNull(fieldName, ChangeLocalizedEnumValueLabelChange.class + ": fieldName is missing");</span>
+<span class="source-line-no">112</span><span id="line.112">        Objects.requireNonNull(attributeName, ChangeLocalizedEnumValueLabelChange.class + ": attributeName is missing");</span>
+<span class="source-line-no">113</span><span id="line.113">        Objects.requireNonNull(valueKey, ChangeLocalizedEnumValueLabelChange.class + ": valueKey is missing");</span>
+<span class="source-line-no">114</span><span id="line.114">        Objects.requireNonNull(previousValue, ChangeLocalizedEnumValueLabelChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">115</span><span id="line.115">        Objects.requireNonNull(nextValue, ChangeLocalizedEnumValueLabelChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">116</span><span id="line.116">        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,</span>
+<span class="source-line-no">117</span><span id="line.117">            nextValue);</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    /**</span>
+<span class="source-line-no">121</span><span id="line.121">     * builds ChangeLocalizedEnumValueLabelChange without checking for non null required values</span>
+<span class="source-line-no">122</span><span id="line.122">     */</span>
+<span class="source-line-no">123</span><span id="line.123">    public ChangeLocalizedEnumValueLabelChange buildUnchecked() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,</span>
+<span class="source-line-no">125</span><span id="line.125">            nextValue);</span>
+<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">    public static ChangeLocalizedEnumValueLabelChangeBuilder of() {</span>
+<span class="source-line-no">129</span><span id="line.129">        return new ChangeLocalizedEnumValueLabelChangeBuilder();</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    public static ChangeLocalizedEnumValueLabelChangeBuilder of(final ChangeLocalizedEnumValueLabelChange template) {</span>
+<span class="source-line-no">133</span><span id="line.133">        ChangeLocalizedEnumValueLabelChangeBuilder builder = new ChangeLocalizedEnumValueLabelChangeBuilder();</span>
+<span class="source-line-no">134</span><span id="line.134">        builder.change = template.getChange();</span>
+<span class="source-line-no">135</span><span id="line.135">        builder.fieldName = template.getFieldName();</span>
+<span class="source-line-no">136</span><span id="line.136">        builder.attributeName = template.getAttributeName();</span>
+<span class="source-line-no">137</span><span id="line.137">        builder.valueKey = template.getValueKey();</span>
+<span class="source-line-no">138</span><span id="line.138">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">139</span><span id="line.139">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">140</span><span id="line.140">        return builder;</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">}</span>
 
 
 

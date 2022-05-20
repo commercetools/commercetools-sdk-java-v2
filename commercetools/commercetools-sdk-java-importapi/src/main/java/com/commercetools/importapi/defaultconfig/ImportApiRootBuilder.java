@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.client.ApiRoot;
 import com.commercetools.importapi.client.ByProjectKeyRequestBuilder;
+import com.commercetools.importapi.client.ImportCorrelationIdProvider;
 import com.commercetools.importapi.client.ProjectApiRoot;
 
 import io.vrap.rmf.base.client.*;
@@ -318,7 +319,12 @@ public class ImportApiRootBuilder {
     }
 
     public ImportApiRootBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {
-        builder.addCorrelationIdProvider(correlationIdProvider);
+        return addCorrelationIdProvider(correlationIdProvider, true);
+    }
+
+    private ImportApiRootBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider,
+            final boolean replace) {
+        builder.addCorrelationIdProvider(correlationIdProvider, replace);
 
         return this;
     }
@@ -364,6 +370,7 @@ public class ImportApiRootBuilder {
      */
     @Deprecated
     public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {
+        addCorrelationIdProvider(new ImportCorrelationIdProvider(projectKey), false);
         return ApiRoot.fromClient(builder.build()).withProjectKeyValue(projectKey);
     }
 
@@ -372,10 +379,12 @@ public class ImportApiRootBuilder {
      */
     @Deprecated
     public ProjectApiRoot buildProjectRoot(final String projectKey) {
+        addCorrelationIdProvider(new ImportCorrelationIdProvider(projectKey), false);
         return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 
     public ProjectApiRoot build(final String projectKey) {
+        addCorrelationIdProvider(new ImportCorrelationIdProvider(projectKey), false);
         return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 }

@@ -344,7 +344,12 @@ public class ApiRootBuilder {
     }
 
     public ApiRootBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider) {
-        return with(clientBuilder -> clientBuilder.addCorrelationIdProvider(correlationIdProvider));
+        return addCorrelationIdProvider(correlationIdProvider, true);
+    }
+
+    private ApiRootBuilder addCorrelationIdProvider(final @Nullable CorrelationIdProvider correlationIdProvider,
+            final boolean replace) {
+        return with(clientBuilder -> clientBuilder.addCorrelationIdProvider(correlationIdProvider, replace));
     }
 
     public ApiRootBuilder withMiddleware(final Middleware middleware, final Middleware... middlewares) {
@@ -386,11 +391,13 @@ public class ApiRootBuilder {
      */
     @Deprecated
     public ByProjectKeyRequestBuilder buildForProject(final String projectKey) {
+        addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey), false);
         return ApiRoot.fromClient(builder.build()).withProjectKey(projectKey);
     }
 
     public ProjectApiRoot buildProjectRoot() {
         Objects.requireNonNull(projectKey, PROJECT_KEY_MUST_BE_SET);
+        addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey), false);
         return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 
@@ -399,10 +406,12 @@ public class ApiRootBuilder {
      */
     @Deprecated
     public ProjectApiRoot buildProjectRoot(final String projectKey) {
+        addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey), false);
         return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 
     public ProjectApiRoot build(final String projectKey) {
+        addCorrelationIdProvider(new ApiCorrelationIdProvider(projectKey), false);
         return ProjectApiRoot.fromClient(projectKey, builder.build());
     }
 

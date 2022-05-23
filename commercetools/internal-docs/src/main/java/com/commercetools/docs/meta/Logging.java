@@ -38,7 +38,7 @@ package com.commercetools.docs.meta;
  *
  * <p>The child loggers of commercetools Composable Commerce correspond with the names of the API endpoints, so for example {@code commercetools.categories} for Categories and {@code commercetools.product-types} for Product Types.</p>
  *
- * <p>The grandchild loggers refer to the action. {@code commercetools.categories.request} refers to performing requests per HTTPS to commercetools Composable Commerce for categories, {@code commercetools.categories.response} refers to the responses of the platform.</p>
+ * <p>The grandchild loggers refer to actions. For example, {@code commercetools.categories.request} refers to performing requests via HTTPs to commercetools Composable Commerce for Categories and {@code commercetools.categories.response} refers to the response for Categories. </p>
  *
  * <p>The logger makes use of different log levels, so for example {@code commercetools.categories.response} logs on debug level the http response from the platform (abbreviated example):</p>
  *

@@ -4,7 +4,7 @@ package com.commercetools.docs.meta;
 /**
  * <h2 id=logging>Logging</h2>
  *
- * <p>Internal logging used by the commercetools client itself. Uses slf4j logger named {@code commercetools}.</p>
+ * <p>Internal logging used by the commercetools Composable Commerce client itself. Uses slf4j logger named {@code commercetools}.</p>
  *
  * <h2 id=log-information>Log Information</h2>
  *
@@ -36,9 +36,9 @@ package com.commercetools.docs.meta;
  *
  * <p>The loggers form a hierarchy separated by a dot. The root logger is {@code commercetools}.</p>
  *
- * <p>The child loggers of commercetools are the endpoints, so for example {@code commercetools.categories} for categories and {@code commercetools.product-types} for product types.</p>
+ * <p>The child loggers of commercetools Composable Commerce are the endpoints, so for example {@code commercetools.categories} for categories and {@code commercetools.product-types} for product types.</p>
  *
- * <p>The grandchild loggers refer to the action. {@code commercetools.categories.request} refers to performing requests per HTTPS to commercetools for categories, {@code commercetools.categories.response} refers to the responses of the platform.</p>
+ * <p>The grandchild loggers refer to the action. {@code commercetools.categories.request} refers to performing requests per HTTPS to commercetools Composable Commerce for categories, {@code commercetools.categories.response} refers to the responses of the platform.</p>
  *
  * <p>The logger makes use of different log levels, so for example {@code commercetools.categories.response} logs on debug level the http response from the platform (abbreviated example):</p>
  *

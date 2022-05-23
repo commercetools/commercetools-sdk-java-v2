@@ -1,4 +1,4 @@
-# <img src="build/theme/resources/CT_cube_200px.png" width="40" align="center"></img> commercetools JAVA SDK
+# <img src="build/theme/resources/CT_cube_200px.png" width="40" align="center"></img> commercetools Composable Commerce JAVA SDK
 
 
 [![][maven img]][maven]
@@ -7,7 +7,7 @@
 
 ## Introduction
 
-This repository contains the commercetools platform and import-api java sdks generated from our api reference.
+This repository contains the commercetools Composable Commerce and import-api java sdks generated from our api reference.
 
 * [Getting Started](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/GettingStarted.html)
 

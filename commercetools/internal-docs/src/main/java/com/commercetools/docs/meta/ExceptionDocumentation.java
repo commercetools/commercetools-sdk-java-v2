@@ -12,7 +12,7 @@ package com.commercetools.docs.meta;
  *
  * <p>JSON serializing and deserializing problems throw {@link io.vrap.rmf.base.client.utils.json.JsonException}.</p>
  *
- * <p>{@link io.vrap.rmf.base.client.ApiHttpException} is a base exception for all error responses from the commercetools platform (HTTP status code {@code >= 400}).</p>
+ * <p>{@link io.vrap.rmf.base.client.ApiHttpException} is a base exception for all error responses from the commercetools Composable Commerce (HTTP status code {@code >= 400}).</p>
  *
  * <p>{@link io.vrap.rmf.base.client.error.ApiClientException} expresses errors which can be recovered by the client side (HTTP status code {@code >= 400 and < 500}).
  * {@link io.vrap.rmf.base.client.error.ApiServerException} is for server errors.</p>

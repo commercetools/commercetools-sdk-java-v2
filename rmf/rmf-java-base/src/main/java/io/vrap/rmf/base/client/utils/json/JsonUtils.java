@@ -119,7 +119,7 @@ public class JsonUtils {
     }
 
     /**
-     * Converts a commercetools platform Java object to JSON as {@link JsonNode}.
+     * Converts a commercetools Composable Commerce Java object to JSON as {@link JsonNode}.
      * <p>If {@code value} is of type String and contains JSON data, that will be ignored, {@code value} will be treated as just any String.
      * If you want to parse a JSON String to a JsonNode use {@link JsonUtils#parse(java.lang.String)} instead.</p>
      * <p>

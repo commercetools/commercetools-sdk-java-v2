@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>The token value is used to reset the password of the customer with the given email. The token is valid only for 10 minutes.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken>> result = apiRoot
            .withProjectKey("{projectKey}")
            .inStoreKeyWithStoreKeyValue("{storeKey}")
@@ -25,7 +25,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
            .passwordToken()
            .post(null)
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

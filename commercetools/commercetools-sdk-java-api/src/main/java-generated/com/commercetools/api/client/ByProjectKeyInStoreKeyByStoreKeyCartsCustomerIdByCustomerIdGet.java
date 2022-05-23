@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date, send an Update request with the Recalculate update action instead.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> result = apiRoot
            .withProjectKey("{projectKey}")
            .inStoreKeyWithStoreKeyValue("{storeKey}")
@@ -30,7 +30,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
            .withCustomerId("{customerId}")
            .get()
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

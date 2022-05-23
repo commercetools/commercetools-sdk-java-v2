@@ -17,14 +17,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Create an Order by Import</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> result = apiRoot
            .withProjectKey("{projectKey}")
            .orders()
            .importOrder()
            .post(null)
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

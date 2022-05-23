@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Creates a new import request for order patches</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse>> result = apiRoot
            .withProjectKeyValue("{projectKey}")
            .orderPatches()
@@ -25,7 +25,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
            .withImportContainerKeyValue("{importContainerKey}")
            .post(null)
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

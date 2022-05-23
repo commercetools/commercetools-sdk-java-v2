@@ -20,13 +20,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>To create a payment object a payment draft object has to be given with the request.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> result = apiRoot
            .withProjectKey("{projectKey}")
            .payments()
            .post(null)
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

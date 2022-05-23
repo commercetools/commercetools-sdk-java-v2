@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Retrieves all import operations of an import sink key.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>> result = apiRoot
            .withProjectKeyValue("{projectKey}")
            .productTypes()
@@ -30,7 +30,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
            .importOperations()
            .get()
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

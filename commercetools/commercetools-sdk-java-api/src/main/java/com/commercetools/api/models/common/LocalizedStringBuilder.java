@@ -4,7 +4,6 @@ package com.commercetools.api.models.common;
 import java.util.*;
 
 import io.vrap.rmf.base.client.Builder;
-import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * Builder to create a {@link LocalizedString}

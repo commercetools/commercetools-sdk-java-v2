@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Deprecated scope: <code>manage_orders:{projectKey}</code></p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode>> result = apiRoot
            .withProjectKey("{projectKey}")
            .discountCodes()
@@ -28,7 +28,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
            .delete()
            .withVersion(version)
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

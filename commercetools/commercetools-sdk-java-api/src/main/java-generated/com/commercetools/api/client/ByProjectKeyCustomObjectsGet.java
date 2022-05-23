@@ -20,13 +20,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>For performance reasons, it is highly advisable to query for Custom Objects in a container by using the <code>container</code> field in the <code>where</code> predicate.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>> result = apiRoot
            .withProjectKey("{projectKey}")
            .customObjects()
            .get()
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

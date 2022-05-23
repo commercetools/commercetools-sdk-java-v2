@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Updates a customer in the store specified by {storeKey}. If the customer exists in the commercetools project but the stores field references a different store, this method returns a ResourceNotFound error.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> result = apiRoot
            .withProjectKey("{projectKey}")
            .inStoreKeyWithStoreKeyValue("{storeKey}")
@@ -28,7 +28,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
            .withId("{ID}")
            .post(null)
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

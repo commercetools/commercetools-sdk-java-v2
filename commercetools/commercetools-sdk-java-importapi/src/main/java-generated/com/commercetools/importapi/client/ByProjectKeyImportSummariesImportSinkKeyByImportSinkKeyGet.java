@@ -18,14 +18,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>The import summary is calculated on demand.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsummaries.ImportSummary>> result = apiRoot
            .withProjectKeyValue("{projectKey}")
            .importSummaries()
            .importSinkKeyWithImportSinkKeyValue("{importSinkKey}")
            .get()
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

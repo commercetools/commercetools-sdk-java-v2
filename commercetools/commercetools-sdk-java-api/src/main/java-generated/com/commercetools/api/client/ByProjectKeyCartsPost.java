@@ -20,13 +20,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Creating a cart can fail with an InvalidOperation if the referenced shipping method in the CartDraft has a predicate which does not match the cart.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> result = apiRoot
            .withProjectKey("{projectKey}")
            .carts()
            .post(null)
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

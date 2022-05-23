@@ -20,14 +20,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Gets the full representation of a product by Key.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> result = apiRoot
            .withProjectKey("{projectKey}")
            .products()
            .withKey("{key}")
            .get()
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

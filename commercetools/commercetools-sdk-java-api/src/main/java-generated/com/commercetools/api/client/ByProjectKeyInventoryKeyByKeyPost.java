@@ -18,14 +18,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.inventory.InventoryEntry>> result = apiRoot
            .withProjectKey("{projectKey}")
            .inventory()
            .withKey("{key}")
            .post(null)
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

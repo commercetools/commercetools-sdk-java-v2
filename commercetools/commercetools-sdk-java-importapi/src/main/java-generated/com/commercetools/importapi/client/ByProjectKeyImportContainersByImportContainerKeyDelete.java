@@ -17,14 +17,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Deletes the import container given by the key.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importcontainers.ImportContainer>> result = apiRoot
            .withProjectKeyValue("{projectKey}")
            .importContainers()
            .withImportContainerKeyValue("{importContainerKey}")
            .delete()
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

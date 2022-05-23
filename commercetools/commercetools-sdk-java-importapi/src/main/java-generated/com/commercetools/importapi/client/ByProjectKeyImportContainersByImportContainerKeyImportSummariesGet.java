@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Retrieves an ImportSummary for the given import container. An ImportSummary is calculated on demand.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsummaries.ImportSummary>> result = apiRoot
            .withProjectKeyValue("{projectKey}")
            .importContainers()
@@ -25,7 +25,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
            .importSummaries()
            .get()
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

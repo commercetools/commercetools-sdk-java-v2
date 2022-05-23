@@ -17,14 +17,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>This endpoint can be used to simulate which Product Discounts would be applied if a specified Product Variant had a specified Price. Given Product and Product Variant IDs and a Price, this endpoint will return the ProductDiscount that would have been applied to that Price.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount>> result = apiRoot
            .withProjectKey("{projectKey}")
            .productDiscounts()
            .matching()
            .post(null)
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

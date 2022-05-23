@@ -20,13 +20,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  <p>Retrieves all import sinks of a project key.</p>
 
  <div class=code-example>
- <pre><code class='java'>
+ <pre><code class='java'>{@code
    CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse>> result = apiRoot
            .withProjectKeyValue("{projectKey}")
            .importSinks()
            .get()
            .execute()
- </code></pre>
+ }</code></pre>
  </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

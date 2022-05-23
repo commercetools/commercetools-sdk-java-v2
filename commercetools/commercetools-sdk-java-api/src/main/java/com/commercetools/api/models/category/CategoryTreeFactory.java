@@ -13,6 +13,9 @@ import java.util.stream.Collectors;
 import com.commercetools.api.models.Identifiable;
 import com.commercetools.api.models.common.LocalizedStringEntry;
 
+/**
+ * Helper to create a Tree structure from a list of categories
+ */
 public class CategoryTreeFactory {
     private CategoryTreeFactory() {
     }

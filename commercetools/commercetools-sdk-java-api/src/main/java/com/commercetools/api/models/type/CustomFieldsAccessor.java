@@ -19,6 +19,9 @@ import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoney;
 
+/**
+ * Accessor for retrieving type safe custom field values
+ */
 public class CustomFieldsAccessor extends MapAccessor<Object> {
     private final Map<String, Object> values;
 

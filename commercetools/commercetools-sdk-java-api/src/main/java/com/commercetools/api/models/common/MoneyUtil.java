@@ -14,6 +14,9 @@ import com.commercetools.money.MonetarySupplier;
 
 import org.javamoney.moneta.spi.DefaultRoundingProvider;
 
+/**
+ * Utility methods to convert from {@link MonetaryAmount} to {@link Money} and vice versa
+ */
 public class MoneyUtil {
     private static final MonetaryProvider MONETARY_PROVIDER;
     protected static final DefaultRoundingProvider ROUNDING_PROVIDER = new DefaultRoundingProvider();

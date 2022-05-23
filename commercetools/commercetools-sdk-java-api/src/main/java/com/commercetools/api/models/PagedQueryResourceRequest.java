@@ -10,8 +10,8 @@ import io.vrap.rmf.base.client.RequestCommand;
 
 /**
  * Interface with common methods for query endpoints
- * @param <T>
- * @param <TResult>
+ * @param <T> the type of the underlying request
+ * @param <TResult> the type of the underlying result model, like category or product.
  */
 public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T, TResult>, TResult>
         extends RequestCommand<TResult>, ClientRequestCommand<TResult> {

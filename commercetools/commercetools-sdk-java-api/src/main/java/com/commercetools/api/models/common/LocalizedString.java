@@ -21,6 +21,12 @@ import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.annotation.*;
 
+/**
+ * A localized string is a object where the keys are {@link Locale}s (HTTP API: ISO language tags),
+ * and the values are the corresponding strings used for that language.
+ *
+ * {@include.example com.commercetools.LocalizedStringTest#defaultUseCases()}
+ */
 @JsonDeserialize(as = LocalizedStringImpl.class)
 public interface LocalizedString {
 

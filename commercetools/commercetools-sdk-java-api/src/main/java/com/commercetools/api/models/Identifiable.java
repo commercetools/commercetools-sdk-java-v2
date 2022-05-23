@@ -3,7 +3,7 @@ package com.commercetools.api.models;
 
 /**
  * an object identifiable by an ID
- * @param <T>
+ * @param <T> The type which has an ID.
  */
 public interface Identifiable<T> {
     /**

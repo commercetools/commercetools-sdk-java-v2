@@ -9,6 +9,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+ *
+ * @param <TValue> The type of the value of this custom object.
+ */
 public class GenericCustomObjectImpl<TValue> implements GenericCustomObject<TValue> {
 
     private String id;

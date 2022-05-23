@@ -10,6 +10,9 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
+/**
+ * Accessor to retrieve type safe facet results
+ */
 public class FacetResultsAccessor extends Accessor<FacetResults> {
     public FacetResultsAccessor(FacetResults value) {
         super(value);

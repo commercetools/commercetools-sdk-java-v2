@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * @param <T> the underlying reference type
+ */
 @JsonDeserialize(as = GenericReferenceImpl.class)
 @JsonSubTypes({})
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = GenericReferenceImpl.class, visible = true)

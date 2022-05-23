@@ -10,6 +10,9 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.MetaAttributes;
 import com.commercetools.api.models.common.WithLocalizedSlug;
 
+/**
+ * Interface to describe commonalities between differen product representations
+ */
 public interface ProductDataLike extends WithLocalizedSlug, MetaAttributes {
 
     LocalizedString getName();

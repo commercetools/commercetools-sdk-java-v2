@@ -18,6 +18,9 @@ import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 
+/**
+ * Accessor to retrieve attribute values type safe
+ */
 public class AttributesAccessor extends MapAccessor<Attribute> {
 
     public AttributesAccessor(Map<String, Attribute> attributes) {

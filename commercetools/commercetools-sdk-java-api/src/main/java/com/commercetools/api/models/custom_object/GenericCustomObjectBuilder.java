@@ -8,6 +8,10 @@ import javax.annotation.Nullable;
 
 import io.vrap.rmf.base.client.Builder;
 
+/**
+ *
+ * @param <TValue> The type of the value of this custom object.
+ */
 public class GenericCustomObjectBuilder<TValue> implements Builder<GenericCustomObject<TValue>> {
 
     private String id;

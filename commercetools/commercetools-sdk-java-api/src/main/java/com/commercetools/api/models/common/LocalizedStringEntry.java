@@ -3,6 +3,9 @@ package com.commercetools.api.models.common;
 
 import java.util.Locale;
 
+/**
+ * Entry of for a LocalizedString
+ */
 public final class LocalizedStringEntry {
     private final Locale locale;
     private final String value;

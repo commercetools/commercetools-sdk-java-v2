@@ -14,7 +14,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TaxedPrice taxedPrice = TaxedPrice.builder()
+           .totalNet(totalNetBuilder -> totalNetBuilder)
+           .totalGross(totalGrossBuilder -> totalGrossBuilder)
+           .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxedPriceImpl.class)
 public interface TaxedPrice {
 
@@ -29,16 +41,16 @@ public interface TaxedPrice {
     public TypedMoney getTotalGross();
 
     /**
-    *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
-    */
+     *  <p>TaxedPrice fields that can be used in query predicates: <code>totalNet</code>, <code>totalGross</code>.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("taxPortions")
     public List<TaxPortion> getTaxPortions();
 
     /**
-    *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
-    */
+     *  <p>Platform-calculated value as subtraction of <code>totalGross</code> - <code>totalNet</code>.</p>
+     */
     @Valid
     @JsonProperty("totalTax")
     public TypedMoney getTotalTax();

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TrackingDataImpl implements TrackingData, ModelBase {
 
     private String trackingId;
@@ -43,15 +43,15 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-    *  <p>The ID to track one parcel.</p>
-    */
+     *  <p>The ID to track one parcel.</p>
+     */
     public String getTrackingId() {
         return this.trackingId;
     }
 
     /**
-    *  <p>The carrier that delivers the parcel.</p>
-    */
+     *  <p>The carrier that delivers the parcel.</p>
+     */
     public String getCarrier() {
         return this.carrier;
     }
@@ -65,8 +65,8 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-    *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
-    */
+     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     */
     public Boolean getIsReturn() {
         return this.isReturn;
     }

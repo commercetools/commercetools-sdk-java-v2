@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerGroupDraft customerGroupDraft = CustomerGroupDraft.builder()
+           .groupName("{groupName}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
 
     @Nullable
@@ -21,8 +31,8 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-    *  <p>User-defined unique identifier for the CustomerGroup.</p>
-    */
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     */
 
     public CustomerGroupDraftBuilder key(@Nullable final String key) {
         this.key = key;
@@ -30,8 +40,8 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     }
 
     /**
-    *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
-    */
+     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
+     */
 
     public CustomerGroupDraftBuilder groupName(final String groupName) {
         this.groupName = groupName;
@@ -39,8 +49,8 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the CustomerGroup.</p>
-    */
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     */
 
     public CustomerGroupDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -49,8 +59,8 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the CustomerGroup.</p>
-    */
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     */
 
     public CustomerGroupDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

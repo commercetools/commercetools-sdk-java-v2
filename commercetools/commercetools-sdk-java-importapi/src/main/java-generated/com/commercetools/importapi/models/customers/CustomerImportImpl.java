@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The data representation for a Customer to be imported that is persisted as a Customer in the Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The data representation for a Customer to be imported that is persisted as a Customer in the Project.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerImportImpl implements CustomerImport, ModelBase {
 
     private String key;
@@ -118,155 +118,155 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>Customer.customerNumber</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.customerNumber</code>.</p>
+     */
     public String getCustomerNumber() {
         return this.customerNumber;
     }
 
     /**
-    *  <p>Maps to <code>Customer.email</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.email</code>.</p>
+     */
     public String getEmail() {
         return this.email;
     }
 
     /**
-    *  <p>Maps to <code>Customer.password</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.password</code>.</p>
+     */
     public String getPassword() {
         return this.password;
     }
 
     /**
-    *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
-    */
+     *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+     */
     public java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> getStores() {
         return this.stores;
     }
 
     /**
-    *  <p>Maps to <code>Customer.firstName</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.firstName</code>.</p>
+     */
     public String getFirstName() {
         return this.firstName;
     }
 
     /**
-    *  <p>Maps to <code>Customer.lastName</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.lastName</code>.</p>
+     */
     public String getLastName() {
         return this.lastName;
     }
 
     /**
-    *  <p>Maps to <code>Customer.middleName</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.middleName</code>.</p>
+     */
     public String getMiddleName() {
         return this.middleName;
     }
 
     /**
-    *  <p>Maps to <code>Customer.title</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.title</code>.</p>
+     */
     public String getTitle() {
         return this.title;
     }
 
     /**
-    *  <p>Maps to <code>Customer.salutation</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.salutation</code>.</p>
+     */
     public String getSalutation() {
         return this.salutation;
     }
 
     /**
-    *  <p>Maps to <code>Customer.externalId</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.externalId</code>.</p>
+     */
     public String getExternalId() {
         return this.externalId;
     }
 
     /**
-    *  <p>Maps to <code>Customer.dateOfBirth</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.dateOfBirth</code>.</p>
+     */
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
     }
 
     /**
-    *  <p>Maps to <code>Customer.companyName</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.companyName</code>.</p>
+     */
     public String getCompanyName() {
         return this.companyName;
     }
 
     /**
-    *  <p>Maps to <code>Customer.vatId</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.vatId</code>.</p>
+     */
     public String getVatId() {
         return this.vatId;
     }
 
     /**
-    *  <p>Maps to <code>Customer.isEmailVerified</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.isEmailVerified</code>.</p>
+     */
     public Boolean getIsEmailVerified() {
         return this.isEmailVerified;
     }
 
     /**
-    *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
-    */
+     *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     */
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>Maps to <code>Customer.addresses</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.addresses</code>.</p>
+     */
     public java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> getAddresses() {
         return this.addresses;
     }
 
     /**
-    *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
-    */
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+     */
     public Integer getDefaultBillingAddress() {
         return this.defaultBillingAddress;
     }
 
     /**
-    *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
-    */
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     */
     public java.util.List<Integer> getBillingAddresses() {
         return this.billingAddresses;
     }
 
     /**
-    *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
-    */
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+     */
     public Integer getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
 
     /**
-    *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
-    */
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     */
     public java.util.List<Integer> getShippingAddresses() {
         return this.shippingAddresses;
     }
 
     /**
-    *  <p>Maps to <code>Customer.locale</code>.</p>
-    */
+     *  <p>Maps to <code>Customer.locale</code>.</p>
+     */
     public String getLocale() {
         return this.locale;
     }
 
     /**
-    *  <p>The custom fields for this Customer.</p>
-    */
+     *  <p>The custom fields for this Customer.</p>
+     */
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
     }

@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The given combination of values of a Product Variant conflicts with an existing one. Every Product Variant must have a distinct combination of SKU, prices, and custom attribute values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The given combination of values of a Product Variant conflicts with an existing one. Every Product Variant must have a distinct combination of SKU, prices, and custom attribute values.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesError, ModelBase {
 
     private String code;
@@ -47,8 +47,8 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
     }
 
     /**
-    *  <p>The offending variant values.</p>
-    */
+     *  <p>The offending variant values.</p>
+     */
     public com.commercetools.importapi.models.errors.VariantValues getVariantValues() {
         return this.variantValues;
     }

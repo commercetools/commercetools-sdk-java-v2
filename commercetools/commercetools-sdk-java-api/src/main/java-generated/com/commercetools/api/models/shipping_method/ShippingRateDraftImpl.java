@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
 
     private com.commercetools.api.models.common.Money price;
@@ -40,15 +40,15 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-    *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the freeAbove value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
-    */
+     *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the freeAbove value. Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.</p>
+     */
     public com.commercetools.api.models.common.Money getFreeAbove() {
         return this.freeAbove;
     }
 
     /**
-    *  <p>A list of shipping rate price tiers.</p>
-    */
+     *  <p>A list of shipping rate price tiers.</p>
+     */
     public java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> getTiers() {
         return this.tiers;
     }

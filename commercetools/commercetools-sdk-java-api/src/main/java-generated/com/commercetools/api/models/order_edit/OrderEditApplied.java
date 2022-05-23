@@ -14,7 +14,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderEditApplied orderEditApplied = OrderEditApplied.builder()
+           .appliedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .excerptBeforeEdit(excerptBeforeEditBuilder -> excerptBeforeEditBuilder)
+           .excerptAfterEdit(excerptAfterEditBuilder -> excerptAfterEditBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditAppliedImpl.class)
 public interface OrderEditApplied extends OrderEditResult {
 

@@ -16,7 +16,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   InventoryEntryDraft inventoryEntryDraft = InventoryEntryDraft.builder()
+           .sku("{sku}")
+           .quantityOnStock(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryDraftImpl.class)
 public interface InventoryEntryDraft extends com.commercetools.api.models.CustomizableDraft<InventoryEntryDraft> {
 
@@ -25,8 +36,8 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     public String getSku();
 
     /**
-    *  <p>User-defined unique identifier for the InventoryEntry.</p>
-    */
+     *  <p>User-defined unique identifier for the InventoryEntry.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
@@ -46,8 +57,8 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     public ZonedDateTime getExpectedDelivery();
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

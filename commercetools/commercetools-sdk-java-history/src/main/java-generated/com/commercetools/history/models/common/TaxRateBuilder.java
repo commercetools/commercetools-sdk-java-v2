@@ -7,7 +7,23 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TaxRate taxRate = TaxRate.builder()
+           .id("{id}")
+           .name("{name}")
+           .amount(1)
+           .includedInPrice(true)
+           .country("{country}")
+           .state("{state}")
+           .plusSubRates(subRatesBuilder -> subRatesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxRateBuilder implements Builder<TaxRate> {
 
     private String id;
@@ -25,8 +41,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     private java.util.List<com.commercetools.history.models.common.SubRate> subRates;
 
     /**
-    *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
-    */
+     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
+     */
 
     public TaxRateBuilder id(final String id) {
         this.id = id;
@@ -39,8 +55,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
-    */
+     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+     */
 
     public TaxRateBuilder amount(final Integer amount) {
         this.amount = amount;
@@ -53,8 +69,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public TaxRateBuilder country(final String country) {
         this.country = country;
@@ -62,8 +78,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>The state in the country</p>
-    */
+     *  <p>The state in the country</p>
+     */
 
     public TaxRateBuilder state(final String state) {
         this.state = state;

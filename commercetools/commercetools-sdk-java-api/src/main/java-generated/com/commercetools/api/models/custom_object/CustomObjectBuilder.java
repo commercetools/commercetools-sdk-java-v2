@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomObject customObject = CustomObject.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .container("{container}")
+           .key("{key}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectBuilder implements Builder<CustomObject> {
 
     private String id;
@@ -33,8 +48,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     private java.lang.Object value;
 
     /**
-    *  <p>Platform-generated unique identifier of the CustomObject.</p>
-    */
+     *  <p>Platform-generated unique identifier of the CustomObject.</p>
+     */
 
     public CustomObjectBuilder id(final String id) {
         this.id = id;
@@ -42,8 +57,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>Current version of the CustomObject.</p>
-    */
+     *  <p>Current version of the CustomObject.</p>
+     */
 
     public CustomObjectBuilder version(final Long version) {
         this.version = version;
@@ -51,8 +66,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>Date and time (UTC) the CustomObject was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the CustomObject was initially created.</p>
+     */
 
     public CustomObjectBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
@@ -60,8 +75,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>Date and time (UTC) the CustomObject was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the CustomObject was last updated.</p>
+     */
 
     public CustomObjectBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -69,8 +84,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomObjectBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -79,8 +94,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomObjectBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -89,8 +104,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomObjectBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -99,8 +114,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public CustomObjectBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -108,8 +123,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>Namespace to group CustomObjects.</p>
-    */
+     *  <p>Namespace to group CustomObjects.</p>
+     */
 
     public CustomObjectBuilder container(final String container) {
         this.container = container;
@@ -117,8 +132,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
-    */
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
+     */
 
     public CustomObjectBuilder key(final String key) {
         this.key = key;
@@ -126,8 +141,8 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-    *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
-    */
+     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the platform does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     */
 
     public CustomObjectBuilder value(final java.lang.Object value) {
         this.value = value;

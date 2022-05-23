@@ -14,15 +14,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreRemoveProductSelectionAction storeRemoveProductSelectionAction = StoreRemoveProductSelectionAction.builder()
+           .productSelection(productSelectionBuilder -> productSelectionBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreRemoveProductSelectionActionImpl.class)
 public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
 
     String REMOVE_PRODUCT_SELECTION = "removeProductSelection";
 
     /**
-    *  <p>A Product Selection to be removed from the current Product Selections of this Store.</p>
-    */
+     *  <p>A Product Selection to be removed from the current Product Selections of this Store.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("productSelection")

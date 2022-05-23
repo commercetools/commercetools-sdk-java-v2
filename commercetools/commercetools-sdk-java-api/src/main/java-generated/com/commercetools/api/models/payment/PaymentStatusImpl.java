@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentStatusImpl implements PaymentStatus, ModelBase {
 
     private String interfaceCode;
@@ -36,15 +36,15 @@ public class PaymentStatusImpl implements PaymentStatus, ModelBase {
     }
 
     /**
-    *  <p>A code describing the current status returned by the interface that processes the payment.</p>
-    */
+     *  <p>A code describing the current status returned by the interface that processes the payment.</p>
+     */
     public String getInterfaceCode() {
         return this.interfaceCode;
     }
 
     /**
-    *  <p>A text describing the current status returned by the interface that processes the payment.</p>
-    */
+     *  <p>A text describing the current status returned by the interface that processes the payment.</p>
+     */
     public String getInterfaceText() {
         return this.interfaceText;
     }

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private String id;
@@ -51,8 +51,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-    *  <p>The unique ID of this CustomLineItem.</p>
-    */
+     *  <p>The unique ID of this CustomLineItem.</p>
+     */
     public String getId() {
         return this.id;
     }
@@ -74,15 +74,15 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-    *  <p>A unique String in the cart to identify this CustomLineItem.</p>
-    */
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     */
     public String getSlug() {
         return this.slug;
     }
 
     /**
-    *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     */
     public Integer getQuantity() {
         return this.quantity;
     }

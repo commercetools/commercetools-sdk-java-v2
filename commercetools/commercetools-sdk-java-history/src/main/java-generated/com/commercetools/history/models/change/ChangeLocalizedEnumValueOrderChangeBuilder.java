@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeLocalizedEnumValueOrderChange changeLocalizedEnumValueOrderChange = ChangeLocalizedEnumValueOrderChange.builder()
+           .change("{change}")
+           .fieldName("{fieldName}")
+           .attributeName("{attributeName}")
+           .plusNextValue(nextValueBuilder -> nextValueBuilder)
+           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<ChangeLocalizedEnumValueOrderChange> {
 
     private String change;
@@ -21,8 +35,8 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     private java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> previousValue;
 
     /**
-    *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
-    */
+     *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
+     */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder change(final String change) {
         this.change = change;
@@ -30,8 +44,8 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-    *  <p>The name of the field definition updated.</p>
-    */
+     *  <p>The name of the field definition updated.</p>
+     */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
@@ -39,8 +53,8 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-    *  <p>The name of the attribute updated.</p>
-    */
+     *  <p>The name of the attribute updated.</p>
+     */
 
     public ChangeLocalizedEnumValueOrderChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

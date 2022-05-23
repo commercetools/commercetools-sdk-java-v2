@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TypeAddEnumValueAction typeAddEnumValueAction = TypeAddEnumValueAction.builder()
+           .fieldName("{fieldName}")
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAction> {
 
     private String fieldName;
@@ -15,8 +26,8 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
     private com.commercetools.api.models.type.CustomFieldEnumValue value;
 
     /**
-    *  <p><code>name</code> of the Field Definition to update.</p>
-    */
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     */
 
     public TypeAddEnumValueActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
@@ -24,8 +35,8 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
     }
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
 
     public TypeAddEnumValueActionBuilder value(
             Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValueBuilder> builder) {
@@ -34,8 +45,8 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
     }
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
 
     public TypeAddEnumValueActionBuilder value(final com.commercetools.api.models.type.CustomFieldEnumValue value) {
         this.value = value;

@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SyncInfo syncInfo = SyncInfo.builder()
+           .channel(channelBuilder -> channelBuilder)
+           .syncedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     private com.commercetools.importapi.models.common.ChannelKeyReference channel;
@@ -20,8 +31,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     private java.time.ZonedDateTime syncedAt;
 
     /**
-    *  <p>Maps to <code>SyncInfo.channel</code></p>
-    */
+     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     */
 
     public SyncInfoBuilder channel(
             Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
@@ -30,8 +41,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-    *  <p>Maps to <code>SyncInfo.channel</code></p>
-    */
+     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     */
 
     public SyncInfoBuilder channel(final com.commercetools.importapi.models.common.ChannelKeyReference channel) {
         this.channel = channel;
@@ -39,8 +50,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-    *  <p>Maps to <code>SyncInfo.externalId</code></p>
-    */
+     *  <p>Maps to <code>SyncInfo.externalId</code></p>
+     */
 
     public SyncInfoBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
@@ -48,8 +59,8 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-    *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
-    */
+     *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
+     */
 
     public SyncInfoBuilder syncedAt(final java.time.ZonedDateTime syncedAt) {
         this.syncedAt = syncedAt;

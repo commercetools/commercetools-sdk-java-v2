@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSelectionSetting productSelectionSetting = ProductSelectionSetting.builder()
+           .productSelection(productSelectionBuilder -> productSelectionBuilder)
+           .active(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSelectionSettingBuilder implements Builder<ProductSelectionSetting> {
 
     private com.commercetools.api.models.product_selection.ProductSelectionReference productSelection;
@@ -15,8 +26,8 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     private Boolean active;
 
     /**
-    *  <p>Reference to a Product Selection</p>
-    */
+     *  <p>Reference to a Product Selection</p>
+     */
 
     public ProductSelectionSettingBuilder productSelection(
             Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder> builder) {
@@ -27,8 +38,8 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-    *  <p>Reference to a Product Selection</p>
-    */
+     *  <p>Reference to a Product Selection</p>
+     */
 
     public ProductSelectionSettingBuilder productSelection(
             final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {
@@ -37,8 +48,8 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-    *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
-    */
+     *  <p>If <code>true</code> all Products assigned to this Product Selection are part of the Store's assortment.</p>
+     */
 
     public ProductSelectionSettingBuilder active(final Boolean active) {
         this.active = active;

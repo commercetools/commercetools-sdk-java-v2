@@ -14,24 +14,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Adds a value to an EnumType. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Adds a value to an EnumType. This update action can be used to update an EnumType FieldDefinition and a SetType FieldDefinition of EnumType.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TypeAddEnumValueAction typeAddEnumValueAction = TypeAddEnumValueAction.builder()
+           .fieldName("{fieldName}")
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeAddEnumValueActionImpl.class)
 public interface TypeAddEnumValueAction extends TypeUpdateAction {
 
     String ADD_ENUM_VALUE = "addEnumValue";
 
     /**
-    *  <p><code>name</code> of the Field Definition to update.</p>
-    */
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")

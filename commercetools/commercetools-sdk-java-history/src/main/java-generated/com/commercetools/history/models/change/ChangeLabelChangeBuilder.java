@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeLabelChange changeLabelChange = ChangeLabelChange.builder()
+           .change("{change}")
+           .fieldName("{fieldName}")
+           .attributeName("{attributeName}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     private String change;
@@ -21,8 +35,8 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     /**
-    *  <p>Update action for <code>changeLabel</code> on product types and types</p>
-    */
+     *  <p>Update action for <code>changeLabel</code> on product types and types</p>
+     */
 
     public ChangeLabelChangeBuilder change(final String change) {
         this.change = change;
@@ -30,8 +44,8 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-    *  <p>The name of the field definition to update (types).</p>
-    */
+     *  <p>The name of the field definition to update (types).</p>
+     */
 
     public ChangeLabelChangeBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
@@ -39,8 +53,8 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-    *  <p>The name of the attribute definition to update (product-type).</p>
-    */
+     *  <p>The name of the attribute definition to update (product-type).</p>
+     */
 
     public ChangeLabelChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

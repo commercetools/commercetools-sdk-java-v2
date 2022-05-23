@@ -12,7 +12,20 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetSkuChange setSkuChange = SetSkuChange.builder()
+           .change("{change}")
+           .catalogData("{catalogData}")
+           .previousValue("{previousValue}")
+           .nextValue("{nextValue}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetSkuChangeImpl.class)
 public interface SetSkuChange extends Change {
 
@@ -23,8 +36,8 @@ public interface SetSkuChange extends Change {
     public String getType();
 
     /**
-    *  <p>Update action for <code>setSku</code></p>
-    */
+     *  <p>Update action for <code>setSku</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();

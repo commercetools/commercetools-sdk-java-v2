@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTaxRateAction, ModelBase {
 
     private String action;
@@ -40,15 +40,15 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
     }
 
     /**
-    *  <p>ID of the TaxRate to replace.</p>
-    */
+     *  <p>ID of the TaxRate to replace.</p>
+     */
     public String getTaxRateId() {
         return this.taxRateId;
     }
 
     /**
-    *  <p>New TaxRate to replace with.</p>
-    */
+     *  <p>New TaxRate to replace with.</p>
+     */
     public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate() {
         return this.taxRate;
     }

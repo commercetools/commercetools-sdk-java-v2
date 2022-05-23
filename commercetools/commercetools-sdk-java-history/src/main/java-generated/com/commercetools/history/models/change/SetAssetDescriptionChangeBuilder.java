@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetAssetDescriptionChange setAssetDescriptionChange = SetAssetDescriptionChange.builder()
+           .change("{change}")
+           .asset(assetBuilder -> assetBuilder)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescriptionChange> {
 
     private String change;
@@ -19,8 +32,8 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
     /**
-    *  <p>Update action for <code>setAssetDescription</code></p>
-    */
+     *  <p>Update action for <code>setAssetDescription</code></p>
+     */
 
     public SetAssetDescriptionChangeBuilder change(final String change) {
         this.change = change;

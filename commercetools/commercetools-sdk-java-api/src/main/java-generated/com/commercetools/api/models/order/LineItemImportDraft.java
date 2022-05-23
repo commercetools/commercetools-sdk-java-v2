@@ -19,20 +19,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   LineItemImportDraft lineItemImportDraft = LineItemImportDraft.builder()
+           .name(nameBuilder -> nameBuilder)
+           .variant(variantBuilder -> variantBuilder)
+           .price(priceBuilder -> priceBuilder)
+           .quantity(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemImportDraftImpl.class)
 public interface LineItemImportDraft extends com.commercetools.api.models.CustomizableDraft<LineItemImportDraft> {
 
     /**
-    *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
-    */
+     *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
+     */
 
     @JsonProperty("productId")
     public String getProductId();
 
     /**
-    *  <p>The product name.</p>
-    */
+     *  <p>The product name.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
@@ -57,15 +70,15 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public List<ItemState> getState();
 
     /**
-    *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
-    */
+     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-    *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
-    */
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
@@ -75,8 +88,8 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public TaxRate getTaxRate();
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

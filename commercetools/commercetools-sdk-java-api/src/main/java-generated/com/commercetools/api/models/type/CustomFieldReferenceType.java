@@ -13,17 +13,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Field type for Reference values.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Field type for Reference values.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomFieldReferenceType customFieldReferenceType = CustomFieldReferenceType.builder()
+           .referenceTypeId(CustomFieldReferenceValue.CART)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldReferenceTypeImpl.class)
 public interface CustomFieldReferenceType extends FieldType {
 
     String REFERENCE = "Reference";
 
     /**
-    *  <p>Resource type the Custom Field can reference.</p>
-    */
+     *  <p>Resource type the Custom Field can reference.</p>
+     */
     @NotNull
     @JsonProperty("referenceTypeId")
     public CustomFieldReferenceValue getReferenceTypeId();

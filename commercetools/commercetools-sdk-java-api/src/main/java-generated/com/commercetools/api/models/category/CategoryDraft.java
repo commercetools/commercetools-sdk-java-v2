@@ -16,7 +16,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CategoryDraft categoryDraft = CategoryDraft.builder()
+           .name(nameBuilder -> nameBuilder)
+           .slug(slugBuilder -> slugBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryDraftImpl.class)
 public interface CategoryDraft extends com.commercetools.api.models.CustomizableDraft<CategoryDraft> {
 
@@ -26,8 +37,8 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public LocalizedString getName();
 
     /**
-    *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
-    */
+     *  <p>human-readable identifier usually used as deep-link URL to the related category. Allowed are alphabetic, numeric, underscore (<code>_</code>) and hyphen (<code>-</code>) characters. Maximum size is 256. <strong>Must be unique across a project!</strong> The same category can have the same slug for different languages.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("slug")
@@ -38,15 +49,15 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public LocalizedString getDescription();
 
     /**
-    *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
-    */
+     *  <p>A category that is the parent of this category in the category tree. The parent can be set by its ID or by its key.</p>
+     */
     @Valid
     @JsonProperty("parent")
     public CategoryResourceIdentifier getParent();
 
     /**
-    *  <p>An attribute as base for a custom category order in one level. A random value will be assigned by API if not set.</p>
-    */
+     *  <p>An attribute as base for a custom category order in one level. A random value will be assigned by API if not set.</p>
+     */
 
     @JsonProperty("orderHint")
     public String getOrderHint();
@@ -67,8 +78,8 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public LocalizedString getMetaKeywords();
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
@@ -78,8 +89,8 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public List<AssetDraft> getAssets();
 
     /**
-    *  <p>User-defined unique identifier for the Category.</p>
-    */
+     *  <p>User-defined unique identifier for the Category.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();

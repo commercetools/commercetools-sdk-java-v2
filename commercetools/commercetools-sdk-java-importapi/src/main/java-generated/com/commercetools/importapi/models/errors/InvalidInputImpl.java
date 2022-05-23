@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>An invalid input has been sent to the service. The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>An invalid input has been sent to the service. The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidInputImpl implements InvalidInput, ModelBase {
 
     private String code;

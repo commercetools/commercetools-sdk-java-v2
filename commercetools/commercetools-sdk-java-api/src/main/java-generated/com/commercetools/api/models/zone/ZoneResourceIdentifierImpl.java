@@ -16,9 +16,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>ResourceIdentifier to a Zone.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>ResourceIdentifier to a Zone.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier, ModelBase {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
@@ -39,22 +39,22 @@ public class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier, Model
     }
 
     /**
-    *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
-    */
+     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
+     */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>User-defined unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>User-defined unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
+     */
     public String getKey() {
         return this.key;
     }

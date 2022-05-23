@@ -7,14 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AttributeNestedType attributeNestedType = AttributeNestedType.builder()
+           .typeReference(typeReferenceBuilder -> typeReferenceBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> {
 
     private com.commercetools.api.models.product_type.ProductTypeReference typeReference;
 
     /**
-    *  <p>Reference to a ProductType.</p>
-    */
+     *  <p>Reference to a ProductType.</p>
+     */
 
     public AttributeNestedTypeBuilder typeReference(
             Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
@@ -24,8 +34,8 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
     }
 
     /**
-    *  <p>Reference to a ProductType.</p>
-    */
+     *  <p>Reference to a ProductType.</p>
+     */
 
     public AttributeNestedTypeBuilder typeReference(
             final com.commercetools.api.models.product_type.ProductTypeReference typeReference) {

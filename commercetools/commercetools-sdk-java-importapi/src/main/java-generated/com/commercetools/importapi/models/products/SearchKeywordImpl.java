@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchKeywordImpl implements SearchKeyword, ModelBase {
 
     private String text;
@@ -36,8 +36,8 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     }
 
     /**
-    *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
-    */
+     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+     */
     public com.commercetools.importapi.models.products.SuggestTokenizer getSuggestTokenizer() {
         return this.suggestTokenizer;
     }

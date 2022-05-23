@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomFieldLocalizedEnumValue customFieldLocalizedEnumValue = CustomFieldLocalizedEnumValue.builder()
+           .key("{key}")
+           .label(labelBuilder -> labelBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomFieldLocalizedEnumValue> {
 
     private String key;
@@ -15,8 +26,8 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
     private com.commercetools.api.models.common.LocalizedString label;
 
     /**
-    *  <p>Key of the value used as a programmatic identifier.</p>
-    */
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     */
 
     public CustomFieldLocalizedEnumValueBuilder key(final String key) {
         this.key = key;
@@ -24,8 +35,8 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
     }
 
     /**
-    *  <p>Descriptive localized label of the value.</p>
-    */
+     *  <p>Descriptive localized label of the value.</p>
+     */
 
     public CustomFieldLocalizedEnumValueBuilder label(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -34,8 +45,8 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
     }
 
     /**
-    *  <p>Descriptive localized label of the value.</p>
-    */
+     *  <p>Descriptive localized label of the value.</p>
+     */
 
     public CustomFieldLocalizedEnumValueBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;

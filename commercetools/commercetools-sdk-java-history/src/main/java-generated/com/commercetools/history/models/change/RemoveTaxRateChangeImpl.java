@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
 
     private String type;
@@ -44,22 +44,22 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
     }
 
     /**
-    *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
-    */
+     *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
+     */
     public String getChange() {
         return this.change;
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {
         return this.previousValue;
     }
 
     /**
-    *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     */
     public com.commercetools.history.models.common.TaxRate getNextValue() {
         return this.nextValue;
     }

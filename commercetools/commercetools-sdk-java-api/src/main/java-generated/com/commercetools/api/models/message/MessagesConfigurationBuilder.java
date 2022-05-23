@@ -8,7 +8,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MessagesConfiguration messagesConfiguration = MessagesConfiguration.builder()
+           .enabled(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessagesConfigurationBuilder implements Builder<MessagesConfiguration> {
 
     private Boolean enabled;
@@ -17,8 +27,8 @@ public class MessagesConfigurationBuilder implements Builder<MessagesConfigurati
     private Integer deleteDaysAfterCreation;
 
     /**
-    *  <p>When <code>true</code>, the Messages Query feature is active.</p>
-    */
+     *  <p>When <code>true</code>, the Messages Query feature is active.</p>
+     */
 
     public MessagesConfigurationBuilder enabled(final Boolean enabled) {
         this.enabled = enabled;
@@ -26,8 +36,8 @@ public class MessagesConfigurationBuilder implements Builder<MessagesConfigurati
     }
 
     /**
-    *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
-    */
+     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
+     */
 
     public MessagesConfigurationBuilder deleteDaysAfterCreation(@Nullable final Integer deleteDaysAfterCreation) {
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;

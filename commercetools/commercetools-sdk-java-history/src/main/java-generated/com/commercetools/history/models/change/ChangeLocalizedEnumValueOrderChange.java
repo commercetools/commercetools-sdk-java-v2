@@ -14,7 +14,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeLocalizedEnumValueOrderChange changeLocalizedEnumValueOrderChange = ChangeLocalizedEnumValueOrderChange.builder()
+           .change("{change}")
+           .fieldName("{fieldName}")
+           .attributeName("{attributeName}")
+           .plusNextValue(nextValueBuilder -> nextValueBuilder)
+           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeLocalizedEnumValueOrderChangeImpl.class)
 public interface ChangeLocalizedEnumValueOrderChange extends Change {
 
@@ -25,22 +39,22 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     public String getType();
 
     /**
-    *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
-    */
+     *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>The name of the field definition updated.</p>
-    */
+     *  <p>The name of the field definition updated.</p>
+     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-    *  <p>The name of the attribute updated.</p>
-    */
+     *  <p>The name of the attribute updated.</p>
+     */
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingPricesSearchRequestImpl implements MissingPricesSearchRequest, ModelBase {
 
     private Long limit;
@@ -65,78 +65,78 @@ public class MissingPricesSearchRequestImpl implements MissingPricesSearchReques
     }
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>If true, searches data from staged products in addition to published products.</p>
-    */
+     *  <p>If true, searches data from staged products in addition to published products.</p>
+     */
     public Boolean getStaged() {
         return this.staged;
     }
 
     /**
-    *  <p>Maximum number of products to scan.</p>
-    */
+     *  <p>Maximum number of products to scan.</p>
+     */
     public Long getProductSetLimit() {
         return this.productSetLimit;
     }
 
     /**
-    *  <p>If true, searches all product variants. If false, only searches master variants.</p>
-    */
+     *  <p>If true, searches all product variants. If false, only searches master variants.</p>
+     */
     public Boolean getIncludeVariants() {
         return this.includeVariants;
     }
 
     /**
-    *  <p>If used, only checks if a product variant has a price in the provided currency code.</p>
-    */
+     *  <p>If used, only checks if a product variant has a price in the provided currency code.</p>
+     */
     public String getCurrencyCode() {
         return this.currencyCode;
     }
 
     /**
-    *  <p>If true, checks if there are prices for the specified date range and time.</p>
-    */
+     *  <p>If true, checks if there are prices for the specified date range and time.</p>
+     */
     public Boolean getCheckDate() {
         return this.checkDate;
     }
 
     /**
-    *  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>
-    */
+     *  <p>Starting date of the range to check. If no value is given, checks prices valid at the time the search is initiated.</p>
+     */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>
-    */
+     *  <p>Ending date of the range to check. If no value is given, it is equal to <code>validFrom</code>.</p>
+     */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-    *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
-    */
+     *  <p>Filters results by the provided Product IDs. Cannot be applied in combination with the <code>productTypeIds</code> filter.</p>
+     */
     public java.util.List<String> getProductIds() {
         return this.productIds;
     }
 
     /**
-    *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
-    */
+     *  <p>Filters results by the provided product type IDs. Cannot be applied in combination with the <code>productIds</code> filter.</p>
+     */
     public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }

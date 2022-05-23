@@ -14,7 +14,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MissingImages missingImages = MissingImages.builder()
+           .product(productBuilder -> productBuilder)
+           .variantId(0.3)
+           .imageCount(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingImagesImpl.class)
 public interface MissingImages {
 
@@ -24,15 +36,15 @@ public interface MissingImages {
     public ProductReference getProduct();
 
     /**
-    *  <p>ID of the variant</p>
-    */
+     *  <p>ID of the variant</p>
+     */
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     /**
-    *  <p>Number of images the variant contains.</p>
-    */
+     *  <p>Number of images the variant contains.</p>
+     */
     @NotNull
     @JsonProperty("imageCount")
     public Long getImageCount();

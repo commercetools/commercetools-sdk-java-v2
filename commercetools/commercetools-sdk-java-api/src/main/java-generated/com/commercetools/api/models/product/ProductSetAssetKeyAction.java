@@ -12,7 +12,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSetAssetKeyAction productSetAssetKeyAction = ProductSetAssetKeyAction.builder()
+           .assetId("{assetId}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetAssetKeyActionImpl.class)
 public interface ProductSetAssetKeyAction extends ProductUpdateAction {
 
@@ -32,8 +42,8 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
     public String getAssetId();
 
     /**
-    *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
-    */
+     *  <p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p>
+     */
 
     @JsonProperty("assetKey")
     public String getAssetKey();

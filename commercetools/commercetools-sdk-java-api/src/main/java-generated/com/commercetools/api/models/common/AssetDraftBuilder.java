@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AssetDraft assetDraft = AssetDraft.builder()
+           .plusSources(sourcesBuilder -> sourcesBuilder)
+           .name(nameBuilder -> nameBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetDraftBuilder implements Builder<AssetDraft> {
 
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
@@ -63,8 +74,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>Name of the Asset.</p>
-    */
+     *  <p>Name of the Asset.</p>
+     */
 
     public AssetDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -73,8 +84,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>Name of the Asset.</p>
-    */
+     *  <p>Name of the Asset.</p>
+     */
 
     public AssetDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
@@ -82,8 +93,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>Description of the Asset.</p>
-    */
+     *  <p>Description of the Asset.</p>
+     */
 
     public AssetDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -92,8 +103,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>Description of the Asset.</p>
-    */
+     *  <p>Description of the Asset.</p>
+     */
 
     public AssetDraftBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -102,8 +113,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>Keywords for categorizing and organizing Assets.</p>
-    */
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
 
     public AssetDraftBuilder tags(@Nullable final String... tags) {
         this.tags = new ArrayList<>(Arrays.asList(tags));
@@ -111,8 +122,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>Keywords for categorizing and organizing Assets.</p>
-    */
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
 
     public AssetDraftBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
@@ -120,8 +131,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>Keywords for categorizing and organizing Assets.</p>
-    */
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
 
     public AssetDraftBuilder plusTags(@Nullable final String... tags) {
         if (this.tags == null) {
@@ -132,8 +143,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>Custom Fields defined for the Asset.</p>
-    */
+     *  <p>Custom Fields defined for the Asset.</p>
+     */
 
     public AssetDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -142,8 +153,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>Custom Fields defined for the Asset.</p>
-    */
+     *  <p>Custom Fields defined for the Asset.</p>
+     */
 
     public AssetDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
@@ -151,8 +162,8 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-    *  <p>User-defined unique identifier for the Asset.</p>
-    */
+     *  <p>User-defined unique identifier for the Asset.</p>
+     */
 
     public AssetDraftBuilder key(@Nullable final String key) {
         this.key = key;

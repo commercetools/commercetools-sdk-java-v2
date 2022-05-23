@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingStandalonePriceValidityError, ModelBase {
 
     private String code;
@@ -87,8 +87,8 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-    *  <p>Reference to a StandalonePrice.</p>
-    */
+     *  <p>Reference to a StandalonePrice.</p>
+     */
     public com.commercetools.api.models.standalone_price.StandalonePriceReference getConflictingStandalonePrice() {
         return this.conflictingStandalonePrice;
     }
@@ -106,15 +106,15 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
     }
 
     /**
-    *  <p>ResourceIdentifier to a CustomerGroup.</p>
-    */
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     */
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }

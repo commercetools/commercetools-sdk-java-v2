@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeCoverageImpl implements AttributeCoverage, ModelBase {
 
     private Double names;
@@ -31,15 +31,15 @@ public class AttributeCoverageImpl implements AttributeCoverage, ModelBase {
     }
 
     /**
-    *  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>
-    */
+     *  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>
+     */
     public Double getNames() {
         return this.names;
     }
 
     /**
-    *  <p>Represents the percentage of attributes in the product variant that contain values.</p>
-    */
+     *  <p>Represents the percentage of attributes in the product variant that contain values.</p>
+     */
     public Double getValues() {
         return this.values;
     }

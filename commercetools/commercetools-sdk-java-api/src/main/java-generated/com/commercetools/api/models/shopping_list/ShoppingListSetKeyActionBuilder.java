@@ -8,15 +8,24 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShoppingListSetKeyAction shoppingListSetKeyAction = ShoppingListSetKeyAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListSetKeyActionBuilder implements Builder<ShoppingListSetKeyAction> {
 
     @Nullable
     private String key;
 
     /**
-    *  <p>User-specific unique identifier for the shopping list.</p>
-    */
+     *  <p>User-specific unique identifier for the shopping list.</p>
+     */
 
     public ShoppingListSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;

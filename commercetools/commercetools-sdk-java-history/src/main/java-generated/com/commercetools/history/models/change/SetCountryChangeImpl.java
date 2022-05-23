@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
 
     private String type;
@@ -44,22 +44,22 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
     }
 
     /**
-    *  <p>Update action for <code>setCountry</code></p>
-    */
+     *  <p>Update action for <code>setCountry</code></p>
+     */
     public String getChange() {
         return this.change;
     }
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
     public String getPreviousValue() {
         return this.previousValue;
     }
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
     public String getNextValue() {
         return this.nextValue;
     }

@@ -6,14 +6,24 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectChangeLanguagesAction projectChangeLanguagesAction = ProjectChangeLanguagesAction.builder()
+           .plusLanguages(languagesBuilder -> languagesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChangeLanguagesAction> {
 
     private java.util.List<String> languages;
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ProjectChangeLanguagesActionBuilder languages(final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
@@ -21,8 +31,8 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ProjectChangeLanguagesActionBuilder languages(final java.util.List<String> languages) {
         this.languages = languages;
@@ -30,8 +40,8 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ProjectChangeLanguagesActionBuilder plusLanguages(final String... languages) {
         if (this.languages == null) {

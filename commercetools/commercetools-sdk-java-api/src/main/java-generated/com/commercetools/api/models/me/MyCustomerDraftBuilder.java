@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MyCustomerDraft myCustomerDraft = MyCustomerDraft.builder()
+           .email("{email}")
+           .password("{password}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
 
     private String email;
@@ -101,8 +112,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
-    */
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+     */
 
     public MyCustomerDraftBuilder addresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
@@ -111,8 +122,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
-    */
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+     */
 
     public MyCustomerDraftBuilder addresses(
             @Nullable final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses) {
@@ -121,8 +132,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
-    */
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+     */
 
     public MyCustomerDraftBuilder plusAddresses(
             @Nullable final com.commercetools.api.models.common.BaseAddress... addresses) {
@@ -134,8 +145,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
-    */
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+     */
 
     public MyCustomerDraftBuilder plusAddresses(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
@@ -147,8 +158,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-    *  <p>Sets the ID of each address to be unique in the addresses list.</p>
-    */
+     *  <p>Sets the ID of each address to be unique in the addresses list.</p>
+     */
 
     public MyCustomerDraftBuilder withAddresses(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
@@ -158,8 +169,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-    *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
-    */
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+     */
 
     public MyCustomerDraftBuilder defaultShippingAddress(@Nullable final Long defaultShippingAddress) {
         this.defaultShippingAddress = defaultShippingAddress;
@@ -167,8 +178,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-    *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
-    */
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+     */
 
     public MyCustomerDraftBuilder defaultBillingAddress(@Nullable final Long defaultBillingAddress) {
         this.defaultBillingAddress = defaultBillingAddress;
@@ -176,8 +187,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public MyCustomerDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -186,8 +197,8 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
 
     public MyCustomerDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;

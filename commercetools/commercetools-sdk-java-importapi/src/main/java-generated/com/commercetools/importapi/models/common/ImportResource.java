@@ -13,9 +13,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>A representation of the resource to import. Import resources are similar to commercetools draft types, but they only support key references. In general, import resources are more granular then the normal commercetools resource. They are optimized for incremental updates and therefore have a slightly different structure.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>A representation of the resource to import. Import resources are similar to commercetools draft types, but they only support key references. In general, import resources are more granular then the normal commercetools resource. They are optimized for incremental updates and therefore have a slightly different structure.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImportResource importResource = ImportResource.builder()
+           .key("{key}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportResourceImpl.class)
 public interface ImportResource {
 

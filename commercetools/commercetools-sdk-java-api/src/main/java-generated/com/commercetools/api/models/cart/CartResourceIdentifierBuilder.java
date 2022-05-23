@@ -8,7 +8,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartResourceIdentifier cartResourceIdentifier = CartResourceIdentifier.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartResourceIdentifierBuilder implements Builder<CartResourceIdentifier> {
 
     @Nullable
@@ -18,8 +27,8 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
     private String key;
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     public CartResourceIdentifierBuilder id(@Nullable final String id) {
         this.id = id;
@@ -27,8 +36,8 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
     }
 
     /**
-    *  <p>User-defined unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
-    */
+     *  <p>User-defined unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     */
 
     public CartResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;

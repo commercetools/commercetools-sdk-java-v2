@@ -14,7 +14,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AddLocationChange addLocationChange = AddLocationChange.builder()
+           .change("{change}")
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddLocationChangeImpl.class)
 public interface AddLocationChange extends Change {
 
@@ -25,23 +37,23 @@ public interface AddLocationChange extends Change {
     public String getType();
 
     /**
-    *  <p>Update action for <code>addLocation</code> on zones</p>
-    */
+     *  <p>Update action for <code>addLocation</code> on zones</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
 
     /**
-    *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("previousValue")
     public Location getPreviousValue();
 
     /**
-    *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
-    */
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("nextValue")

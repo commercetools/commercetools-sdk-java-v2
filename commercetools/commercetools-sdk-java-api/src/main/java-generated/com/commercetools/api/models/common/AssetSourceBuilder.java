@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AssetSource assetSource = AssetSource.builder()
+           .uri("{uri}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetSourceBuilder implements Builder<AssetSource> {
 
     private String uri;
@@ -24,8 +34,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     private String contentType;
 
     /**
-    *  <p>URI of the AssetSource.</p>
-    */
+     *  <p>URI of the AssetSource.</p>
+     */
 
     public AssetSourceBuilder uri(final String uri) {
         this.uri = uri;
@@ -33,8 +43,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the AssetSource.</p>
-    */
+     *  <p>User-defined unique identifier of the AssetSource.</p>
+     */
 
     public AssetSourceBuilder key(@Nullable final String key) {
         this.key = key;
@@ -42,8 +52,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-    *  <p>Width and height of the AssetSource.</p>
-    */
+     *  <p>Width and height of the AssetSource.</p>
+     */
 
     public AssetSourceBuilder dimensions(
             Function<com.commercetools.api.models.common.AssetDimensionsBuilder, com.commercetools.api.models.common.AssetDimensionsBuilder> builder) {
@@ -52,8 +62,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-    *  <p>Width and height of the AssetSource.</p>
-    */
+     *  <p>Width and height of the AssetSource.</p>
+     */
 
     public AssetSourceBuilder dimensions(
             @Nullable final com.commercetools.api.models.common.AssetDimensions dimensions) {
@@ -62,8 +72,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-    *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
-    */
+     *  <p>Indicates the type of content, for example <code>application/pdf</code>.</p>
+     */
 
     public AssetSourceBuilder contentType(@Nullable final String contentType) {
         this.contentType = contentType;

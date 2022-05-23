@@ -10,9 +10,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Maps to <code>DiscountCodeInfo.state</code></p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Maps to <code>DiscountCodeInfo.state</code></p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface DiscountCodeState {
 
     DiscountCodeState NOT_ACTIVE = DiscountCodeStateEnum.NOT_ACTIVE;

@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReferencedResourceNotFoundError referencedResourceNotFoundError = ReferencedResourceNotFoundError.builder()
+           .message("{message}")
+           .typeId(ReferenceTypeId.CART)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReferencedResourceNotFoundErrorBuilder implements Builder<ReferencedResourceNotFoundError> {
 
     private String message;
@@ -42,8 +53,8 @@ public class ReferencedResourceNotFoundErrorBuilder implements Builder<Reference
     }
 
     /**
-    *  <p>supported resource type identifiers:</p>
-    */
+     *  <p>supported resource type identifiers:</p>
+     */
 
     public ReferencedResourceNotFoundErrorBuilder typeId(
             final com.commercetools.api.models.common.ReferenceTypeId typeId) {

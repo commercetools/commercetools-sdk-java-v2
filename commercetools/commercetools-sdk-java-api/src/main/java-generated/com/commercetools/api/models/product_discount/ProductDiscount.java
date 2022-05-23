@@ -19,123 +19,142 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductDiscount productDiscount = ProductDiscount.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .name(nameBuilder -> nameBuilder)
+           .value(valueBuilder -> valueBuilder)
+           .predicate("{predicate}")
+           .sortOrder("{sortOrder}")
+           .isActive(true)
+           .plusReferences(referencesBuilder -> referencesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountImpl.class)
 public interface ProductDiscount extends BaseResource, com.commercetools.api.models.DomainResource<ProductDiscount>,
         com.commercetools.api.models.Referencable<ProductDiscount>,
         com.commercetools.api.models.ResourceIdentifiable<ProductDiscount> {
 
     /**
-    *  <p>Platform-generated unique identifier of the ProductDiscount.</p>
-    */
+     *  <p>Platform-generated unique identifier of the ProductDiscount.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Current version of the ProductDiscount.</p>
-    */
+     *  <p>Current version of the ProductDiscount.</p>
+     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
 
     /**
-    *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
+     */
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
+     */
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>Name of the ProductDiscount.</p>
-    */
+     *  <p>Name of the ProductDiscount.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>User-defined unique identifier of the ProductDiscount.</p>
-    */
+     *  <p>User-defined unique identifier of the ProductDiscount.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Description of the ProductDiscount.</p>
-    */
+     *  <p>Description of the ProductDiscount.</p>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-    *  <p>Type of Discount and its corresponding value.</p>
-    */
+     *  <p>Type of Discount and its corresponding value.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")
     public ProductDiscountValue getValue();
 
     /**
-    *  <p>Valid ProductDiscount predicate.</p>
-    */
+     *  <p>Valid ProductDiscount predicate.</p>
+     */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-    *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>
-    */
+     *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>
+     */
     @NotNull
     @JsonProperty("sortOrder")
     public String getSortOrder();
 
     /**
-    *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
-    */
+     *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+     */
     @NotNull
     @JsonProperty("isActive")
     public Boolean getIsActive();
 
     /**
-    *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
-    */
+     *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("references")
     public List<Reference> getReferences();
 
     /**
-    *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
-    */
+     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-    *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
-    */
+     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();

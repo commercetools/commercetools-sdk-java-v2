@@ -14,15 +14,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   RemoveBillingAddressIdChange removeBillingAddressIdChange = RemoveBillingAddressIdChange.builder()
+           .change("{change}")
+           .plusNextValue(nextValueBuilder -> nextValueBuilder)
+           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+           .address(addressBuilder -> addressBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveBillingAddressIdChangeImpl.class)
 public interface RemoveBillingAddressIdChange extends Change {
 
     String REMOVE_BILLING_ADDRESS_ID_CHANGE = "RemoveBillingAddressIdChange";
 
     /**
-    *  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>
-    */
+     *  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();

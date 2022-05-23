@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartSetShippingMethodActionImpl implements MyCartSetShippingMethodAction, ModelBase {
 
     private String action;
@@ -41,8 +41,8 @@ public class MyCartSetShippingMethodActionImpl implements MyCartSetShippingMetho
     }
 
     /**
-    *  <p>ResourceIdentifier to a ShippingMethod.</p>
-    */
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     */
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }

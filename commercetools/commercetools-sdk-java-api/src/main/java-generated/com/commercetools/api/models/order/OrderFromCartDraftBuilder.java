@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderFromCartDraft orderFromCartDraft = OrderFromCartDraft.builder()
+           .version(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     @Deprecated
@@ -40,8 +50,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-    *  <p>Platform-generated unique identifier of the Cart from which you can create an Order.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Cart from which you can create an Order.</p>
+     */
     @Deprecated
     public OrderFromCartDraftBuilder id(@Nullable final String id) {
         this.id = id;
@@ -49,8 +59,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-    *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
-    */
+     *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
+     */
 
     public OrderFromCartDraftBuilder cart(
             Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifierBuilder> builder) {
@@ -59,8 +69,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-    *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
-    */
+     *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
+     */
 
     public OrderFromCartDraftBuilder cart(
             @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
@@ -74,8 +84,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-    *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
-    */
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     */
 
     public OrderFromCartDraftBuilder orderNumber(@Nullable final String orderNumber) {
         this.orderNumber = orderNumber;
@@ -95,8 +105,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-    *  <p>Order will be created with <code>Open</code> status by default.</p>
-    */
+     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     */
 
     public OrderFromCartDraftBuilder orderState(
             @Nullable final com.commercetools.api.models.order.OrderState orderState) {
@@ -117,8 +127,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
-    */
+     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     */
 
     public OrderFromCartDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -127,8 +137,8 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
-    */
+     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     */
 
     public OrderFromCartDraftBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

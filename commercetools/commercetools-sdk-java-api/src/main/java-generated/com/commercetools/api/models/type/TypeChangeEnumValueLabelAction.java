@@ -14,24 +14,34 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Changes the <code>label</code> of an EnumValue of an EnumType FieldDefinition.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Changes the <code>label</code> of an EnumValue of an EnumType FieldDefinition.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TypeChangeEnumValueLabelAction typeChangeEnumValueLabelAction = TypeChangeEnumValueLabelAction.builder()
+           .fieldName("{fieldName}")
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeEnumValueLabelActionImpl.class)
 public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
 
     String CHANGE_ENUM_VALUE_LABEL = "changeEnumValueLabel";
 
     /**
-    *  <p><code>name</code> of the FieldDefinition to update.</p>
-    */
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     */
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")

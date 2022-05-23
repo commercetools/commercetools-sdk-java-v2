@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerCreateEmailToken customerCreateEmailToken = CustomerCreateEmailToken.builder()
+           .id("{id}")
+           .ttlMinutes(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEmailToken> {
 
     private String id;
@@ -19,8 +30,8 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
     private Long ttlMinutes;
 
     /**
-    *  <p>Platform-generated unique identifier of the email token.</p>
-    */
+     *  <p>Platform-generated unique identifier of the email token.</p>
+     */
 
     public CustomerCreateEmailTokenBuilder id(final String id) {
         this.id = id;

@@ -9,7 +9,24 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   State state = State.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .key("{key}")
+           .type(StateTypeEnum.ORDER_STATE)
+           .initial(true)
+           .builtIn(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StateBuilder implements Builder<State> {
 
     private String id;
@@ -47,8 +64,8 @@ public class StateBuilder implements Builder<State> {
     private java.util.List<com.commercetools.api.models.state.StateReference> transitions;
 
     /**
-    *  <p>Platform-generated unique identifier of the State.</p>
-    */
+     *  <p>Platform-generated unique identifier of the State.</p>
+     */
 
     public StateBuilder id(final String id) {
         this.id = id;
@@ -56,8 +73,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Current version of the State.</p>
-    */
+     *  <p>Current version of the State.</p>
+     */
 
     public StateBuilder version(final Long version) {
         this.version = version;
@@ -65,8 +82,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Date and time (UTC) the State was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the State was initially created.</p>
+     */
 
     public StateBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
@@ -74,8 +91,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Date and time (UTC) the State was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the State was last updated.</p>
+     */
 
     public StateBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
@@ -83,8 +100,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public StateBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -93,8 +110,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public StateBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -103,8 +120,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public StateBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -113,8 +130,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public StateBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -122,8 +139,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the State.</p>
-    */
+     *  <p>User-defined unique identifier of the State.</p>
+     */
 
     public StateBuilder key(final String key) {
         this.key = key;
@@ -131,8 +148,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Indicates to which resource or object types the State is assigned to.</p>
-    */
+     *  <p>Indicates to which resource or object types the State is assigned to.</p>
+     */
 
     public StateBuilder type(final com.commercetools.api.models.state.StateTypeEnum type) {
         this.type = type;
@@ -140,8 +157,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Name of the State.</p>
-    */
+     *  <p>Name of the State.</p>
+     */
 
     public StateBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -150,8 +167,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Name of the State.</p>
-    */
+     *  <p>Name of the State.</p>
+     */
 
     public StateBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
@@ -159,8 +176,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Description of the State.</p>
-    */
+     *  <p>Description of the State.</p>
+     */
 
     public StateBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -169,8 +186,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Description of the State.</p>
-    */
+     *  <p>Description of the State.</p>
+     */
 
     public StateBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
@@ -178,8 +195,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
-    */
+     *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
+     */
 
     public StateBuilder initial(final Boolean initial) {
         this.initial = initial;
@@ -187,8 +204,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
-    */
+     *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
+     */
 
     public StateBuilder builtIn(final Boolean builtIn) {
         this.builtIn = builtIn;
@@ -196,8 +213,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
-    */
+     *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     */
 
     public StateBuilder roles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
@@ -205,8 +222,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
-    */
+     *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     */
 
     public StateBuilder roles(@Nullable final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
@@ -214,8 +231,8 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
-    */
+     *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     */
 
     public StateBuilder plusRoles(@Nullable final com.commercetools.api.models.state.StateRoleEnum... roles) {
         if (this.roles == null) {
@@ -226,12 +243,12 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <ul>
-    *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
-    *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
-    *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>
-    */
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
 
     public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference... transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
@@ -239,12 +256,12 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <ul>
-    *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
-    *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
-    *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>
-    */
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
 
     public StateBuilder transitions(
             @Nullable final java.util.List<com.commercetools.api.models.state.StateReference> transitions) {
@@ -253,12 +270,12 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <ul>
-    *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
-    *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
-    *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>
-    */
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
 
     public StateBuilder plusTransitions(
             @Nullable final com.commercetools.api.models.state.StateReference... transitions) {
@@ -270,12 +287,12 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <ul>
-    *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
-    *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
-    *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>
-    */
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
 
     public StateBuilder plusTransitions(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
@@ -287,12 +304,12 @@ public class StateBuilder implements Builder<State> {
     }
 
     /**
-    *  <ul>
-    *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
-    *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
-    *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
-    *  </ul>
-    */
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     */
 
     public StateBuilder withTransitions(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {

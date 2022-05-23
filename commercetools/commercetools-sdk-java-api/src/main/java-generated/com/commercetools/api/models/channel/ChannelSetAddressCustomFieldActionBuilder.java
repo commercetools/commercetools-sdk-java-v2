@@ -8,7 +8,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChannelSetAddressCustomFieldAction channelSetAddressCustomFieldAction = ChannelSetAddressCustomFieldAction.builder()
+           .name("{name}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelSetAddressCustomFieldActionBuilder implements Builder<ChannelSetAddressCustomFieldAction> {
 
     private String name;
@@ -17,8 +27,8 @@ public class ChannelSetAddressCustomFieldActionBuilder implements Builder<Channe
     private java.lang.Object value;
 
     /**
-    *  <p>Name of the Custom Field.</p>
-    */
+     *  <p>Name of the Custom Field.</p>
+     */
 
     public ChannelSetAddressCustomFieldActionBuilder name(final String name) {
         this.name = name;
@@ -26,8 +36,8 @@ public class ChannelSetAddressCustomFieldActionBuilder implements Builder<Channe
     }
 
     /**
-    *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
-    */
+     *  <p>Specifies the format of the value of the Custom Field defined by <code>name</code>. If <code>value</code> is absent or <code>null</code>, this field will be removed, if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
+     */
 
     public ChannelSetAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;

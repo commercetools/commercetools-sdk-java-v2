@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TransactionDraft transactionDraft = TransactionDraft.builder()
+           .type(TransactionType.AUTHORIZATION)
+           .amount(amountBuilder -> amountBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransactionDraftBuilder implements Builder<TransactionDraft> {
 
     @Nullable
@@ -29,8 +40,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-    *  <p>The time at which the transaction took place.</p>
-    */
+     *  <p>The time at which the transaction took place.</p>
+     */
 
     public TransactionDraftBuilder timestamp(@Nullable final java.time.ZonedDateTime timestamp) {
         this.timestamp = timestamp;
@@ -38,8 +49,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-    *  <p>The type of this transaction.</p>
-    */
+     *  <p>The type of this transaction.</p>
+     */
 
     public TransactionDraftBuilder type(final com.commercetools.api.models.payment.TransactionType type) {
         this.type = type;
@@ -58,8 +69,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-    *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
-    */
+     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     */
 
     public TransactionDraftBuilder interactionId(@Nullable final String interactionId) {
         this.interactionId = interactionId;
@@ -67,8 +78,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-    *  <p>The state of this transaction. If not set, defaults to <code>Initial</code>.</p>
-    */
+     *  <p>The state of this transaction. If not set, defaults to <code>Initial</code>.</p>
+     */
 
     public TransactionDraftBuilder state(@Nullable final com.commercetools.api.models.payment.TransactionState state) {
         this.state = state;
@@ -76,8 +87,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
 
     public TransactionDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -86,8 +97,8 @@ public class TransactionDraftBuilder implements Builder<TransactionDraft> {
     }
 
     /**
-    *  <p>Custom Fields for the Transaction.</p>
-    */
+     *  <p>Custom Fields for the Transaction.</p>
+     */
 
     public TransactionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;

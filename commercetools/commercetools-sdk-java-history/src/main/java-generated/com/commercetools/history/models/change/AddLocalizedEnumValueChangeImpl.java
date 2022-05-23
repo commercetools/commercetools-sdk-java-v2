@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueChange, ModelBase {
 
     private String type;
@@ -48,22 +48,22 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-    *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
-    */
+     *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
+     */
     public String getChange() {
         return this.change;
     }
 
     /**
-    *  <p>The name of the field definition updated.</p>
-    */
+     *  <p>The name of the field definition updated.</p>
+     */
     public String getFieldName() {
         return this.fieldName;
     }
 
     /**
-    *  <p>The name of the attribute updated.</p>
-    */
+     *  <p>The name of the attribute updated.</p>
+     */
     public String getAttributeName() {
         return this.attributeName;
     }

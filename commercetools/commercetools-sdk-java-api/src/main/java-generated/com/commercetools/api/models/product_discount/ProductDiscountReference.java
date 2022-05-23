@@ -15,9 +15,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Reference to a ProductDiscount.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Reference to a ProductDiscount.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductDiscountReference productDiscountReference = ProductDiscountReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountReferenceImpl.class)
 public interface ProductDiscountReference
         extends Reference, com.commercetools.api.models.Identifiable<ProductDiscount> {
@@ -25,15 +34,15 @@ public interface ProductDiscountReference
     String PRODUCT_DISCOUNT = "product-discount";
 
     /**
-    *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
-    */
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public ProductDiscount getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced ProductDiscount.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImportOperationPagedResponse importOperationPagedResponse = ImportOperationPagedResponse.builder()
+           .limit(1)
+           .offset(1)
+           .count(1)
+           .total(1)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportOperationPagedResponseBuilder implements Builder<ImportOperationPagedResponse> {
 
     private Integer limit;
@@ -21,8 +35,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results;
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public ImportOperationPagedResponseBuilder limit(final Integer limit) {
         this.limit = limit;
@@ -30,8 +44,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public ImportOperationPagedResponseBuilder offset(final Long offset) {
         this.offset = offset;
@@ -39,8 +53,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-    *  <p>The actual number of results returned.</p>
-    */
+     *  <p>The actual number of results returned.</p>
+     */
 
     public ImportOperationPagedResponseBuilder count(final Long count) {
         this.count = count;
@@ -48,8 +62,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-    *  <p>The total number of import operations matching the query.</p>
-    */
+     *  <p>The total number of import operations matching the query.</p>
+     */
 
     public ImportOperationPagedResponseBuilder total(final Long total) {
         this.total = total;
@@ -57,8 +71,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-    *  <p>The array of Import Operations matching the query.</p>
-    */
+     *  <p>The array of Import Operations matching the query.</p>
+     */
 
     public ImportOperationPagedResponseBuilder results(
             final com.commercetools.importapi.models.importoperations.ImportOperation... results) {
@@ -67,8 +81,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-    *  <p>The array of Import Operations matching the query.</p>
-    */
+     *  <p>The array of Import Operations matching the query.</p>
+     */
 
     public ImportOperationPagedResponseBuilder results(
             final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperation> results) {
@@ -77,8 +91,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-    *  <p>The array of Import Operations matching the query.</p>
-    */
+     *  <p>The array of Import Operations matching the query.</p>
+     */
 
     public ImportOperationPagedResponseBuilder plusResults(
             final com.commercetools.importapi.models.importoperations.ImportOperation... results) {
@@ -90,8 +104,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-    *  <p>The array of Import Operations matching the query.</p>
-    */
+     *  <p>The array of Import Operations matching the query.</p>
+     */
 
     public ImportOperationPagedResponseBuilder plusResults(
             Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {
@@ -104,8 +118,8 @@ public class ImportOperationPagedResponseBuilder implements Builder<ImportOperat
     }
 
     /**
-    *  <p>The array of Import Operations matching the query.</p>
-    */
+     *  <p>The array of Import Operations matching the query.</p>
+     */
 
     public ImportOperationPagedResponseBuilder withResults(
             Function<com.commercetools.importapi.models.importoperations.ImportOperationBuilder, com.commercetools.importapi.models.importoperations.ImportOperationBuilder> builder) {

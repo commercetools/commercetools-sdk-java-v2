@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
 
     @Deprecated
@@ -60,16 +60,16 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Cart from which you can create an Order.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Cart from which you can create an Order.</p>
+     */
     @Deprecated
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
-    */
+     *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
+     */
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
         return this.cart;
     }
@@ -79,8 +79,8 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-    *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
-    */
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     */
     public String getOrderNumber() {
         return this.orderNumber;
     }
@@ -94,8 +94,8 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-    *  <p>Order will be created with <code>Open</code> status by default.</p>
-    */
+     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     */
     public com.commercetools.api.models.order.OrderState getOrderState() {
         return this.orderState;
     }
@@ -105,8 +105,8 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-    *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
-    */
+     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

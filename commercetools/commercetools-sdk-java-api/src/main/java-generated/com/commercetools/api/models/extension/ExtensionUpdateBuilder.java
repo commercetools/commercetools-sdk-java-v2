@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ExtensionUpdate extensionUpdate = ExtensionUpdate.builder()
+           .version(0.3)
+           .plusActions(actionsBuilder -> actionsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
 
     private Long version;
@@ -15,8 +26,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     private java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> actions;
 
     /**
-    *  <p>Expected version of the Extension on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-    */
+     *  <p>Expected version of the Extension on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     */
 
     public ExtensionUpdateBuilder version(final Long version) {
         this.version = version;
@@ -24,8 +35,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Extension.</p>
-    */
+     *  <p>Update actions to be performed on the Extension.</p>
+     */
 
     public ExtensionUpdateBuilder actions(
             final com.commercetools.api.models.extension.ExtensionUpdateAction... actions) {
@@ -34,8 +45,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Extension.</p>
-    */
+     *  <p>Update actions to be performed on the Extension.</p>
+     */
 
     public ExtensionUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.extension.ExtensionUpdateAction> actions) {
@@ -44,8 +55,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Extension.</p>
-    */
+     *  <p>Update actions to be performed on the Extension.</p>
+     */
 
     public ExtensionUpdateBuilder plusActions(
             final com.commercetools.api.models.extension.ExtensionUpdateAction... actions) {
@@ -57,8 +68,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Extension.</p>
-    */
+     *  <p>Update actions to be performed on the Extension.</p>
+     */
 
     public ExtensionUpdateBuilder plusActions(
             Function<com.commercetools.api.models.extension.ExtensionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionUpdateAction>> builder) {
@@ -71,8 +82,8 @@ public class ExtensionUpdateBuilder implements Builder<ExtensionUpdate> {
     }
 
     /**
-    *  <p>Update actions to be performed on the Extension.</p>
-    */
+     *  <p>Update actions to be performed on the Extension.</p>
+     */
 
     public ExtensionUpdateBuilder withActions(
             Function<com.commercetools.api.models.extension.ExtensionUpdateActionBuilder, Builder<? extends com.commercetools.api.models.extension.ExtensionUpdateAction>> builder) {

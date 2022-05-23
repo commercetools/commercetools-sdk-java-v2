@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetImpl implements Asset, ModelBase {
 
     private String key;
@@ -48,8 +48,8 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-    *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
-    */
+     *  <p>User-defined identifier for the asset. Asset keys are unique inside their container (a product variant or a category).</p>
+     */
     public String getKey() {
         return this.key;
     }
@@ -59,25 +59,25 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
     public com.commercetools.importapi.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-    *  <pre><code>{
-    *    "de": "Hundefutter",
-    *    "en": "dog food"
-    *  }
-    *  </code></pre>
-    */
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     */
     public com.commercetools.importapi.models.common.LocalizedString getDescription() {
         return this.description;
     }
@@ -87,8 +87,8 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-    *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
-    */
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     */
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
     }

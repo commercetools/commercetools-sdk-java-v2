@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductTypeImport productTypeImport = ProductTypeImport.builder()
+           .key("{key}")
+           .name("{name}")
+           .description("{description}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
 
     private String key;
@@ -27,8 +39,8 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-    *  <p>Maps to <code>ProductType.name</code>.</p>
-    */
+     *  <p>Maps to <code>ProductType.name</code>.</p>
+     */
 
     public ProductTypeImportBuilder name(final String name) {
         this.name = name;
@@ -36,8 +48,8 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-    *  <p>Maps to <code>ProductType.description</code>.</p>
-    */
+     *  <p>Maps to <code>ProductType.description</code>.</p>
+     */
 
     public ProductTypeImportBuilder description(final String description) {
         this.description = description;
@@ -45,8 +57,8 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-    *  <p>The <code>attributes</code> of ProductType.</p>
-    */
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     */
 
     public ProductTypeImportBuilder attributes(
             @Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition... attributes) {
@@ -55,8 +67,8 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-    *  <p>The <code>attributes</code> of ProductType.</p>
-    */
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     */
 
     public ProductTypeImportBuilder attributes(
             @Nullable final java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes) {
@@ -65,8 +77,8 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-    *  <p>The <code>attributes</code> of ProductType.</p>
-    */
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     */
 
     public ProductTypeImportBuilder plusAttributes(
             @Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition... attributes) {
@@ -78,8 +90,8 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-    *  <p>The <code>attributes</code> of ProductType.</p>
-    */
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     */
 
     public ProductTypeImportBuilder plusAttributes(
             Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {
@@ -92,8 +104,8 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
-    *  <p>The <code>attributes</code> of ProductType.</p>
-    */
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     */
 
     public ProductTypeImportBuilder withAttributes(
             Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder> builder) {

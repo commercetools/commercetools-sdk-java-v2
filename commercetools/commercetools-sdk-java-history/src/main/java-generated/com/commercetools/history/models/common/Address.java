@@ -12,13 +12,47 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Address address = Address.builder()
+           .id("{id}")
+           .key("{key}")
+           .title("{title}")
+           .salutation("{salutation}")
+           .firstName("{firstName}")
+           .lastName("{lastName}")
+           .streetName("{streetName}")
+           .streetNumber("{streetNumber}")
+           .additionalStreetInfo("{additionalStreetInfo}")
+           .postalCode("{postalCode}")
+           .city("{city}")
+           .region("{region}")
+           .state("{state}")
+           .country("{country}")
+           .company("{company}")
+           .department("{department}")
+           .building("{building}")
+           .apartment("{apartment}")
+           .pOBox("{pOBox}")
+           .phone("{phone}")
+           .mobile("{mobile}")
+           .email("{email}")
+           .fax("{fax}")
+           .additionalAddressInfo("{additionalAddressInfo}")
+           .externalId("{externalId}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddressImpl.class)
 public interface Address {
 
     /**
-    *  <p>Unique ID of the Address.</p>
-    */
+     *  <p>Unique ID of the Address.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
@@ -72,8 +106,8 @@ public interface Address {
     public String getState();
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
     @NotNull
     @JsonProperty("country")
     public String getCountry();

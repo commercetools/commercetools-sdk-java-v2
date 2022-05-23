@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private String id;
@@ -186,15 +186,15 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Order.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Order.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the order.</p>
-    */
+     *  <p>The current version of the order.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
@@ -208,29 +208,29 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>This field will only be present if it was set for Order Import</p>
-    */
+     *  <p>This field will only be present if it was set for Order Import</p>
+     */
     public java.time.ZonedDateTime getCompletedAt() {
         return this.completedAt;
     }
 
     /**
-    *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
-    */
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     */
     public String getOrderNumber() {
         return this.orderNumber;
     }
@@ -244,8 +244,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
-    */
+     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     */
     public String getAnonymousId() {
         return this.anonymousId;
     }
@@ -267,8 +267,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>The taxes are calculated based on the shipping address.</p>
-    */
+     *  <p>The taxes are calculated based on the shipping address.</p>
+     */
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
@@ -286,36 +286,36 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
-    */
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
+     */
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
 
     /**
-    *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
-    */
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>One of the four predefined OrderStates.</p>
-    */
+     *  <p>One of the four predefined OrderStates.</p>
+     */
     public com.commercetools.api.models.order.OrderState getOrderState() {
         return this.orderState;
     }
 
     /**
-    *  <p>This reference can point to a state in a custom workflow.</p>
-    */
+     *  <p>This reference can point to a state in a custom workflow.</p>
+     */
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
@@ -329,8 +329,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>Set if the ShippingMethod is set.</p>
-    */
+     *  <p>Set if the ShippingMethod is set.</p>
+     */
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
     }
@@ -348,15 +348,15 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>
-    */
+     *  <p>The sequence number of the last order message produced by changes to this order. <code>0</code> means, that no messages were created yet.</p>
+     */
     public Long getLastMessageSequenceNumber() {
         return this.lastMessageSequenceNumber;
     }
 
     /**
-    *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
-    */
+     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+     */
     public com.commercetools.api.models.cart.CartReference getCart() {
         return this.cart;
     }
@@ -382,29 +382,29 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-    *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
-    */
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
+     */
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
 
     /**
-    *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
-    */
+     *  <p>The shippingRateInput is used as an input to select a ShippingRatePriceTier.</p>
+     */
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
         return this.shippingRateInput;
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-    */
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     */
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
 
     /**
-    *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
-    */
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     */
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
         return this.refusedGifts;
     }

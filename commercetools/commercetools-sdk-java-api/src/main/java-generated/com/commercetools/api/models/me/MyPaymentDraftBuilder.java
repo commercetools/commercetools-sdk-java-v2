@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MyPaymentDraft myPaymentDraft = MyPaymentDraft.builder()
+           .amountPlanned(amountPlannedBuilder -> amountPlannedBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
 
     private com.commercetools.api.models.common.Money amountPlanned;
@@ -24,8 +34,8 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     private com.commercetools.api.models.me.MyTransactionDraft transaction;
 
     /**
-    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
-    */
+     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     */
 
     public MyPaymentDraftBuilder amountPlanned(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
@@ -34,8 +44,8 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-    *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
-    */
+     *  <p>How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.</p>
+     */
 
     public MyPaymentDraftBuilder amountPlanned(final com.commercetools.api.models.common.Money amountPlanned) {
         this.amountPlanned = amountPlanned;
@@ -67,8 +77,8 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-    *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
-    */
+     *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
+     */
 
     public MyPaymentDraftBuilder transaction(
             Function<com.commercetools.api.models.me.MyTransactionDraftBuilder, com.commercetools.api.models.me.MyTransactionDraftBuilder> builder) {
@@ -77,8 +87,8 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     }
 
     /**
-    *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
-    */
+     *  <p>A list of financial transactions of the <code>Authorization</code> or <code>Charge</code> TransactionTypes.</p>
+     */
 
     public MyPaymentDraftBuilder transaction(
             @Nullable final com.commercetools.api.models.me.MyTransactionDraft transaction) {

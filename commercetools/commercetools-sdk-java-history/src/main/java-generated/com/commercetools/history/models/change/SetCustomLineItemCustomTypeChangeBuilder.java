@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetCustomLineItemCustomTypeChange setCustomLineItemCustomTypeChange = SetCustomLineItemCustomTypeChange.builder()
+           .change("{change}")
+           .customLineItem(customLineItemBuilder -> customLineItemBuilder)
+           .customLineItemId("{customLineItemId}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCustomLineItemCustomTypeChange> {
 
     private String change;
@@ -21,8 +35,8 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     /**
-    *  <p>Update action for <code>setCustomLineItemCustomType</code></p>
-    */
+     *  <p>Update action for <code>setCustomLineItemCustomType</code></p>
+     */
 
     public SetCustomLineItemCustomTypeChangeBuilder change(final String change) {
         this.change = change;

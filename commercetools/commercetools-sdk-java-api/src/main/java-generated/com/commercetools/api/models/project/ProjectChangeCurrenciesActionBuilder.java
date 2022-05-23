@@ -6,14 +6,24 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectChangeCurrenciesAction projectChangeCurrenciesAction = ProjectChangeCurrenciesAction.builder()
+           .plusCurrencies(currenciesBuilder -> currenciesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChangeCurrenciesAction> {
 
     private java.util.List<String> currencies;
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ProjectChangeCurrenciesActionBuilder currencies(final String... currencies) {
         this.currencies = new ArrayList<>(Arrays.asList(currencies));
@@ -21,8 +31,8 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ProjectChangeCurrenciesActionBuilder currencies(final java.util.List<String> currencies) {
         this.currencies = currencies;
@@ -30,8 +40,8 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
     }
 
     /**
-    *  <p>New value to set. Must not be empty.</p>
-    */
+     *  <p>New value to set. Must not be empty.</p>
+     */
 
     public ProjectChangeCurrenciesActionBuilder plusCurrencies(final String... currencies) {
         if (this.currencies == null) {

@@ -19,14 +19,30 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   InventoryEntry inventoryEntry = InventoryEntry.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .sku("{sku}")
+           .quantityOnStock(0.3)
+           .availableQuantity(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryImpl.class)
 public interface InventoryEntry extends BaseResource, com.commercetools.api.models.DomainResource<InventoryEntry>,
         com.commercetools.api.models.Customizable<InventoryEntry> {
 
     /**
-    *  <p>Platform-generated unique identifier of the InventoryEntry.</p>
-    */
+     *  <p>Platform-generated unique identifier of the InventoryEntry.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
@@ -44,22 +60,22 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     public ZonedDateTime getLastModifiedAt();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
     /**
-    *  <p>User-defined unique identifier of the InventoryEntry.</p>
-    */
+     *  <p>User-defined unique identifier of the InventoryEntry.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
@@ -69,36 +85,36 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     public String getSku();
 
     /**
-    *  <p>Connection to a particular supplier.</p>
-    */
+     *  <p>Connection to a particular supplier.</p>
+     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelReference getSupplyChannel();
 
     /**
-    *  <p>Overall amount of stock. (available + reserved)</p>
-    */
+     *  <p>Overall amount of stock. (available + reserved)</p>
+     */
     @NotNull
     @JsonProperty("quantityOnStock")
     public Long getQuantityOnStock();
 
     /**
-    *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
-    */
+     *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
+     */
     @NotNull
     @JsonProperty("availableQuantity")
     public Long getAvailableQuantity();
 
     /**
-    *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
-    */
+     *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
+     */
 
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 
     /**
-    *  <p>The date and time of the next restock.</p>
-    */
+     *  <p>The date and time of the next restock.</p>
+     */
 
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();

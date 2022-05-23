@@ -6,14 +6,24 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ZoneChangeNameAction zoneChangeNameAction = ZoneChangeNameAction.builder()
+           .name("{name}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction> {
 
     private String name;
 
     /**
-    *  <p>New name of the Zone.</p>
-    */
+     *  <p>New name of the Zone.</p>
+     */
 
     public ZoneChangeNameActionBuilder name(final String name) {
         this.name = name;

@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SimilarProductsTaskStatus similarProductsTaskStatus = SimilarProductsTaskStatus.builder()
+           .state(TaskStatusEnum.PENDING)
+           .result(resultBuilder -> resultBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProductsTaskStatus> {
 
     private com.commercetools.ml.models.common.TaskStatusEnum state;
@@ -25,8 +36,8 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
     }
 
     /**
-    *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
-    */
+     *  <p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p>
+     */
 
     public SimilarProductsTaskStatusBuilder expires(@Nullable final java.time.ZonedDateTime expires) {
         this.expires = expires;
@@ -34,8 +45,8 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
     }
 
     /**
-    *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
-    */
+     *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+     */
 
     public SimilarProductsTaskStatusBuilder result(
             Function<com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder> builder) {
@@ -46,8 +57,8 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
     }
 
     /**
-    *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
-    */
+     *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+     */
 
     public SimilarProductsTaskStatusBuilder result(
             final com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult result) {

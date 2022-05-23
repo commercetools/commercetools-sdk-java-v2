@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGroupSetMessagePayload, ModelBase {
 
     private String type;
@@ -41,15 +41,15 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {
         return this.oldCustomerGroup;
     }

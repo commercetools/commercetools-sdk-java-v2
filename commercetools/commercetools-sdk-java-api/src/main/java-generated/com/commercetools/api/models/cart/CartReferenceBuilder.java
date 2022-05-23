@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartReference cartReference = CartReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartReferenceBuilder implements Builder<CartReference> {
 
     private String id;
@@ -18,8 +28,8 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     private com.commercetools.api.models.cart.Cart obj;
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced Cart.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced Cart.</p>
+     */
 
     public CartReferenceBuilder id(final String id) {
         this.id = id;
@@ -27,8 +37,8 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     }
 
     /**
-    *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
-    */
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     */
 
     public CartReferenceBuilder obj(
             Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
@@ -37,8 +47,8 @@ public class CartReferenceBuilder implements Builder<CartReference> {
     }
 
     /**
-    *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
-    */
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     */
 
     public CartReferenceBuilder obj(@Nullable final com.commercetools.api.models.cart.Cart obj) {
         this.obj = obj;

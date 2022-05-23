@@ -15,10 +15,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>To protect your Azure Function, set its <code>authLevel</code> to <code>function</code> and provide the functions key. The commercetools Platform will set the <code>x-functions-key</code> header. For more information, see the Azure Functions documentation.</p>
-*  <p>To protect the secret key from being exposed, remove the code parameter and secret key from the URL. For example, use <code>https://foo.azurewebsites.net/api/bar</code> instead of <code>https://foo.azurewebsites.net/api/bar?code=secret</code>.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>To protect your Azure Function, set its <code>authLevel</code> to <code>function</code> and provide the functions key. The commercetools Platform will set the <code>x-functions-key</code> header. For more information, see the Azure Functions documentation.</p>
+ *  <p>To protect the secret key from being exposed, remove the code parameter and secret key from the URL. For example, use <code>https://foo.azurewebsites.net/api/bar</code> instead of <code>https://foo.azurewebsites.net/api/bar?code=secret</code>.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AzureFunctionsAuthenticationImpl implements AzureFunctionsAuthentication, ModelBase {
 
     private String type;
@@ -40,8 +40,8 @@ public class AzureFunctionsAuthenticationImpl implements AzureFunctionsAuthentic
     }
 
     /**
-    *  <p>Partially hidden on retrieval for security reasons.</p>
-    */
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     */
     public String getKey() {
         return this.key;
     }

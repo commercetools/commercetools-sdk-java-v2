@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingAddressCustomTypeActionImpl
         implements StagedOrderSetShippingAddressCustomTypeAction, ModelBase {
 
@@ -42,15 +42,15 @@ public class StagedOrderSetShippingAddressCustomTypeActionImpl
     }
 
     /**
-    *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
-    */
+     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-    *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

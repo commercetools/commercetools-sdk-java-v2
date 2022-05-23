@@ -15,10 +15,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
-*  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Draft type to create a Reference or a KeyReference to a resource. Provide either the <code>id</code> or (wherever supported) the <code>key</code> of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field <code>parent</code> of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.</p>
+ *  <p>Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceIdentifierImpl implements ResourceIdentifier, ModelBase {
 
     private com.commercetools.api.models.common.ReferenceTypeId typeId;
@@ -39,22 +39,22 @@ public class ResourceIdentifierImpl implements ResourceIdentifier, ModelBase {
     }
 
     /**
-    *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
-    */
+     *  <p>Type of referenced resource. If given, it must match the expected ReferenceTypeId of the referenced resource.</p>
+     */
     public com.commercetools.api.models.common.ReferenceTypeId getTypeId() {
         return this.typeId;
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
-    */
+     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     */
     public String getKey() {
         return this.key;
     }

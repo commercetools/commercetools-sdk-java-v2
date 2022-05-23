@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductAddedToCategoryMessagePayload productAddedToCategoryMessagePayload = ProductAddedToCategoryMessagePayload.builder()
+           .category(categoryBuilder -> categoryBuilder)
+           .staged(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<ProductAddedToCategoryMessagePayload> {
 
     private com.commercetools.api.models.category.CategoryReference category;
@@ -15,8 +26,8 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     private Boolean staged;
 
     /**
-    *  <p>Reference to a Category.</p>
-    */
+     *  <p>Reference to a Category.</p>
+     */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
@@ -25,8 +36,8 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
     }
 
     /**
-    *  <p>Reference to a Category.</p>
-    */
+     *  <p>Reference to a Category.</p>
+     */
 
     public ProductAddedToCategoryMessagePayloadBuilder category(
             final com.commercetools.api.models.category.CategoryReference category) {

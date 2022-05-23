@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Import Operation describes the import status of a specific resource.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Import Operation describes the import status of a specific resource.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportOperationImpl implements ImportOperation, ModelBase {
 
     private Long version;
@@ -70,78 +70,78 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-    *  <p>The version of the ImportOperation.</p>
-    */
+     *  <p>The version of the ImportOperation.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>The key of the importContainer.</p>
-    */
+     *  <p>The key of the importContainer.</p>
+     */
     public String getImportContainerKey() {
         return this.importContainerKey;
     }
 
     /**
-    *  <p>The key of the resource.</p>
-    */
+     *  <p>The key of the resource.</p>
+     */
     public String getResourceKey() {
         return this.resourceKey;
     }
 
     /**
-    *  <p>The ID of the ImportOperation.</p>
-    */
+     *  <p>The ID of the ImportOperation.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
-    */
+     *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
+     */
     public com.commercetools.importapi.models.common.ProcessingState getState() {
         return this.state;
     }
 
     /**
-    *  <p>The version of the impmorted resource when the import was successful.</p>
-    */
+     *  <p>The version of the impmorted resource when the import was successful.</p>
+     */
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
 
     /**
-    *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
-    */
+     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     */
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;
     }
 
     /**
-    *  <p>In case of unresolved status this array will show the unresolved references</p>
-    */
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     */
     public java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> getUnresolvedReferences() {
         return this.unresolvedReferences;
     }
 
     /**
-    *  <p>The time when the ImportOperation was created.</p>
-    */
+     *  <p>The time when the ImportOperation was created.</p>
+     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>The last time When the ImportOperation was modified.</p>
-    */
+     *  <p>The last time When the ImportOperation was modified.</p>
+     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>The expiration time of the ImportOperation.</p>
-    */
+     *  <p>The expiration time of the ImportOperation.</p>
+     */
     public java.time.ZonedDateTime getExpiresAt() {
         return this.expiresAt;
     }

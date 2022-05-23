@@ -6,7 +6,19 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetReturnShipmentStateChange setReturnShipmentStateChange = SetReturnShipmentStateChange.builder()
+           .change("{change}")
+           .nextValue(ReturnShipmentState.ADVISED)
+           .previousValue(ReturnShipmentState.ADVISED)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShipmentStateChange> {
 
     private String change;
@@ -16,8 +28,8 @@ public class SetReturnShipmentStateChangeBuilder implements Builder<SetReturnShi
     private com.commercetools.history.models.common.ReturnShipmentState previousValue;
 
     /**
-    *  <p>Update action for <code>setReturnShipmentState</code></p>
-    */
+     *  <p>Update action for <code>setReturnShipmentState</code></p>
+     */
 
     public SetReturnShipmentStateChangeBuilder change(final String change) {
         this.change = change;

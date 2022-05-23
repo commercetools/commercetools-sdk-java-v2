@@ -16,30 +16,40 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StagedOrderAddShoppingListAction stagedOrderAddShoppingListAction = StagedOrderAddShoppingListAction.builder()
+           .shoppingList(shoppingListBuilder -> shoppingListBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderAddShoppingListActionImpl.class)
 public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateAction {
 
     String ADD_SHOPPING_LIST = "addShoppingList";
 
     /**
-    *  <p>ResourceIdentifier to a ShoppingList.</p>
-    */
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("shoppingList")
     public ShoppingListResourceIdentifier getShoppingList();
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
     @Valid
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();

@@ -7,7 +7,19 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AddPlainEnumValueChange addPlainEnumValueChange = AddPlainEnumValueChange.builder()
+           .change("{change}")
+           .attributeName("{attributeName}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValueChange> {
 
     private String change;
@@ -17,8 +29,8 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
     /**
-    *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
-    */
+     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     */
 
     public AddPlainEnumValueChangeBuilder change(final String change) {
         this.change = change;
@@ -26,8 +38,8 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-    *  <p>The name of the attribute updated.</p>
-    */
+     *  <p>The name of the attribute updated.</p>
+     */
 
     public AddPlainEnumValueChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

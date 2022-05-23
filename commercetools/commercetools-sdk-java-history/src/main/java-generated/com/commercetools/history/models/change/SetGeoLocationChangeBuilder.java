@@ -7,7 +7,19 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetGeoLocationChange setGeoLocationChange = SetGeoLocationChange.builder()
+           .change("{change}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange> {
 
     private String change;
@@ -17,8 +29,8 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     private com.commercetools.history.models.common.GeoLocation previousValue;
 
     /**
-    *  <p>Update action for <code>setGeoLocation</code></p>
-    */
+     *  <p>Update action for <code>setGeoLocation</code></p>
+     */
 
     public SetGeoLocationChangeBuilder change(final String change) {
         this.change = change;

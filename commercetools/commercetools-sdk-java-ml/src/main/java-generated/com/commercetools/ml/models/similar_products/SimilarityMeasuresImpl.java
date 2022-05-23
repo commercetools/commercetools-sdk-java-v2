@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Specify which ProductData attributes to use for estimating similarity and how to weigh them. An attribute's weight can be any whole positive integer, starting with 0. The larger the integer, the higher its weight.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Specify which ProductData attributes to use for estimating similarity and how to weigh them. An attribute's weight can be any whole positive integer, starting with 0. The larger the integer, the higher its weight.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
 
     private Long name;
@@ -45,36 +45,36 @@ public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
     }
 
     /**
-    *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
-    */
+     *  <p>Importance of the <code>name</code> attribute in overall similarity.</p>
+     */
     public Long getName() {
         return this.name;
     }
 
     /**
-    *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
-    */
+     *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+     */
     public Long getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
-    */
+     *  <p>Importance of the <code>description</code> attribute in overall similarity.</p>
+     */
     public Long getAttribute() {
         return this.attribute;
     }
 
     /**
-    *  <p>Importance of the number of product variants in overall similarity.</p>
-    */
+     *  <p>Importance of the number of product variants in overall similarity.</p>
+     */
     public Long getVariantCount() {
         return this.variantCount;
     }
 
     /**
-    *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
-    */
+     *  <p>Importance of the <code>price</code> attribute in overall similarity.</p>
+     */
     public Long getPrice() {
         return this.price;
     }

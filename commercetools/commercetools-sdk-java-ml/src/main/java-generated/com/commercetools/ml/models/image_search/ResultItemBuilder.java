@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ResultItem resultItem = ResultItem.builder()
+           .imageUrl("{imageUrl}")
+           .plusProductVariants(productVariantsBuilder -> productVariantsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResultItemBuilder implements Builder<ResultItem> {
 
     private String imageUrl;
@@ -15,8 +26,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     private java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants;
 
     /**
-    *  <p>The URL of the image.</p>
-    */
+     *  <p>The URL of the image.</p>
+     */
 
     public ResultItemBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
@@ -24,8 +35,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-    *  <p>An array of product variants containing the image URL.</p>
-    */
+     *  <p>An array of product variants containing the image URL.</p>
+     */
 
     public ResultItemBuilder productVariants(
             final com.commercetools.ml.models.common.ProductVariant... productVariants) {
@@ -34,8 +45,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-    *  <p>An array of product variants containing the image URL.</p>
-    */
+     *  <p>An array of product variants containing the image URL.</p>
+     */
 
     public ResultItemBuilder productVariants(
             final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
@@ -44,8 +55,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-    *  <p>An array of product variants containing the image URL.</p>
-    */
+     *  <p>An array of product variants containing the image URL.</p>
+     */
 
     public ResultItemBuilder plusProductVariants(
             final com.commercetools.ml.models.common.ProductVariant... productVariants) {
@@ -57,8 +68,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-    *  <p>An array of product variants containing the image URL.</p>
-    */
+     *  <p>An array of product variants containing the image URL.</p>
+     */
 
     public ResultItemBuilder plusProductVariants(
             Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {
@@ -70,8 +81,8 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
-    *  <p>An array of product variants containing the image URL.</p>
-    */
+     *  <p>An array of product variants containing the image URL.</p>
+     */
 
     public ResultItemBuilder withProductVariants(
             Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariantBuilder> builder) {

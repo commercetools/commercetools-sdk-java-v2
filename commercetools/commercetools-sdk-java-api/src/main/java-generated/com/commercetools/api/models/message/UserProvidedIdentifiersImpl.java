@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, ModelBase {
 
     private String key;
@@ -50,8 +50,8 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-    *  <p>User-provided unique identifier of the resource.</p>
-    */
+     *  <p>User-provided unique identifier of the resource.</p>
+     */
     public String getKey() {
         return this.key;
     }
@@ -73,15 +73,15 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
 
     /**
-    *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
-    */
+     *  <p>Custom Objects are grouped into containers, which can be used like namespaces. Within a given container, a user-defined key can be used to uniquely identify resources.</p>
+     */
     public com.commercetools.api.models.message.ContainerAndKey getContainerAndKey() {
         return this.containerAndKey;
     }

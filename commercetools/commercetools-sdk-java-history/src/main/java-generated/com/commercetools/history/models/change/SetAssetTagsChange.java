@@ -14,15 +14,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetAssetTagsChange setAssetTagsChange = SetAssetTagsChange.builder()
+           .change("{change}")
+           .asset(assetBuilder -> assetBuilder)
+           .plusNextValue(nextValueBuilder -> nextValueBuilder)
+           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetAssetTagsChangeImpl.class)
 public interface SetAssetTagsChange extends Change {
 
     String SET_ASSET_TAGS_CHANGE = "SetAssetTagsChange";
 
     /**
-    *  <p>Update action for <code>setAssetTags</code></p>
-    */
+     *  <p>Update action for <code>setAssetTags</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();

@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>PagedQueryResult containing an array of AssignedProductSelection.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>PagedQueryResult containing an array of AssignedProductSelection.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssignedProductSelectionPagedQueryResponseImpl
         implements AssignedProductSelectionPagedQueryResponse, ModelBase {
 
@@ -47,36 +47,36 @@ public class AssignedProductSelectionPagedQueryResponseImpl
     }
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
     public Long getCount() {
         return this.count;
     }
 
     /**
-    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>References to ProductSelection that are assigned to the Product.</p>
-    */
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
+     */
     public java.util.List<com.commercetools.api.models.product_selection.AssignedProductSelection> getResults() {
         return this.results;
     }

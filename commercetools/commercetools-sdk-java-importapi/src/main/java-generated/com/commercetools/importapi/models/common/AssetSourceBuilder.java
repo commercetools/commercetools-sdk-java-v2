@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AssetSource assetSource = AssetSource.builder()
+           .uri("{uri}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetSourceBuilder implements Builder<AssetSource> {
 
     private String uri;
@@ -34,8 +44,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-    *  <p>The width and height of the Asset Source.</p>
-    */
+     *  <p>The width and height of the Asset Source.</p>
+     */
 
     public AssetSourceBuilder dimensions(
             Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensionsBuilder> builder) {
@@ -44,8 +54,8 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-    *  <p>The width and height of the Asset Source.</p>
-    */
+     *  <p>The width and height of the Asset Source.</p>
+     */
 
     public AssetSourceBuilder dimensions(
             @Nullable final com.commercetools.importapi.models.common.AssetDimensions dimensions) {

@@ -7,7 +7,19 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectCategoryRecommendation projectCategoryRecommendation = ProjectCategoryRecommendation.builder()
+           .category(categoryBuilder -> categoryBuilder)
+           .confidence(0.3)
+           .path("{path}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCategoryRecommendation> {
 
     private com.commercetools.ml.models.common.CategoryReference category;
@@ -17,8 +29,8 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
     private String path;
 
     /**
-    *  <p>A category that is recommended for a product.</p>
-    */
+     *  <p>A category that is recommended for a product.</p>
+     */
 
     public ProjectCategoryRecommendationBuilder category(
             Function<com.commercetools.ml.models.common.CategoryReferenceBuilder, com.commercetools.ml.models.common.CategoryReferenceBuilder> builder) {
@@ -27,8 +39,8 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
     }
 
     /**
-    *  <p>A category that is recommended for a product.</p>
-    */
+     *  <p>A category that is recommended for a product.</p>
+     */
 
     public ProjectCategoryRecommendationBuilder category(
             final com.commercetools.ml.models.common.CategoryReference category) {
@@ -37,8 +49,8 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
     }
 
     /**
-    *  <p>Probability score for the category recommendation.</p>
-    */
+     *  <p>Probability score for the category recommendation.</p>
+     */
 
     public ProjectCategoryRecommendationBuilder confidence(final Double confidence) {
         this.confidence = confidence;
@@ -46,8 +58,8 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
     }
 
     /**
-    *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
-    */
+     *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
+     */
 
     public ProjectCategoryRecommendationBuilder path(final String path) {
         this.path = path;

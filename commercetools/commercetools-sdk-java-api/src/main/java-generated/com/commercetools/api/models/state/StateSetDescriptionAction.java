@@ -14,15 +14,25 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StateSetDescriptionAction stateSetDescriptionAction = StateSetDescriptionAction.builder()
+           .description(descriptionBuilder -> descriptionBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateSetDescriptionActionImpl.class)
 public interface StateSetDescriptionAction extends StateUpdateAction {
 
     String SET_DESCRIPTION = "setDescription";
 
     /**
-    *  <p>Value to set. If empty, any existing value will be removed.</p>
-    */
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("description")

@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderDiscountCodeStateSetMessagePayload orderDiscountCodeStateSetMessagePayload = OrderDiscountCodeStateSetMessagePayload.builder()
+           .discountCode(discountCodeBuilder -> discountCodeBuilder)
+           .state(DiscountCodeState.NOT_ACTIVE)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDiscountCodeStateSetMessagePayloadBuilder
         implements Builder<OrderDiscountCodeStateSetMessagePayload> {
 
@@ -21,8 +32,8 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
     /**
-    *  <p>Reference to a DiscountCode.</p>
-    */
+     *  <p>Reference to a DiscountCode.</p>
+     */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
             Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder> builder) {
@@ -32,8 +43,8 @@ public class OrderDiscountCodeStateSetMessagePayloadBuilder
     }
 
     /**
-    *  <p>Reference to a DiscountCode.</p>
-    */
+     *  <p>Reference to a DiscountCode.</p>
+     */
 
     public OrderDiscountCodeStateSetMessagePayloadBuilder discountCode(
             final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {

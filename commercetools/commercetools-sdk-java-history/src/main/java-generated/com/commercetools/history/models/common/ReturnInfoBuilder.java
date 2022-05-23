@@ -7,7 +7,19 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReturnInfo returnInfo = ReturnInfo.builder()
+           .plusItems(itemsBuilder -> itemsBuilder)
+           .returnTrackingId("{returnTrackingId}")
+           .returnDate("{returnDate}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoBuilder implements Builder<ReturnInfo> {
 
     private java.util.List<com.commercetools.history.models.common.ReturnItem> items;
@@ -51,8 +63,8 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-    *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
-    */
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     */
 
     public ReturnInfoBuilder returnTrackingId(final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;

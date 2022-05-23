@@ -17,9 +17,20 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Retrieves the representation of a subscription by its key.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Retrieves the representation of a subscription by its key.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .subscriptions()
+           .withKey("{key}")
+           .get()
+           .execute()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySubscriptionsKeyByKeyGet
         extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyGet, com.commercetools.api.models.subscription.Subscription>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsKeyByKeyGet>,

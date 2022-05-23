@@ -7,14 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductDraftImportRequest productDraftImportRequest = ProductDraftImportRequest.builder()
+           .plusResources(resourcesBuilder -> resourcesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources;
 
     /**
-    *  <p>The product draft import resources of this request.</p>
-    */
+     *  <p>The product draft import resources of this request.</p>
+     */
 
     public ProductDraftImportRequestBuilder resources(
             final com.commercetools.importapi.models.productdrafts.ProductDraftImport... resources) {
@@ -23,8 +33,8 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
     }
 
     /**
-    *  <p>The product draft import resources of this request.</p>
-    */
+     *  <p>The product draft import resources of this request.</p>
+     */
 
     public ProductDraftImportRequestBuilder resources(
             final java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> resources) {
@@ -33,8 +43,8 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
     }
 
     /**
-    *  <p>The product draft import resources of this request.</p>
-    */
+     *  <p>The product draft import resources of this request.</p>
+     */
 
     public ProductDraftImportRequestBuilder plusResources(
             final com.commercetools.importapi.models.productdrafts.ProductDraftImport... resources) {
@@ -46,8 +56,8 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
     }
 
     /**
-    *  <p>The product draft import resources of this request.</p>
-    */
+     *  <p>The product draft import resources of this request.</p>
+     */
 
     public ProductDraftImportRequestBuilder plusResources(
             Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {
@@ -60,8 +70,8 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
     }
 
     /**
-    *  <p>The product draft import resources of this request.</p>
-    */
+     *  <p>The product draft import resources of this request.</p>
+     */
 
     public ProductDraftImportRequestBuilder withResources(
             Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder> builder) {

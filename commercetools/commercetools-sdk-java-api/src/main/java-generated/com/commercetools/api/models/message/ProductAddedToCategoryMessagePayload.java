@@ -14,15 +14,26 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductAddedToCategoryMessagePayload productAddedToCategoryMessagePayload = ProductAddedToCategoryMessagePayload.builder()
+           .category(categoryBuilder -> categoryBuilder)
+           .staged(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductAddedToCategoryMessagePayloadImpl.class)
 public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
 
     String PRODUCT_ADDED_TO_CATEGORY = "ProductAddedToCategory";
 
     /**
-    *  <p>Reference to a Category.</p>
-    */
+     *  <p>Reference to a Category.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("category")

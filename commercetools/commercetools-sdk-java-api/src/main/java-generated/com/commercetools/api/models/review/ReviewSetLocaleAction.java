@@ -10,15 +10,24 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReviewSetLocaleAction reviewSetLocaleAction = ReviewSetLocaleAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewSetLocaleActionImpl.class)
 public interface ReviewSetLocaleAction extends ReviewUpdateAction {
 
     String SET_LOCALE = "setLocale";
 
     /**
-    *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-    */
+     *  <p>If <code>locale</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     */
 
     @JsonProperty("locale")
     public String getLocale();

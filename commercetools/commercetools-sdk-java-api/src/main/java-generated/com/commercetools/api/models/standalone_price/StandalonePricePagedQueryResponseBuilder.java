@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StandalonePricePagedQueryResponse standalonePricePagedQueryResponse = StandalonePricePagedQueryResponse.builder()
+           .limit(0.3)
+           .offset(0.3)
+           .count(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePricePagedQueryResponseBuilder implements Builder<StandalonePricePagedQueryResponse> {
 
     private Long limit;
@@ -24,8 +37,8 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     private java.util.List<com.commercetools.api.models.standalone_price.StandalonePrice> results;
 
     /**
-    *  <p>Number of requested results.</p>
-    */
+     *  <p>Number of requested results.</p>
+     */
 
     public StandalonePricePagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
@@ -33,8 +46,8 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     }
 
     /**
-    *  <p>Offset supplied by the client or server default. It is the number of elements skipped, not a page number.</p>
-    */
+     *  <p>Offset supplied by the client or server default. It is the number of elements skipped, not a page number.</p>
+     */
 
     public StandalonePricePagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
@@ -42,8 +55,8 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     }
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
 
     public StandalonePricePagedQueryResponseBuilder count(final Long count) {
         this.count = count;
@@ -51,8 +64,8 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     }
 
     /**
-    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
 
     public StandalonePricePagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
@@ -60,8 +73,8 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     }
 
     /**
-    *  <p>StandalonePrices matching the query.</p>
-    */
+     *  <p>StandalonePrices matching the query.</p>
+     */
 
     public StandalonePricePagedQueryResponseBuilder results(
             final com.commercetools.api.models.standalone_price.StandalonePrice... results) {
@@ -70,8 +83,8 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     }
 
     /**
-    *  <p>StandalonePrices matching the query.</p>
-    */
+     *  <p>StandalonePrices matching the query.</p>
+     */
 
     public StandalonePricePagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.standalone_price.StandalonePrice> results) {
@@ -80,8 +93,8 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     }
 
     /**
-    *  <p>StandalonePrices matching the query.</p>
-    */
+     *  <p>StandalonePrices matching the query.</p>
+     */
 
     public StandalonePricePagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.standalone_price.StandalonePrice... results) {
@@ -93,8 +106,8 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     }
 
     /**
-    *  <p>StandalonePrices matching the query.</p>
-    */
+     *  <p>StandalonePrices matching the query.</p>
+     */
 
     public StandalonePricePagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceBuilder> builder) {
@@ -107,8 +120,8 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     }
 
     /**
-    *  <p>StandalonePrices matching the query.</p>
-    */
+     *  <p>StandalonePrices matching the query.</p>
+     */
 
     public StandalonePricePagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceBuilder> builder) {

@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Dimensions of the Asset source specified by the number of pixels.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Dimensions of the Asset source specified by the number of pixels.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
 
     private Integer w;
@@ -34,15 +34,15 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
     }
 
     /**
-    *  <p>Width of the Asset source.</p>
-    */
+     *  <p>Width of the Asset source.</p>
+     */
     public Integer getW() {
         return this.w;
     }
 
     /**
-    *  <p>Height of the Asset source.</p>
-    */
+     *  <p>Height of the Asset source.</p>
+     */
     public Integer getH() {
         return this.h;
     }

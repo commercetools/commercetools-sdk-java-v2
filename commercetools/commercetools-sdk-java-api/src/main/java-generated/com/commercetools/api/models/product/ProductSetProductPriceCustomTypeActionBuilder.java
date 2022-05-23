@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSetProductPriceCustomTypeAction productSetProductPriceCustomTypeAction = ProductSetProductPriceCustomTypeAction.builder()
+           .priceId("{priceId}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<ProductSetProductPriceCustomTypeAction> {
 
     private String priceId;
@@ -34,8 +44,8 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-    *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
-    */
+     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
+     */
 
     public ProductSetProductPriceCustomTypeActionBuilder type(
             Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifierBuilder> builder) {
@@ -44,8 +54,8 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-    *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
-    */
+     *  <p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p>
+     */
 
     public ProductSetProductPriceCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -54,8 +64,8 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-    *  <p>Sets the Custom Fields fields for the Price.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the Price.</p>
+     */
 
     public ProductSetProductPriceCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
@@ -64,8 +74,8 @@ public class ProductSetProductPriceCustomTypeActionBuilder implements Builder<Pr
     }
 
     /**
-    *  <p>Sets the Custom Fields fields for the Price.</p>
-    */
+     *  <p>Sets the Custom Fields fields for the Price.</p>
+     */
 
     public ProductSetProductPriceCustomTypeActionBuilder fields(
             @Nullable final com.commercetools.api.models.type.FieldContainer fields) {

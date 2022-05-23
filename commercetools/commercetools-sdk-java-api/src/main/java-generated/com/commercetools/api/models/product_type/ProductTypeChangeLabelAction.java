@@ -14,7 +14,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductTypeChangeLabelAction productTypeChangeLabelAction = ProductTypeChangeLabelAction.builder()
+           .attributeName("{attributeName}")
+           .label(labelBuilder -> labelBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeLabelActionImpl.class)
 public interface ProductTypeChangeLabelAction extends ProductTypeUpdateAction {
 
@@ -25,8 +36,8 @@ public interface ProductTypeChangeLabelAction extends ProductTypeUpdateAction {
     public String getAttributeName();
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("label")

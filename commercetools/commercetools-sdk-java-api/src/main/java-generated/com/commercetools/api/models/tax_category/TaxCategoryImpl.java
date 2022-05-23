@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryImpl implements TaxCategory, ModelBase {
 
     private String id;
@@ -62,71 +62,71 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the TaxCategory.</p>
-    */
+     *  <p>Platform-generated unique identifier of the TaxCategory.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the TaxCategory.</p>
-    */
+     *  <p>Current version of the TaxCategory.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
+     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
+     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>Name of the TaxCategory.</p>
-    */
+     *  <p>Name of the TaxCategory.</p>
+     */
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>Description of the TaxCategory.</p>
-    */
+     *  <p>Description of the TaxCategory.</p>
+     */
     public String getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
-    */
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID assigned by the platform.</p>
+     */
     public java.util.List<com.commercetools.api.models.tax_category.TaxRate> getRates() {
         return this.rates;
     }
 
     /**
-    *  <p>User-defined unique identifier of the TaxCategory.</p>
-    */
+     *  <p>User-defined unique identifier of the TaxCategory.</p>
+     */
     public String getKey() {
         return this.key;
     }

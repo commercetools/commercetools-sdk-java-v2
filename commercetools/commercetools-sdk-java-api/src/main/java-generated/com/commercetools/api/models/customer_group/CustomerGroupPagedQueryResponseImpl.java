@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>PagedQueryResult with <code>results</code> containing an array of CustomerGroup.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>PagedQueryResult with <code>results</code> containing an array of CustomerGroup.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQueryResponse, ModelBase {
 
     private Long limit;
@@ -46,36 +46,36 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
     }
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
     public Long getLimit() {
         return this.limit;
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
     public Long getOffset() {
         return this.offset;
     }
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
     public Long getCount() {
         return this.count;
     }
 
     /**
-    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>CustomerGroups matching the query.</p>
-    */
+     *  <p>CustomerGroups matching the query.</p>
+     */
     public java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> getResults() {
         return this.results;
     }

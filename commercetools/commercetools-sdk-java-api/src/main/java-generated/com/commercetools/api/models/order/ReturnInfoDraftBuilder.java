@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReturnInfoDraft returnInfoDraft = ReturnInfoDraft.builder()
+           .plusItems(itemsBuilder -> itemsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
 
     private java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items;
@@ -56,8 +66,8 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-    *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
-    */
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     */
 
     public ReturnInfoDraftBuilder returnTrackingId(@Nullable final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;

@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -35,15 +35,15 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
     }
 
     /**
-    *  <p><code>id</code> or <code>key</code> of the Type.</p>
-    */
+     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     */
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
 
     /**
-    *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
-    */
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     */
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
     }

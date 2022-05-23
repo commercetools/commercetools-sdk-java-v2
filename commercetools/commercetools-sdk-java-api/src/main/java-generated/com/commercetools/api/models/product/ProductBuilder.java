@@ -9,7 +9,22 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Product product = Product.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .productType(productTypeBuilder -> productTypeBuilder)
+           .masterData(masterDataBuilder -> masterDataBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductBuilder implements Builder<Product> {
 
     private String id;
@@ -46,8 +61,8 @@ public class ProductBuilder implements Builder<Product> {
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
     /**
-    *  <p>Platform-generated unique identifier of the Product.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Product.</p>
+     */
 
     public ProductBuilder id(final String id) {
         this.id = id;
@@ -55,8 +70,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>The current version of the product.</p>
-    */
+     *  <p>The current version of the product.</p>
+     */
 
     public ProductBuilder version(final Long version) {
         this.version = version;
@@ -74,8 +89,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ProductBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -84,8 +99,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ProductBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -94,8 +109,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ProductBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -104,8 +119,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public ProductBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -113,8 +128,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
-    */
+     *  <p>User-defined unique identifier of the Product. <em>Product keys are different from ProductVariant keys.</em></p>
+     */
 
     public ProductBuilder key(@Nullable final String key) {
         this.key = key;
@@ -135,8 +150,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>The product data in the master catalog.</p>
-    */
+     *  <p>The product data in the master catalog.</p>
+     */
 
     public ProductBuilder masterData(
             Function<com.commercetools.api.models.product.ProductCatalogDataBuilder, com.commercetools.api.models.product.ProductCatalogDataBuilder> builder) {
@@ -145,8 +160,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>The product data in the master catalog.</p>
-    */
+     *  <p>The product data in the master catalog.</p>
+     */
 
     public ProductBuilder masterData(final com.commercetools.api.models.product.ProductCatalogData masterData) {
         this.masterData = masterData;
@@ -178,8 +193,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>Statistics about the review ratings taken into account for this product.</p>
-    */
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     */
 
     public ProductBuilder reviewRatingStatistics(
             Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatisticsBuilder> builder) {
@@ -190,8 +205,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>Statistics about the review ratings taken into account for this product.</p>
-    */
+     *  <p>Statistics about the review ratings taken into account for this product.</p>
+     */
 
     public ProductBuilder reviewRatingStatistics(
             @Nullable final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics) {
@@ -200,8 +215,8 @@ public class ProductBuilder implements Builder<Product> {
     }
 
     /**
-    *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
-    */
+     *  <p>Specifies which type of prices should be used when looking up a price for this product. If not set, <code>Embedded</code> ProductPriceMode is used.</p>
+     */
 
     public ProductBuilder priceMode(
             @Nullable final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {

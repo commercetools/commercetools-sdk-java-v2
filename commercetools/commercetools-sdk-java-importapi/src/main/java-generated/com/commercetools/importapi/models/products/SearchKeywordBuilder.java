@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SearchKeyword searchKeyword = SearchKeyword.builder()
+           .text("{text}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchKeywordBuilder implements Builder<SearchKeyword> {
 
     private String text;
@@ -23,8 +33,8 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-    *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
-    */
+     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+     */
 
     public SearchKeywordBuilder suggestTokenizer(
             @Nullable final com.commercetools.importapi.models.products.SuggestTokenizer suggestTokenizer) {
@@ -33,8 +43,8 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-    *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
-    */
+     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+     */
 
     public SearchKeywordBuilder suggestTokenizer(
             Function<com.commercetools.importapi.models.products.SuggestTokenizerBuilder, Builder<? extends com.commercetools.importapi.models.products.SuggestTokenizer>> builder) {

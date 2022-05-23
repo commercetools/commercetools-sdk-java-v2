@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerAddress customerAddress = CustomerAddress.builder()
+           .key("{key}")
+           .country("{country}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     private String key;
@@ -82,8 +93,8 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     private String externalId;
 
     /**
-    *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
-    */
+     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+     */
 
     public CustomerAddressBuilder key(final String key) {
         this.key = key;
@@ -146,8 +157,8 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-    *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public CustomerAddressBuilder country(final String country) {
         this.country = country;

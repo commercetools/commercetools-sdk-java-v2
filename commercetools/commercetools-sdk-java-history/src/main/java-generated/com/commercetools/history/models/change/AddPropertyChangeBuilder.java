@@ -6,7 +6,18 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AddPropertyChange addPropertyChange = AddPropertyChange.builder()
+           .change("{change}")
+           .path("{path}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     private String change;
@@ -16,8 +27,8 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
     private java.lang.Object nextValue;
 
     /**
-    *  <p>Update action for <code>addProperty</code> on custom objects</p>
-    */
+     *  <p>Update action for <code>addProperty</code> on custom objects</p>
+     */
 
     public AddPropertyChangeBuilder change(final String change) {
         this.change = change;
@@ -25,8 +36,8 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
     }
 
     /**
-    *  <p>Value path to the property that was added</p>
-    */
+     *  <p>Value path to the property that was added</p>
+     */
 
     public AddPropertyChangeBuilder path(final String path) {
         this.path = path;

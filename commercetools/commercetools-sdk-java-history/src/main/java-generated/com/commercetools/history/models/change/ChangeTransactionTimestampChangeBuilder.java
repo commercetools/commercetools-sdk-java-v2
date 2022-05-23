@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeTransactionTimestampChange changeTransactionTimestampChange = ChangeTransactionTimestampChange.builder()
+           .change("{change}")
+           .transaction(transactionBuilder -> transactionBuilder)
+           .nextValue("{nextValue}")
+           .previousValue("{previousValue}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTransactionTimestampChange> {
 
     private String change;
@@ -19,8 +32,8 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     private String previousValue;
 
     /**
-    *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
-    */
+     *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
+     */
 
     public ChangeTransactionTimestampChangeBuilder change(final String change) {
         this.change = change;

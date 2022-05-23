@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The request conflicts with the current state of the involved resources. This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it. The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The request conflicts with the current state of the involved resources. This error typically occurs when the request attempts to modify a resource that is out of date, that is, it has been modified by another client since the last time it was retrieved by the system attempting to update it. The client application should resolve the conflict (with or without involving the end-user) before retrying the request.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ConcurrentModificationErrorImpl implements ConcurrentModificationError, ModelBase {
 
     private String code;
@@ -55,22 +55,22 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
     }
 
     /**
-    *  <p>The version specified in the failed request.</p>
-    */
+     *  <p>The version specified in the failed request.</p>
+     */
     public Long getSpecifiedVersion() {
         return this.specifiedVersion;
     }
 
     /**
-    *  <p>The current version of the resource.</p>
-    */
+     *  <p>The current version of the resource.</p>
+     */
     public Long getCurrentVersion() {
         return this.currentVersion;
     }
 
     /**
-    *  <p>The resource in conflict.</p>
-    */
+     *  <p>The resource in conflict.</p>
+     */
     public java.lang.Object getConflictedResource() {
         return this.conflictedResource;
     }

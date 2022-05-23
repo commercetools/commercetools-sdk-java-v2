@@ -7,7 +7,19 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetReservationsChange setReservationsChange = SetReservationsChange.builder()
+           .change("{change}")
+           .plusNextValue(nextValueBuilder -> nextValueBuilder)
+           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetReservationsChangeBuilder implements Builder<SetReservationsChange> {
 
     private String change;
@@ -17,8 +29,8 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     private java.util.List<com.commercetools.history.models.common.Reservation> previousValue;
 
     /**
-    *  <p>Update action for <code>setReservations</code> on inventories</p>
-    */
+     *  <p>Update action for <code>setReservations</code> on inventories</p>
+     */
 
     public SetReservationsChangeBuilder change(final String change) {
         this.change = change;

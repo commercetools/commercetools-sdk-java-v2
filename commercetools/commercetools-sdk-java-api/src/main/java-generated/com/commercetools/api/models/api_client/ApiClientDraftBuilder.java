@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ApiClientDraft apiClientDraft = ApiClientDraft.builder()
+           .name("{name}")
+           .scope("{scope}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
 
     private String name;
@@ -25,8 +36,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     private Integer refreshTokenValiditySeconds;
 
     /**
-    *  <p>Name of the APIClient.</p>
-    */
+     *  <p>Name of the APIClient.</p>
+     */
 
     public ApiClientDraftBuilder name(final String name) {
         this.name = name;
@@ -34,8 +45,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-    *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
-    */
+     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     */
 
     public ApiClientDraftBuilder scope(final String scope) {
         this.scope = scope;
@@ -43,8 +54,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-    *  <p>If set, the Client will be deleted after the specified amount of days.</p>
-    */
+     *  <p>If set, the Client will be deleted after the specified amount of days.</p>
+     */
 
     public ApiClientDraftBuilder deleteDaysAfterCreation(@Nullable final Long deleteDaysAfterCreation) {
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
@@ -52,8 +63,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-    *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
-    */
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p>
+     */
 
     public ApiClientDraftBuilder accessTokenValiditySeconds(@Nullable final Integer accessTokenValiditySeconds) {
         this.accessTokenValiditySeconds = accessTokenValiditySeconds;
@@ -61,8 +72,8 @@ public class ApiClientDraftBuilder implements Builder<ApiClientDraft> {
     }
 
     /**
-    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
-    */
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p>
+     */
 
     public ApiClientDraftBuilder refreshTokenValiditySeconds(@Nullable final Integer refreshTokenValiditySeconds) {
         this.refreshTokenValiditySeconds = refreshTokenValiditySeconds;

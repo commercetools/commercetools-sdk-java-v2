@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReturnItemDraft returnItemDraft = ReturnItemDraft.builder()
+           .quantity(0.3)
+           .shipmentState(ReturnShipmentState.ADVISED)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
     private Double quantity;
@@ -45,8 +56,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-    *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
-    */
+     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     */
 
     public ReturnItemDraftBuilder shipmentState(
             final com.commercetools.importapi.models.order_patches.ReturnShipmentState shipmentState) {

@@ -7,14 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TypeAddFieldDefinitionAction typeAddFieldDefinitionAction = TypeAddFieldDefinitionAction.builder()
+           .fieldDefinition(fieldDefinitionBuilder -> fieldDefinitionBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddFieldDefinitionAction> {
 
     private com.commercetools.api.models.type.FieldDefinition fieldDefinition;
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
 
     public TypeAddFieldDefinitionActionBuilder fieldDefinition(
             Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinitionBuilder> builder) {
@@ -23,8 +33,8 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
     }
 
     /**
-    *  <p>Value to append to the array.</p>
-    */
+     *  <p>Value to append to the array.</p>
+     */
 
     public TypeAddFieldDefinitionActionBuilder fieldDefinition(
             final com.commercetools.api.models.type.FieldDefinition fieldDefinition) {

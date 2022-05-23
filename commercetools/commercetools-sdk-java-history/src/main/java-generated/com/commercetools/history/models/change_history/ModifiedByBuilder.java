@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ModifiedBy modifiedBy = ModifiedBy.builder()
+           .id("{id}")
+           .type("{type}")
+           .isPlatformClient(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     private String id;
@@ -28,8 +40,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     private Boolean isPlatformClient;
 
     /**
-    *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
-    */
+     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     */
 
     public ModifiedByBuilder id(final String id) {
         this.id = id;
@@ -37,8 +49,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-    *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
-    */
+     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     */
 
     public ModifiedByBuilder type(final String type) {
         this.type = type;
@@ -46,8 +58,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-    *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
-    */
+     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     */
 
     public ModifiedByBuilder customer(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
@@ -56,8 +68,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-    *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
-    */
+     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     */
 
     public ModifiedByBuilder customer(@Nullable final com.commercetools.history.models.common.Reference customer) {
         this.customer = customer;
@@ -65,8 +77,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-    *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
-    */
+     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     */
 
     public ModifiedByBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
@@ -74,8 +86,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-    *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
-    */
+     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     */
 
     public ModifiedByBuilder clientId(@Nullable final String clientId) {
         this.clientId = clientId;
@@ -83,8 +95,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-    *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
-    */
+     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     */
 
     public ModifiedByBuilder isPlatformClient(final Boolean isPlatformClient) {
         this.isPlatformClient = isPlatformClient;

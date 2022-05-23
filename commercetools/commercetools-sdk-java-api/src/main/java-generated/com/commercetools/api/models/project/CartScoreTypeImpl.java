@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartScoreTypeImpl implements CartScoreType, ModelBase {
 
     private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
@@ -25,8 +25,8 @@ public class CartScoreTypeImpl implements CartScoreType, ModelBase {
     }
 
     /**
-    *  <p>Can be one of the following or absent.</p>
-    */
+     *  <p>Can be one of the following or absent.</p>
+     */
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType() {
         return this.type;
     }

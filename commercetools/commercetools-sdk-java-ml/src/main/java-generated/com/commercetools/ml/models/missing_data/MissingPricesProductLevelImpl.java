@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingPricesProductLevelImpl implements MissingPricesProductLevel, ModelBase {
 
     private Long total;
@@ -32,15 +32,15 @@ public class MissingPricesProductLevelImpl implements MissingPricesProductLevel,
     }
 
     /**
-    *  <p>Number of products scanned.</p>
-    */
+     *  <p>Number of products scanned.</p>
+     */
     public Long getTotal() {
         return this.total;
     }
 
     /**
-    *  <p>Number of products missing prices.</p>
-    */
+     *  <p>Number of products missing prices.</p>
+     */
     public Long getMissingPrices() {
         return this.missingPrices;
     }

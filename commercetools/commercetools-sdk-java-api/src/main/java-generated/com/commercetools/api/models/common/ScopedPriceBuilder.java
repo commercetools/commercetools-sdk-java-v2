@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ScopedPrice scopedPrice = ScopedPrice.builder()
+           .id("{id}")
+           .value(valueBuilder -> valueBuilder)
+           .currentValue(currentValueBuilder -> currentValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     private String id;
@@ -45,8 +57,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
 
     public ScopedPriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
@@ -54,8 +66,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
 
     public ScopedPriceBuilder value(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -64,8 +76,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
 
     public ScopedPriceBuilder currentValue(final com.commercetools.api.models.common.TypedMoney currentValue) {
         this.currentValue = currentValue;
@@ -73,8 +85,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
-    */
+     *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+     */
 
     public ScopedPriceBuilder currentValue(
             Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
@@ -83,8 +95,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public ScopedPriceBuilder country(@Nullable final String country) {
         this.country = country;
@@ -92,8 +104,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public ScopedPriceBuilder customerGroup(
             Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder> builder) {
@@ -104,8 +116,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Reference to a CustomerGroup.</p>
-    */
+     *  <p>Reference to a CustomerGroup.</p>
+     */
 
     public ScopedPriceBuilder customerGroup(
             @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
@@ -114,8 +126,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Reference to a Channel.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
 
     public ScopedPriceBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -124,8 +136,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Reference to a Channel.</p>
-    */
+     *  <p>Reference to a Channel.</p>
+     */
 
     public ScopedPriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
         this.channel = channel;
@@ -155,8 +167,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
 
     public ScopedPriceBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -165,8 +177,8 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
 
     public ScopedPriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;

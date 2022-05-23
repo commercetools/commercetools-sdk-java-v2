@@ -6,7 +6,19 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetCountryChange setCountryChange = SetCountryChange.builder()
+           .change("{change}")
+           .previousValue("{previousValue}")
+           .nextValue("{nextValue}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
 
     private String change;
@@ -16,8 +28,8 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
     private String nextValue;
 
     /**
-    *  <p>Update action for <code>setCountry</code></p>
-    */
+     *  <p>Update action for <code>setCountry</code></p>
+     */
 
     public SetCountryChangeBuilder change(final String change) {
         this.change = change;
@@ -25,8 +37,8 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
     }
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public SetCountryChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
@@ -34,8 +46,8 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
     }
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public SetCountryChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;

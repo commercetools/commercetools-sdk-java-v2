@@ -14,7 +14,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ReturnInfo returnInfo = ReturnInfo.builder()
+           .plusItems(itemsBuilder -> itemsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReturnInfoImpl.class)
 public interface ReturnInfo {
 
@@ -24,8 +34,8 @@ public interface ReturnInfo {
     public List<ReturnItem> getItems();
 
     /**
-    *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
-    */
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     */
 
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();

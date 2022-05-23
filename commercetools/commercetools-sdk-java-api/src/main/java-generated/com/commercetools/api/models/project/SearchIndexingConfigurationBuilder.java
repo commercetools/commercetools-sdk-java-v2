@@ -9,7 +9,16 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SearchIndexingConfiguration searchIndexingConfiguration = SearchIndexingConfiguration.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexingConfiguration> {
 
     @Nullable
@@ -19,8 +28,8 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
     /**
-    *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
-    */
+     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     */
 
     public SearchIndexingConfigurationBuilder products(
             Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
@@ -31,8 +40,8 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-    *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
-    */
+     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     */
 
     public SearchIndexingConfigurationBuilder products(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
@@ -41,8 +50,8 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-    *  <p>Configuration for the Order Search feature.</p>
-    */
+     *  <p>Configuration for the Order Search feature.</p>
+     */
 
     public SearchIndexingConfigurationBuilder orders(
             Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
@@ -52,8 +61,8 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-    *  <p>Configuration for the Order Search feature.</p>
-    */
+     *  <p>Configuration for the Order Search feature.</p>
+     */
 
     public SearchIndexingConfigurationBuilder orders(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders) {

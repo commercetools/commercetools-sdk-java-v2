@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MissingAttributes missingAttributes = MissingAttributes.builder()
+           .product(productBuilder -> productBuilder)
+           .productType(productTypeBuilder -> productTypeBuilder)
+           .variantId(0.3)
+           .plusMissingAttributeValues(missingAttributeValuesBuilder -> missingAttributeValuesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MissingAttributesBuilder implements Builder<MissingAttributes> {
 
     private com.commercetools.ml.models.common.ProductReference product;
@@ -53,8 +66,8 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-    *  <p>ID of a ProductVariant.</p>
-    */
+     *  <p>ID of a ProductVariant.</p>
+     */
 
     public MissingAttributesBuilder variantId(final Integer variantId) {
         this.variantId = variantId;
@@ -62,8 +75,8 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
 
     public MissingAttributesBuilder missingAttributeValues(final String... missingAttributeValues) {
         this.missingAttributeValues = new ArrayList<>(Arrays.asList(missingAttributeValues));
@@ -71,8 +84,8 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
 
     public MissingAttributesBuilder missingAttributeValues(final java.util.List<String> missingAttributeValues) {
         this.missingAttributeValues = missingAttributeValues;
@@ -80,8 +93,8 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
 
     public MissingAttributesBuilder plusMissingAttributeValues(final String... missingAttributeValues) {
         if (this.missingAttributeValues == null) {
@@ -92,8 +105,8 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
 
     public MissingAttributesBuilder missingAttributeNames(@Nullable final String... missingAttributeNames) {
         this.missingAttributeNames = new ArrayList<>(Arrays.asList(missingAttributeNames));
@@ -101,8 +114,8 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
 
     public MissingAttributesBuilder missingAttributeNames(
             @Nullable final java.util.List<String> missingAttributeNames) {
@@ -111,8 +124,8 @@ public class MissingAttributesBuilder implements Builder<MissingAttributes> {
     }
 
     /**
-    *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
-    */
+     *  <p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p>
+     */
 
     public MissingAttributesBuilder plusMissingAttributeNames(@Nullable final String... missingAttributeNames) {
         if (this.missingAttributeNames == null) {

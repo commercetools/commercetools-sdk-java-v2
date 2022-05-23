@@ -17,9 +17,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The creation of a Subscription is eventually consistent, it may take up to a minute before it becomes fully active. In order to test that the destination is correctly configured, a test message will be put into the queue. If the message could not be delivered, the subscription will not be created. The payload of the test message is a notification of type ResourceCreated for the resourceTypeId subscription. Currently, a maximum of 25 subscriptions can be created per project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>The creation of a Subscription is eventually consistent, it may take up to a minute before it becomes fully active. In order to test that the destination is correctly configured, a test message will be put into the queue. If the message could not be delivered, the subscription will not be created. The payload of the test message is a notification of type ResourceCreated for the resourceTypeId subscription. Currently, a maximum of 25 subscriptions can be created per project.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .subscriptions()
+           .post(null)
+           .execute()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySubscriptionsPost extends
         BodyApiMethod<ByProjectKeySubscriptionsPost, com.commercetools.api.models.subscription.Subscription, com.commercetools.api.models.subscription.SubscriptionDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsPost>,

@@ -6,7 +6,19 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   InvalidStateTransitionError invalidStateTransitionError = InvalidStateTransitionError.builder()
+           .message("{message}")
+           .currentState(ProcessingState.PROCESSING)
+           .newState(ProcessingState.PROCESSING)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateTransitionError> {
 
     private String message;
@@ -21,8 +33,8 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-    *  <p>Every Import Operation is assigned with one of the following states.</p>
-    */
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     */
 
     public InvalidStateTransitionErrorBuilder currentState(
             final com.commercetools.importapi.models.common.ProcessingState currentState) {
@@ -31,8 +43,8 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-    *  <p>Every Import Operation is assigned with one of the following states.</p>
-    */
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     */
 
     public InvalidStateTransitionErrorBuilder newState(
             final com.commercetools.importapi.models.common.ProcessingState newState) {

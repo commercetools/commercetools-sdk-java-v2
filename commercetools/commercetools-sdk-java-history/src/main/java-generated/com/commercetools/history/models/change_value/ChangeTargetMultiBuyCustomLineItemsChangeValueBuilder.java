@@ -6,7 +6,21 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeTargetMultiBuyCustomLineItemsChangeValue changeTargetMultiBuyCustomLineItemsChangeValue = ChangeTargetMultiBuyCustomLineItemsChangeValue.builder()
+           .predicate("{predicate}")
+           .triggerQuantity(1)
+           .discountedQuantity(1)
+           .maxOccurrence(1)
+           .selectionMode(SelectionMode.CHEAPEST)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
         implements Builder<ChangeTargetMultiBuyCustomLineItemsChangeValue> {
 
@@ -26,8 +40,8 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-    *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
-    */
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder triggerQuantity(final Integer triggerQuantity) {
         this.triggerQuantity = triggerQuantity;
@@ -35,8 +49,8 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-    *  <p>Quantity of line items that are discounted per application of this discount.</p>
-    */
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder discountedQuantity(final Integer discountedQuantity) {
         this.discountedQuantity = discountedQuantity;
@@ -44,8 +58,8 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-    *  <p>Maximum number of applications of this discount.</p>
-    */
+     *  <p>Maximum number of applications of this discount.</p>
+     */
 
     public ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder maxOccurrence(final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;

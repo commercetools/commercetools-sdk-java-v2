@@ -7,14 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AssignedProductReference assignedProductReference = AssignedProductReference.builder()
+           .product(productBuilder -> productBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssignedProductReferenceBuilder implements Builder<AssignedProductReference> {
 
     private com.commercetools.api.models.product.ProductReference product;
 
     /**
-    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
-    */
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     */
 
     public AssignedProductReferenceBuilder product(
             Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReferenceBuilder> builder) {
@@ -23,8 +33,8 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
     }
 
     /**
-    *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
-    */
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     */
 
     public AssignedProductReferenceBuilder product(
             final com.commercetools.api.models.product.ProductReference product) {

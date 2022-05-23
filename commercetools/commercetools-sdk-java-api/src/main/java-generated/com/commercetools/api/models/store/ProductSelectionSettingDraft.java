@@ -14,21 +14,31 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSelectionSettingDraft productSelectionSettingDraft = ProductSelectionSettingDraft.builder()
+           .productSelection(productSelectionBuilder -> productSelectionBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionSettingDraftImpl.class)
 public interface ProductSelectionSettingDraft {
 
     /**
-    *  <p>Resource Identifier of a Product Selection</p>
-    */
+     *  <p>Resource Identifier of a Product Selection</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
     public ProductSelectionResourceIdentifier getProductSelection();
 
     /**
-    *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
-    */
+     *  <p>If <code>true</code> all Products assigned to this Product Selection become part of the Store's assortment.</p>
+     */
 
     @JsonProperty("active")
     public Boolean getActive();

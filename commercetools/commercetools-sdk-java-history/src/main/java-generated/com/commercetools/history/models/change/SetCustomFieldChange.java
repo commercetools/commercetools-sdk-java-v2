@@ -12,15 +12,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetCustomFieldChange setCustomFieldChange = SetCustomFieldChange.builder()
+           .change("{change}")
+           .name("{name}")
+           .customTypeId("{customTypeId}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetCustomFieldChangeImpl.class)
 public interface SetCustomFieldChange extends Change {
 
     String SET_CUSTOM_FIELD_CHANGE = "SetCustomFieldChange";
 
     /**
-    *  <p>Update action for setting a custom field</p>
-    */
+     *  <p>Update action for setting a custom field</p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
@@ -30,8 +42,8 @@ public interface SetCustomFieldChange extends Change {
     public String getType();
 
     /**
-    *  <p>Custom field name</p>
-    */
+     *  <p>Custom field name</p>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();

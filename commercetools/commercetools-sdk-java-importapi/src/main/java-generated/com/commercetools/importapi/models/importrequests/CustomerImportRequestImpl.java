@@ -16,9 +16,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The request body to import Customers. Contains data for Customers to be created or updated in a commercetools Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The request body to import Customers. Contains data for Customers to be created or updated in a commercetools Project.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerImportRequestImpl implements CustomerImportRequest, ModelBase {
 
     private com.commercetools.importapi.models.common.ImportResourceType type;
@@ -37,15 +37,15 @@ public class CustomerImportRequestImpl implements CustomerImportRequest, ModelBa
     }
 
     /**
-    *  <p>The type of the import resource.</p>
-    */
+     *  <p>The type of the import resource.</p>
+     */
     public com.commercetools.importapi.models.common.ImportResourceType getType() {
         return this.type;
     }
 
     /**
-    *  <p>The customer import resources of this request.</p>
-    */
+     *  <p>The customer import resources of this request.</p>
+     */
     public java.util.List<com.commercetools.importapi.models.customers.CustomerImport> getResources() {
         return this.resources;
     }

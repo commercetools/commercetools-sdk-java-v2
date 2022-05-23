@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShoppingListAddTextLineItemAction shoppingListAddTextLineItemAction = ShoppingListAddTextLineItemAction.builder()
+           .name(nameBuilder -> nameBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListAddTextLineItemActionBuilder implements Builder<ShoppingListAddTextLineItemAction> {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -27,8 +37,8 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ShoppingListAddTextLineItemActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -37,8 +47,8 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ShoppingListAddTextLineItemActionBuilder name(
             final com.commercetools.api.models.common.LocalizedString name) {
@@ -47,8 +57,8 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ShoppingListAddTextLineItemActionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -57,8 +67,8 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public ShoppingListAddTextLineItemActionBuilder description(
             @Nullable final com.commercetools.api.models.common.LocalizedString description) {
@@ -77,8 +87,8 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     }
 
     /**
-    *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-    */
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
 
     public ShoppingListAddTextLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
@@ -87,8 +97,8 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     }
 
     /**
-    *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-    */
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     */
 
     public ShoppingListAddTextLineItemActionBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {

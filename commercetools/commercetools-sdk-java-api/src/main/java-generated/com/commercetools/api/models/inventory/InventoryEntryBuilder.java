@@ -9,7 +9,23 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   InventoryEntry inventoryEntry = InventoryEntry.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .sku("{sku}")
+           .quantityOnStock(0.3)
+           .availableQuantity(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryEntryBuilder implements Builder<InventoryEntry> {
 
     private String id;
@@ -48,8 +64,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-    *  <p>Platform-generated unique identifier of the InventoryEntry.</p>
-    */
+     *  <p>Platform-generated unique identifier of the InventoryEntry.</p>
+     */
 
     public InventoryEntryBuilder id(final String id) {
         this.id = id;
@@ -72,8 +88,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public InventoryEntryBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -82,8 +98,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public InventoryEntryBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -92,8 +108,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public InventoryEntryBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -102,8 +118,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
 
     public InventoryEntryBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -111,8 +127,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the InventoryEntry.</p>
-    */
+     *  <p>User-defined unique identifier of the InventoryEntry.</p>
+     */
 
     public InventoryEntryBuilder key(@Nullable final String key) {
         this.key = key;
@@ -125,8 +141,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>Connection to a particular supplier.</p>
-    */
+     *  <p>Connection to a particular supplier.</p>
+     */
 
     public InventoryEntryBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
@@ -135,8 +151,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>Connection to a particular supplier.</p>
-    */
+     *  <p>Connection to a particular supplier.</p>
+     */
 
     public InventoryEntryBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
@@ -145,8 +161,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>Overall amount of stock. (available + reserved)</p>
-    */
+     *  <p>Overall amount of stock. (available + reserved)</p>
+     */
 
     public InventoryEntryBuilder quantityOnStock(final Long quantityOnStock) {
         this.quantityOnStock = quantityOnStock;
@@ -154,8 +170,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
-    */
+     *  <p>Available amount of stock. (available means: <code>quantityOnStock</code> - reserved quantity)</p>
+     */
 
     public InventoryEntryBuilder availableQuantity(final Long availableQuantity) {
         this.availableQuantity = availableQuantity;
@@ -163,8 +179,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
-    */
+     *  <p>The time period in days, that tells how often this inventory entry is restocked.</p>
+     */
 
     public InventoryEntryBuilder restockableInDays(@Nullable final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
@@ -172,8 +188,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
-    *  <p>The date and time of the next restock.</p>
-    */
+     *  <p>The date and time of the next restock.</p>
+     */
 
     public InventoryEntryBuilder expectedDelivery(@Nullable final java.time.ZonedDateTime expectedDelivery) {
         this.expectedDelivery = expectedDelivery;

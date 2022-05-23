@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSigninImpl implements CustomerSignin, ModelBase {
 
     private String email;
@@ -65,8 +65,8 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
     }
 
     /**
-    *  <p>ResourceIdentifier to a Cart.</p>
-    */
+     *  <p>ResourceIdentifier to a Cart.</p>
+     */
     public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart() {
         return this.anonymousCart;
     }

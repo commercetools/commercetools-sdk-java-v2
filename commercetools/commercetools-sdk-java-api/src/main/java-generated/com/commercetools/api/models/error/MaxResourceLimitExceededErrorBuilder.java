@@ -6,7 +6,18 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MaxResourceLimitExceededError maxResourceLimitExceededError = MaxResourceLimitExceededError.builder()
+           .message("{message}")
+           .exceededResource(ReferenceTypeId.CART)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResourceLimitExceededError> {
 
     private String message;
@@ -34,8 +45,8 @@ public class MaxResourceLimitExceededErrorBuilder implements Builder<MaxResource
     }
 
     /**
-    *  <p>supported resource type identifiers:</p>
-    */
+     *  <p>supported resource type identifiers:</p>
+     */
 
     public MaxResourceLimitExceededErrorBuilder exceededResource(
             final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {

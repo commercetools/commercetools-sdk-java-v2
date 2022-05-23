@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>The data representation for a Category to be imported that is persisted as a Category in the Project.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>The data representation for a Category to be imported that is persisted as a Category in the Project.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategoryImportImpl implements CategoryImport, ModelBase {
 
     private String key;
@@ -78,64 +78,64 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-    *  <p>Maps to <code>Category.name</code>.</p>
-    */
+     *  <p>Maps to <code>Category.name</code>.</p>
+     */
     public com.commercetools.importapi.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
-    */
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     */
     public com.commercetools.importapi.models.common.LocalizedString getSlug() {
         return this.slug;
     }
 
     /**
-    *  <p>Maps to <code>Category.description</code>.</p>
-    */
+     *  <p>Maps to <code>Category.description</code>.</p>
+     */
     public com.commercetools.importapi.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
-    */
+     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     */
     public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {
         return this.parent;
     }
 
     /**
-    *  <p>Maps to <code>Category.orderHint</code>.</p>
-    */
+     *  <p>Maps to <code>Category.orderHint</code>.</p>
+     */
     public String getOrderHint() {
         return this.orderHint;
     }
 
     /**
-    *  <p>Maps to <code>Category.externalId</code>.</p>
-    */
+     *  <p>Maps to <code>Category.externalId</code>.</p>
+     */
     public String getExternalId() {
         return this.externalId;
     }
 
     /**
-    *  <p>Maps to <code>Category.metaTitle</code>.</p>
-    */
+     *  <p>Maps to <code>Category.metaTitle</code>.</p>
+     */
     public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
 
     /**
-    *  <p>Maps to <code>Category.metaDescription</code>.</p>
-    */
+     *  <p>Maps to <code>Category.metaDescription</code>.</p>
+     */
     public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
 
     /**
-    *  <p>Maps to <code>Category.metaKeywords</code>.</p>
-    */
+     *  <p>Maps to <code>Category.metaKeywords</code>.</p>
+     */
     public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
@@ -145,8 +145,8 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-    *  <p>The custom fields for this Category.</p>
-    */
+     *  <p>The custom fields for this Category.</p>
+     */
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
     }

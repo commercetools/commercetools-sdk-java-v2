@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetImpl implements Asset, ModelBase {
 
     private String id;
@@ -52,8 +52,8 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the Asset.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Asset.</p>
+     */
     public String getId() {
         return this.id;
     }
@@ -63,36 +63,36 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-    *  <p>Name of the Asset.</p>
-    */
+     *  <p>Name of the Asset.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
     /**
-    *  <p>Description of the Asset.</p>
-    */
+     *  <p>Description of the Asset.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
     /**
-    *  <p>Keywords for categorizing and organizing Assets.</p>
-    */
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
     public java.util.List<String> getTags() {
         return this.tags;
     }
 
     /**
-    *  <p>Custom Fields defined for the Asset.</p>
-    */
+     *  <p>Custom Fields defined for the Asset.</p>
+     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>User-defined unique identifier of the Asset.</p>
-    */
+     *  <p>User-defined unique identifier of the Asset.</p>
+     */
     public String getKey() {
         return this.key;
     }

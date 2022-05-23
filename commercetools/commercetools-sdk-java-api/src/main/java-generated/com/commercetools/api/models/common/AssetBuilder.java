@@ -9,7 +9,19 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Asset asset = Asset.builder()
+           .id("{id}")
+           .plusSources(sourcesBuilder -> sourcesBuilder)
+           .name(nameBuilder -> nameBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssetBuilder implements Builder<Asset> {
 
     private String id;
@@ -31,8 +43,8 @@ public class AssetBuilder implements Builder<Asset> {
     private String key;
 
     /**
-    *  <p>Platform-generated unique identifier of the Asset.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Asset.</p>
+     */
 
     public AssetBuilder id(final String id) {
         this.id = id;
@@ -74,8 +86,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>Name of the Asset.</p>
-    */
+     *  <p>Name of the Asset.</p>
+     */
 
     public AssetBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -84,8 +96,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>Name of the Asset.</p>
-    */
+     *  <p>Name of the Asset.</p>
+     */
 
     public AssetBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
@@ -93,8 +105,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>Description of the Asset.</p>
-    */
+     *  <p>Description of the Asset.</p>
+     */
 
     public AssetBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -103,8 +115,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>Description of the Asset.</p>
-    */
+     *  <p>Description of the Asset.</p>
+     */
 
     public AssetBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
@@ -112,8 +124,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>Keywords for categorizing and organizing Assets.</p>
-    */
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
 
     public AssetBuilder tags(@Nullable final String... tags) {
         this.tags = new ArrayList<>(Arrays.asList(tags));
@@ -121,8 +133,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>Keywords for categorizing and organizing Assets.</p>
-    */
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
 
     public AssetBuilder tags(@Nullable final java.util.List<String> tags) {
         this.tags = tags;
@@ -130,8 +142,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>Keywords for categorizing and organizing Assets.</p>
-    */
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     */
 
     public AssetBuilder plusTags(@Nullable final String... tags) {
         if (this.tags == null) {
@@ -142,8 +154,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>Custom Fields defined for the Asset.</p>
-    */
+     *  <p>Custom Fields defined for the Asset.</p>
+     */
 
     public AssetBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -152,8 +164,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>Custom Fields defined for the Asset.</p>
-    */
+     *  <p>Custom Fields defined for the Asset.</p>
+     */
 
     public AssetBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
@@ -161,8 +173,8 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Asset.</p>
-    */
+     *  <p>User-defined unique identifier of the Asset.</p>
+     */
 
     public AssetBuilder key(@Nullable final String key) {
         this.key = key;

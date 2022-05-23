@@ -6,7 +6,20 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeIsSearchableChange changeIsSearchableChange = ChangeIsSearchableChange.builder()
+           .change("{change}")
+           .attributeName("{attributeName}")
+           .nextValue(true)
+           .previousValue(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchableChange> {
 
     private String change;
@@ -18,8 +31,8 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     private Boolean previousValue;
 
     /**
-    *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
-    */
+     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     */
 
     public ChangeIsSearchableChangeBuilder change(final String change) {
         this.change = change;
@@ -27,8 +40,8 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     }
 
     /**
-    *  <p>The name of the updated attribute.</p>
-    */
+     *  <p>The name of the updated attribute.</p>
+     */
 
     public ChangeIsSearchableChangeBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;

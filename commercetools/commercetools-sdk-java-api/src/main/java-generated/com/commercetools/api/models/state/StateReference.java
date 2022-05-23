@@ -15,24 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Reference to a State.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Reference to a State.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StateReference stateReference = StateReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateReferenceImpl.class)
 public interface StateReference extends Reference, com.commercetools.api.models.Identifiable<State> {
 
     String STATE = "state";
 
     /**
-    *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
-    */
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public State getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced State.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced State.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

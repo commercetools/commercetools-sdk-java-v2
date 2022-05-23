@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceImpl implements Price, ModelBase {
 
     private String id;
@@ -64,71 +64,71 @@ public class PriceImpl implements Price, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of this Price.</p>
-    */
+     *  <p>Platform-generated unique identifier of this Price.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Money value of this Price.</p>
-    */
+     *  <p>Money value of this Price.</p>
+     */
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 
     /**
-    *  <p>Country for which this Price is valid.</p>
-    */
+     *  <p>Country for which this Price is valid.</p>
+     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>CustomerGroup for which this Price is valid.</p>
-    */
+     *  <p>CustomerGroup for which this Price is valid.</p>
+     */
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
-    */
+     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     */
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
 
     /**
-    *  <p>Date and time from which this Price is valid.</p>
-    */
+     *  <p>Date and time from which this Price is valid.</p>
+     */
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
     /**
-    *  <p>Date and time until this Price is valid.</p>
-    */
+     *  <p>Date and time until this Price is valid.</p>
+     */
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
     /**
-    *  <p>Is set if a ProductDiscount has been applied. If set, the commercetools Platform uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>
-    */
+     *  <p>Is set if a ProductDiscount has been applied. If set, the commercetools Platform uses the DiscountedPrice value for the LineItem Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half down rounding.</p>
+     */
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
     /**
-    *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
-    */
+     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     */
     public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
 
     /**
-    *  <p>Custom Fields defined for the Price.</p>
-    */
+     *  <p>Custom Fields defined for the Price.</p>
+     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

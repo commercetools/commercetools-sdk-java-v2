@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthenticationModeAction, ModelBase {
 
     private String action;
@@ -45,8 +45,8 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
     }
 
     /**
-    *  <p>Required when <code>authMode</code> is <code>Password</code></p>
-    */
+     *  <p>Required when <code>authMode</code> is <code>Password</code></p>
+     */
     public String getPassword() {
         return this.password;
     }

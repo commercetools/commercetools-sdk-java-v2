@@ -17,15 +17,28 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreCreatedMessagePayload storeCreatedMessagePayload = StoreCreatedMessagePayload.builder()
+           .plusLanguages(languagesBuilder -> languagesBuilder)
+           .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
+           .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
+           .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreCreatedMessagePayloadImpl.class)
 public interface StoreCreatedMessagePayload extends MessagePayload {
 
     String STORE_CREATED = "StoreCreated";
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
@@ -50,8 +63,8 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
     public List<ProductSelectionSetting> getProductSelections();
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();

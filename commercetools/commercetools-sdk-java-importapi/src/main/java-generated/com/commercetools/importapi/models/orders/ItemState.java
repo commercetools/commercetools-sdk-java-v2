@@ -15,9 +15,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The item's state.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>The item's state.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ItemState itemState = ItemState.builder()
+           .quantity(0.3)
+           .state(stateBuilder -> stateBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ItemStateImpl.class)
 public interface ItemState {
 
@@ -26,8 +36,8 @@ public interface ItemState {
     public Double getQuantity();
 
     /**
-    *  <p>Maps to <code>ItemState.state</code>.</p>
-    */
+     *  <p>Maps to <code>ItemState.state</code>.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("state")

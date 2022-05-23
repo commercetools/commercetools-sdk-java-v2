@@ -11,9 +11,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>An invalid input has been sent to the service. The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>An invalid input has been sent to the service. The client application should validate the input according to the constraints described in the error message before sending the request again.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   InvalidInput invalidInput = InvalidInput.builder()
+           .message("{message}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidInputImpl.class)
 public interface InvalidInput extends ErrorObject {
 

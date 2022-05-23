@@ -6,7 +6,41 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Address address = Address.builder()
+           .id("{id}")
+           .key("{key}")
+           .title("{title}")
+           .salutation("{salutation}")
+           .firstName("{firstName}")
+           .lastName("{lastName}")
+           .streetName("{streetName}")
+           .streetNumber("{streetNumber}")
+           .additionalStreetInfo("{additionalStreetInfo}")
+           .postalCode("{postalCode}")
+           .city("{city}")
+           .region("{region}")
+           .state("{state}")
+           .country("{country}")
+           .company("{company}")
+           .department("{department}")
+           .building("{building}")
+           .apartment("{apartment}")
+           .pOBox("{pOBox}")
+           .phone("{phone}")
+           .mobile("{mobile}")
+           .email("{email}")
+           .fax("{fax}")
+           .additionalAddressInfo("{additionalAddressInfo}")
+           .externalId("{externalId}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddressBuilder implements Builder<Address> {
 
     private String id;
@@ -60,8 +94,8 @@ public class AddressBuilder implements Builder<Address> {
     private String externalId;
 
     /**
-    *  <p>Unique ID of the Address.</p>
-    */
+     *  <p>Unique ID of the Address.</p>
+     */
 
     public AddressBuilder id(final String id) {
         this.id = id;
@@ -129,8 +163,8 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-    *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
-    */
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     */
 
     public AddressBuilder country(final String country) {
         this.country = country;

@@ -14,69 +14,81 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ApiClient apiClient = ApiClient.builder()
+           .id("{id}")
+           .name("{name}")
+           .scope("{scope}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApiClientImpl.class)
 public interface ApiClient {
 
     /**
-    *  <p>Platform-generated unique identifier of the APIClient. This is the OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
-    */
+     *  <p>Platform-generated unique identifier of the APIClient. This is the OAuth2 <code>client_id</code> that can be used to obtain an access token.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();
 
     /**
-    *  <p>Name of the APIClient.</p>
-    */
+     *  <p>Name of the APIClient.</p>
+     */
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     /**
-    *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
-    */
+     *  <p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p>
+     */
     @NotNull
     @JsonProperty("scope")
     public String getScope();
 
     /**
-    *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
-    */
+     *  <p>Only shown once in the response of creating the APIClient. This is the OAuth2 <code>client_secret</code> that can be used to obtain an access token.</p>
+     */
 
     @JsonProperty("secret")
     public String getSecret();
 
     /**
-    *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
-    */
+     *  <p>Date of the last day this APIClient was used to obtain an access token.</p>
+     */
 
     @JsonProperty("lastUsedAt")
     public LocalDate getLastUsedAt();
 
     /**
-    *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
-    */
+     *  <p>If set, the Client will be deleted on (or shortly after) this point in time.</p>
+     */
 
     @JsonProperty("deleteAt")
     public ZonedDateTime getDeleteAt();
 
     /**
-    *  <p>Date and time (UTC) the APIClient was initially created at.</p>
-    */
+     *  <p>Date and time (UTC) the APIClient was initially created at.</p>
+     */
 
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
     /**
-    *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
-    */
+     *  <p>Expiration time in seconds for each access token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     */
 
     @JsonProperty("accessTokenValiditySeconds")
     public Integer getAccessTokenValiditySeconds();
 
     /**
-    *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
-    */
+     *  <p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. Only present when set with the APIClientDraft. If not present the default value applies.</p>
+     */
 
     @JsonProperty("refreshTokenValiditySeconds")
     public Integer getRefreshTokenValiditySeconds();

@@ -97,6 +97,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+ Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StagedOrderUpdateAction stagedOrderUpdateAction = StagedOrderUpdateAction.addCustomLineItemBuilder()
+           money(moneyBuilder -> moneyBuilder)
+           name(nameBuilder -> nameBuilder)
+           slug("{slug}")
+           .build()
+ </code></pre>
+ </div>
+ */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderAddCustomLineItemActionImpl.class, name = StagedOrderAddCustomLineItemAction.ADD_CUSTOM_LINE_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderAddDeliveryActionImpl.class, name = StagedOrderAddDeliveryAction.ADD_DELIVERY),
@@ -185,7 +197,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoActionImpl.class, name = StagedOrderUpdateSyncInfoAction.UPDATE_SYNC_INFO) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StagedOrderUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = StagedOrderUpdateActionImpl.class)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface StagedOrderUpdateAction
         extends com.commercetools.api.models.ResourceUpdateAction<StagedOrderUpdateAction> {
 

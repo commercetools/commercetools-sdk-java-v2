@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MoveImageToPositionChange moveImageToPositionChange = MoveImageToPositionChange.builder()
+           .change("{change}")
+           .catalogData("{catalogData}")
+           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+           .plusNextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPositionChange> {
 
     private String change;
@@ -19,8 +32,8 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
     /**
-    *  <p>Update actions for moving images</p>
-    */
+     *  <p>Update actions for moving images</p>
+     */
 
     public MoveImageToPositionChangeBuilder change(final String change) {
         this.change = change;

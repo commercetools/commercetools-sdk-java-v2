@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetOrderLineItemCustomFieldChange setOrderLineItemCustomFieldChange = SetOrderLineItemCustomFieldChange.builder()
+           .change("{change}")
+           .customTypeId("{customTypeId}")
+           .name("{name}")
+           .variant("{variant}")
+           .lineItem(lineItemBuilder -> lineItemBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrderLineItemCustomFieldChange> {
 
     private String change;
@@ -25,8 +39,8 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     private java.lang.Object previousValue;
 
     /**
-    *  <p>Update action for <code>setLineItemCustomField</code></p>
-    */
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     */
 
     public SetOrderLineItemCustomFieldChangeBuilder change(final String change) {
         this.change = change;

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceededError, ModelBase {
 
     private String code;
@@ -52,8 +52,8 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
     }
 
     /**
-    *  <p>supported resource type identifiers:</p>
-    */
+     *  <p>supported resource type identifiers:</p>
+     */
     public com.commercetools.api.models.common.ReferenceTypeId getExceededResource() {
         return this.exceededResource;
     }

@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartDiscountValueGiftLineItemDraft cartDiscountValueGiftLineItemDraft = CartDiscountValueGiftLineItemDraft.builder()
+           .product(productBuilder -> productBuilder)
+           .variantId(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDiscountValueGiftLineItemDraft> {
 
     private com.commercetools.api.models.product.ProductResourceIdentifier product;
@@ -23,8 +34,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-    *  <p>ResourceIdentifier to a Product.</p>
-    */
+     *  <p>ResourceIdentifier to a Product.</p>
+     */
 
     public CartDiscountValueGiftLineItemDraftBuilder product(
             Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifierBuilder> builder) {
@@ -34,8 +45,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-    *  <p>ResourceIdentifier to a Product.</p>
-    */
+     *  <p>ResourceIdentifier to a Product.</p>
+     */
 
     public CartDiscountValueGiftLineItemDraftBuilder product(
             final com.commercetools.api.models.product.ProductResourceIdentifier product) {
@@ -49,8 +60,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-    *  <p>The channel must have the role <code>InventorySupply</code></p>
-    */
+     *  <p>The channel must have the role <code>InventorySupply</code></p>
+     */
 
     public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -60,8 +71,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-    *  <p>The channel must have the role <code>InventorySupply</code></p>
-    */
+     *  <p>The channel must have the role <code>InventorySupply</code></p>
+     */
 
     public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
@@ -70,8 +81,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-    *  <p>The channel must have the role <code>ProductDistribution</code></p>
-    */
+     *  <p>The channel must have the role <code>ProductDistribution</code></p>
+     */
 
     public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -82,8 +93,8 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
     }
 
     /**
-    *  <p>The channel must have the role <code>ProductDistribution</code></p>
-    */
+     *  <p>The channel must have the role <code>ProductDistribution</code></p>
+     */
 
     public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {

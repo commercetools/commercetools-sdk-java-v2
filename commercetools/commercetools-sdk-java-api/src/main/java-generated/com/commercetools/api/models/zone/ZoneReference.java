@@ -15,24 +15,33 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Reference to a Zone.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>Reference to a Zone.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ZoneReference zoneReference = ZoneReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneReferenceImpl.class)
 public interface ZoneReference extends Reference, com.commercetools.api.models.Identifiable<Zone> {
 
     String ZONE = "zone";
 
     /**
-    *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
-    */
+     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     */
     @Valid
     @JsonProperty("obj")
     public Zone getObj();
 
     /**
-    *  <p>Platform-generated unique identifier of the referenced Zone.</p>
-    */
+     *  <p>Platform-generated unique identifier of the referenced Zone.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public String getId();

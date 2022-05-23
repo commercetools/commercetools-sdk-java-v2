@@ -14,7 +14,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeLineItemQuantityChange changeLineItemQuantityChange = ChangeLineItemQuantityChange.builder()
+           .change("{change}")
+           .lineItem(lineItemBuilder -> lineItemBuilder)
+           .lineItemId("{lineItemId}")
+           .nextValue(1)
+           .previousValue(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeLineItemQuantityChangeImpl.class)
 public interface ChangeLineItemQuantityChange extends Change {
 
@@ -25,8 +39,8 @@ public interface ChangeLineItemQuantityChange extends Change {
     public String getType();
 
     /**
-    *  <p>Update action for <code>changeLineItemQuantity</code></p>
-    */
+     *  <p>Update action for <code>changeLineItemQuantity</code></p>
+     */
     @NotNull
     @JsonProperty("change")
     public String getChange();
@@ -41,15 +55,15 @@ public interface ChangeLineItemQuantityChange extends Change {
     public String getLineItemId();
 
     /**
-    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     */
     @NotNull
     @JsonProperty("nextValue")
     public Integer getNextValue();
 
     /**
-    *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-    */
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     */
     @NotNull
     @JsonProperty("previousValue")
     public Integer getPreviousValue();

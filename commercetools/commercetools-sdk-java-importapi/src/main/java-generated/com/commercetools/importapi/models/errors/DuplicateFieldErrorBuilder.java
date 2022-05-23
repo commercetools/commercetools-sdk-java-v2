@@ -8,7 +8,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DuplicateFieldError duplicateFieldError = DuplicateFieldError.builder()
+           .message("{message}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> {
 
     private String message;
@@ -25,8 +35,8 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-    *  <p>The name of the field.</p>
-    */
+     *  <p>The name of the field.</p>
+     */
 
     public DuplicateFieldErrorBuilder field(@Nullable final String field) {
         this.field = field;
@@ -34,8 +44,8 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     }
 
     /**
-    *  <p>The offending duplicate value.</p>
-    */
+     *  <p>The offending duplicate value.</p>
+     */
 
     public DuplicateFieldErrorBuilder duplicateValue(@Nullable final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;

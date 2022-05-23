@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartAddShoppingListAction cartAddShoppingListAction = CartAddShoppingListAction.builder()
+           .shoppingList(shoppingListBuilder -> shoppingListBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartAddShoppingListActionBuilder implements Builder<CartAddShoppingListAction> {
 
     private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
@@ -21,8 +31,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-    *  <p>ResourceIdentifier to a ShoppingList.</p>
-    */
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     */
 
     public CartAddShoppingListActionBuilder shoppingList(
             Function<com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder, com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder> builder) {
@@ -33,8 +43,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     }
 
     /**
-    *  <p>ResourceIdentifier to a ShoppingList.</p>
-    */
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     */
 
     public CartAddShoppingListActionBuilder shoppingList(
             final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList) {
@@ -43,8 +53,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     }
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public CartAddShoppingListActionBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -54,8 +64,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     }
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public CartAddShoppingListActionBuilder supplyChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
@@ -64,8 +74,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     }
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public CartAddShoppingListActionBuilder distributionChannel(
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
@@ -76,8 +86,8 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
     }
 
     /**
-    *  <p>ResourceIdentifier to a Channel.</p>
-    */
+     *  <p>ResourceIdentifier to a Channel.</p>
+     */
 
     public CartAddShoppingListActionBuilder distributionChannel(
             @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {

@@ -8,7 +8,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImportSinkUpdateDraft importSinkUpdateDraft = ImportSinkUpdateDraft.builder()
+           .version(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSinkUpdateDraftBuilder implements Builder<ImportSinkUpdateDraft> {
 
     private Long version;
@@ -17,8 +27,8 @@ public class ImportSinkUpdateDraftBuilder implements Builder<ImportSinkUpdateDra
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
     /**
-    *  <p>Current version of the ImportSink.</p>
-    */
+     *  <p>Current version of the ImportSink.</p>
+     */
 
     public ImportSinkUpdateDraftBuilder version(final Long version) {
         this.version = version;
@@ -26,8 +36,8 @@ public class ImportSinkUpdateDraftBuilder implements Builder<ImportSinkUpdateDra
     }
 
     /**
-    *  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
-    */
+     *  <p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p>
+     */
 
     public ImportSinkUpdateDraftBuilder resourceType(
             @Nullable final com.commercetools.importapi.models.common.ImportResourceType resourceType) {

@@ -15,71 +15,85 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductDiscountDraft productDiscountDraft = ProductDiscountDraft.builder()
+           .name(nameBuilder -> nameBuilder)
+           .value(valueBuilder -> valueBuilder)
+           .predicate("{predicate}")
+           .sortOrder("{sortOrder}")
+           .isActive(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountDraftImpl.class)
 public interface ProductDiscountDraft {
 
     /**
-    *  <p>Name of the ProductDiscount.</p>
-    */
+     *  <p>Name of the ProductDiscount.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     /**
-    *  <p>User-defined unique identifier for the ProductDiscount.</p>
-    */
+     *  <p>User-defined unique identifier for the ProductDiscount.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Description of the ProductDiscount.</p>
-    */
+     *  <p>Description of the ProductDiscount.</p>
+     */
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
 
     /**
-    *  <p>Type of Discount and its corresponding value.</p>
-    */
+     *  <p>Type of Discount and its corresponding value.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("value")
     public ProductDiscountValueDraft getValue();
 
     /**
-    *  <p>Valid ProductDiscount predicate.</p>
-    */
+     *  <p>Valid ProductDiscount predicate.</p>
+     */
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();
 
     /**
-    *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
-    */
+     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
+     */
     @NotNull
     @JsonProperty("sortOrder")
     public String getSortOrder();
 
     /**
-    *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
-    */
+     *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
+     */
     @NotNull
     @JsonProperty("isActive")
     public Boolean getIsActive();
 
     /**
-    *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
-    */
+     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     */
 
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
     /**
-    *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
-    */
+     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     */
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();

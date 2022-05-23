@@ -9,7 +9,25 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Subscription subscription = Subscription.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .plusChanges(changesBuilder -> changesBuilder)
+           .destination(destinationBuilder -> destinationBuilder)
+           .plusMessages(messagesBuilder -> messagesBuilder)
+           .format(formatBuilder -> formatBuilder)
+           .status(SubscriptionHealthStatus.HEALTHY)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SubscriptionBuilder implements Builder<Subscription> {
 
     private String id;
@@ -40,8 +58,8 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     private com.commercetools.api.models.subscription.SubscriptionHealthStatus status;
 
     /**
-    *  <p>Platform-generated unique identifier of the Subscription.</p>
-    */
+     *  <p>Platform-generated unique identifier of the Subscription.</p>
+     */
 
     public SubscriptionBuilder id(final String id) {
         this.id = id;
@@ -64,8 +82,8 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
 
     public SubscriptionBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
@@ -74,8 +92,8 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
 
     public SubscriptionBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -84,8 +102,8 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
 
     public SubscriptionBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
@@ -94,8 +112,8 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-    *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 2019-02-01 except for events not tracked.</p>
+     */
 
     public SubscriptionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
@@ -152,8 +170,8 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-    *  <p>User-defined unique identifier of the Subscription.</p>
-    */
+     *  <p>User-defined unique identifier of the Subscription.</p>
+     */
 
     public SubscriptionBuilder key(@Nullable final String key) {
         this.key = key;

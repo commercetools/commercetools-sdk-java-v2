@@ -17,13 +17,23 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductVariant productVariant = ProductVariant.builder()
+           .id(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantImpl.class)
 public interface ProductVariant {
 
     /**
-    *  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>
-    */
+     *  <p>Platform-generated sequential and unique identifier of the ProductVariant within the Product.</p>
+     */
     @NotNull
     @JsonProperty("id")
     public Long getId();
@@ -32,8 +42,8 @@ public interface ProductVariant {
     public String getSku();
 
     /**
-    *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
-    */
+     *  <p>User-defined unique identifier of the ProductVariant. <em>ProductVariant keys are different from Product keys.</em></p>
+     */
 
     @JsonProperty("key")
     public String getKey();

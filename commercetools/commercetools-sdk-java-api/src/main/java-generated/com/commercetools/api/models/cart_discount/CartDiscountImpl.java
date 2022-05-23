@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     private String id;
@@ -102,15 +102,15 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the CartDiscount.</p>
-    */
+     *  <p>Platform-generated unique identifier of the CartDiscount.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the cart discount.</p>
-    */
+     *  <p>The current version of the cart discount.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
@@ -124,15 +124,15 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
@@ -142,8 +142,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier of the CartDiscount.</p>
-    */
+     *  <p>User-defined unique identifier of the CartDiscount.</p>
+     */
     public String getKey() {
         return this.key;
     }
@@ -157,29 +157,29 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>A valid Cart predicate.</p>
-    */
+     *  <p>A valid Cart predicate.</p>
+     */
     public String getCartPredicate() {
         return this.cartPredicate;
     }
 
     /**
-    *  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
-    */
+     *  <p>Empty when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget is set.</p>
+     */
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
         return this.target;
     }
 
     /**
-    *  <p>The string must contain a number between 0 and 1. All matching cart discounts are applied to a cart in the order defined by this field. A discount with greater sort order is prioritized higher than a discount with lower sort order. The sort order is unambiguous among all cart discounts.</p>
-    */
+     *  <p>The string must contain a number between 0 and 1. All matching cart discounts are applied to a cart in the order defined by this field. A discount with greater sort order is prioritized higher than a discount with lower sort order. The sort order is unambiguous among all cart discounts.</p>
+     */
     public String getSortOrder() {
         return this.sortOrder;
     }
 
     /**
-    *  <p>Only active discount can be applied to the cart.</p>
-    */
+     *  <p>Only active discount can be applied to the cart.</p>
+     */
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -193,22 +193,22 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-    *  <p>States whether the discount can only be used in a connection with a DiscountCode.</p>
-    */
+     *  <p>States whether the discount can only be used in a connection with a DiscountCode.</p>
+     */
     public Boolean getRequiresDiscountCode() {
         return this.requiresDiscountCode;
     }
 
     /**
-    *  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>
-    */
+     *  <p>The platform will generate this array from the predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     */
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
         return this.references;
     }
 
     /**
-    *  <p>Specifies whether the application of this discount causes the following discounts to be ignored. Defaults to Stacking.</p>
-    */
+     *  <p>Specifies whether the application of this discount causes the following discounts to be ignored. Defaults to Stacking.</p>
+     */
     public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
         return this.stackingMode;
     }

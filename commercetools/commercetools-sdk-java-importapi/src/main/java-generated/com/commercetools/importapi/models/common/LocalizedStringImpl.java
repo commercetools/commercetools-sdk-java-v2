@@ -15,14 +15,14 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-*  <pre><code>{
-*    "de": "Hundefutter",
-*    "en": "dog food"
-*  }
-*  </code></pre>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+ *  <pre><code>{
+ *    "de": "Hundefutter",
+ *    "en": "dog food"
+ *  }
+ *  </code></pre>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LocalizedStringImpl implements LocalizedString, ModelBase {
 
     private Map<String, String> values;

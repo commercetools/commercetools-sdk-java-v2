@@ -13,37 +13,48 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ExtensionDraft extensionDraft = ExtensionDraft.builder()
+           .destination(destinationBuilder -> destinationBuilder)
+           .plusTriggers(triggersBuilder -> triggersBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionDraftImpl.class)
 public interface ExtensionDraft {
 
     /**
-    *  <p>User-defined unique identifier for the Extension.</p>
-    */
+     *  <p>User-defined unique identifier for the Extension.</p>
+     */
 
     @JsonProperty("key")
     public String getKey();
 
     /**
-    *  <p>Defines where the Extension can be reached.</p>
-    */
+     *  <p>Defines where the Extension can be reached.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("destination")
     public ExtensionDestination getDestination();
 
     /**
-    *  <p>Describes what triggers the Extension.</p>
-    */
+     *  <p>Describes what triggers the Extension.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("triggers")
     public List<ExtensionTrigger> getTriggers();
 
     /**
-    *  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
-    *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the support portal and provide the Region, Project key, and use case.</p>
-    */
+     *  <p>Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the support portal and provide the Region, Project key, and use case.</p>
+     */
 
     @JsonProperty("timeoutInMs")
     public Integer getTimeoutInMs();

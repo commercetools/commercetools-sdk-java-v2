@@ -8,7 +8,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ConcurrentModificationError concurrentModificationError = ConcurrentModificationError.builder()
+           .message("{message}")
+           .currentVersion(1)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentModificationError> {
 
     private String message;
@@ -27,8 +38,8 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-    *  <p>The version specified in the failed request.</p>
-    */
+     *  <p>The version specified in the failed request.</p>
+     */
 
     public ConcurrentModificationErrorBuilder specifiedVersion(@Nullable final Long specifiedVersion) {
         this.specifiedVersion = specifiedVersion;
@@ -36,8 +47,8 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-    *  <p>The current version of the resource.</p>
-    */
+     *  <p>The current version of the resource.</p>
+     */
 
     public ConcurrentModificationErrorBuilder currentVersion(final Long currentVersion) {
         this.currentVersion = currentVersion;
@@ -45,8 +56,8 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-    *  <p>The resource in conflict.</p>
-    */
+     *  <p>The resource in conflict.</p>
+     */
 
     public ConcurrentModificationErrorBuilder conflictedResource(@Nullable final java.lang.Object conflictedResource) {
         this.conflictedResource = conflictedResource;

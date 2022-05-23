@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>References a key value document by key.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>References a key value document by key.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, ModelBase {
 
     private String key;
@@ -43,8 +43,8 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
     }
 
     /**
-    *  <p>The type of the referenced resource.</p>
-    */
+     *  <p>The type of the referenced resource.</p>
+     */
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
         return this.typeId;
     }

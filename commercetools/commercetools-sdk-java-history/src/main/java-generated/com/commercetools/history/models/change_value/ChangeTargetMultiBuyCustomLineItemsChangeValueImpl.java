@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Shape of the value for cart discounts multiBuyCustomLineItems target.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Shape of the value for cart discounts multiBuyCustomLineItems target.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
         implements ChangeTargetMultiBuyCustomLineItemsChangeValue, ModelBase {
 
@@ -60,22 +60,22 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-    *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
-    */
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     */
     public Integer getTriggerQuantity() {
         return this.triggerQuantity;
     }
 
     /**
-    *  <p>Quantity of line items that are discounted per application of this discount.</p>
-    */
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     */
     public Integer getDiscountedQuantity() {
         return this.discountedQuantity;
     }
 
     /**
-    *  <p>Maximum number of applications of this discount.</p>
-    */
+     *  <p>Maximum number of applications of this discount.</p>
+     */
     public Integer getMaxOccurrence() {
         return this.maxOccurrence;
     }

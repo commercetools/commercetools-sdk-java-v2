@@ -8,15 +8,24 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerSetKeyAction customerSetKeyAction = CustomerSetKeyAction.builder()
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetKeyActionBuilder implements Builder<CustomerSetKeyAction> {
 
     @Nullable
     private String key;
 
     /**
-    *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
-    */
+     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     */
 
     public CustomerSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;

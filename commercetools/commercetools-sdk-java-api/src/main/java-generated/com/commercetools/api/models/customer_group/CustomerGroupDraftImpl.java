@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
 
     private String key;
@@ -35,22 +35,22 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the CustomerGroup.</p>
-    */
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
-    */
+     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a <code>DuplicateField</code> error is thrown.</p>
+     */
     public String getGroupName() {
         return this.groupName;
     }
 
     /**
-    *  <p>Custom Fields for the CustomerGroup.</p>
-    */
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }

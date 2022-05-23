@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TaxRate taxRate = TaxRate.builder()
+           .name("{name}")
+           .amount(0.3)
+           .includedInPrice(true)
+           .country("{country}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxRateBuilder implements Builder<TaxRate> {
 
     @Nullable
@@ -30,8 +43,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
     /**
-    *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
-    */
+     *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
+     */
 
     public TaxRateBuilder id(@Nullable final String id) {
         this.id = id;
@@ -39,8 +52,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Name of the TaxRate.</p>
-    */
+     *  <p>Name of the TaxRate.</p>
+     */
 
     public TaxRateBuilder name(final String name) {
         this.name = name;
@@ -48,8 +61,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
-    */
+     *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
+     */
 
     public TaxRateBuilder amount(final Double amount) {
         this.amount = amount;
@@ -57,8 +70,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
-    */
+     *  <p>If <code>true</code>, tax is included in Prices and the <code>taxedPrice</code> is present on LineItems. In this case, the platform calculates the <code>totalNet</code> price based on the TaxRate.</p>
+     */
 
     public TaxRateBuilder includedInPrice(final Boolean includedInPrice) {
         this.includedInPrice = includedInPrice;
@@ -66,8 +79,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
-    */
+     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     */
 
     public TaxRateBuilder country(final String country) {
         this.country = country;
@@ -75,8 +88,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>State within the country, such as Texas in the United States.</p>
-    */
+     *  <p>State within the country, such as Texas in the United States.</p>
+     */
 
     public TaxRateBuilder state(@Nullable final String state) {
         this.state = state;
@@ -84,8 +97,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
-    */
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     */
 
     public TaxRateBuilder subRates(@Nullable final com.commercetools.api.models.tax_category.SubRate... subRates) {
         this.subRates = new ArrayList<>(Arrays.asList(subRates));
@@ -93,8 +106,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
-    */
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     */
 
     public TaxRateBuilder subRates(
             @Nullable final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
@@ -103,8 +116,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
-    */
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     */
 
     public TaxRateBuilder plusSubRates(@Nullable final com.commercetools.api.models.tax_category.SubRate... subRates) {
         if (this.subRates == null) {
@@ -115,8 +128,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
-    */
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     */
 
     public TaxRateBuilder plusSubRates(
             Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {
@@ -128,8 +141,8 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
-    *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
-    */
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     */
 
     public TaxRateBuilder withSubRates(
             Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRateBuilder> builder) {

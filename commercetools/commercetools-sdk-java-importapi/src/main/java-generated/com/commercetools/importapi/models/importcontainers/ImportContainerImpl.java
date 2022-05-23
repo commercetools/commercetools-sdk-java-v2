@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerImpl implements ImportContainer, ModelBase {
 
     private String key;
@@ -47,36 +47,36 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-    *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
-    */
+     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
-    */
+     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     */
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;
     }
 
     /**
-    *  <p>The version of the ImportContainer.</p>
-    */
+     *  <p>The version of the ImportContainer.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>The time when the ImportContainer was created.</p>
-    */
+     *  <p>The time when the ImportContainer was created.</p>
+     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>The last time when the ImportContainer was modified.</p>
-    */
+     *  <p>The last time when the ImportContainer was modified.</p>
+     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }

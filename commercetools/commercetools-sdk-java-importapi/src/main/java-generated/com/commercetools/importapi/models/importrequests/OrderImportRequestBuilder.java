@@ -7,14 +7,24 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderImportRequest orderImportRequest = OrderImportRequest.builder()
+           .plusResources(resourcesBuilder -> resourcesBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     private java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources;
 
     /**
-    *  <p>The order import resources of this request.</p>
-    */
+     *  <p>The order import resources of this request.</p>
+     */
 
     public OrderImportRequestBuilder resources(
             final com.commercetools.importapi.models.orders.OrderImport... resources) {
@@ -23,8 +33,8 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-    *  <p>The order import resources of this request.</p>
-    */
+     *  <p>The order import resources of this request.</p>
+     */
 
     public OrderImportRequestBuilder resources(
             final java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources) {
@@ -33,8 +43,8 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-    *  <p>The order import resources of this request.</p>
-    */
+     *  <p>The order import resources of this request.</p>
+     */
 
     public OrderImportRequestBuilder plusResources(
             final com.commercetools.importapi.models.orders.OrderImport... resources) {
@@ -46,8 +56,8 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-    *  <p>The order import resources of this request.</p>
-    */
+     *  <p>The order import resources of this request.</p>
+     */
 
     public OrderImportRequestBuilder plusResources(
             Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {
@@ -59,8 +69,8 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
     }
 
     /**
-    *  <p>The order import resources of this request.</p>
-    */
+     *  <p>The order import resources of this request.</p>
+     */
 
     public OrderImportRequestBuilder withResources(
             Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImportBuilder> builder) {

@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Values of a SetType Custom Field are sets of values of the specified <code>elementType</code> (without duplicate elements).</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>Values of a SetType Custom Field are sets of values of the specified <code>elementType</code> (without duplicate elements).</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldSetTypeImpl implements CustomFieldSetType, ModelBase {
 
     private String name;
@@ -39,8 +39,8 @@ public class CustomFieldSetTypeImpl implements CustomFieldSetType, ModelBase {
     }
 
     /**
-    *  <p>Field type of the elements in the set.</p>
-    */
+     *  <p>Field type of the elements in the set.</p>
+     */
     public com.commercetools.api.models.type.FieldType getElementType() {
         return this.elementType;
     }

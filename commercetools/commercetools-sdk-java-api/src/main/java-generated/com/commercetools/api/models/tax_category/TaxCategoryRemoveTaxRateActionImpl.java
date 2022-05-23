@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxRateAction, ModelBase {
 
     private String action;
@@ -36,8 +36,8 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
     }
 
     /**
-    *  <p>ID of the TaxRate to remove.</p>
-    */
+     *  <p>ID of the TaxRate to remove.</p>
+     */
     public String getTaxRateId() {
         return this.taxRateId;
     }

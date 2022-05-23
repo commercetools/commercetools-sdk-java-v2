@@ -7,7 +7,18 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerGroupUpdate customerGroupUpdate = CustomerGroupUpdate.builder()
+           .version(0.3)
+           .plusActions(actionsBuilder -> actionsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> {
 
     private Long version;
@@ -15,8 +26,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
     private java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions;
 
     /**
-    *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
-    */
+     *  <p>Expected version of the CustomerGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     */
 
     public CustomerGroupUpdateBuilder version(final Long version) {
         this.version = version;
@@ -24,8 +35,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
     }
 
     /**
-    *  <p>Update actions to be performed on the CustomerGroup.</p>
-    */
+     *  <p>Update actions to be performed on the CustomerGroup.</p>
+     */
 
     public CustomerGroupUpdateBuilder actions(
             final com.commercetools.api.models.customer_group.CustomerGroupUpdateAction... actions) {
@@ -34,8 +45,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
     }
 
     /**
-    *  <p>Update actions to be performed on the CustomerGroup.</p>
-    */
+     *  <p>Update actions to be performed on the CustomerGroup.</p>
+     */
 
     public CustomerGroupUpdateBuilder actions(
             final java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions) {
@@ -44,8 +55,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
     }
 
     /**
-    *  <p>Update actions to be performed on the CustomerGroup.</p>
-    */
+     *  <p>Update actions to be performed on the CustomerGroup.</p>
+     */
 
     public CustomerGroupUpdateBuilder plusActions(
             final com.commercetools.api.models.customer_group.CustomerGroupUpdateAction... actions) {
@@ -57,8 +68,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
     }
 
     /**
-    *  <p>Update actions to be performed on the CustomerGroup.</p>
-    */
+     *  <p>Update actions to be performed on the CustomerGroup.</p>
+     */
 
     public CustomerGroupUpdateBuilder plusActions(
             Function<com.commercetools.api.models.customer_group.CustomerGroupUpdateActionBuilder, Builder<? extends com.commercetools.api.models.customer_group.CustomerGroupUpdateAction>> builder) {
@@ -71,8 +82,8 @@ public class CustomerGroupUpdateBuilder implements Builder<CustomerGroupUpdate> 
     }
 
     /**
-    *  <p>Update actions to be performed on the CustomerGroup.</p>
-    */
+     *  <p>Update actions to be performed on the CustomerGroup.</p>
+     */
 
     public CustomerGroupUpdateBuilder withActions(
             Function<com.commercetools.api.models.customer_group.CustomerGroupUpdateActionBuilder, Builder<? extends com.commercetools.api.models.customer_group.CustomerGroupUpdateAction>> builder) {

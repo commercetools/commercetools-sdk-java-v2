@@ -9,7 +9,17 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MoneySetAttribute moneySetAttribute = MoneySetAttribute.builder()
+           .plusValue(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
 
     @Nullable
@@ -18,8 +28,8 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     private java.util.List<com.commercetools.importapi.models.common.TypedMoney> value;
 
     /**
-    *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
-    */
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     */
 
     public MoneySetAttributeBuilder name(@Nullable final String name) {
         this.name = name;

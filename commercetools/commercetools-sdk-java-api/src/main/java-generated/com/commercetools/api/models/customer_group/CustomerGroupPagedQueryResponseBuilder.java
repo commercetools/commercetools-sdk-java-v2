@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerGroupPagedQueryResponse customerGroupPagedQueryResponse = CustomerGroupPagedQueryResponse.builder()
+           .limit(0.3)
+           .offset(0.3)
+           .count(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerGroupPagedQueryResponse> {
 
     private Long limit;
@@ -24,8 +37,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     private java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> results;
 
     /**
-    *  <p>Number of results requested.</p>
-    */
+     *  <p>Number of results requested.</p>
+     */
 
     public CustomerGroupPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
@@ -33,8 +46,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     /**
-    *  <p>Number of elements skipped.</p>
-    */
+     *  <p>Number of elements skipped.</p>
+     */
 
     public CustomerGroupPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
@@ -42,8 +55,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     /**
-    *  <p>Actual number of results returned.</p>
-    */
+     *  <p>Actual number of results returned.</p>
+     */
 
     public CustomerGroupPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
@@ -51,8 +64,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     /**
-    *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
-    */
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     */
 
     public CustomerGroupPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
@@ -60,8 +73,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     /**
-    *  <p>CustomerGroups matching the query.</p>
-    */
+     *  <p>CustomerGroups matching the query.</p>
+     */
 
     public CustomerGroupPagedQueryResponseBuilder results(
             final com.commercetools.api.models.customer_group.CustomerGroup... results) {
@@ -70,8 +83,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     /**
-    *  <p>CustomerGroups matching the query.</p>
-    */
+     *  <p>CustomerGroups matching the query.</p>
+     */
 
     public CustomerGroupPagedQueryResponseBuilder results(
             final java.util.List<com.commercetools.api.models.customer_group.CustomerGroup> results) {
@@ -80,8 +93,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     /**
-    *  <p>CustomerGroups matching the query.</p>
-    */
+     *  <p>CustomerGroups matching the query.</p>
+     */
 
     public CustomerGroupPagedQueryResponseBuilder plusResults(
             final com.commercetools.api.models.customer_group.CustomerGroup... results) {
@@ -93,8 +106,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     /**
-    *  <p>CustomerGroups matching the query.</p>
-    */
+     *  <p>CustomerGroups matching the query.</p>
+     */
 
     public CustomerGroupPagedQueryResponseBuilder plusResults(
             Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroupBuilder> builder) {
@@ -106,8 +119,8 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     /**
-    *  <p>CustomerGroups matching the query.</p>
-    */
+     *  <p>CustomerGroups matching the query.</p>
+     */
 
     public CustomerGroupPagedQueryResponseBuilder withResults(
             Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroupBuilder> builder) {

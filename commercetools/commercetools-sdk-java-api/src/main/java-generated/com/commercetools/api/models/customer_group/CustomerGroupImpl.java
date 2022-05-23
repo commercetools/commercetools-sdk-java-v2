@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerGroupImpl implements CustomerGroup, ModelBase {
 
     private String id;
@@ -58,64 +58,64 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the CustomerGroup.</p>
-    */
+     *  <p>Platform-generated unique identifier of the CustomerGroup.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>Current version of the CustomerGroup.</p>
-    */
+     *  <p>Current version of the CustomerGroup.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
 
     /**
-    *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
-    */
+     *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
+     */
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
     /**
-    *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
-    */
+     *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
+     */
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
     /**
-    *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier for the CustomerGroup.</p>
-    */
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     */
     public String getKey() {
         return this.key;
     }
 
     /**
-    *  <p>Unique name of the CustomerGroup.</p>
-    */
+     *  <p>Unique name of the CustomerGroup.</p>
+     */
     public String getName() {
         return this.name;
     }
 
     /**
-    *  <p>Custom Fields for the CustomerGroup.</p>
-    */
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     */
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }

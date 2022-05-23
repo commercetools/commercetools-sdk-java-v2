@@ -6,7 +6,19 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeTaxCalculationModeChange changeTaxCalculationModeChange = ChangeTaxCalculationModeChange.builder()
+           .change("{change}")
+           .previousValue(TaxCalculationMode.LINE_ITEM_LEVEL)
+           .nextValue(TaxCalculationMode.LINE_ITEM_LEVEL)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxCalculationModeChange> {
 
     private String change;
@@ -16,8 +28,8 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
     private com.commercetools.history.models.common.TaxCalculationMode nextValue;
 
     /**
-    *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
-    */
+     *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
+     */
 
     public ChangeTaxCalculationModeChangeBuilder change(final String change) {
         this.change = change;

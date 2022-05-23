@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderTransitionCustomLineItemStateActionImpl
         implements StagedOrderTransitionCustomLineItemStateAction, ModelBase {
 
@@ -61,15 +61,15 @@ public class StagedOrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-    *  <p>ResourceIdentifier to a State.</p>
-    */
+     *  <p>ResourceIdentifier to a State.</p>
+     */
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
         return this.fromState;
     }
 
     /**
-    *  <p>ResourceIdentifier to a State.</p>
-    */
+     *  <p>ResourceIdentifier to a State.</p>
+     */
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
         return this.toState;
     }

@@ -7,7 +7,20 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingRate shippingRate = ShippingRate.builder()
+           .price(priceBuilder -> priceBuilder)
+           .freeAbove(freeAboveBuilder -> freeAboveBuilder)
+           .isMatching(true)
+           .plusTiers(tiersBuilder -> tiersBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     private com.commercetools.history.models.common.Money price;
@@ -41,8 +54,8 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
-    *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
-    */
+     *  <p>Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</p>
+     */
 
     public ShippingRateBuilder isMatching(final Boolean isMatching) {
         this.isMatching = isMatching;

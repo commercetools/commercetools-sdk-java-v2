@@ -7,7 +7,21 @@ import java.util.function.Function;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TransitionCustomLineItemStateChange transitionCustomLineItemStateChange = TransitionCustomLineItemStateChange.builder()
+           .change("{change}")
+           .lineItemId("{lineItemId}")
+           .stateId("{stateId}")
+           .plusNextValue(nextValueBuilder -> nextValueBuilder)
+           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransitionCustomLineItemStateChangeBuilder implements Builder<TransitionCustomLineItemStateChange> {
 
     private String change;
@@ -21,8 +35,8 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     private java.util.List<com.commercetools.history.models.common.ItemState> previousValue;
 
     /**
-    *  <p>Update action for <code>transitionCustomLineItemState</code></p>
-    */
+     *  <p>Update action for <code>transitionCustomLineItemState</code></p>
+     */
 
     public TransitionCustomLineItemStateChangeBuilder change(final String change) {
         this.change = change;

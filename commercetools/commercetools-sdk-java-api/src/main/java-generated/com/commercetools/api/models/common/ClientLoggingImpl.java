@@ -15,9 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ *  <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ClientLoggingImpl implements ClientLogging, ModelBase {
 
     private String clientId;
@@ -43,29 +43,29 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-    *  <p><code>id</code> of the APIClient which created the resource.</p>
-    */
+     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     */
     public String getClientId() {
         return this.clientId;
     }
 
     /**
-    *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
-    */
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     */
     public String getExternalUserId() {
         return this.externalUserId;
     }
 
     /**
-    *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
-    */
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     */
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
     /**
-    *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
-    */
+     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     */
     public String getAnonymousId() {
         return this.anonymousId;
     }

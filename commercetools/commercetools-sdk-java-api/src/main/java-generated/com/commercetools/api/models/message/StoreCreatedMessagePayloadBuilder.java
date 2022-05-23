@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreCreatedMessagePayload storeCreatedMessagePayload = StoreCreatedMessagePayload.builder()
+           .plusLanguages(languagesBuilder -> languagesBuilder)
+           .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
+           .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
+           .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMessagePayload> {
 
     @Nullable
@@ -27,8 +40,8 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     private com.commercetools.api.models.type.CustomFields custom;
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public StoreCreatedMessagePayloadBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
@@ -37,8 +50,8 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-    *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
-    */
+     *  <p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p>
+     */
 
     public StoreCreatedMessagePayloadBuilder name(
             @Nullable final com.commercetools.api.models.common.LocalizedString name) {
@@ -182,8 +195,8 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
 
     public StoreCreatedMessagePayloadBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
@@ -192,8 +205,8 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
-    *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
-    */
+     *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+     */
 
     public StoreCreatedMessagePayloadBuilder custom(
             @Nullable final com.commercetools.api.models.type.CustomFields custom) {

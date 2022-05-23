@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     private String id;
@@ -85,15 +85,15 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the ShippingMethod.</p>
-    */
+     *  <p>Platform-generated unique identifier of the ShippingMethod.</p>
+     */
     public String getId() {
         return this.id;
     }
 
     /**
-    *  <p>The current version of the shipping method.</p>
-    */
+     *  <p>The current version of the shipping method.</p>
+     */
     public Long getVersion() {
         return this.version;
     }
@@ -107,22 +107,22 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
     /**
-    *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
-    */
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     */
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
     /**
-    *  <p>User-defined unique identifier of the ShippingMethod.</p>
-    */
+     *  <p>User-defined unique identifier of the ShippingMethod.</p>
+     */
     public String getKey() {
         return this.key;
     }
@@ -152,15 +152,15 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-    *  <p>One shipping method in a project can be default.</p>
-    */
+     *  <p>One shipping method in a project can be default.</p>
+     */
     public Boolean getIsDefault() {
         return this.isDefault;
     }
 
     /**
-    *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
-    */
+     *  <p>A Cart predicate which can be used to more precisely select a shipping method for a cart.</p>
+     */
     public String getPredicate() {
         return this.predicate;
     }

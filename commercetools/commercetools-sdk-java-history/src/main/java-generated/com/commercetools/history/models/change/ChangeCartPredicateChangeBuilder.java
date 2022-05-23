@@ -6,7 +6,19 @@ import java.util.*;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeCartPredicateChange changeCartPredicateChange = ChangeCartPredicateChange.builder()
+           .change("{change}")
+           .previousValue("{previousValue}")
+           .nextValue("{nextValue}")
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeCartPredicateChangeBuilder implements Builder<ChangeCartPredicateChange> {
 
     private String change;
@@ -16,8 +28,8 @@ public class ChangeCartPredicateChangeBuilder implements Builder<ChangeCartPredi
     private String nextValue;
 
     /**
-    *  <p>Shape of the action for <code>changeCartPredicate</code></p>
-    */
+     *  <p>Shape of the action for <code>changeCartPredicate</code></p>
+     */
 
     public ChangeCartPredicateChangeBuilder change(final String change) {
         this.change = change;

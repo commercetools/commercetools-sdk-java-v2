@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
 
     private String orderNumber;
@@ -120,36 +120,36 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-    *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
-    */
+     *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
+     */
     public String getOrderNumber() {
         return this.orderNumber;
     }
 
     /**
-    *  <p>If given the customer with that ID must exist in the project.</p>
-    */
+     *  <p>If given the customer with that ID must exist in the project.</p>
+     */
     public String getCustomerId() {
         return this.customerId;
     }
 
     /**
-    *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
-    */
+     *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
+     */
     public String getCustomerEmail() {
         return this.customerEmail;
     }
 
     /**
-    *  <p>If not given <code>customLineItems</code> must not be empty.</p>
-    */
+     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     */
     public java.util.List<com.commercetools.api.models.order.LineItemImportDraft> getLineItems() {
         return this.lineItems;
     }
 
     /**
-    *  <p>If not given <code>lineItems</code> must not be empty.</p>
-    */
+     *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     */
     public java.util.List<com.commercetools.api.models.cart.CustomLineItemImportDraft> getCustomLineItems() {
         return this.customLineItems;
     }
@@ -159,8 +159,8 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-    *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
-    */
+     *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     */
     public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
         return this.taxedPrice;
     }
@@ -174,29 +174,29 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-    *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
-    */
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     */
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
 
     /**
-    *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
-    */
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     */
     public String getCountry() {
         return this.country;
     }
 
     /**
-    *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
-    */
+     *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
+     */
     public com.commercetools.api.models.order.OrderState getOrderState() {
         return this.orderState;
     }
 
     /**
-    *  <p>This reference can point to a state in a custom workflow.</p>
-    */
+     *  <p>This reference can point to a state in a custom workflow.</p>
+     */
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
@@ -210,8 +210,8 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-    *  <p>Set if the ShippingMethod is set.</p>
-    */
+     *  <p>Set if the ShippingMethod is set.</p>
+     */
     public com.commercetools.api.models.order.ShippingInfoImportDraft getShippingInfo() {
         return this.shippingInfo;
     }
@@ -225,29 +225,29 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-    *  <p>The custom fields.</p>
-    */
+     *  <p>The custom fields.</p>
+     */
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
     /**
-    *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
-    */
+     *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
+     */
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
 
     /**
-    *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
-    */
+     *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
+     */
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
 
     /**
-    *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-    */
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     */
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
@@ -257,8 +257,8 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
     }
 
     /**
-    *  <p>The default origin is <code>Customer</code>.</p>
-    */
+     *  <p>The default origin is <code>Customer</code>.</p>
+     */
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
         return this.origin;
     }

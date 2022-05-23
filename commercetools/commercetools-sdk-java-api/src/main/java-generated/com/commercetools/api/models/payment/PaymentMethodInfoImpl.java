@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentMethodInfoImpl implements PaymentMethodInfo, ModelBase {
 
     private String paymentInterface;
@@ -36,22 +36,22 @@ public class PaymentMethodInfoImpl implements PaymentMethodInfo, ModelBase {
     }
 
     /**
-    *  <p>The interface that handles the payment (usually a PSP). Cannot be changed once it has been set. The combination of Payment<code>interfaceId</code> and this field must be unique.</p>
-    */
+     *  <p>The interface that handles the payment (usually a PSP). Cannot be changed once it has been set. The combination of Payment<code>interfaceId</code> and this field must be unique.</p>
+     */
     public String getPaymentInterface() {
         return this.paymentInterface;
     }
 
     /**
-    *  <p>The payment method that is used, e.g. e.g. a conventional string representing Credit Card, Cash Advance etc.</p>
-    */
+     *  <p>The payment method that is used, e.g. e.g. a conventional string representing Credit Card, Cash Advance etc.</p>
+     */
     public String getMethod() {
         return this.method;
     }
 
     /**
-    *  <p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p>
-    */
+     *  <p>A human-readable, localized name for the payment method, e.g. 'Credit Card'.</p>
+     */
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }

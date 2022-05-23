@@ -9,7 +9,18 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TaxPortion taxPortion = TaxPortion.builder()
+           .rate(0.3)
+           .amount(amountBuilder -> amountBuilder)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     @Nullable
@@ -25,8 +36,8 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-    *  <p>A number in the range [0..1]</p>
-    */
+     *  <p>A number in the range [0..1]</p>
+     */
 
     public TaxPortionBuilder rate(final Double rate) {
         this.rate = rate;

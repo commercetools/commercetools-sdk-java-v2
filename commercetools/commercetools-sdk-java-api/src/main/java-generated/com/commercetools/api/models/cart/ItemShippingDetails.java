@@ -13,21 +13,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ItemShippingDetails itemShippingDetails = ItemShippingDetails.builder()
+           .plusTargets(targetsBuilder -> targetsBuilder)
+           .valid(true)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ItemShippingDetailsImpl.class)
 public interface ItemShippingDetails {
 
     /**
-    *  <p>Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.</p>
-    */
+     *  <p>Used to map what sub-quantity should be shipped to which address. Duplicate address keys are not allowed.</p>
+     */
     @NotNull
     @Valid
     @JsonProperty("targets")
     public List<ItemShippingTarget> getTargets();
 
     /**
-    *  <p><code>true</code> if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
-    */
+     *  <p><code>true</code> if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+     */
     @NotNull
     @JsonProperty("valid")
     public Boolean getValid();

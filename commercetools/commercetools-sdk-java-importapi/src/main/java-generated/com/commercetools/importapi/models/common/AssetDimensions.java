@@ -13,22 +13,32 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>The width and height of the Asset Source.</p>
-*/
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+ <p>The width and height of the Asset Source.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AssetDimensions assetDimensions = AssetDimensions.builder()
+           .w(0.3)
+           .h(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssetDimensionsImpl.class)
 public interface AssetDimensions {
 
     /**
-    *  <p>The width of the asset source.</p>
-    */
+     *  <p>The width of the asset source.</p>
+     */
     @NotNull
     @JsonProperty("w")
     public Integer getW();
 
     /**
-    *  <p>The height of the asset source.</p>
-    */
+     *  <p>The height of the asset source.</p>
+     */
     @NotNull
     @JsonProperty("h")
     public Integer getH();

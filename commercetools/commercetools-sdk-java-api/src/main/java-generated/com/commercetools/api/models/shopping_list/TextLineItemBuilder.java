@@ -9,7 +9,20 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+/**
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TextLineItem textLineItem = TextLineItem.builder()
+           .addedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .id("{id}")
+           .name(nameBuilder -> nameBuilder)
+           .quantity(0.3)
+           .build()
+ </code></pre>
+ </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     private java.time.ZonedDateTime addedAt;
@@ -27,8 +40,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     private Integer quantity;
 
     /**
-    *  <p>When the text line item was added to the shopping list.</p>
-    */
+     *  <p>When the text line item was added to the shopping list.</p>
+     */
 
     public TextLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
@@ -59,8 +72,8 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-    *  <p>Platform-generated unique identifier of the TextLineItem.</p>
-    */
+     *  <p>Platform-generated unique identifier of the TextLineItem.</p>
+     */
 
     public TextLineItemBuilder id(final String id) {
         this.id = id;

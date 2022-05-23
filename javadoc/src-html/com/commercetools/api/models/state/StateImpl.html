@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class StateImpl implements State, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String id;</span>
@@ -91,103 +91,103 @@
 <span class="source-line-no">078</span><span id="line.78">    }</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">    *  &lt;p&gt;Platform-generated unique identifier of the State.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">    */</span>
+<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Platform-generated unique identifier of the State.&lt;/p&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     */</span>
 <span class="source-line-no">083</span><span id="line.83">    public String getId() {</span>
 <span class="source-line-no">084</span><span id="line.84">        return this.id;</span>
 <span class="source-line-no">085</span><span id="line.85">    }</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
 <span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">    *  &lt;p&gt;Current version of the State.&lt;/p&gt;</span>
-<span class="source-line-no">089</span><span id="line.89">    */</span>
+<span class="source-line-no">088</span><span id="line.88">     *  &lt;p&gt;Current version of the State.&lt;/p&gt;</span>
+<span class="source-line-no">089</span><span id="line.89">     */</span>
 <span class="source-line-no">090</span><span id="line.90">    public Long getVersion() {</span>
 <span class="source-line-no">091</span><span id="line.91">        return this.version;</span>
 <span class="source-line-no">092</span><span id="line.92">    }</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
 <span class="source-line-no">094</span><span id="line.94">    /**</span>
-<span class="source-line-no">095</span><span id="line.95">    *  &lt;p&gt;Date and time (UTC) the State was initially created.&lt;/p&gt;</span>
-<span class="source-line-no">096</span><span id="line.96">    */</span>
+<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;Date and time (UTC) the State was initially created.&lt;/p&gt;</span>
+<span class="source-line-no">096</span><span id="line.96">     */</span>
 <span class="source-line-no">097</span><span id="line.97">    public java.time.ZonedDateTime getCreatedAt() {</span>
 <span class="source-line-no">098</span><span id="line.98">        return this.createdAt;</span>
 <span class="source-line-no">099</span><span id="line.99">    }</span>
 <span class="source-line-no">100</span><span id="line.100"></span>
 <span class="source-line-no">101</span><span id="line.101">    /**</span>
-<span class="source-line-no">102</span><span id="line.102">    *  &lt;p&gt;Date and time (UTC) the State was last updated.&lt;/p&gt;</span>
-<span class="source-line-no">103</span><span id="line.103">    */</span>
+<span class="source-line-no">102</span><span id="line.102">     *  &lt;p&gt;Date and time (UTC) the State was last updated.&lt;/p&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
 <span class="source-line-no">104</span><span id="line.104">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
 <span class="source-line-no">105</span><span id="line.105">        return this.lastModifiedAt;</span>
 <span class="source-line-no">106</span><span id="line.106">    }</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
 <span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">110</span><span id="line.110">    */</span>
+<span class="source-line-no">109</span><span id="line.109">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">110</span><span id="line.110">     */</span>
 <span class="source-line-no">111</span><span id="line.111">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
 <span class="source-line-no">112</span><span id="line.112">        return this.lastModifiedBy;</span>
 <span class="source-line-no">113</span><span id="line.113">    }</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
 <span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">117</span><span id="line.117">    */</span>
+<span class="source-line-no">116</span><span id="line.116">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
 <span class="source-line-no">118</span><span id="line.118">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
 <span class="source-line-no">119</span><span id="line.119">        return this.createdBy;</span>
 <span class="source-line-no">120</span><span id="line.120">    }</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
 <span class="source-line-no">122</span><span id="line.122">    /**</span>
-<span class="source-line-no">123</span><span id="line.123">    *  &lt;p&gt;User-defined unique identifier of the State.&lt;/p&gt;</span>
-<span class="source-line-no">124</span><span id="line.124">    */</span>
+<span class="source-line-no">123</span><span id="line.123">     *  &lt;p&gt;User-defined unique identifier of the State.&lt;/p&gt;</span>
+<span class="source-line-no">124</span><span id="line.124">     */</span>
 <span class="source-line-no">125</span><span id="line.125">    public String getKey() {</span>
 <span class="source-line-no">126</span><span id="line.126">        return this.key;</span>
 <span class="source-line-no">127</span><span id="line.127">    }</span>
 <span class="source-line-no">128</span><span id="line.128"></span>
 <span class="source-line-no">129</span><span id="line.129">    /**</span>
-<span class="source-line-no">130</span><span id="line.130">    *  &lt;p&gt;Indicates to which resource or object types the State is assigned to.&lt;/p&gt;</span>
-<span class="source-line-no">131</span><span id="line.131">    */</span>
+<span class="source-line-no">130</span><span id="line.130">     *  &lt;p&gt;Indicates to which resource or object types the State is assigned to.&lt;/p&gt;</span>
+<span class="source-line-no">131</span><span id="line.131">     */</span>
 <span class="source-line-no">132</span><span id="line.132">    public com.commercetools.api.models.state.StateTypeEnum getType() {</span>
 <span class="source-line-no">133</span><span id="line.133">        return this.type;</span>
 <span class="source-line-no">134</span><span id="line.134">    }</span>
 <span class="source-line-no">135</span><span id="line.135"></span>
 <span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">    *  &lt;p&gt;Name of the State.&lt;/p&gt;</span>
-<span class="source-line-no">138</span><span id="line.138">    */</span>
+<span class="source-line-no">137</span><span id="line.137">     *  &lt;p&gt;Name of the State.&lt;/p&gt;</span>
+<span class="source-line-no">138</span><span id="line.138">     */</span>
 <span class="source-line-no">139</span><span id="line.139">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
 <span class="source-line-no">140</span><span id="line.140">        return this.name;</span>
 <span class="source-line-no">141</span><span id="line.141">    }</span>
 <span class="source-line-no">142</span><span id="line.142"></span>
 <span class="source-line-no">143</span><span id="line.143">    /**</span>
-<span class="source-line-no">144</span><span id="line.144">    *  &lt;p&gt;Description of the State.&lt;/p&gt;</span>
-<span class="source-line-no">145</span><span id="line.145">    */</span>
+<span class="source-line-no">144</span><span id="line.144">     *  &lt;p&gt;Description of the State.&lt;/p&gt;</span>
+<span class="source-line-no">145</span><span id="line.145">     */</span>
 <span class="source-line-no">146</span><span id="line.146">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
 <span class="source-line-no">147</span><span id="line.147">        return this.description;</span>
 <span class="source-line-no">148</span><span id="line.148">    }</span>
 <span class="source-line-no">149</span><span id="line.149"></span>
 <span class="source-line-no">150</span><span id="line.150">    /**</span>
-<span class="source-line-no">151</span><span id="line.151">    *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; for an initial State, the first State in a workflow.&lt;/p&gt;</span>
-<span class="source-line-no">152</span><span id="line.152">    */</span>
+<span class="source-line-no">151</span><span id="line.151">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; for an initial State, the first State in a workflow.&lt;/p&gt;</span>
+<span class="source-line-no">152</span><span id="line.152">     */</span>
 <span class="source-line-no">153</span><span id="line.153">    public Boolean getInitial() {</span>
 <span class="source-line-no">154</span><span id="line.154">        return this.initial;</span>
 <span class="source-line-no">155</span><span id="line.155">    }</span>
 <span class="source-line-no">156</span><span id="line.156"></span>
 <span class="source-line-no">157</span><span id="line.157">    /**</span>
-<span class="source-line-no">158</span><span id="line.158">    *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; for States that are an integral part of the Project. Those States cannot be deleted and their &lt;code&gt;key&lt;/code&gt; cannot be changed.&lt;/p&gt;</span>
-<span class="source-line-no">159</span><span id="line.159">    */</span>
+<span class="source-line-no">158</span><span id="line.158">     *  &lt;p&gt;&lt;code&gt;true&lt;/code&gt; for States that are an integral part of the Project. Those States cannot be deleted and their &lt;code&gt;key&lt;/code&gt; cannot be changed.&lt;/p&gt;</span>
+<span class="source-line-no">159</span><span id="line.159">     */</span>
 <span class="source-line-no">160</span><span id="line.160">    public Boolean getBuiltIn() {</span>
 <span class="source-line-no">161</span><span id="line.161">        return this.builtIn;</span>
 <span class="source-line-no">162</span><span id="line.162">    }</span>
 <span class="source-line-no">163</span><span id="line.163"></span>
 <span class="source-line-no">164</span><span id="line.164">    /**</span>
-<span class="source-line-no">165</span><span id="line.165">    *  &lt;p&gt;Roles the State can fulfill for Reviews and Line Items.&lt;/p&gt;</span>
-<span class="source-line-no">166</span><span id="line.166">    */</span>
+<span class="source-line-no">165</span><span id="line.165">     *  &lt;p&gt;Roles the State can fulfill for Reviews and Line Items.&lt;/p&gt;</span>
+<span class="source-line-no">166</span><span id="line.166">     */</span>
 <span class="source-line-no">167</span><span id="line.167">    public java.util.List&lt;com.commercetools.api.models.state.StateRoleEnum&gt; getRoles() {</span>
 <span class="source-line-no">168</span><span id="line.168">        return this.roles;</span>
 <span class="source-line-no">169</span><span id="line.169">    }</span>
 <span class="source-line-no">170</span><span id="line.170"></span>
 <span class="source-line-no">171</span><span id="line.171">    /**</span>
-<span class="source-line-no">172</span><span id="line.172">    *  &lt;ul&gt;</span>
-<span class="source-line-no">173</span><span id="line.173">    *   &lt;li&gt;list of States of the same &lt;code&gt;type&lt;/code&gt; that the current State can be transitioned to. For example, when the current State is the &lt;em&gt;Initial&lt;/em&gt; State of StateType &lt;code&gt;OrderState&lt;/code&gt; and this list contains the reference to the &lt;em&gt;Shipped&lt;/em&gt; &lt;code&gt;OrderState&lt;/code&gt;, the transition &lt;em&gt;Initial&lt;/em&gt; -&amp;gt; &lt;em&gt;Shipped&lt;/em&gt; is allowed.&lt;/li&gt;</span>
-<span class="source-line-no">174</span><span id="line.174">    *   &lt;li&gt;if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.&lt;/li&gt;</span>
-<span class="source-line-no">175</span><span id="line.175">    *   &lt;li&gt;if not set, the validation is turned off and the current State can be transitioned to any other State of the same &lt;code&gt;type&lt;/code&gt; as the current State.&lt;/li&gt;</span>
-<span class="source-line-no">176</span><span id="line.176">    *  &lt;/ul&gt;</span>
-<span class="source-line-no">177</span><span id="line.177">    */</span>
+<span class="source-line-no">172</span><span id="line.172">     *  &lt;ul&gt;</span>
+<span class="source-line-no">173</span><span id="line.173">     *   &lt;li&gt;list of States of the same &lt;code&gt;type&lt;/code&gt; that the current State can be transitioned to. For example, when the current State is the &lt;em&gt;Initial&lt;/em&gt; State of StateType &lt;code&gt;OrderState&lt;/code&gt; and this list contains the reference to the &lt;em&gt;Shipped&lt;/em&gt; &lt;code&gt;OrderState&lt;/code&gt;, the transition &lt;em&gt;Initial&lt;/em&gt; -&amp;gt; &lt;em&gt;Shipped&lt;/em&gt; is allowed.&lt;/li&gt;</span>
+<span class="source-line-no">174</span><span id="line.174">     *   &lt;li&gt;if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.&lt;/li&gt;</span>
+<span class="source-line-no">175</span><span id="line.175">     *   &lt;li&gt;if not set, the validation is turned off and the current State can be transitioned to any other State of the same &lt;code&gt;type&lt;/code&gt; as the current State.&lt;/li&gt;</span>
+<span class="source-line-no">176</span><span id="line.176">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">177</span><span id="line.177">     */</span>
 <span class="source-line-no">178</span><span id="line.178">    public java.util.List&lt;com.commercetools.api.models.state.StateReference&gt; getTransitions() {</span>
 <span class="source-line-no">179</span><span id="line.179">        return this.transitions;</span>
 <span class="source-line-no">180</span><span id="line.180">    }</span>

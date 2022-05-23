@@ -84,8 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="BooleanFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">BooleanFieldImpl</a></code>, <code><a href="BooleanSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">BooleanSetFieldImpl</a></code>, <code><a href="CustomFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">CustomFieldImpl</a></code>, <code><a href="DateFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">DateFieldImpl</a></code>, <code><a href="DateSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">DateSetFieldImpl</a></code>, <code><a href="DateTimeFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">DateTimeFieldImpl</a></code>, <code><a href="DateTimeSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">DateTimeSetFieldImpl</a></code>, <code><a href="EnumFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">EnumFieldImpl</a></code>, <code><a href="EnumSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">EnumSetFieldImpl</a></code>, <code><a href="LocalizedEnumFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">LocalizedEnumFieldImpl</a></code>, <code><a href="LocalizedEnumSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">LocalizedEnumSetFieldImpl</a></code>, <code><a href="LocalizedStringFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">LocalizedStringFieldImpl</a></code>, <code><a href="LocalizedStringSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">LocalizedStringSetFieldImpl</a></code>, <code><a href="MoneyFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">MoneyFieldImpl</a></code>, <code><a href="MoneySetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">MoneySetFieldImpl</a></code>, <code><a href="NumberFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">NumberFieldImpl</a></code>, <code><a href="NumberSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">NumberSetFieldImpl</a></code>, <code><a href="ReferenceFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">ReferenceFieldImpl</a></code>, <code><a href="ReferenceSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">ReferenceSetFieldImpl</a></code>, <code><a href="StringFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">StringFieldImpl</a></code>, <code><a href="StringSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">StringSetFieldImpl</a></code>, <code><a href="TimeFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">TimeFieldImpl</a></code>, <code><a href="TimeSetFieldImpl.html" title="class in com.commercetools.importapi.models.customfields">TimeSetFieldImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.18">CustomField</a></span></div>
-<div class="block"><p>Provides the value for a custom field of a specific type.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.27">CustomField</a></span></div>
+<div class="block"><p>Provides the value for a custom field of a specific type.</p>
+
+ Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomField customField = CustomField.booleanBuilder()
+           value(true)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -195,152 +204,152 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.49">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.58">getType</a></span>()</div>
 <div class="block"><p>The type of this field.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="booleanBuilder()">
 <h3>booleanBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BooleanFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">BooleanFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.53">booleanBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BooleanFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">BooleanFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.62">booleanBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="booleanSetBuilder()">
 <h3>booleanSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BooleanSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">BooleanSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.57">booleanSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BooleanSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">BooleanSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.66">booleanSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="dateBuilder()">
 <h3>dateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">DateFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.61">dateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">DateFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.70">dateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="dateSetBuilder()">
 <h3>dateSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">DateSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.65">dateSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">DateSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.74">dateSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="dateTimeBuilder()">
 <h3>dateTimeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateTimeFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">DateTimeFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.69">dateTimeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateTimeFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">DateTimeFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.78">dateTimeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="dateTimeSetBuilder()">
 <h3>dateTimeSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateTimeSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">DateTimeSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.73">dateTimeSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DateTimeSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">DateTimeSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.82">dateTimeSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="enumBuilder()">
 <h3>enumBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">EnumFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.77">enumBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">EnumFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.86">enumBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="enumSetBuilder()">
 <h3>enumSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">EnumSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.81">enumSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EnumSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">EnumSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.90">enumSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="localizedEnumBuilder()">
 <h3>localizedEnumBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizedEnumFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">LocalizedEnumFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.85">localizedEnumBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizedEnumFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">LocalizedEnumFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.94">localizedEnumBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="localizedEnumSetBuilder()">
 <h3>localizedEnumSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizedEnumSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">LocalizedEnumSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.89">localizedEnumSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizedEnumSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">LocalizedEnumSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.98">localizedEnumSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="localizedStringBuilder()">
 <h3>localizedStringBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizedStringFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">LocalizedStringFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.93">localizedStringBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizedStringFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">LocalizedStringFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.102">localizedStringBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="localizedStringSetBuilder()">
 <h3>localizedStringSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizedStringSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">LocalizedStringSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.97">localizedStringSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LocalizedStringSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">LocalizedStringSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.106">localizedStringSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="moneyBuilder()">
 <h3>moneyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneyFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">MoneyFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.101">moneyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneyFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">MoneyFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.110">moneyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="moneySetBuilder()">
 <h3>moneySetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneySetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">MoneySetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.105">moneySetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MoneySetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">MoneySetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.114">moneySetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="numberBuilder()">
 <h3>numberBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NumberFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">NumberFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.109">numberBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NumberFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">NumberFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.118">numberBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="numberSetBuilder()">
 <h3>numberSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NumberSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">NumberSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.113">numberSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="NumberSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">NumberSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.122">numberSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="referenceBuilder()">
 <h3>referenceBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">ReferenceFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.117">referenceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">ReferenceFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.126">referenceBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="referenceSetBuilder()">
 <h3>referenceSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">ReferenceSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.121">referenceSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ReferenceSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">ReferenceSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.130">referenceSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="stringBuilder()">
 <h3>stringBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StringFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">StringFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.125">stringBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StringFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">StringFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.134">stringBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="stringSetBuilder()">
 <h3>stringSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StringSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">StringSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.129">stringSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StringSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">StringSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.138">stringSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="timeBuilder()">
 <h3>timeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TimeFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">TimeFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.133">timeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TimeFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">TimeFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.142">timeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="timeSetBuilder()">
 <h3>timeSetBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TimeSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">TimeSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.137">timeSetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TimeSetFieldBuilder.html" title="class in com.commercetools.importapi.models.customfields">TimeSetFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.146">timeSetBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCustomField(java.util.function.Function)">
 <h3>withCustomField</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.141">withCustomField</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomField.html" title="interface in com.commercetools.importapi.models.customfields">CustomField</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.150">withCustomField</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomField.html" title="interface in com.commercetools.importapi.models.customfields">CustomField</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomField.html" title="interface in com.commercetools.importapi.models.customfields">CustomField</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.145">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomField.html" title="interface in com.commercetools.importapi.models.customfields">CustomField</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customfields/CustomField.html#line.154">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

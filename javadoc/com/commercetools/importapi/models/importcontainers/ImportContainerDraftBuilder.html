@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.11">ImportContainerDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.21">ImportContainerDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImportContainerDraft importContainerDraft = ImportContainerDraft.builder()
+           .key("{key}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -163,7 +171,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ImportContainerDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.12">ImportContainerDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.22">ImportContainerDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -177,14 +185,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.23">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.33">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <div class="block"><p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resourceType(com.commercetools.importapi.models.common.ImportResourceType)">
 <h3>resourceType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.32">resourceType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.42">resourceType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;resourceType)</span></div>
 <div class="block"><p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p></div>
 </section>
@@ -192,20 +200,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.38">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.48">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceType()">
 <h3>getResourceType</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.42">getResourceType</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.52">getResourceType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.47">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.57">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&gt;</code></dd>
@@ -215,20 +223,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.55">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.65">buildUnchecked</a></span>()</div>
 <div class="block">builds ImportContainerDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.59">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.69">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importcontainers.ImportContainerDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.63">of</a></span>&#8203;<span class="parameters">(<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importcontainers/ImportContainerDraftBuilder.html#line.73">of</a></span>&#8203;<span class="parameters">(<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

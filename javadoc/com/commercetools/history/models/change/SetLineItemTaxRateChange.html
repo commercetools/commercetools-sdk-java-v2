@@ -84,8 +84,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SetLineItemTaxRateChangeImpl.html" title="class in com.commercetools.history.models.change">SetLineItemTaxRateChangeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.19">SetLineItemTaxRateChange</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.34">SetLineItemTaxRateChange</a></span><span class="extends-implements">
 extends <a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetLineItemTaxRateChange setLineItemTaxRateChange = SetLineItemTaxRateChange.builder()
+           .change("{change}")
+           .lineItem(lineItemBuilder -> lineItemBuilder)
+           .variant("{variant}")
+           .taxMode(TaxMode.PLATFORM)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -198,7 +211,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="SET_LINE_ITEM_TAX_RATE_CHANGE">
 <h3>SET_LINE_ITEM_TAX_RATE_CHANGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.23">SET_LINE_ITEM_TAX_RATE_CHANGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.38">SET_LINE_ITEM_TAX_RATE_CHANGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change.SetLineItemTaxRateChange.SET_LINE_ITEM_TAX_RATE_CHANGE">Constant Field Values</a></dd>
@@ -217,7 +230,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.25">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.40">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -228,7 +241,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.32">getChange</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.47">getChange</a></span>()</div>
 <div class="block"><p>Update action for <code>setLineItemTaxRate</code></p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -241,21 +254,21 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getLineItem</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.36">getLineItem</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.51">getLineItem</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariant()">
 <h3>getVariant</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.41">getVariant</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.56">getVariant</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxMode()">
 <h3>getTaxMode</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.45">getTaxMode</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.60">getTaxMode</a></span>()</div>
 </section>
 </li>
 <li>
@@ -263,7 +276,7 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.52">getNextValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.67">getNextValue</a></span>()</div>
 <div class="block"><p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p></div>
 </section>
 </li>
@@ -272,14 +285,14 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <h3>getPreviousValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.60">getPreviousValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.75">getPreviousValue</a></span>()</div>
 <div class="block"><p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChange(java.lang.String)">
 <h3>setChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.65">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.80">setChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
@@ -289,67 +302,67 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <li>
 <section class="detail" id="setLineItem(com.commercetools.history.models.common.LocalizedString)">
 <h3>setLineItem</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.67">setLineItem</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;lineItem)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.82">setLineItem</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;lineItem)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVariant(java.lang.String)">
 <h3>setVariant</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.69">setVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.84">setVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variant)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTaxMode(com.commercetools.history.models.common.TaxMode)">
 <h3>setTaxMode</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.71">setTaxMode</a></span>&#8203;<span class="parameters">(<a href="../common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;taxMode)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.86">setTaxMode</a></span>&#8203;<span class="parameters">(<a href="../common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;taxMode)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setNextValue(com.commercetools.history.models.common.TaxRate)">
 <h3>setNextValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.73">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.88">setNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPreviousValue(com.commercetools.history.models.common.TaxRate)">
 <h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.75">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.90">setPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.77">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.92">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.SetLineItemTaxRateChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.81">of</a></span>&#8203;<span class="parameters">(<a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.96">of</a></span>&#8203;<span class="parameters">(<a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.92">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.107">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change.SetLineItemTaxRateChange)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.96">builder</a></span>&#8203;<span class="parameters">(<a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SetLineItemTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetLineItemTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.111">builder</a></span>&#8203;<span class="parameters">(<a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSetLineItemTaxRateChange(java.util.function.Function)">
 <h3>withSetLineItemTaxRateChange</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.100">withSetLineItemTaxRateChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.115">withSetLineItemTaxRateChange</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.104">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SetLineItemTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetLineItemTaxRateChange</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetLineItemTaxRateChange.html#line.119">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

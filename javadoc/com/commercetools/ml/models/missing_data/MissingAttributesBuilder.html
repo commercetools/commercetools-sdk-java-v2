@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.12">MissingAttributesBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.25">MissingAttributesBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MissingAttributes missingAttributes = MissingAttributes.builder()
+           .product(productBuilder -> productBuilder)
+           .productType(productTypeBuilder -> productTypeBuilder)
+           .variantId(0.3)
+           .plusMissingAttributeValues(missingAttributeValuesBuilder -> missingAttributeValuesBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -227,7 +238,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MissingAttributesBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.13">MissingAttributesBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.26">MissingAttributesBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -241,59 +252,59 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="product(java.util.function.Function)">
 <h3>product</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.32">product</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductReferenceBuilder</a>,&#8203;<a href="../common/ProductReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.45">product</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductReferenceBuilder</a>,&#8203;<a href="../common/ProductReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="product(com.commercetools.ml.models.common.ProductReference)">
 <h3>product</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.38">product</a></span>&#8203;<span class="parameters">(<a href="../common/ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a>&nbsp;product)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.51">product</a></span>&#8203;<span class="parameters">(<a href="../common/ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a>&nbsp;product)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="productType(java.util.function.Function)">
 <h3>productType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.43">productType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductTypeReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceBuilder</a>,&#8203;<a href="../common/ProductTypeReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.56">productType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductTypeReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceBuilder</a>,&#8203;<a href="../common/ProductTypeReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="productType(com.commercetools.ml.models.common.ProductTypeReference)">
 <h3>productType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.49">productType</a></span>&#8203;<span class="parameters">(<a href="../common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;productType)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.62">productType</a></span>&#8203;<span class="parameters">(<a href="../common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;productType)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variantId(java.lang.Integer)">
 <h3>variantId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.59">variantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;variantId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.72">variantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;variantId)</span></div>
 <div class="block"><p>ID of a ProductVariant.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="missingAttributeValues(java.lang.String...)">
 <h3>missingAttributeValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.68">missingAttributeValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;missingAttributeValues)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.81">missingAttributeValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;missingAttributeValues)</span></div>
 <div class="block"><p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="missingAttributeValues(java.util.List)">
 <h3>missingAttributeValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.77">missingAttributeValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;missingAttributeValues)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.90">missingAttributeValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;missingAttributeValues)</span></div>
 <div class="block"><p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusMissingAttributeValues(java.lang.String...)">
 <h3>plusMissingAttributeValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.86">plusMissingAttributeValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;missingAttributeValues)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.99">plusMissingAttributeValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;missingAttributeValues)</span></div>
 <div class="block"><p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="missingAttributeNames(java.lang.String...)">
 <h3>missingAttributeNames</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.98">missingAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.111">missingAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;missingAttributeNames)</span></div>
 <div class="block"><p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p></div>
 </section>
@@ -301,7 +312,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="missingAttributeNames(java.util.List)">
 <h3>missingAttributeNames</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.107">missingAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.120">missingAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;missingAttributeNames)</span></div>
 <div class="block"><p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p></div>
 </section>
@@ -309,7 +320,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusMissingAttributeNames(java.lang.String...)">
 <h3>plusMissingAttributeNames</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.117">plusMissingAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.130">plusMissingAttributeNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;missingAttributeNames)</span></div>
 <div class="block"><p>The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</p></div>
 </section>
@@ -317,78 +328,78 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="attributeCount(java.util.function.Function)">
 <h3>attributeCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.125">attributeCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeCountBuilder.html" title="class in com.commercetools.ml.models.missing_data">AttributeCountBuilder</a>,&#8203;<a href="AttributeCountBuilder.html" title="class in com.commercetools.ml.models.missing_data">AttributeCountBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.138">attributeCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeCountBuilder.html" title="class in com.commercetools.ml.models.missing_data">AttributeCountBuilder</a>,&#8203;<a href="AttributeCountBuilder.html" title="class in com.commercetools.ml.models.missing_data">AttributeCountBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="attributeCount(com.commercetools.ml.models.missing_data.AttributeCount)">
 <h3>attributeCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.132">attributeCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.145">attributeCount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="AttributeCount.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCount</a>&nbsp;attributeCount)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="attributeCoverage(java.util.function.Function)">
 <h3>attributeCoverage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.138">attributeCoverage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeCoverageBuilder.html" title="class in com.commercetools.ml.models.missing_data">AttributeCoverageBuilder</a>,&#8203;<a href="AttributeCoverageBuilder.html" title="class in com.commercetools.ml.models.missing_data">AttributeCoverageBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.151">attributeCoverage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeCoverageBuilder.html" title="class in com.commercetools.ml.models.missing_data">AttributeCoverageBuilder</a>,&#8203;<a href="AttributeCoverageBuilder.html" title="class in com.commercetools.ml.models.missing_data">AttributeCoverageBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="attributeCoverage(com.commercetools.ml.models.missing_data.AttributeCoverage)">
 <h3>attributeCoverage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.145">attributeCoverage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.158">attributeCoverage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="AttributeCoverage.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCoverage</a>&nbsp;attributeCoverage)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProduct()">
 <h3>getProduct</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.151">getProduct</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.164">getProduct</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductType()">
 <h3>getProductType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.155">getProductType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.168">getProductType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariantId()">
 <h3>getVariantId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.159">getVariantId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.172">getVariantId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMissingAttributeValues()">
 <h3>getMissingAttributeValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.163">getMissingAttributeValues</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.176">getMissingAttributeValues</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMissingAttributeNames()">
 <h3>getMissingAttributeNames</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.167">getMissingAttributeNames</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.180">getMissingAttributeNames</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAttributeCount()">
 <h3>getAttributeCount</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeCount.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCount</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.172">getAttributeCount</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeCount.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCount</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.185">getAttributeCount</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAttributeCoverage()">
 <h3>getAttributeCoverage</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeCoverage.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCoverage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.177">getAttributeCoverage</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeCoverage.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCoverage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.190">getAttributeCoverage</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.182">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.195">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&gt;</code></dd>
@@ -398,20 +409,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.194">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.207">buildUnchecked</a></span>()</div>
 <div class="block">builds MissingAttributes without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.199">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.212">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.missing_data.MissingAttributes)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.203">of</a></span>&#8203;<span class="parameters">(<a href="MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html#line.216">of</a></span>&#8203;<span class="parameters">(<a href="MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

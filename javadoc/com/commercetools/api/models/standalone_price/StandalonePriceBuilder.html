@@ -83,9 +83,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StandalonePrice.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePrice</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.12">StandalonePriceBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.27">StandalonePriceBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StandalonePrice.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePrice</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StandalonePrice standalonePrice = StandalonePrice.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .sku("{sku}")
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -338,7 +351,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StandalonePriceBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.13">StandalonePriceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.28">StandalonePriceBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -352,42 +365,42 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.64">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.79">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <div class="block"><p>Platform-generated unique identifier of the StandalonePrice.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.73">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.88">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <div class="block"><p>Current version of the StandalonePrice.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.82">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.97">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 <div class="block"><p>Date and time (UTC) the StandalonePrice was initially created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.91">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.106">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
 <div class="block"><p>Date and time (UTC) the StandalonePrice was last updated.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedBy(java.util.function.Function)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.100">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.115">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,&#8203;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.110">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.125">lastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
 <div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 </section>
@@ -395,14 +408,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="createdBy(java.util.function.Function)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.120">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.135">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,&#8203;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdBy(com.commercetools.api.models.common.CreatedBy)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.130">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.145">createdBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
 <div class="block"><p>Present on resources created after 1 February 2019 except for events not tracked.</p></div>
 </section>
@@ -410,7 +423,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.139">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.154">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <div class="block"><p>User-defined unique identifier of the StandalonePrice.</p></div>
 </section>
@@ -418,28 +431,28 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="sku(java.lang.String)">
 <h3>sku</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.148">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.163">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
 <div class="block"><p>SKU of the ProductVariant to which this Price is associated.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(com.commercetools.api.models.common.TypedMoney)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.157">value</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.172">value</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;value)</span></div>
 <div class="block"><p>Money value of this Price.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(java.util.function.Function)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.166">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.181">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Money value of this Price.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="country(java.lang.String)">
 <h3>country</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.176">country</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.191">country</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
 <div class="block"><p>Country for which this Price is valid.</p></div>
 </section>
@@ -447,14 +460,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="customerGroup(java.util.function.Function)">
 <h3>customerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.185">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,&#8203;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.200">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,&#8203;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>CustomerGroup for which this Price is valid.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference)">
 <h3>customerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.197">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.212">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;customerGroup)</span></div>
 <div class="block"><p>CustomerGroup for which this Price is valid.</p></div>
 </section>
@@ -462,14 +475,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="channel(java.util.function.Function)">
 <h3>channel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.207">channel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a>,&#8203;<a href="../channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.222">channel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a>,&#8203;<a href="../channel/ChannelReferenceBuilder.html" title="class in com.commercetools.api.models.channel">ChannelReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Product distribution Channel for which this Price is valid.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="channel(com.commercetools.api.models.channel.ChannelReference)">
 <h3>channel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.217">channel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.232">channel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;channel)</span></div>
 <div class="block"><p>Product distribution Channel for which this Price is valid.</p></div>
 </section>
@@ -477,7 +490,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="validFrom(java.time.ZonedDateTime)">
 <h3>validFrom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.227">validFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.242">validFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
 <div class="block"><p>Date from which the Price is valid.</p></div>
 </section>
@@ -485,7 +498,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="validUntil(java.time.ZonedDateTime)">
 <h3>validUntil</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.236">validUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.251">validUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
 <div class="block"><p>Date until the Price is valid.</p></div>
 </section>
@@ -493,7 +506,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="tiers(com.commercetools.api.models.common.PriceTier...)">
 <h3>tiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.245">tiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.260">tiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>...&nbsp;tiers)</span></div>
 <div class="block"><p>Price tiers if any are defined.</p></div>
 </section>
@@ -501,7 +514,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="tiers(java.util.List)">
 <h3>tiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.254">tiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.269">tiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;&nbsp;tiers)</span></div>
 <div class="block"><p>Price tiers if any are defined.</p></div>
 </section>
@@ -509,7 +522,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusTiers(com.commercetools.api.models.common.PriceTier...)">
 <h3>plusTiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.264">plusTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.279">plusTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>...&nbsp;tiers)</span></div>
 <div class="block"><p>Price tiers if any are defined.</p></div>
 </section>
@@ -517,28 +530,28 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusTiers(java.util.function.Function)">
 <h3>plusTiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.276">plusTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>,&#8203;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.291">plusTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>,&#8203;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Price tiers if any are defined.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTiers(java.util.function.Function)">
 <h3>withTiers</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.289">withTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>,&#8203;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.304">withTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>,&#8203;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.api.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Price tiers if any are defined.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="discounted(java.util.function.Function)">
 <h3>discounted</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.300">discounted</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.api.models.common">DiscountedPriceBuilder</a>,&#8203;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.api.models.common">DiscountedPriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.315">discounted</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.api.models.common">DiscountedPriceBuilder</a>,&#8203;<a href="../common/DiscountedPriceBuilder.html" title="class in com.commercetools.api.models.common">DiscountedPriceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="discounted(com.commercetools.api.models.common.DiscountedPrice)">
 <h3>discounted</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.310">discounted</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.325">discounted</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a>&nbsp;discounted)</span></div>
 <div class="block"><p>Set if a matching ProductDiscount exists. If set, the Platform uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p></div>
 </section>
@@ -546,14 +559,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="custom(java.util.function.Function)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.320">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.335">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Custom Fields for the StandalonePrice.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="custom(com.commercetools.api.models.type.CustomFields)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.330">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.345">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
 <div class="block"><p>Custom Fields for the StandalonePrice.</p></div>
 </section>
@@ -561,120 +574,120 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.335">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.350">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.339">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.354">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.343">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.358">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.347">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.362">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.351">getLastModifiedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.366">getLastModifiedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.356">getCreatedBy</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.371">getCreatedBy</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.361">getKey</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.376">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.366">getSku</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.381">getSku</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.370">getValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.385">getValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.374">getCountry</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.389">getCountry</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomerGroup()">
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.379">getCustomerGroup</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.394">getCustomerGroup</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChannel()">
 <h3>getChannel</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.384">getChannel</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.399">getChannel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.389">getValidFrom</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.404">getValidFrom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.394">getValidUntil</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.409">getValidUntil</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTiers()">
 <h3>getTiers</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.399">getTiers</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTier.html" title="interface in com.commercetools.api.models.common">PriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.414">getTiers</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDiscounted()">
 <h3>getDiscounted</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.404">getDiscounted</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/DiscountedPrice.html" title="interface in com.commercetools.api.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.419">getDiscounted</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.409">getCustom</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.424">getCustom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePrice.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.414">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePrice.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.429">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StandalonePrice.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePrice</a>&gt;</code></dd>
@@ -684,20 +697,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePrice.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.428">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePrice.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.443">buildUnchecked</a></span>()</div>
 <div class="block">builds StandalonePrice without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.433">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.448">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.standalone_price.StandalonePrice)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.437">of</a></span>&#8203;<span class="parameters">(<a href="StandalonePrice.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePrice</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceBuilder.html#line.452">of</a></span>&#8203;<span class="parameters">(<a href="StandalonePrice.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePrice</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

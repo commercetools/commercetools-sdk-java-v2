@@ -21,115 +21,128 @@
 <span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
-<span class="source-line-no">011</span><span id="line.11">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">012</span><span id="line.12">public class MultiBuyLineItemsTargetBuilder implements Builder&lt;MultiBuyLineItemsTarget&gt; {</span>
-<span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">    private String predicate;</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">    private Integer triggerQuantity;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    private Integer discountedQuantity;</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    @Nullable</span>
-<span class="source-line-no">021</span><span id="line.21">    private Integer maxOccurrence;</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    /**</span>
-<span class="source-line-no">026</span><span id="line.26">    *  &lt;p&gt;A valid line item target predicate. The discount will be applied to line items that are matched by the predicate.&lt;/p&gt;</span>
-<span class="source-line-no">027</span><span id="line.27">    */</span>
+<span class="source-line-no">011</span><span id="line.11">/**</span>
+<span class="source-line-no">012</span><span id="line.12"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">013</span><span id="line.13"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">014</span><span id="line.14"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">015</span><span id="line.15">   MultiBuyLineItemsTarget multiBuyLineItemsTarget = MultiBuyLineItemsTarget.builder()</span>
+<span class="source-line-no">016</span><span id="line.16">           .predicate("{predicate}")</span>
+<span class="source-line-no">017</span><span id="line.17">           .triggerQuantity(1)</span>
+<span class="source-line-no">018</span><span id="line.18">           .discountedQuantity(1)</span>
+<span class="source-line-no">019</span><span id="line.19">           .selectionMode(SelectionMode.CHEAPEST)</span>
+<span class="source-line-no">020</span><span id="line.20">           .build()</span>
+<span class="source-line-no">021</span><span id="line.21"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> &lt;/div&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> */</span>
+<span class="source-line-no">024</span><span id="line.24">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">025</span><span id="line.25">public class MultiBuyLineItemsTargetBuilder implements Builder&lt;MultiBuyLineItemsTarget&gt; {</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    private String predicate;</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    public MultiBuyLineItemsTargetBuilder predicate(final String predicate) {</span>
-<span class="source-line-no">030</span><span id="line.30">        this.predicate = predicate;</span>
-<span class="source-line-no">031</span><span id="line.31">        return this;</span>
-<span class="source-line-no">032</span><span id="line.32">    }</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    /**</span>
-<span class="source-line-no">035</span><span id="line.35">    *  &lt;p&gt;Quantity of line items that need to be present in order to trigger an application of this discount.&lt;/p&gt;</span>
-<span class="source-line-no">036</span><span id="line.36">    */</span>
+<span class="source-line-no">029</span><span id="line.29">    private Integer triggerQuantity;</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    private Integer discountedQuantity;</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    @Nullable</span>
+<span class="source-line-no">034</span><span id="line.34">    private Integer maxOccurrence;</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    public MultiBuyLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {</span>
-<span class="source-line-no">039</span><span id="line.39">        this.triggerQuantity = triggerQuantity;</span>
-<span class="source-line-no">040</span><span id="line.40">        return this;</span>
-<span class="source-line-no">041</span><span id="line.41">    }</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">    *  &lt;p&gt;Quantity of line items that are discounted per application of this discount.&lt;/p&gt;</span>
-<span class="source-line-no">045</span><span id="line.45">    */</span>
+<span class="source-line-no">038</span><span id="line.38">    /**</span>
+<span class="source-line-no">039</span><span id="line.39">     *  &lt;p&gt;A valid line item target predicate. The discount will be applied to line items that are matched by the predicate.&lt;/p&gt;</span>
+<span class="source-line-no">040</span><span id="line.40">     */</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    public MultiBuyLineItemsTargetBuilder predicate(final String predicate) {</span>
+<span class="source-line-no">043</span><span id="line.43">        this.predicate = predicate;</span>
+<span class="source-line-no">044</span><span id="line.44">        return this;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public MultiBuyLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {</span>
-<span class="source-line-no">048</span><span id="line.48">        this.discountedQuantity = discountedQuantity;</span>
-<span class="source-line-no">049</span><span id="line.49">        return this;</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">    *  &lt;p&gt;Maximum number of applications of this discount.&lt;/p&gt;</span>
-<span class="source-line-no">054</span><span id="line.54">    */</span>
+<span class="source-line-no">047</span><span id="line.47">    /**</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;Quantity of line items that need to be present in order to trigger an application of this discount.&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     */</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public MultiBuyLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {</span>
+<span class="source-line-no">052</span><span id="line.52">        this.triggerQuantity = triggerQuantity;</span>
+<span class="source-line-no">053</span><span id="line.53">        return this;</span>
+<span class="source-line-no">054</span><span id="line.54">    }</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public MultiBuyLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.maxOccurrence = maxOccurrence;</span>
-<span class="source-line-no">058</span><span id="line.58">        return this;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public MultiBuyLineItemsTargetBuilder selectionMode(</span>
-<span class="source-line-no">062</span><span id="line.62">            final com.commercetools.api.models.cart_discount.SelectionMode selectionMode) {</span>
-<span class="source-line-no">063</span><span id="line.63">        this.selectionMode = selectionMode;</span>
-<span class="source-line-no">064</span><span id="line.64">        return this;</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public String getPredicate() {</span>
-<span class="source-line-no">068</span><span id="line.68">        return this.predicate;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public Integer getTriggerQuantity() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return this.triggerQuantity;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public Integer getDiscountedQuantity() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return this.discountedQuantity;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    @Nullable</span>
-<span class="source-line-no">080</span><span id="line.80">    public Integer getMaxOccurrence() {</span>
-<span class="source-line-no">081</span><span id="line.81">        return this.maxOccurrence;</span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;Quantity of line items that are discounted per application of this discount.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     */</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public MultiBuyLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {</span>
+<span class="source-line-no">061</span><span id="line.61">        this.discountedQuantity = discountedQuantity;</span>
+<span class="source-line-no">062</span><span id="line.62">        return this;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;Maximum number of applications of this discount.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     */</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public MultiBuyLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.maxOccurrence = maxOccurrence;</span>
+<span class="source-line-no">071</span><span id="line.71">        return this;</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public MultiBuyLineItemsTargetBuilder selectionMode(</span>
+<span class="source-line-no">075</span><span id="line.75">            final com.commercetools.api.models.cart_discount.SelectionMode selectionMode) {</span>
+<span class="source-line-no">076</span><span id="line.76">        this.selectionMode = selectionMode;</span>
+<span class="source-line-no">077</span><span id="line.77">        return this;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public String getPredicate() {</span>
+<span class="source-line-no">081</span><span id="line.81">        return this.predicate;</span>
 <span class="source-line-no">082</span><span id="line.82">    }</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return this.selectionMode;</span>
+<span class="source-line-no">084</span><span id="line.84">    public Integer getTriggerQuantity() {</span>
+<span class="source-line-no">085</span><span id="line.85">        return this.triggerQuantity;</span>
 <span class="source-line-no">086</span><span id="line.86">    }</span>
 <span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public MultiBuyLineItemsTarget build() {</span>
-<span class="source-line-no">089</span><span id="line.89">        Objects.requireNonNull(predicate, MultiBuyLineItemsTarget.class + ": predicate is missing");</span>
-<span class="source-line-no">090</span><span id="line.90">        Objects.requireNonNull(triggerQuantity, MultiBuyLineItemsTarget.class + ": triggerQuantity is missing");</span>
-<span class="source-line-no">091</span><span id="line.91">        Objects.requireNonNull(discountedQuantity, MultiBuyLineItemsTarget.class + ": discountedQuantity is missing");</span>
-<span class="source-line-no">092</span><span id="line.92">        Objects.requireNonNull(selectionMode, MultiBuyLineItemsTarget.class + ": selectionMode is missing");</span>
-<span class="source-line-no">093</span><span id="line.93">        return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,</span>
-<span class="source-line-no">094</span><span id="line.94">            selectionMode);</span>
+<span class="source-line-no">088</span><span id="line.88">    public Integer getDiscountedQuantity() {</span>
+<span class="source-line-no">089</span><span id="line.89">        return this.discountedQuantity;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    @Nullable</span>
+<span class="source-line-no">093</span><span id="line.93">    public Integer getMaxOccurrence() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return this.maxOccurrence;</span>
 <span class="source-line-no">095</span><span id="line.95">    }</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    /**</span>
-<span class="source-line-no">098</span><span id="line.98">     * builds MultiBuyLineItemsTarget without checking for non null required values</span>
-<span class="source-line-no">099</span><span id="line.99">     */</span>
-<span class="source-line-no">100</span><span id="line.100">    public MultiBuyLineItemsTarget buildUnchecked() {</span>
-<span class="source-line-no">101</span><span id="line.101">        return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,</span>
-<span class="source-line-no">102</span><span id="line.102">            selectionMode);</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public static MultiBuyLineItemsTargetBuilder of() {</span>
-<span class="source-line-no">106</span><span id="line.106">        return new MultiBuyLineItemsTargetBuilder();</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public static MultiBuyLineItemsTargetBuilder of(final MultiBuyLineItemsTarget template) {</span>
-<span class="source-line-no">110</span><span id="line.110">        MultiBuyLineItemsTargetBuilder builder = new MultiBuyLineItemsTargetBuilder();</span>
-<span class="source-line-no">111</span><span id="line.111">        builder.predicate = template.getPredicate();</span>
-<span class="source-line-no">112</span><span id="line.112">        builder.triggerQuantity = template.getTriggerQuantity();</span>
-<span class="source-line-no">113</span><span id="line.113">        builder.discountedQuantity = template.getDiscountedQuantity();</span>
-<span class="source-line-no">114</span><span id="line.114">        builder.maxOccurrence = template.getMaxOccurrence();</span>
-<span class="source-line-no">115</span><span id="line.115">        builder.selectionMode = template.getSelectionMode();</span>
-<span class="source-line-no">116</span><span id="line.116">        return builder;</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">}</span>
+<span class="source-line-no">097</span><span id="line.97">    public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.selectionMode;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public MultiBuyLineItemsTarget build() {</span>
+<span class="source-line-no">102</span><span id="line.102">        Objects.requireNonNull(predicate, MultiBuyLineItemsTarget.class + ": predicate is missing");</span>
+<span class="source-line-no">103</span><span id="line.103">        Objects.requireNonNull(triggerQuantity, MultiBuyLineItemsTarget.class + ": triggerQuantity is missing");</span>
+<span class="source-line-no">104</span><span id="line.104">        Objects.requireNonNull(discountedQuantity, MultiBuyLineItemsTarget.class + ": discountedQuantity is missing");</span>
+<span class="source-line-no">105</span><span id="line.105">        Objects.requireNonNull(selectionMode, MultiBuyLineItemsTarget.class + ": selectionMode is missing");</span>
+<span class="source-line-no">106</span><span id="line.106">        return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,</span>
+<span class="source-line-no">107</span><span id="line.107">            selectionMode);</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    /**</span>
+<span class="source-line-no">111</span><span id="line.111">     * builds MultiBuyLineItemsTarget without checking for non null required values</span>
+<span class="source-line-no">112</span><span id="line.112">     */</span>
+<span class="source-line-no">113</span><span id="line.113">    public MultiBuyLineItemsTarget buildUnchecked() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return new MultiBuyLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,</span>
+<span class="source-line-no">115</span><span id="line.115">            selectionMode);</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    public static MultiBuyLineItemsTargetBuilder of() {</span>
+<span class="source-line-no">119</span><span id="line.119">        return new MultiBuyLineItemsTargetBuilder();</span>
+<span class="source-line-no">120</span><span id="line.120">    }</span>
+<span class="source-line-no">121</span><span id="line.121"></span>
+<span class="source-line-no">122</span><span id="line.122">    public static MultiBuyLineItemsTargetBuilder of(final MultiBuyLineItemsTarget template) {</span>
+<span class="source-line-no">123</span><span id="line.123">        MultiBuyLineItemsTargetBuilder builder = new MultiBuyLineItemsTargetBuilder();</span>
+<span class="source-line-no">124</span><span id="line.124">        builder.predicate = template.getPredicate();</span>
+<span class="source-line-no">125</span><span id="line.125">        builder.triggerQuantity = template.getTriggerQuantity();</span>
+<span class="source-line-no">126</span><span id="line.126">        builder.discountedQuantity = template.getDiscountedQuantity();</span>
+<span class="source-line-no">127</span><span id="line.127">        builder.maxOccurrence = template.getMaxOccurrence();</span>
+<span class="source-line-no">128</span><span id="line.128">        builder.selectionMode = template.getSelectionMode();</span>
+<span class="source-line-no">129</span><span id="line.129">        return builder;</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">}</span>
 
 
 

@@ -83,9 +83,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderCustomerSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderCustomerSetMessagePayload</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.12">OrderCustomerSetMessagePayloadBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.21">OrderCustomerSetMessagePayloadBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderCustomerSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderCustomerSetMessagePayload</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderCustomerSetMessagePayload orderCustomerSetMessagePayload = OrderCustomerSetMessagePayload.builder()
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -199,7 +206,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderCustomerSetMessagePayloadBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.13">OrderCustomerSetMessagePayloadBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.22">OrderCustomerSetMessagePayloadBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -213,14 +220,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="customer(java.util.function.Function)">
 <h3>customer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.31">customer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>,&#8203;<a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.40">customer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>,&#8203;<a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Reference to a Customer.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customer(com.commercetools.api.models.customer.CustomerReference)">
 <h3>customer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.41">customer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.50">customer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</span></div>
 <div class="block"><p>Reference to a Customer.</p></div>
 </section>
@@ -228,14 +235,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="customerGroup(java.util.function.Function)">
 <h3>customerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.51">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,&#8203;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.60">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,&#8203;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Reference to a CustomerGroup.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference)">
 <h3>customerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.63">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.72">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;customerGroup)</span></div>
 <div class="block"><p>Reference to a CustomerGroup.</p></div>
 </section>
@@ -243,14 +250,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="oldCustomer(java.util.function.Function)">
 <h3>oldCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.73">oldCustomer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>,&#8203;<a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.82">oldCustomer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>,&#8203;<a href="../customer/CustomerReferenceBuilder.html" title="class in com.commercetools.api.models.customer">CustomerReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Reference to a Customer.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="oldCustomer(com.commercetools.api.models.customer.CustomerReference)">
 <h3>oldCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.83">oldCustomer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.92">oldCustomer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;oldCustomer)</span></div>
 <div class="block"><p>Reference to a Customer.</p></div>
 </section>
@@ -258,14 +265,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="oldCustomerGroup(java.util.function.Function)">
 <h3>oldCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.93">oldCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,&#8203;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.102">oldCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,&#8203;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Reference to a CustomerGroup.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="oldCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference)">
 <h3>oldCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.105">oldCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.114">oldCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;oldCustomerGroup)</span></div>
 <div class="block"><p>Reference to a CustomerGroup.</p></div>
 </section>
@@ -274,34 +281,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getCustomer()">
 <h3>getCustomer</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.111">getCustomer</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.120">getCustomer</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomerGroup()">
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.116">getCustomerGroup</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.125">getCustomerGroup</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOldCustomer()">
 <h3>getOldCustomer</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.121">getOldCustomer</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.130">getOldCustomer</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOldCustomerGroup()">
 <h3>getOldCustomerGroup</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.126">getOldCustomerGroup</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.135">getOldCustomerGroup</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderCustomerSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.131">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderCustomerSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.140">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderCustomerSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderCustomerSetMessagePayload</a>&gt;</code></dd>
@@ -311,20 +318,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderCustomerSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.138">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderCustomerSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.147">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderCustomerSetMessagePayload without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.142">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.151">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderCustomerSetMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.146">of</a></span>&#8203;<span class="parameters">(<a href="OrderCustomerSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderCustomerSetMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderCustomerSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomerSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderCustomerSetMessagePayloadBuilder.html#line.155">of</a></span>&#8203;<span class="parameters">(<a href="OrderCustomerSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderCustomerSetMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

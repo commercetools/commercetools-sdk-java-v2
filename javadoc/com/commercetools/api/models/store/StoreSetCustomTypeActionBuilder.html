@@ -83,9 +83,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StoreSetCustomTypeAction.html" title="interface in com.commercetools.api.models.store">StoreSetCustomTypeAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.12">StoreSetCustomTypeActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.21">StoreSetCustomTypeActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StoreSetCustomTypeAction.html" title="interface in com.commercetools.api.models.store">StoreSetCustomTypeAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreSetCustomTypeAction storeSetCustomTypeAction = StoreSetCustomTypeAction.builder()
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -173,7 +180,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StoreSetCustomTypeActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.13">StoreSetCustomTypeActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.22">StoreSetCustomTypeActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -187,14 +194,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="type(java.util.function.Function)">
 <h3>type</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.25">type</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/TypeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.type">TypeResourceIdentifierBuilder</a>,&#8203;<a href="../type/TypeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.type">TypeResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.34">type</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/TypeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.type">TypeResourceIdentifierBuilder</a>,&#8203;<a href="../type/TypeResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.type">TypeResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="type(com.commercetools.api.models.type.TypeResourceIdentifier)">
 <h3>type</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.35">type</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.44">type</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
 <div class="block"><p>Defines the Type that extends the Store with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Store.</p></div>
 </section>
@@ -202,14 +209,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="fields(java.util.function.Function)">
 <h3>fields</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.45">fields</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/FieldContainerBuilder.html" title="class in com.commercetools.api.models.type">FieldContainerBuilder</a>,&#8203;<a href="../type/FieldContainerBuilder.html" title="class in com.commercetools.api.models.type">FieldContainerBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.54">fields</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/FieldContainerBuilder.html" title="class in com.commercetools.api.models.type">FieldContainerBuilder</a>,&#8203;<a href="../type/FieldContainerBuilder.html" title="class in com.commercetools.api.models.type">FieldContainerBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Sets the Custom Fields fields for the Store.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="fields(com.commercetools.api.models.type.FieldContainer)">
 <h3>fields</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.55">fields</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.64">fields</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
 <div class="block"><p>Sets the Custom Fields fields for the Store.</p></div>
 </section>
@@ -218,20 +225,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.61">getType</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.70">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFields()">
 <h3>getFields</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.66">getFields</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.75">getFields</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeAction.html" title="interface in com.commercetools.api.models.store">StoreSetCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.71">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeAction.html" title="interface in com.commercetools.api.models.store">StoreSetCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.80">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StoreSetCustomTypeAction.html" title="interface in com.commercetools.api.models.store">StoreSetCustomTypeAction</a>&gt;</code></dd>
@@ -241,20 +248,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeAction.html" title="interface in com.commercetools.api.models.store">StoreSetCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.78">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeAction.html" title="interface in com.commercetools.api.models.store">StoreSetCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.87">buildUnchecked</a></span>()</div>
 <div class="block">builds StoreSetCustomTypeAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.82">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.91">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.store.StoreSetCustomTypeAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.86">of</a></span>&#8203;<span class="parameters">(<a href="StoreSetCustomTypeAction.html" title="interface in com.commercetools.api.models.store">StoreSetCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StoreSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetCustomTypeActionBuilder.html#line.95">of</a></span>&#8203;<span class="parameters">(<a href="StoreSetCustomTypeAction.html" title="interface in com.commercetools.api.models.store">StoreSetCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

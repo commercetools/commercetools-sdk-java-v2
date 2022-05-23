@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditPagedQueryResponse.html" title="interface in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponse</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.12">OrderEditPagedQueryResponseBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.25">OrderEditPagedQueryResponseBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditPagedQueryResponse.html" title="interface in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponse</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderEditPagedQueryResponse orderEditPagedQueryResponse = OrderEditPagedQueryResponse.builder()
+           .limit(0.3)
+           .count(0.3)
+           .offset(0.3)
+           .plusResults(resultsBuilder -> resultsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -193,7 +204,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderEditPagedQueryResponseBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.13">OrderEditPagedQueryResponseBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.26">OrderEditPagedQueryResponseBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -207,95 +218,95 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="limit(java.lang.Long)">
 <h3>limit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.30">limit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.43">limit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
 <div class="block"><p>Number of results requested.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="count(java.lang.Long)">
 <h3>count</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.35">count</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.48">count</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="total(java.lang.Long)">
 <h3>total</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.40">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.53">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="offset(java.lang.Long)">
 <h3>offset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.49">offset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.62">offset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
 <div class="block"><p>Number of elements skipped.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="results(com.commercetools.api.models.order_edit.OrderEdit...)">
 <h3>results</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.54">results</a></span>&#8203;<span class="parameters">(<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.67">results</a></span>&#8203;<span class="parameters">(<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>...&nbsp;results)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="results(java.util.List)">
 <h3>results</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.60">results</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.73">results</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;&nbsp;results)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusResults(com.commercetools.api.models.order_edit.OrderEdit...)">
 <h3>plusResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.66">plusResults</a></span>&#8203;<span class="parameters">(<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>...&nbsp;results)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.79">plusResults</a></span>&#8203;<span class="parameters">(<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>...&nbsp;results)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusResults(java.util.function.Function)">
 <h3>plusResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.75">plusResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>,&#8203;<a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.88">plusResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>,&#8203;<a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withResults(java.util.function.Function)">
 <h3>withResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.84">withResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>,&#8203;<a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.97">withResults</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>,&#8203;<a href="OrderEditBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.91">getLimit</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.104">getLimit</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.95">getCount</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.108">getCount</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.99">getTotal</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.112">getTotal</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.104">getOffset</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.117">getOffset</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResults()">
 <h3>getResults</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.108">getResults</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="OrderEdit.html" title="interface in com.commercetools.api.models.order_edit">OrderEdit</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.121">getResults</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponse.html" title="interface in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.112">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponse.html" title="interface in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.125">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditPagedQueryResponse.html" title="interface in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponse</a>&gt;</code></dd>
@@ -305,20 +316,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponse.html" title="interface in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.123">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponse.html" title="interface in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.136">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderEditPagedQueryResponse without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.127">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.140">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.131">of</a></span>&#8203;<span class="parameters">(<a href="OrderEditPagedQueryResponse.html" title="interface in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditPagedQueryResponseBuilder.html#line.144">of</a></span>&#8203;<span class="parameters">(<a href="OrderEditPagedQueryResponse.html" title="interface in com.commercetools.api.models.order_edit">OrderEditPagedQueryResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

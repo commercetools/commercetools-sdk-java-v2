@@ -80,8 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SimilarProductsTaskStatusImpl.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatusImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.21">SimilarProductsTaskStatus</a></span></div>
-<div class="block"><p>Represents a URL path to poll to get the results of an Asynchronous Request.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.31">SimilarProductsTaskStatus</a></span></div>
+<div class="block"><p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SimilarProductsTaskStatus similarProductsTaskStatus = SimilarProductsTaskStatus.builder()
+           .state(TaskStatusEnum.PENDING)
+           .result(resultBuilder -> resultBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -154,13 +164,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.25">getState</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.35">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExpires()">
 <h3>getExpires</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.33">getExpires</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.43">getExpires</a></span>()</div>
 <div class="block"><p>The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.</p></div>
 </section>
 </li>
@@ -169,62 +179,62 @@ loadScripts(document, 'script');</script>
 <h3>getResult</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="SimilarProductsPagedQueryResult.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsPagedQueryResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.39">getResult</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="SimilarProductsPagedQueryResult.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsPagedQueryResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.49">getResult</a></span>()</div>
 <div class="block"><p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(com.commercetools.ml.models.common.TaskStatusEnum)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.44">setState</a></span>&#8203;<span class="parameters">(<a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.54">setState</a></span>&#8203;<span class="parameters">(<a href="../common/TaskStatusEnum.html" title="interface in com.commercetools.ml.models.common">TaskStatusEnum</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExpires(java.time.ZonedDateTime)">
 <h3>setExpires</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.46">setExpires</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expires)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.56">setExpires</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expires)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResult(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult)">
 <h3>setResult</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.48">setResult</a></span>&#8203;<span class="parameters">(<a href="SimilarProductsPagedQueryResult.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsPagedQueryResult</a>&nbsp;result)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.58">setResult</a></span>&#8203;<span class="parameters">(<a href="SimilarProductsPagedQueryResult.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsPagedQueryResult</a>&nbsp;result)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.50">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.60">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.54">of</a></span>&#8203;<span class="parameters">(<a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.64">of</a></span>&#8203;<span class="parameters">(<a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductsTaskStatusBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatusBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.62">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductsTaskStatusBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatusBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.72">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductsTaskStatusBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatusBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.66">builder</a></span>&#8203;<span class="parameters">(<a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SimilarProductsTaskStatusBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatusBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.76">builder</a></span>&#8203;<span class="parameters">(<a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSimilarProductsTaskStatus(java.util.function.Function)">
 <h3>withSimilarProductsTaskStatus</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.70">withSimilarProductsTaskStatus</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.80">withSimilarProductsTaskStatus</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.74">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SimilarProductsTaskStatus.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductsTaskStatus</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/SimilarProductsTaskStatus.html#line.84">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

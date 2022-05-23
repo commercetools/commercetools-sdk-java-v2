@@ -84,8 +84,24 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="PaymentTransactionStateChangedMessageImpl.html" title="class in com.commercetools.api.models.message">PaymentTransactionStateChangedMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.16">PaymentTransactionStateChangedMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.34">PaymentTransactionStateChangedMessage</a></span><span class="extends-implements">
 extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   PaymentTransactionStateChangedMessage paymentTransactionStateChangedMessage = PaymentTransactionStateChangedMessage.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .sequenceNumber(0.3)
+           .resource(resourceBuilder -> resourceBuilder)
+           .resourceVersion(0.3)
+           .transactionId("{transactionId}")
+           .state(TransactionState.INITIAL)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,7 +187,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="PAYMENT_TRANSACTION_STATE_CHANGED">
 <h3>PAYMENT_TRANSACTION_STATE_CHANGED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.20">PAYMENT_TRANSACTION_STATE_CHANGED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.38">PAYMENT_TRANSACTION_STATE_CHANGED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.PaymentTransactionStateChangedMessage.PAYMENT_TRANSACTION_STATE_CHANGED">Constant Field Values</a></dd>
@@ -190,62 +206,62 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <section class="detail" id="getTransactionId()">
 <h3>getTransactionId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.22">getTransactionId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.40">getTransactionId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../payment/TransactionState.html" title="interface in com.commercetools.api.models.payment">TransactionState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.26">getState</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../payment/TransactionState.html" title="interface in com.commercetools.api.models.payment">TransactionState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.44">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTransactionId(java.lang.String)">
 <h3>setTransactionId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.30">setTransactionId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;transactionId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.48">setTransactionId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;transactionId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(com.commercetools.api.models.payment.TransactionState)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.32">setState</a></span>&#8203;<span class="parameters">(<a href="../payment/TransactionState.html" title="interface in com.commercetools.api.models.payment">TransactionState</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.50">setState</a></span>&#8203;<span class="parameters">(<a href="../payment/TransactionState.html" title="interface in com.commercetools.api.models.payment">TransactionState</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.34">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.52">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.PaymentTransactionStateChangedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.38">of</a></span>&#8203;<span class="parameters">(<a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionStateChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">PaymentTransactionStateChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.55">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionStateChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">PaymentTransactionStateChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.73">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.PaymentTransactionStateChangedMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionStateChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">PaymentTransactionStateChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransactionStateChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">PaymentTransactionStateChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.77">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPaymentTransactionStateChangedMessage(java.util.function.Function)">
 <h3>withPaymentTransactionStateChangedMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.64">withPaymentTransactionStateChangedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.82">withPaymentTransactionStateChangedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.68">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentTransactionStateChangedMessage.html" title="interface in com.commercetools.api.models.message">PaymentTransactionStateChangedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/PaymentTransactionStateChangedMessage.html#line.86">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

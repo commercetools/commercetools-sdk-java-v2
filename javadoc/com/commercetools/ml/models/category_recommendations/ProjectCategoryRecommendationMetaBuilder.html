@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProjectCategoryRecommendationMeta.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMeta</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.11">ProjectCategoryRecommendationMetaBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.21">ProjectCategoryRecommendationMetaBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProjectCategoryRecommendationMeta.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMeta</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectCategoryRecommendationMeta projectCategoryRecommendationMeta = ProjectCategoryRecommendationMeta.builder()
+           .plusGeneralCategoryNames(generalCategoryNamesBuilder -> generalCategoryNamesBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -181,7 +189,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProjectCategoryRecommendationMetaBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.12">ProjectCategoryRecommendationMetaBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.22">ProjectCategoryRecommendationMetaBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -195,7 +203,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="productName(java.lang.String)">
 <h3>productName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.26">productName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.36">productName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productName)</span></div>
 <div class="block"><p>The product name that was used to generate recommendations.</p></div>
 </section>
@@ -203,7 +211,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="productImageUrl(java.lang.String)">
 <h3>productImageUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.35">productImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.45">productImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;productImageUrl)</span></div>
 <div class="block"><p>The product image that was used to generate recommendations.</p></div>
 </section>
@@ -211,21 +219,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="generalCategoryNames(java.lang.String...)">
 <h3>generalCategoryNames</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.44">generalCategoryNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;generalCategoryNames)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.54">generalCategoryNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;generalCategoryNames)</span></div>
 <div class="block"><p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="generalCategoryNames(java.util.List)">
 <h3>generalCategoryNames</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.53">generalCategoryNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;generalCategoryNames)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.63">generalCategoryNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;generalCategoryNames)</span></div>
 <div class="block"><p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusGeneralCategoryNames(java.lang.String...)">
 <h3>plusGeneralCategoryNames</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.63">plusGeneralCategoryNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;generalCategoryNames)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.73">plusGeneralCategoryNames</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;generalCategoryNames)</span></div>
 <div class="block"><p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p></div>
 </section>
 </li>
@@ -233,26 +241,26 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getProductName()">
 <h3>getProductName</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.71">getProductName</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.81">getProductName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductImageUrl()">
 <h3>getProductImageUrl</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.76">getProductImageUrl</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.86">getProductImageUrl</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getGeneralCategoryNames()">
 <h3>getGeneralCategoryNames</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.81">getGeneralCategoryNames</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.91">getGeneralCategoryNames</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMeta.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMeta</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.85">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMeta.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMeta</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.95">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProjectCategoryRecommendationMeta.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMeta</a>&gt;</code></dd>
@@ -262,20 +270,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMeta.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMeta</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.94">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMeta.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMeta</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.104">buildUnchecked</a></span>()</div>
 <div class="block">builds ProjectCategoryRecommendationMeta without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.98">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.108">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.102">of</a></span>&#8203;<span class="parameters">(<a href="ProjectCategoryRecommendationMeta.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMeta</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectCategoryRecommendationMetaBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMetaBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationMetaBuilder.html#line.112">of</a></span>&#8203;<span class="parameters">(<a href="ProjectCategoryRecommendationMeta.html" title="interface in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationMeta</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

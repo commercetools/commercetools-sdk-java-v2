@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StoreCreatedMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">StoreCreatedMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.20">StoreCreatedMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.33">StoreCreatedMessagePayload</a></span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreCreatedMessagePayload storeCreatedMessagePayload = StoreCreatedMessagePayload.builder()
+           .plusLanguages(languagesBuilder -> languagesBuilder)
+           .plusDistributionChannels(distributionChannelsBuilder -> distributionChannelsBuilder)
+           .plusSupplyChannels(supplyChannelsBuilder -> supplyChannelsBuilder)
+           .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -205,7 +216,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <li>
 <section class="detail" id="STORE_CREATED">
 <h3>STORE_CREATED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.24">STORE_CREATED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.37">STORE_CREATED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.StoreCreatedMessagePayload.STORE_CREATED">Constant Field Values</a></dd>
@@ -224,7 +235,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.29">getName</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.42">getName</a></span>()</div>
 <div class="block"><p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p></div>
 </section>
 </li>
@@ -232,7 +243,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <section class="detail" id="getLanguages()">
 <h3>getLanguages</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.33">getLanguages</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.46">getLanguages</a></span>()</div>
 </section>
 </li>
 <li>
@@ -240,7 +251,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getDistributionChannels</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.37">getDistributionChannels</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.50">getDistributionChannels</a></span>()</div>
 </section>
 </li>
 <li>
@@ -248,7 +259,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getSupplyChannels</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.42">getSupplyChannels</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.55">getSupplyChannels</a></span>()</div>
 </section>
 </li>
 <li>
@@ -256,111 +267,111 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getProductSelections</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/ProductSelectionSetting.html" title="interface in com.commercetools.api.models.store">ProductSelectionSetting</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.47">getProductSelections</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/ProductSelectionSetting.html" title="interface in com.commercetools.api.models.store">ProductSelectionSetting</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.60">getProductSelections</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.55">getCustom</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.68">getCustom</a></span>()</div>
 <div class="block"><p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.59">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.72">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLanguages(java.lang.String...)">
 <h3>setLanguages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.61">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.74">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;languages)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLanguages(java.util.List)">
 <h3>setLanguages</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.64">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.77">setLanguages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;languages)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDistributionChannels(com.commercetools.api.models.channel.ChannelReference...)">
 <h3>setDistributionChannels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.66">setDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>...&nbsp;distributionChannels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.79">setDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>...&nbsp;distributionChannels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDistributionChannels(java.util.List)">
 <h3>setDistributionChannels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.69">setDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;&nbsp;distributionChannels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.82">setDistributionChannels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;&nbsp;distributionChannels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSupplyChannels(com.commercetools.api.models.channel.ChannelReference...)">
 <h3>setSupplyChannels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.71">setSupplyChannels</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>...&nbsp;supplyChannels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.84">setSupplyChannels</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>...&nbsp;supplyChannels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSupplyChannels(java.util.List)">
 <h3>setSupplyChannels</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.74">setSupplyChannels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;&nbsp;supplyChannels)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.87">setSupplyChannels</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&gt;&nbsp;supplyChannels)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductSelections(com.commercetools.api.models.store.ProductSelectionSetting...)">
 <h3>setProductSelections</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.76">setProductSelections</a></span>&#8203;<span class="parameters">(<a href="../store/ProductSelectionSetting.html" title="interface in com.commercetools.api.models.store">ProductSelectionSetting</a>...&nbsp;productSelections)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.89">setProductSelections</a></span>&#8203;<span class="parameters">(<a href="../store/ProductSelectionSetting.html" title="interface in com.commercetools.api.models.store">ProductSelectionSetting</a>...&nbsp;productSelections)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductSelections(java.util.List)">
 <h3>setProductSelections</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.79">setProductSelections</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/ProductSelectionSetting.html" title="interface in com.commercetools.api.models.store">ProductSelectionSetting</a>&gt;&nbsp;productSelections)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.92">setProductSelections</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../store/ProductSelectionSetting.html" title="interface in com.commercetools.api.models.store">ProductSelectionSetting</a>&gt;&nbsp;productSelections)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFields)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.81">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.94">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.83">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.96">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.StoreCreatedMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.87">of</a></span>&#8203;<span class="parameters">(<a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.100">of</a></span>&#8203;<span class="parameters">(<a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.98">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.111">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.StoreCreatedMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.102">builder</a></span>&#8203;<span class="parameters">(<a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">StoreCreatedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.115">builder</a></span>&#8203;<span class="parameters">(<a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStoreCreatedMessagePayload(java.util.function.Function)">
 <h3>withStoreCreatedMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.106">withStoreCreatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.119">withStoreCreatedMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.110">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StoreCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">StoreCreatedMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/StoreCreatedMessagePayload.html#line.123">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

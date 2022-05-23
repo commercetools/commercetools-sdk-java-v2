@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeMasterVariantChange.html" title="interface in com.commercetools.history.models.change">ChangeMasterVariantChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.10">ChangeMasterVariantChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.23">ChangeMasterVariantChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeMasterVariantChange.html" title="interface in com.commercetools.history.models.change">ChangeMasterVariantChange</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeMasterVariantChange changeMasterVariantChange = ChangeMasterVariantChange.builder()
+           .change("{change}")
+           .catalogData("{catalogData}")
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -179,7 +190,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ChangeMasterVariantChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.11">ChangeMasterVariantChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.24">ChangeMasterVariantChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -193,68 +204,68 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.25">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.38">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <div class="block"><p>Update action for <code>changeMasterVariant</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="catalogData(java.lang.String)">
 <h3>catalogData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.30">catalogData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.43">catalogData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.util.function.Function)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.35">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/VariantBuilder.html" title="class in com.commercetools.history.models.common">VariantBuilder</a>,&#8203;<a href="../common/VariantBuilder.html" title="class in com.commercetools.history.models.common">VariantBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.48">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/VariantBuilder.html" title="class in com.commercetools.history.models.common">VariantBuilder</a>,&#8203;<a href="../common/VariantBuilder.html" title="class in com.commercetools.history.models.common">VariantBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(com.commercetools.history.models.common.Variant)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.41">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Variant.html" title="interface in com.commercetools.history.models.common">Variant</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.54">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Variant.html" title="interface in com.commercetools.history.models.common">Variant</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.function.Function)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.47">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/VariantBuilder.html" title="class in com.commercetools.history.models.common">VariantBuilder</a>,&#8203;<a href="../common/VariantBuilder.html" title="class in com.commercetools.history.models.common">VariantBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.60">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/VariantBuilder.html" title="class in com.commercetools.history.models.common">VariantBuilder</a>,&#8203;<a href="../common/VariantBuilder.html" title="class in com.commercetools.history.models.common">VariantBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.Variant)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.53">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Variant.html" title="interface in com.commercetools.history.models.common">Variant</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.66">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Variant.html" title="interface in com.commercetools.history.models.common">Variant</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.58">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.71">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCatalogData()">
 <h3>getCatalogData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.62">getCatalogData</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.75">getCatalogData</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Variant.html" title="interface in com.commercetools.history.models.common">Variant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.66">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Variant.html" title="interface in com.commercetools.history.models.common">Variant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.79">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Variant.html" title="interface in com.commercetools.history.models.common">Variant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.70">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Variant.html" title="interface in com.commercetools.history.models.common">Variant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.83">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChange.html" title="interface in com.commercetools.history.models.change">ChangeMasterVariantChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.74">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChange.html" title="interface in com.commercetools.history.models.change">ChangeMasterVariantChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.87">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeMasterVariantChange.html" title="interface in com.commercetools.history.models.change">ChangeMasterVariantChange</a>&gt;</code></dd>
@@ -264,20 +275,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChange.html" title="interface in com.commercetools.history.models.change">ChangeMasterVariantChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.85">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChange.html" title="interface in com.commercetools.history.models.change">ChangeMasterVariantChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.98">buildUnchecked</a></span>()</div>
 <div class="block">builds ChangeMasterVariantChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.89">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.102">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.ChangeMasterVariantChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.93">of</a></span>&#8203;<span class="parameters">(<a href="ChangeMasterVariantChange.html" title="interface in com.commercetools.history.models.change">ChangeMasterVariantChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeMasterVariantChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeMasterVariantChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeMasterVariantChangeBuilder.html#line.106">of</a></span>&#8203;<span class="parameters">(<a href="ChangeMasterVariantChange.html" title="interface in com.commercetools.history.models.change">ChangeMasterVariantChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

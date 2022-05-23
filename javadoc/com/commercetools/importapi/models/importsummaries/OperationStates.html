@@ -80,7 +80,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OperationStatesImpl.html" title="class in com.commercetools.importapi.models.importsummaries">OperationStatesImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.15">OperationStates</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.30">OperationStates</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OperationStates operationStates = OperationStates.builder()
+           .processing(1)
+           .validationFailed(1)
+           .unresolved(1)
+           .waitForMasterVariant(1)
+           .imported(1)
+           .rejected(1)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -179,7 +192,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getProcessing()">
 <h3>getProcessing</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.22">getProcessing</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.37">getProcessing</a></span>()</div>
 <div class="block"><p>The number of resources in the <code>processing</code> state.</p></div>
 </section>
 </li>
@@ -187,7 +200,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getValidationFailed()">
 <h3>getValidationFailed</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.29">getValidationFailed</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.44">getValidationFailed</a></span>()</div>
 <div class="block"><p>The number of resources in the <code>validationFailed</code> state.</p></div>
 </section>
 </li>
@@ -195,7 +208,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getUnresolved()">
 <h3>getUnresolved</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.36">getUnresolved</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.51">getUnresolved</a></span>()</div>
 <div class="block"><p>The number of resources in the <code>unresolved</code> state.</p></div>
 </section>
 </li>
@@ -203,7 +216,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getWaitForMasterVariant()">
 <h3>getWaitForMasterVariant</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.43">getWaitForMasterVariant</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.58">getWaitForMasterVariant</a></span>()</div>
 <div class="block"><p>The number of resources in the <code>waitForMasterVariant</code> state.</p></div>
 </section>
 </li>
@@ -211,7 +224,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getImported()">
 <h3>getImported</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.50">getImported</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.65">getImported</a></span>()</div>
 <div class="block"><p>The number of resources in the <code>imported</code> state.</p></div>
 </section>
 </li>
@@ -219,80 +232,80 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getRejected()">
 <h3>getRejected</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.57">getRejected</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.72">getRejected</a></span>()</div>
 <div class="block"><p>The number of resources in the <code>rejected</code> state.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProcessing(java.lang.Long)">
 <h3>setProcessing</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.61">setProcessing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;processing)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.76">setProcessing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;processing)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValidationFailed(java.lang.Long)">
 <h3>setValidationFailed</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.63">setValidationFailed</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;validationFailed)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.78">setValidationFailed</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;validationFailed)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setUnresolved(java.lang.Long)">
 <h3>setUnresolved</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.65">setUnresolved</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;unresolved)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.80">setUnresolved</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;unresolved)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setWaitForMasterVariant(java.lang.Long)">
 <h3>setWaitForMasterVariant</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.67">setWaitForMasterVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;waitForMasterVariant)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.82">setWaitForMasterVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;waitForMasterVariant)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setImported(java.lang.Long)">
 <h3>setImported</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.69">setImported</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;imported)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.84">setImported</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;imported)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRejected(java.lang.Long)">
 <h3>setRejected</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.71">setRejected</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;rejected)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.86">setRejected</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;rejected)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.73">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.88">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importsummaries.OperationStates)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.77">of</a></span>&#8203;<span class="parameters">(<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.92">of</a></span>&#8203;<span class="parameters">(<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OperationStatesBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">OperationStatesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.88">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OperationStatesBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">OperationStatesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.103">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.importsummaries.OperationStates)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OperationStatesBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">OperationStatesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.92">builder</a></span>&#8203;<span class="parameters">(<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OperationStatesBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">OperationStatesBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.107">builder</a></span>&#8203;<span class="parameters">(<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOperationStates(java.util.function.Function)">
 <h3>withOperationStates</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.96">withOperationStates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.111">withOperationStates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.100">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/OperationStates.html#line.115">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class CustomerImpl implements Customer, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String id;</span>
@@ -151,15 +151,15 @@
 <span class="source-line-no">138</span><span id="line.138">    }</span>
 <span class="source-line-no">139</span><span id="line.139"></span>
 <span class="source-line-no">140</span><span id="line.140">    /**</span>
-<span class="source-line-no">141</span><span id="line.141">    *  &lt;p&gt;Platform-generated unique identifier of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">142</span><span id="line.142">    */</span>
+<span class="source-line-no">141</span><span id="line.141">     *  &lt;p&gt;Platform-generated unique identifier of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">142</span><span id="line.142">     */</span>
 <span class="source-line-no">143</span><span id="line.143">    public String getId() {</span>
 <span class="source-line-no">144</span><span id="line.144">        return this.id;</span>
 <span class="source-line-no">145</span><span id="line.145">    }</span>
 <span class="source-line-no">146</span><span id="line.146"></span>
 <span class="source-line-no">147</span><span id="line.147">    /**</span>
-<span class="source-line-no">148</span><span id="line.148">    *  &lt;p&gt;The current version of the customer.&lt;/p&gt;</span>
-<span class="source-line-no">149</span><span id="line.149">    */</span>
+<span class="source-line-no">148</span><span id="line.148">     *  &lt;p&gt;The current version of the customer.&lt;/p&gt;</span>
+<span class="source-line-no">149</span><span id="line.149">     */</span>
 <span class="source-line-no">150</span><span id="line.150">    public Long getVersion() {</span>
 <span class="source-line-no">151</span><span id="line.151">        return this.version;</span>
 <span class="source-line-no">152</span><span id="line.152">    }</span>
@@ -173,36 +173,36 @@
 <span class="source-line-no">160</span><span id="line.160">    }</span>
 <span class="source-line-no">161</span><span id="line.161"></span>
 <span class="source-line-no">162</span><span id="line.162">    /**</span>
-<span class="source-line-no">163</span><span id="line.163">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">164</span><span id="line.164">    */</span>
+<span class="source-line-no">163</span><span id="line.163">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">164</span><span id="line.164">     */</span>
 <span class="source-line-no">165</span><span id="line.165">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
 <span class="source-line-no">166</span><span id="line.166">        return this.lastModifiedBy;</span>
 <span class="source-line-no">167</span><span id="line.167">    }</span>
 <span class="source-line-no">168</span><span id="line.168"></span>
 <span class="source-line-no">169</span><span id="line.169">    /**</span>
-<span class="source-line-no">170</span><span id="line.170">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">171</span><span id="line.171">    */</span>
+<span class="source-line-no">170</span><span id="line.170">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">171</span><span id="line.171">     */</span>
 <span class="source-line-no">172</span><span id="line.172">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
 <span class="source-line-no">173</span><span id="line.173">        return this.createdBy;</span>
 <span class="source-line-no">174</span><span id="line.174">    }</span>
 <span class="source-line-no">175</span><span id="line.175"></span>
 <span class="source-line-no">176</span><span id="line.176">    /**</span>
-<span class="source-line-no">177</span><span id="line.177">    *  &lt;p&gt;The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.&lt;/p&gt;</span>
-<span class="source-line-no">178</span><span id="line.178">    */</span>
+<span class="source-line-no">177</span><span id="line.177">     *  &lt;p&gt;The customer number can be used to create a more human-readable (in contrast to ID) identifier for the customer. It should be unique across a project. Once the field was set it cannot be changed anymore.&lt;/p&gt;</span>
+<span class="source-line-no">178</span><span id="line.178">     */</span>
 <span class="source-line-no">179</span><span id="line.179">    public String getCustomerNumber() {</span>
 <span class="source-line-no">180</span><span id="line.180">        return this.customerNumber;</span>
 <span class="source-line-no">181</span><span id="line.181">    }</span>
 <span class="source-line-no">182</span><span id="line.182"></span>
 <span class="source-line-no">183</span><span id="line.183">    /**</span>
-<span class="source-line-no">184</span><span id="line.184">    *  &lt;p&gt;The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, &lt;em&gt;or&lt;/em&gt; for the entire project. For more information, see Email uniquenes.&lt;/p&gt;</span>
-<span class="source-line-no">185</span><span id="line.185">    */</span>
+<span class="source-line-no">184</span><span id="line.184">     *  &lt;p&gt;The customer's email address and the main identifier of uniqueness for a customer account. Email addresses are either unique to the store they're specified for, &lt;em&gt;or&lt;/em&gt; for the entire project. For more information, see Email uniquenes.&lt;/p&gt;</span>
+<span class="source-line-no">185</span><span id="line.185">     */</span>
 <span class="source-line-no">186</span><span id="line.186">    public String getEmail() {</span>
 <span class="source-line-no">187</span><span id="line.187">        return this.email;</span>
 <span class="source-line-no">188</span><span id="line.188">    }</span>
 <span class="source-line-no">189</span><span id="line.189"></span>
 <span class="source-line-no">190</span><span id="line.190">    /**</span>
-<span class="source-line-no">191</span><span id="line.191">    *  &lt;p&gt;Only present with the default &lt;code&gt;authenticationMode&lt;/code&gt;, &lt;code&gt;Password&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">192</span><span id="line.192">    */</span>
+<span class="source-line-no">191</span><span id="line.191">     *  &lt;p&gt;Only present with the default &lt;code&gt;authenticationMode&lt;/code&gt;, &lt;code&gt;Password&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">192</span><span id="line.192">     */</span>
 <span class="source-line-no">193</span><span id="line.193">    public String getPassword() {</span>
 <span class="source-line-no">194</span><span id="line.194">        return this.password;</span>
 <span class="source-line-no">195</span><span id="line.195">    }</span>
@@ -236,36 +236,36 @@
 <span class="source-line-no">223</span><span id="line.223">    }</span>
 <span class="source-line-no">224</span><span id="line.224"></span>
 <span class="source-line-no">225</span><span id="line.225">    /**</span>
-<span class="source-line-no">226</span><span id="line.226">    *  &lt;p&gt;The addresses have unique IDs in the addresses list&lt;/p&gt;</span>
-<span class="source-line-no">227</span><span id="line.227">    */</span>
+<span class="source-line-no">226</span><span id="line.226">     *  &lt;p&gt;The addresses have unique IDs in the addresses list&lt;/p&gt;</span>
+<span class="source-line-no">227</span><span id="line.227">     */</span>
 <span class="source-line-no">228</span><span id="line.228">    public java.util.List&lt;com.commercetools.api.models.common.Address&gt; getAddresses() {</span>
 <span class="source-line-no">229</span><span id="line.229">        return this.addresses;</span>
 <span class="source-line-no">230</span><span id="line.230">    }</span>
 <span class="source-line-no">231</span><span id="line.231"></span>
 <span class="source-line-no">232</span><span id="line.232">    /**</span>
-<span class="source-line-no">233</span><span id="line.233">    *  &lt;p&gt;The address ID in the addresses list&lt;/p&gt;</span>
-<span class="source-line-no">234</span><span id="line.234">    */</span>
+<span class="source-line-no">233</span><span id="line.233">     *  &lt;p&gt;The address ID in the addresses list&lt;/p&gt;</span>
+<span class="source-line-no">234</span><span id="line.234">     */</span>
 <span class="source-line-no">235</span><span id="line.235">    public String getDefaultShippingAddressId() {</span>
 <span class="source-line-no">236</span><span id="line.236">        return this.defaultShippingAddressId;</span>
 <span class="source-line-no">237</span><span id="line.237">    }</span>
 <span class="source-line-no">238</span><span id="line.238"></span>
 <span class="source-line-no">239</span><span id="line.239">    /**</span>
-<span class="source-line-no">240</span><span id="line.240">    *  &lt;p&gt;The IDs from the addresses list which are used as shipping addresses&lt;/p&gt;</span>
-<span class="source-line-no">241</span><span id="line.241">    */</span>
+<span class="source-line-no">240</span><span id="line.240">     *  &lt;p&gt;The IDs from the addresses list which are used as shipping addresses&lt;/p&gt;</span>
+<span class="source-line-no">241</span><span id="line.241">     */</span>
 <span class="source-line-no">242</span><span id="line.242">    public java.util.List&lt;String&gt; getShippingAddressIds() {</span>
 <span class="source-line-no">243</span><span id="line.243">        return this.shippingAddressIds;</span>
 <span class="source-line-no">244</span><span id="line.244">    }</span>
 <span class="source-line-no">245</span><span id="line.245"></span>
 <span class="source-line-no">246</span><span id="line.246">    /**</span>
-<span class="source-line-no">247</span><span id="line.247">    *  &lt;p&gt;The address ID in the addresses list&lt;/p&gt;</span>
-<span class="source-line-no">248</span><span id="line.248">    */</span>
+<span class="source-line-no">247</span><span id="line.247">     *  &lt;p&gt;The address ID in the addresses list&lt;/p&gt;</span>
+<span class="source-line-no">248</span><span id="line.248">     */</span>
 <span class="source-line-no">249</span><span id="line.249">    public String getDefaultBillingAddressId() {</span>
 <span class="source-line-no">250</span><span id="line.250">        return this.defaultBillingAddressId;</span>
 <span class="source-line-no">251</span><span id="line.251">    }</span>
 <span class="source-line-no">252</span><span id="line.252"></span>
 <span class="source-line-no">253</span><span id="line.253">    /**</span>
-<span class="source-line-no">254</span><span id="line.254">    *  &lt;p&gt;The IDs from the addresses list which are used as billing addresses&lt;/p&gt;</span>
-<span class="source-line-no">255</span><span id="line.255">    */</span>
+<span class="source-line-no">254</span><span id="line.254">     *  &lt;p&gt;The IDs from the addresses list which are used as billing addresses&lt;/p&gt;</span>
+<span class="source-line-no">255</span><span id="line.255">     */</span>
 <span class="source-line-no">256</span><span id="line.256">    public java.util.List&lt;String&gt; getBillingAddressIds() {</span>
 <span class="source-line-no">257</span><span id="line.257">        return this.billingAddressIds;</span>
 <span class="source-line-no">258</span><span id="line.258">    }</span>
@@ -295,22 +295,22 @@
 <span class="source-line-no">282</span><span id="line.282">    }</span>
 <span class="source-line-no">283</span><span id="line.283"></span>
 <span class="source-line-no">284</span><span id="line.284">    /**</span>
-<span class="source-line-no">285</span><span id="line.285">    *  &lt;p&gt;User-defined unique identifier of the Customer.&lt;/p&gt;</span>
-<span class="source-line-no">286</span><span id="line.286">    */</span>
+<span class="source-line-no">285</span><span id="line.285">     *  &lt;p&gt;User-defined unique identifier of the Customer.&lt;/p&gt;</span>
+<span class="source-line-no">286</span><span id="line.286">     */</span>
 <span class="source-line-no">287</span><span id="line.287">    public String getKey() {</span>
 <span class="source-line-no">288</span><span id="line.288">        return this.key;</span>
 <span class="source-line-no">289</span><span id="line.289">    }</span>
 <span class="source-line-no">290</span><span id="line.290"></span>
 <span class="source-line-no">291</span><span id="line.291">    /**</span>
-<span class="source-line-no">292</span><span id="line.292">    *  &lt;p&gt;References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.&lt;/p&gt;</span>
-<span class="source-line-no">293</span><span id="line.293">    */</span>
+<span class="source-line-no">292</span><span id="line.292">     *  &lt;p&gt;References to the stores the customer account is associated with. If no stores are specified, the customer is a global customer, and can log in using the Password Flow for global Customers. If one or more stores are specified, the customer can only log in using the Password Flow for Customers in a Store for those specific stores.&lt;/p&gt;</span>
+<span class="source-line-no">293</span><span id="line.293">     */</span>
 <span class="source-line-no">294</span><span id="line.294">    public java.util.List&lt;com.commercetools.api.models.store.StoreKeyReference&gt; getStores() {</span>
 <span class="source-line-no">295</span><span id="line.295">        return this.stores;</span>
 <span class="source-line-no">296</span><span id="line.296">    }</span>
 <span class="source-line-no">297</span><span id="line.297"></span>
 <span class="source-line-no">298</span><span id="line.298">    /**</span>
-<span class="source-line-no">299</span><span id="line.299">    *  &lt;p&gt;Defines whether a Customer has a password.&lt;/p&gt;</span>
-<span class="source-line-no">300</span><span id="line.300">    */</span>
+<span class="source-line-no">299</span><span id="line.299">     *  &lt;p&gt;Defines whether a Customer has a password.&lt;/p&gt;</span>
+<span class="source-line-no">300</span><span id="line.300">     */</span>
 <span class="source-line-no">301</span><span id="line.301">    public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {</span>
 <span class="source-line-no">302</span><span id="line.302">        return this.authenticationMode;</span>
 <span class="source-line-no">303</span><span id="line.303">    }</span>

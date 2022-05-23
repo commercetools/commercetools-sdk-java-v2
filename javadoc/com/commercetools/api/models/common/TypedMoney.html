@@ -88,9 +88,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CentPrecisionMoneyImpl.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyImpl</a></code>, <code><a href="HighPrecisionMoneyImpl.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyImpl</a></code>, <code><a href="TypedMoneyImpl.html" title="class in com.commercetools.api.models.common">TypedMoneyImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.18">TypedMoney</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.29">TypedMoney</a></span><span class="extends-implements">
 extends <a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></span></div>
-<div class="block"><p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p></div>
+<div class="block"><p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+
+ Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TypedMoney typedMoney = TypedMoney.centPrecisionBuilder()
+           centAmount(0.3)
+           currencyCode("{currencyCode}")
+           fractionDigits(0.3)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -154,7 +165,7 @@ extends <a href="Money.html" title="interface in com.commercetools.api.models.co
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.29">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="MoneyType.html" title="interface in com.commercetools.api.models.common">MoneyType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.40">getType</a></span>()</div>
 <div class="block"><p>The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p></div>
 </section>
 </li>
@@ -162,7 +173,7 @@ extends <a href="Money.html" title="interface in com.commercetools.api.models.co
 <section class="detail" id="getFractionDigits()">
 <h3>getFractionDigits</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.40">getFractionDigits</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.51">getFractionDigits</a></span>()</div>
 <div class="block"><p>Number of digits after the decimal separator:</p>
   <ul>
    <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
@@ -173,31 +184,31 @@ extends <a href="Money.html" title="interface in com.commercetools.api.models.co
 <li>
 <section class="detail" id="setFractionDigits(java.lang.Integer)">
 <h3>setFractionDigits</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.44">setFractionDigits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.55">setFractionDigits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;fractionDigits)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="centPrecisionBuilder()">
 <h3>centPrecisionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.46">centPrecisionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.57">centPrecisionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="highPrecisionBuilder()">
 <h3>highPrecisionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.50">highPrecisionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.61">highPrecisionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTypedMoney(java.util.function.Function)">
 <h3>withTypedMoney</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.54">withTypedMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.65">withTypedMoney</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.58">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/TypedMoney.html#line.69">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class ShippingRateImpl implements ShippingRate, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private com.commercetools.api.models.common.TypedMoney price;</span>
@@ -57,22 +57,22 @@
 <span class="source-line-no">044</span><span id="line.44">    }</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">    *  &lt;p&gt;The shipping is free if the order total (the sum of line item prices) exceeds the &lt;code&gt;freeAbove&lt;/code&gt; value. Note: &lt;code&gt;freeAbove&lt;/code&gt; applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">    */</span>
+<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;The shipping is free if the order total (the sum of line item prices) exceeds the &lt;code&gt;freeAbove&lt;/code&gt; value. Note: &lt;code&gt;freeAbove&lt;/code&gt; applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios. Use a Cart Discount to set the shipping price to 0 to avoid providing free shipping in invalid discount scenarios.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     */</span>
 <span class="source-line-no">049</span><span id="line.49">    public com.commercetools.api.models.common.TypedMoney getFreeAbove() {</span>
 <span class="source-line-no">050</span><span id="line.50">        return this.freeAbove;</span>
 <span class="source-line-no">051</span><span id="line.51">    }</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">    *  &lt;p&gt;Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.&lt;/p&gt;</span>
-<span class="source-line-no">055</span><span id="line.55">    */</span>
+<span class="source-line-no">054</span><span id="line.54">     *  &lt;p&gt;Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.&lt;/p&gt;</span>
+<span class="source-line-no">055</span><span id="line.55">     */</span>
 <span class="source-line-no">056</span><span id="line.56">    public Boolean getIsMatching() {</span>
 <span class="source-line-no">057</span><span id="line.57">        return this.isMatching;</span>
 <span class="source-line-no">058</span><span id="line.58">    }</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
 <span class="source-line-no">060</span><span id="line.60">    /**</span>
-<span class="source-line-no">061</span><span id="line.61">    *  &lt;p&gt;A list of shipping rate price tiers.&lt;/p&gt;</span>
-<span class="source-line-no">062</span><span id="line.62">    */</span>
+<span class="source-line-no">061</span><span id="line.61">     *  &lt;p&gt;A list of shipping rate price tiers.&lt;/p&gt;</span>
+<span class="source-line-no">062</span><span id="line.62">     */</span>
 <span class="source-line-no">063</span><span id="line.63">    public java.util.List&lt;com.commercetools.api.models.shipping_method.ShippingRatePriceTier&gt; getTiers() {</span>
 <span class="source-line-no">064</span><span id="line.64">        return this.tiers;</span>
 <span class="source-line-no">065</span><span id="line.65">    }</span>

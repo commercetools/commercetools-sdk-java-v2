@@ -84,9 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="LastModifiedByImpl.html" title="class in com.commercetools.api.models.common">LastModifiedByImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.19">LastModifiedBy</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.27">LastModifiedBy</a></span><span class="extends-implements">
 extends <a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></span></div>
-<div class="block"><p>Present on resources modified after 1 February 2019 except for events not tracked.</p></div>
+<div class="block"><p>Present on resources modified after 1 February 2019 except for events not tracked.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   LastModifiedBy lastModifiedBy = LastModifiedBy.builder()
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -171,7 +179,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getClientId()">
 <h3>getClientId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.27">getClientId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.35">getClientId</a></span>()</div>
 <div class="block"><p><code>id</code> of the APIClient which modified the resource.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -182,7 +190,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getExternalUserId()">
 <h3>getExternalUserId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.34">getExternalUserId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.42">getExternalUserId</a></span>()</div>
 <div class="block"><p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -194,7 +202,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <section class="detail" id="getCustomer()">
 <h3>getCustomer</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.40">getCustomer</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.48">getCustomer</a></span>()</div>
 <div class="block"><p>Indicates the Customer who modified the resource using a token from the password flow.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -205,7 +213,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="getAnonymousId()">
 <h3>getAnonymousId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.48">getAnonymousId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.56">getAnonymousId</a></span>()</div>
 <div class="block"><p>Indicates the anonymous session during which the resource was modified.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -216,7 +224,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setClientId(java.lang.String)">
 <h3>setClientId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.51">setClientId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;clientId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.59">setClientId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;clientId)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#setClientId(java.lang.String)">setClientId</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -226,7 +234,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setExternalUserId(java.lang.String)">
 <h3>setExternalUserId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.53">setExternalUserId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalUserId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.61">setExternalUserId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalUserId)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#setExternalUserId(java.lang.String)">setExternalUserId</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -236,7 +244,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setCustomer(com.commercetools.api.models.customer.CustomerReference)">
 <h3>setCustomer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.55">setCustomer</a></span>&#8203;<span class="parameters">(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.63">setCustomer</a></span>&#8203;<span class="parameters">(<a href="../customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#setCustomer(com.commercetools.api.models.customer.CustomerReference)">setCustomer</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -246,7 +254,7 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="setAnonymousId(java.lang.String)">
 <h3>setAnonymousId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.57">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.65">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ClientLogging.html#setAnonymousId(java.lang.String)">setAnonymousId</a></code>&nbsp;in interface&nbsp;<code><a href="ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
@@ -256,37 +264,37 @@ extends <a href="ClientLogging.html" title="interface in com.commercetools.api.m
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.59">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.67">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.63">of</a></span>&#8203;<span class="parameters">(<a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.71">of</a></span>&#8203;<span class="parameters">(<a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.72">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.80">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.76">builder</a></span>&#8203;<span class="parameters">(<a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.84">builder</a></span>&#8203;<span class="parameters">(<a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withLastModifiedBy(java.util.function.Function)">
 <h3>withLastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.80">withLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.88">withLastModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.84">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/LastModifiedBy.html#line.92">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

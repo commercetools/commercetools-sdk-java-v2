@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.12">LineItemImportDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.25">LineItemImportDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   LineItemImportDraft lineItemImportDraft = LineItemImportDraft.builder()
+           .name(nameBuilder -> nameBuilder)
+           .variant(variantBuilder -> variantBuilder)
+           .price(priceBuilder -> priceBuilder)
+           .quantity(0.3)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -277,7 +288,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>LineItemImportDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.13">LineItemImportDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.26">LineItemImportDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -291,14 +302,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="product(java.util.function.Function)">
 <h3>product</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.45">product</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductKeyReferenceBuilder</a>,&#8203;<a href="../common/ProductKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.58">product</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductKeyReferenceBuilder</a>,&#8203;<a href="../common/ProductKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>LineItem.productId</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="product(com.commercetools.importapi.models.common.ProductKeyReference)">
 <h3>product</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.55">product</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.68">product</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</span></div>
 <div class="block"><p>Maps to <code>LineItem.productId</code>.</p></div>
 </section>
@@ -306,96 +317,96 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="name(java.util.function.Function)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.65">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.78">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>LineItem.name</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="name(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.75">name</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.88">name</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
 <div class="block"><p>Maps to <code>LineItem.name</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variant(java.util.function.Function)">
 <h3>variant</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.84">variant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LineItemProductVariantImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraftBuilder</a>,&#8203;<a href="LineItemProductVariantImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.97">variant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LineItemProductVariantImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraftBuilder</a>,&#8203;<a href="LineItemProductVariantImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>ProductVariantImportDraft</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="variant(com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft)">
 <h3>variant</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.96">variant</a></span>&#8203;<span class="parameters">(<a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a>&nbsp;variant)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.109">variant</a></span>&#8203;<span class="parameters">(<a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a>&nbsp;variant)</span></div>
 <div class="block"><p>Maps to <code>ProductVariantImportDraft</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="price(java.util.function.Function)">
 <h3>price</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.106">price</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LineItemPriceBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemPriceBuilder</a>,&#8203;<a href="LineItemPriceBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemPriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.119">price</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="LineItemPriceBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemPriceBuilder</a>,&#8203;<a href="LineItemPriceBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemPriceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>LineItem.price</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="price(com.commercetools.importapi.models.orders.LineItemPrice)">
 <h3>price</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.116">price</a></span>&#8203;<span class="parameters">(<a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.129">price</a></span>&#8203;<span class="parameters">(<a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a>&nbsp;price)</span></div>
 <div class="block"><p>Maps to <code>LineItem.price</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="quantity(java.lang.Double)">
 <h3>quantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.125">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.138">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;quantity)</span></div>
 <div class="block"><p>Maps to <code>LineItem.quantity</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="state(com.commercetools.importapi.models.orders.ItemState...)">
 <h3>state</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.130">state</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.143">state</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>...&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="state(java.util.List)">
 <h3>state</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.136">state</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.149">state</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusState(com.commercetools.importapi.models.orders.ItemState...)">
 <h3>plusState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.142">plusState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.155">plusState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>...&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusState(java.util.function.Function)">
 <h3>plusState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.151">plusState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemStateBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemStateBuilder</a>,&#8203;<a href="ItemStateBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.164">plusState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemStateBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemStateBuilder</a>,&#8203;<a href="ItemStateBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withState(java.util.function.Function)">
 <h3>withState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.160">withState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemStateBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemStateBuilder</a>,&#8203;<a href="ItemStateBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.173">withState</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemStateBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemStateBuilder</a>,&#8203;<a href="ItemStateBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="supplyChannel(java.util.function.Function)">
 <h3>supplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.171">supplyChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>,&#8203;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.184">supplyChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>,&#8203;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="supplyChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">
 <h3>supplyChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.182">supplyChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.195">supplyChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;supplyChannel)</span></div>
 <div class="block"><p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p></div>
 </section>
@@ -403,14 +414,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="distributionChannel(java.util.function.Function)">
 <h3>distributionChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.192">distributionChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>,&#8203;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.205">distributionChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>,&#8203;<a href="../common/ChannelKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ChannelKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="distributionChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">
 <h3>distributionChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.204">distributionChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.217">distributionChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;distributionChannel)</span></div>
 <div class="block"><p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p></div>
 </section>
@@ -418,14 +429,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="taxRate(java.util.function.Function)">
 <h3>taxRate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.214">taxRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../prices/TaxRateBuilder.html" title="class in com.commercetools.importapi.models.prices">TaxRateBuilder</a>,&#8203;<a href="../prices/TaxRateBuilder.html" title="class in com.commercetools.importapi.models.prices">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.227">taxRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../prices/TaxRateBuilder.html" title="class in com.commercetools.importapi.models.prices">TaxRateBuilder</a>,&#8203;<a href="../prices/TaxRateBuilder.html" title="class in com.commercetools.importapi.models.prices">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>LineItem.taxRate</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="taxRate(com.commercetools.importapi.models.prices.TaxRate)">
 <h3>taxRate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.224">taxRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.237">taxRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a>&nbsp;taxRate)</span></div>
 <div class="block"><p>Maps to <code>LineItem.taxRate</code>.</p></div>
 </section>
@@ -433,14 +444,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="shippingDetails(java.util.function.Function)">
 <h3>shippingDetails</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.234">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a>,&#8203;<a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.247">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a>,&#8203;<a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to LineItem.shippingDetails.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingDetails(com.commercetools.importapi.models.orders.ItemShippingDetailsDraft)">
 <h3>shippingDetails</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.246">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.259">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</span></div>
 <div class="block"><p>Maps to LineItem.shippingDetails.</p></div>
 </section>
@@ -449,72 +460,72 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getProduct()">
 <h3>getProduct</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.252">getProduct</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.265">getProduct</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.257">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.270">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVariant()">
 <h3>getVariant</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.261">getVariant</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.274">getVariant</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.265">getPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.278">getPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.269">getQuantity</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.282">getQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.273">getState</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.286">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSupplyChannel()">
 <h3>getSupplyChannel</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.278">getSupplyChannel</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.291">getSupplyChannel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDistributionChannel()">
 <h3>getDistributionChannel</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.283">getDistributionChannel</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.296">getDistributionChannel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxRate()">
 <h3>getTaxRate</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.288">getTaxRate</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.301">getTaxRate</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingDetails()">
 <h3>getShippingDetails</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.293">getShippingDetails</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.306">getShippingDetails</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.298">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.311">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&gt;</code></dd>
@@ -524,20 +535,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.310">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.323">buildUnchecked</a></span>()</div>
 <div class="block">builds LineItemImportDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.315">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.328">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.orders.LineItemImportDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.319">of</a></span>&#8203;<span class="parameters">(<a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html#line.332">of</a></span>&#8203;<span class="parameters">(<a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

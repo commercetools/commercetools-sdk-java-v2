@@ -23,58 +23,74 @@
 <span class="source-line-no">010</span><span id="line.10"></span>
 <span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">014</span><span id="line.14">@JsonDeserialize(as = CustomerCompanyNameSetMessageImpl.class)</span>
-<span class="source-line-no">015</span><span id="line.15">public interface CustomerCompanyNameSetMessage extends Message {</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    String CUSTOMER_COMPANY_NAME_SET = "CustomerCompanyNameSet";</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    @JsonProperty("companyName")</span>
-<span class="source-line-no">020</span><span id="line.20">    public String getCompanyName();</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    public void setCompanyName(final String companyName);</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    public static CustomerCompanyNameSetMessage of() {</span>
-<span class="source-line-no">025</span><span id="line.25">        return new CustomerCompanyNameSetMessageImpl();</span>
-<span class="source-line-no">026</span><span id="line.26">    }</span>
-<span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    public static CustomerCompanyNameSetMessage of(final CustomerCompanyNameSetMessage template) {</span>
-<span class="source-line-no">029</span><span id="line.29">        CustomerCompanyNameSetMessageImpl instance = new CustomerCompanyNameSetMessageImpl();</span>
-<span class="source-line-no">030</span><span id="line.30">        instance.setId(template.getId());</span>
-<span class="source-line-no">031</span><span id="line.31">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">032</span><span id="line.32">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">033</span><span id="line.33">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">034</span><span id="line.34">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">035</span><span id="line.35">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">036</span><span id="line.36">        instance.setSequenceNumber(template.getSequenceNumber());</span>
-<span class="source-line-no">037</span><span id="line.37">        instance.setResource(template.getResource());</span>
-<span class="source-line-no">038</span><span id="line.38">        instance.setResourceVersion(template.getResourceVersion());</span>
-<span class="source-line-no">039</span><span id="line.39">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
-<span class="source-line-no">040</span><span id="line.40">        instance.setCompanyName(template.getCompanyName());</span>
-<span class="source-line-no">041</span><span id="line.41">        return instance;</span>
+<span class="source-line-no">013</span><span id="line.13">/**</span>
+<span class="source-line-no">014</span><span id="line.14"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">015</span><span id="line.15"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">016</span><span id="line.16"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">017</span><span id="line.17">   CustomerCompanyNameSetMessage customerCompanyNameSetMessage = CustomerCompanyNameSetMessage.builder()</span>
+<span class="source-line-no">018</span><span id="line.18">           .id("{id}")</span>
+<span class="source-line-no">019</span><span id="line.19">           .version(0.3)</span>
+<span class="source-line-no">020</span><span id="line.20">           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">021</span><span id="line.21">           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">022</span><span id="line.22">           .sequenceNumber(0.3)</span>
+<span class="source-line-no">023</span><span id="line.23">           .resource(resourceBuilder -&gt; resourceBuilder)</span>
+<span class="source-line-no">024</span><span id="line.24">           .resourceVersion(0.3)</span>
+<span class="source-line-no">025</span><span id="line.25">           .build()</span>
+<span class="source-line-no">026</span><span id="line.26"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> &lt;/div&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> */</span>
+<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = CustomerCompanyNameSetMessageImpl.class)</span>
+<span class="source-line-no">031</span><span id="line.31">public interface CustomerCompanyNameSetMessage extends Message {</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    String CUSTOMER_COMPANY_NAME_SET = "CustomerCompanyNameSet";</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    @JsonProperty("companyName")</span>
+<span class="source-line-no">036</span><span id="line.36">    public String getCompanyName();</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public void setCompanyName(final String companyName);</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    public static CustomerCompanyNameSetMessage of() {</span>
+<span class="source-line-no">041</span><span id="line.41">        return new CustomerCompanyNameSetMessageImpl();</span>
 <span class="source-line-no">042</span><span id="line.42">    }</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    public static CustomerCompanyNameSetMessageBuilder builder() {</span>
-<span class="source-line-no">045</span><span id="line.45">        return CustomerCompanyNameSetMessageBuilder.of();</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public static CustomerCompanyNameSetMessageBuilder builder(final CustomerCompanyNameSetMessage template) {</span>
-<span class="source-line-no">049</span><span id="line.49">        return CustomerCompanyNameSetMessageBuilder.of(template);</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    default &lt;T&gt; T withCustomerCompanyNameSetMessage(Function&lt;CustomerCompanyNameSetMessage, T&gt; helper) {</span>
-<span class="source-line-no">053</span><span id="line.53">        return helper.apply(this);</span>
-<span class="source-line-no">054</span><span id="line.54">    }</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomerCompanyNameSetMessage&gt; typeReference() {</span>
-<span class="source-line-no">057</span><span id="line.57">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomerCompanyNameSetMessage&gt;() {</span>
-<span class="source-line-no">058</span><span id="line.58">            @Override</span>
-<span class="source-line-no">059</span><span id="line.59">            public String toString() {</span>
-<span class="source-line-no">060</span><span id="line.60">                return "TypeReference&lt;CustomerCompanyNameSetMessage&gt;";</span>
-<span class="source-line-no">061</span><span id="line.61">            }</span>
-<span class="source-line-no">062</span><span id="line.62">        };</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64">}</span>
+<span class="source-line-no">044</span><span id="line.44">    public static CustomerCompanyNameSetMessage of(final CustomerCompanyNameSetMessage template) {</span>
+<span class="source-line-no">045</span><span id="line.45">        CustomerCompanyNameSetMessageImpl instance = new CustomerCompanyNameSetMessageImpl();</span>
+<span class="source-line-no">046</span><span id="line.46">        instance.setId(template.getId());</span>
+<span class="source-line-no">047</span><span id="line.47">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">048</span><span id="line.48">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">049</span><span id="line.49">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">050</span><span id="line.50">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">051</span><span id="line.51">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">052</span><span id="line.52">        instance.setSequenceNumber(template.getSequenceNumber());</span>
+<span class="source-line-no">053</span><span id="line.53">        instance.setResource(template.getResource());</span>
+<span class="source-line-no">054</span><span id="line.54">        instance.setResourceVersion(template.getResourceVersion());</span>
+<span class="source-line-no">055</span><span id="line.55">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
+<span class="source-line-no">056</span><span id="line.56">        instance.setCompanyName(template.getCompanyName());</span>
+<span class="source-line-no">057</span><span id="line.57">        return instance;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public static CustomerCompanyNameSetMessageBuilder builder() {</span>
+<span class="source-line-no">061</span><span id="line.61">        return CustomerCompanyNameSetMessageBuilder.of();</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public static CustomerCompanyNameSetMessageBuilder builder(final CustomerCompanyNameSetMessage template) {</span>
+<span class="source-line-no">065</span><span id="line.65">        return CustomerCompanyNameSetMessageBuilder.of(template);</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    default &lt;T&gt; T withCustomerCompanyNameSetMessage(Function&lt;CustomerCompanyNameSetMessage, T&gt; helper) {</span>
+<span class="source-line-no">069</span><span id="line.69">        return helper.apply(this);</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CustomerCompanyNameSetMessage&gt; typeReference() {</span>
+<span class="source-line-no">073</span><span id="line.73">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CustomerCompanyNameSetMessage&gt;() {</span>
+<span class="source-line-no">074</span><span id="line.74">            @Override</span>
+<span class="source-line-no">075</span><span id="line.75">            public String toString() {</span>
+<span class="source-line-no">076</span><span id="line.76">                return "TypeReference&lt;CustomerCompanyNameSetMessage&gt;";</span>
+<span class="source-line-no">077</span><span id="line.77">            }</span>
+<span class="source-line-no">078</span><span id="line.78">        };</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80">}</span>
 
 
 

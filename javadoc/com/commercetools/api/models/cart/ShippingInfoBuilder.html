@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.12">ShippingInfoBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.25">ShippingInfoBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ShippingInfo shippingInfo = ShippingInfo.builder()
+           .shippingMethodName("{shippingMethodName}")
+           .price(priceBuilder -> priceBuilder)
+           .shippingRate(shippingRateBuilder -> shippingRateBuilder)
+           .shippingMethodState(ShippingMethodState.DOES_NOT_MATCH_CART)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -272,7 +283,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ShippingInfoBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.13">ShippingInfoBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.26">ShippingInfoBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -286,48 +297,48 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="shippingMethodName(java.lang.String)">
 <h3>shippingMethodName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.41">shippingMethodName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingMethodName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.54">shippingMethodName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingMethodName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="price(com.commercetools.api.models.common.TypedMoney)">
 <h3>price</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.50">price</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.63">price</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</span></div>
 <div class="block"><p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="price(java.util.function.Function)">
 <h3>price</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.59">price</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.72">price</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingRate(java.util.function.Function)">
 <h3>shippingRate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.69">shippingRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateBuilder</a>,&#8203;<a href="../shipping_method/ShippingRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.82">shippingRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateBuilder</a>,&#8203;<a href="../shipping_method/ShippingRateBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The shipping rate used to determine the price.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingRate(com.commercetools.api.models.shipping_method.ShippingRate)">
 <h3>shippingRate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.80">shippingRate</a></span>&#8203;<span class="parameters">(<a href="../shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;shippingRate)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.93">shippingRate</a></span>&#8203;<span class="parameters">(<a href="../shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;shippingRate)</span></div>
 <div class="block"><p>The shipping rate used to determine the price.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="taxedPrice(java.util.function.Function)">
 <h3>taxedPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.90">taxedPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a>,&#8203;<a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.103">taxedPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a>,&#8203;<a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Set once the <code>taxRate</code> is set.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="taxedPrice(com.commercetools.api.models.cart.TaxedItemPrice)">
 <h3>taxedPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.100">taxedPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.113">taxedPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;taxedPrice)</span></div>
 <div class="block"><p>Set once the <code>taxRate</code> is set.</p></div>
 </section>
@@ -335,14 +346,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="taxRate(java.util.function.Function)">
 <h3>taxRate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.109">taxRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../tax_category/TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>,&#8203;<a href="../tax_category/TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.122">taxRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../tax_category/TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>,&#8203;<a href="../tax_category/TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="taxRate(com.commercetools.api.models.tax_category.TaxRate)">
 <h3>taxRate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.119">taxRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.132">taxRate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&nbsp;taxRate)</span></div>
 <div class="block"><p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set. For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p></div>
 </section>
@@ -350,27 +361,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="taxCategory(java.util.function.Function)">
 <h3>taxCategory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.124">taxCategory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a>,&#8203;<a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.137">taxCategory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a>,&#8203;<a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="taxCategory(com.commercetools.api.models.tax_category.TaxCategoryReference)">
 <h3>taxCategory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.131">taxCategory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.144">taxCategory</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;taxCategory)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingMethod(java.util.function.Function)">
 <h3>shippingMethod</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.141">shippingMethod</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingMethodReferenceBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodReferenceBuilder</a>,&#8203;<a href="../shipping_method/ShippingMethodReferenceBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.154">shippingMethod</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingMethodReferenceBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodReferenceBuilder</a>,&#8203;<a href="../shipping_method/ShippingMethodReferenceBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Not set if custom shipping method is used.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodReference)">
 <h3>shippingMethod</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.153">shippingMethod</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.166">shippingMethod</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a>&nbsp;shippingMethod)</span></div>
 <div class="block"><p>Not set if custom shipping method is used.</p></div>
 </section>
@@ -378,7 +389,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="deliveries(com.commercetools.api.models.order.Delivery...)">
 <h3>deliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.163">deliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.176">deliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>...&nbsp;deliveries)</span></div>
 <div class="block"><p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p></div>
 </section>
@@ -386,7 +397,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="deliveries(java.util.List)">
 <h3>deliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.172">deliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.185">deliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;&nbsp;deliveries)</span></div>
 <div class="block"><p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p></div>
 </section>
@@ -394,7 +405,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusDeliveries(com.commercetools.api.models.order.Delivery...)">
 <h3>plusDeliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.182">plusDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.195">plusDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>...&nbsp;deliveries)</span></div>
 <div class="block"><p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p></div>
 </section>
@@ -402,107 +413,107 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusDeliveries(java.util.function.Function)">
 <h3>plusDeliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.195">plusDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryBuilder.html" title="class in com.commercetools.api.models.order">DeliveryBuilder</a>,&#8203;<a href="../order/DeliveryBuilder.html" title="class in com.commercetools.api.models.order">DeliveryBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.208">plusDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryBuilder.html" title="class in com.commercetools.api.models.order">DeliveryBuilder</a>,&#8203;<a href="../order/DeliveryBuilder.html" title="class in com.commercetools.api.models.order">DeliveryBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDeliveries(java.util.function.Function)">
 <h3>withDeliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.208">withDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryBuilder.html" title="class in com.commercetools.api.models.order">DeliveryBuilder</a>,&#8203;<a href="../order/DeliveryBuilder.html" title="class in com.commercetools.api.models.order">DeliveryBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.221">withDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/DeliveryBuilder.html" title="class in com.commercetools.api.models.order">DeliveryBuilder</a>,&#8203;<a href="../order/DeliveryBuilder.html" title="class in com.commercetools.api.models.order">DeliveryBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="discountedPrice(java.util.function.Function)">
 <h3>discountedPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.215">discountedPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedLineItemPriceBuilder</a>,&#8203;<a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedLineItemPriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.228">discountedPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedLineItemPriceBuilder</a>,&#8203;<a href="DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedLineItemPriceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="discountedPrice(com.commercetools.api.models.cart.DiscountedLineItemPrice)">
 <h3>discountedPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.222">discountedPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.235">discountedPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a>&nbsp;discountedPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingMethodState(com.commercetools.api.models.cart.ShippingMethodState)">
 <h3>shippingMethodState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.232">shippingMethodState</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a>&nbsp;shippingMethodState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.245">shippingMethodState</a></span>&#8203;<span class="parameters">(<a href="ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a>&nbsp;shippingMethodState)</span></div>
 <div class="block"><p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingMethodName()">
 <h3>getShippingMethodName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.238">getShippingMethodName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.251">getShippingMethodName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.242">getPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.255">getPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingRate()">
 <h3>getShippingRate</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.246">getShippingRate</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.259">getShippingRate</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxedPrice()">
 <h3>getTaxedPrice</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.250">getTaxedPrice</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.263">getTaxedPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxRate()">
 <h3>getTaxRate</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.255">getTaxRate</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.268">getTaxRate</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxCategory()">
 <h3>getTaxCategory</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.260">getTaxCategory</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.273">getTaxCategory</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingMethod()">
 <h3>getShippingMethod</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.265">getShippingMethod</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.278">getShippingMethod</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDeliveries()">
 <h3>getDeliveries</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.270">getDeliveries</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.283">getDeliveries</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDiscountedPrice()">
 <h3>getDiscountedPrice</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.275">getDiscountedPrice</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.288">getDiscountedPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingMethodState()">
 <h3>getShippingMethodState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.280">getShippingMethodState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.293">getShippingMethodState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.284">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.297">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&gt;</code></dd>
@@ -512,20 +523,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.296">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.309">buildUnchecked</a></span>()</div>
 <div class="block">builds ShippingInfo without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.301">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.314">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.ShippingInfo)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.305">of</a></span>&#8203;<span class="parameters">(<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/ShippingInfoBuilder.html#line.318">of</a></span>&#8203;<span class="parameters">(<a href="ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

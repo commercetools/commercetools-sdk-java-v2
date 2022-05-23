@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAction, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String action;</span>
@@ -72,16 +72,16 @@
 <span class="source-line-no">059</span><span id="line.59">    }</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">    *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">063</span><span id="line.63">    *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
-<span class="source-line-no">064</span><span id="line.64">    */</span>
+<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">     */</span>
 <span class="source-line-no">065</span><span id="line.65">    public com.commercetools.api.models.common.Money getMoney() {</span>
 <span class="source-line-no">066</span><span id="line.66">        return this.money;</span>
 <span class="source-line-no">067</span><span id="line.67">    }</span>
 <span class="source-line-no">068</span><span id="line.68"></span>
 <span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">    *  &lt;p&gt;JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">071</span><span id="line.71">    */</span>
+<span class="source-line-no">070</span><span id="line.70">     *  &lt;p&gt;JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">071</span><span id="line.71">     */</span>
 <span class="source-line-no">072</span><span id="line.72">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
 <span class="source-line-no">073</span><span id="line.73">        return this.name;</span>
 <span class="source-line-no">074</span><span id="line.74">    }</span>
@@ -95,15 +95,15 @@
 <span class="source-line-no">082</span><span id="line.82">    }</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
 <span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">    *  &lt;p&gt;ResourceIdentifier to a TaxCategory.&lt;/p&gt;</span>
-<span class="source-line-no">086</span><span id="line.86">    */</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;ResourceIdentifier to a TaxCategory.&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
 <span class="source-line-no">087</span><span id="line.87">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
 <span class="source-line-no">088</span><span id="line.88">        return this.taxCategory;</span>
 <span class="source-line-no">089</span><span id="line.89">    }</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
 <span class="source-line-no">091</span><span id="line.91">    /**</span>
-<span class="source-line-no">092</span><span id="line.92">    *  &lt;p&gt;The representation used when creating or updating a customizable data type with Custom Fields.&lt;/p&gt;</span>
-<span class="source-line-no">093</span><span id="line.93">    */</span>
+<span class="source-line-no">092</span><span id="line.92">     *  &lt;p&gt;The representation used when creating or updating a customizable data type with Custom Fields.&lt;/p&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
 <span class="source-line-no">094</span><span id="line.94">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
 <span class="source-line-no">095</span><span id="line.95">        return this.custom;</span>
 <span class="source-line-no">096</span><span id="line.96">    }</span>

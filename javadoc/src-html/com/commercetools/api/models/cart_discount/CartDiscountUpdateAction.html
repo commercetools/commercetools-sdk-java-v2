@@ -25,105 +25,115 @@
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">@JsonSubTypes({</span>
-<span class="source-line-no">016</span><span id="line.16">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionImpl.class, name = CartDiscountChangeCartPredicateAction.CHANGE_CART_PREDICATE),</span>
-<span class="source-line-no">017</span><span id="line.17">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeIsActiveActionImpl.class, name = CartDiscountChangeIsActiveAction.CHANGE_IS_ACTIVE),</span>
-<span class="source-line-no">018</span><span id="line.18">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeNameActionImpl.class, name = CartDiscountChangeNameAction.CHANGE_NAME),</span>
-<span class="source-line-no">019</span><span id="line.19">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeRequiresDiscountCodeActionImpl.class, name = CartDiscountChangeRequiresDiscountCodeAction.CHANGE_REQUIRES_DISCOUNT_CODE),</span>
-<span class="source-line-no">020</span><span id="line.20">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeSortOrderActionImpl.class, name = CartDiscountChangeSortOrderAction.CHANGE_SORT_ORDER),</span>
-<span class="source-line-no">021</span><span id="line.21">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeActionImpl.class, name = CartDiscountChangeStackingModeAction.CHANGE_STACKING_MODE),</span>
-<span class="source-line-no">022</span><span id="line.22">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeTargetActionImpl.class, name = CartDiscountChangeTargetAction.CHANGE_TARGET),</span>
-<span class="source-line-no">023</span><span id="line.23">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeValueActionImpl.class, name = CartDiscountChangeValueAction.CHANGE_VALUE),</span>
-<span class="source-line-no">024</span><span id="line.24">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionImpl.class, name = CartDiscountSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
-<span class="source-line-no">025</span><span id="line.25">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionImpl.class, name = CartDiscountSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
-<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetDescriptionActionImpl.class, name = CartDiscountSetDescriptionAction.SET_DESCRIPTION),</span>
-<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionImpl.class, name = CartDiscountSetKeyAction.SET_KEY),</span>
-<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetValidFromActionImpl.class, name = CartDiscountSetValidFromAction.SET_VALID_FROM),</span>
-<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAndUntilActionImpl.class, name = CartDiscountSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL),</span>
-<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilActionImpl.class, name = CartDiscountSetValidUntilAction.SET_VALID_UNTIL) })</span>
-<span class="source-line-no">031</span><span id="line.31">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = CartDiscountUpdateActionImpl.class, visible = true)</span>
-<span class="source-line-no">032</span><span id="line.32">@JsonDeserialize(as = CartDiscountUpdateActionImpl.class)</span>
-<span class="source-line-no">033</span><span id="line.33">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">034</span><span id="line.34">public interface CartDiscountUpdateAction</span>
-<span class="source-line-no">035</span><span id="line.35">        extends com.commercetools.api.models.ResourceUpdateAction&lt;CartDiscountUpdateAction&gt; {</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
-<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("action")</span>
-<span class="source-line-no">039</span><span id="line.39">    public String getAction();</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionBuilder changeCartPredicateBuilder() {</span>
-<span class="source-line-no">042</span><span id="line.42">        return com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionBuilder.of();</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeIsActiveActionBuilder changeIsActiveBuilder() {</span>
-<span class="source-line-no">046</span><span id="line.46">        return com.commercetools.api.models.cart_discount.CartDiscountChangeIsActiveActionBuilder.of();</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeNameActionBuilder changeNameBuilder() {</span>
-<span class="source-line-no">050</span><span id="line.50">        return com.commercetools.api.models.cart_discount.CartDiscountChangeNameActionBuilder.of();</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeRequiresDiscountCodeActionBuilder changeRequiresDiscountCodeBuilder() {</span>
-<span class="source-line-no">054</span><span id="line.54">        return com.commercetools.api.models.cart_discount.CartDiscountChangeRequiresDiscountCodeActionBuilder.of();</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeSortOrderActionBuilder changeSortOrderBuilder() {</span>
-<span class="source-line-no">058</span><span id="line.58">        return com.commercetools.api.models.cart_discount.CartDiscountChangeSortOrderActionBuilder.of();</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeActionBuilder changeStackingModeBuilder() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeActionBuilder.of();</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeTargetActionBuilder changeTargetBuilder() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return com.commercetools.api.models.cart_discount.CartDiscountChangeTargetActionBuilder.of();</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeValueActionBuilder changeValueBuilder() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return com.commercetools.api.models.cart_discount.CartDiscountChangeValueActionBuilder.of();</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public static com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionBuilder.of();</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public static com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionBuilder.of();</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public static com.commercetools.api.models.cart_discount.CartDiscountSetDescriptionActionBuilder setDescriptionBuilder() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return com.commercetools.api.models.cart_discount.CartDiscountSetDescriptionActionBuilder.of();</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public static com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder setKeyBuilder() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder.of();</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public static com.commercetools.api.models.cart_discount.CartDiscountSetValidFromActionBuilder setValidFromBuilder() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return com.commercetools.api.models.cart_discount.CartDiscountSetValidFromActionBuilder.of();</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public static com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAndUntilActionBuilder setValidFromAndUntilBuilder() {</span>
-<span class="source-line-no">094</span><span id="line.94">        return com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAndUntilActionBuilder.of();</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public static com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilActionBuilder setValidUntilBuilder() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilActionBuilder.of();</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    default &lt;T&gt; T withCartDiscountUpdateAction(Function&lt;CartDiscountUpdateAction, T&gt; helper) {</span>
-<span class="source-line-no">102</span><span id="line.102">        return helper.apply(this);</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountUpdateAction&gt; typeReference() {</span>
-<span class="source-line-no">106</span><span id="line.106">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountUpdateAction&gt;() {</span>
-<span class="source-line-no">107</span><span id="line.107">            @Override</span>
-<span class="source-line-no">108</span><span id="line.108">            public String toString() {</span>
-<span class="source-line-no">109</span><span id="line.109">                return "TypeReference&lt;CartDiscountUpdateAction&gt;";</span>
-<span class="source-line-no">110</span><span id="line.110">            }</span>
-<span class="source-line-no">111</span><span id="line.111">        };</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113">}</span>
+<span class="source-line-no">015</span><span id="line.15">/**</span>
+<span class="source-line-no">016</span><span id="line.16"> Example to create a subtype instance using the builder pattern</span>
+<span class="source-line-no">017</span><span id="line.17"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">019</span><span id="line.19">   CartDiscountUpdateAction cartDiscountUpdateAction = CartDiscountUpdateAction.changeCartPredicateBuilder()</span>
+<span class="source-line-no">020</span><span id="line.20">           cartPredicate("{cartPredicate}")</span>
+<span class="source-line-no">021</span><span id="line.21">           .build()</span>
+<span class="source-line-no">022</span><span id="line.22"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> &lt;/div&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> */</span>
+<span class="source-line-no">025</span><span id="line.25">@JsonSubTypes({</span>
+<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionImpl.class, name = CartDiscountChangeCartPredicateAction.CHANGE_CART_PREDICATE),</span>
+<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeIsActiveActionImpl.class, name = CartDiscountChangeIsActiveAction.CHANGE_IS_ACTIVE),</span>
+<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeNameActionImpl.class, name = CartDiscountChangeNameAction.CHANGE_NAME),</span>
+<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeRequiresDiscountCodeActionImpl.class, name = CartDiscountChangeRequiresDiscountCodeAction.CHANGE_REQUIRES_DISCOUNT_CODE),</span>
+<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeSortOrderActionImpl.class, name = CartDiscountChangeSortOrderAction.CHANGE_SORT_ORDER),</span>
+<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeActionImpl.class, name = CartDiscountChangeStackingModeAction.CHANGE_STACKING_MODE),</span>
+<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeTargetActionImpl.class, name = CartDiscountChangeTargetAction.CHANGE_TARGET),</span>
+<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeValueActionImpl.class, name = CartDiscountChangeValueAction.CHANGE_VALUE),</span>
+<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionImpl.class, name = CartDiscountSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
+<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionImpl.class, name = CartDiscountSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
+<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetDescriptionActionImpl.class, name = CartDiscountSetDescriptionAction.SET_DESCRIPTION),</span>
+<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionImpl.class, name = CartDiscountSetKeyAction.SET_KEY),</span>
+<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetValidFromActionImpl.class, name = CartDiscountSetValidFromAction.SET_VALID_FROM),</span>
+<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAndUntilActionImpl.class, name = CartDiscountSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL),</span>
+<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilActionImpl.class, name = CartDiscountSetValidUntilAction.SET_VALID_UNTIL) })</span>
+<span class="source-line-no">041</span><span id="line.41">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = CartDiscountUpdateActionImpl.class, visible = true)</span>
+<span class="source-line-no">042</span><span id="line.42">@JsonDeserialize(as = CartDiscountUpdateActionImpl.class)</span>
+<span class="source-line-no">043</span><span id="line.43">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">044</span><span id="line.44">public interface CartDiscountUpdateAction</span>
+<span class="source-line-no">045</span><span id="line.45">        extends com.commercetools.api.models.ResourceUpdateAction&lt;CartDiscountUpdateAction&gt; {</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("action")</span>
+<span class="source-line-no">049</span><span id="line.49">    public String getAction();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionBuilder changeCartPredicateBuilder() {</span>
+<span class="source-line-no">052</span><span id="line.52">        return com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionBuilder.of();</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeIsActiveActionBuilder changeIsActiveBuilder() {</span>
+<span class="source-line-no">056</span><span id="line.56">        return com.commercetools.api.models.cart_discount.CartDiscountChangeIsActiveActionBuilder.of();</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeNameActionBuilder changeNameBuilder() {</span>
+<span class="source-line-no">060</span><span id="line.60">        return com.commercetools.api.models.cart_discount.CartDiscountChangeNameActionBuilder.of();</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeRequiresDiscountCodeActionBuilder changeRequiresDiscountCodeBuilder() {</span>
+<span class="source-line-no">064</span><span id="line.64">        return com.commercetools.api.models.cart_discount.CartDiscountChangeRequiresDiscountCodeActionBuilder.of();</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeSortOrderActionBuilder changeSortOrderBuilder() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return com.commercetools.api.models.cart_discount.CartDiscountChangeSortOrderActionBuilder.of();</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeActionBuilder changeStackingModeBuilder() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeActionBuilder.of();</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeTargetActionBuilder changeTargetBuilder() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return com.commercetools.api.models.cart_discount.CartDiscountChangeTargetActionBuilder.of();</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public static com.commercetools.api.models.cart_discount.CartDiscountChangeValueActionBuilder changeValueBuilder() {</span>
+<span class="source-line-no">080</span><span id="line.80">        return com.commercetools.api.models.cart_discount.CartDiscountChangeValueActionBuilder.of();</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public static com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionBuilder.of();</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public static com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionBuilder.of();</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public static com.commercetools.api.models.cart_discount.CartDiscountSetDescriptionActionBuilder setDescriptionBuilder() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return com.commercetools.api.models.cart_discount.CartDiscountSetDescriptionActionBuilder.of();</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public static com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder setKeyBuilder() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder.of();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static com.commercetools.api.models.cart_discount.CartDiscountSetValidFromActionBuilder setValidFromBuilder() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return com.commercetools.api.models.cart_discount.CartDiscountSetValidFromActionBuilder.of();</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public static com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAndUntilActionBuilder setValidFromAndUntilBuilder() {</span>
+<span class="source-line-no">104</span><span id="line.104">        return com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAndUntilActionBuilder.of();</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    public static com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilActionBuilder setValidUntilBuilder() {</span>
+<span class="source-line-no">108</span><span id="line.108">        return com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilActionBuilder.of();</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    default &lt;T&gt; T withCartDiscountUpdateAction(Function&lt;CartDiscountUpdateAction, T&gt; helper) {</span>
+<span class="source-line-no">112</span><span id="line.112">        return helper.apply(this);</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountUpdateAction&gt; typeReference() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountUpdateAction&gt;() {</span>
+<span class="source-line-no">117</span><span id="line.117">            @Override</span>
+<span class="source-line-no">118</span><span id="line.118">            public String toString() {</span>
+<span class="source-line-no">119</span><span id="line.119">                return "TypeReference&lt;CartDiscountUpdateAction&gt;";</span>
+<span class="source-line-no">120</span><span id="line.120">            }</span>
+<span class="source-line-no">121</span><span id="line.121">        };</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123">}</span>
 
 
 

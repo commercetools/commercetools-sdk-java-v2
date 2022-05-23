@@ -84,8 +84,22 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderShippingRateInputSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderShippingRateInputSetMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.16">OrderShippingRateInputSetMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.32">OrderShippingRateInputSetMessage</a></span><span class="extends-implements">
 extends <a href="OrderMessage.html" title="interface in com.commercetools.api.models.message">OrderMessage</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderShippingRateInputSetMessage orderShippingRateInputSetMessage = OrderShippingRateInputSetMessage.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .sequenceNumber(0.3)
+           .resource(resourceBuilder -> resourceBuilder)
+           .resourceVersion(0.3)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -174,7 +188,7 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <li>
 <section class="detail" id="ORDER_SHIPPING_RATE_INPUT_SET">
 <h3>ORDER_SHIPPING_RATE_INPUT_SET</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.20">ORDER_SHIPPING_RATE_INPUT_SET</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.36">ORDER_SHIPPING_RATE_INPUT_SET</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.OrderShippingRateInputSetMessage.ORDER_SHIPPING_RATE_INPUT_SET">Constant Field Values</a></dd>
@@ -193,62 +207,62 @@ extends <a href="OrderMessage.html" title="interface in com.commercetools.api.mo
 <section class="detail" id="getShippingRateInput()">
 <h3>getShippingRateInput</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.22">getShippingRateInput</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.38">getShippingRateInput</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOldShippingRateInput()">
 <h3>getOldShippingRateInput</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.26">getOldShippingRateInput</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.42">getOldShippingRateInput</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingRateInput(com.commercetools.api.models.cart.ShippingRateInput)">
 <h3>setShippingRateInput</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.30">setShippingRateInput</a></span>&#8203;<span class="parameters">(<a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a>&nbsp;shippingRateInput)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.46">setShippingRateInput</a></span>&#8203;<span class="parameters">(<a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a>&nbsp;shippingRateInput)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOldShippingRateInput(com.commercetools.api.models.cart.ShippingRateInput)">
 <h3>setOldShippingRateInput</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.32">setOldShippingRateInput</a></span>&#8203;<span class="parameters">(<a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a>&nbsp;oldShippingRateInput)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.48">setOldShippingRateInput</a></span>&#8203;<span class="parameters">(<a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a>&nbsp;oldShippingRateInput)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.34">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.50">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderShippingRateInputSetMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.38">of</a></span>&#8203;<span class="parameters">(<a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.54">of</a></span>&#8203;<span class="parameters">(<a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingRateInputSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingRateInputSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.55">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingRateInputSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingRateInputSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.71">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.OrderShippingRateInputSetMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingRateInputSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingRateInputSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderShippingRateInputSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingRateInputSetMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.75">builder</a></span>&#8203;<span class="parameters">(<a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderShippingRateInputSetMessage(java.util.function.Function)">
 <h3>withOrderShippingRateInputSetMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.63">withOrderShippingRateInputSetMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.79">withOrderShippingRateInputSetMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.67">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderShippingRateInputSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingRateInputSetMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderShippingRateInputSetMessage.html#line.83">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

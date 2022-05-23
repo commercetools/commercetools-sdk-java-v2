@@ -25,49 +25,59 @@
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">016</span><span id="line.16">@JsonDeserialize(as = CartDiscountLineItemsTargetImpl.class)</span>
-<span class="source-line-no">017</span><span id="line.17">public interface CartDiscountLineItemsTarget extends CartDiscountTarget {</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    String LINE_ITEMS = "lineItems";</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    @NotNull</span>
-<span class="source-line-no">022</span><span id="line.22">    @JsonProperty("predicate")</span>
-<span class="source-line-no">023</span><span id="line.23">    public String getPredicate();</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    public void setPredicate(final String predicate);</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    public static CartDiscountLineItemsTarget of() {</span>
-<span class="source-line-no">028</span><span id="line.28">        return new CartDiscountLineItemsTargetImpl();</span>
-<span class="source-line-no">029</span><span id="line.29">    }</span>
+<span class="source-line-no">015</span><span id="line.15">/**</span>
+<span class="source-line-no">016</span><span id="line.16"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">017</span><span id="line.17"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">019</span><span id="line.19">   CartDiscountLineItemsTarget cartDiscountLineItemsTarget = CartDiscountLineItemsTarget.builder()</span>
+<span class="source-line-no">020</span><span id="line.20">           .predicate("{predicate}")</span>
+<span class="source-line-no">021</span><span id="line.21">           .build()</span>
+<span class="source-line-no">022</span><span id="line.22"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> &lt;/div&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> */</span>
+<span class="source-line-no">025</span><span id="line.25">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">026</span><span id="line.26">@JsonDeserialize(as = CartDiscountLineItemsTargetImpl.class)</span>
+<span class="source-line-no">027</span><span id="line.27">public interface CartDiscountLineItemsTarget extends CartDiscountTarget {</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    String LINE_ITEMS = "lineItems";</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    public static CartDiscountLineItemsTarget of(final CartDiscountLineItemsTarget template) {</span>
-<span class="source-line-no">032</span><span id="line.32">        CartDiscountLineItemsTargetImpl instance = new CartDiscountLineItemsTargetImpl();</span>
-<span class="source-line-no">033</span><span id="line.33">        instance.setPredicate(template.getPredicate());</span>
-<span class="source-line-no">034</span><span id="line.34">        return instance;</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
+<span class="source-line-no">031</span><span id="line.31">    @NotNull</span>
+<span class="source-line-no">032</span><span id="line.32">    @JsonProperty("predicate")</span>
+<span class="source-line-no">033</span><span id="line.33">    public String getPredicate();</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    public void setPredicate(final String predicate);</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public static CartDiscountLineItemsTargetBuilder builder() {</span>
-<span class="source-line-no">038</span><span id="line.38">        return CartDiscountLineItemsTargetBuilder.of();</span>
+<span class="source-line-no">037</span><span id="line.37">    public static CartDiscountLineItemsTarget of() {</span>
+<span class="source-line-no">038</span><span id="line.38">        return new CartDiscountLineItemsTargetImpl();</span>
 <span class="source-line-no">039</span><span id="line.39">    }</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public static CartDiscountLineItemsTargetBuilder builder(final CartDiscountLineItemsTarget template) {</span>
-<span class="source-line-no">042</span><span id="line.42">        return CartDiscountLineItemsTargetBuilder.of(template);</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    default &lt;T&gt; T withCartDiscountLineItemsTarget(Function&lt;CartDiscountLineItemsTarget, T&gt; helper) {</span>
-<span class="source-line-no">046</span><span id="line.46">        return helper.apply(this);</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountLineItemsTarget&gt; typeReference() {</span>
-<span class="source-line-no">050</span><span id="line.50">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountLineItemsTarget&gt;() {</span>
-<span class="source-line-no">051</span><span id="line.51">            @Override</span>
-<span class="source-line-no">052</span><span id="line.52">            public String toString() {</span>
-<span class="source-line-no">053</span><span id="line.53">                return "TypeReference&lt;CartDiscountLineItemsTarget&gt;";</span>
-<span class="source-line-no">054</span><span id="line.54">            }</span>
-<span class="source-line-no">055</span><span id="line.55">        };</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57">}</span>
+<span class="source-line-no">041</span><span id="line.41">    public static CartDiscountLineItemsTarget of(final CartDiscountLineItemsTarget template) {</span>
+<span class="source-line-no">042</span><span id="line.42">        CartDiscountLineItemsTargetImpl instance = new CartDiscountLineItemsTargetImpl();</span>
+<span class="source-line-no">043</span><span id="line.43">        instance.setPredicate(template.getPredicate());</span>
+<span class="source-line-no">044</span><span id="line.44">        return instance;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public static CartDiscountLineItemsTargetBuilder builder() {</span>
+<span class="source-line-no">048</span><span id="line.48">        return CartDiscountLineItemsTargetBuilder.of();</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public static CartDiscountLineItemsTargetBuilder builder(final CartDiscountLineItemsTarget template) {</span>
+<span class="source-line-no">052</span><span id="line.52">        return CartDiscountLineItemsTargetBuilder.of(template);</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    default &lt;T&gt; T withCartDiscountLineItemsTarget(Function&lt;CartDiscountLineItemsTarget, T&gt; helper) {</span>
+<span class="source-line-no">056</span><span id="line.56">        return helper.apply(this);</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountLineItemsTarget&gt; typeReference() {</span>
+<span class="source-line-no">060</span><span id="line.60">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CartDiscountLineItemsTarget&gt;() {</span>
+<span class="source-line-no">061</span><span id="line.61">            @Override</span>
+<span class="source-line-no">062</span><span id="line.62">            public String toString() {</span>
+<span class="source-line-no">063</span><span id="line.63">                return "TypeReference&lt;CartDiscountLineItemsTarget&gt;";</span>
+<span class="source-line-no">064</span><span id="line.64">            }</span>
+<span class="source-line-no">065</span><span id="line.65">        };</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67">}</span>
 
 
 

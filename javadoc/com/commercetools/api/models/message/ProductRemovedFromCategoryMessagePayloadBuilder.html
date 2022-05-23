@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductRemovedFromCategoryMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayload</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.10">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.21">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductRemovedFromCategoryMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayload</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductRemovedFromCategoryMessagePayload productRemovedFromCategoryMessagePayload = ProductRemovedFromCategoryMessagePayload.builder()
+           .category(categoryBuilder -> categoryBuilder)
+           .staged(true)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -166,7 +175,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProductRemovedFromCategoryMessagePayloadBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.11">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.22">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -180,39 +189,39 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="category(java.util.function.Function)">
 <h3>category</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.22">category</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,&#8203;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.33">category</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,&#8203;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Reference to a Category.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="category(com.commercetools.api.models.category.CategoryReference)">
 <h3>category</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.32">category</a></span>&#8203;<span class="parameters">(<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&nbsp;category)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.43">category</a></span>&#8203;<span class="parameters">(<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&nbsp;category)</span></div>
 <div class="block"><p>Reference to a Category.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="staged(java.lang.Boolean)">
 <h3>staged</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.38">staged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.49">staged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCategory()">
 <h3>getCategory</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.43">getCategory</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.54">getCategory</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.47">getStaged</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.58">getStaged</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.51">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.62">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductRemovedFromCategoryMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayload</a>&gt;</code></dd>
@@ -222,20 +231,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.60">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.71">buildUnchecked</a></span>()</div>
 <div class="block">builds ProductRemovedFromCategoryMessagePayload without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.64">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.75">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ProductRemovedFromCategoryMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.68">of</a></span>&#8203;<span class="parameters">(<a href="ProductRemovedFromCategoryMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductRemovedFromCategoryMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRemovedFromCategoryMessagePayloadBuilder.html#line.79">of</a></span>&#8203;<span class="parameters">(<a href="ProductRemovedFromCategoryMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductRemovedFromCategoryMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

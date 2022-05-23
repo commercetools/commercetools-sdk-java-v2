@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerChangeAddressAction.html" title="interface in com.commercetools.api.models.customer">CustomerChangeAddressAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.12">CustomerChangeAddressActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.22">CustomerChangeAddressActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerChangeAddressAction.html" title="interface in com.commercetools.api.models.customer">CustomerChangeAddressAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerChangeAddressAction customerChangeAddressAction = CustomerChangeAddressAction.builder()
+           .address(addressBuilder -> addressBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -168,7 +176,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CustomerChangeAddressActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.13">CustomerChangeAddressActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.23">CustomerChangeAddressActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -182,53 +190,53 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addressId(java.lang.String)">
 <h3>addressId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.23">addressId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.33">addressId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addressId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addressKey(java.lang.String)">
 <h3>addressKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.28">addressKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.38">addressKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addressKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="address(java.util.function.Function)">
 <h3>address</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.33">address</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,&#8203;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.43">address</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,&#8203;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="address(com.commercetools.api.models.common.BaseAddress)">
 <h3>address</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.39">address</a></span>&#8203;<span class="parameters">(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;address)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.49">address</a></span>&#8203;<span class="parameters">(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;address)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddressId()">
 <h3>getAddressId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.44">getAddressId</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.54">getAddressId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddressKey()">
 <h3>getAddressKey</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.49">getAddressKey</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.59">getAddressKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddress()">
 <h3>getAddress</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.54">getAddress</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.64">getAddress</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressAction.html" title="interface in com.commercetools.api.models.customer">CustomerChangeAddressAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.58">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressAction.html" title="interface in com.commercetools.api.models.customer">CustomerChangeAddressAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.68">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerChangeAddressAction.html" title="interface in com.commercetools.api.models.customer">CustomerChangeAddressAction</a>&gt;</code></dd>
@@ -238,20 +246,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressAction.html" title="interface in com.commercetools.api.models.customer">CustomerChangeAddressAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.66">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressAction.html" title="interface in com.commercetools.api.models.customer">CustomerChangeAddressAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.76">buildUnchecked</a></span>()</div>
 <div class="block">builds CustomerChangeAddressAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.70">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.80">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.customer.CustomerChangeAddressAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.74">of</a></span>&#8203;<span class="parameters">(<a href="CustomerChangeAddressAction.html" title="interface in com.commercetools.api.models.customer">CustomerChangeAddressAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerChangeAddressActionBuilder.html" title="class in com.commercetools.api.models.customer">CustomerChangeAddressActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerChangeAddressActionBuilder.html#line.84">of</a></span>&#8203;<span class="parameters">(<a href="CustomerChangeAddressAction.html" title="interface in com.commercetools.api.models.customer">CustomerChangeAddressAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

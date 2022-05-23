@@ -84,8 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CategoryUpdateImpl.html" title="class in com.commercetools.api.models.category">CategoryUpdateImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.16">CategoryUpdate</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.27">CategoryUpdate</a></span><span class="extends-implements">
 extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>,&#8203;<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>,&#8203;<a href="CategoryUpdateBuilder.html" title="class in com.commercetools.api.models.category">CategoryUpdateBuilder</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CategoryUpdate categoryUpdate = CategoryUpdate.builder()
+           .version(0.3)
+           .plusActions(actionsBuilder -> actionsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -154,7 +163,7 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.21">getVersion</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.32">getVersion</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdate.html#getVersion()">getVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>,&#8203;<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>,&#8203;<a href="CategoryUpdateBuilder.html" title="class in com.commercetools.api.models.category">CategoryUpdateBuilder</a>&gt;</code></dd>
@@ -166,7 +175,7 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <h3>getActions</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.25">getActions</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.36">getActions</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdate.html#getActions()">getActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>,&#8203;<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>,&#8203;<a href="CategoryUpdateBuilder.html" title="class in com.commercetools.api.models.category">CategoryUpdateBuilder</a>&gt;</code></dd>
@@ -176,7 +185,7 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.30">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.41">setVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdate.html#setVersion(java.lang.Long)">setVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>,&#8203;<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>,&#8203;<a href="CategoryUpdateBuilder.html" title="class in com.commercetools.api.models.category">CategoryUpdateBuilder</a>&gt;</code></dd>
@@ -186,13 +195,13 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="setActions(com.commercetools.api.models.category.CategoryUpdateAction...)">
 <h3>setActions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.32">setActions</a></span>&#8203;<span class="parameters">(<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>...&nbsp;actions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.43">setActions</a></span>&#8203;<span class="parameters">(<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>...&nbsp;actions)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setActions(java.util.List)">
 <h3>setActions</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.35">setActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>&gt;&nbsp;actions)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.46">setActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>&gt;&nbsp;actions)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdate.html#setActions(java.util.List)">setActions</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdate.html" title="interface in com.commercetools.api.models">ResourceUpdate</a>&lt;<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>,&#8203;<a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>,&#8203;<a href="CategoryUpdateBuilder.html" title="class in com.commercetools.api.models.category">CategoryUpdateBuilder</a>&gt;</code></dd>
@@ -202,37 +211,37 @@ extends <a href="../ResourceUpdate.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.37">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.48">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.category.CategoryUpdate)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.41">of</a></span>&#8203;<span class="parameters">(<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.52">of</a></span>&#8203;<span class="parameters">(<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryUpdateBuilder.html" title="class in com.commercetools.api.models.category">CategoryUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.48">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryUpdateBuilder.html" title="class in com.commercetools.api.models.category">CategoryUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.59">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.category.CategoryUpdate)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryUpdateBuilder.html" title="class in com.commercetools.api.models.category">CategoryUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.52">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryUpdateBuilder.html" title="class in com.commercetools.api.models.category">CategoryUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.63">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCategoryUpdate(java.util.function.Function)">
 <h3>withCategoryUpdate</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.56">withCategoryUpdate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.67">withCategoryUpdate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.60">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryUpdate.html" title="interface in com.commercetools.api.models.category">CategoryUpdate</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryUpdate.html#line.71">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

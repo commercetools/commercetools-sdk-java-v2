@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.10">ProjectChangeCartsConfigurationActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.20">ProjectChangeCartsConfigurationActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectChangeCartsConfigurationAction projectChangeCartsConfigurationAction = ProjectChangeCartsConfigurationAction.builder()
+           .cartsConfiguration(cartsConfigurationBuilder -> cartsConfigurationBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -160,7 +168,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProjectChangeCartsConfigurationActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.11">ProjectChangeCartsConfigurationActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.21">ProjectChangeCartsConfigurationActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -174,27 +182,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="cartsConfiguration(java.util.function.Function)">
 <h3>cartsConfiguration</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.19">cartsConfiguration</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>,&#8203;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.29">cartsConfiguration</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>,&#8203;<a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Configuration for the Carts feature.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="cartsConfiguration(com.commercetools.api.models.project.CartsConfiguration)">
 <h3>cartsConfiguration</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.30">cartsConfiguration</a></span>&#8203;<span class="parameters">(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;cartsConfiguration)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.40">cartsConfiguration</a></span>&#8203;<span class="parameters">(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;cartsConfiguration)</span></div>
 <div class="block"><p>Configuration for the Carts feature.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCartsConfiguration()">
 <h3>getCartsConfiguration</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.36">getCartsConfiguration</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.46">getCartsConfiguration</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.40">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.50">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a>&gt;</code></dd>
@@ -204,20 +212,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.49">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds ProjectChangeCartsConfigurationAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.53">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.project.ProjectChangeCartsConfigurationAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeCartsConfigurationActionBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

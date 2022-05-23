@@ -88,8 +88,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="PaymentAddInterfaceInteractionActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentAddInterfaceInteractionActionImpl</a></code>, <code><a href="PaymentAddTransactionActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentAddTransactionActionImpl</a></code>, <code><a href="PaymentChangeAmountPlannedActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentChangeAmountPlannedActionImpl</a></code>, <code><a href="PaymentChangeTransactionInteractionIdActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionInteractionIdActionImpl</a></code>, <code><a href="PaymentChangeTransactionStateActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionStateActionImpl</a></code>, <code><a href="PaymentChangeTransactionTimestampActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampActionImpl</a></code>, <code><a href="PaymentSetAmountPaidActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetAmountPaidActionImpl</a></code>, <code><a href="PaymentSetAmountRefundedActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetAmountRefundedActionImpl</a></code>, <code><a href="PaymentSetAnonymousIdActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetAnonymousIdActionImpl</a></code>, <code><a href="PaymentSetAuthorizationActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionImpl</a></code>, <code><a href="PaymentSetCustomerActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetCustomerActionImpl</a></code>, <code><a href="PaymentSetCustomFieldActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetCustomFieldActionImpl</a></code>, <code><a href="PaymentSetCustomTypeActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetCustomTypeActionImpl</a></code>, <code><a href="PaymentSetExternalIdActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetExternalIdActionImpl</a></code>, <code><a href="PaymentSetInterfaceIdActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetInterfaceIdActionImpl</a></code>, <code><a href="PaymentSetKeyActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetKeyActionImpl</a></code>, <code><a href="PaymentSetMethodInfoInterfaceActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetMethodInfoInterfaceActionImpl</a></code>, <code><a href="PaymentSetMethodInfoMethodActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetMethodInfoMethodActionImpl</a></code>, <code><a href="PaymentSetMethodInfoNameActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetMethodInfoNameActionImpl</a></code>, <code><a href="PaymentSetStatusInterfaceCodeActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetStatusInterfaceCodeActionImpl</a></code>, <code><a href="PaymentSetStatusInterfaceTextActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetStatusInterfaceTextActionImpl</a></code>, <code><a href="PaymentSetTransactionCustomFieldActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetTransactionCustomFieldActionImpl</a></code>, <code><a href="PaymentSetTransactionCustomTypeActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetTransactionCustomTypeActionImpl</a></code>, <code><a href="PaymentTransitionStateActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentTransitionStateActionImpl</a></code>, <code><a href="PaymentUpdateActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentUpdateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.15">PaymentUpdateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.25">PaymentUpdateAction</a></span><span class="extends-implements">
 extends <a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="PaymentUpdateAction.html" title="interface in com.commercetools.api.models.payment">PaymentUpdateAction</a>&gt;</span></div>
+<div class="block">Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   PaymentUpdateAction paymentUpdateAction = PaymentUpdateAction.addInterfaceInteractionBuilder()
+           type(typeBuilder -> typeBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -206,7 +214,7 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.45">getAction</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.55">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="PaymentUpdateAction.html" title="interface in com.commercetools.api.models.payment">PaymentUpdateAction</a>&gt;</code></dd>
@@ -216,157 +224,157 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="addInterfaceInteractionBuilder()">
 <h3>addInterfaceInteractionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentAddInterfaceInteractionActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentAddInterfaceInteractionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.49">addInterfaceInteractionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentAddInterfaceInteractionActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentAddInterfaceInteractionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.59">addInterfaceInteractionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addTransactionBuilder()">
 <h3>addTransactionBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentAddTransactionActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentAddTransactionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.53">addTransactionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentAddTransactionActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentAddTransactionActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.63">addTransactionBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeAmountPlannedBuilder()">
 <h3>changeAmountPlannedBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeAmountPlannedActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeAmountPlannedActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.57">changeAmountPlannedBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeAmountPlannedActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeAmountPlannedActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.67">changeAmountPlannedBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeTransactionInteractionIdBuilder()">
 <h3>changeTransactionInteractionIdBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionInteractionIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionInteractionIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.61">changeTransactionInteractionIdBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionInteractionIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionInteractionIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.71">changeTransactionInteractionIdBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeTransactionStateBuilder()">
 <h3>changeTransactionStateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionStateActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.65">changeTransactionStateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionStateActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.75">changeTransactionStateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeTransactionTimestampBuilder()">
 <h3>changeTransactionTimestampBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.69">changeTransactionTimestampBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentChangeTransactionTimestampActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentChangeTransactionTimestampActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.79">changeTransactionTimestampBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAmountPaidBuilder()">
 <h3>setAmountPaidBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAmountPaidActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAmountPaidActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.73">setAmountPaidBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAmountPaidActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAmountPaidActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.83">setAmountPaidBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAmountRefundedBuilder()">
 <h3>setAmountRefundedBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAmountRefundedActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAmountRefundedActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.77">setAmountRefundedBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAmountRefundedActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAmountRefundedActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.87">setAmountRefundedBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAnonymousIdBuilder()">
 <h3>setAnonymousIdBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAnonymousIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.81">setAnonymousIdBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAnonymousIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.91">setAnonymousIdBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAuthorizationBuilder()">
 <h3>setAuthorizationBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.85">setAuthorizationBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.95">setAuthorizationBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomFieldBuilder()">
 <h3>setCustomFieldBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.89">setCustomFieldBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.99">setCustomFieldBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomTypeBuilder()">
 <h3>setCustomTypeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.93">setCustomTypeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.103">setCustomTypeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomerBuilder()">
 <h3>setCustomerBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetCustomerActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetCustomerActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.97">setCustomerBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetCustomerActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetCustomerActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.107">setCustomerBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalIdBuilder()">
 <h3>setExternalIdBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetExternalIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetExternalIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.101">setExternalIdBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetExternalIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetExternalIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.111">setExternalIdBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInterfaceIdBuilder()">
 <h3>setInterfaceIdBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetInterfaceIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetInterfaceIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.105">setInterfaceIdBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetInterfaceIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetInterfaceIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.115">setInterfaceIdBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKeyBuilder()">
 <h3>setKeyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetKeyActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.109">setKeyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetKeyActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.119">setKeyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMethodInfoInterfaceBuilder()">
 <h3>setMethodInfoInterfaceBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetMethodInfoInterfaceActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetMethodInfoInterfaceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.113">setMethodInfoInterfaceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetMethodInfoInterfaceActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetMethodInfoInterfaceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.123">setMethodInfoInterfaceBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMethodInfoMethodBuilder()">
 <h3>setMethodInfoMethodBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetMethodInfoMethodActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetMethodInfoMethodActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.117">setMethodInfoMethodBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetMethodInfoMethodActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetMethodInfoMethodActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.127">setMethodInfoMethodBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMethodInfoNameBuilder()">
 <h3>setMethodInfoNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetMethodInfoNameActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetMethodInfoNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.121">setMethodInfoNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetMethodInfoNameActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetMethodInfoNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.131">setMethodInfoNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStatusInterfaceCodeBuilder()">
 <h3>setStatusInterfaceCodeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetStatusInterfaceCodeActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetStatusInterfaceCodeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.125">setStatusInterfaceCodeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetStatusInterfaceCodeActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetStatusInterfaceCodeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.135">setStatusInterfaceCodeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStatusInterfaceTextBuilder()">
 <h3>setStatusInterfaceTextBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetStatusInterfaceTextActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetStatusInterfaceTextActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.129">setStatusInterfaceTextBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetStatusInterfaceTextActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetStatusInterfaceTextActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.139">setStatusInterfaceTextBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTransactionCustomFieldBuilder()">
 <h3>setTransactionCustomFieldBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetTransactionCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetTransactionCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.133">setTransactionCustomFieldBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetTransactionCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetTransactionCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.143">setTransactionCustomFieldBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTransactionCustomTypeBuilder()">
 <h3>setTransactionCustomTypeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetTransactionCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetTransactionCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.137">setTransactionCustomTypeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetTransactionCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetTransactionCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.147">setTransactionCustomTypeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="transitionStateBuilder()">
 <h3>transitionStateBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.141">transitionStateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.151">transitionStateBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPaymentUpdateAction(java.util.function.Function)">
 <h3>withPaymentUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.145">withPaymentUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentUpdateAction.html" title="interface in com.commercetools.api.models.payment">PaymentUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.155">withPaymentUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentUpdateAction.html" title="interface in com.commercetools.api.models.payment">PaymentUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentUpdateAction.html" title="interface in com.commercetools.api.models.payment">PaymentUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.149">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentUpdateAction.html" title="interface in com.commercetools.api.models.payment">PaymentUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentUpdateAction.html#line.159">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

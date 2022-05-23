@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartChangeLineItemQuantityAction.html" title="interface in com.commercetools.api.models.cart">CartChangeLineItemQuantityAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.12">CartChangeLineItemQuantityActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.23">CartChangeLineItemQuantityActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartChangeLineItemQuantityAction.html" title="interface in com.commercetools.api.models.cart">CartChangeLineItemQuantityAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartChangeLineItemQuantityAction cartChangeLineItemQuantityAction = CartChangeLineItemQuantityAction.builder()
+           .lineItemId("{lineItemId}")
+           .quantity(0.3)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -181,7 +190,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CartChangeLineItemQuantityActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.13">CartChangeLineItemQuantityActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.24">CartChangeLineItemQuantityActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -195,19 +204,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="lineItemId(java.lang.String)">
 <h3>lineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.25">lineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.36">lineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="quantity(java.lang.Long)">
 <h3>quantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.30">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.41">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="externalPrice(java.util.function.Function)">
 <h3>externalPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.40">externalPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.51">externalPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
   <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
 </section>
@@ -215,7 +224,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="externalPrice(com.commercetools.api.models.common.Money)">
 <h3>externalPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.51">externalPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.62">externalPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalPrice)</span></div>
 <div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
   <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
@@ -224,46 +233,46 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="externalTotalPrice(java.util.function.Function)">
 <h3>externalTotalPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.57">externalTotalPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalLineItemTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">ExternalLineItemTotalPriceBuilder</a>,&#8203;<a href="ExternalLineItemTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">ExternalLineItemTotalPriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.68">externalTotalPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExternalLineItemTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">ExternalLineItemTotalPriceBuilder</a>,&#8203;<a href="ExternalLineItemTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">ExternalLineItemTotalPriceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="externalTotalPrice(com.commercetools.api.models.cart.ExternalLineItemTotalPrice)">
 <h3>externalTotalPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.65">externalTotalPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.76">externalTotalPrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a>&nbsp;externalTotalPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLineItemId()">
 <h3>getLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.71">getLineItemId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.82">getLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.75">getQuantity</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.86">getQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExternalPrice()">
 <h3>getExternalPrice</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.79">getExternalPrice</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.90">getExternalPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExternalTotalPrice()">
 <h3>getExternalTotalPrice</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.84">getExternalTotalPrice</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.95">getExternalTotalPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityAction.html" title="interface in com.commercetools.api.models.cart">CartChangeLineItemQuantityAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.89">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityAction.html" title="interface in com.commercetools.api.models.cart">CartChangeLineItemQuantityAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.100">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartChangeLineItemQuantityAction.html" title="interface in com.commercetools.api.models.cart">CartChangeLineItemQuantityAction</a>&gt;</code></dd>
@@ -273,20 +282,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityAction.html" title="interface in com.commercetools.api.models.cart">CartChangeLineItemQuantityAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.98">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityAction.html" title="interface in com.commercetools.api.models.cart">CartChangeLineItemQuantityAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.109">buildUnchecked</a></span>()</div>
 <div class="block">builds CartChangeLineItemQuantityAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.102">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.113">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.CartChangeLineItemQuantityAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.106">of</a></span>&#8203;<span class="parameters">(<a href="CartChangeLineItemQuantityAction.html" title="interface in com.commercetools.api.models.cart">CartChangeLineItemQuantityAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartChangeLineItemQuantityActionBuilder.html" title="class in com.commercetools.api.models.cart">CartChangeLineItemQuantityActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartChangeLineItemQuantityActionBuilder.html#line.117">of</a></span>&#8203;<span class="parameters">(<a href="CartChangeLineItemQuantityAction.html" title="interface in com.commercetools.api.models.cart">CartChangeLineItemQuantityAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

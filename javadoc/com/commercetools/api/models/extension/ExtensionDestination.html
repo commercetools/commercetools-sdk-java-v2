@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AWSLambdaDestinationImpl.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationImpl</a></code>, <code><a href="ExtensionDestinationImpl.html" title="class in com.commercetools.api.models.extension">ExtensionDestinationImpl</a></code>, <code><a href="HttpDestinationImpl.html" title="class in com.commercetools.api.models.extension">HttpDestinationImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.18">ExtensionDestination</a></span></div>
-<div class="block"><p>Generic type for destinations.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.29">ExtensionDestination</a></span></div>
+<div class="block"><p>Generic type for destinations.</p>
+
+ Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ExtensionDestination extensionDestination = ExtensionDestination.awsLambdaBuilder()
+           arn("{arn}")
+           accessKey("{accessKey}")
+           accessSecret("{accessSecret}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -133,31 +144,31 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.26">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.37">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="awsLambdaBuilder()">
 <h3>awsLambdaBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestinationBuilder.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.30">awsLambdaBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AWSLambdaDestinationBuilder.html" title="class in com.commercetools.api.models.extension">AWSLambdaDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.41">awsLambdaBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="httpBuilder()">
 <h3>httpBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.34">httpBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HttpDestinationBuilder.html" title="class in com.commercetools.api.models.extension">HttpDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.45">httpBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExtensionDestination(java.util.function.Function)">
 <h3>withExtensionDestination</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.38">withExtensionDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.49">withExtensionDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.42">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExtensionDestination.html" title="interface in com.commercetools.api.models.extension">ExtensionDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/extension/ExtensionDestination.html#line.53">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

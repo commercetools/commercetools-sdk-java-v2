@@ -28,99 +28,108 @@
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">019</span><span id="line.19">@JsonDeserialize(as = ProductVariantImportDraftImpl.class)</span>
-<span class="source-line-no">020</span><span id="line.20">public interface ProductVariantImportDraft {</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    /**</span>
-<span class="source-line-no">023</span><span id="line.23">    *  &lt;p&gt;The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.&lt;/p&gt;</span>
-<span class="source-line-no">024</span><span id="line.24">    */</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    @JsonProperty("id")</span>
-<span class="source-line-no">027</span><span id="line.27">    public Long getId();</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    /**</span>
-<span class="source-line-no">030</span><span id="line.30">    *  &lt;p&gt;The SKU of the existing variant.&lt;/p&gt;</span>
-<span class="source-line-no">031</span><span id="line.31">    */</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    @JsonProperty("sku")</span>
-<span class="source-line-no">034</span><span id="line.34">    public String getSku();</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">    *  &lt;p&gt;The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the &lt;code&gt;prices&lt;/code&gt; property from the original product variant, otherwise &lt;code&gt;prices&lt;/code&gt; property from the original product variant would be copied in the resulting order.&lt;/p&gt;</span>
-<span class="source-line-no">038</span><span id="line.38">    */</span>
-<span class="source-line-no">039</span><span id="line.39">    @Valid</span>
-<span class="source-line-no">040</span><span id="line.40">    @JsonProperty("prices")</span>
-<span class="source-line-no">041</span><span id="line.41">    public List&lt;PriceDraft&gt; getPrices();</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">    *  &lt;p&gt;If this property is defined, then it will override the &lt;code&gt;attributes&lt;/code&gt; property from the original product variant, otherwise &lt;code&gt;attributes&lt;/code&gt; property from the original product variant would be copied in the resulting order.&lt;/p&gt;</span>
-<span class="source-line-no">045</span><span id="line.45">    */</span>
-<span class="source-line-no">046</span><span id="line.46">    @Valid</span>
-<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("attributes")</span>
-<span class="source-line-no">048</span><span id="line.48">    public List&lt;Attribute&gt; getAttributes();</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">    *  &lt;p&gt;If this property is defined, then it will override the &lt;code&gt;images&lt;/code&gt; property from the original product variant, otherwise &lt;code&gt;images&lt;/code&gt; property from the original product variant would be copied in the resulting order.&lt;/p&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">    */</span>
-<span class="source-line-no">053</span><span id="line.53">    @Valid</span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("images")</span>
-<span class="source-line-no">055</span><span id="line.55">    public List&lt;Image&gt; getImages();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public void setId(final Long id);</span>
+<span class="source-line-no">018</span><span id="line.18">/**</span>
+<span class="source-line-no">019</span><span id="line.19"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">020</span><span id="line.20"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">022</span><span id="line.22">   ProductVariantImportDraft productVariantImportDraft = ProductVariantImportDraft.builder()</span>
+<span class="source-line-no">023</span><span id="line.23">           .build()</span>
+<span class="source-line-no">024</span><span id="line.24"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> &lt;/div&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> */</span>
+<span class="source-line-no">027</span><span id="line.27">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">028</span><span id="line.28">@JsonDeserialize(as = ProductVariantImportDraftImpl.class)</span>
+<span class="source-line-no">029</span><span id="line.29">public interface ProductVariantImportDraft {</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    /**</span>
+<span class="source-line-no">032</span><span id="line.32">     *  &lt;p&gt;The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.&lt;/p&gt;</span>
+<span class="source-line-no">033</span><span id="line.33">     */</span>
+<span class="source-line-no">034</span><span id="line.34"></span>
+<span class="source-line-no">035</span><span id="line.35">    @JsonProperty("id")</span>
+<span class="source-line-no">036</span><span id="line.36">    public Long getId();</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    /**</span>
+<span class="source-line-no">039</span><span id="line.39">     *  &lt;p&gt;The SKU of the existing variant.&lt;/p&gt;</span>
+<span class="source-line-no">040</span><span id="line.40">     */</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("sku")</span>
+<span class="source-line-no">043</span><span id="line.43">    public String getSku();</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the &lt;code&gt;prices&lt;/code&gt; property from the original product variant, otherwise &lt;code&gt;prices&lt;/code&gt; property from the original product variant would be copied in the resulting order.&lt;/p&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">     */</span>
+<span class="source-line-no">048</span><span id="line.48">    @Valid</span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("prices")</span>
+<span class="source-line-no">050</span><span id="line.50">    public List&lt;PriceDraft&gt; getPrices();</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    /**</span>
+<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;If this property is defined, then it will override the &lt;code&gt;attributes&lt;/code&gt; property from the original product variant, otherwise &lt;code&gt;attributes&lt;/code&gt; property from the original product variant would be copied in the resulting order.&lt;/p&gt;</span>
+<span class="source-line-no">054</span><span id="line.54">     */</span>
+<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
+<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("attributes")</span>
+<span class="source-line-no">057</span><span id="line.57">    public List&lt;Attribute&gt; getAttributes();</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public void setSku(final String sku);</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    @JsonIgnore</span>
-<span class="source-line-no">062</span><span id="line.62">    public void setPrices(final PriceDraft... prices);</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public void setPrices(final List&lt;PriceDraft&gt; prices);</span>
+<span class="source-line-no">059</span><span id="line.59">    /**</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;If this property is defined, then it will override the &lt;code&gt;images&lt;/code&gt; property from the original product variant, otherwise &lt;code&gt;images&lt;/code&gt; property from the original product variant would be copied in the resulting order.&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62">    @Valid</span>
+<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("images")</span>
+<span class="source-line-no">064</span><span id="line.64">    public List&lt;Image&gt; getImages();</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    @JsonIgnore</span>
-<span class="source-line-no">067</span><span id="line.67">    public void setAttributes(final Attribute... attributes);</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public void setAttributes(final List&lt;Attribute&gt; attributes);</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    @JsonIgnore</span>
-<span class="source-line-no">072</span><span id="line.72">    public void setImages(final Image... images);</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setImages(final List&lt;Image&gt; images);</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public static ProductVariantImportDraft of() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return new ProductVariantImportDraftImpl();</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">066</span><span id="line.66">    public void setId(final Long id);</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public void setSku(final String sku);</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    @JsonIgnore</span>
+<span class="source-line-no">071</span><span id="line.71">    public void setPrices(final PriceDraft... prices);</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public void setPrices(final List&lt;PriceDraft&gt; prices);</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    @JsonIgnore</span>
+<span class="source-line-no">076</span><span id="line.76">    public void setAttributes(final Attribute... attributes);</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public void setAttributes(final List&lt;Attribute&gt; attributes);</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public static ProductVariantImportDraft of(final ProductVariantImportDraft template) {</span>
-<span class="source-line-no">081</span><span id="line.81">        ProductVariantImportDraftImpl instance = new ProductVariantImportDraftImpl();</span>
-<span class="source-line-no">082</span><span id="line.82">        instance.setId(template.getId());</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setSku(template.getSku());</span>
-<span class="source-line-no">084</span><span id="line.84">        instance.setPrices(template.getPrices());</span>
-<span class="source-line-no">085</span><span id="line.85">        instance.setAttributes(template.getAttributes());</span>
-<span class="source-line-no">086</span><span id="line.86">        instance.setImages(template.getImages());</span>
-<span class="source-line-no">087</span><span id="line.87">        return instance;</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public static ProductVariantImportDraftBuilder builder() {</span>
-<span class="source-line-no">091</span><span id="line.91">        return ProductVariantImportDraftBuilder.of();</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public static ProductVariantImportDraftBuilder builder(final ProductVariantImportDraft template) {</span>
-<span class="source-line-no">095</span><span id="line.95">        return ProductVariantImportDraftBuilder.of(template);</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    default &lt;T&gt; T withProductVariantImportDraft(Function&lt;ProductVariantImportDraft, T&gt; helper) {</span>
-<span class="source-line-no">099</span><span id="line.99">        return helper.apply(this);</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariantImportDraft&gt; typeReference() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariantImportDraft&gt;() {</span>
-<span class="source-line-no">104</span><span id="line.104">            @Override</span>
-<span class="source-line-no">105</span><span id="line.105">            public String toString() {</span>
-<span class="source-line-no">106</span><span id="line.106">                return "TypeReference&lt;ProductVariantImportDraft&gt;";</span>
-<span class="source-line-no">107</span><span id="line.107">            }</span>
-<span class="source-line-no">108</span><span id="line.108">        };</span>
+<span class="source-line-no">080</span><span id="line.80">    @JsonIgnore</span>
+<span class="source-line-no">081</span><span id="line.81">    public void setImages(final Image... images);</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public void setImages(final List&lt;Image&gt; images);</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public static ProductVariantImportDraft of() {</span>
+<span class="source-line-no">086</span><span id="line.86">        return new ProductVariantImportDraftImpl();</span>
+<span class="source-line-no">087</span><span id="line.87">    }</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public static ProductVariantImportDraft of(final ProductVariantImportDraft template) {</span>
+<span class="source-line-no">090</span><span id="line.90">        ProductVariantImportDraftImpl instance = new ProductVariantImportDraftImpl();</span>
+<span class="source-line-no">091</span><span id="line.91">        instance.setId(template.getId());</span>
+<span class="source-line-no">092</span><span id="line.92">        instance.setSku(template.getSku());</span>
+<span class="source-line-no">093</span><span id="line.93">        instance.setPrices(template.getPrices());</span>
+<span class="source-line-no">094</span><span id="line.94">        instance.setAttributes(template.getAttributes());</span>
+<span class="source-line-no">095</span><span id="line.95">        instance.setImages(template.getImages());</span>
+<span class="source-line-no">096</span><span id="line.96">        return instance;</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static ProductVariantImportDraftBuilder builder() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return ProductVariantImportDraftBuilder.of();</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public static ProductVariantImportDraftBuilder builder(final ProductVariantImportDraft template) {</span>
+<span class="source-line-no">104</span><span id="line.104">        return ProductVariantImportDraftBuilder.of(template);</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    default &lt;T&gt; T withProductVariantImportDraft(Function&lt;ProductVariantImportDraft, T&gt; helper) {</span>
+<span class="source-line-no">108</span><span id="line.108">        return helper.apply(this);</span>
 <span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110">}</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariantImportDraft&gt; typeReference() {</span>
+<span class="source-line-no">112</span><span id="line.112">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductVariantImportDraft&gt;() {</span>
+<span class="source-line-no">113</span><span id="line.113">            @Override</span>
+<span class="source-line-no">114</span><span id="line.114">            public String toString() {</span>
+<span class="source-line-no">115</span><span id="line.115">                return "TypeReference&lt;ProductVariantImportDraft&gt;";</span>
+<span class="source-line-no">116</span><span id="line.116">            }</span>
+<span class="source-line-no">117</span><span id="line.117">        };</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119">}</span>
 
 
 

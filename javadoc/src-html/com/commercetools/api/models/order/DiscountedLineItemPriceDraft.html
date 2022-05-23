@@ -28,63 +28,74 @@
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">019</span><span id="line.19">@JsonDeserialize(as = DiscountedLineItemPriceDraftImpl.class)</span>
-<span class="source-line-no">020</span><span id="line.20">public interface DiscountedLineItemPriceDraft {</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    /**</span>
-<span class="source-line-no">023</span><span id="line.23">    *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">024</span><span id="line.24">    *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
-<span class="source-line-no">025</span><span id="line.25">    */</span>
-<span class="source-line-no">026</span><span id="line.26">    @NotNull</span>
-<span class="source-line-no">027</span><span id="line.27">    @Valid</span>
-<span class="source-line-no">028</span><span id="line.28">    @JsonProperty("value")</span>
-<span class="source-line-no">029</span><span id="line.29">    public Money getValue();</span>
-<span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    @NotNull</span>
-<span class="source-line-no">032</span><span id="line.32">    @Valid</span>
-<span class="source-line-no">033</span><span id="line.33">    @JsonProperty("includedDiscounts")</span>
-<span class="source-line-no">034</span><span id="line.34">    public List&lt;DiscountedLineItemPortion&gt; getIncludedDiscounts();</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public void setValue(final Money value);</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    @JsonIgnore</span>
-<span class="source-line-no">039</span><span id="line.39">    public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public void setIncludedDiscounts(final List&lt;DiscountedLineItemPortion&gt; includedDiscounts);</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public static DiscountedLineItemPriceDraft of() {</span>
-<span class="source-line-no">044</span><span id="line.44">        return new DiscountedLineItemPriceDraftImpl();</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">018</span><span id="line.18">/**</span>
+<span class="source-line-no">019</span><span id="line.19"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">020</span><span id="line.20"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">022</span><span id="line.22">   DiscountedLineItemPriceDraft discountedLineItemPriceDraft = DiscountedLineItemPriceDraft.builder()</span>
+<span class="source-line-no">023</span><span id="line.23">           .value(valueBuilder -&gt; valueBuilder)</span>
+<span class="source-line-no">024</span><span id="line.24">           .plusIncludedDiscounts(includedDiscountsBuilder -&gt; includedDiscountsBuilder)</span>
+<span class="source-line-no">025</span><span id="line.25">           .build()</span>
+<span class="source-line-no">026</span><span id="line.26"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> &lt;/div&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> */</span>
+<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = DiscountedLineItemPriceDraftImpl.class)</span>
+<span class="source-line-no">031</span><span id="line.31">public interface DiscountedLineItemPriceDraft {</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    /**</span>
+<span class="source-line-no">034</span><span id="line.34">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
+<span class="source-line-no">036</span><span id="line.36">     */</span>
+<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
+<span class="source-line-no">038</span><span id="line.38">    @Valid</span>
+<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("value")</span>
+<span class="source-line-no">040</span><span id="line.40">    public Money getValue();</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
+<span class="source-line-no">043</span><span id="line.43">    @Valid</span>
+<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("includedDiscounts")</span>
+<span class="source-line-no">045</span><span id="line.45">    public List&lt;DiscountedLineItemPortion&gt; getIncludedDiscounts();</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public static DiscountedLineItemPriceDraft of(final DiscountedLineItemPriceDraft template) {</span>
-<span class="source-line-no">048</span><span id="line.48">        DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();</span>
-<span class="source-line-no">049</span><span id="line.49">        instance.setValue(template.getValue());</span>
-<span class="source-line-no">050</span><span id="line.50">        instance.setIncludedDiscounts(template.getIncludedDiscounts());</span>
-<span class="source-line-no">051</span><span id="line.51">        return instance;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
+<span class="source-line-no">047</span><span id="line.47">    public void setValue(final Money value);</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    @JsonIgnore</span>
+<span class="source-line-no">050</span><span id="line.50">    public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public void setIncludedDiscounts(final List&lt;DiscountedLineItemPortion&gt; includedDiscounts);</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public static DiscountedLineItemPriceDraftBuilder builder() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return DiscountedLineItemPriceDraftBuilder.of();</span>
+<span class="source-line-no">054</span><span id="line.54">    public static DiscountedLineItemPriceDraft of() {</span>
+<span class="source-line-no">055</span><span id="line.55">        return new DiscountedLineItemPriceDraftImpl();</span>
 <span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public static DiscountedLineItemPriceDraftBuilder builder(final DiscountedLineItemPriceDraft template) {</span>
-<span class="source-line-no">059</span><span id="line.59">        return DiscountedLineItemPriceDraftBuilder.of(template);</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    default &lt;T&gt; T withDiscountedLineItemPriceDraft(Function&lt;DiscountedLineItemPriceDraft, T&gt; helper) {</span>
-<span class="source-line-no">063</span><span id="line.63">        return helper.apply(this);</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DiscountedLineItemPriceDraft&gt; typeReference() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DiscountedLineItemPriceDraft&gt;() {</span>
-<span class="source-line-no">068</span><span id="line.68">            @Override</span>
-<span class="source-line-no">069</span><span id="line.69">            public String toString() {</span>
-<span class="source-line-no">070</span><span id="line.70">                return "TypeReference&lt;DiscountedLineItemPriceDraft&gt;";</span>
-<span class="source-line-no">071</span><span id="line.71">            }</span>
-<span class="source-line-no">072</span><span id="line.72">        };</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74">}</span>
+<span class="source-line-no">058</span><span id="line.58">    public static DiscountedLineItemPriceDraft of(final DiscountedLineItemPriceDraft template) {</span>
+<span class="source-line-no">059</span><span id="line.59">        DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();</span>
+<span class="source-line-no">060</span><span id="line.60">        instance.setValue(template.getValue());</span>
+<span class="source-line-no">061</span><span id="line.61">        instance.setIncludedDiscounts(template.getIncludedDiscounts());</span>
+<span class="source-line-no">062</span><span id="line.62">        return instance;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public static DiscountedLineItemPriceDraftBuilder builder() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return DiscountedLineItemPriceDraftBuilder.of();</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public static DiscountedLineItemPriceDraftBuilder builder(final DiscountedLineItemPriceDraft template) {</span>
+<span class="source-line-no">070</span><span id="line.70">        return DiscountedLineItemPriceDraftBuilder.of(template);</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    default &lt;T&gt; T withDiscountedLineItemPriceDraft(Function&lt;DiscountedLineItemPriceDraft, T&gt; helper) {</span>
+<span class="source-line-no">074</span><span id="line.74">        return helper.apply(this);</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DiscountedLineItemPriceDraft&gt; typeReference() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DiscountedLineItemPriceDraft&gt;() {</span>
+<span class="source-line-no">079</span><span id="line.79">            @Override</span>
+<span class="source-line-no">080</span><span id="line.80">            public String toString() {</span>
+<span class="source-line-no">081</span><span id="line.81">                return "TypeReference&lt;DiscountedLineItemPriceDraft&gt;";</span>
+<span class="source-line-no">082</span><span id="line.82">            }</span>
+<span class="source-line-no">083</span><span id="line.83">        };</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85">}</span>
 
 
 

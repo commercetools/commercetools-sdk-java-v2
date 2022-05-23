@@ -22,384 +22,393 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public class OrderFieldBuilder implements Builder&lt;OrderField&gt; {</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    @Nullable</span>
-<span class="source-line-no">016</span><span id="line.16">    private com.commercetools.importapi.models.order_patches.ReturnInfo addReturnInfo;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    @Nullable</span>
-<span class="source-line-no">019</span><span id="line.19">    private com.commercetools.importapi.models.order_patches.DeliveryParcel addParcelToDelivery;</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    @Nullable</span>
-<span class="source-line-no">022</span><span id="line.22">    private java.util.List&lt;com.commercetools.importapi.models.order_patches.DeliveryDraft&gt; addDeliveries;</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">016</span><span id="line.16">   OrderField orderField = OrderField.builder()</span>
+<span class="source-line-no">017</span><span id="line.17">           .build()</span>
+<span class="source-line-no">018</span><span id="line.18"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> &lt;/div&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> */</span>
+<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">022</span><span id="line.22">public class OrderFieldBuilder implements Builder&lt;OrderField&gt; {</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    @Nullable</span>
-<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft removeDelivery;</span>
+<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.importapi.models.order_patches.ReturnInfo addReturnInfo;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
 <span class="source-line-no">027</span><span id="line.27">    @Nullable</span>
-<span class="source-line-no">028</span><span id="line.28">    private com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft removeParcelFromDelivery;</span>
+<span class="source-line-no">028</span><span id="line.28">    private com.commercetools.importapi.models.order_patches.DeliveryParcel addParcelToDelivery;</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
 <span class="source-line-no">030</span><span id="line.30">    @Nullable</span>
-<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.importapi.models.order_patches.DeliveryAddressDraft setDeliveryAddress;</span>
+<span class="source-line-no">031</span><span id="line.31">    private java.util.List&lt;com.commercetools.importapi.models.order_patches.DeliveryDraft&gt; addDeliveries;</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
 <span class="source-line-no">033</span><span id="line.33">    @Nullable</span>
-<span class="source-line-no">034</span><span id="line.34">    private com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft setParcelMeasurements;</span>
+<span class="source-line-no">034</span><span id="line.34">    private com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft removeDelivery;</span>
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    @Nullable</span>
-<span class="source-line-no">037</span><span id="line.37">    private com.commercetools.importapi.models.order_patches.ParcelTrackingData setParcelTrackingData;</span>
+<span class="source-line-no">037</span><span id="line.37">    private com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft removeParcelFromDelivery;</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
 <span class="source-line-no">039</span><span id="line.39">    @Nullable</span>
-<span class="source-line-no">040</span><span id="line.40">    private java.util.List&lt;com.commercetools.importapi.models.order_patches.ParcelItems&gt; setParcelItems;</span>
+<span class="source-line-no">040</span><span id="line.40">    private com.commercetools.importapi.models.order_patches.DeliveryAddressDraft setDeliveryAddress;</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">    *  &lt;p&gt;Maps to &lt;code&gt;Order.returnInfo&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">    */</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public OrderFieldBuilder addReturnInfo(</span>
-<span class="source-line-no">047</span><span id="line.47">            Function&lt;com.commercetools.importapi.models.order_patches.ReturnInfoBuilder, com.commercetools.importapi.models.order_patches.ReturnInfoBuilder&gt; builder) {</span>
-<span class="source-line-no">048</span><span id="line.48">        this.addReturnInfo = builder.apply(com.commercetools.importapi.models.order_patches.ReturnInfoBuilder.of())</span>
-<span class="source-line-no">049</span><span id="line.49">                .build();</span>
-<span class="source-line-no">050</span><span id="line.50">        return this;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    /**</span>
-<span class="source-line-no">054</span><span id="line.54">    *  &lt;p&gt;Maps to &lt;code&gt;Order.returnInfo&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">055</span><span id="line.55">    */</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public OrderFieldBuilder addReturnInfo(</span>
-<span class="source-line-no">058</span><span id="line.58">            @Nullable final com.commercetools.importapi.models.order_patches.ReturnInfo addReturnInfo) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.addReturnInfo = addReturnInfo;</span>
-<span class="source-line-no">060</span><span id="line.60">        return this;</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">    *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">065</span><span id="line.65">    */</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public OrderFieldBuilder addParcelToDelivery(</span>
-<span class="source-line-no">068</span><span id="line.68">            Function&lt;com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder, com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder&gt; builder) {</span>
-<span class="source-line-no">069</span><span id="line.69">        this.addParcelToDelivery = builder</span>
-<span class="source-line-no">070</span><span id="line.70">                .apply(com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder.of())</span>
-<span class="source-line-no">071</span><span id="line.71">                .build();</span>
-<span class="source-line-no">072</span><span id="line.72">        return this;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">    *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">077</span><span id="line.77">    */</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public OrderFieldBuilder addParcelToDelivery(</span>
-<span class="source-line-no">080</span><span id="line.80">            @Nullable final com.commercetools.importapi.models.order_patches.DeliveryParcel addParcelToDelivery) {</span>
-<span class="source-line-no">081</span><span id="line.81">        this.addParcelToDelivery = addParcelToDelivery;</span>
-<span class="source-line-no">082</span><span id="line.82">        return this;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">    *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">087</span><span id="line.87">    */</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public OrderFieldBuilder addDeliveries(</span>
-<span class="source-line-no">090</span><span id="line.90">            @Nullable final com.commercetools.importapi.models.order_patches.DeliveryDraft... addDeliveries) {</span>
-<span class="source-line-no">091</span><span id="line.91">        this.addDeliveries = new ArrayList&lt;&gt;(Arrays.asList(addDeliveries));</span>
-<span class="source-line-no">092</span><span id="line.92">        return this;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">    *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">097</span><span id="line.97">    */</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public OrderFieldBuilder addDeliveries(</span>
-<span class="source-line-no">100</span><span id="line.100">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.order_patches.DeliveryDraft&gt; addDeliveries) {</span>
-<span class="source-line-no">101</span><span id="line.101">        this.addDeliveries = addDeliveries;</span>
-<span class="source-line-no">102</span><span id="line.102">        return this;</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    /**</span>
-<span class="source-line-no">106</span><span id="line.106">    *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">107</span><span id="line.107">    */</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public OrderFieldBuilder plusAddDeliveries(</span>
-<span class="source-line-no">110</span><span id="line.110">            @Nullable final com.commercetools.importapi.models.order_patches.DeliveryDraft... addDeliveries) {</span>
-<span class="source-line-no">111</span><span id="line.111">        if (this.addDeliveries == null) {</span>
-<span class="source-line-no">112</span><span id="line.112">            this.addDeliveries = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">113</span><span id="line.113">        }</span>
-<span class="source-line-no">114</span><span id="line.114">        this.addDeliveries.addAll(Arrays.asList(addDeliveries));</span>
-<span class="source-line-no">115</span><span id="line.115">        return this;</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">042</span><span id="line.42">    @Nullable</span>
+<span class="source-line-no">043</span><span id="line.43">    private com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft setParcelMeasurements;</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    @Nullable</span>
+<span class="source-line-no">046</span><span id="line.46">    private com.commercetools.importapi.models.order_patches.ParcelTrackingData setParcelTrackingData;</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    @Nullable</span>
+<span class="source-line-no">049</span><span id="line.49">    private java.util.List&lt;com.commercetools.importapi.models.order_patches.ParcelItems&gt; setParcelItems;</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Maps to &lt;code&gt;Order.returnInfo&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public OrderFieldBuilder addReturnInfo(</span>
+<span class="source-line-no">056</span><span id="line.56">            Function&lt;com.commercetools.importapi.models.order_patches.ReturnInfoBuilder, com.commercetools.importapi.models.order_patches.ReturnInfoBuilder&gt; builder) {</span>
+<span class="source-line-no">057</span><span id="line.57">        this.addReturnInfo = builder.apply(com.commercetools.importapi.models.order_patches.ReturnInfoBuilder.of())</span>
+<span class="source-line-no">058</span><span id="line.58">                .build();</span>
+<span class="source-line-no">059</span><span id="line.59">        return this;</span>
+<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    /**</span>
+<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Maps to &lt;code&gt;Order.returnInfo&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">     */</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    public OrderFieldBuilder addReturnInfo(</span>
+<span class="source-line-no">067</span><span id="line.67">            @Nullable final com.commercetools.importapi.models.order_patches.ReturnInfo addReturnInfo) {</span>
+<span class="source-line-no">068</span><span id="line.68">        this.addReturnInfo = addReturnInfo;</span>
+<span class="source-line-no">069</span><span id="line.69">        return this;</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    /**</span>
+<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">     */</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public OrderFieldBuilder addParcelToDelivery(</span>
+<span class="source-line-no">077</span><span id="line.77">            Function&lt;com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder, com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder&gt; builder) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.addParcelToDelivery = builder</span>
+<span class="source-line-no">079</span><span id="line.79">                .apply(com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder.of())</span>
+<span class="source-line-no">080</span><span id="line.80">                .build();</span>
+<span class="source-line-no">081</span><span id="line.81">        return this;</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    /**</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public OrderFieldBuilder addParcelToDelivery(</span>
+<span class="source-line-no">089</span><span id="line.89">            @Nullable final com.commercetools.importapi.models.order_patches.DeliveryParcel addParcelToDelivery) {</span>
+<span class="source-line-no">090</span><span id="line.90">        this.addParcelToDelivery = addParcelToDelivery;</span>
+<span class="source-line-no">091</span><span id="line.91">        return this;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    /**</span>
+<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">096</span><span id="line.96">     */</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public OrderFieldBuilder addDeliveries(</span>
+<span class="source-line-no">099</span><span id="line.99">            @Nullable final com.commercetools.importapi.models.order_patches.DeliveryDraft... addDeliveries) {</span>
+<span class="source-line-no">100</span><span id="line.100">        this.addDeliveries = new ArrayList&lt;&gt;(Arrays.asList(addDeliveries));</span>
+<span class="source-line-no">101</span><span id="line.101">        return this;</span>
+<span class="source-line-no">102</span><span id="line.102">    }</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">    /**</span>
+<span class="source-line-no">105</span><span id="line.105">     *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">106</span><span id="line.106">     */</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public OrderFieldBuilder addDeliveries(</span>
+<span class="source-line-no">109</span><span id="line.109">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.order_patches.DeliveryDraft&gt; addDeliveries) {</span>
+<span class="source-line-no">110</span><span id="line.110">        this.addDeliveries = addDeliveries;</span>
+<span class="source-line-no">111</span><span id="line.111">        return this;</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    /**</span>
+<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">116</span><span id="line.116">     */</span>
 <span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    /**</span>
-<span class="source-line-no">119</span><span id="line.119">    *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">120</span><span id="line.120">    */</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public OrderFieldBuilder plusAddDeliveries(</span>
-<span class="source-line-no">123</span><span id="line.123">            Function&lt;com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">124</span><span id="line.124">        if (this.addDeliveries == null) {</span>
-<span class="source-line-no">125</span><span id="line.125">            this.addDeliveries = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">126</span><span id="line.126">        }</span>
-<span class="source-line-no">127</span><span id="line.127">        this.addDeliveries</span>
-<span class="source-line-no">128</span><span id="line.128">                .add(builder.apply(com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder.of()).build());</span>
-<span class="source-line-no">129</span><span id="line.129">        return this;</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    /**</span>
-<span class="source-line-no">133</span><span id="line.133">    *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">134</span><span id="line.134">    */</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    public OrderFieldBuilder withAddDeliveries(</span>
-<span class="source-line-no">137</span><span id="line.137">            Function&lt;com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">138</span><span id="line.138">        this.addDeliveries = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">139</span><span id="line.139">        this.addDeliveries</span>
-<span class="source-line-no">140</span><span id="line.140">                .add(builder.apply(com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder.of()).build());</span>
-<span class="source-line-no">141</span><span id="line.141">        return this;</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    /**</span>
-<span class="source-line-no">145</span><span id="line.145">    *  &lt;p&gt;Maps to &lt;code&gt;Order.removeDelivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">146</span><span id="line.146">    */</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public OrderFieldBuilder removeDelivery(</span>
-<span class="source-line-no">149</span><span id="line.149">            Function&lt;com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">150</span><span id="line.150">        this.removeDelivery = builder</span>
-<span class="source-line-no">151</span><span id="line.151">                .apply(com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder.of())</span>
-<span class="source-line-no">152</span><span id="line.152">                .build();</span>
-<span class="source-line-no">153</span><span id="line.153">        return this;</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    /**</span>
-<span class="source-line-no">157</span><span id="line.157">    *  &lt;p&gt;Maps to &lt;code&gt;Order.removeDelivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">158</span><span id="line.158">    */</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public OrderFieldBuilder removeDelivery(</span>
-<span class="source-line-no">161</span><span id="line.161">            @Nullable final com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft removeDelivery) {</span>
-<span class="source-line-no">162</span><span id="line.162">        this.removeDelivery = removeDelivery;</span>
-<span class="source-line-no">163</span><span id="line.163">        return this;</span>
-<span class="source-line-no">164</span><span id="line.164">    }</span>
-<span class="source-line-no">165</span><span id="line.165"></span>
-<span class="source-line-no">166</span><span id="line.166">    /**</span>
-<span class="source-line-no">167</span><span id="line.167">    *  &lt;p&gt;Maps to &lt;code&gt;Order.removeParcelFromDelivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">168</span><span id="line.168">    */</span>
-<span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    public OrderFieldBuilder removeParcelFromDelivery(</span>
-<span class="source-line-no">171</span><span id="line.171">            Function&lt;com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">172</span><span id="line.172">        this.removeParcelFromDelivery = builder</span>
-<span class="source-line-no">173</span><span id="line.173">                .apply(com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder.of())</span>
-<span class="source-line-no">174</span><span id="line.174">                .build();</span>
-<span class="source-line-no">175</span><span id="line.175">        return this;</span>
-<span class="source-line-no">176</span><span id="line.176">    }</span>
-<span class="source-line-no">177</span><span id="line.177"></span>
-<span class="source-line-no">178</span><span id="line.178">    /**</span>
-<span class="source-line-no">179</span><span id="line.179">    *  &lt;p&gt;Maps to &lt;code&gt;Order.removeParcelFromDelivery&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">180</span><span id="line.180">    */</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    public OrderFieldBuilder removeParcelFromDelivery(</span>
-<span class="source-line-no">183</span><span id="line.183">            @Nullable final com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft removeParcelFromDelivery) {</span>
-<span class="source-line-no">184</span><span id="line.184">        this.removeParcelFromDelivery = removeParcelFromDelivery;</span>
-<span class="source-line-no">185</span><span id="line.185">        return this;</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    /**</span>
-<span class="source-line-no">189</span><span id="line.189">    *  &lt;p&gt;Maps to &lt;code&gt;Order.addressDraft&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">190</span><span id="line.190">    */</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public OrderFieldBuilder setDeliveryAddress(</span>
-<span class="source-line-no">193</span><span id="line.193">            Function&lt;com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">194</span><span id="line.194">        this.setDeliveryAddress = builder</span>
-<span class="source-line-no">195</span><span id="line.195">                .apply(com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder.of())</span>
-<span class="source-line-no">196</span><span id="line.196">                .build();</span>
-<span class="source-line-no">197</span><span id="line.197">        return this;</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    /**</span>
-<span class="source-line-no">201</span><span id="line.201">    *  &lt;p&gt;Maps to &lt;code&gt;Order.addressDraft&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">202</span><span id="line.202">    */</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    public OrderFieldBuilder setDeliveryAddress(</span>
-<span class="source-line-no">205</span><span id="line.205">            @Nullable final com.commercetools.importapi.models.order_patches.DeliveryAddressDraft setDeliveryAddress) {</span>
-<span class="source-line-no">206</span><span id="line.206">        this.setDeliveryAddress = setDeliveryAddress;</span>
-<span class="source-line-no">207</span><span id="line.207">        return this;</span>
-<span class="source-line-no">208</span><span id="line.208">    }</span>
-<span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    /**</span>
-<span class="source-line-no">211</span><span id="line.211">    *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelMeasurements&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">212</span><span id="line.212">    */</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">    public OrderFieldBuilder setParcelMeasurements(</span>
-<span class="source-line-no">215</span><span id="line.215">            Function&lt;com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder, com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">216</span><span id="line.216">        this.setParcelMeasurements = builder</span>
-<span class="source-line-no">217</span><span id="line.217">                .apply(com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder.of())</span>
-<span class="source-line-no">218</span><span id="line.218">                .build();</span>
-<span class="source-line-no">219</span><span id="line.219">        return this;</span>
-<span class="source-line-no">220</span><span id="line.220">    }</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">    /**</span>
-<span class="source-line-no">223</span><span id="line.223">    *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelMeasurements&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">224</span><span id="line.224">    */</span>
-<span class="source-line-no">225</span><span id="line.225"></span>
-<span class="source-line-no">226</span><span id="line.226">    public OrderFieldBuilder setParcelMeasurements(</span>
-<span class="source-line-no">227</span><span id="line.227">            @Nullable final com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft setParcelMeasurements) {</span>
-<span class="source-line-no">228</span><span id="line.228">        this.setParcelMeasurements = setParcelMeasurements;</span>
-<span class="source-line-no">229</span><span id="line.229">        return this;</span>
-<span class="source-line-no">230</span><span id="line.230">    }</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    /**</span>
-<span class="source-line-no">233</span><span id="line.233">    *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelTrackingData&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">234</span><span id="line.234">    */</span>
-<span class="source-line-no">235</span><span id="line.235"></span>
-<span class="source-line-no">236</span><span id="line.236">    public OrderFieldBuilder setParcelTrackingData(</span>
-<span class="source-line-no">237</span><span id="line.237">            Function&lt;com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder, com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder&gt; builder) {</span>
-<span class="source-line-no">238</span><span id="line.238">        this.setParcelTrackingData = builder</span>
-<span class="source-line-no">239</span><span id="line.239">                .apply(com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder.of())</span>
-<span class="source-line-no">240</span><span id="line.240">                .build();</span>
-<span class="source-line-no">241</span><span id="line.241">        return this;</span>
-<span class="source-line-no">242</span><span id="line.242">    }</span>
-<span class="source-line-no">243</span><span id="line.243"></span>
-<span class="source-line-no">244</span><span id="line.244">    /**</span>
-<span class="source-line-no">245</span><span id="line.245">    *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelTrackingData&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">246</span><span id="line.246">    */</span>
-<span class="source-line-no">247</span><span id="line.247"></span>
-<span class="source-line-no">248</span><span id="line.248">    public OrderFieldBuilder setParcelTrackingData(</span>
-<span class="source-line-no">249</span><span id="line.249">            @Nullable final com.commercetools.importapi.models.order_patches.ParcelTrackingData setParcelTrackingData) {</span>
-<span class="source-line-no">250</span><span id="line.250">        this.setParcelTrackingData = setParcelTrackingData;</span>
-<span class="source-line-no">251</span><span id="line.251">        return this;</span>
-<span class="source-line-no">252</span><span id="line.252">    }</span>
-<span class="source-line-no">253</span><span id="line.253"></span>
-<span class="source-line-no">254</span><span id="line.254">    /**</span>
-<span class="source-line-no">255</span><span id="line.255">    *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">256</span><span id="line.256">    */</span>
-<span class="source-line-no">257</span><span id="line.257"></span>
-<span class="source-line-no">258</span><span id="line.258">    public OrderFieldBuilder setParcelItems(</span>
-<span class="source-line-no">259</span><span id="line.259">            @Nullable final com.commercetools.importapi.models.order_patches.ParcelItems... setParcelItems) {</span>
-<span class="source-line-no">260</span><span id="line.260">        this.setParcelItems = new ArrayList&lt;&gt;(Arrays.asList(setParcelItems));</span>
-<span class="source-line-no">261</span><span id="line.261">        return this;</span>
-<span class="source-line-no">262</span><span id="line.262">    }</span>
-<span class="source-line-no">263</span><span id="line.263"></span>
-<span class="source-line-no">264</span><span id="line.264">    /**</span>
-<span class="source-line-no">265</span><span id="line.265">    *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">266</span><span id="line.266">    */</span>
-<span class="source-line-no">267</span><span id="line.267"></span>
-<span class="source-line-no">268</span><span id="line.268">    public OrderFieldBuilder setParcelItems(</span>
-<span class="source-line-no">269</span><span id="line.269">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.order_patches.ParcelItems&gt; setParcelItems) {</span>
-<span class="source-line-no">270</span><span id="line.270">        this.setParcelItems = setParcelItems;</span>
-<span class="source-line-no">271</span><span id="line.271">        return this;</span>
-<span class="source-line-no">272</span><span id="line.272">    }</span>
-<span class="source-line-no">273</span><span id="line.273"></span>
-<span class="source-line-no">274</span><span id="line.274">    /**</span>
-<span class="source-line-no">275</span><span id="line.275">    *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">276</span><span id="line.276">    */</span>
-<span class="source-line-no">277</span><span id="line.277"></span>
-<span class="source-line-no">278</span><span id="line.278">    public OrderFieldBuilder plusSetParcelItems(</span>
-<span class="source-line-no">279</span><span id="line.279">            @Nullable final com.commercetools.importapi.models.order_patches.ParcelItems... setParcelItems) {</span>
-<span class="source-line-no">280</span><span id="line.280">        if (this.setParcelItems == null) {</span>
-<span class="source-line-no">281</span><span id="line.281">            this.setParcelItems = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">282</span><span id="line.282">        }</span>
-<span class="source-line-no">283</span><span id="line.283">        this.setParcelItems.addAll(Arrays.asList(setParcelItems));</span>
-<span class="source-line-no">284</span><span id="line.284">        return this;</span>
-<span class="source-line-no">285</span><span id="line.285">    }</span>
+<span class="source-line-no">118</span><span id="line.118">    public OrderFieldBuilder plusAddDeliveries(</span>
+<span class="source-line-no">119</span><span id="line.119">            @Nullable final com.commercetools.importapi.models.order_patches.DeliveryDraft... addDeliveries) {</span>
+<span class="source-line-no">120</span><span id="line.120">        if (this.addDeliveries == null) {</span>
+<span class="source-line-no">121</span><span id="line.121">            this.addDeliveries = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">122</span><span id="line.122">        }</span>
+<span class="source-line-no">123</span><span id="line.123">        this.addDeliveries.addAll(Arrays.asList(addDeliveries));</span>
+<span class="source-line-no">124</span><span id="line.124">        return this;</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    /**</span>
+<span class="source-line-no">128</span><span id="line.128">     *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">129</span><span id="line.129">     */</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    public OrderFieldBuilder plusAddDeliveries(</span>
+<span class="source-line-no">132</span><span id="line.132">            Function&lt;com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">133</span><span id="line.133">        if (this.addDeliveries == null) {</span>
+<span class="source-line-no">134</span><span id="line.134">            this.addDeliveries = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">135</span><span id="line.135">        }</span>
+<span class="source-line-no">136</span><span id="line.136">        this.addDeliveries</span>
+<span class="source-line-no">137</span><span id="line.137">                .add(builder.apply(com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder.of()).build());</span>
+<span class="source-line-no">138</span><span id="line.138">        return this;</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    /**</span>
+<span class="source-line-no">142</span><span id="line.142">     *  &lt;p&gt;Maps to &lt;code&gt;Order.delivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">143</span><span id="line.143">     */</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    public OrderFieldBuilder withAddDeliveries(</span>
+<span class="source-line-no">146</span><span id="line.146">            Function&lt;com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">147</span><span id="line.147">        this.addDeliveries = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">148</span><span id="line.148">        this.addDeliveries</span>
+<span class="source-line-no">149</span><span id="line.149">                .add(builder.apply(com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder.of()).build());</span>
+<span class="source-line-no">150</span><span id="line.150">        return this;</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    /**</span>
+<span class="source-line-no">154</span><span id="line.154">     *  &lt;p&gt;Maps to &lt;code&gt;Order.removeDelivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">155</span><span id="line.155">     */</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    public OrderFieldBuilder removeDelivery(</span>
+<span class="source-line-no">158</span><span id="line.158">            Function&lt;com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">159</span><span id="line.159">        this.removeDelivery = builder</span>
+<span class="source-line-no">160</span><span id="line.160">                .apply(com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder.of())</span>
+<span class="source-line-no">161</span><span id="line.161">                .build();</span>
+<span class="source-line-no">162</span><span id="line.162">        return this;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    /**</span>
+<span class="source-line-no">166</span><span id="line.166">     *  &lt;p&gt;Maps to &lt;code&gt;Order.removeDelivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">167</span><span id="line.167">     */</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    public OrderFieldBuilder removeDelivery(</span>
+<span class="source-line-no">170</span><span id="line.170">            @Nullable final com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft removeDelivery) {</span>
+<span class="source-line-no">171</span><span id="line.171">        this.removeDelivery = removeDelivery;</span>
+<span class="source-line-no">172</span><span id="line.172">        return this;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    /**</span>
+<span class="source-line-no">176</span><span id="line.176">     *  &lt;p&gt;Maps to &lt;code&gt;Order.removeParcelFromDelivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">177</span><span id="line.177">     */</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">    public OrderFieldBuilder removeParcelFromDelivery(</span>
+<span class="source-line-no">180</span><span id="line.180">            Function&lt;com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">181</span><span id="line.181">        this.removeParcelFromDelivery = builder</span>
+<span class="source-line-no">182</span><span id="line.182">                .apply(com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder.of())</span>
+<span class="source-line-no">183</span><span id="line.183">                .build();</span>
+<span class="source-line-no">184</span><span id="line.184">        return this;</span>
+<span class="source-line-no">185</span><span id="line.185">    }</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">    /**</span>
+<span class="source-line-no">188</span><span id="line.188">     *  &lt;p&gt;Maps to &lt;code&gt;Order.removeParcelFromDelivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">189</span><span id="line.189">     */</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    public OrderFieldBuilder removeParcelFromDelivery(</span>
+<span class="source-line-no">192</span><span id="line.192">            @Nullable final com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft removeParcelFromDelivery) {</span>
+<span class="source-line-no">193</span><span id="line.193">        this.removeParcelFromDelivery = removeParcelFromDelivery;</span>
+<span class="source-line-no">194</span><span id="line.194">        return this;</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    /**</span>
+<span class="source-line-no">198</span><span id="line.198">     *  &lt;p&gt;Maps to &lt;code&gt;Order.addressDraft&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">199</span><span id="line.199">     */</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    public OrderFieldBuilder setDeliveryAddress(</span>
+<span class="source-line-no">202</span><span id="line.202">            Function&lt;com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">203</span><span id="line.203">        this.setDeliveryAddress = builder</span>
+<span class="source-line-no">204</span><span id="line.204">                .apply(com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder.of())</span>
+<span class="source-line-no">205</span><span id="line.205">                .build();</span>
+<span class="source-line-no">206</span><span id="line.206">        return this;</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">    /**</span>
+<span class="source-line-no">210</span><span id="line.210">     *  &lt;p&gt;Maps to &lt;code&gt;Order.addressDraft&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">211</span><span id="line.211">     */</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public OrderFieldBuilder setDeliveryAddress(</span>
+<span class="source-line-no">214</span><span id="line.214">            @Nullable final com.commercetools.importapi.models.order_patches.DeliveryAddressDraft setDeliveryAddress) {</span>
+<span class="source-line-no">215</span><span id="line.215">        this.setDeliveryAddress = setDeliveryAddress;</span>
+<span class="source-line-no">216</span><span id="line.216">        return this;</span>
+<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">    /**</span>
+<span class="source-line-no">220</span><span id="line.220">     *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelMeasurements&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">221</span><span id="line.221">     */</span>
+<span class="source-line-no">222</span><span id="line.222"></span>
+<span class="source-line-no">223</span><span id="line.223">    public OrderFieldBuilder setParcelMeasurements(</span>
+<span class="source-line-no">224</span><span id="line.224">            Function&lt;com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder, com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">225</span><span id="line.225">        this.setParcelMeasurements = builder</span>
+<span class="source-line-no">226</span><span id="line.226">                .apply(com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder.of())</span>
+<span class="source-line-no">227</span><span id="line.227">                .build();</span>
+<span class="source-line-no">228</span><span id="line.228">        return this;</span>
+<span class="source-line-no">229</span><span id="line.229">    }</span>
+<span class="source-line-no">230</span><span id="line.230"></span>
+<span class="source-line-no">231</span><span id="line.231">    /**</span>
+<span class="source-line-no">232</span><span id="line.232">     *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelMeasurements&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">233</span><span id="line.233">     */</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">    public OrderFieldBuilder setParcelMeasurements(</span>
+<span class="source-line-no">236</span><span id="line.236">            @Nullable final com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft setParcelMeasurements) {</span>
+<span class="source-line-no">237</span><span id="line.237">        this.setParcelMeasurements = setParcelMeasurements;</span>
+<span class="source-line-no">238</span><span id="line.238">        return this;</span>
+<span class="source-line-no">239</span><span id="line.239">    }</span>
+<span class="source-line-no">240</span><span id="line.240"></span>
+<span class="source-line-no">241</span><span id="line.241">    /**</span>
+<span class="source-line-no">242</span><span id="line.242">     *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelTrackingData&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">243</span><span id="line.243">     */</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">    public OrderFieldBuilder setParcelTrackingData(</span>
+<span class="source-line-no">246</span><span id="line.246">            Function&lt;com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder, com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder&gt; builder) {</span>
+<span class="source-line-no">247</span><span id="line.247">        this.setParcelTrackingData = builder</span>
+<span class="source-line-no">248</span><span id="line.248">                .apply(com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder.of())</span>
+<span class="source-line-no">249</span><span id="line.249">                .build();</span>
+<span class="source-line-no">250</span><span id="line.250">        return this;</span>
+<span class="source-line-no">251</span><span id="line.251">    }</span>
+<span class="source-line-no">252</span><span id="line.252"></span>
+<span class="source-line-no">253</span><span id="line.253">    /**</span>
+<span class="source-line-no">254</span><span id="line.254">     *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelTrackingData&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">255</span><span id="line.255">     */</span>
+<span class="source-line-no">256</span><span id="line.256"></span>
+<span class="source-line-no">257</span><span id="line.257">    public OrderFieldBuilder setParcelTrackingData(</span>
+<span class="source-line-no">258</span><span id="line.258">            @Nullable final com.commercetools.importapi.models.order_patches.ParcelTrackingData setParcelTrackingData) {</span>
+<span class="source-line-no">259</span><span id="line.259">        this.setParcelTrackingData = setParcelTrackingData;</span>
+<span class="source-line-no">260</span><span id="line.260">        return this;</span>
+<span class="source-line-no">261</span><span id="line.261">    }</span>
+<span class="source-line-no">262</span><span id="line.262"></span>
+<span class="source-line-no">263</span><span id="line.263">    /**</span>
+<span class="source-line-no">264</span><span id="line.264">     *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">265</span><span id="line.265">     */</span>
+<span class="source-line-no">266</span><span id="line.266"></span>
+<span class="source-line-no">267</span><span id="line.267">    public OrderFieldBuilder setParcelItems(</span>
+<span class="source-line-no">268</span><span id="line.268">            @Nullable final com.commercetools.importapi.models.order_patches.ParcelItems... setParcelItems) {</span>
+<span class="source-line-no">269</span><span id="line.269">        this.setParcelItems = new ArrayList&lt;&gt;(Arrays.asList(setParcelItems));</span>
+<span class="source-line-no">270</span><span id="line.270">        return this;</span>
+<span class="source-line-no">271</span><span id="line.271">    }</span>
+<span class="source-line-no">272</span><span id="line.272"></span>
+<span class="source-line-no">273</span><span id="line.273">    /**</span>
+<span class="source-line-no">274</span><span id="line.274">     *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">275</span><span id="line.275">     */</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">    public OrderFieldBuilder setParcelItems(</span>
+<span class="source-line-no">278</span><span id="line.278">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.order_patches.ParcelItems&gt; setParcelItems) {</span>
+<span class="source-line-no">279</span><span id="line.279">        this.setParcelItems = setParcelItems;</span>
+<span class="source-line-no">280</span><span id="line.280">        return this;</span>
+<span class="source-line-no">281</span><span id="line.281">    }</span>
+<span class="source-line-no">282</span><span id="line.282"></span>
+<span class="source-line-no">283</span><span id="line.283">    /**</span>
+<span class="source-line-no">284</span><span id="line.284">     *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">285</span><span id="line.285">     */</span>
 <span class="source-line-no">286</span><span id="line.286"></span>
-<span class="source-line-no">287</span><span id="line.287">    /**</span>
-<span class="source-line-no">288</span><span id="line.288">    *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">289</span><span id="line.289">    */</span>
-<span class="source-line-no">290</span><span id="line.290"></span>
-<span class="source-line-no">291</span><span id="line.291">    public OrderFieldBuilder plusSetParcelItems(</span>
-<span class="source-line-no">292</span><span id="line.292">            Function&lt;com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItemsBuilder&gt; builder) {</span>
-<span class="source-line-no">293</span><span id="line.293">        if (this.setParcelItems == null) {</span>
-<span class="source-line-no">294</span><span id="line.294">            this.setParcelItems = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">295</span><span id="line.295">        }</span>
-<span class="source-line-no">296</span><span id="line.296">        this.setParcelItems</span>
-<span class="source-line-no">297</span><span id="line.297">                .add(builder.apply(com.commercetools.importapi.models.order_patches.ParcelItemsBuilder.of()).build());</span>
-<span class="source-line-no">298</span><span id="line.298">        return this;</span>
-<span class="source-line-no">299</span><span id="line.299">    }</span>
-<span class="source-line-no">300</span><span id="line.300"></span>
-<span class="source-line-no">301</span><span id="line.301">    /**</span>
-<span class="source-line-no">302</span><span id="line.302">    *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">303</span><span id="line.303">    */</span>
-<span class="source-line-no">304</span><span id="line.304"></span>
-<span class="source-line-no">305</span><span id="line.305">    public OrderFieldBuilder withSetParcelItems(</span>
-<span class="source-line-no">306</span><span id="line.306">            Function&lt;com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItemsBuilder&gt; builder) {</span>
-<span class="source-line-no">307</span><span id="line.307">        this.setParcelItems = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">308</span><span id="line.308">        this.setParcelItems</span>
-<span class="source-line-no">309</span><span id="line.309">                .add(builder.apply(com.commercetools.importapi.models.order_patches.ParcelItemsBuilder.of()).build());</span>
-<span class="source-line-no">310</span><span id="line.310">        return this;</span>
-<span class="source-line-no">311</span><span id="line.311">    }</span>
-<span class="source-line-no">312</span><span id="line.312"></span>
-<span class="source-line-no">313</span><span id="line.313">    @Nullable</span>
-<span class="source-line-no">314</span><span id="line.314">    public com.commercetools.importapi.models.order_patches.ReturnInfo getAddReturnInfo() {</span>
-<span class="source-line-no">315</span><span id="line.315">        return this.addReturnInfo;</span>
-<span class="source-line-no">316</span><span id="line.316">    }</span>
-<span class="source-line-no">317</span><span id="line.317"></span>
-<span class="source-line-no">318</span><span id="line.318">    @Nullable</span>
-<span class="source-line-no">319</span><span id="line.319">    public com.commercetools.importapi.models.order_patches.DeliveryParcel getAddParcelToDelivery() {</span>
-<span class="source-line-no">320</span><span id="line.320">        return this.addParcelToDelivery;</span>
-<span class="source-line-no">321</span><span id="line.321">    }</span>
-<span class="source-line-no">322</span><span id="line.322"></span>
-<span class="source-line-no">323</span><span id="line.323">    @Nullable</span>
-<span class="source-line-no">324</span><span id="line.324">    public java.util.List&lt;com.commercetools.importapi.models.order_patches.DeliveryDraft&gt; getAddDeliveries() {</span>
-<span class="source-line-no">325</span><span id="line.325">        return this.addDeliveries;</span>
-<span class="source-line-no">326</span><span id="line.326">    }</span>
-<span class="source-line-no">327</span><span id="line.327"></span>
-<span class="source-line-no">328</span><span id="line.328">    @Nullable</span>
-<span class="source-line-no">329</span><span id="line.329">    public com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft getRemoveDelivery() {</span>
-<span class="source-line-no">330</span><span id="line.330">        return this.removeDelivery;</span>
-<span class="source-line-no">331</span><span id="line.331">    }</span>
-<span class="source-line-no">332</span><span id="line.332"></span>
-<span class="source-line-no">333</span><span id="line.333">    @Nullable</span>
-<span class="source-line-no">334</span><span id="line.334">    public com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft getRemoveParcelFromDelivery() {</span>
-<span class="source-line-no">335</span><span id="line.335">        return this.removeParcelFromDelivery;</span>
-<span class="source-line-no">336</span><span id="line.336">    }</span>
-<span class="source-line-no">337</span><span id="line.337"></span>
-<span class="source-line-no">338</span><span id="line.338">    @Nullable</span>
-<span class="source-line-no">339</span><span id="line.339">    public com.commercetools.importapi.models.order_patches.DeliveryAddressDraft getSetDeliveryAddress() {</span>
-<span class="source-line-no">340</span><span id="line.340">        return this.setDeliveryAddress;</span>
-<span class="source-line-no">341</span><span id="line.341">    }</span>
-<span class="source-line-no">342</span><span id="line.342"></span>
-<span class="source-line-no">343</span><span id="line.343">    @Nullable</span>
-<span class="source-line-no">344</span><span id="line.344">    public com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft getSetParcelMeasurements() {</span>
-<span class="source-line-no">345</span><span id="line.345">        return this.setParcelMeasurements;</span>
-<span class="source-line-no">346</span><span id="line.346">    }</span>
-<span class="source-line-no">347</span><span id="line.347"></span>
-<span class="source-line-no">348</span><span id="line.348">    @Nullable</span>
-<span class="source-line-no">349</span><span id="line.349">    public com.commercetools.importapi.models.order_patches.ParcelTrackingData getSetParcelTrackingData() {</span>
-<span class="source-line-no">350</span><span id="line.350">        return this.setParcelTrackingData;</span>
-<span class="source-line-no">351</span><span id="line.351">    }</span>
-<span class="source-line-no">352</span><span id="line.352"></span>
-<span class="source-line-no">353</span><span id="line.353">    @Nullable</span>
-<span class="source-line-no">354</span><span id="line.354">    public java.util.List&lt;com.commercetools.importapi.models.order_patches.ParcelItems&gt; getSetParcelItems() {</span>
-<span class="source-line-no">355</span><span id="line.355">        return this.setParcelItems;</span>
-<span class="source-line-no">356</span><span id="line.356">    }</span>
-<span class="source-line-no">357</span><span id="line.357"></span>
-<span class="source-line-no">358</span><span id="line.358">    public OrderField build() {</span>
-<span class="source-line-no">359</span><span id="line.359">        return new OrderFieldImpl(addReturnInfo, addParcelToDelivery, addDeliveries, removeDelivery,</span>
-<span class="source-line-no">360</span><span id="line.360">            removeParcelFromDelivery, setDeliveryAddress, setParcelMeasurements, setParcelTrackingData, setParcelItems);</span>
-<span class="source-line-no">361</span><span id="line.361">    }</span>
-<span class="source-line-no">362</span><span id="line.362"></span>
-<span class="source-line-no">363</span><span id="line.363">    /**</span>
-<span class="source-line-no">364</span><span id="line.364">     * builds OrderField without checking for non null required values</span>
-<span class="source-line-no">365</span><span id="line.365">     */</span>
-<span class="source-line-no">366</span><span id="line.366">    public OrderField buildUnchecked() {</span>
-<span class="source-line-no">367</span><span id="line.367">        return new OrderFieldImpl(addReturnInfo, addParcelToDelivery, addDeliveries, removeDelivery,</span>
-<span class="source-line-no">368</span><span id="line.368">            removeParcelFromDelivery, setDeliveryAddress, setParcelMeasurements, setParcelTrackingData, setParcelItems);</span>
-<span class="source-line-no">369</span><span id="line.369">    }</span>
-<span class="source-line-no">370</span><span id="line.370"></span>
-<span class="source-line-no">371</span><span id="line.371">    public static OrderFieldBuilder of() {</span>
-<span class="source-line-no">372</span><span id="line.372">        return new OrderFieldBuilder();</span>
-<span class="source-line-no">373</span><span id="line.373">    }</span>
-<span class="source-line-no">374</span><span id="line.374"></span>
-<span class="source-line-no">375</span><span id="line.375">    public static OrderFieldBuilder of(final OrderField template) {</span>
-<span class="source-line-no">376</span><span id="line.376">        OrderFieldBuilder builder = new OrderFieldBuilder();</span>
-<span class="source-line-no">377</span><span id="line.377">        builder.addReturnInfo = template.getAddReturnInfo();</span>
-<span class="source-line-no">378</span><span id="line.378">        builder.addParcelToDelivery = template.getAddParcelToDelivery();</span>
-<span class="source-line-no">379</span><span id="line.379">        builder.addDeliveries = template.getAddDeliveries();</span>
-<span class="source-line-no">380</span><span id="line.380">        builder.removeDelivery = template.getRemoveDelivery();</span>
-<span class="source-line-no">381</span><span id="line.381">        builder.removeParcelFromDelivery = template.getRemoveParcelFromDelivery();</span>
-<span class="source-line-no">382</span><span id="line.382">        builder.setDeliveryAddress = template.getSetDeliveryAddress();</span>
-<span class="source-line-no">383</span><span id="line.383">        builder.setParcelMeasurements = template.getSetParcelMeasurements();</span>
-<span class="source-line-no">384</span><span id="line.384">        builder.setParcelTrackingData = template.getSetParcelTrackingData();</span>
-<span class="source-line-no">385</span><span id="line.385">        builder.setParcelItems = template.getSetParcelItems();</span>
-<span class="source-line-no">386</span><span id="line.386">        return builder;</span>
-<span class="source-line-no">387</span><span id="line.387">    }</span>
-<span class="source-line-no">388</span><span id="line.388"></span>
-<span class="source-line-no">389</span><span id="line.389">}</span>
+<span class="source-line-no">287</span><span id="line.287">    public OrderFieldBuilder plusSetParcelItems(</span>
+<span class="source-line-no">288</span><span id="line.288">            @Nullable final com.commercetools.importapi.models.order_patches.ParcelItems... setParcelItems) {</span>
+<span class="source-line-no">289</span><span id="line.289">        if (this.setParcelItems == null) {</span>
+<span class="source-line-no">290</span><span id="line.290">            this.setParcelItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">291</span><span id="line.291">        }</span>
+<span class="source-line-no">292</span><span id="line.292">        this.setParcelItems.addAll(Arrays.asList(setParcelItems));</span>
+<span class="source-line-no">293</span><span id="line.293">        return this;</span>
+<span class="source-line-no">294</span><span id="line.294">    }</span>
+<span class="source-line-no">295</span><span id="line.295"></span>
+<span class="source-line-no">296</span><span id="line.296">    /**</span>
+<span class="source-line-no">297</span><span id="line.297">     *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">298</span><span id="line.298">     */</span>
+<span class="source-line-no">299</span><span id="line.299"></span>
+<span class="source-line-no">300</span><span id="line.300">    public OrderFieldBuilder plusSetParcelItems(</span>
+<span class="source-line-no">301</span><span id="line.301">            Function&lt;com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItemsBuilder&gt; builder) {</span>
+<span class="source-line-no">302</span><span id="line.302">        if (this.setParcelItems == null) {</span>
+<span class="source-line-no">303</span><span id="line.303">            this.setParcelItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">304</span><span id="line.304">        }</span>
+<span class="source-line-no">305</span><span id="line.305">        this.setParcelItems</span>
+<span class="source-line-no">306</span><span id="line.306">                .add(builder.apply(com.commercetools.importapi.models.order_patches.ParcelItemsBuilder.of()).build());</span>
+<span class="source-line-no">307</span><span id="line.307">        return this;</span>
+<span class="source-line-no">308</span><span id="line.308">    }</span>
+<span class="source-line-no">309</span><span id="line.309"></span>
+<span class="source-line-no">310</span><span id="line.310">    /**</span>
+<span class="source-line-no">311</span><span id="line.311">     *  &lt;p&gt;Maps to &lt;code&gt;Order.parcelItems&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">312</span><span id="line.312">     */</span>
+<span class="source-line-no">313</span><span id="line.313"></span>
+<span class="source-line-no">314</span><span id="line.314">    public OrderFieldBuilder withSetParcelItems(</span>
+<span class="source-line-no">315</span><span id="line.315">            Function&lt;com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItemsBuilder&gt; builder) {</span>
+<span class="source-line-no">316</span><span id="line.316">        this.setParcelItems = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">317</span><span id="line.317">        this.setParcelItems</span>
+<span class="source-line-no">318</span><span id="line.318">                .add(builder.apply(com.commercetools.importapi.models.order_patches.ParcelItemsBuilder.of()).build());</span>
+<span class="source-line-no">319</span><span id="line.319">        return this;</span>
+<span class="source-line-no">320</span><span id="line.320">    }</span>
+<span class="source-line-no">321</span><span id="line.321"></span>
+<span class="source-line-no">322</span><span id="line.322">    @Nullable</span>
+<span class="source-line-no">323</span><span id="line.323">    public com.commercetools.importapi.models.order_patches.ReturnInfo getAddReturnInfo() {</span>
+<span class="source-line-no">324</span><span id="line.324">        return this.addReturnInfo;</span>
+<span class="source-line-no">325</span><span id="line.325">    }</span>
+<span class="source-line-no">326</span><span id="line.326"></span>
+<span class="source-line-no">327</span><span id="line.327">    @Nullable</span>
+<span class="source-line-no">328</span><span id="line.328">    public com.commercetools.importapi.models.order_patches.DeliveryParcel getAddParcelToDelivery() {</span>
+<span class="source-line-no">329</span><span id="line.329">        return this.addParcelToDelivery;</span>
+<span class="source-line-no">330</span><span id="line.330">    }</span>
+<span class="source-line-no">331</span><span id="line.331"></span>
+<span class="source-line-no">332</span><span id="line.332">    @Nullable</span>
+<span class="source-line-no">333</span><span id="line.333">    public java.util.List&lt;com.commercetools.importapi.models.order_patches.DeliveryDraft&gt; getAddDeliveries() {</span>
+<span class="source-line-no">334</span><span id="line.334">        return this.addDeliveries;</span>
+<span class="source-line-no">335</span><span id="line.335">    }</span>
+<span class="source-line-no">336</span><span id="line.336"></span>
+<span class="source-line-no">337</span><span id="line.337">    @Nullable</span>
+<span class="source-line-no">338</span><span id="line.338">    public com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft getRemoveDelivery() {</span>
+<span class="source-line-no">339</span><span id="line.339">        return this.removeDelivery;</span>
+<span class="source-line-no">340</span><span id="line.340">    }</span>
+<span class="source-line-no">341</span><span id="line.341"></span>
+<span class="source-line-no">342</span><span id="line.342">    @Nullable</span>
+<span class="source-line-no">343</span><span id="line.343">    public com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft getRemoveParcelFromDelivery() {</span>
+<span class="source-line-no">344</span><span id="line.344">        return this.removeParcelFromDelivery;</span>
+<span class="source-line-no">345</span><span id="line.345">    }</span>
+<span class="source-line-no">346</span><span id="line.346"></span>
+<span class="source-line-no">347</span><span id="line.347">    @Nullable</span>
+<span class="source-line-no">348</span><span id="line.348">    public com.commercetools.importapi.models.order_patches.DeliveryAddressDraft getSetDeliveryAddress() {</span>
+<span class="source-line-no">349</span><span id="line.349">        return this.setDeliveryAddress;</span>
+<span class="source-line-no">350</span><span id="line.350">    }</span>
+<span class="source-line-no">351</span><span id="line.351"></span>
+<span class="source-line-no">352</span><span id="line.352">    @Nullable</span>
+<span class="source-line-no">353</span><span id="line.353">    public com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft getSetParcelMeasurements() {</span>
+<span class="source-line-no">354</span><span id="line.354">        return this.setParcelMeasurements;</span>
+<span class="source-line-no">355</span><span id="line.355">    }</span>
+<span class="source-line-no">356</span><span id="line.356"></span>
+<span class="source-line-no">357</span><span id="line.357">    @Nullable</span>
+<span class="source-line-no">358</span><span id="line.358">    public com.commercetools.importapi.models.order_patches.ParcelTrackingData getSetParcelTrackingData() {</span>
+<span class="source-line-no">359</span><span id="line.359">        return this.setParcelTrackingData;</span>
+<span class="source-line-no">360</span><span id="line.360">    }</span>
+<span class="source-line-no">361</span><span id="line.361"></span>
+<span class="source-line-no">362</span><span id="line.362">    @Nullable</span>
+<span class="source-line-no">363</span><span id="line.363">    public java.util.List&lt;com.commercetools.importapi.models.order_patches.ParcelItems&gt; getSetParcelItems() {</span>
+<span class="source-line-no">364</span><span id="line.364">        return this.setParcelItems;</span>
+<span class="source-line-no">365</span><span id="line.365">    }</span>
+<span class="source-line-no">366</span><span id="line.366"></span>
+<span class="source-line-no">367</span><span id="line.367">    public OrderField build() {</span>
+<span class="source-line-no">368</span><span id="line.368">        return new OrderFieldImpl(addReturnInfo, addParcelToDelivery, addDeliveries, removeDelivery,</span>
+<span class="source-line-no">369</span><span id="line.369">            removeParcelFromDelivery, setDeliveryAddress, setParcelMeasurements, setParcelTrackingData, setParcelItems);</span>
+<span class="source-line-no">370</span><span id="line.370">    }</span>
+<span class="source-line-no">371</span><span id="line.371"></span>
+<span class="source-line-no">372</span><span id="line.372">    /**</span>
+<span class="source-line-no">373</span><span id="line.373">     * builds OrderField without checking for non null required values</span>
+<span class="source-line-no">374</span><span id="line.374">     */</span>
+<span class="source-line-no">375</span><span id="line.375">    public OrderField buildUnchecked() {</span>
+<span class="source-line-no">376</span><span id="line.376">        return new OrderFieldImpl(addReturnInfo, addParcelToDelivery, addDeliveries, removeDelivery,</span>
+<span class="source-line-no">377</span><span id="line.377">            removeParcelFromDelivery, setDeliveryAddress, setParcelMeasurements, setParcelTrackingData, setParcelItems);</span>
+<span class="source-line-no">378</span><span id="line.378">    }</span>
+<span class="source-line-no">379</span><span id="line.379"></span>
+<span class="source-line-no">380</span><span id="line.380">    public static OrderFieldBuilder of() {</span>
+<span class="source-line-no">381</span><span id="line.381">        return new OrderFieldBuilder();</span>
+<span class="source-line-no">382</span><span id="line.382">    }</span>
+<span class="source-line-no">383</span><span id="line.383"></span>
+<span class="source-line-no">384</span><span id="line.384">    public static OrderFieldBuilder of(final OrderField template) {</span>
+<span class="source-line-no">385</span><span id="line.385">        OrderFieldBuilder builder = new OrderFieldBuilder();</span>
+<span class="source-line-no">386</span><span id="line.386">        builder.addReturnInfo = template.getAddReturnInfo();</span>
+<span class="source-line-no">387</span><span id="line.387">        builder.addParcelToDelivery = template.getAddParcelToDelivery();</span>
+<span class="source-line-no">388</span><span id="line.388">        builder.addDeliveries = template.getAddDeliveries();</span>
+<span class="source-line-no">389</span><span id="line.389">        builder.removeDelivery = template.getRemoveDelivery();</span>
+<span class="source-line-no">390</span><span id="line.390">        builder.removeParcelFromDelivery = template.getRemoveParcelFromDelivery();</span>
+<span class="source-line-no">391</span><span id="line.391">        builder.setDeliveryAddress = template.getSetDeliveryAddress();</span>
+<span class="source-line-no">392</span><span id="line.392">        builder.setParcelMeasurements = template.getSetParcelMeasurements();</span>
+<span class="source-line-no">393</span><span id="line.393">        builder.setParcelTrackingData = template.getSetParcelTrackingData();</span>
+<span class="source-line-no">394</span><span id="line.394">        builder.setParcelItems = template.getSetParcelItems();</span>
+<span class="source-line-no">395</span><span id="line.395">        return builder;</span>
+<span class="source-line-no">396</span><span id="line.396">    }</span>
+<span class="source-line-no">397</span><span id="line.397"></span>
+<span class="source-line-no">398</span><span id="line.398">}</span>
 
 
 

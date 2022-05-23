@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StoreSetProductSelectionsActionImpl.html" title="class in com.commercetools.api.models.store">StoreSetProductSelectionsActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.16">StoreSetProductSelectionsAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.26">StoreSetProductSelectionsAction</a></span><span class="extends-implements">
 extends <a href="StoreUpdateAction.html" title="interface in com.commercetools.api.models.store">StoreUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StoreSetProductSelectionsAction storeSetProductSelectionsAction = StoreSetProductSelectionsAction.builder()
+           .plusProductSelections(productSelectionsBuilder -> productSelectionsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -167,7 +175,7 @@ extends <a href="StoreUpdateAction.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="SET_PRODUCT_SELECTIONS">
 <h3>SET_PRODUCT_SELECTIONS</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.20">SET_PRODUCT_SELECTIONS</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.30">SET_PRODUCT_SELECTIONS</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.store.StoreSetProductSelectionsAction.SET_PRODUCT_SELECTIONS">Constant Field Values</a></dd>
@@ -187,56 +195,56 @@ extends <a href="StoreUpdateAction.html" title="interface in com.commercetools.a
 <h3>getProductSelections</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSelectionSettingDraft.html" title="interface in com.commercetools.api.models.store">ProductSelectionSettingDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.25">getProductSelections</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSelectionSettingDraft.html" title="interface in com.commercetools.api.models.store">ProductSelectionSettingDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.35">getProductSelections</a></span>()</div>
 <div class="block"><p>The total of Product Selections to be set for this Store.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductSelections(com.commercetools.api.models.store.ProductSelectionSettingDraft...)">
 <h3>setProductSelections</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.30">setProductSelections</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionSettingDraft.html" title="interface in com.commercetools.api.models.store">ProductSelectionSettingDraft</a>...&nbsp;productSelections)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.40">setProductSelections</a></span>&#8203;<span class="parameters">(<a href="ProductSelectionSettingDraft.html" title="interface in com.commercetools.api.models.store">ProductSelectionSettingDraft</a>...&nbsp;productSelections)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductSelections(java.util.List)">
 <h3>setProductSelections</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.33">setProductSelections</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSelectionSettingDraft.html" title="interface in com.commercetools.api.models.store">ProductSelectionSettingDraft</a>&gt;&nbsp;productSelections)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.43">setProductSelections</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSelectionSettingDraft.html" title="interface in com.commercetools.api.models.store">ProductSelectionSettingDraft</a>&gt;&nbsp;productSelections)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.35">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.45">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.store.StoreSetProductSelectionsAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.39">of</a></span>&#8203;<span class="parameters">(<a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetProductSelectionsActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetProductSelectionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.45">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetProductSelectionsActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetProductSelectionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.55">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.store.StoreSetProductSelectionsAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetProductSelectionsActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetProductSelectionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.49">builder</a></span>&#8203;<span class="parameters">(<a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StoreSetProductSelectionsActionBuilder.html" title="class in com.commercetools.api.models.store">StoreSetProductSelectionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStoreSetProductSelectionsAction(java.util.function.Function)">
 <h3>withStoreSetProductSelectionsAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.53">withStoreSetProductSelectionsAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.63">withStoreSetProductSelectionsAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.57">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StoreSetProductSelectionsAction.html" title="interface in com.commercetools.api.models.store">StoreSetProductSelectionsAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/store/StoreSetProductSelectionsAction.html#line.67">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

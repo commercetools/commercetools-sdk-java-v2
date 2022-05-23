@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DuplicatePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicatePriceScopeError</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.10">DuplicatePriceScopeErrorBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.21">DuplicatePriceScopeErrorBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DuplicatePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicatePriceScopeError</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DuplicatePriceScopeError duplicatePriceScopeError = DuplicatePriceScopeError.builder()
+           .message("{message}")
+           .plusConflictingPrices(conflictingPricesBuilder -> conflictingPricesBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -181,7 +190,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DuplicatePriceScopeErrorBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.11">DuplicatePriceScopeErrorBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.22">DuplicatePriceScopeErrorBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -195,74 +204,74 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="message(java.lang.String)">
 <h3>message</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.19">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.30">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="values(java.util.Map)">
 <h3>values</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.24">values</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.35">values</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;values)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addValue(java.lang.String,java.lang.Object)">
 <h3>addValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.29">addValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.40">addValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="conflictingPrices(com.commercetools.api.models.common.Price...)">
 <h3>conflictingPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.37">conflictingPrices</a></span>&#8203;<span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>...&nbsp;conflictingPrices)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.48">conflictingPrices</a></span>&#8203;<span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>...&nbsp;conflictingPrices)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="conflictingPrices(java.util.List)">
 <h3>conflictingPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.43">conflictingPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&gt;&nbsp;conflictingPrices)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.54">conflictingPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&gt;&nbsp;conflictingPrices)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusConflictingPrices(com.commercetools.api.models.common.Price...)">
 <h3>plusConflictingPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.49">plusConflictingPrices</a></span>&#8203;<span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>...&nbsp;conflictingPrices)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.60">plusConflictingPrices</a></span>&#8203;<span class="parameters">(<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>...&nbsp;conflictingPrices)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusConflictingPrices(java.util.function.Function)">
 <h3>plusConflictingPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.58">plusConflictingPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>,&#8203;<a href="../common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.69">plusConflictingPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>,&#8203;<a href="../common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withConflictingPrices(java.util.function.Function)">
 <h3>withConflictingPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.67">withConflictingPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>,&#8203;<a href="../common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.78">withConflictingPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>,&#8203;<a href="../common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessage()">
 <h3>getMessage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.74">getMessage</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.85">getMessage</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValues()">
 <h3>getValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.78">getValues</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.89">getValues</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getConflictingPrices()">
 <h3>getConflictingPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.82">getConflictingPrices</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.93">getConflictingPrices</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicatePriceScopeError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.86">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicatePriceScopeError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.97">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DuplicatePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicatePriceScopeError</a>&gt;</code></dd>
@@ -272,20 +281,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicatePriceScopeError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.96">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicatePriceScopeError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.107">buildUnchecked</a></span>()</div>
 <div class="block">builds DuplicatePriceScopeError without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.100">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.111">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.DuplicatePriceScopeError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.104">of</a></span>&#8203;<span class="parameters">(<a href="DuplicatePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicatePriceScopeError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DuplicatePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicatePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicatePriceScopeErrorBuilder.html#line.115">of</a></span>&#8203;<span class="parameters">(<a href="DuplicatePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicatePriceScopeError</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

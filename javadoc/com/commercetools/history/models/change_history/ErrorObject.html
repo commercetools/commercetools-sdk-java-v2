@@ -80,7 +80,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ErrorObjectImpl.html" title="class in com.commercetools.history.models.change_history">ErrorObjectImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.15">ErrorObject</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.26">ErrorObject</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ErrorObject errorObject = ErrorObject.builder()
+           .code("{code}")
+           .message("{message}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -143,62 +152,62 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getCode()">
 <h3>getCode</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.19">getCode</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.30">getCode</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessage()">
 <h3>getMessage</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.23">getMessage</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.34">getMessage</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCode(java.lang.String)">
 <h3>setCode</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.27">setCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.38">setCode</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMessage(java.lang.String)">
 <h3>setMessage</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.29">setMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.40">setMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.31">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.42">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change_history.ErrorObject)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.35">of</a></span>&#8203;<span class="parameters">(<a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorObjectBuilder.html" title="class in com.commercetools.history.models.change_history">ErrorObjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.42">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorObjectBuilder.html" title="class in com.commercetools.history.models.change_history">ErrorObjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.53">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change_history.ErrorObject)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorObjectBuilder.html" title="class in com.commercetools.history.models.change_history">ErrorObjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.46">builder</a></span>&#8203;<span class="parameters">(<a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ErrorObjectBuilder.html" title="class in com.commercetools.history.models.change_history">ErrorObjectBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withErrorObject(java.util.function.Function)">
 <h3>withErrorObject</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.50">withErrorObject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.61">withErrorObject</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.54">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ErrorObject.html" title="interface in com.commercetools.history.models.change_history">ErrorObject</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ErrorObject.html#line.65">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImageSearchConfigResponse.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponse</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.9">ImageSearchConfigResponseBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.20">ImageSearchConfigResponseBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImageSearchConfigResponse.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponse</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImageSearchConfigResponse imageSearchConfigResponse = ImageSearchConfigResponse.builder()
+           .status(ImageSearchConfigStatus.ON)
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -161,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ImageSearchConfigResponseBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.10">ImageSearchConfigResponseBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.21">ImageSearchConfigResponseBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -175,32 +184,32 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="status(com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus)">
 <h3>status</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponseBuilder.html" title="class in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.20">status</a></span>&#8203;<span class="parameters">(<a href="ImageSearchConfigStatus.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigStatus</a>&nbsp;status)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponseBuilder.html" title="class in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.31">status</a></span>&#8203;<span class="parameters">(<a href="ImageSearchConfigStatus.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigStatus</a>&nbsp;status)</span></div>
 <div class="block"><p>The image search activation status.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponseBuilder.html" title="class in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.26">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponseBuilder.html" title="class in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.37">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStatus()">
 <h3>getStatus</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigStatus.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.31">getStatus</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigStatus.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigStatus</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.42">getStatus</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.35">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.46">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponse.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.39">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponse.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.50">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ImageSearchConfigResponse.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponse</a>&gt;</code></dd>
@@ -210,20 +219,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponse.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.48">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponse.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.59">buildUnchecked</a></span>()</div>
 <div class="block">builds ImageSearchConfigResponse without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponseBuilder.html" title="class in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.52">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponseBuilder.html" title="class in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponseBuilder.html" title="class in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="ImageSearchConfigResponse.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImageSearchConfigResponseBuilder.html" title="class in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search_config/ImageSearchConfigResponseBuilder.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="ImageSearchConfigResponse.html" title="interface in com.commercetools.ml.models.image_search_config">ImageSearchConfigResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

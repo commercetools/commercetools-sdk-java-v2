@@ -84,7 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="AzureEventGridDestinationImpl.html" title="class in com.commercetools.api.models.subscription">AzureEventGridDestinationImpl</a></code>, <code><a href="AzureServiceBusDestinationImpl.html" title="class in com.commercetools.api.models.subscription">AzureServiceBusDestinationImpl</a></code>, <code><a href="DestinationImpl.html" title="class in com.commercetools.api.models.subscription">DestinationImpl</a></code>, <code><a href="EventBridgeDestinationImpl.html" title="class in com.commercetools.api.models.subscription">EventBridgeDestinationImpl</a></code>, <code><a href="GoogleCloudPubSubDestinationImpl.html" title="class in com.commercetools.api.models.subscription">GoogleCloudPubSubDestinationImpl</a></code>, <code><a href="IronMqDestinationImpl.html" title="class in com.commercetools.api.models.subscription">IronMqDestinationImpl</a></code>, <code><a href="SnsDestinationImpl.html" title="class in com.commercetools.api.models.subscription">SnsDestinationImpl</a></code>, <code><a href="SqsDestinationImpl.html" title="class in com.commercetools.api.models.subscription">SqsDestinationImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.15">Destination</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.26">Destination</a></span></div>
+<div class="block">Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Destination destination = Destination.eventGridBuilder()
+           uri("{uri}")
+           accessKey("{accessKey}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -147,61 +156,61 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.28">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.39">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="eventGridBuilder()">
 <h3>eventGridBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureEventGridDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">AzureEventGridDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.32">eventGridBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureEventGridDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">AzureEventGridDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.43">eventGridBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="azureServiceBusBuilder()">
 <h3>azureServiceBusBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureServiceBusDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">AzureServiceBusDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.36">azureServiceBusBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AzureServiceBusDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">AzureServiceBusDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.47">azureServiceBusBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="eventBridgeBuilder()">
 <h3>eventBridgeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">EventBridgeDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.40">eventBridgeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">EventBridgeDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.51">eventBridgeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="googleCloudPubSubBuilder()">
 <h3>googleCloudPubSubBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GoogleCloudPubSubDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">GoogleCloudPubSubDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.44">googleCloudPubSubBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GoogleCloudPubSubDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">GoogleCloudPubSubDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.55">googleCloudPubSubBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="ironMqBuilder()">
 <h3>ironMqBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="IronMqDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">IronMqDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.48">ironMqBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="IronMqDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">IronMqDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.59">ironMqBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="snsBuilder()">
 <h3>snsBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SnsDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">SnsDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.52">snsBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SnsDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">SnsDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.63">snsBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="sqsBuilder()">
 <h3>sqsBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">SqsDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.56">sqsBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SqsDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">SqsDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.67">sqsBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDestination(java.util.function.Function)">
 <h3>withDestination</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.60">withDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.71">withDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.64">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/Destination.html#line.75">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

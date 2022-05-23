@@ -20,85 +20,96 @@
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">011</span><span id="line.11">public class UpdateBuilder implements Builder&lt;Update&gt; {</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    private Long version;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    private java.util.List&lt;com.commercetools.api.models.common.UpdateAction&gt; actions;</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    public UpdateBuilder version(final Long version) {</span>
-<span class="source-line-no">018</span><span id="line.18">        this.version = version;</span>
-<span class="source-line-no">019</span><span id="line.19">        return this;</span>
-<span class="source-line-no">020</span><span id="line.20">    }</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    public UpdateBuilder actions(final com.commercetools.api.models.common.UpdateAction... actions) {</span>
-<span class="source-line-no">023</span><span id="line.23">        this.actions = new ArrayList&lt;&gt;(Arrays.asList(actions));</span>
-<span class="source-line-no">024</span><span id="line.24">        return this;</span>
-<span class="source-line-no">025</span><span id="line.25">    }</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    public UpdateBuilder actions(final java.util.List&lt;com.commercetools.api.models.common.UpdateAction&gt; actions) {</span>
-<span class="source-line-no">028</span><span id="line.28">        this.actions = actions;</span>
-<span class="source-line-no">029</span><span id="line.29">        return this;</span>
-<span class="source-line-no">030</span><span id="line.30">    }</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    public UpdateBuilder plusActions(final com.commercetools.api.models.common.UpdateAction... actions) {</span>
-<span class="source-line-no">033</span><span id="line.33">        if (this.actions == null) {</span>
-<span class="source-line-no">034</span><span id="line.34">            this.actions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">035</span><span id="line.35">        }</span>
-<span class="source-line-no">036</span><span id="line.36">        this.actions.addAll(Arrays.asList(actions));</span>
-<span class="source-line-no">037</span><span id="line.37">        return this;</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public UpdateBuilder plusActions(</span>
-<span class="source-line-no">041</span><span id="line.41">            Function&lt;com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder&gt; builder) {</span>
-<span class="source-line-no">042</span><span id="line.42">        if (this.actions == null) {</span>
-<span class="source-line-no">043</span><span id="line.43">            this.actions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">044</span><span id="line.44">        }</span>
-<span class="source-line-no">045</span><span id="line.45">        this.actions.add(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()).build());</span>
-<span class="source-line-no">046</span><span id="line.46">        return this;</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public UpdateBuilder withActions(</span>
-<span class="source-line-no">050</span><span id="line.50">            Function&lt;com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder&gt; builder) {</span>
-<span class="source-line-no">051</span><span id="line.51">        this.actions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">052</span><span id="line.52">        this.actions.add(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()).build());</span>
-<span class="source-line-no">053</span><span id="line.53">        return this;</span>
-<span class="source-line-no">054</span><span id="line.54">    }</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public Long getVersion() {</span>
-<span class="source-line-no">057</span><span id="line.57">        return this.version;</span>
+<span class="source-line-no">010</span><span id="line.10">/**</span>
+<span class="source-line-no">011</span><span id="line.11"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">012</span><span id="line.12"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">013</span><span id="line.13"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">014</span><span id="line.14">   Update update = Update.builder()</span>
+<span class="source-line-no">015</span><span id="line.15">           .version(0.3)</span>
+<span class="source-line-no">016</span><span id="line.16">           .plusActions(actionsBuilder -&gt; actionsBuilder)</span>
+<span class="source-line-no">017</span><span id="line.17">           .build()</span>
+<span class="source-line-no">018</span><span id="line.18"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> &lt;/div&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> */</span>
+<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">022</span><span id="line.22">public class UpdateBuilder implements Builder&lt;Update&gt; {</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    private Long version;</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    private java.util.List&lt;com.commercetools.api.models.common.UpdateAction&gt; actions;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    public UpdateBuilder version(final Long version) {</span>
+<span class="source-line-no">029</span><span id="line.29">        this.version = version;</span>
+<span class="source-line-no">030</span><span id="line.30">        return this;</span>
+<span class="source-line-no">031</span><span id="line.31">    }</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    public UpdateBuilder actions(final com.commercetools.api.models.common.UpdateAction... actions) {</span>
+<span class="source-line-no">034</span><span id="line.34">        this.actions = new ArrayList&lt;&gt;(Arrays.asList(actions));</span>
+<span class="source-line-no">035</span><span id="line.35">        return this;</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public UpdateBuilder actions(final java.util.List&lt;com.commercetools.api.models.common.UpdateAction&gt; actions) {</span>
+<span class="source-line-no">039</span><span id="line.39">        this.actions = actions;</span>
+<span class="source-line-no">040</span><span id="line.40">        return this;</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    public UpdateBuilder plusActions(final com.commercetools.api.models.common.UpdateAction... actions) {</span>
+<span class="source-line-no">044</span><span id="line.44">        if (this.actions == null) {</span>
+<span class="source-line-no">045</span><span id="line.45">            this.actions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">046</span><span id="line.46">        }</span>
+<span class="source-line-no">047</span><span id="line.47">        this.actions.addAll(Arrays.asList(actions));</span>
+<span class="source-line-no">048</span><span id="line.48">        return this;</span>
+<span class="source-line-no">049</span><span id="line.49">    }</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    public UpdateBuilder plusActions(</span>
+<span class="source-line-no">052</span><span id="line.52">            Function&lt;com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder&gt; builder) {</span>
+<span class="source-line-no">053</span><span id="line.53">        if (this.actions == null) {</span>
+<span class="source-line-no">054</span><span id="line.54">            this.actions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">055</span><span id="line.55">        }</span>
+<span class="source-line-no">056</span><span id="line.56">        this.actions.add(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()).build());</span>
+<span class="source-line-no">057</span><span id="line.57">        return this;</span>
 <span class="source-line-no">058</span><span id="line.58">    }</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    public java.util.List&lt;com.commercetools.api.models.common.UpdateAction&gt; getActions() {</span>
-<span class="source-line-no">061</span><span id="line.61">        return this.actions;</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public Update build() {</span>
-<span class="source-line-no">065</span><span id="line.65">        Objects.requireNonNull(version, Update.class + ": version is missing");</span>
-<span class="source-line-no">066</span><span id="line.66">        Objects.requireNonNull(actions, Update.class + ": actions is missing");</span>
-<span class="source-line-no">067</span><span id="line.67">        return new UpdateImpl(version, actions);</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">     * builds Update without checking for non null required values</span>
-<span class="source-line-no">072</span><span id="line.72">     */</span>
-<span class="source-line-no">073</span><span id="line.73">    public Update buildUnchecked() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return new UpdateImpl(version, actions);</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public static UpdateBuilder of() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return new UpdateBuilder();</span>
+<span class="source-line-no">060</span><span id="line.60">    public UpdateBuilder withActions(</span>
+<span class="source-line-no">061</span><span id="line.61">            Function&lt;com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateActionBuilder&gt; builder) {</span>
+<span class="source-line-no">062</span><span id="line.62">        this.actions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">063</span><span id="line.63">        this.actions.add(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()).build());</span>
+<span class="source-line-no">064</span><span id="line.64">        return this;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public Long getVersion() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return this.version;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public java.util.List&lt;com.commercetools.api.models.common.UpdateAction&gt; getActions() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return this.actions;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public Update build() {</span>
+<span class="source-line-no">076</span><span id="line.76">        Objects.requireNonNull(version, Update.class + ": version is missing");</span>
+<span class="source-line-no">077</span><span id="line.77">        Objects.requireNonNull(actions, Update.class + ": actions is missing");</span>
+<span class="source-line-no">078</span><span id="line.78">        return new UpdateImpl(version, actions);</span>
 <span class="source-line-no">079</span><span id="line.79">    }</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public static UpdateBuilder of(final Update template) {</span>
-<span class="source-line-no">082</span><span id="line.82">        UpdateBuilder builder = new UpdateBuilder();</span>
-<span class="source-line-no">083</span><span id="line.83">        builder.version = template.getVersion();</span>
-<span class="source-line-no">084</span><span id="line.84">        builder.actions = template.getActions();</span>
-<span class="source-line-no">085</span><span id="line.85">        return builder;</span>
+<span class="source-line-no">081</span><span id="line.81">    /**</span>
+<span class="source-line-no">082</span><span id="line.82">     * builds Update without checking for non null required values</span>
+<span class="source-line-no">083</span><span id="line.83">     */</span>
+<span class="source-line-no">084</span><span id="line.84">    public Update buildUnchecked() {</span>
+<span class="source-line-no">085</span><span id="line.85">        return new UpdateImpl(version, actions);</span>
 <span class="source-line-no">086</span><span id="line.86">    }</span>
 <span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">}</span>
+<span class="source-line-no">088</span><span id="line.88">    public static UpdateBuilder of() {</span>
+<span class="source-line-no">089</span><span id="line.89">        return new UpdateBuilder();</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public static UpdateBuilder of(final Update template) {</span>
+<span class="source-line-no">093</span><span id="line.93">        UpdateBuilder builder = new UpdateBuilder();</span>
+<span class="source-line-no">094</span><span id="line.94">        builder.version = template.getVersion();</span>
+<span class="source-line-no">095</span><span id="line.95">        builder.actions = template.getActions();</span>
+<span class="source-line-no">096</span><span id="line.96">        return builder;</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">}</span>
 
 
 

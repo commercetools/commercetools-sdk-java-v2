@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class ScopedPriceImpl implements ScopedPrice, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String id;</span>
@@ -81,36 +81,36 @@
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">    *  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">072</span><span id="line.72">    */</span>
+<span class="source-line-no">071</span><span id="line.71">     *  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
 <span class="source-line-no">073</span><span id="line.73">    public com.commercetools.api.models.common.TypedMoney getValue() {</span>
 <span class="source-line-no">074</span><span id="line.74">        return this.value;</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">    *  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">079</span><span id="line.79">    */</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80">    public com.commercetools.api.models.common.TypedMoney getCurrentValue() {</span>
 <span class="source-line-no">081</span><span id="line.81">        return this.currentValue;</span>
 <span class="source-line-no">082</span><span id="line.82">    }</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
 <span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">    *  &lt;p&gt;Two-digit country code as per ISO 3166-1 alpha-2.&lt;/p&gt;</span>
-<span class="source-line-no">086</span><span id="line.86">    */</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;Two-digit country code as per ISO 3166-1 alpha-2.&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
 <span class="source-line-no">087</span><span id="line.87">    public String getCountry() {</span>
 <span class="source-line-no">088</span><span id="line.88">        return this.country;</span>
 <span class="source-line-no">089</span><span id="line.89">    }</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
 <span class="source-line-no">091</span><span id="line.91">    /**</span>
-<span class="source-line-no">092</span><span id="line.92">    *  &lt;p&gt;Reference to a CustomerGroup.&lt;/p&gt;</span>
-<span class="source-line-no">093</span><span id="line.93">    */</span>
+<span class="source-line-no">092</span><span id="line.92">     *  &lt;p&gt;Reference to a CustomerGroup.&lt;/p&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
 <span class="source-line-no">094</span><span id="line.94">    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {</span>
 <span class="source-line-no">095</span><span id="line.95">        return this.customerGroup;</span>
 <span class="source-line-no">096</span><span id="line.96">    }</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
 <span class="source-line-no">098</span><span id="line.98">    /**</span>
-<span class="source-line-no">099</span><span id="line.99">    *  &lt;p&gt;Reference to a Channel.&lt;/p&gt;</span>
-<span class="source-line-no">100</span><span id="line.100">    */</span>
+<span class="source-line-no">099</span><span id="line.99">     *  &lt;p&gt;Reference to a Channel.&lt;/p&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
 <span class="source-line-no">101</span><span id="line.101">    public com.commercetools.api.models.channel.ChannelReference getChannel() {</span>
 <span class="source-line-no">102</span><span id="line.102">        return this.channel;</span>
 <span class="source-line-no">103</span><span id="line.103">    }</span>
@@ -128,8 +128,8 @@
 <span class="source-line-no">115</span><span id="line.115">    }</span>
 <span class="source-line-no">116</span><span id="line.116"></span>
 <span class="source-line-no">117</span><span id="line.117">    /**</span>
-<span class="source-line-no">118</span><span id="line.118">    *  &lt;p&gt;Serves as value of the &lt;code&gt;custom&lt;/code&gt; field on a resource or data type customized with a Type.&lt;/p&gt;</span>
-<span class="source-line-no">119</span><span id="line.119">    */</span>
+<span class="source-line-no">118</span><span id="line.118">     *  &lt;p&gt;Serves as value of the &lt;code&gt;custom&lt;/code&gt; field on a resource or data type customized with a Type.&lt;/p&gt;</span>
+<span class="source-line-no">119</span><span id="line.119">     */</span>
 <span class="source-line-no">120</span><span id="line.120">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
 <span class="source-line-no">121</span><span id="line.121">        return this.custom;</span>
 <span class="source-line-no">122</span><span id="line.122">    }</span>

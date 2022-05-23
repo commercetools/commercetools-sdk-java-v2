@@ -83,9 +83,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetCategoryOrderHintChange.html" title="interface in com.commercetools.history.models.change">SetCategoryOrderHintChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.10">SetCategoryOrderHintChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.24">SetCategoryOrderHintChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetCategoryOrderHintChange.html" title="interface in com.commercetools.history.models.change">SetCategoryOrderHintChange</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetCategoryOrderHintChange setCategoryOrderHintChange = SetCategoryOrderHintChange.builder()
+           .change("{change}")
+           .catalogData("{catalogData}")
+           .categoryId("{categoryId}")
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -185,7 +197,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>SetCategoryOrderHintChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.11">SetCategoryOrderHintChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.25">SetCategoryOrderHintChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -199,80 +211,80 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.27">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.41">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <div class="block"><p>Update action for <code>setCategoryOrderHint</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="catalogData(java.lang.String)">
 <h3>catalogData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.32">catalogData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.46">catalogData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;catalogData)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="categoryId(java.lang.String)">
 <h3>categoryId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.37">categoryId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;categoryId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.51">categoryId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;categoryId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.util.function.Function)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.42">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a>,&#8203;<a href="../common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.56">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a>,&#8203;<a href="../common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(com.commercetools.history.models.common.CategoryOrderHints)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.49">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.63">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.function.Function)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.55">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a>,&#8203;<a href="../common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.69">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a>,&#8203;<a href="../common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.CategoryOrderHints)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.61">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.75">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.67">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.81">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCatalogData()">
 <h3>getCatalogData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.71">getCatalogData</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.85">getCatalogData</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCategoryId()">
 <h3>getCategoryId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.75">getCategoryId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.89">getCategoryId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.79">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.93">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.83">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.97">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChange.html" title="interface in com.commercetools.history.models.change">SetCategoryOrderHintChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.87">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChange.html" title="interface in com.commercetools.history.models.change">SetCategoryOrderHintChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.101">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetCategoryOrderHintChange.html" title="interface in com.commercetools.history.models.change">SetCategoryOrderHintChange</a>&gt;</code></dd>
@@ -282,20 +294,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChange.html" title="interface in com.commercetools.history.models.change">SetCategoryOrderHintChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.99">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChange.html" title="interface in com.commercetools.history.models.change">SetCategoryOrderHintChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.113">buildUnchecked</a></span>()</div>
 <div class="block">builds SetCategoryOrderHintChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.103">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.117">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.SetCategoryOrderHintChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.107">of</a></span>&#8203;<span class="parameters">(<a href="SetCategoryOrderHintChange.html" title="interface in com.commercetools.history.models.change">SetCategoryOrderHintChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetCategoryOrderHintChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCategoryOrderHintChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCategoryOrderHintChangeBuilder.html#line.121">of</a></span>&#8203;<span class="parameters">(<a href="SetCategoryOrderHintChange.html" title="interface in com.commercetools.history.models.change">SetCategoryOrderHintChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

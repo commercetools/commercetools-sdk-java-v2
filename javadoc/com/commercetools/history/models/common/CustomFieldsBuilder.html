@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.10">CustomFieldsBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.21">CustomFieldsBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomFields customFields = CustomFields.builder()
+           .type(typeBuilder -> typeBuilder)
+           .fields(fieldsBuilder -> fieldsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -164,7 +173,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CustomFieldsBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.11">CustomFieldsBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.22">CustomFieldsBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -178,38 +187,38 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="type(java.util.function.Function)">
 <h3>type</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.17">type</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.28">type</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="type(com.commercetools.history.models.common.Reference)">
 <h3>type</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.23">type</a></span>&#8203;<span class="parameters">(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.34">type</a></span>&#8203;<span class="parameters">(<a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="fields(java.lang.Object)">
 <h3>fields</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.32">fields</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;fields)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.43">fields</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;fields)</span></div>
 <div class="block"><p>A valid JSON object, based on FieldDefinition.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.37">getType</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.48">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFields()">
 <h3>getFields</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.41">getFields</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.52">getFields</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.45">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.56">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&gt;</code></dd>
@@ -219,20 +228,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.54">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.65">buildUnchecked</a></span>()</div>
 <div class="block">builds CustomFields without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.58">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.69">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.CustomFields)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.62">of</a></span>&#8203;<span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.history.models.common">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/CustomFieldsBuilder.html#line.73">of</a></span>&#8203;<span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.history.models.common">CustomFields</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

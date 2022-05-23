@@ -80,8 +80,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductVariantImpl.html" title="class in com.commercetools.ml.models.common">ProductVariantImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.19">ProductVariant</a></span></div>
-<div class="block"><p>The product variant that contains the image.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.30">ProductVariant</a></span></div>
+<div class="block"><p>The product variant that contains the image.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductVariant productVariant = ProductVariant.builder()
+           .product(productBuilder -> productBuilder)
+           .staged(true)
+           .variantId(0.3)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -157,7 +168,7 @@ loadScripts(document, 'script');</script>
 <h3>getProduct</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.26">getProduct</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.37">getProduct</a></span>()</div>
 <div class="block"><p>The product that contains this variant.</p></div>
 </section>
 </li>
@@ -165,7 +176,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.34">getStaged</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.45">getStaged</a></span>()</div>
 <div class="block"><p>The state of the product variant.</p></div>
 </section>
 </li>
@@ -173,62 +184,62 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getVariantId()">
 <h3>getVariantId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.41">getVariantId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.52">getVariantId</a></span>()</div>
 <div class="block"><p>The id of the product variant.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProduct(com.commercetools.ml.models.common.ProductReference)">
 <h3>setProduct</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.45">setProduct</a></span>&#8203;<span class="parameters">(<a href="ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a>&nbsp;product)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.56">setProduct</a></span>&#8203;<span class="parameters">(<a href="ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a>&nbsp;product)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStaged(java.lang.Boolean)">
 <h3>setStaged</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.47">setStaged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.58">setStaged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVariantId(java.lang.Integer)">
 <h3>setVariantId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.49">setVariantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;variantId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.60">setVariantId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;variantId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.51">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.62">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.common.ProductVariant)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.55">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.66">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantBuilder.html" title="class in com.commercetools.ml.models.common">ProductVariantBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.63">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantBuilder.html" title="class in com.commercetools.ml.models.common">ProductVariantBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.74">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.ml.models.common.ProductVariant)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantBuilder.html" title="class in com.commercetools.ml.models.common">ProductVariantBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.67">builder</a></span>&#8203;<span class="parameters">(<a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantBuilder.html" title="class in com.commercetools.ml.models.common">ProductVariantBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.78">builder</a></span>&#8203;<span class="parameters">(<a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductVariant(java.util.function.Function)">
 <h3>withProductVariant</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.71">withProductVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.82">withProductVariant</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.75">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/ProductVariant.html#line.86">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

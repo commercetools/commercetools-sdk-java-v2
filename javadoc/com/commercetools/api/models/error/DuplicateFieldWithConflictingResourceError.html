@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DuplicateFieldWithConflictingResourceErrorImpl.html" title="class in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.17">DuplicateFieldWithConflictingResourceError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.29">DuplicateFieldWithConflictingResourceError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DuplicateFieldWithConflictingResourceError duplicateFieldWithConflictingResourceError = DuplicateFieldWithConflictingResourceError.builder()
+           .message("{message}")
+           .field("{field}")
+           .conflictingResource(conflictingResourceBuilder -> conflictingResourceBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -173,7 +183,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE">
 <h3>DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.21">DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.33">DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError.DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE">Constant Field Values</a></dd>
@@ -192,14 +202,14 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getField()">
 <h3>getField</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.23">getField</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.35">getField</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDuplicateValue()">
 <h3>getDuplicateValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.27">getDuplicateValue</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.39">getDuplicateValue</a></span>()</div>
 </section>
 </li>
 <li>
@@ -207,62 +217,62 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <h3>getConflictingResource</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.34">getConflictingResource</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.46">getConflictingResource</a></span>()</div>
 <div class="block"><p>A Reference represents a loose reference to another resource in the same commercetools Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setField(java.lang.String)">
 <h3>setField</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.39">setField</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;field)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.51">setField</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;field)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDuplicateValue(java.lang.Object)">
 <h3>setDuplicateValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.41">setDuplicateValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;duplicateValue)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.53">setDuplicateValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;duplicateValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setConflictingResource(com.commercetools.api.models.common.Reference)">
 <h3>setConflictingResource</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.43">setConflictingResource</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;conflictingResource)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.55">setConflictingResource</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;conflictingResource)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.45">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.57">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.61">of</a></span>&#8203;<span class="parameters">(<a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateFieldWithConflictingResourceErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.60">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateFieldWithConflictingResourceErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.72">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateFieldWithConflictingResourceErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.64">builder</a></span>&#8203;<span class="parameters">(<a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateFieldWithConflictingResourceErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.76">builder</a></span>&#8203;<span class="parameters">(<a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDuplicateFieldWithConflictingResourceError(java.util.function.Function)">
 <h3>withDuplicateFieldWithConflictingResourceError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.69">withDuplicateFieldWithConflictingResourceError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.81">withDuplicateFieldWithConflictingResourceError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.74">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DuplicateFieldWithConflictingResourceError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldWithConflictingResourceError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateFieldWithConflictingResourceError.html#line.86">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -84,9 +84,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CustomerImportImpl.html" title="class in com.commercetools.importapi.models.customers">CustomerImportImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.24">CustomerImport</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.36">CustomerImport</a></span><span class="extends-implements">
 extends <a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></span></div>
-<div class="block"><p>The data representation for a Customer to be imported that is persisted as a Customer in the Project.</p></div>
+<div class="block"><p>The data representation for a Customer to be imported that is persisted as a Customer in the Project.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerImport customerImport = CustomerImport.builder()
+           .key("{key}")
+           .email("{email}")
+           .password("{password}")
+           .plusAddresses(addressesBuilder -> addressesBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -327,7 +339,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <li>
 <section class="detail" id="getCustomerNumber()">
 <h3>getCustomerNumber</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.32">getCustomerNumber</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.44">getCustomerNumber</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.customerNumber</code>.</p></div>
 </section>
 </li>
@@ -335,7 +347,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getEmail()">
 <h3>getEmail</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.38">getEmail</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.50">getEmail</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.email</code>.</p></div>
 </section>
 </li>
@@ -343,7 +355,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getPassword()">
 <h3>getPassword</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.45">getPassword</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.57">getPassword</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.password</code>.</p></div>
 </section>
 </li>
@@ -351,77 +363,77 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getStores()">
 <h3>getStores</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.52">getStores</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.64">getStores</a></span>()</div>
 <div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFirstName()">
 <h3>getFirstName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.60">getFirstName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.72">getFirstName</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.firstName</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastName()">
 <h3>getLastName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.67">getLastName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.79">getLastName</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.lastName</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMiddleName()">
 <h3>getMiddleName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.74">getMiddleName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.86">getMiddleName</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.middleName</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTitle()">
 <h3>getTitle</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.81">getTitle</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.93">getTitle</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.title</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSalutation()">
 <h3>getSalutation</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.88">getSalutation</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.100">getSalutation</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.salutation</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExternalId()">
 <h3>getExternalId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.95">getExternalId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.107">getExternalId</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.externalId</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDateOfBirth()">
 <h3>getDateOfBirth</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.102">getDateOfBirth</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.114">getDateOfBirth</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.dateOfBirth</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCompanyName()">
 <h3>getCompanyName</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.109">getCompanyName</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.121">getCompanyName</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.companyName</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVatId()">
 <h3>getVatId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.116">getVatId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.128">getVatId</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.vatId</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsEmailVerified()">
 <h3>getIsEmailVerified</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.123">getIsEmailVerified</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.135">getIsEmailVerified</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.isEmailVerified</code>.</p></div>
 </section>
 </li>
@@ -429,7 +441,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getCustomerGroup()">
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.129">getCustomerGroup</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.141">getCustomerGroup</a></span>()</div>
 <div class="block"><p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p></div>
 </section>
 </li>
@@ -438,42 +450,42 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getAddresses</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.136">getAddresses</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.148">getAddresses</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.addresses</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDefaultBillingAddress()">
 <h3>getDefaultBillingAddress</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.145">getDefaultBillingAddress</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.157">getDefaultBillingAddress</a></span>()</div>
 <div class="block"><p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getBillingAddresses()">
 <h3>getBillingAddresses</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.152">getBillingAddresses</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.164">getBillingAddresses</a></span>()</div>
 <div class="block"><p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDefaultShippingAddress()">
 <h3>getDefaultShippingAddress</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.159">getDefaultShippingAddress</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.171">getDefaultShippingAddress</a></span>()</div>
 <div class="block"><p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingAddresses()">
 <h3>getShippingAddresses</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.166">getShippingAddresses</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.178">getShippingAddresses</a></span>()</div>
 <div class="block"><p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLocale()">
 <h3>getLocale</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.173">getLocale</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.185">getLocale</a></span>()</div>
 <div class="block"><p>Maps to <code>Customer.locale</code>.</p></div>
 </section>
 </li>
@@ -481,200 +493,200 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.179">getCustom</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.191">getCustom</a></span>()</div>
 <div class="block"><p>The custom fields for this Customer.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomerNumber(java.lang.String)">
 <h3>setCustomerNumber</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.183">setCustomerNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerNumber)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.195">setCustomerNumber</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerNumber)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setEmail(java.lang.String)">
 <h3>setEmail</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.185">setEmail</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.197">setEmail</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPassword(java.lang.String)">
 <h3>setPassword</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.187">setPassword</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.199">setPassword</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStores(com.commercetools.importapi.models.common.StoreKeyReference...)">
 <h3>setStores</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.189">setStores</a></span>&#8203;<span class="parameters">(<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>...&nbsp;stores)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.201">setStores</a></span>&#8203;<span class="parameters">(<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>...&nbsp;stores)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStores(java.util.List)">
 <h3>setStores</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.192">setStores</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;stores)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.204">setStores</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;stores)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFirstName(java.lang.String)">
 <h3>setFirstName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.194">setFirstName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;firstName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.206">setFirstName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;firstName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLastName(java.lang.String)">
 <h3>setLastName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.196">setLastName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lastName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.208">setLastName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lastName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMiddleName(java.lang.String)">
 <h3>setMiddleName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.198">setMiddleName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;middleName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.210">setMiddleName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;middleName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTitle(java.lang.String)">
 <h3>setTitle</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.200">setTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.212">setTitle</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSalutation(java.lang.String)">
 <h3>setSalutation</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.202">setSalutation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;salutation)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.214">setSalutation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;salutation)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalId(java.lang.String)">
 <h3>setExternalId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.204">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.216">setExternalId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;externalId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDateOfBirth(java.time.LocalDate)">
 <h3>setDateOfBirth</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.206">setDateOfBirth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;dateOfBirth)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.218">setDateOfBirth</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link">LocalDate</a>&nbsp;dateOfBirth)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCompanyName(java.lang.String)">
 <h3>setCompanyName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.208">setCompanyName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;companyName)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.220">setCompanyName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;companyName)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVatId(java.lang.String)">
 <h3>setVatId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.210">setVatId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;vatId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.222">setVatId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;vatId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIsEmailVerified(java.lang.Boolean)">
 <h3>setIsEmailVerified</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.212">setIsEmailVerified</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isEmailVerified)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.224">setIsEmailVerified</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isEmailVerified)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomerGroup(com.commercetools.importapi.models.common.CustomerGroupKeyReference)">
 <h3>setCustomerGroup</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.214">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.226">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddresses(com.commercetools.importapi.models.customers.CustomerAddress...)">
 <h3>setAddresses</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.216">setAddresses</a></span>&#8203;<span class="parameters">(<a href="CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>...&nbsp;addresses)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.228">setAddresses</a></span>&#8203;<span class="parameters">(<a href="CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>...&nbsp;addresses)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddresses(java.util.List)">
 <h3>setAddresses</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.219">setAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>&gt;&nbsp;addresses)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.231">setAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>&gt;&nbsp;addresses)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDefaultBillingAddress(java.lang.Integer)">
 <h3>setDefaultBillingAddress</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.221">setDefaultBillingAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultBillingAddress)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.233">setDefaultBillingAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultBillingAddress)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setBillingAddresses(java.lang.Integer...)">
 <h3>setBillingAddresses</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.223">setBillingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.235">setBillingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setBillingAddresses(java.util.List)">
 <h3>setBillingAddresses</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.226">setBillingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;billingAddresses)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.238">setBillingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;billingAddresses)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDefaultShippingAddress(java.lang.Integer)">
 <h3>setDefaultShippingAddress</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.228">setDefaultShippingAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultShippingAddress)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.240">setDefaultShippingAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultShippingAddress)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingAddresses(java.lang.Integer...)">
 <h3>setShippingAddresses</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.230">setShippingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.242">setShippingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setShippingAddresses(java.util.List)">
 <h3>setShippingAddresses</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.233">setShippingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;shippingAddresses)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.245">setShippingAddresses</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;shippingAddresses)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLocale(java.lang.String)">
 <h3>setLocale</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.235">setLocale</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;locale)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.247">setLocale</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;locale)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.importapi.models.customfields.Custom)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.237">setCustom</a></span>&#8203;<span class="parameters">(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.249">setCustom</a></span>&#8203;<span class="parameters">(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.239">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.251">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.customers.CustomerImport)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.243">of</a></span>&#8203;<span class="parameters">(<a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.255">of</a></span>&#8203;<span class="parameters">(<a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.271">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.283">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.customers.CustomerImport)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.275">builder</a></span>&#8203;<span class="parameters">(<a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.287">builder</a></span>&#8203;<span class="parameters">(<a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCustomerImport(java.util.function.Function)">
 <h3>withCustomerImport</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.279">withCustomerImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.291">withCustomerImport</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.283">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/customers/CustomerImport.html#line.295">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

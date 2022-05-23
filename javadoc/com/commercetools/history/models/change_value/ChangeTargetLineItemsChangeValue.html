@@ -84,9 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ChangeTargetLineItemsChangeValueImpl.html" title="class in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValueImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.18">ChangeTargetLineItemsChangeValue</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.27">ChangeTargetLineItemsChangeValue</a></span><span class="extends-implements">
 extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetChangeValue</a></span></div>
-<div class="block"><p>Shape of the value for cart discounts line item target.</p></div>
+<div class="block"><p>Shape of the value for cart discounts line item target.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeTargetLineItemsChangeValue changeTargetLineItemsChangeValue = ChangeTargetLineItemsChangeValue.builder()
+           .predicate("{predicate}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -163,7 +172,7 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <li>
 <section class="detail" id="LINE_ITEMS">
 <h3>LINE_ITEMS</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.22">LINE_ITEMS</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.31">LINE_ITEMS</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue.LINE_ITEMS">Constant Field Values</a></dd>
@@ -182,7 +191,7 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.24">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.33">getType</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ChangeTargetChangeValue.html#getType()">getType</a></code>&nbsp;in interface&nbsp;<code><a href="ChangeTargetChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetChangeValue</a></code></dd>
@@ -193,49 +202,49 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <section class="detail" id="getPredicate()">
 <h3>getPredicate</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.28">getPredicate</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.37">getPredicate</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPredicate(java.lang.String)">
 <h3>setPredicate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.32">setPredicate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;predicate)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.41">setPredicate</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;predicate)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.34">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.43">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.38">of</a></span>&#8203;<span class="parameters">(<a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetLineItemsChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.44">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetLineItemsChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.53">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetLineItemsChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.48">builder</a></span>&#8203;<span class="parameters">(<a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetLineItemsChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withChangeTargetLineItemsChangeValue(java.util.function.Function)">
 <h3>withChangeTargetLineItemsChangeValue</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.52">withChangeTargetLineItemsChangeValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.61">withChangeTargetLineItemsChangeValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.56">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/ChangeTargetLineItemsChangeValue.html#line.65">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

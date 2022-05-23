@@ -84,9 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="EventBridgeDestinationImpl.html" title="class in com.commercetools.api.models.subscription">EventBridgeDestinationImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.18">EventBridgeDestination</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.28">EventBridgeDestination</a></span><span class="extends-implements">
 extends <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></span></div>
-<div class="block"><p>AWS EventBridge can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules.</p></div>
+<div class="block"><p>AWS EventBridge can be used to push events and messages to a serverless event bus that can forward them to AWS SQS, SNS, Lambda, and other AWS services based on forwarding rules.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   EventBridgeDestination eventBridgeDestination = EventBridgeDestination.builder()
+           .region("{region}")
+           .accountId("{accountId}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -170,7 +180,7 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="EVENT_BRIDGE">
 <h3>EVENT_BRIDGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.22">EVENT_BRIDGE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.32">EVENT_BRIDGE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.subscription.EventBridgeDestination.EVENT_BRIDGE">Constant Field Values</a></dd>
@@ -189,7 +199,7 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getRegion()">
 <h3>getRegion</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.27">getRegion</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.37">getRegion</a></span>()</div>
 <div class="block"><p>AWS region to which commercetools sends the events.</p></div>
 </section>
 </li>
@@ -197,56 +207,56 @@ extends <a href="Destination.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getAccountId()">
 <h3>getAccountId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.34">getAccountId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.44">getAccountId</a></span>()</div>
 <div class="block"><p>ID of the AWS account that receives events from the commercetools platform.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRegion(java.lang.String)">
 <h3>setRegion</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.38">setRegion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;region)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.48">setRegion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;region)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAccountId(java.lang.String)">
 <h3>setAccountId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.40">setAccountId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.50">setAccountId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;accountId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.42">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.52">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.subscription.EventBridgeDestination)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">EventBridgeDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.53">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">EventBridgeDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.63">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.subscription.EventBridgeDestination)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">EventBridgeDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="EventBridgeDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">EventBridgeDestinationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.67">builder</a></span>&#8203;<span class="parameters">(<a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withEventBridgeDestination(java.util.function.Function)">
 <h3>withEventBridgeDestination</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.61">withEventBridgeDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.71">withEventBridgeDestination</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.65">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/EventBridgeDestination.html#line.75">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

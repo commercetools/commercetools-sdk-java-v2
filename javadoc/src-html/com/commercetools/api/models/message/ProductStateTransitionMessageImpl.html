@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class ProductStateTransitionMessageImpl implements ProductStateTransitionMessage, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String id;</span>
@@ -88,8 +88,8 @@
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">    *  &lt;p&gt;Platform-generated unique identifier of the Message.&lt;/p&gt;</span>
-<span class="source-line-no">079</span><span id="line.79">    */</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;Platform-generated unique identifier of the Message.&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80">    public String getId() {</span>
 <span class="source-line-no">081</span><span id="line.81">        return this.id;</span>
 <span class="source-line-no">082</span><span id="line.82">    }</span>
@@ -107,15 +107,15 @@
 <span class="source-line-no">094</span><span id="line.94">    }</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
 <span class="source-line-no">096</span><span id="line.96">    /**</span>
-<span class="source-line-no">097</span><span id="line.97">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">098</span><span id="line.98">    */</span>
+<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">098</span><span id="line.98">     */</span>
 <span class="source-line-no">099</span><span id="line.99">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
 <span class="source-line-no">100</span><span id="line.100">        return this.lastModifiedBy;</span>
 <span class="source-line-no">101</span><span id="line.101">    }</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
 <span class="source-line-no">103</span><span id="line.103">    /**</span>
-<span class="source-line-no">104</span><span id="line.104">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">105</span><span id="line.105">    */</span>
+<span class="source-line-no">104</span><span id="line.104">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">105</span><span id="line.105">     */</span>
 <span class="source-line-no">106</span><span id="line.106">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
 <span class="source-line-no">107</span><span id="line.107">        return this.createdBy;</span>
 <span class="source-line-no">108</span><span id="line.108">    }</span>
@@ -125,8 +125,8 @@
 <span class="source-line-no">112</span><span id="line.112">    }</span>
 <span class="source-line-no">113</span><span id="line.113"></span>
 <span class="source-line-no">114</span><span id="line.114">    /**</span>
-<span class="source-line-no">115</span><span id="line.115">    *  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
-<span class="source-line-no">116</span><span id="line.116">    */</span>
+<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
+<span class="source-line-no">116</span><span id="line.116">     */</span>
 <span class="source-line-no">117</span><span id="line.117">    public com.commercetools.api.models.common.Reference getResource() {</span>
 <span class="source-line-no">118</span><span id="line.118">        return this.resource;</span>
 <span class="source-line-no">119</span><span id="line.119">    }</span>
@@ -144,8 +144,8 @@
 <span class="source-line-no">131</span><span id="line.131">    }</span>
 <span class="source-line-no">132</span><span id="line.132"></span>
 <span class="source-line-no">133</span><span id="line.133">    /**</span>
-<span class="source-line-no">134</span><span id="line.134">    *  &lt;p&gt;Reference to a State.&lt;/p&gt;</span>
-<span class="source-line-no">135</span><span id="line.135">    */</span>
+<span class="source-line-no">134</span><span id="line.134">     *  &lt;p&gt;Reference to a State.&lt;/p&gt;</span>
+<span class="source-line-no">135</span><span id="line.135">     */</span>
 <span class="source-line-no">136</span><span id="line.136">    public com.commercetools.api.models.state.StateReference getState() {</span>
 <span class="source-line-no">137</span><span id="line.137">        return this.state;</span>
 <span class="source-line-no">138</span><span id="line.138">    }</span>

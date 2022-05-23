@@ -25,149 +25,159 @@
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">@JsonSubTypes({</span>
-<span class="source-line-no">016</span><span id="line.16">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionImpl.class, name = PaymentAddInterfaceInteractionAction.ADD_INTERFACE_INTERACTION),</span>
-<span class="source-line-no">017</span><span id="line.17">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentAddTransactionActionImpl.class, name = PaymentAddTransactionAction.ADD_TRANSACTION),</span>
-<span class="source-line-no">018</span><span id="line.18">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionImpl.class, name = PaymentChangeAmountPlannedAction.CHANGE_AMOUNT_PLANNED),</span>
-<span class="source-line-no">019</span><span id="line.19">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionImpl.class, name = PaymentChangeTransactionInteractionIdAction.CHANGE_TRANSACTION_INTERACTION_ID),</span>
-<span class="source-line-no">020</span><span id="line.20">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionStateActionImpl.class, name = PaymentChangeTransactionStateAction.CHANGE_TRANSACTION_STATE),</span>
-<span class="source-line-no">021</span><span id="line.21">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionImpl.class, name = PaymentChangeTransactionTimestampAction.CHANGE_TRANSACTION_TIMESTAMP),</span>
-<span class="source-line-no">022</span><span id="line.22">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAmountPaidActionImpl.class, name = PaymentSetAmountPaidAction.SET_AMOUNT_PAID),</span>
-<span class="source-line-no">023</span><span id="line.23">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAmountRefundedActionImpl.class, name = PaymentSetAmountRefundedAction.SET_AMOUNT_REFUNDED),</span>
-<span class="source-line-no">024</span><span id="line.24">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAnonymousIdActionImpl.class, name = PaymentSetAnonymousIdAction.SET_ANONYMOUS_ID),</span>
-<span class="source-line-no">025</span><span id="line.25">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAuthorizationActionImpl.class, name = PaymentSetAuthorizationAction.SET_AUTHORIZATION),</span>
-<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomFieldActionImpl.class, name = PaymentSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
-<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomTypeActionImpl.class, name = PaymentSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
-<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomerActionImpl.class, name = PaymentSetCustomerAction.SET_CUSTOMER),</span>
-<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetExternalIdActionImpl.class, name = PaymentSetExternalIdAction.SET_EXTERNAL_ID),</span>
-<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetInterfaceIdActionImpl.class, name = PaymentSetInterfaceIdAction.SET_INTERFACE_ID),</span>
-<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetKeyActionImpl.class, name = PaymentSetKeyAction.SET_KEY),</span>
-<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionImpl.class, name = PaymentSetMethodInfoInterfaceAction.SET_METHOD_INFO_INTERFACE),</span>
-<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoMethodActionImpl.class, name = PaymentSetMethodInfoMethodAction.SET_METHOD_INFO_METHOD),</span>
-<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionImpl.class, name = PaymentSetMethodInfoNameAction.SET_METHOD_INFO_NAME),</span>
-<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionImpl.class, name = PaymentSetStatusInterfaceCodeAction.SET_STATUS_INTERFACE_CODE),</span>
-<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionImpl.class, name = PaymentSetStatusInterfaceTextAction.SET_STATUS_INTERFACE_TEXT),</span>
-<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionImpl.class, name = PaymentSetTransactionCustomFieldAction.SET_TRANSACTION_CUSTOM_FIELD),</span>
-<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionImpl.class, name = PaymentSetTransactionCustomTypeAction.SET_TRANSACTION_CUSTOM_TYPE),</span>
-<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentTransitionStateActionImpl.class, name = PaymentTransitionStateAction.TRANSITION_STATE) })</span>
-<span class="source-line-no">040</span><span id="line.40">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = PaymentUpdateActionImpl.class, visible = true)</span>
-<span class="source-line-no">041</span><span id="line.41">@JsonDeserialize(as = PaymentUpdateActionImpl.class)</span>
-<span class="source-line-no">042</span><span id="line.42">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">043</span><span id="line.43">public interface PaymentUpdateAction extends com.commercetools.api.models.ResourceUpdateAction&lt;PaymentUpdateAction&gt; {</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @NotNull</span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("action")</span>
-<span class="source-line-no">047</span><span id="line.47">    public String getAction();</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public static com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionBuilder addInterfaceInteractionBuilder() {</span>
-<span class="source-line-no">050</span><span id="line.50">        return com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionBuilder.of();</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public static com.commercetools.api.models.payment.PaymentAddTransactionActionBuilder addTransactionBuilder() {</span>
-<span class="source-line-no">054</span><span id="line.54">        return com.commercetools.api.models.payment.PaymentAddTransactionActionBuilder.of();</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    public static com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionBuilder changeAmountPlannedBuilder() {</span>
-<span class="source-line-no">058</span><span id="line.58">        return com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionBuilder.of();</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public static com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionBuilder changeTransactionInteractionIdBuilder() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionBuilder.of();</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public static com.commercetools.api.models.payment.PaymentChangeTransactionStateActionBuilder changeTransactionStateBuilder() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return com.commercetools.api.models.payment.PaymentChangeTransactionStateActionBuilder.of();</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public static com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionBuilder changeTransactionTimestampBuilder() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionBuilder.of();</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public static com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder setAmountPaidBuilder() {</span>
-<span class="source-line-no">074</span><span id="line.74">        return com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder.of();</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public static com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder setAmountRefundedBuilder() {</span>
-<span class="source-line-no">078</span><span id="line.78">        return com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder.of();</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public static com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder setAnonymousIdBuilder() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder.of();</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public static com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder setAuthorizationBuilder() {</span>
-<span class="source-line-no">086</span><span id="line.86">        return com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder.of();</span>
-<span class="source-line-no">087</span><span id="line.87">    }</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    public static com.commercetools.api.models.payment.PaymentSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return com.commercetools.api.models.payment.PaymentSetCustomFieldActionBuilder.of();</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public static com.commercetools.api.models.payment.PaymentSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
-<span class="source-line-no">094</span><span id="line.94">        return com.commercetools.api.models.payment.PaymentSetCustomTypeActionBuilder.of();</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public static com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder setCustomerBuilder() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder.of();</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public static com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder setExternalIdBuilder() {</span>
-<span class="source-line-no">102</span><span id="line.102">        return com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder.of();</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public static com.commercetools.api.models.payment.PaymentSetInterfaceIdActionBuilder setInterfaceIdBuilder() {</span>
-<span class="source-line-no">106</span><span id="line.106">        return com.commercetools.api.models.payment.PaymentSetInterfaceIdActionBuilder.of();</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public static com.commercetools.api.models.payment.PaymentSetKeyActionBuilder setKeyBuilder() {</span>
-<span class="source-line-no">110</span><span id="line.110">        return com.commercetools.api.models.payment.PaymentSetKeyActionBuilder.of();</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public static com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionBuilder setMethodInfoInterfaceBuilder() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionBuilder.of();</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public static com.commercetools.api.models.payment.PaymentSetMethodInfoMethodActionBuilder setMethodInfoMethodBuilder() {</span>
-<span class="source-line-no">118</span><span id="line.118">        return com.commercetools.api.models.payment.PaymentSetMethodInfoMethodActionBuilder.of();</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public static com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder setMethodInfoNameBuilder() {</span>
-<span class="source-line-no">122</span><span id="line.122">        return com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder.of();</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    public static com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionBuilder setStatusInterfaceCodeBuilder() {</span>
-<span class="source-line-no">126</span><span id="line.126">        return com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionBuilder.of();</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    public static com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionBuilder setStatusInterfaceTextBuilder() {</span>
-<span class="source-line-no">130</span><span id="line.130">        return com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionBuilder.of();</span>
-<span class="source-line-no">131</span><span id="line.131">    }</span>
-<span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    public static com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionBuilder setTransactionCustomFieldBuilder() {</span>
-<span class="source-line-no">134</span><span id="line.134">        return com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionBuilder.of();</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    public static com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionBuilder setTransactionCustomTypeBuilder() {</span>
-<span class="source-line-no">138</span><span id="line.138">        return com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionBuilder.of();</span>
-<span class="source-line-no">139</span><span id="line.139">    }</span>
-<span class="source-line-no">140</span><span id="line.140"></span>
-<span class="source-line-no">141</span><span id="line.141">    public static com.commercetools.api.models.payment.PaymentTransitionStateActionBuilder transitionStateBuilder() {</span>
-<span class="source-line-no">142</span><span id="line.142">        return com.commercetools.api.models.payment.PaymentTransitionStateActionBuilder.of();</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    default &lt;T&gt; T withPaymentUpdateAction(Function&lt;PaymentUpdateAction, T&gt; helper) {</span>
-<span class="source-line-no">146</span><span id="line.146">        return helper.apply(this);</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    public static com.fasterxml.jackson.core.type.TypeReference&lt;PaymentUpdateAction&gt; typeReference() {</span>
-<span class="source-line-no">150</span><span id="line.150">        return new com.fasterxml.jackson.core.type.TypeReference&lt;PaymentUpdateAction&gt;() {</span>
-<span class="source-line-no">151</span><span id="line.151">            @Override</span>
-<span class="source-line-no">152</span><span id="line.152">            public String toString() {</span>
-<span class="source-line-no">153</span><span id="line.153">                return "TypeReference&lt;PaymentUpdateAction&gt;";</span>
-<span class="source-line-no">154</span><span id="line.154">            }</span>
-<span class="source-line-no">155</span><span id="line.155">        };</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157">}</span>
+<span class="source-line-no">015</span><span id="line.15">/**</span>
+<span class="source-line-no">016</span><span id="line.16"> Example to create a subtype instance using the builder pattern</span>
+<span class="source-line-no">017</span><span id="line.17"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">019</span><span id="line.19">   PaymentUpdateAction paymentUpdateAction = PaymentUpdateAction.addInterfaceInteractionBuilder()</span>
+<span class="source-line-no">020</span><span id="line.20">           type(typeBuilder -&gt; typeBuilder)</span>
+<span class="source-line-no">021</span><span id="line.21">           .build()</span>
+<span class="source-line-no">022</span><span id="line.22"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> &lt;/div&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> */</span>
+<span class="source-line-no">025</span><span id="line.25">@JsonSubTypes({</span>
+<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionImpl.class, name = PaymentAddInterfaceInteractionAction.ADD_INTERFACE_INTERACTION),</span>
+<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentAddTransactionActionImpl.class, name = PaymentAddTransactionAction.ADD_TRANSACTION),</span>
+<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionImpl.class, name = PaymentChangeAmountPlannedAction.CHANGE_AMOUNT_PLANNED),</span>
+<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionImpl.class, name = PaymentChangeTransactionInteractionIdAction.CHANGE_TRANSACTION_INTERACTION_ID),</span>
+<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionStateActionImpl.class, name = PaymentChangeTransactionStateAction.CHANGE_TRANSACTION_STATE),</span>
+<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionImpl.class, name = PaymentChangeTransactionTimestampAction.CHANGE_TRANSACTION_TIMESTAMP),</span>
+<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAmountPaidActionImpl.class, name = PaymentSetAmountPaidAction.SET_AMOUNT_PAID),</span>
+<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAmountRefundedActionImpl.class, name = PaymentSetAmountRefundedAction.SET_AMOUNT_REFUNDED),</span>
+<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAnonymousIdActionImpl.class, name = PaymentSetAnonymousIdAction.SET_ANONYMOUS_ID),</span>
+<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAuthorizationActionImpl.class, name = PaymentSetAuthorizationAction.SET_AUTHORIZATION),</span>
+<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomFieldActionImpl.class, name = PaymentSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
+<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomTypeActionImpl.class, name = PaymentSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
+<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomerActionImpl.class, name = PaymentSetCustomerAction.SET_CUSTOMER),</span>
+<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetExternalIdActionImpl.class, name = PaymentSetExternalIdAction.SET_EXTERNAL_ID),</span>
+<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetInterfaceIdActionImpl.class, name = PaymentSetInterfaceIdAction.SET_INTERFACE_ID),</span>
+<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetKeyActionImpl.class, name = PaymentSetKeyAction.SET_KEY),</span>
+<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionImpl.class, name = PaymentSetMethodInfoInterfaceAction.SET_METHOD_INFO_INTERFACE),</span>
+<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoMethodActionImpl.class, name = PaymentSetMethodInfoMethodAction.SET_METHOD_INFO_METHOD),</span>
+<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionImpl.class, name = PaymentSetMethodInfoNameAction.SET_METHOD_INFO_NAME),</span>
+<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionImpl.class, name = PaymentSetStatusInterfaceCodeAction.SET_STATUS_INTERFACE_CODE),</span>
+<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionImpl.class, name = PaymentSetStatusInterfaceTextAction.SET_STATUS_INTERFACE_TEXT),</span>
+<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionImpl.class, name = PaymentSetTransactionCustomFieldAction.SET_TRANSACTION_CUSTOM_FIELD),</span>
+<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionImpl.class, name = PaymentSetTransactionCustomTypeAction.SET_TRANSACTION_CUSTOM_TYPE),</span>
+<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentTransitionStateActionImpl.class, name = PaymentTransitionStateAction.TRANSITION_STATE) })</span>
+<span class="source-line-no">050</span><span id="line.50">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = PaymentUpdateActionImpl.class, visible = true)</span>
+<span class="source-line-no">051</span><span id="line.51">@JsonDeserialize(as = PaymentUpdateActionImpl.class)</span>
+<span class="source-line-no">052</span><span id="line.52">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">053</span><span id="line.53">public interface PaymentUpdateAction extends com.commercetools.api.models.ResourceUpdateAction&lt;PaymentUpdateAction&gt; {</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    @NotNull</span>
+<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("action")</span>
+<span class="source-line-no">057</span><span id="line.57">    public String getAction();</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public static com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionBuilder addInterfaceInteractionBuilder() {</span>
+<span class="source-line-no">060</span><span id="line.60">        return com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionBuilder.of();</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public static com.commercetools.api.models.payment.PaymentAddTransactionActionBuilder addTransactionBuilder() {</span>
+<span class="source-line-no">064</span><span id="line.64">        return com.commercetools.api.models.payment.PaymentAddTransactionActionBuilder.of();</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public static com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionBuilder changeAmountPlannedBuilder() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionBuilder.of();</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public static com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionBuilder changeTransactionInteractionIdBuilder() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionBuilder.of();</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public static com.commercetools.api.models.payment.PaymentChangeTransactionStateActionBuilder changeTransactionStateBuilder() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return com.commercetools.api.models.payment.PaymentChangeTransactionStateActionBuilder.of();</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public static com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionBuilder changeTransactionTimestampBuilder() {</span>
+<span class="source-line-no">080</span><span id="line.80">        return com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionBuilder.of();</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public static com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder setAmountPaidBuilder() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return com.commercetools.api.models.payment.PaymentSetAmountPaidActionBuilder.of();</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public static com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder setAmountRefundedBuilder() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return com.commercetools.api.models.payment.PaymentSetAmountRefundedActionBuilder.of();</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public static com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder setAnonymousIdBuilder() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return com.commercetools.api.models.payment.PaymentSetAnonymousIdActionBuilder.of();</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public static com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder setAuthorizationBuilder() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return com.commercetools.api.models.payment.PaymentSetAuthorizationActionBuilder.of();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static com.commercetools.api.models.payment.PaymentSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return com.commercetools.api.models.payment.PaymentSetCustomFieldActionBuilder.of();</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public static com.commercetools.api.models.payment.PaymentSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
+<span class="source-line-no">104</span><span id="line.104">        return com.commercetools.api.models.payment.PaymentSetCustomTypeActionBuilder.of();</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    public static com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder setCustomerBuilder() {</span>
+<span class="source-line-no">108</span><span id="line.108">        return com.commercetools.api.models.payment.PaymentSetCustomerActionBuilder.of();</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    public static com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder setExternalIdBuilder() {</span>
+<span class="source-line-no">112</span><span id="line.112">        return com.commercetools.api.models.payment.PaymentSetExternalIdActionBuilder.of();</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public static com.commercetools.api.models.payment.PaymentSetInterfaceIdActionBuilder setInterfaceIdBuilder() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return com.commercetools.api.models.payment.PaymentSetInterfaceIdActionBuilder.of();</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public static com.commercetools.api.models.payment.PaymentSetKeyActionBuilder setKeyBuilder() {</span>
+<span class="source-line-no">120</span><span id="line.120">        return com.commercetools.api.models.payment.PaymentSetKeyActionBuilder.of();</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    public static com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionBuilder setMethodInfoInterfaceBuilder() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionBuilder.of();</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public static com.commercetools.api.models.payment.PaymentSetMethodInfoMethodActionBuilder setMethodInfoMethodBuilder() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return com.commercetools.api.models.payment.PaymentSetMethodInfoMethodActionBuilder.of();</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    public static com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder setMethodInfoNameBuilder() {</span>
+<span class="source-line-no">132</span><span id="line.132">        return com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder.of();</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    public static com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionBuilder setStatusInterfaceCodeBuilder() {</span>
+<span class="source-line-no">136</span><span id="line.136">        return com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionBuilder.of();</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    public static com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionBuilder setStatusInterfaceTextBuilder() {</span>
+<span class="source-line-no">140</span><span id="line.140">        return com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionBuilder.of();</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public static com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionBuilder setTransactionCustomFieldBuilder() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionBuilder.of();</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    public static com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionBuilder setTransactionCustomTypeBuilder() {</span>
+<span class="source-line-no">148</span><span id="line.148">        return com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionBuilder.of();</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public static com.commercetools.api.models.payment.PaymentTransitionStateActionBuilder transitionStateBuilder() {</span>
+<span class="source-line-no">152</span><span id="line.152">        return com.commercetools.api.models.payment.PaymentTransitionStateActionBuilder.of();</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    default &lt;T&gt; T withPaymentUpdateAction(Function&lt;PaymentUpdateAction, T&gt; helper) {</span>
+<span class="source-line-no">156</span><span id="line.156">        return helper.apply(this);</span>
+<span class="source-line-no">157</span><span id="line.157">    }</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    public static com.fasterxml.jackson.core.type.TypeReference&lt;PaymentUpdateAction&gt; typeReference() {</span>
+<span class="source-line-no">160</span><span id="line.160">        return new com.fasterxml.jackson.core.type.TypeReference&lt;PaymentUpdateAction&gt;() {</span>
+<span class="source-line-no">161</span><span id="line.161">            @Override</span>
+<span class="source-line-no">162</span><span id="line.162">            public String toString() {</span>
+<span class="source-line-no">163</span><span id="line.163">                return "TypeReference&lt;PaymentUpdateAction&gt;";</span>
+<span class="source-line-no">164</span><span id="line.164">            }</span>
+<span class="source-line-no">165</span><span id="line.165">        };</span>
+<span class="source-line-no">166</span><span id="line.166">    }</span>
+<span class="source-line-no">167</span><span id="line.167">}</span>
 
 
 

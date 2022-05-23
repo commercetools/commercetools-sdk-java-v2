@@ -83,9 +83,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.11">CartsConfigurationBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.20">CartsConfigurationBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartsConfiguration cartsConfiguration = CartsConfiguration.builder()
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -163,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CartsConfigurationBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.12">CartsConfigurationBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.21">CartsConfigurationBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -177,7 +184,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="deleteDaysAfterLastModification(java.lang.Long)">
 <h3>deleteDaysAfterLastModification</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.24">deleteDaysAfterLastModification</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.33">deleteDaysAfterLastModification</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;deleteDaysAfterLastModification)</span></div>
 <div class="block"><p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft. This field may not be present on Projects created before January 2020.</p></div>
 </section>
@@ -185,7 +192,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="countryTaxRateFallbackEnabled(java.lang.Boolean)">
 <h3>countryTaxRateFallbackEnabled</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.34">countryTaxRateFallbackEnabled</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.43">countryTaxRateFallbackEnabled</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;countryTaxRateFallbackEnabled)</span></div>
 <div class="block"><p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p></div>
 </section>
@@ -194,20 +201,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getDeleteDaysAfterLastModification()">
 <h3>getDeleteDaysAfterLastModification</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.40">getDeleteDaysAfterLastModification</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.49">getDeleteDaysAfterLastModification</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCountryTaxRateFallbackEnabled()">
 <h3>getCountryTaxRateFallbackEnabled</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.45">getCountryTaxRateFallbackEnabled</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.54">getCountryTaxRateFallbackEnabled</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.50">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.59">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&gt;</code></dd>
@@ -217,20 +224,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.57">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.66">buildUnchecked</a></span>()</div>
 <div class="block">builds CartsConfiguration without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.61">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.70">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.project.CartsConfiguration)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.65">of</a></span>&#8203;<span class="parameters">(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/CartsConfigurationBuilder.html#line.74">of</a></span>&#8203;<span class="parameters">(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

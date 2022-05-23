@@ -84,8 +84,15 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="PaymentSetAnonymousIdActionImpl.html" title="class in com.commercetools.api.models.payment">PaymentSetAnonymousIdActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.13">PaymentSetAnonymousIdAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.22">PaymentSetAnonymousIdAction</a></span><span class="extends-implements">
 extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools.api.models.payment">PaymentUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   PaymentSetAnonymousIdAction paymentSetAnonymousIdAction = PaymentSetAnonymousIdAction.builder()
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -164,7 +171,7 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="SET_ANONYMOUS_ID">
 <h3>SET_ANONYMOUS_ID</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.17">SET_ANONYMOUS_ID</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.26">SET_ANONYMOUS_ID</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.payment.PaymentSetAnonymousIdAction.SET_ANONYMOUS_ID">Constant Field Values</a></dd>
@@ -182,50 +189,50 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="getAnonymousId()">
 <h3>getAnonymousId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.23">getAnonymousId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.32">getAnonymousId</a></span>()</div>
 <div class="block"><p>Anonymous ID of the anonymous customer that this payment belongs to. If this field is not set any existing <code>anonymousId</code> is removed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAnonymousId(java.lang.String)">
 <h3>setAnonymousId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.26">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.35">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.28">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.37">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.payment.PaymentSetAnonymousIdAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.32">of</a></span>&#8203;<span class="parameters">(<a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.41">of</a></span>&#8203;<span class="parameters">(<a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAnonymousIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.38">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAnonymousIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.47">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.payment.PaymentSetAnonymousIdAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAnonymousIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.42">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PaymentSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAnonymousIdActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.51">builder</a></span>&#8203;<span class="parameters">(<a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPaymentSetAnonymousIdAction(java.util.function.Function)">
 <h3>withPaymentSetAnonymousIdAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.46">withPaymentSetAnonymousIdAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.55">withPaymentSetAnonymousIdAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.50">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAnonymousIdAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAnonymousIdAction.html#line.59">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

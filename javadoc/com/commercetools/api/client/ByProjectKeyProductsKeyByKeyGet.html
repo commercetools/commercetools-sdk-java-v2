@@ -85,10 +85,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code>, <code><a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code>, <code><a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code>, <code><a href="PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.22">ByProjectKeyProductsKeyByKeyGet</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.33">ByProjectKeyProductsKeyByKeyGet</a></span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>,&#8203;<a href="../models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&gt;
 implements <a href="PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;, <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</span></div>
-<div class="block"><p>Gets the full representation of a product by Key.</p></div>
+<div class="block"><p>Gets the full representation of a product by Key.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .products()
+           .withKey("{key}")
+           .get()
+           .execute()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -496,7 +507,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="&lt;init&gt;(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String,java.lang.String)">
 <h3>ByProjectKeyProductsKeyByKeyGet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.33">ByProjectKeyProductsKeyByKeyGet</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.44">ByProjectKeyProductsKeyByKeyGet</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
@@ -504,7 +515,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="&lt;init&gt;(com.commercetools.api.client.ByProjectKeyProductsKeyByKeyGet)">
 <h3>ByProjectKeyProductsKeyByKeyGet</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.39">ByProjectKeyProductsKeyByKeyGet</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&nbsp;t)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.50">ByProjectKeyProductsKeyByKeyGet</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&nbsp;t)</span></div>
 </section>
 </li>
 </ul>
@@ -518,7 +529,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">
 <h3>executeBlocking</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.55">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.66">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -531,7 +542,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.61">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.72">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html#execute(io.vrap.rmf.base.client.ApiHttpClient)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/product/Product.html" title="interface in com.commercetools.api.models.product">Product</a>&gt;</code></dd>
@@ -543,19 +554,19 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.67">getProjectKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.78">getProjectKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.71">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.82">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPriceCurrency()">
 <h3>getPriceCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.75">getPriceCurrency</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.86">getPriceCurrency</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceselectingTrait.html#getPriceCurrency()">getPriceCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code></dd>
@@ -565,7 +576,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getPriceCountry()">
 <h3>getPriceCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.79">getPriceCountry</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.90">getPriceCountry</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceselectingTrait.html#getPriceCountry()">getPriceCountry</a></code>&nbsp;in interface&nbsp;<code><a href="PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code></dd>
@@ -575,7 +586,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getPriceCustomerGroup()">
 <h3>getPriceCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.83">getPriceCustomerGroup</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.94">getPriceCustomerGroup</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceselectingTrait.html#getPriceCustomerGroup()">getPriceCustomerGroup</a></code>&nbsp;in interface&nbsp;<code><a href="PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code></dd>
@@ -585,7 +596,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getPriceChannel()">
 <h3>getPriceChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.87">getPriceChannel</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.98">getPriceChannel</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceselectingTrait.html#getPriceChannel()">getPriceChannel</a></code>&nbsp;in interface&nbsp;<code><a href="PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code></dd>
@@ -595,7 +606,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getLocaleProjection()">
 <h3>getLocaleProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.91">getLocaleProjection</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.102">getLocaleProjection</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceselectingTrait.html#getLocaleProjection()">getLocaleProjection</a></code>&nbsp;in interface&nbsp;<code><a href="PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code></dd>
@@ -605,7 +616,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getStoreProjection()">
 <h3>getStoreProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.95">getStoreProjection</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.106">getStoreProjection</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PriceselectingTrait.html#getStoreProjection()">getStoreProjection</a></code>&nbsp;in interface&nbsp;<code><a href="PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code></dd>
@@ -615,7 +626,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="getExpand()">
 <h3>getExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.99">getExpand</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.110">getExpand</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ExpandableTrait.html#getExpand()">getExpand</a></code>&nbsp;in interface&nbsp;<code><a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a>&gt;</code></dd>
@@ -625,19 +636,19 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.103">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.114">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.107">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.118">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceCurrency(TValue)">
 <h3 id="withPriceCurrency(java.lang.Object)">withPriceCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.114">withPriceCurrency</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCurrency)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.125">withPriceCurrency</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCurrency)</span></div>
 <div class="block">set priceCurrency with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -648,7 +659,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="addPriceCurrency(TValue)">
 <h3 id="addPriceCurrency(java.lang.Object)">addPriceCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.121">addPriceCurrency</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCurrency)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.132">addPriceCurrency</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCurrency)</span></div>
 <div class="block">add additional priceCurrency query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -659,49 +670,49 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="withPriceCurrency(java.util.function.Supplier)">
 <h3>withPriceCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.128">withPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.139">withPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set priceCurrency with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceCurrency(java.util.function.Supplier)">
 <h3>addPriceCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.135">addPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.146">addPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional priceCurrency query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceCurrency(java.util.function.Function)">
 <h3>withPriceCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.142">withPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.153">withPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set priceCurrency with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceCurrency(java.util.function.Function)">
 <h3>addPriceCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.149">addPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.160">addPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional priceCurrency query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceCurrency(java.util.List)">
 <h3>withPriceCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.156">withPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCurrency)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.167">withPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCurrency)</span></div>
 <div class="block">set priceCurrency with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceCurrency(java.util.List)">
 <h3>addPriceCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.166">addPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCurrency)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.177">addPriceCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCurrency)</span></div>
 <div class="block">add additional priceCurrency query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceCountry(TValue)">
 <h3 id="withPriceCountry(java.lang.Object)">withPriceCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.175">withPriceCountry</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCountry)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.186">withPriceCountry</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCountry)</span></div>
 <div class="block">set priceCountry with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -712,7 +723,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="addPriceCountry(TValue)">
 <h3 id="addPriceCountry(java.lang.Object)">addPriceCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.182">addPriceCountry</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCountry)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.193">addPriceCountry</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCountry)</span></div>
 <div class="block">add additional priceCountry query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -723,49 +734,49 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="withPriceCountry(java.util.function.Supplier)">
 <h3>withPriceCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.189">withPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.200">withPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set priceCountry with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceCountry(java.util.function.Supplier)">
 <h3>addPriceCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.196">addPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.207">addPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional priceCountry query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceCountry(java.util.function.Function)">
 <h3>withPriceCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.203">withPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.214">withPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set priceCountry with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceCountry(java.util.function.Function)">
 <h3>addPriceCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.210">addPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.221">addPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional priceCountry query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceCountry(java.util.List)">
 <h3>withPriceCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.217">withPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCountry)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.228">withPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCountry)</span></div>
 <div class="block">set priceCountry with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceCountry(java.util.List)">
 <h3>addPriceCountry</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.227">addPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCountry)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.238">addPriceCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCountry)</span></div>
 <div class="block">add additional priceCountry query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceCustomerGroup(TValue)">
 <h3 id="withPriceCustomerGroup(java.lang.Object)">withPriceCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.236">withPriceCustomerGroup</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCustomerGroup)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.247">withPriceCustomerGroup</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCustomerGroup)</span></div>
 <div class="block">set priceCustomerGroup with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -776,7 +787,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="addPriceCustomerGroup(TValue)">
 <h3 id="addPriceCustomerGroup(java.lang.Object)">addPriceCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.243">addPriceCustomerGroup</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCustomerGroup)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.254">addPriceCustomerGroup</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceCustomerGroup)</span></div>
 <div class="block">add additional priceCustomerGroup query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -787,49 +798,49 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="withPriceCustomerGroup(java.util.function.Supplier)">
 <h3>withPriceCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.250">withPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.261">withPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set priceCustomerGroup with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceCustomerGroup(java.util.function.Supplier)">
 <h3>addPriceCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.257">addPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.268">addPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional priceCustomerGroup query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceCustomerGroup(java.util.function.Function)">
 <h3>withPriceCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.264">withPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.275">withPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set priceCustomerGroup with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceCustomerGroup(java.util.function.Function)">
 <h3>addPriceCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.271">addPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.282">addPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional priceCustomerGroup query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceCustomerGroup(java.util.List)">
 <h3>withPriceCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.278">withPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCustomerGroup)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.289">withPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCustomerGroup)</span></div>
 <div class="block">set priceCustomerGroup with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceCustomerGroup(java.util.List)">
 <h3>addPriceCustomerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.288">addPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCustomerGroup)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.299">addPriceCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceCustomerGroup)</span></div>
 <div class="block">add additional priceCustomerGroup query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceChannel(TValue)">
 <h3 id="withPriceChannel(java.lang.Object)">withPriceChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.297">withPriceChannel</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceChannel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.308">withPriceChannel</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceChannel)</span></div>
 <div class="block">set priceChannel with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -840,7 +851,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="addPriceChannel(TValue)">
 <h3 id="addPriceChannel(java.lang.Object)">addPriceChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.304">addPriceChannel</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceChannel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.315">addPriceChannel</a></span>&#8203;<span class="parameters">(TValue&nbsp;priceChannel)</span></div>
 <div class="block">add additional priceChannel query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -851,49 +862,49 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="withPriceChannel(java.util.function.Supplier)">
 <h3>withPriceChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.311">withPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.322">withPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set priceChannel with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceChannel(java.util.function.Supplier)">
 <h3>addPriceChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.318">addPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.329">addPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional priceChannel query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceChannel(java.util.function.Function)">
 <h3>withPriceChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.325">withPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.336">withPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set priceChannel with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceChannel(java.util.function.Function)">
 <h3>addPriceChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.332">addPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.343">addPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional priceChannel query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPriceChannel(java.util.List)">
 <h3>withPriceChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.339">withPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceChannel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.350">withPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceChannel)</span></div>
 <div class="block">set priceChannel with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addPriceChannel(java.util.List)">
 <h3>addPriceChannel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.349">addPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceChannel)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.360">addPriceChannel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;priceChannel)</span></div>
 <div class="block">add additional priceChannel query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withLocaleProjection(TValue)">
 <h3 id="withLocaleProjection(java.lang.Object)">withLocaleProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.358">withLocaleProjection</a></span>&#8203;<span class="parameters">(TValue&nbsp;localeProjection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.369">withLocaleProjection</a></span>&#8203;<span class="parameters">(TValue&nbsp;localeProjection)</span></div>
 <div class="block">set localeProjection with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -904,7 +915,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="addLocaleProjection(TValue)">
 <h3 id="addLocaleProjection(java.lang.Object)">addLocaleProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.365">addLocaleProjection</a></span>&#8203;<span class="parameters">(TValue&nbsp;localeProjection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.376">addLocaleProjection</a></span>&#8203;<span class="parameters">(TValue&nbsp;localeProjection)</span></div>
 <div class="block">add additional localeProjection query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -915,49 +926,49 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="withLocaleProjection(java.util.function.Supplier)">
 <h3>withLocaleProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.372">withLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.383">withLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set localeProjection with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addLocaleProjection(java.util.function.Supplier)">
 <h3>addLocaleProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.379">addLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.390">addLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional localeProjection query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withLocaleProjection(java.util.function.Function)">
 <h3>withLocaleProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.386">withLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.397">withLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set localeProjection with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addLocaleProjection(java.util.function.Function)">
 <h3>addLocaleProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.393">addLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.404">addLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional localeProjection query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withLocaleProjection(java.util.List)">
 <h3>withLocaleProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.400">withLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;localeProjection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.411">withLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;localeProjection)</span></div>
 <div class="block">set localeProjection with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addLocaleProjection(java.util.List)">
 <h3>addLocaleProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.410">addLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;localeProjection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.421">addLocaleProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;localeProjection)</span></div>
 <div class="block">add additional localeProjection query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStoreProjection(TValue)">
 <h3 id="withStoreProjection(java.lang.Object)">withStoreProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.419">withStoreProjection</a></span>&#8203;<span class="parameters">(TValue&nbsp;storeProjection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.430">withStoreProjection</a></span>&#8203;<span class="parameters">(TValue&nbsp;storeProjection)</span></div>
 <div class="block">set storeProjection with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -968,7 +979,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="addStoreProjection(TValue)">
 <h3 id="addStoreProjection(java.lang.Object)">addStoreProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.426">addStoreProjection</a></span>&#8203;<span class="parameters">(TValue&nbsp;storeProjection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.437">addStoreProjection</a></span>&#8203;<span class="parameters">(TValue&nbsp;storeProjection)</span></div>
 <div class="block">add additional storeProjection query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -979,49 +990,49 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="withStoreProjection(java.util.function.Supplier)">
 <h3>withStoreProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.433">withStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.444">withStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set storeProjection with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addStoreProjection(java.util.function.Supplier)">
 <h3>addStoreProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.440">addStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.451">addStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional storeProjection query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStoreProjection(java.util.function.Function)">
 <h3>withStoreProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.447">withStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.458">withStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set storeProjection with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addStoreProjection(java.util.function.Function)">
 <h3>addStoreProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.454">addStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.465">addStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional storeProjection query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStoreProjection(java.util.List)">
 <h3>withStoreProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.461">withStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;storeProjection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.472">withStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;storeProjection)</span></div>
 <div class="block">set storeProjection with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addStoreProjection(java.util.List)">
 <h3>addStoreProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.471">addStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;storeProjection)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.482">addStoreProjection</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;storeProjection)</span></div>
 <div class="block">add additional storeProjection query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExpand(TValue)">
 <h3 id="withExpand(java.lang.Object)">withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.480">withExpand</a></span>&#8203;<span class="parameters">(TValue&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.491">withExpand</a></span>&#8203;<span class="parameters">(TValue&nbsp;expand)</span></div>
 <div class="block">set expand with the specified value</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -1032,7 +1043,7 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="addExpand(TValue)">
 <h3 id="addExpand(java.lang.Object)">addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.487">addExpand</a></span>&#8203;<span class="parameters">(TValue&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.498">addExpand</a></span>&#8203;<span class="parameters">(TValue&nbsp;expand)</span></div>
 <div class="block">add additional expand query parameter</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -1043,55 +1054,55 @@ implements <a href="PriceselectingTrait.html" title="interface in com.commerceto
 <li>
 <section class="detail" id="withExpand(java.util.function.Supplier)">
 <h3>withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.494">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.505">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">set expand with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addExpand(java.util.function.Supplier)">
 <h3>addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.501">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.512">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;supplier)</span></div>
 <div class="block">add additional expand query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExpand(java.util.function.Function)">
 <h3>withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.508">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.519">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">set expand with the specified value</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addExpand(java.util.function.Function)">
 <h3>addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.515">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.526">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html" title="class or interface in java.lang" class="external-link">StringBuilder</a>&gt;&nbsp;op)</span></div>
 <div class="block">add additional expand query parameter</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withExpand(java.util.List)">
 <h3>withExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.522">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.533">withExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;expand)</span></div>
 <div class="block">set expand with the specified values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="addExpand(java.util.List)">
 <h3>addExpand</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.531">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;expand)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;TValue&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductsKeyByKeyGet</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.542">addExpand</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;TValue&gt;&nbsp;expand)</span></div>
 <div class="block">add additional expand query parameters</div>
 </section>
 </li>
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.536">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.547">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.549">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductsKeyByKeyGet.html#line.560">hashCode</a></span>()</div>
 </section>
 </li>
 <li>

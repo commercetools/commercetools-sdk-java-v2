@@ -22,446 +22,464 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public class PaymentBuilder implements Builder&lt;Payment&gt; {</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    private String id;</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    private Long version;</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    private java.time.ZonedDateTime createdAt;</span>
-<span class="source-line-no">020</span><span id="line.20"></span>
-<span class="source-line-no">021</span><span id="line.21">    private java.time.ZonedDateTime lastModifiedAt;</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    @Nullable</span>
-<span class="source-line-no">024</span><span id="line.24">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    @Nullable</span>
-<span class="source-line-no">027</span><span id="line.27">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    @Nullable</span>
-<span class="source-line-no">030</span><span id="line.30">    private com.commercetools.api.models.customer.CustomerReference customer;</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    @Nullable</span>
-<span class="source-line-no">033</span><span id="line.33">    private String anonymousId;</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">016</span><span id="line.16">   Payment payment = Payment.builder()</span>
+<span class="source-line-no">017</span><span id="line.17">           .id("{id}")</span>
+<span class="source-line-no">018</span><span id="line.18">           .version(0.3)</span>
+<span class="source-line-no">019</span><span id="line.19">           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">020</span><span id="line.20">           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">021</span><span id="line.21">           .amountPlanned(amountPlannedBuilder -&gt; amountPlannedBuilder)</span>
+<span class="source-line-no">022</span><span id="line.22">           .paymentMethodInfo(paymentMethodInfoBuilder -&gt; paymentMethodInfoBuilder)</span>
+<span class="source-line-no">023</span><span id="line.23">           .paymentStatus(paymentStatusBuilder -&gt; paymentStatusBuilder)</span>
+<span class="source-line-no">024</span><span id="line.24">           .plusTransactions(transactionsBuilder -&gt; transactionsBuilder)</span>
+<span class="source-line-no">025</span><span id="line.25">           .plusInterfaceInteractions(interfaceInteractionsBuilder -&gt; interfaceInteractionsBuilder)</span>
+<span class="source-line-no">026</span><span id="line.26">           .build()</span>
+<span class="source-line-no">027</span><span id="line.27"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> &lt;/div&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> */</span>
+<span class="source-line-no">030</span><span id="line.30">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">031</span><span id="line.31">public class PaymentBuilder implements Builder&lt;Payment&gt; {</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    private String id;</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    @Nullable</span>
-<span class="source-line-no">036</span><span id="line.36">    private String interfaceId;</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    private com.commercetools.api.models.common.TypedMoney amountPlanned;</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    private com.commercetools.api.models.payment.PaymentStatus paymentStatus;</span>
+<span class="source-line-no">035</span><span id="line.35">    private Long version;</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    private java.time.ZonedDateTime lastModifiedAt;</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    @Nullable</span>
+<span class="source-line-no">042</span><span id="line.42">    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    private java.util.List&lt;com.commercetools.api.models.payment.Transaction&gt; transactions;</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    private java.util.List&lt;com.commercetools.api.models.type.CustomFields&gt; interfaceInteractions;</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    @Nullable</span>
-<span class="source-line-no">049</span><span id="line.49">    private com.commercetools.api.models.type.CustomFields custom;</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    @Nullable</span>
-<span class="source-line-no">052</span><span id="line.52">    private String key;</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;Platform-generated unique identifier of the Payment.&lt;/p&gt;</span>
-<span class="source-line-no">056</span><span id="line.56">    */</span>
+<span class="source-line-no">044</span><span id="line.44">    @Nullable</span>
+<span class="source-line-no">045</span><span id="line.45">    private com.commercetools.api.models.common.CreatedBy createdBy;</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    @Nullable</span>
+<span class="source-line-no">048</span><span id="line.48">    private com.commercetools.api.models.customer.CustomerReference customer;</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    @Nullable</span>
+<span class="source-line-no">051</span><span id="line.51">    private String anonymousId;</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    @Nullable</span>
+<span class="source-line-no">054</span><span id="line.54">    private String interfaceId;</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    private com.commercetools.api.models.common.TypedMoney amountPlanned;</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public PaymentBuilder id(final String id) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.id = id;</span>
-<span class="source-line-no">060</span><span id="line.60">        return this;</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public PaymentBuilder version(final Long version) {</span>
-<span class="source-line-no">064</span><span id="line.64">        this.version = version;</span>
-<span class="source-line-no">065</span><span id="line.65">        return this;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public PaymentBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">069</span><span id="line.69">        this.createdAt = createdAt;</span>
-<span class="source-line-no">070</span><span id="line.70">        return this;</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public PaymentBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
-<span class="source-line-no">074</span><span id="line.74">        this.lastModifiedAt = lastModifiedAt;</span>
-<span class="source-line-no">075</span><span id="line.75">        return this;</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    /**</span>
-<span class="source-line-no">079</span><span id="line.79">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">080</span><span id="line.80">    */</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public PaymentBuilder lastModifiedBy(</span>
-<span class="source-line-no">083</span><span id="line.83">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
-<span class="source-line-no">084</span><span id="line.84">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
-<span class="source-line-no">085</span><span id="line.85">        return this;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    /**</span>
-<span class="source-line-no">089</span><span id="line.89">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">090</span><span id="line.90">    */</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public PaymentBuilder lastModifiedBy(</span>
-<span class="source-line-no">093</span><span id="line.93">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
-<span class="source-line-no">094</span><span id="line.94">        this.lastModifiedBy = lastModifiedBy;</span>
-<span class="source-line-no">095</span><span id="line.95">        return this;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    /**</span>
-<span class="source-line-no">099</span><span id="line.99">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">100</span><span id="line.100">    */</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public PaymentBuilder createdBy(</span>
-<span class="source-line-no">103</span><span id="line.103">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
-<span class="source-line-no">104</span><span id="line.104">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
-<span class="source-line-no">105</span><span id="line.105">        return this;</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">110</span><span id="line.110">    */</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public PaymentBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
-<span class="source-line-no">113</span><span id="line.113">        this.createdBy = createdBy;</span>
-<span class="source-line-no">114</span><span id="line.114">        return this;</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    /**</span>
-<span class="source-line-no">118</span><span id="line.118">    *  &lt;p&gt;A reference to the customer this payment belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">119</span><span id="line.119">    */</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public PaymentBuilder customer(</span>
-<span class="source-line-no">122</span><span id="line.122">            Function&lt;com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">123</span><span id="line.123">        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();</span>
-<span class="source-line-no">124</span><span id="line.124">        return this;</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    /**</span>
-<span class="source-line-no">128</span><span id="line.128">    *  &lt;p&gt;A reference to the customer this payment belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">129</span><span id="line.129">    */</span>
-<span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    public PaymentBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {</span>
-<span class="source-line-no">132</span><span id="line.132">        this.customer = customer;</span>
-<span class="source-line-no">133</span><span id="line.133">        return this;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">    *  &lt;p&gt;Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).&lt;/p&gt;</span>
-<span class="source-line-no">138</span><span id="line.138">    */</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public PaymentBuilder anonymousId(@Nullable final String anonymousId) {</span>
-<span class="source-line-no">141</span><span id="line.141">        this.anonymousId = anonymousId;</span>
+<span class="source-line-no">058</span><span id="line.58">    private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    private com.commercetools.api.models.payment.PaymentStatus paymentStatus;</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    private java.util.List&lt;com.commercetools.api.models.payment.Transaction&gt; transactions;</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    private java.util.List&lt;com.commercetools.api.models.type.CustomFields&gt; interfaceInteractions;</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    @Nullable</span>
+<span class="source-line-no">067</span><span id="line.67">    private com.commercetools.api.models.type.CustomFields custom;</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    @Nullable</span>
+<span class="source-line-no">070</span><span id="line.70">    private String key;</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    /**</span>
+<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Platform-generated unique identifier of the Payment.&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">     */</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public PaymentBuilder id(final String id) {</span>
+<span class="source-line-no">077</span><span id="line.77">        this.id = id;</span>
+<span class="source-line-no">078</span><span id="line.78">        return this;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public PaymentBuilder version(final Long version) {</span>
+<span class="source-line-no">082</span><span id="line.82">        this.version = version;</span>
+<span class="source-line-no">083</span><span id="line.83">        return this;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public PaymentBuilder createdAt(final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.createdAt = createdAt;</span>
+<span class="source-line-no">088</span><span id="line.88">        return this;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public PaymentBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.lastModifiedAt = lastModifiedAt;</span>
+<span class="source-line-no">093</span><span id="line.93">        return this;</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    /**</span>
+<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">098</span><span id="line.98">     */</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public PaymentBuilder lastModifiedBy(</span>
+<span class="source-line-no">101</span><span id="line.101">            Function&lt;com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder&gt; builder) {</span>
+<span class="source-line-no">102</span><span id="line.102">        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();</span>
+<span class="source-line-no">103</span><span id="line.103">        return this;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    /**</span>
+<span class="source-line-no">107</span><span id="line.107">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">108</span><span id="line.108">     */</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    public PaymentBuilder lastModifiedBy(</span>
+<span class="source-line-no">111</span><span id="line.111">            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
+<span class="source-line-no">112</span><span id="line.112">        this.lastModifiedBy = lastModifiedBy;</span>
+<span class="source-line-no">113</span><span id="line.113">        return this;</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    /**</span>
+<span class="source-line-no">117</span><span id="line.117">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">118</span><span id="line.118">     */</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    public PaymentBuilder createdBy(</span>
+<span class="source-line-no">121</span><span id="line.121">            Function&lt;com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder&gt; builder) {</span>
+<span class="source-line-no">122</span><span id="line.122">        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();</span>
+<span class="source-line-no">123</span><span id="line.123">        return this;</span>
+<span class="source-line-no">124</span><span id="line.124">    }</span>
+<span class="source-line-no">125</span><span id="line.125"></span>
+<span class="source-line-no">126</span><span id="line.126">    /**</span>
+<span class="source-line-no">127</span><span id="line.127">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">128</span><span id="line.128">     */</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    public PaymentBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
+<span class="source-line-no">131</span><span id="line.131">        this.createdBy = createdBy;</span>
+<span class="source-line-no">132</span><span id="line.132">        return this;</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    /**</span>
+<span class="source-line-no">136</span><span id="line.136">     *  &lt;p&gt;A reference to the customer this payment belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">137</span><span id="line.137">     */</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    public PaymentBuilder customer(</span>
+<span class="source-line-no">140</span><span id="line.140">            Function&lt;com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">141</span><span id="line.141">        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();</span>
 <span class="source-line-no">142</span><span id="line.142">        return this;</span>
 <span class="source-line-no">143</span><span id="line.143">    }</span>
 <span class="source-line-no">144</span><span id="line.144"></span>
 <span class="source-line-no">145</span><span id="line.145">    /**</span>
-<span class="source-line-no">146</span><span id="line.146">    *  &lt;p&gt;The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo &lt;code&gt;paymentInterface&lt;/code&gt; must be unique.&lt;/p&gt;</span>
-<span class="source-line-no">147</span><span id="line.147">    */</span>
+<span class="source-line-no">146</span><span id="line.146">     *  &lt;p&gt;A reference to the customer this payment belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">147</span><span id="line.147">     */</span>
 <span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    public PaymentBuilder interfaceId(@Nullable final String interfaceId) {</span>
-<span class="source-line-no">150</span><span id="line.150">        this.interfaceId = interfaceId;</span>
+<span class="source-line-no">149</span><span id="line.149">    public PaymentBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {</span>
+<span class="source-line-no">150</span><span id="line.150">        this.customer = customer;</span>
 <span class="source-line-no">151</span><span id="line.151">        return this;</span>
 <span class="source-line-no">152</span><span id="line.152">    }</span>
 <span class="source-line-no">153</span><span id="line.153"></span>
 <span class="source-line-no">154</span><span id="line.154">    /**</span>
-<span class="source-line-no">155</span><span id="line.155">    *  &lt;p&gt;How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.&lt;/p&gt;</span>
-<span class="source-line-no">156</span><span id="line.156">    */</span>
+<span class="source-line-no">155</span><span id="line.155">     *  &lt;p&gt;Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).&lt;/p&gt;</span>
+<span class="source-line-no">156</span><span id="line.156">     */</span>
 <span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public PaymentBuilder amountPlanned(final com.commercetools.api.models.common.TypedMoney amountPlanned) {</span>
-<span class="source-line-no">159</span><span id="line.159">        this.amountPlanned = amountPlanned;</span>
+<span class="source-line-no">158</span><span id="line.158">    public PaymentBuilder anonymousId(@Nullable final String anonymousId) {</span>
+<span class="source-line-no">159</span><span id="line.159">        this.anonymousId = anonymousId;</span>
 <span class="source-line-no">160</span><span id="line.160">        return this;</span>
 <span class="source-line-no">161</span><span id="line.161">    }</span>
 <span class="source-line-no">162</span><span id="line.162"></span>
 <span class="source-line-no">163</span><span id="line.163">    /**</span>
-<span class="source-line-no">164</span><span id="line.164">    *  &lt;p&gt;How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.&lt;/p&gt;</span>
-<span class="source-line-no">165</span><span id="line.165">    */</span>
+<span class="source-line-no">164</span><span id="line.164">     *  &lt;p&gt;The identifier that is used by the interface that manages the payment (usually the PSP). Cannot be changed once it has been set. The combination of this ID and the PaymentMethodInfo &lt;code&gt;paymentInterface&lt;/code&gt; must be unique.&lt;/p&gt;</span>
+<span class="source-line-no">165</span><span id="line.165">     */</span>
 <span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public PaymentBuilder amountPlanned(</span>
-<span class="source-line-no">168</span><span id="line.168">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
-<span class="source-line-no">169</span><span id="line.169">        this.amountPlanned = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();</span>
-<span class="source-line-no">170</span><span id="line.170">        return this;</span>
-<span class="source-line-no">171</span><span id="line.171">    }</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public PaymentBuilder paymentMethodInfo(</span>
-<span class="source-line-no">174</span><span id="line.174">            Function&lt;com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder&gt; builder) {</span>
-<span class="source-line-no">175</span><span id="line.175">        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())</span>
-<span class="source-line-no">176</span><span id="line.176">                .build();</span>
-<span class="source-line-no">177</span><span id="line.177">        return this;</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public PaymentBuilder paymentMethodInfo(</span>
-<span class="source-line-no">181</span><span id="line.181">            final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {</span>
-<span class="source-line-no">182</span><span id="line.182">        this.paymentMethodInfo = paymentMethodInfo;</span>
-<span class="source-line-no">183</span><span id="line.183">        return this;</span>
-<span class="source-line-no">184</span><span id="line.184">    }</span>
-<span class="source-line-no">185</span><span id="line.185"></span>
-<span class="source-line-no">186</span><span id="line.186">    public PaymentBuilder paymentStatus(</span>
-<span class="source-line-no">187</span><span id="line.187">            Function&lt;com.commercetools.api.models.payment.PaymentStatusBuilder, com.commercetools.api.models.payment.PaymentStatusBuilder&gt; builder) {</span>
-<span class="source-line-no">188</span><span id="line.188">        this.paymentStatus = builder.apply(com.commercetools.api.models.payment.PaymentStatusBuilder.of()).build();</span>
-<span class="source-line-no">189</span><span id="line.189">        return this;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public PaymentBuilder paymentStatus(final com.commercetools.api.models.payment.PaymentStatus paymentStatus) {</span>
-<span class="source-line-no">193</span><span id="line.193">        this.paymentStatus = paymentStatus;</span>
-<span class="source-line-no">194</span><span id="line.194">        return this;</span>
-<span class="source-line-no">195</span><span id="line.195">    }</span>
-<span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">    /**</span>
-<span class="source-line-no">198</span><span id="line.198">    *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
-<span class="source-line-no">199</span><span id="line.199">    */</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    public PaymentBuilder transactions(final com.commercetools.api.models.payment.Transaction... transactions) {</span>
-<span class="source-line-no">202</span><span id="line.202">        this.transactions = new ArrayList&lt;&gt;(Arrays.asList(transactions));</span>
-<span class="source-line-no">203</span><span id="line.203">        return this;</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    /**</span>
-<span class="source-line-no">207</span><span id="line.207">    *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
-<span class="source-line-no">208</span><span id="line.208">    */</span>
+<span class="source-line-no">167</span><span id="line.167">    public PaymentBuilder interfaceId(@Nullable final String interfaceId) {</span>
+<span class="source-line-no">168</span><span id="line.168">        this.interfaceId = interfaceId;</span>
+<span class="source-line-no">169</span><span id="line.169">        return this;</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    /**</span>
+<span class="source-line-no">173</span><span id="line.173">     *  &lt;p&gt;How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.&lt;/p&gt;</span>
+<span class="source-line-no">174</span><span id="line.174">     */</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    public PaymentBuilder amountPlanned(final com.commercetools.api.models.common.TypedMoney amountPlanned) {</span>
+<span class="source-line-no">177</span><span id="line.177">        this.amountPlanned = amountPlanned;</span>
+<span class="source-line-no">178</span><span id="line.178">        return this;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    /**</span>
+<span class="source-line-no">182</span><span id="line.182">     *  &lt;p&gt;How much money this payment intends to receive from the customer. The value usually matches the cart or order gross total.&lt;/p&gt;</span>
+<span class="source-line-no">183</span><span id="line.183">     */</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    public PaymentBuilder amountPlanned(</span>
+<span class="source-line-no">186</span><span id="line.186">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
+<span class="source-line-no">187</span><span id="line.187">        this.amountPlanned = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();</span>
+<span class="source-line-no">188</span><span id="line.188">        return this;</span>
+<span class="source-line-no">189</span><span id="line.189">    }</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    public PaymentBuilder paymentMethodInfo(</span>
+<span class="source-line-no">192</span><span id="line.192">            Function&lt;com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder&gt; builder) {</span>
+<span class="source-line-no">193</span><span id="line.193">        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())</span>
+<span class="source-line-no">194</span><span id="line.194">                .build();</span>
+<span class="source-line-no">195</span><span id="line.195">        return this;</span>
+<span class="source-line-no">196</span><span id="line.196">    }</span>
+<span class="source-line-no">197</span><span id="line.197"></span>
+<span class="source-line-no">198</span><span id="line.198">    public PaymentBuilder paymentMethodInfo(</span>
+<span class="source-line-no">199</span><span id="line.199">            final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {</span>
+<span class="source-line-no">200</span><span id="line.200">        this.paymentMethodInfo = paymentMethodInfo;</span>
+<span class="source-line-no">201</span><span id="line.201">        return this;</span>
+<span class="source-line-no">202</span><span id="line.202">    }</span>
+<span class="source-line-no">203</span><span id="line.203"></span>
+<span class="source-line-no">204</span><span id="line.204">    public PaymentBuilder paymentStatus(</span>
+<span class="source-line-no">205</span><span id="line.205">            Function&lt;com.commercetools.api.models.payment.PaymentStatusBuilder, com.commercetools.api.models.payment.PaymentStatusBuilder&gt; builder) {</span>
+<span class="source-line-no">206</span><span id="line.206">        this.paymentStatus = builder.apply(com.commercetools.api.models.payment.PaymentStatusBuilder.of()).build();</span>
+<span class="source-line-no">207</span><span id="line.207">        return this;</span>
+<span class="source-line-no">208</span><span id="line.208">    }</span>
 <span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    public PaymentBuilder transactions(</span>
-<span class="source-line-no">211</span><span id="line.211">            final java.util.List&lt;com.commercetools.api.models.payment.Transaction&gt; transactions) {</span>
-<span class="source-line-no">212</span><span id="line.212">        this.transactions = transactions;</span>
-<span class="source-line-no">213</span><span id="line.213">        return this;</span>
-<span class="source-line-no">214</span><span id="line.214">    }</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">    /**</span>
-<span class="source-line-no">217</span><span id="line.217">    *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
-<span class="source-line-no">218</span><span id="line.218">    */</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">    public PaymentBuilder plusTransactions(final com.commercetools.api.models.payment.Transaction... transactions) {</span>
-<span class="source-line-no">221</span><span id="line.221">        if (this.transactions == null) {</span>
-<span class="source-line-no">222</span><span id="line.222">            this.transactions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">223</span><span id="line.223">        }</span>
-<span class="source-line-no">224</span><span id="line.224">        this.transactions.addAll(Arrays.asList(transactions));</span>
-<span class="source-line-no">225</span><span id="line.225">        return this;</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
+<span class="source-line-no">210</span><span id="line.210">    public PaymentBuilder paymentStatus(final com.commercetools.api.models.payment.PaymentStatus paymentStatus) {</span>
+<span class="source-line-no">211</span><span id="line.211">        this.paymentStatus = paymentStatus;</span>
+<span class="source-line-no">212</span><span id="line.212">        return this;</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    /**</span>
+<span class="source-line-no">216</span><span id="line.216">     *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
+<span class="source-line-no">217</span><span id="line.217">     */</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">    public PaymentBuilder transactions(final com.commercetools.api.models.payment.Transaction... transactions) {</span>
+<span class="source-line-no">220</span><span id="line.220">        this.transactions = new ArrayList&lt;&gt;(Arrays.asList(transactions));</span>
+<span class="source-line-no">221</span><span id="line.221">        return this;</span>
+<span class="source-line-no">222</span><span id="line.222">    }</span>
+<span class="source-line-no">223</span><span id="line.223"></span>
+<span class="source-line-no">224</span><span id="line.224">    /**</span>
+<span class="source-line-no">225</span><span id="line.225">     *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
+<span class="source-line-no">226</span><span id="line.226">     */</span>
 <span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    /**</span>
-<span class="source-line-no">229</span><span id="line.229">    *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
-<span class="source-line-no">230</span><span id="line.230">    */</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">    public PaymentBuilder plusTransactions(</span>
-<span class="source-line-no">233</span><span id="line.233">            Function&lt;com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder&gt; builder) {</span>
-<span class="source-line-no">234</span><span id="line.234">        if (this.transactions == null) {</span>
-<span class="source-line-no">235</span><span id="line.235">            this.transactions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">236</span><span id="line.236">        }</span>
-<span class="source-line-no">237</span><span id="line.237">        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());</span>
-<span class="source-line-no">238</span><span id="line.238">        return this;</span>
-<span class="source-line-no">239</span><span id="line.239">    }</span>
-<span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">    /**</span>
-<span class="source-line-no">242</span><span id="line.242">    *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
-<span class="source-line-no">243</span><span id="line.243">    */</span>
-<span class="source-line-no">244</span><span id="line.244"></span>
-<span class="source-line-no">245</span><span id="line.245">    public PaymentBuilder withTransactions(</span>
-<span class="source-line-no">246</span><span id="line.246">            Function&lt;com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder&gt; builder) {</span>
-<span class="source-line-no">247</span><span id="line.247">        this.transactions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">248</span><span id="line.248">        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());</span>
-<span class="source-line-no">249</span><span id="line.249">        return this;</span>
-<span class="source-line-no">250</span><span id="line.250">    }</span>
-<span class="source-line-no">251</span><span id="line.251"></span>
-<span class="source-line-no">252</span><span id="line.252">    /**</span>
-<span class="source-line-no">253</span><span id="line.253">    *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
-<span class="source-line-no">254</span><span id="line.254">    */</span>
-<span class="source-line-no">255</span><span id="line.255"></span>
-<span class="source-line-no">256</span><span id="line.256">    public PaymentBuilder interfaceInteractions(</span>
-<span class="source-line-no">257</span><span id="line.257">            final com.commercetools.api.models.type.CustomFields... interfaceInteractions) {</span>
-<span class="source-line-no">258</span><span id="line.258">        this.interfaceInteractions = new ArrayList&lt;&gt;(Arrays.asList(interfaceInteractions));</span>
-<span class="source-line-no">259</span><span id="line.259">        return this;</span>
-<span class="source-line-no">260</span><span id="line.260">    }</span>
-<span class="source-line-no">261</span><span id="line.261"></span>
-<span class="source-line-no">262</span><span id="line.262">    /**</span>
-<span class="source-line-no">263</span><span id="line.263">    *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
-<span class="source-line-no">264</span><span id="line.264">    */</span>
-<span class="source-line-no">265</span><span id="line.265"></span>
-<span class="source-line-no">266</span><span id="line.266">    public PaymentBuilder interfaceInteractions(</span>
-<span class="source-line-no">267</span><span id="line.267">            final java.util.List&lt;com.commercetools.api.models.type.CustomFields&gt; interfaceInteractions) {</span>
-<span class="source-line-no">268</span><span id="line.268">        this.interfaceInteractions = interfaceInteractions;</span>
-<span class="source-line-no">269</span><span id="line.269">        return this;</span>
-<span class="source-line-no">270</span><span id="line.270">    }</span>
-<span class="source-line-no">271</span><span id="line.271"></span>
-<span class="source-line-no">272</span><span id="line.272">    /**</span>
-<span class="source-line-no">273</span><span id="line.273">    *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
-<span class="source-line-no">274</span><span id="line.274">    */</span>
-<span class="source-line-no">275</span><span id="line.275"></span>
-<span class="source-line-no">276</span><span id="line.276">    public PaymentBuilder plusInterfaceInteractions(</span>
-<span class="source-line-no">277</span><span id="line.277">            final com.commercetools.api.models.type.CustomFields... interfaceInteractions) {</span>
-<span class="source-line-no">278</span><span id="line.278">        if (this.interfaceInteractions == null) {</span>
-<span class="source-line-no">279</span><span id="line.279">            this.interfaceInteractions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">280</span><span id="line.280">        }</span>
-<span class="source-line-no">281</span><span id="line.281">        this.interfaceInteractions.addAll(Arrays.asList(interfaceInteractions));</span>
-<span class="source-line-no">282</span><span id="line.282">        return this;</span>
-<span class="source-line-no">283</span><span id="line.283">    }</span>
-<span class="source-line-no">284</span><span id="line.284"></span>
-<span class="source-line-no">285</span><span id="line.285">    /**</span>
-<span class="source-line-no">286</span><span id="line.286">    *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
-<span class="source-line-no">287</span><span id="line.287">    */</span>
-<span class="source-line-no">288</span><span id="line.288"></span>
-<span class="source-line-no">289</span><span id="line.289">    public PaymentBuilder plusInterfaceInteractions(</span>
-<span class="source-line-no">290</span><span id="line.290">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
-<span class="source-line-no">291</span><span id="line.291">        if (this.interfaceInteractions == null) {</span>
-<span class="source-line-no">292</span><span id="line.292">            this.interfaceInteractions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">293</span><span id="line.293">        }</span>
-<span class="source-line-no">294</span><span id="line.294">        this.interfaceInteractions</span>
-<span class="source-line-no">295</span><span id="line.295">                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build());</span>
-<span class="source-line-no">296</span><span id="line.296">        return this;</span>
-<span class="source-line-no">297</span><span id="line.297">    }</span>
-<span class="source-line-no">298</span><span id="line.298"></span>
-<span class="source-line-no">299</span><span id="line.299">    /**</span>
-<span class="source-line-no">300</span><span id="line.300">    *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
-<span class="source-line-no">301</span><span id="line.301">    */</span>
+<span class="source-line-no">228</span><span id="line.228">    public PaymentBuilder transactions(</span>
+<span class="source-line-no">229</span><span id="line.229">            final java.util.List&lt;com.commercetools.api.models.payment.Transaction&gt; transactions) {</span>
+<span class="source-line-no">230</span><span id="line.230">        this.transactions = transactions;</span>
+<span class="source-line-no">231</span><span id="line.231">        return this;</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    /**</span>
+<span class="source-line-no">235</span><span id="line.235">     *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
+<span class="source-line-no">236</span><span id="line.236">     */</span>
+<span class="source-line-no">237</span><span id="line.237"></span>
+<span class="source-line-no">238</span><span id="line.238">    public PaymentBuilder plusTransactions(final com.commercetools.api.models.payment.Transaction... transactions) {</span>
+<span class="source-line-no">239</span><span id="line.239">        if (this.transactions == null) {</span>
+<span class="source-line-no">240</span><span id="line.240">            this.transactions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">241</span><span id="line.241">        }</span>
+<span class="source-line-no">242</span><span id="line.242">        this.transactions.addAll(Arrays.asList(transactions));</span>
+<span class="source-line-no">243</span><span id="line.243">        return this;</span>
+<span class="source-line-no">244</span><span id="line.244">    }</span>
+<span class="source-line-no">245</span><span id="line.245"></span>
+<span class="source-line-no">246</span><span id="line.246">    /**</span>
+<span class="source-line-no">247</span><span id="line.247">     *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
+<span class="source-line-no">248</span><span id="line.248">     */</span>
+<span class="source-line-no">249</span><span id="line.249"></span>
+<span class="source-line-no">250</span><span id="line.250">    public PaymentBuilder plusTransactions(</span>
+<span class="source-line-no">251</span><span id="line.251">            Function&lt;com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder&gt; builder) {</span>
+<span class="source-line-no">252</span><span id="line.252">        if (this.transactions == null) {</span>
+<span class="source-line-no">253</span><span id="line.253">            this.transactions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">254</span><span id="line.254">        }</span>
+<span class="source-line-no">255</span><span id="line.255">        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());</span>
+<span class="source-line-no">256</span><span id="line.256">        return this;</span>
+<span class="source-line-no">257</span><span id="line.257">    }</span>
+<span class="source-line-no">258</span><span id="line.258"></span>
+<span class="source-line-no">259</span><span id="line.259">    /**</span>
+<span class="source-line-no">260</span><span id="line.260">     *  &lt;p&gt;A list of financial transactions of different TransactionTypes with different TransactionStates.&lt;/p&gt;</span>
+<span class="source-line-no">261</span><span id="line.261">     */</span>
+<span class="source-line-no">262</span><span id="line.262"></span>
+<span class="source-line-no">263</span><span id="line.263">    public PaymentBuilder withTransactions(</span>
+<span class="source-line-no">264</span><span id="line.264">            Function&lt;com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.TransactionBuilder&gt; builder) {</span>
+<span class="source-line-no">265</span><span id="line.265">        this.transactions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">266</span><span id="line.266">        this.transactions.add(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()).build());</span>
+<span class="source-line-no">267</span><span id="line.267">        return this;</span>
+<span class="source-line-no">268</span><span id="line.268">    }</span>
+<span class="source-line-no">269</span><span id="line.269"></span>
+<span class="source-line-no">270</span><span id="line.270">    /**</span>
+<span class="source-line-no">271</span><span id="line.271">     *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
+<span class="source-line-no">272</span><span id="line.272">     */</span>
+<span class="source-line-no">273</span><span id="line.273"></span>
+<span class="source-line-no">274</span><span id="line.274">    public PaymentBuilder interfaceInteractions(</span>
+<span class="source-line-no">275</span><span id="line.275">            final com.commercetools.api.models.type.CustomFields... interfaceInteractions) {</span>
+<span class="source-line-no">276</span><span id="line.276">        this.interfaceInteractions = new ArrayList&lt;&gt;(Arrays.asList(interfaceInteractions));</span>
+<span class="source-line-no">277</span><span id="line.277">        return this;</span>
+<span class="source-line-no">278</span><span id="line.278">    }</span>
+<span class="source-line-no">279</span><span id="line.279"></span>
+<span class="source-line-no">280</span><span id="line.280">    /**</span>
+<span class="source-line-no">281</span><span id="line.281">     *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
+<span class="source-line-no">282</span><span id="line.282">     */</span>
+<span class="source-line-no">283</span><span id="line.283"></span>
+<span class="source-line-no">284</span><span id="line.284">    public PaymentBuilder interfaceInteractions(</span>
+<span class="source-line-no">285</span><span id="line.285">            final java.util.List&lt;com.commercetools.api.models.type.CustomFields&gt; interfaceInteractions) {</span>
+<span class="source-line-no">286</span><span id="line.286">        this.interfaceInteractions = interfaceInteractions;</span>
+<span class="source-line-no">287</span><span id="line.287">        return this;</span>
+<span class="source-line-no">288</span><span id="line.288">    }</span>
+<span class="source-line-no">289</span><span id="line.289"></span>
+<span class="source-line-no">290</span><span id="line.290">    /**</span>
+<span class="source-line-no">291</span><span id="line.291">     *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
+<span class="source-line-no">292</span><span id="line.292">     */</span>
+<span class="source-line-no">293</span><span id="line.293"></span>
+<span class="source-line-no">294</span><span id="line.294">    public PaymentBuilder plusInterfaceInteractions(</span>
+<span class="source-line-no">295</span><span id="line.295">            final com.commercetools.api.models.type.CustomFields... interfaceInteractions) {</span>
+<span class="source-line-no">296</span><span id="line.296">        if (this.interfaceInteractions == null) {</span>
+<span class="source-line-no">297</span><span id="line.297">            this.interfaceInteractions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">298</span><span id="line.298">        }</span>
+<span class="source-line-no">299</span><span id="line.299">        this.interfaceInteractions.addAll(Arrays.asList(interfaceInteractions));</span>
+<span class="source-line-no">300</span><span id="line.300">        return this;</span>
+<span class="source-line-no">301</span><span id="line.301">    }</span>
 <span class="source-line-no">302</span><span id="line.302"></span>
-<span class="source-line-no">303</span><span id="line.303">    public PaymentBuilder withInterfaceInteractions(</span>
-<span class="source-line-no">304</span><span id="line.304">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
-<span class="source-line-no">305</span><span id="line.305">        this.interfaceInteractions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">306</span><span id="line.306">        this.interfaceInteractions</span>
-<span class="source-line-no">307</span><span id="line.307">                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build());</span>
-<span class="source-line-no">308</span><span id="line.308">        return this;</span>
-<span class="source-line-no">309</span><span id="line.309">    }</span>
-<span class="source-line-no">310</span><span id="line.310"></span>
-<span class="source-line-no">311</span><span id="line.311">    public PaymentBuilder custom(</span>
-<span class="source-line-no">312</span><span id="line.312">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
-<span class="source-line-no">313</span><span id="line.313">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
+<span class="source-line-no">303</span><span id="line.303">    /**</span>
+<span class="source-line-no">304</span><span id="line.304">     *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
+<span class="source-line-no">305</span><span id="line.305">     */</span>
+<span class="source-line-no">306</span><span id="line.306"></span>
+<span class="source-line-no">307</span><span id="line.307">    public PaymentBuilder plusInterfaceInteractions(</span>
+<span class="source-line-no">308</span><span id="line.308">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
+<span class="source-line-no">309</span><span id="line.309">        if (this.interfaceInteractions == null) {</span>
+<span class="source-line-no">310</span><span id="line.310">            this.interfaceInteractions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">311</span><span id="line.311">        }</span>
+<span class="source-line-no">312</span><span id="line.312">        this.interfaceInteractions</span>
+<span class="source-line-no">313</span><span id="line.313">                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build());</span>
 <span class="source-line-no">314</span><span id="line.314">        return this;</span>
 <span class="source-line-no">315</span><span id="line.315">    }</span>
 <span class="source-line-no">316</span><span id="line.316"></span>
-<span class="source-line-no">317</span><span id="line.317">    public PaymentBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
-<span class="source-line-no">318</span><span id="line.318">        this.custom = custom;</span>
-<span class="source-line-no">319</span><span id="line.319">        return this;</span>
-<span class="source-line-no">320</span><span id="line.320">    }</span>
-<span class="source-line-no">321</span><span id="line.321"></span>
-<span class="source-line-no">322</span><span id="line.322">    /**</span>
-<span class="source-line-no">323</span><span id="line.323">    *  &lt;p&gt;User-defined unique identifier of the Payment.&lt;/p&gt;</span>
-<span class="source-line-no">324</span><span id="line.324">    */</span>
-<span class="source-line-no">325</span><span id="line.325"></span>
-<span class="source-line-no">326</span><span id="line.326">    public PaymentBuilder key(@Nullable final String key) {</span>
-<span class="source-line-no">327</span><span id="line.327">        this.key = key;</span>
-<span class="source-line-no">328</span><span id="line.328">        return this;</span>
-<span class="source-line-no">329</span><span id="line.329">    }</span>
-<span class="source-line-no">330</span><span id="line.330"></span>
-<span class="source-line-no">331</span><span id="line.331">    public String getId() {</span>
-<span class="source-line-no">332</span><span id="line.332">        return this.id;</span>
+<span class="source-line-no">317</span><span id="line.317">    /**</span>
+<span class="source-line-no">318</span><span id="line.318">     *  &lt;p&gt;Interface interactions can be requests sent to the PSP, responses received from the PSP or notifications received from the PSP. Some interactions may result in a transaction. If so, the &lt;code&gt;interactionId&lt;/code&gt; in the Transaction should be set to match the ID of the PSP for the interaction. Interactions are managed by the PSP integration and are usually neither written nor read by the user facing frontends or other services.&lt;/p&gt;</span>
+<span class="source-line-no">319</span><span id="line.319">     */</span>
+<span class="source-line-no">320</span><span id="line.320"></span>
+<span class="source-line-no">321</span><span id="line.321">    public PaymentBuilder withInterfaceInteractions(</span>
+<span class="source-line-no">322</span><span id="line.322">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
+<span class="source-line-no">323</span><span id="line.323">        this.interfaceInteractions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">324</span><span id="line.324">        this.interfaceInteractions</span>
+<span class="source-line-no">325</span><span id="line.325">                .add(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build());</span>
+<span class="source-line-no">326</span><span id="line.326">        return this;</span>
+<span class="source-line-no">327</span><span id="line.327">    }</span>
+<span class="source-line-no">328</span><span id="line.328"></span>
+<span class="source-line-no">329</span><span id="line.329">    public PaymentBuilder custom(</span>
+<span class="source-line-no">330</span><span id="line.330">            Function&lt;com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder&gt; builder) {</span>
+<span class="source-line-no">331</span><span id="line.331">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();</span>
+<span class="source-line-no">332</span><span id="line.332">        return this;</span>
 <span class="source-line-no">333</span><span id="line.333">    }</span>
 <span class="source-line-no">334</span><span id="line.334"></span>
-<span class="source-line-no">335</span><span id="line.335">    public Long getVersion() {</span>
-<span class="source-line-no">336</span><span id="line.336">        return this.version;</span>
-<span class="source-line-no">337</span><span id="line.337">    }</span>
-<span class="source-line-no">338</span><span id="line.338"></span>
-<span class="source-line-no">339</span><span id="line.339">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">340</span><span id="line.340">        return this.createdAt;</span>
-<span class="source-line-no">341</span><span id="line.341">    }</span>
-<span class="source-line-no">342</span><span id="line.342"></span>
-<span class="source-line-no">343</span><span id="line.343">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">344</span><span id="line.344">        return this.lastModifiedAt;</span>
-<span class="source-line-no">345</span><span id="line.345">    }</span>
-<span class="source-line-no">346</span><span id="line.346"></span>
-<span class="source-line-no">347</span><span id="line.347">    @Nullable</span>
-<span class="source-line-no">348</span><span id="line.348">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">349</span><span id="line.349">        return this.lastModifiedBy;</span>
-<span class="source-line-no">350</span><span id="line.350">    }</span>
-<span class="source-line-no">351</span><span id="line.351"></span>
-<span class="source-line-no">352</span><span id="line.352">    @Nullable</span>
-<span class="source-line-no">353</span><span id="line.353">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">354</span><span id="line.354">        return this.createdBy;</span>
+<span class="source-line-no">335</span><span id="line.335">    public PaymentBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {</span>
+<span class="source-line-no">336</span><span id="line.336">        this.custom = custom;</span>
+<span class="source-line-no">337</span><span id="line.337">        return this;</span>
+<span class="source-line-no">338</span><span id="line.338">    }</span>
+<span class="source-line-no">339</span><span id="line.339"></span>
+<span class="source-line-no">340</span><span id="line.340">    /**</span>
+<span class="source-line-no">341</span><span id="line.341">     *  &lt;p&gt;User-defined unique identifier of the Payment.&lt;/p&gt;</span>
+<span class="source-line-no">342</span><span id="line.342">     */</span>
+<span class="source-line-no">343</span><span id="line.343"></span>
+<span class="source-line-no">344</span><span id="line.344">    public PaymentBuilder key(@Nullable final String key) {</span>
+<span class="source-line-no">345</span><span id="line.345">        this.key = key;</span>
+<span class="source-line-no">346</span><span id="line.346">        return this;</span>
+<span class="source-line-no">347</span><span id="line.347">    }</span>
+<span class="source-line-no">348</span><span id="line.348"></span>
+<span class="source-line-no">349</span><span id="line.349">    public String getId() {</span>
+<span class="source-line-no">350</span><span id="line.350">        return this.id;</span>
+<span class="source-line-no">351</span><span id="line.351">    }</span>
+<span class="source-line-no">352</span><span id="line.352"></span>
+<span class="source-line-no">353</span><span id="line.353">    public Long getVersion() {</span>
+<span class="source-line-no">354</span><span id="line.354">        return this.version;</span>
 <span class="source-line-no">355</span><span id="line.355">    }</span>
 <span class="source-line-no">356</span><span id="line.356"></span>
-<span class="source-line-no">357</span><span id="line.357">    @Nullable</span>
-<span class="source-line-no">358</span><span id="line.358">    public com.commercetools.api.models.customer.CustomerReference getCustomer() {</span>
-<span class="source-line-no">359</span><span id="line.359">        return this.customer;</span>
-<span class="source-line-no">360</span><span id="line.360">    }</span>
-<span class="source-line-no">361</span><span id="line.361"></span>
-<span class="source-line-no">362</span><span id="line.362">    @Nullable</span>
-<span class="source-line-no">363</span><span id="line.363">    public String getAnonymousId() {</span>
-<span class="source-line-no">364</span><span id="line.364">        return this.anonymousId;</span>
-<span class="source-line-no">365</span><span id="line.365">    }</span>
-<span class="source-line-no">366</span><span id="line.366"></span>
-<span class="source-line-no">367</span><span id="line.367">    @Nullable</span>
-<span class="source-line-no">368</span><span id="line.368">    public String getInterfaceId() {</span>
-<span class="source-line-no">369</span><span id="line.369">        return this.interfaceId;</span>
-<span class="source-line-no">370</span><span id="line.370">    }</span>
-<span class="source-line-no">371</span><span id="line.371"></span>
-<span class="source-line-no">372</span><span id="line.372">    public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {</span>
-<span class="source-line-no">373</span><span id="line.373">        return this.amountPlanned;</span>
-<span class="source-line-no">374</span><span id="line.374">    }</span>
-<span class="source-line-no">375</span><span id="line.375"></span>
-<span class="source-line-no">376</span><span id="line.376">    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {</span>
-<span class="source-line-no">377</span><span id="line.377">        return this.paymentMethodInfo;</span>
+<span class="source-line-no">357</span><span id="line.357">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">358</span><span id="line.358">        return this.createdAt;</span>
+<span class="source-line-no">359</span><span id="line.359">    }</span>
+<span class="source-line-no">360</span><span id="line.360"></span>
+<span class="source-line-no">361</span><span id="line.361">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">362</span><span id="line.362">        return this.lastModifiedAt;</span>
+<span class="source-line-no">363</span><span id="line.363">    }</span>
+<span class="source-line-no">364</span><span id="line.364"></span>
+<span class="source-line-no">365</span><span id="line.365">    @Nullable</span>
+<span class="source-line-no">366</span><span id="line.366">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">367</span><span id="line.367">        return this.lastModifiedBy;</span>
+<span class="source-line-no">368</span><span id="line.368">    }</span>
+<span class="source-line-no">369</span><span id="line.369"></span>
+<span class="source-line-no">370</span><span id="line.370">    @Nullable</span>
+<span class="source-line-no">371</span><span id="line.371">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">372</span><span id="line.372">        return this.createdBy;</span>
+<span class="source-line-no">373</span><span id="line.373">    }</span>
+<span class="source-line-no">374</span><span id="line.374"></span>
+<span class="source-line-no">375</span><span id="line.375">    @Nullable</span>
+<span class="source-line-no">376</span><span id="line.376">    public com.commercetools.api.models.customer.CustomerReference getCustomer() {</span>
+<span class="source-line-no">377</span><span id="line.377">        return this.customer;</span>
 <span class="source-line-no">378</span><span id="line.378">    }</span>
 <span class="source-line-no">379</span><span id="line.379"></span>
-<span class="source-line-no">380</span><span id="line.380">    public com.commercetools.api.models.payment.PaymentStatus getPaymentStatus() {</span>
-<span class="source-line-no">381</span><span id="line.381">        return this.paymentStatus;</span>
-<span class="source-line-no">382</span><span id="line.382">    }</span>
-<span class="source-line-no">383</span><span id="line.383"></span>
-<span class="source-line-no">384</span><span id="line.384">    public java.util.List&lt;com.commercetools.api.models.payment.Transaction&gt; getTransactions() {</span>
-<span class="source-line-no">385</span><span id="line.385">        return this.transactions;</span>
-<span class="source-line-no">386</span><span id="line.386">    }</span>
-<span class="source-line-no">387</span><span id="line.387"></span>
-<span class="source-line-no">388</span><span id="line.388">    public java.util.List&lt;com.commercetools.api.models.type.CustomFields&gt; getInterfaceInteractions() {</span>
-<span class="source-line-no">389</span><span id="line.389">        return this.interfaceInteractions;</span>
-<span class="source-line-no">390</span><span id="line.390">    }</span>
-<span class="source-line-no">391</span><span id="line.391"></span>
-<span class="source-line-no">392</span><span id="line.392">    @Nullable</span>
-<span class="source-line-no">393</span><span id="line.393">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
-<span class="source-line-no">394</span><span id="line.394">        return this.custom;</span>
-<span class="source-line-no">395</span><span id="line.395">    }</span>
-<span class="source-line-no">396</span><span id="line.396"></span>
-<span class="source-line-no">397</span><span id="line.397">    @Nullable</span>
-<span class="source-line-no">398</span><span id="line.398">    public String getKey() {</span>
-<span class="source-line-no">399</span><span id="line.399">        return this.key;</span>
+<span class="source-line-no">380</span><span id="line.380">    @Nullable</span>
+<span class="source-line-no">381</span><span id="line.381">    public String getAnonymousId() {</span>
+<span class="source-line-no">382</span><span id="line.382">        return this.anonymousId;</span>
+<span class="source-line-no">383</span><span id="line.383">    }</span>
+<span class="source-line-no">384</span><span id="line.384"></span>
+<span class="source-line-no">385</span><span id="line.385">    @Nullable</span>
+<span class="source-line-no">386</span><span id="line.386">    public String getInterfaceId() {</span>
+<span class="source-line-no">387</span><span id="line.387">        return this.interfaceId;</span>
+<span class="source-line-no">388</span><span id="line.388">    }</span>
+<span class="source-line-no">389</span><span id="line.389"></span>
+<span class="source-line-no">390</span><span id="line.390">    public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {</span>
+<span class="source-line-no">391</span><span id="line.391">        return this.amountPlanned;</span>
+<span class="source-line-no">392</span><span id="line.392">    }</span>
+<span class="source-line-no">393</span><span id="line.393"></span>
+<span class="source-line-no">394</span><span id="line.394">    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {</span>
+<span class="source-line-no">395</span><span id="line.395">        return this.paymentMethodInfo;</span>
+<span class="source-line-no">396</span><span id="line.396">    }</span>
+<span class="source-line-no">397</span><span id="line.397"></span>
+<span class="source-line-no">398</span><span id="line.398">    public com.commercetools.api.models.payment.PaymentStatus getPaymentStatus() {</span>
+<span class="source-line-no">399</span><span id="line.399">        return this.paymentStatus;</span>
 <span class="source-line-no">400</span><span id="line.400">    }</span>
 <span class="source-line-no">401</span><span id="line.401"></span>
-<span class="source-line-no">402</span><span id="line.402">    public Payment build() {</span>
-<span class="source-line-no">403</span><span id="line.403">        Objects.requireNonNull(id, Payment.class + ": id is missing");</span>
-<span class="source-line-no">404</span><span id="line.404">        Objects.requireNonNull(version, Payment.class + ": version is missing");</span>
-<span class="source-line-no">405</span><span id="line.405">        Objects.requireNonNull(createdAt, Payment.class + ": createdAt is missing");</span>
-<span class="source-line-no">406</span><span id="line.406">        Objects.requireNonNull(lastModifiedAt, Payment.class + ": lastModifiedAt is missing");</span>
-<span class="source-line-no">407</span><span id="line.407">        Objects.requireNonNull(amountPlanned, Payment.class + ": amountPlanned is missing");</span>
-<span class="source-line-no">408</span><span id="line.408">        Objects.requireNonNull(paymentMethodInfo, Payment.class + ": paymentMethodInfo is missing");</span>
-<span class="source-line-no">409</span><span id="line.409">        Objects.requireNonNull(paymentStatus, Payment.class + ": paymentStatus is missing");</span>
-<span class="source-line-no">410</span><span id="line.410">        Objects.requireNonNull(transactions, Payment.class + ": transactions is missing");</span>
-<span class="source-line-no">411</span><span id="line.411">        Objects.requireNonNull(interfaceInteractions, Payment.class + ": interfaceInteractions is missing");</span>
-<span class="source-line-no">412</span><span id="line.412">        return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,</span>
-<span class="source-line-no">413</span><span id="line.413">            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,</span>
-<span class="source-line-no">414</span><span id="line.414">            key);</span>
-<span class="source-line-no">415</span><span id="line.415">    }</span>
-<span class="source-line-no">416</span><span id="line.416"></span>
-<span class="source-line-no">417</span><span id="line.417">    /**</span>
-<span class="source-line-no">418</span><span id="line.418">     * builds Payment without checking for non null required values</span>
-<span class="source-line-no">419</span><span id="line.419">     */</span>
-<span class="source-line-no">420</span><span id="line.420">    public Payment buildUnchecked() {</span>
-<span class="source-line-no">421</span><span id="line.421">        return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,</span>
-<span class="source-line-no">422</span><span id="line.422">            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,</span>
-<span class="source-line-no">423</span><span id="line.423">            key);</span>
-<span class="source-line-no">424</span><span id="line.424">    }</span>
-<span class="source-line-no">425</span><span id="line.425"></span>
-<span class="source-line-no">426</span><span id="line.426">    public static PaymentBuilder of() {</span>
-<span class="source-line-no">427</span><span id="line.427">        return new PaymentBuilder();</span>
-<span class="source-line-no">428</span><span id="line.428">    }</span>
-<span class="source-line-no">429</span><span id="line.429"></span>
-<span class="source-line-no">430</span><span id="line.430">    public static PaymentBuilder of(final Payment template) {</span>
-<span class="source-line-no">431</span><span id="line.431">        PaymentBuilder builder = new PaymentBuilder();</span>
-<span class="source-line-no">432</span><span id="line.432">        builder.id = template.getId();</span>
-<span class="source-line-no">433</span><span id="line.433">        builder.version = template.getVersion();</span>
-<span class="source-line-no">434</span><span id="line.434">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">435</span><span id="line.435">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">436</span><span id="line.436">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">437</span><span id="line.437">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">438</span><span id="line.438">        builder.customer = template.getCustomer();</span>
-<span class="source-line-no">439</span><span id="line.439">        builder.anonymousId = template.getAnonymousId();</span>
-<span class="source-line-no">440</span><span id="line.440">        builder.interfaceId = template.getInterfaceId();</span>
-<span class="source-line-no">441</span><span id="line.441">        builder.amountPlanned = template.getAmountPlanned();</span>
-<span class="source-line-no">442</span><span id="line.442">        builder.paymentMethodInfo = template.getPaymentMethodInfo();</span>
-<span class="source-line-no">443</span><span id="line.443">        builder.paymentStatus = template.getPaymentStatus();</span>
-<span class="source-line-no">444</span><span id="line.444">        builder.transactions = template.getTransactions();</span>
-<span class="source-line-no">445</span><span id="line.445">        builder.interfaceInteractions = template.getInterfaceInteractions();</span>
-<span class="source-line-no">446</span><span id="line.446">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">447</span><span id="line.447">        builder.key = template.getKey();</span>
-<span class="source-line-no">448</span><span id="line.448">        return builder;</span>
-<span class="source-line-no">449</span><span id="line.449">    }</span>
-<span class="source-line-no">450</span><span id="line.450"></span>
-<span class="source-line-no">451</span><span id="line.451">}</span>
+<span class="source-line-no">402</span><span id="line.402">    public java.util.List&lt;com.commercetools.api.models.payment.Transaction&gt; getTransactions() {</span>
+<span class="source-line-no">403</span><span id="line.403">        return this.transactions;</span>
+<span class="source-line-no">404</span><span id="line.404">    }</span>
+<span class="source-line-no">405</span><span id="line.405"></span>
+<span class="source-line-no">406</span><span id="line.406">    public java.util.List&lt;com.commercetools.api.models.type.CustomFields&gt; getInterfaceInteractions() {</span>
+<span class="source-line-no">407</span><span id="line.407">        return this.interfaceInteractions;</span>
+<span class="source-line-no">408</span><span id="line.408">    }</span>
+<span class="source-line-no">409</span><span id="line.409"></span>
+<span class="source-line-no">410</span><span id="line.410">    @Nullable</span>
+<span class="source-line-no">411</span><span id="line.411">    public com.commercetools.api.models.type.CustomFields getCustom() {</span>
+<span class="source-line-no">412</span><span id="line.412">        return this.custom;</span>
+<span class="source-line-no">413</span><span id="line.413">    }</span>
+<span class="source-line-no">414</span><span id="line.414"></span>
+<span class="source-line-no">415</span><span id="line.415">    @Nullable</span>
+<span class="source-line-no">416</span><span id="line.416">    public String getKey() {</span>
+<span class="source-line-no">417</span><span id="line.417">        return this.key;</span>
+<span class="source-line-no">418</span><span id="line.418">    }</span>
+<span class="source-line-no">419</span><span id="line.419"></span>
+<span class="source-line-no">420</span><span id="line.420">    public Payment build() {</span>
+<span class="source-line-no">421</span><span id="line.421">        Objects.requireNonNull(id, Payment.class + ": id is missing");</span>
+<span class="source-line-no">422</span><span id="line.422">        Objects.requireNonNull(version, Payment.class + ": version is missing");</span>
+<span class="source-line-no">423</span><span id="line.423">        Objects.requireNonNull(createdAt, Payment.class + ": createdAt is missing");</span>
+<span class="source-line-no">424</span><span id="line.424">        Objects.requireNonNull(lastModifiedAt, Payment.class + ": lastModifiedAt is missing");</span>
+<span class="source-line-no">425</span><span id="line.425">        Objects.requireNonNull(amountPlanned, Payment.class + ": amountPlanned is missing");</span>
+<span class="source-line-no">426</span><span id="line.426">        Objects.requireNonNull(paymentMethodInfo, Payment.class + ": paymentMethodInfo is missing");</span>
+<span class="source-line-no">427</span><span id="line.427">        Objects.requireNonNull(paymentStatus, Payment.class + ": paymentStatus is missing");</span>
+<span class="source-line-no">428</span><span id="line.428">        Objects.requireNonNull(transactions, Payment.class + ": transactions is missing");</span>
+<span class="source-line-no">429</span><span id="line.429">        Objects.requireNonNull(interfaceInteractions, Payment.class + ": interfaceInteractions is missing");</span>
+<span class="source-line-no">430</span><span id="line.430">        return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,</span>
+<span class="source-line-no">431</span><span id="line.431">            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,</span>
+<span class="source-line-no">432</span><span id="line.432">            key);</span>
+<span class="source-line-no">433</span><span id="line.433">    }</span>
+<span class="source-line-no">434</span><span id="line.434"></span>
+<span class="source-line-no">435</span><span id="line.435">    /**</span>
+<span class="source-line-no">436</span><span id="line.436">     * builds Payment without checking for non null required values</span>
+<span class="source-line-no">437</span><span id="line.437">     */</span>
+<span class="source-line-no">438</span><span id="line.438">    public Payment buildUnchecked() {</span>
+<span class="source-line-no">439</span><span id="line.439">        return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,</span>
+<span class="source-line-no">440</span><span id="line.440">            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,</span>
+<span class="source-line-no">441</span><span id="line.441">            key);</span>
+<span class="source-line-no">442</span><span id="line.442">    }</span>
+<span class="source-line-no">443</span><span id="line.443"></span>
+<span class="source-line-no">444</span><span id="line.444">    public static PaymentBuilder of() {</span>
+<span class="source-line-no">445</span><span id="line.445">        return new PaymentBuilder();</span>
+<span class="source-line-no">446</span><span id="line.446">    }</span>
+<span class="source-line-no">447</span><span id="line.447"></span>
+<span class="source-line-no">448</span><span id="line.448">    public static PaymentBuilder of(final Payment template) {</span>
+<span class="source-line-no">449</span><span id="line.449">        PaymentBuilder builder = new PaymentBuilder();</span>
+<span class="source-line-no">450</span><span id="line.450">        builder.id = template.getId();</span>
+<span class="source-line-no">451</span><span id="line.451">        builder.version = template.getVersion();</span>
+<span class="source-line-no">452</span><span id="line.452">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">453</span><span id="line.453">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">454</span><span id="line.454">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">455</span><span id="line.455">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">456</span><span id="line.456">        builder.customer = template.getCustomer();</span>
+<span class="source-line-no">457</span><span id="line.457">        builder.anonymousId = template.getAnonymousId();</span>
+<span class="source-line-no">458</span><span id="line.458">        builder.interfaceId = template.getInterfaceId();</span>
+<span class="source-line-no">459</span><span id="line.459">        builder.amountPlanned = template.getAmountPlanned();</span>
+<span class="source-line-no">460</span><span id="line.460">        builder.paymentMethodInfo = template.getPaymentMethodInfo();</span>
+<span class="source-line-no">461</span><span id="line.461">        builder.paymentStatus = template.getPaymentStatus();</span>
+<span class="source-line-no">462</span><span id="line.462">        builder.transactions = template.getTransactions();</span>
+<span class="source-line-no">463</span><span id="line.463">        builder.interfaceInteractions = template.getInterfaceInteractions();</span>
+<span class="source-line-no">464</span><span id="line.464">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">465</span><span id="line.465">        builder.key = template.getKey();</span>
+<span class="source-line-no">466</span><span id="line.466">        return builder;</span>
+<span class="source-line-no">467</span><span id="line.467">    }</span>
+<span class="source-line-no">468</span><span id="line.468"></span>
+<span class="source-line-no">469</span><span id="line.469">}</span>
 
 
 

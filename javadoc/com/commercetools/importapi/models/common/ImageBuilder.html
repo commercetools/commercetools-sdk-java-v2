@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.12">ImageBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.23">ImageBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Image image = Image.builder()
+           .url("{url}")
+           .dimensions(dimensionsBuilder -> dimensionsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -176,7 +185,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ImageBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.13">ImageBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.24">ImageBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -190,28 +199,28 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="url(java.lang.String)">
 <h3>url</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.26">url</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.37">url</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;url)</span></div>
 <div class="block"><p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="dimensions(java.util.function.Function)">
 <h3>dimensions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.35">dimensions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssetDimensionsBuilder.html" title="class in com.commercetools.importapi.models.common">AssetDimensionsBuilder</a>,&#8203;<a href="AssetDimensionsBuilder.html" title="class in com.commercetools.importapi.models.common">AssetDimensionsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.46">dimensions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AssetDimensionsBuilder.html" title="class in com.commercetools.importapi.models.common">AssetDimensionsBuilder</a>,&#8203;<a href="AssetDimensionsBuilder.html" title="class in com.commercetools.importapi.models.common">AssetDimensionsBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="dimensions(com.commercetools.importapi.models.common.AssetDimensions)">
 <h3>dimensions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.45">dimensions</a></span>&#8203;<span class="parameters">(<a href="AssetDimensions.html" title="interface in com.commercetools.importapi.models.common">AssetDimensions</a>&nbsp;dimensions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.56">dimensions</a></span>&#8203;<span class="parameters">(<a href="AssetDimensions.html" title="interface in com.commercetools.importapi.models.common">AssetDimensions</a>&nbsp;dimensions)</span></div>
 <div class="block"><p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="label(java.lang.String)">
 <h3>label</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.54">label</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.65">label</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;label)</span></div>
 <div class="block"><p>Custom label that can be used, for example, as an image description.</p></div>
 </section>
@@ -219,26 +228,26 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getUrl()">
 <h3>getUrl</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.59">getUrl</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.70">getUrl</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDimensions()">
 <h3>getDimensions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetDimensions.html" title="interface in com.commercetools.importapi.models.common">AssetDimensions</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.63">getDimensions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AssetDimensions.html" title="interface in com.commercetools.importapi.models.common">AssetDimensions</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.74">getDimensions</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLabel()">
 <h3>getLabel</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.67">getLabel</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.78">getLabel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.72">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.83">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&gt;</code></dd>
@@ -248,20 +257,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.81">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.92">buildUnchecked</a></span>()</div>
 <div class="block">builds Image without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.85">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.96">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.common.Image)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.89">of</a></span>&#8203;<span class="parameters">(<a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ImageBuilder.html" title="class in com.commercetools.importapi.models.common">ImageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/ImageBuilder.html#line.100">of</a></span>&#8203;<span class="parameters">(<a href="Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

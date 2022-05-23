@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductSetProductPriceCustomTypeActionImpl.html" title="class in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.18">ProductSetProductPriceCustomTypeAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.28">ProductSetProductPriceCustomTypeAction</a></span><span class="extends-implements">
 extends <a href="ProductUpdateAction.html" title="interface in com.commercetools.api.models.product">ProductUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSetProductPriceCustomTypeAction productSetProductPriceCustomTypeAction = ProductSetProductPriceCustomTypeAction.builder()
+           .priceId("{priceId}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -184,7 +192,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="SET_PRODUCT_PRICE_CUSTOM_TYPE">
 <h3>SET_PRODUCT_PRICE_CUSTOM_TYPE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.22">SET_PRODUCT_PRICE_CUSTOM_TYPE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.32">SET_PRODUCT_PRICE_CUSTOM_TYPE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.product.ProductSetProductPriceCustomTypeAction.SET_PRODUCT_PRICE_CUSTOM_TYPE">Constant Field Values</a></dd>
@@ -203,20 +211,20 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getPriceId()">
 <h3>getPriceId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.24">getPriceId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.34">getPriceId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.28">getStaged</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.38">getStaged</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.34">getType</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.44">getType</a></span>()</div>
 <div class="block"><p>Defines the Type that extends the Price with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Price.</p></div>
 </section>
 </li>
@@ -224,68 +232,68 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getFields()">
 <h3>getFields</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.41">getFields</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.51">getFields</a></span>()</div>
 <div class="block"><p>Sets the Custom Fields fields for the Price.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPriceId(java.lang.String)">
 <h3>setPriceId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.45">setPriceId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.55">setPriceId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStaged(java.lang.Boolean)">
 <h3>setStaged</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.47">setStaged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.57">setStaged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.type.TypeResourceIdentifier)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.49">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.59">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFields(com.commercetools.api.models.type.FieldContainer)">
 <h3>setFields</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.51">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.61">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.53">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product.ProductSetProductPriceCustomTypeAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetProductPriceCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.66">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetProductPriceCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.76">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.product.ProductSetProductPriceCustomTypeAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetProductPriceCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.70">builder</a></span>&#8203;<span class="parameters">(<a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetProductPriceCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.80">builder</a></span>&#8203;<span class="parameters">(<a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductSetProductPriceCustomTypeAction(java.util.function.Function)">
 <h3>withProductSetProductPriceCustomTypeAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.75">withProductSetProductPriceCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.85">withProductSetProductPriceCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.80">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSetProductPriceCustomTypeAction.html" title="interface in com.commercetools.api.models.product">ProductSetProductPriceCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetProductPriceCustomTypeAction.html#line.90">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

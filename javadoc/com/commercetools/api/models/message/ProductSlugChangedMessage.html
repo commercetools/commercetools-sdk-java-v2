@@ -84,8 +84,23 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductSlugChangedMessageImpl.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.17">ProductSlugChangedMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.34">ProductSlugChangedMessage</a></span><span class="extends-implements">
 extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSlugChangedMessage productSlugChangedMessage = ProductSlugChangedMessage.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .sequenceNumber(0.3)
+           .resource(resourceBuilder -> resourceBuilder)
+           .resourceVersion(0.3)
+           .slug(slugBuilder -> slugBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -175,7 +190,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="PRODUCT_SLUG_CHANGED">
 <h3>PRODUCT_SLUG_CHANGED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.21">PRODUCT_SLUG_CHANGED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.38">PRODUCT_SLUG_CHANGED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.ProductSlugChangedMessage.PRODUCT_SLUG_CHANGED">Constant Field Values</a></dd>
@@ -195,7 +210,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <h3>getSlug</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.26">getSlug</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.43">getSlug</a></span>()</div>
 <div class="block"><p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p></div>
 </section>
 </li>
@@ -203,56 +218,56 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <section class="detail" id="getOldSlug()">
 <h3>getOldSlug</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.34">getOldSlug</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.51">getOldSlug</a></span>()</div>
 <div class="block"><p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSlug(com.commercetools.api.models.common.LocalizedString)">
 <h3>setSlug</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.38">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.55">setSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOldSlug(com.commercetools.api.models.common.LocalizedString)">
 <h3>setOldSlug</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.40">setOldSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;oldSlug)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.57">setOldSlug</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;oldSlug)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.42">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.59">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ProductSlugChangedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.63">of</a></span>&#8203;<span class="parameters">(<a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSlugChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.63">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSlugChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.80">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.ProductSlugChangedMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSlugChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.67">builder</a></span>&#8203;<span class="parameters">(<a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSlugChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.84">builder</a></span>&#8203;<span class="parameters">(<a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductSlugChangedMessage(java.util.function.Function)">
 <h3>withProductSlugChangedMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.71">withProductSlugChangedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.88">withProductSlugChangedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.75">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSlugChangedMessage.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductSlugChangedMessage.html#line.92">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartSetLineItemShippingDetailsAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.12">CartSetLineItemShippingDetailsActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.22">CartSetLineItemShippingDetailsActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartSetLineItemShippingDetailsAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartSetLineItemShippingDetailsAction cartSetLineItemShippingDetailsAction = CartSetLineItemShippingDetailsAction.builder()
+           .lineItemId("{lineItemId}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CartSetLineItemShippingDetailsActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.13">CartSetLineItemShippingDetailsActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.23">CartSetLineItemShippingDetailsActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -176,39 +184,39 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="lineItemId(java.lang.String)">
 <h3>lineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.20">lineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.30">lineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingDetails(java.util.function.Function)">
 <h3>shippingDetails</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.25">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>,&#8203;<a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.35">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>,&#8203;<a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.api.models.cart">ItemShippingDetailsDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shippingDetails(com.commercetools.api.models.cart.ItemShippingDetailsDraft)">
 <h3>shippingDetails</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.32">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.42">shippingDetails</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLineItemId()">
 <h3>getLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.38">getLineItemId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.48">getLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShippingDetails()">
 <h3>getShippingDetails</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.42">getShippingDetails</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.52">getShippingDetails</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.47">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.57">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CartSetLineItemShippingDetailsAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsAction</a>&gt;</code></dd>
@@ -218,20 +226,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.55">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.65">buildUnchecked</a></span>()</div>
 <div class="block">builds CartSetLineItemShippingDetailsAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.59">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.69">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.CartSetLineItemShippingDetailsAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.63">of</a></span>&#8203;<span class="parameters">(<a href="CartSetLineItemShippingDetailsAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemShippingDetailsActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemShippingDetailsActionBuilder.html#line.73">of</a></span>&#8203;<span class="parameters">(<a href="CartSetLineItemShippingDetailsAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemShippingDetailsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

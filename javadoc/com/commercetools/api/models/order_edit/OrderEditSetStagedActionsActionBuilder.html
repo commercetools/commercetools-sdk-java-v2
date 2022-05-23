@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.10">OrderEditSetStagedActionsActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.20">OrderEditSetStagedActionsActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderEditSetStagedActionsAction orderEditSetStagedActionsAction = OrderEditSetStagedActionsAction.builder()
+           .plusStagedActions(stagedActionsBuilder -> stagedActionsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -175,7 +183,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderEditSetStagedActionsActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.11">OrderEditSetStagedActionsActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.21">OrderEditSetStagedActionsActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -189,48 +197,48 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="stagedActions(com.commercetools.api.models.order.StagedOrderUpdateAction...)">
 <h3>stagedActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.19">stagedActions</a></span>&#8203;<span class="parameters">(<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>...&nbsp;stagedActions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.29">stagedActions</a></span>&#8203;<span class="parameters">(<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>...&nbsp;stagedActions)</span></div>
 <div class="block"><p>The actions to edit the <code>resource</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="stagedActions(java.util.List)">
 <h3>stagedActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.29">stagedActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;&nbsp;stagedActions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.39">stagedActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;&nbsp;stagedActions)</span></div>
 <div class="block"><p>The actions to edit the <code>resource</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusStagedActions(com.commercetools.api.models.order.StagedOrderUpdateAction...)">
 <h3>plusStagedActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.39">plusStagedActions</a></span>&#8203;<span class="parameters">(<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>...&nbsp;stagedActions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.49">plusStagedActions</a></span>&#8203;<span class="parameters">(<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>...&nbsp;stagedActions)</span></div>
 <div class="block"><p>The actions to edit the <code>resource</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusStagedActions(java.util.function.Function)">
 <h3>plusStagedActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.52">plusStagedActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/StagedOrderUpdateActionBuilder.html" title="class in com.commercetools.api.models.order">StagedOrderUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.62">plusStagedActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/StagedOrderUpdateActionBuilder.html" title="class in com.commercetools.api.models.order">StagedOrderUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The actions to edit the <code>resource</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedActions(java.util.function.Function)">
 <h3>withStagedActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.66">withStagedActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/StagedOrderUpdateActionBuilder.html" title="class in com.commercetools.api.models.order">StagedOrderUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.76">withStagedActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/StagedOrderUpdateActionBuilder.html" title="class in com.commercetools.api.models.order">StagedOrderUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The actions to edit the <code>resource</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStagedActions()">
 <h3>getStagedActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.74">getStagedActions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.84">getStagedActions</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.78">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.88">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a>&gt;</code></dd>
@@ -240,20 +248,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.86">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.96">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderEditSetStagedActionsAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.90">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.100">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.OrderEditSetStagedActionsAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.94">of</a></span>&#8203;<span class="parameters">(<a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditSetStagedActionsActionBuilder.html#line.104">of</a></span>&#8203;<span class="parameters">(<a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

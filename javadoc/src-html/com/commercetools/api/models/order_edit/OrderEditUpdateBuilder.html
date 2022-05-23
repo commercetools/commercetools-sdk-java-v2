@@ -22,104 +22,115 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public class OrderEditUpdateBuilder implements Builder&lt;OrderEditUpdate&gt; {</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    private Long version;</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    private java.util.List&lt;com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt; actions;</span>
-<span class="source-line-no">018</span><span id="line.18"></span>
-<span class="source-line-no">019</span><span id="line.19">    @Nullable</span>
-<span class="source-line-no">020</span><span id="line.20">    private Boolean dryRun;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    public OrderEditUpdateBuilder version(final Long version) {</span>
-<span class="source-line-no">023</span><span id="line.23">        this.version = version;</span>
-<span class="source-line-no">024</span><span id="line.24">        return this;</span>
-<span class="source-line-no">025</span><span id="line.25">    }</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    public OrderEditUpdateBuilder actions(</span>
-<span class="source-line-no">028</span><span id="line.28">            final com.commercetools.api.models.order_edit.OrderEditUpdateAction... actions) {</span>
-<span class="source-line-no">029</span><span id="line.29">        this.actions = new ArrayList&lt;&gt;(Arrays.asList(actions));</span>
-<span class="source-line-no">030</span><span id="line.30">        return this;</span>
-<span class="source-line-no">031</span><span id="line.31">    }</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">016</span><span id="line.16">   OrderEditUpdate orderEditUpdate = OrderEditUpdate.builder()</span>
+<span class="source-line-no">017</span><span id="line.17">           .version(0.3)</span>
+<span class="source-line-no">018</span><span id="line.18">           .plusActions(actionsBuilder -&gt; actionsBuilder)</span>
+<span class="source-line-no">019</span><span id="line.19">           .build()</span>
+<span class="source-line-no">020</span><span id="line.20"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> &lt;/div&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> */</span>
+<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">024</span><span id="line.24">public class OrderEditUpdateBuilder implements Builder&lt;OrderEditUpdate&gt; {</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    private Long version;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    private java.util.List&lt;com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt; actions;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    @Nullable</span>
+<span class="source-line-no">031</span><span id="line.31">    private Boolean dryRun;</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public OrderEditUpdateBuilder actions(</span>
-<span class="source-line-no">034</span><span id="line.34">            final java.util.List&lt;com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt; actions) {</span>
-<span class="source-line-no">035</span><span id="line.35">        this.actions = actions;</span>
-<span class="source-line-no">036</span><span id="line.36">        return this;</span>
-<span class="source-line-no">037</span><span id="line.37">    }</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public OrderEditUpdateBuilder plusActions(</span>
-<span class="source-line-no">040</span><span id="line.40">            final com.commercetools.api.models.order_edit.OrderEditUpdateAction... actions) {</span>
-<span class="source-line-no">041</span><span id="line.41">        if (this.actions == null) {</span>
-<span class="source-line-no">042</span><span id="line.42">            this.actions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">043</span><span id="line.43">        }</span>
-<span class="source-line-no">044</span><span id="line.44">        this.actions.addAll(Arrays.asList(actions));</span>
-<span class="source-line-no">045</span><span id="line.45">        return this;</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public OrderEditUpdateBuilder plusActions(</span>
-<span class="source-line-no">049</span><span id="line.49">            Function&lt;com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder, Builder&lt;? extends com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt;&gt; builder) {</span>
-<span class="source-line-no">050</span><span id="line.50">        if (this.actions == null) {</span>
-<span class="source-line-no">051</span><span id="line.51">            this.actions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">052</span><span id="line.52">        }</span>
-<span class="source-line-no">053</span><span id="line.53">        this.actions</span>
-<span class="source-line-no">054</span><span id="line.54">                .add(builder.apply(com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder.of()).build());</span>
-<span class="source-line-no">055</span><span id="line.55">        return this;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public OrderEditUpdateBuilder withActions(</span>
-<span class="source-line-no">059</span><span id="line.59">            Function&lt;com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder, Builder&lt;? extends com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt;&gt; builder) {</span>
-<span class="source-line-no">060</span><span id="line.60">        this.actions = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">061</span><span id="line.61">        this.actions</span>
-<span class="source-line-no">062</span><span id="line.62">                .add(builder.apply(com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder.of()).build());</span>
-<span class="source-line-no">063</span><span id="line.63">        return this;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public OrderEditUpdateBuilder dryRun(@Nullable final Boolean dryRun) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.dryRun = dryRun;</span>
-<span class="source-line-no">068</span><span id="line.68">        return this;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public Long getVersion() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return this.version;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public java.util.List&lt;com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt; getActions() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return this.actions;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    @Nullable</span>
-<span class="source-line-no">080</span><span id="line.80">    public Boolean getDryRun() {</span>
-<span class="source-line-no">081</span><span id="line.81">        return this.dryRun;</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public OrderEditUpdate build() {</span>
-<span class="source-line-no">085</span><span id="line.85">        Objects.requireNonNull(version, OrderEditUpdate.class + ": version is missing");</span>
-<span class="source-line-no">086</span><span id="line.86">        Objects.requireNonNull(actions, OrderEditUpdate.class + ": actions is missing");</span>
-<span class="source-line-no">087</span><span id="line.87">        return new OrderEditUpdateImpl(version, actions, dryRun);</span>
+<span class="source-line-no">033</span><span id="line.33">    public OrderEditUpdateBuilder version(final Long version) {</span>
+<span class="source-line-no">034</span><span id="line.34">        this.version = version;</span>
+<span class="source-line-no">035</span><span id="line.35">        return this;</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public OrderEditUpdateBuilder actions(</span>
+<span class="source-line-no">039</span><span id="line.39">            final com.commercetools.api.models.order_edit.OrderEditUpdateAction... actions) {</span>
+<span class="source-line-no">040</span><span id="line.40">        this.actions = new ArrayList&lt;&gt;(Arrays.asList(actions));</span>
+<span class="source-line-no">041</span><span id="line.41">        return this;</span>
+<span class="source-line-no">042</span><span id="line.42">    }</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    public OrderEditUpdateBuilder actions(</span>
+<span class="source-line-no">045</span><span id="line.45">            final java.util.List&lt;com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt; actions) {</span>
+<span class="source-line-no">046</span><span id="line.46">        this.actions = actions;</span>
+<span class="source-line-no">047</span><span id="line.47">        return this;</span>
+<span class="source-line-no">048</span><span id="line.48">    }</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    public OrderEditUpdateBuilder plusActions(</span>
+<span class="source-line-no">051</span><span id="line.51">            final com.commercetools.api.models.order_edit.OrderEditUpdateAction... actions) {</span>
+<span class="source-line-no">052</span><span id="line.52">        if (this.actions == null) {</span>
+<span class="source-line-no">053</span><span id="line.53">            this.actions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">054</span><span id="line.54">        }</span>
+<span class="source-line-no">055</span><span id="line.55">        this.actions.addAll(Arrays.asList(actions));</span>
+<span class="source-line-no">056</span><span id="line.56">        return this;</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public OrderEditUpdateBuilder plusActions(</span>
+<span class="source-line-no">060</span><span id="line.60">            Function&lt;com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder, Builder&lt;? extends com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt;&gt; builder) {</span>
+<span class="source-line-no">061</span><span id="line.61">        if (this.actions == null) {</span>
+<span class="source-line-no">062</span><span id="line.62">            this.actions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">063</span><span id="line.63">        }</span>
+<span class="source-line-no">064</span><span id="line.64">        this.actions</span>
+<span class="source-line-no">065</span><span id="line.65">                .add(builder.apply(com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder.of()).build());</span>
+<span class="source-line-no">066</span><span id="line.66">        return this;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public OrderEditUpdateBuilder withActions(</span>
+<span class="source-line-no">070</span><span id="line.70">            Function&lt;com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder, Builder&lt;? extends com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt;&gt; builder) {</span>
+<span class="source-line-no">071</span><span id="line.71">        this.actions = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">072</span><span id="line.72">        this.actions</span>
+<span class="source-line-no">073</span><span id="line.73">                .add(builder.apply(com.commercetools.api.models.order_edit.OrderEditUpdateActionBuilder.of()).build());</span>
+<span class="source-line-no">074</span><span id="line.74">        return this;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public OrderEditUpdateBuilder dryRun(@Nullable final Boolean dryRun) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.dryRun = dryRun;</span>
+<span class="source-line-no">079</span><span id="line.79">        return this;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public Long getVersion() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.version;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public java.util.List&lt;com.commercetools.api.models.order_edit.OrderEditUpdateAction&gt; getActions() {</span>
+<span class="source-line-no">087</span><span id="line.87">        return this.actions;</span>
 <span class="source-line-no">088</span><span id="line.88">    }</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    /**</span>
-<span class="source-line-no">091</span><span id="line.91">     * builds OrderEditUpdate without checking for non null required values</span>
-<span class="source-line-no">092</span><span id="line.92">     */</span>
-<span class="source-line-no">093</span><span id="line.93">    public OrderEditUpdate buildUnchecked() {</span>
-<span class="source-line-no">094</span><span id="line.94">        return new OrderEditUpdateImpl(version, actions, dryRun);</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public static OrderEditUpdateBuilder of() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return new OrderEditUpdateBuilder();</span>
+<span class="source-line-no">090</span><span id="line.90">    @Nullable</span>
+<span class="source-line-no">091</span><span id="line.91">    public Boolean getDryRun() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return this.dryRun;</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public OrderEditUpdate build() {</span>
+<span class="source-line-no">096</span><span id="line.96">        Objects.requireNonNull(version, OrderEditUpdate.class + ": version is missing");</span>
+<span class="source-line-no">097</span><span id="line.97">        Objects.requireNonNull(actions, OrderEditUpdate.class + ": actions is missing");</span>
+<span class="source-line-no">098</span><span id="line.98">        return new OrderEditUpdateImpl(version, actions, dryRun);</span>
 <span class="source-line-no">099</span><span id="line.99">    }</span>
 <span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public static OrderEditUpdateBuilder of(final OrderEditUpdate template) {</span>
-<span class="source-line-no">102</span><span id="line.102">        OrderEditUpdateBuilder builder = new OrderEditUpdateBuilder();</span>
-<span class="source-line-no">103</span><span id="line.103">        builder.version = template.getVersion();</span>
-<span class="source-line-no">104</span><span id="line.104">        builder.actions = template.getActions();</span>
-<span class="source-line-no">105</span><span id="line.105">        builder.dryRun = template.getDryRun();</span>
-<span class="source-line-no">106</span><span id="line.106">        return builder;</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">}</span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     * builds OrderEditUpdate without checking for non null required values</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104">    public OrderEditUpdate buildUnchecked() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return new OrderEditUpdateImpl(version, actions, dryRun);</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public static OrderEditUpdateBuilder of() {</span>
+<span class="source-line-no">109</span><span id="line.109">        return new OrderEditUpdateBuilder();</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    public static OrderEditUpdateBuilder of(final OrderEditUpdate template) {</span>
+<span class="source-line-no">113</span><span id="line.113">        OrderEditUpdateBuilder builder = new OrderEditUpdateBuilder();</span>
+<span class="source-line-no">114</span><span id="line.114">        builder.version = template.getVersion();</span>
+<span class="source-line-no">115</span><span id="line.115">        builder.actions = template.getActions();</span>
+<span class="source-line-no">116</span><span id="line.116">        builder.dryRun = template.getDryRun();</span>
+<span class="source-line-no">117</span><span id="line.117">        return builder;</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">}</span>
 
 
 

@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductChangePriceAction.html" title="interface in com.commercetools.api.models.product">ProductChangePriceAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.12">ProductChangePriceActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.23">ProductChangePriceActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductChangePriceAction.html" title="interface in com.commercetools.api.models.product">ProductChangePriceAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductChangePriceAction productChangePriceAction = ProductChangePriceAction.builder()
+           .priceId("{priceId}")
+           .price(priceBuilder -> priceBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -170,7 +179,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProductChangePriceActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.13">ProductChangePriceActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.24">ProductChangePriceActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -184,52 +193,52 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="priceId(java.lang.String)">
 <h3>priceId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.26">priceId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.37">priceId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;priceId)</span></div>
 <div class="block"><p>ID of the EmbeddedPrice</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="price(java.util.function.Function)">
 <h3>price</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.31">price</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.42">price</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="price(com.commercetools.api.models.common.PriceDraft)">
 <h3>price</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.37">price</a></span>&#8203;<span class="parameters">(<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.48">price</a></span>&#8203;<span class="parameters">(<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&nbsp;price)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="staged(java.lang.Boolean)">
 <h3>staged</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.42">staged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.53">staged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPriceId()">
 <h3>getPriceId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.47">getPriceId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.58">getPriceId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPrice()">
 <h3>getPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.51">getPrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.62">getPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.55">getStaged</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.66">getStaged</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceAction.html" title="interface in com.commercetools.api.models.product">ProductChangePriceAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.60">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceAction.html" title="interface in com.commercetools.api.models.product">ProductChangePriceAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.71">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductChangePriceAction.html" title="interface in com.commercetools.api.models.product">ProductChangePriceAction</a>&gt;</code></dd>
@@ -239,20 +248,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceAction.html" title="interface in com.commercetools.api.models.product">ProductChangePriceAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.69">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductChangePriceAction.html" title="interface in com.commercetools.api.models.product">ProductChangePriceAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.80">buildUnchecked</a></span>()</div>
 <div class="block">builds ProductChangePriceAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.73">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.84">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product.ProductChangePriceAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.77">of</a></span>&#8203;<span class="parameters">(<a href="ProductChangePriceAction.html" title="interface in com.commercetools.api.models.product">ProductChangePriceAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductChangePriceActionBuilder.html" title="class in com.commercetools.api.models.product">ProductChangePriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductChangePriceActionBuilder.html#line.88">of</a></span>&#8203;<span class="parameters">(<a href="ProductChangePriceAction.html" title="interface in com.commercetools.api.models.product">ProductChangePriceAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

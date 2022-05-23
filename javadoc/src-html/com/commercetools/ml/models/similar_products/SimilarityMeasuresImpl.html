@@ -28,9 +28,9 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;Specify which ProductData attributes to use for estimating similarity and how to weigh them. An attribute's weight can be any whole positive integer, starting with 0. The larger the integer, the higher its weight.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19">*/</span>
-<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Specify which ProductData attributes to use for estimating similarity and how to weigh them. An attribute's weight can be any whole positive integer, starting with 0. The larger the integer, the higher its weight.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    private Long name;</span>
@@ -58,36 +58,36 @@
 <span class="source-line-no">045</span><span id="line.45">    }</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
 <span class="source-line-no">047</span><span id="line.47">    /**</span>
-<span class="source-line-no">048</span><span id="line.48">    *  &lt;p&gt;Importance of the &lt;code&gt;name&lt;/code&gt; attribute in overall similarity.&lt;/p&gt;</span>
-<span class="source-line-no">049</span><span id="line.49">    */</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;Importance of the &lt;code&gt;name&lt;/code&gt; attribute in overall similarity.&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     */</span>
 <span class="source-line-no">050</span><span id="line.50">    public Long getName() {</span>
 <span class="source-line-no">051</span><span id="line.51">        return this.name;</span>
 <span class="source-line-no">052</span><span id="line.52">    }</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
 <span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;Importance of the &lt;code&gt;description&lt;/code&gt; attribute in overall similarity.&lt;/p&gt;</span>
-<span class="source-line-no">056</span><span id="line.56">    */</span>
+<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;Importance of the &lt;code&gt;description&lt;/code&gt; attribute in overall similarity.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">     */</span>
 <span class="source-line-no">057</span><span id="line.57">    public Long getDescription() {</span>
 <span class="source-line-no">058</span><span id="line.58">        return this.description;</span>
 <span class="source-line-no">059</span><span id="line.59">    }</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">    *  &lt;p&gt;Importance of the &lt;code&gt;description&lt;/code&gt; attribute in overall similarity.&lt;/p&gt;</span>
-<span class="source-line-no">063</span><span id="line.63">    */</span>
+<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;Importance of the &lt;code&gt;description&lt;/code&gt; attribute in overall similarity.&lt;/p&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     */</span>
 <span class="source-line-no">064</span><span id="line.64">    public Long getAttribute() {</span>
 <span class="source-line-no">065</span><span id="line.65">        return this.attribute;</span>
 <span class="source-line-no">066</span><span id="line.66">    }</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
 <span class="source-line-no">068</span><span id="line.68">    /**</span>
-<span class="source-line-no">069</span><span id="line.69">    *  &lt;p&gt;Importance of the number of product variants in overall similarity.&lt;/p&gt;</span>
-<span class="source-line-no">070</span><span id="line.70">    */</span>
+<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;Importance of the number of product variants in overall similarity.&lt;/p&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">     */</span>
 <span class="source-line-no">071</span><span id="line.71">    public Long getVariantCount() {</span>
 <span class="source-line-no">072</span><span id="line.72">        return this.variantCount;</span>
 <span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
 <span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">    *  &lt;p&gt;Importance of the &lt;code&gt;price&lt;/code&gt; attribute in overall similarity.&lt;/p&gt;</span>
-<span class="source-line-no">077</span><span id="line.77">    */</span>
+<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;Importance of the &lt;code&gt;price&lt;/code&gt; attribute in overall similarity.&lt;/p&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">     */</span>
 <span class="source-line-no">078</span><span id="line.78">    public Long getPrice() {</span>
 <span class="source-line-no">079</span><span id="line.79">        return this.price;</span>
 <span class="source-line-no">080</span><span id="line.80">    }</span>

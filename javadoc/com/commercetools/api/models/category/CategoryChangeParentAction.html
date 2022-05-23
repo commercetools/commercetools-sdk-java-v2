@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CategoryChangeParentActionImpl.html" title="class in com.commercetools.api.models.category">CategoryChangeParentActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.16">CategoryChangeParentAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.26">CategoryChangeParentAction</a></span><span class="extends-implements">
 extends <a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CategoryChangeParentAction categoryChangeParentAction = CategoryChangeParentAction.builder()
+           .parent(parentBuilder -> parentBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +170,7 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="CHANGE_PARENT">
 <h3>CHANGE_PARENT</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.20">CHANGE_PARENT</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.30">CHANGE_PARENT</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.category.CategoryChangeParentAction.CHANGE_PARENT">Constant Field Values</a></dd>
@@ -182,49 +190,49 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <h3>getParent</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.22">getParent</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.32">getParent</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setParent(com.commercetools.api.models.category.CategoryResourceIdentifier)">
 <h3>setParent</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.27">setParent</a></span>&#8203;<span class="parameters">(<a href="CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a>&nbsp;parent)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.37">setParent</a></span>&#8203;<span class="parameters">(<a href="CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a>&nbsp;parent)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.29">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.39">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.category.CategoryChangeParentAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.33">of</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.43">of</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeParentActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeParentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.39">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeParentActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeParentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.49">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.category.CategoryChangeParentAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeParentActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeParentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.43">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategoryChangeParentActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeParentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.53">builder</a></span>&#8203;<span class="parameters">(<a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCategoryChangeParentAction(java.util.function.Function)">
 <h3>withCategoryChangeParentAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.47">withCategoryChangeParentAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.57">withCategoryChangeParentAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.51">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategoryChangeParentAction.html" title="interface in com.commercetools.api.models.category">CategoryChangeParentAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategoryChangeParentAction.html#line.61">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

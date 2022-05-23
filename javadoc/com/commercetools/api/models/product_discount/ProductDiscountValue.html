@@ -84,7 +84,15 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductDiscountValueAbsoluteImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteImpl</a></code>, <code><a href="ProductDiscountValueExternalImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueExternalImpl</a></code>, <code><a href="ProductDiscountValueImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueImpl</a></code>, <code><a href="ProductDiscountValueRelativeImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueRelativeImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.15">ProductDiscountValue</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.25">ProductDiscountValue</a></span></div>
+<div class="block">Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductDiscountValue productDiscountValue = ProductDiscountValue.absoluteBuilder()
+           plusMoney(moneyBuilder -> moneyBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -135,37 +143,37 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.24">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.34">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="absoluteBuilder()">
 <h3>absoluteBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.28">absoluteBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueAbsoluteBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueAbsoluteBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.38">absoluteBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="externalBuilder()">
 <h3>externalBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueExternalBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueExternalBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.32">externalBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueExternalBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueExternalBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.42">externalBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="relativeBuilder()">
 <h3>relativeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueRelativeBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueRelativeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.36">relativeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductDiscountValueRelativeBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountValueRelativeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.46">relativeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductDiscountValue(java.util.function.Function)">
 <h3>withProductDiscountValue</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.40">withProductDiscountValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDiscountValue.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountValue</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.50">withProductDiscountValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDiscountValue.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountValue</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductDiscountValue.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.44">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductDiscountValue.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountValue</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_discount/ProductDiscountValue.html#line.54">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

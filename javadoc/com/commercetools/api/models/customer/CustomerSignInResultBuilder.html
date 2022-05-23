@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerSignInResult.html" title="interface in com.commercetools.api.models.customer">CustomerSignInResult</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.12">CustomerSignInResultBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.22">CustomerSignInResultBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerSignInResult.html" title="interface in com.commercetools.api.models.customer">CustomerSignInResult</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerSignInResult customerSignInResult = CustomerSignInResult.builder()
+           .customer(customerBuilder -> customerBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -169,7 +177,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CustomerSignInResultBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.13">CustomerSignInResultBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.23">CustomerSignInResultBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -183,26 +191,26 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="customer(java.util.function.Function)">
 <h3>customer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.20">customer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>,&#8203;<a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.30">customer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>,&#8203;<a href="CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customer(com.commercetools.api.models.customer.Customer)">
 <h3>customer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.26">customer</a></span>&#8203;<span class="parameters">(<a href="Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&nbsp;customer)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.36">customer</a></span>&#8203;<span class="parameters">(<a href="Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&nbsp;customer)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="cart(java.util.function.Function)">
 <h3>cart</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.35">cart</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a>,&#8203;<a href="../cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.45">cart</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a>,&#8203;<a href="../cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="cart(com.commercetools.api.models.cart.Cart)">
 <h3>cart</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.45">cart</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.55">cart</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&nbsp;cart)</span></div>
 <div class="block"><p>A cart that is associated to the customer. Empty if the customer does not have a cart yet.</p></div>
 </section>
@@ -210,20 +218,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getCustomer()">
 <h3>getCustomer</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.50">getCustomer</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.60">getCustomer</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCart()">
 <h3>getCart</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.54">getCart</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.64">getCart</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResult.html" title="interface in com.commercetools.api.models.customer">CustomerSignInResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.59">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResult.html" title="interface in com.commercetools.api.models.customer">CustomerSignInResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.69">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerSignInResult.html" title="interface in com.commercetools.api.models.customer">CustomerSignInResult</a>&gt;</code></dd>
@@ -233,20 +241,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResult.html" title="interface in com.commercetools.api.models.customer">CustomerSignInResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.67">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerSignInResult.html" title="interface in com.commercetools.api.models.customer">CustomerSignInResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.77">buildUnchecked</a></span>()</div>
 <div class="block">builds CustomerSignInResult without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.71">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.81">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.customer.CustomerSignInResult)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.75">of</a></span>&#8203;<span class="parameters">(<a href="CustomerSignInResult.html" title="interface in com.commercetools.api.models.customer">CustomerSignInResult</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerSignInResultBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSignInResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/customer/CustomerSignInResultBuilder.html#line.85">of</a></span>&#8203;<span class="parameters">(<a href="CustomerSignInResult.html" title="interface in com.commercetools.api.models.customer">CustomerSignInResult</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

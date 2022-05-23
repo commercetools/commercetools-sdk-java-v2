@@ -83,9 +83,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="PaymentSetAuthorizationAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAuthorizationAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.12">PaymentSetAuthorizationActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.21">PaymentSetAuthorizationActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="PaymentSetAuthorizationAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAuthorizationAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   PaymentSetAuthorizationAction paymentSetAuthorizationAction = PaymentSetAuthorizationAction.builder()
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -166,7 +173,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>PaymentSetAuthorizationActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.13">PaymentSetAuthorizationActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.22">PaymentSetAuthorizationActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -180,7 +187,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="amount(java.util.function.Function)">
 <h3>amount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.26">amount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.35">amount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
   <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
 </section>
@@ -188,7 +195,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="amount(com.commercetools.api.models.common.Money)">
 <h3>amount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.37">amount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.46">amount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amount)</span></div>
 <div class="block"><p>Draft type that stores amounts in cent precision for the specified currency.</p>
   <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p></div>
@@ -197,7 +204,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="until(java.time.ZonedDateTime)">
 <h3>until</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.43">until</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.52">until</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;until)</span></div>
 </section>
 </li>
@@ -205,20 +212,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getAmount()">
 <h3>getAmount</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.48">getAmount</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.57">getAmount</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getUntil()">
 <h3>getUntil</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.53">getUntil</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.62">getUntil</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAuthorizationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.58">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAuthorizationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.67">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="PaymentSetAuthorizationAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAuthorizationAction</a>&gt;</code></dd>
@@ -228,20 +235,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAuthorizationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.65">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAuthorizationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.74">buildUnchecked</a></span>()</div>
 <div class="block">builds PaymentSetAuthorizationAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.69">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.78">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.payment.PaymentSetAuthorizationAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.73">of</a></span>&#8203;<span class="parameters">(<a href="PaymentSetAuthorizationAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAuthorizationAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="PaymentSetAuthorizationActionBuilder.html" title="class in com.commercetools.api.models.payment">PaymentSetAuthorizationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/PaymentSetAuthorizationActionBuilder.html#line.82">of</a></span>&#8203;<span class="parameters">(<a href="PaymentSetAuthorizationAction.html" title="interface in com.commercetools.api.models.payment">PaymentSetAuthorizationAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

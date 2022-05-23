@@ -84,8 +84,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OverlappingStandalonePriceValidityErrorImpl.html" title="class in com.commercetools.api.models.error">OverlappingStandalonePriceValidityErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.20">OverlappingStandalonePriceValidityError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.33">OverlappingStandalonePriceValidityError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OverlappingStandalonePriceValidityError overlappingStandalonePriceValidityError = OverlappingStandalonePriceValidityError.builder()
+           .message("{message}")
+           .conflictingStandalonePrice(conflictingStandalonePriceBuilder -> conflictingStandalonePriceBuilder)
+           .sku("{sku}")
+           .currency("{currency}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -219,7 +230,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="OVERLAPPING_STANDALONE_PRICE_VALIDITY">
 <h3>OVERLAPPING_STANDALONE_PRICE_VALIDITY</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.24">OVERLAPPING_STANDALONE_PRICE_VALIDITY</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.37">OVERLAPPING_STANDALONE_PRICE_VALIDITY</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.OverlappingStandalonePriceValidityError.OVERLAPPING_STANDALONE_PRICE_VALIDITY">Constant Field Values</a></dd>
@@ -239,7 +250,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <h3>getConflictingStandalonePrice</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../standalone_price/StandalonePriceReference.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.29">getConflictingStandalonePrice</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../standalone_price/StandalonePriceReference.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.42">getConflictingStandalonePrice</a></span>()</div>
 <div class="block"><p>Reference to a StandalonePrice.</p></div>
 </section>
 </li>
@@ -247,27 +258,27 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.34">getSku</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.47">getSku</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCurrency()">
 <h3>getCurrency</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.38">getCurrency</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.51">getCurrency</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.42">getCountry</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.55">getCountry</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomerGroup()">
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.48">getCustomerGroup</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.61">getCustomerGroup</a></span>()</div>
 <div class="block"><p>ResourceIdentifier to a CustomerGroup.</p></div>
 </section>
 </li>
@@ -275,128 +286,128 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getChannel()">
 <h3>getChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.55">getChannel</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.68">getChannel</a></span>()</div>
 <div class="block"><p>ResourceIdentifier to a Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.59">getValidFrom</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.72">getValidFrom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.62">getValidUntil</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.75">getValidUntil</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getConflictingValidFrom()">
 <h3>getConflictingValidFrom</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.65">getConflictingValidFrom</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.78">getConflictingValidFrom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getConflictingValidUntil()">
 <h3>getConflictingValidUntil</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.68">getConflictingValidUntil</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.81">getConflictingValidUntil</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setConflictingStandalonePrice(com.commercetools.api.models.standalone_price.StandalonePriceReference)">
 <h3>setConflictingStandalonePrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.71">setConflictingStandalonePrice</a></span>&#8203;<span class="parameters">(<a href="../standalone_price/StandalonePriceReference.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceReference</a>&nbsp;conflictingStandalonePrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.84">setConflictingStandalonePrice</a></span>&#8203;<span class="parameters">(<a href="../standalone_price/StandalonePriceReference.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceReference</a>&nbsp;conflictingStandalonePrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSku(java.lang.String)">
 <h3>setSku</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.73">setSku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.86">setSku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCurrency(java.lang.String)">
 <h3>setCurrency</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.75">setCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currency)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.88">setCurrency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currency)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.77">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.90">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier)">
 <h3>setCustomerGroup</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.79">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.92">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>setChannel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.81">setChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.94">setChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValidFrom(java.time.ZonedDateTime)">
 <h3>setValidFrom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.83">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.96">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValidUntil(java.time.ZonedDateTime)">
 <h3>setValidUntil</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.85">setValidUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.98">setValidUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setConflictingValidFrom(java.time.ZonedDateTime)">
 <h3>setConflictingValidFrom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.87">setConflictingValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;conflictingValidFrom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.100">setConflictingValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;conflictingValidFrom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setConflictingValidUntil(java.time.ZonedDateTime)">
 <h3>setConflictingValidUntil</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.89">setConflictingValidUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;conflictingValidUntil)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.102">setConflictingValidUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;conflictingValidUntil)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.91">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.104">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.OverlappingStandalonePriceValidityError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.95">of</a></span>&#8203;<span class="parameters">(<a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.108">of</a></span>&#8203;<span class="parameters">(<a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OverlappingStandalonePriceValidityErrorBuilder.html" title="class in com.commercetools.api.models.error">OverlappingStandalonePriceValidityErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.112">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OverlappingStandalonePriceValidityErrorBuilder.html" title="class in com.commercetools.api.models.error">OverlappingStandalonePriceValidityErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.125">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.OverlappingStandalonePriceValidityError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OverlappingStandalonePriceValidityErrorBuilder.html" title="class in com.commercetools.api.models.error">OverlappingStandalonePriceValidityErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.116">builder</a></span>&#8203;<span class="parameters">(<a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OverlappingStandalonePriceValidityErrorBuilder.html" title="class in com.commercetools.api.models.error">OverlappingStandalonePriceValidityErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.129">builder</a></span>&#8203;<span class="parameters">(<a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOverlappingStandalonePriceValidityError(java.util.function.Function)">
 <h3>withOverlappingStandalonePriceValidityError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.121">withOverlappingStandalonePriceValidityError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.134">withOverlappingStandalonePriceValidityError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.126">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OverlappingStandalonePriceValidityError.html" title="interface in com.commercetools.api.models.error">OverlappingStandalonePriceValidityError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/OverlappingStandalonePriceValidityError.html#line.139">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.11">InvalidFieldErrorBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.22">InvalidFieldErrorBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   InvalidFieldError invalidFieldError = InvalidFieldError.builder()
+           .message("{message}")
+           .field("{field}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -193,7 +202,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>InvalidFieldErrorBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.12">InvalidFieldErrorBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.23">InvalidFieldErrorBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -207,27 +216,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="message(java.lang.String)">
 <h3>message</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.26">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.37">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="field(java.lang.String)">
 <h3>field</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.35">field</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;field)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.46">field</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;field)</span></div>
 <div class="block"><p>The name of the field.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="invalidValue(java.lang.Object)">
 <h3>invalidValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.44">invalidValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;invalidValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.55">invalidValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;invalidValue)</span></div>
 <div class="block"><p>The invalid value.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="allowedValues(java.lang.Object...)">
 <h3>allowedValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.53">allowedValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.64">allowedValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;allowedValues)</span></div>
 <div class="block"><p>The set of allowed values for the field, if any.</p></div>
 </section>
@@ -235,7 +244,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="allowedValues(java.util.List)">
 <h3>allowedValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.62">allowedValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.73">allowedValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;allowedValues)</span></div>
 <div class="block"><p>The set of allowed values for the field, if any.</p></div>
 </section>
@@ -243,7 +252,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusAllowedValues(java.lang.Object...)">
 <h3>plusAllowedValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.71">plusAllowedValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.82">plusAllowedValues</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;allowedValues)</span></div>
 <div class="block"><p>The set of allowed values for the field, if any.</p></div>
 </section>
@@ -251,46 +260,46 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="resourceIndex(java.lang.Long)">
 <h3>resourceIndex</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.79">resourceIndex</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.90">resourceIndex</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceIndex)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessage()">
 <h3>getMessage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.84">getMessage</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.95">getMessage</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getField()">
 <h3>getField</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.88">getField</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.99">getField</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInvalidValue()">
 <h3>getInvalidValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.92">getInvalidValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.103">getInvalidValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAllowedValues()">
 <h3>getAllowedValues</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.96">getAllowedValues</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.107">getAllowedValues</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceIndex()">
 <h3>getResourceIndex</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.101">getResourceIndex</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.112">getResourceIndex</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.106">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.117">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a>&gt;</code></dd>
@@ -300,20 +309,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.116">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.127">buildUnchecked</a></span>()</div>
 <div class="block">builds InvalidFieldError without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.120">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.131">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.errors.InvalidFieldError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.124">of</a></span>&#8203;<span class="parameters">(<a href="InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="InvalidFieldErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">InvalidFieldErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/errors/InvalidFieldErrorBuilder.html#line.135">of</a></span>&#8203;<span class="parameters">(<a href="InvalidFieldError.html" title="interface in com.commercetools.importapi.models.errors">InvalidFieldError</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -80,8 +80,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ImportSinkDraftImpl.html" title="class in com.commercetools.importapi.models.importsinks">ImportSinkDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.19">ImportSinkDraft</a></span></div>
-<div class="block"><p>The representation sent to the server when creating an ImportSink.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.28">ImportSinkDraft</a></span></div>
+<div class="block"><p>The representation sent to the server when creating an ImportSink.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImportSinkDraft importSinkDraft = ImportSinkDraft.builder()
+           .key("{key}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -148,63 +157,63 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.26">getKey</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.35">getKey</a></span>()</div>
 <div class="block"><p>User-defined unique identifier of the ImportSink. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResourceType()">
 <h3>getResourceType</h3>
-<div class="member-signature"><span class="return-type"><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.34">getResourceType</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.43">getResourceType</a></span>()</div>
 <div class="block"><p>The resource type to be imported. If not given, the ImportSink is able to import all of the supported ImportResourceTypes.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.37">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.46">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setResourceType(com.commercetools.importapi.models.common.ImportResourceType)">
 <h3>setResourceType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.39">setResourceType</a></span>&#8203;<span class="parameters">(<a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;resourceType)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.48">setResourceType</a></span>&#8203;<span class="parameters">(<a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;resourceType)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.41">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.50">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importsinks.ImportSinkDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.45">of</a></span>&#8203;<span class="parameters">(<a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.54">of</a></span>&#8203;<span class="parameters">(<a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSinkDraftBuilder.html" title="class in com.commercetools.importapi.models.importsinks">ImportSinkDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.52">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSinkDraftBuilder.html" title="class in com.commercetools.importapi.models.importsinks">ImportSinkDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.61">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.importsinks.ImportSinkDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSinkDraftBuilder.html" title="class in com.commercetools.importapi.models.importsinks">ImportSinkDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.56">builder</a></span>&#8203;<span class="parameters">(<a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSinkDraftBuilder.html" title="class in com.commercetools.importapi.models.importsinks">ImportSinkDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.65">builder</a></span>&#8203;<span class="parameters">(<a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withImportSinkDraft(java.util.function.Function)">
 <h3>withImportSinkDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.60">withImportSinkDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.69">withImportSinkDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.64">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportSinkDraft.html" title="interface in com.commercetools.importapi.models.importsinks">ImportSinkDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsinks/ImportSinkDraft.html#line.73">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

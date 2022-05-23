@@ -28,9 +28,9 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;Serves as the entry point of resources. An Import Container is not resource type-specific.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19">*/</span>
-<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Serves as the entry point of resources. An Import Container is not resource type-specific.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class ImportContainerImpl implements ImportContainer, ModelBase {</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    private String key;</span>
@@ -60,36 +60,36 @@
 <span class="source-line-no">047</span><span id="line.47">    }</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">    *  &lt;p&gt;User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).&lt;/p&gt;</span>
-<span class="source-line-no">051</span><span id="line.51">    */</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     */</span>
 <span class="source-line-no">052</span><span id="line.52">    public String getKey() {</span>
 <span class="source-line-no">053</span><span id="line.53">        return this.key;</span>
 <span class="source-line-no">054</span><span id="line.54">    }</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
 <span class="source-line-no">056</span><span id="line.56">    /**</span>
-<span class="source-line-no">057</span><span id="line.57">    *  &lt;p&gt;The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.&lt;/p&gt;</span>
-<span class="source-line-no">058</span><span id="line.58">    */</span>
+<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     */</span>
 <span class="source-line-no">059</span><span id="line.59">    public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {</span>
 <span class="source-line-no">060</span><span id="line.60">        return this.resourceType;</span>
 <span class="source-line-no">061</span><span id="line.61">    }</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
 <span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">    *  &lt;p&gt;The version of the ImportContainer.&lt;/p&gt;</span>
-<span class="source-line-no">065</span><span id="line.65">    */</span>
+<span class="source-line-no">064</span><span id="line.64">     *  &lt;p&gt;The version of the ImportContainer.&lt;/p&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     */</span>
 <span class="source-line-no">066</span><span id="line.66">    public Long getVersion() {</span>
 <span class="source-line-no">067</span><span id="line.67">        return this.version;</span>
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">    *  &lt;p&gt;The time when the ImportContainer was created.&lt;/p&gt;</span>
-<span class="source-line-no">072</span><span id="line.72">    */</span>
+<span class="source-line-no">071</span><span id="line.71">     *  &lt;p&gt;The time when the ImportContainer was created.&lt;/p&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
 <span class="source-line-no">073</span><span id="line.73">    public java.time.ZonedDateTime getCreatedAt() {</span>
 <span class="source-line-no">074</span><span id="line.74">        return this.createdAt;</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">    *  &lt;p&gt;The last time when the ImportContainer was modified.&lt;/p&gt;</span>
-<span class="source-line-no">079</span><span id="line.79">    */</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;The last time when the ImportContainer was modified.&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
 <span class="source-line-no">081</span><span id="line.81">        return this.lastModifiedAt;</span>
 <span class="source-line-no">082</span><span id="line.82">    }</span>

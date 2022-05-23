@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private com.commercetools.api.models.product_type.AttributeType type;</span>
@@ -70,57 +70,57 @@
 <span class="source-line-no">057</span><span id="line.57">    }</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
 <span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">    *  &lt;p&gt;Describes the type of the attribute.&lt;/p&gt;</span>
-<span class="source-line-no">061</span><span id="line.61">    */</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Describes the type of the attribute.&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
 <span class="source-line-no">062</span><span id="line.62">    public com.commercetools.api.models.product_type.AttributeType getType() {</span>
 <span class="source-line-no">063</span><span id="line.63">        return this.type;</span>
 <span class="source-line-no">064</span><span id="line.64">    }</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">    *  &lt;p&gt;The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (&lt;code&gt;_&lt;/code&gt;) and the hyphen-minus (&lt;code&gt;-&lt;/code&gt;). When using the same &lt;code&gt;name&lt;/code&gt; for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types.&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">    */</span>
+<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (&lt;code&gt;_&lt;/code&gt;) and the hyphen-minus (&lt;code&gt;-&lt;/code&gt;). When using the same &lt;code&gt;name&lt;/code&gt; for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types.&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">     */</span>
 <span class="source-line-no">069</span><span id="line.69">    public String getName() {</span>
 <span class="source-line-no">070</span><span id="line.70">        return this.name;</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
 <span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">    *  &lt;p&gt;A human-readable label for the attribute.&lt;/p&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">    */</span>
+<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;A human-readable label for the attribute.&lt;/p&gt;</span>
+<span class="source-line-no">075</span><span id="line.75">     */</span>
 <span class="source-line-no">076</span><span id="line.76">    public com.commercetools.api.models.common.LocalizedString getLabel() {</span>
 <span class="source-line-no">077</span><span id="line.77">        return this.label;</span>
 <span class="source-line-no">078</span><span id="line.78">    }</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">    *  &lt;p&gt;Whether the attribute is required to have a value.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">    */</span>
+<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Whether the attribute is required to have a value.&lt;/p&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     */</span>
 <span class="source-line-no">083</span><span id="line.83">    public Boolean getIsRequired() {</span>
 <span class="source-line-no">084</span><span id="line.84">        return this.isRequired;</span>
 <span class="source-line-no">085</span><span id="line.85">    }</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
 <span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">    *  &lt;p&gt;Describes how an attribute or a set of attributes should be validated across all variants of a product.&lt;/p&gt;</span>
-<span class="source-line-no">089</span><span id="line.89">    */</span>
+<span class="source-line-no">088</span><span id="line.88">     *  &lt;p&gt;Describes how an attribute or a set of attributes should be validated across all variants of a product.&lt;/p&gt;</span>
+<span class="source-line-no">089</span><span id="line.89">     */</span>
 <span class="source-line-no">090</span><span id="line.90">    public com.commercetools.api.models.product_type.AttributeConstraintEnum getAttributeConstraint() {</span>
 <span class="source-line-no">091</span><span id="line.91">        return this.attributeConstraint;</span>
 <span class="source-line-no">092</span><span id="line.92">    }</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
 <span class="source-line-no">094</span><span id="line.94">    /**</span>
-<span class="source-line-no">095</span><span id="line.95">    *  &lt;p&gt;Additional information about the attribute that aids content managers when setting product details.&lt;/p&gt;</span>
-<span class="source-line-no">096</span><span id="line.96">    */</span>
+<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;Additional information about the attribute that aids content managers when setting product details.&lt;/p&gt;</span>
+<span class="source-line-no">096</span><span id="line.96">     */</span>
 <span class="source-line-no">097</span><span id="line.97">    public com.commercetools.api.models.common.LocalizedString getInputTip() {</span>
 <span class="source-line-no">098</span><span id="line.98">        return this.inputTip;</span>
 <span class="source-line-no">099</span><span id="line.99">    }</span>
 <span class="source-line-no">100</span><span id="line.100"></span>
 <span class="source-line-no">101</span><span id="line.101">    /**</span>
-<span class="source-line-no">102</span><span id="line.102">    *  &lt;p&gt;Provides a visual representation type for this attribute. only relevant for text-based attribute types like TextType and LocalizableTextType.&lt;/p&gt;</span>
-<span class="source-line-no">103</span><span id="line.103">    */</span>
+<span class="source-line-no">102</span><span id="line.102">     *  &lt;p&gt;Provides a visual representation type for this attribute. only relevant for text-based attribute types like TextType and LocalizableTextType.&lt;/p&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
 <span class="source-line-no">104</span><span id="line.104">    public com.commercetools.api.models.product_type.TextInputHint getInputHint() {</span>
 <span class="source-line-no">105</span><span id="line.105">        return this.inputHint;</span>
 <span class="source-line-no">106</span><span id="line.106">    }</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
 <span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">    *  &lt;p&gt;Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp;amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there.&lt;/p&gt;</span>
-<span class="source-line-no">110</span><span id="line.110">    */</span>
+<span class="source-line-no">109</span><span id="line.109">     *  &lt;p&gt;Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp;amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there.&lt;/p&gt;</span>
+<span class="source-line-no">110</span><span id="line.110">     */</span>
 <span class="source-line-no">111</span><span id="line.111">    public Boolean getIsSearchable() {</span>
 <span class="source-line-no">112</span><span id="line.112">        return this.isSearchable;</span>
 <span class="source-line-no">113</span><span id="line.113">    }</span>

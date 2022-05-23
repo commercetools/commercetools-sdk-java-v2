@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeCartDiscountsChange.html" title="interface in com.commercetools.history.models.change">ChangeCartDiscountsChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.10">ChangeCartDiscountsChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.22">ChangeCartDiscountsChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeCartDiscountsChange.html" title="interface in com.commercetools.history.models.change">ChangeCartDiscountsChange</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeCartDiscountsChange changeCartDiscountsChange = ChangeCartDiscountsChange.builder()
+           .change("{change}")
+           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+           .plusNextValue(nextValueBuilder -> nextValueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -191,7 +201,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ChangeCartDiscountsChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.11">ChangeCartDiscountsChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.23">ChangeCartDiscountsChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -205,92 +215,92 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.23">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.35">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <div class="block"><p>Shape of the action for <code>changeCartDiscounts</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(com.commercetools.history.models.common.Reference...)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.28">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.40">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.util.List)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.34">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.46">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPreviousValue(com.commercetools.history.models.common.Reference...)">
 <h3>plusPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.40">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.52">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPreviousValue(java.util.function.Function)">
 <h3>plusPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.49">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.61">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPreviousValue(java.util.function.Function)">
 <h3>withPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.58">withPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.70">withPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.Reference...)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.65">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.77">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.List)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.71">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.83">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusNextValue(com.commercetools.history.models.common.Reference...)">
 <h3>plusNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.77">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.89">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusNextValue(java.util.function.Function)">
 <h3>plusNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.86">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.98">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withNextValue(java.util.function.Function)">
 <h3>withNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.95">withNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.107">withNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>,&#8203;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.history.models.common">ReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.102">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.114">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.106">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.118">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.110">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.122">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChange.html" title="interface in com.commercetools.history.models.change">ChangeCartDiscountsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.114">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChange.html" title="interface in com.commercetools.history.models.change">ChangeCartDiscountsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.126">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeCartDiscountsChange.html" title="interface in com.commercetools.history.models.change">ChangeCartDiscountsChange</a>&gt;</code></dd>
@@ -300,20 +310,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChange.html" title="interface in com.commercetools.history.models.change">ChangeCartDiscountsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.124">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChange.html" title="interface in com.commercetools.history.models.change">ChangeCartDiscountsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.136">buildUnchecked</a></span>()</div>
 <div class="block">builds ChangeCartDiscountsChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.128">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.140">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.ChangeCartDiscountsChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.132">of</a></span>&#8203;<span class="parameters">(<a href="ChangeCartDiscountsChange.html" title="interface in com.commercetools.history.models.change">ChangeCartDiscountsChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeCartDiscountsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeCartDiscountsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeCartDiscountsChangeBuilder.html#line.144">of</a></span>&#8203;<span class="parameters">(<a href="ChangeCartDiscountsChange.html" title="interface in com.commercetools.history.models.change">ChangeCartDiscountsChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

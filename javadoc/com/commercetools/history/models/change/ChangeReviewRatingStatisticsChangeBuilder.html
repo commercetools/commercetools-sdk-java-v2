@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeReviewRatingStatisticsChange.html" title="interface in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.10">ChangeReviewRatingStatisticsChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.22">ChangeReviewRatingStatisticsChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeReviewRatingStatisticsChange.html" title="interface in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChange</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeReviewRatingStatisticsChange changeReviewRatingStatisticsChange = ChangeReviewRatingStatisticsChange.builder()
+           .change("{change}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -173,7 +183,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ChangeReviewRatingStatisticsChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.11">ChangeReviewRatingStatisticsChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.23">ChangeReviewRatingStatisticsChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -187,56 +197,56 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.23">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.35">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <div class="block"><p>Update action for <code>changeReviewRatingStatistics</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.function.Function)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.28">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a>,&#8203;<a href="../common/ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.40">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a>,&#8203;<a href="../common/ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.ReviewRatingStatistics)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.35">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.47">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.util.function.Function)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.41">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a>,&#8203;<a href="../common/ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.53">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a>,&#8203;<a href="../common/ReviewRatingStatisticsBuilder.html" title="class in com.commercetools.history.models.common">ReviewRatingStatisticsBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(com.commercetools.history.models.common.ReviewRatingStatistics)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.48">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.60">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.54">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.66">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.58">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.70">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.62">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ReviewRatingStatistics.html" title="interface in com.commercetools.history.models.common">ReviewRatingStatistics</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.74">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChange.html" title="interface in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.66">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChange.html" title="interface in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.78">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeReviewRatingStatisticsChange.html" title="interface in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChange</a>&gt;</code></dd>
@@ -246,20 +256,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChange.html" title="interface in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.76">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChange.html" title="interface in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.88">buildUnchecked</a></span>()</div>
 <div class="block">builds ChangeReviewRatingStatisticsChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.80">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.92">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.ChangeReviewRatingStatisticsChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.84">of</a></span>&#8203;<span class="parameters">(<a href="ChangeReviewRatingStatisticsChange.html" title="interface in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeReviewRatingStatisticsChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeReviewRatingStatisticsChangeBuilder.html#line.96">of</a></span>&#8203;<span class="parameters">(<a href="ChangeReviewRatingStatisticsChange.html" title="interface in com.commercetools.history.models.change">ChangeReviewRatingStatisticsChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

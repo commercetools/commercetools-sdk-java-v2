@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartRemovePaymentActionImpl.html" title="class in com.commercetools.api.models.cart">CartRemovePaymentActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.17">CartRemovePaymentAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.27">CartRemovePaymentAction</a></span><span class="extends-implements">
 extends <a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartRemovePaymentAction cartRemovePaymentAction = CartRemovePaymentAction.builder()
+           .payment(paymentBuilder -> paymentBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +170,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="REMOVE_PAYMENT">
 <h3>REMOVE_PAYMENT</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.21">REMOVE_PAYMENT</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.31">REMOVE_PAYMENT</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart.CartRemovePaymentAction.REMOVE_PAYMENT">Constant Field Values</a></dd>
@@ -182,49 +190,49 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <h3>getPayment</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.23">getPayment</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.33">getPayment</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPayment(com.commercetools.api.models.payment.PaymentResourceIdentifier)">
 <h3>setPayment</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.28">setPayment</a></span>&#8203;<span class="parameters">(<a href="../payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a>&nbsp;payment)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.38">setPayment</a></span>&#8203;<span class="parameters">(<a href="../payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a>&nbsp;payment)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.30">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.40">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.CartRemovePaymentAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.34">of</a></span>&#8203;<span class="parameters">(<a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.44">of</a></span>&#8203;<span class="parameters">(<a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.cart">CartRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.40">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.cart">CartRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.50">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart.CartRemovePaymentAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.cart">CartRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.44">builder</a></span>&#8203;<span class="parameters">(<a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.cart">CartRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartRemovePaymentAction(java.util.function.Function)">
 <h3>withCartRemovePaymentAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.48">withCartRemovePaymentAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.58">withCartRemovePaymentAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.52">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartRemovePaymentAction.html" title="interface in com.commercetools.api.models.cart">CartRemovePaymentAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartRemovePaymentAction.html#line.62">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

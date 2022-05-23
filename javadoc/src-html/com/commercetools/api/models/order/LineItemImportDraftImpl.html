@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String productId;</span>
@@ -81,15 +81,15 @@
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">    *  &lt;p&gt;ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.&lt;/p&gt;</span>
-<span class="source-line-no">072</span><span id="line.72">    */</span>
+<span class="source-line-no">071</span><span id="line.71">     *  &lt;p&gt;ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.&lt;/p&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
 <span class="source-line-no">073</span><span id="line.73">    public String getProductId() {</span>
 <span class="source-line-no">074</span><span id="line.74">        return this.productId;</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">    *  &lt;p&gt;The product name.&lt;/p&gt;</span>
-<span class="source-line-no">079</span><span id="line.79">    */</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;The product name.&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
 <span class="source-line-no">081</span><span id="line.81">        return this.name;</span>
 <span class="source-line-no">082</span><span id="line.82">    }</span>
@@ -111,15 +111,15 @@
 <span class="source-line-no">098</span><span id="line.98">    }</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
 <span class="source-line-no">100</span><span id="line.100">    /**</span>
-<span class="source-line-no">101</span><span id="line.101">    *  &lt;p&gt;Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.&lt;/p&gt;</span>
-<span class="source-line-no">102</span><span id="line.102">    */</span>
+<span class="source-line-no">101</span><span id="line.101">     *  &lt;p&gt;Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.&lt;/p&gt;</span>
+<span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {</span>
 <span class="source-line-no">104</span><span id="line.104">        return this.supplyChannel;</span>
 <span class="source-line-no">105</span><span id="line.105">    }</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
 <span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">    *  &lt;p&gt;The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.&lt;/p&gt;</span>
-<span class="source-line-no">109</span><span id="line.109">    */</span>
+<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.&lt;/p&gt;</span>
+<span class="source-line-no">109</span><span id="line.109">     */</span>
 <span class="source-line-no">110</span><span id="line.110">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {</span>
 <span class="source-line-no">111</span><span id="line.111">        return this.distributionChannel;</span>
 <span class="source-line-no">112</span><span id="line.112">    }</span>
@@ -129,8 +129,8 @@
 <span class="source-line-no">116</span><span id="line.116">    }</span>
 <span class="source-line-no">117</span><span id="line.117"></span>
 <span class="source-line-no">118</span><span id="line.118">    /**</span>
-<span class="source-line-no">119</span><span id="line.119">    *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
-<span class="source-line-no">120</span><span id="line.120">    */</span>
+<span class="source-line-no">119</span><span id="line.119">     *  &lt;p&gt;The custom fields.&lt;/p&gt;</span>
+<span class="source-line-no">120</span><span id="line.120">     */</span>
 <span class="source-line-no">121</span><span id="line.121">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
 <span class="source-line-no">122</span><span id="line.122">        return this.custom;</span>
 <span class="source-line-no">123</span><span id="line.123">    }</span>

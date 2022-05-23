@@ -87,9 +87,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DeliveryCloudEventsFormatBuilder.html" title="class in com.commercetools.api.models.subscription">DeliveryCloudEventsFormatBuilder</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.9">CloudEventsFormatBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.19">CloudEventsFormatBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CloudEventsFormat.html" title="interface in com.commercetools.api.models.subscription">CloudEventsFormat</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CloudEventsFormat cloudEventsFormat = CloudEventsFormat.builder()
+           .cloudEventsVersion("{cloudEventsVersion}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -157,7 +165,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CloudEventsFormatBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.10">CloudEventsFormatBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.20">CloudEventsFormatBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -171,19 +179,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="cloudEventsVersion(java.lang.String)">
 <h3>cloudEventsVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CloudEventsFormatBuilder.html" title="class in com.commercetools.api.models.subscription">CloudEventsFormatBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.14">cloudEventsVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cloudEventsVersion)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CloudEventsFormatBuilder.html" title="class in com.commercetools.api.models.subscription">CloudEventsFormatBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.24">cloudEventsVersion</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cloudEventsVersion)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCloudEventsVersion()">
 <h3>getCloudEventsVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.19">getCloudEventsVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.29">getCloudEventsVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CloudEventsFormat.html" title="interface in com.commercetools.api.models.subscription">CloudEventsFormat</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.23">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CloudEventsFormat.html" title="interface in com.commercetools.api.models.subscription">CloudEventsFormat</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.33">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CloudEventsFormat.html" title="interface in com.commercetools.api.models.subscription">CloudEventsFormat</a>&gt;</code></dd>
@@ -193,20 +201,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CloudEventsFormat.html" title="interface in com.commercetools.api.models.subscription">CloudEventsFormat</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.31">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CloudEventsFormat.html" title="interface in com.commercetools.api.models.subscription">CloudEventsFormat</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.41">buildUnchecked</a></span>()</div>
 <div class="block">builds CloudEventsFormat without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CloudEventsFormatBuilder.html" title="class in com.commercetools.api.models.subscription">CloudEventsFormatBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.35">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CloudEventsFormatBuilder.html" title="class in com.commercetools.api.models.subscription">CloudEventsFormatBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.45">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.subscription.CloudEventsFormat)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CloudEventsFormatBuilder.html" title="class in com.commercetools.api.models.subscription">CloudEventsFormatBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.39">of</a></span>&#8203;<span class="parameters">(<a href="CloudEventsFormat.html" title="interface in com.commercetools.api.models.subscription">CloudEventsFormat</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CloudEventsFormatBuilder.html" title="class in com.commercetools.api.models.subscription">CloudEventsFormatBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/CloudEventsFormatBuilder.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="CloudEventsFormat.html" title="interface in com.commercetools.api.models.subscription">CloudEventsFormat</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

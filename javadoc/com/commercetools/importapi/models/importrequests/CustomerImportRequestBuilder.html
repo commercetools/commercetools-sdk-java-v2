@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.10">CustomerImportRequestBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.20">CustomerImportRequestBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerImportRequest customerImportRequest = CustomerImportRequest.builder()
+           .plusResources(resourcesBuilder -> resourcesBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -175,7 +183,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CustomerImportRequestBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.11">CustomerImportRequestBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.21">CustomerImportRequestBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -189,48 +197,48 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="resources(com.commercetools.importapi.models.customers.CustomerImport...)">
 <h3>resources</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.19">resources</a></span>&#8203;<span class="parameters">(<a href="../customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>...&nbsp;resources)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.29">resources</a></span>&#8203;<span class="parameters">(<a href="../customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>...&nbsp;resources)</span></div>
 <div class="block"><p>The customer import resources of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="resources(java.util.List)">
 <h3>resources</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.29">resources</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&gt;&nbsp;resources)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.39">resources</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&gt;&nbsp;resources)</span></div>
 <div class="block"><p>The customer import resources of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusResources(com.commercetools.importapi.models.customers.CustomerImport...)">
 <h3>plusResources</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.39">plusResources</a></span>&#8203;<span class="parameters">(<a href="../customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>...&nbsp;resources)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.49">plusResources</a></span>&#8203;<span class="parameters">(<a href="../customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>...&nbsp;resources)</span></div>
 <div class="block"><p>The customer import resources of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusResources(java.util.function.Function)">
 <h3>plusResources</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.52">plusResources</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>,&#8203;<a href="../customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.62">plusResources</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>,&#8203;<a href="../customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The customer import resources of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withResources(java.util.function.Function)">
 <h3>withResources</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.66">withResources</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>,&#8203;<a href="../customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.76">withResources</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>,&#8203;<a href="../customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The customer import resources of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getResources()">
 <h3>getResources</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.74">getResources</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.84">getResources</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.78">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.88">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a>&gt;</code></dd>
@@ -240,20 +248,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.86">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.96">buildUnchecked</a></span>()</div>
 <div class="block">builds CustomerImportRequest without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.90">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.100">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importrequests.CustomerImportRequest)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.94">of</a></span>&#8203;<span class="parameters">(<a href="CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomerImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CustomerImportRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/CustomerImportRequestBuilder.html#line.104">of</a></span>&#8203;<span class="parameters">(<a href="CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -80,8 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CustomFieldsImpl.html" title="class in com.commercetools.api.models.type">CustomFieldsImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.19">CustomFields</a></span></div>
-<div class="block"><p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.29">CustomFields</a></span></div>
+<div class="block"><p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomFields customFields = CustomFields.builder()
+           .type(typeBuilder -> typeBuilder)
+           .fields(fieldsBuilder -> fieldsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -149,7 +159,7 @@ loadScripts(document, 'script');</script>
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.26">getType</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.36">getType</a></span>()</div>
 <div class="block"><p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p></div>
 </section>
 </li>
@@ -158,56 +168,56 @@ loadScripts(document, 'script');</script>
 <h3>getFields</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.34">getFields</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.44">getFields</a></span>()</div>
 <div class="block"><p>Object containing the Custom Fields for the customized resource or data type.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.type.TypeReference)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.39">setType</a></span>&#8203;<span class="parameters">(<a href="TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.49">setType</a></span>&#8203;<span class="parameters">(<a href="TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFields(com.commercetools.api.models.type.FieldContainer)">
 <h3>setFields</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.41">setFields</a></span>&#8203;<span class="parameters">(<a href="FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.51">setFields</a></span>&#8203;<span class="parameters">(<a href="FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.43">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.53">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.CustomFields)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.54">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.64">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.type.CustomFields)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.58">builder</a></span>&#8203;<span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCustomFields(java.util.function.Function)">
 <h3>withCustomFields</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.62">withCustomFields</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.72">withCustomFields</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.66">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/CustomFields.html#line.76">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

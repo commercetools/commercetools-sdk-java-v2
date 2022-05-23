@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    @Deprecated</span>
@@ -73,16 +73,16 @@
 <span class="source-line-no">060</span><span id="line.60">    }</span>
 <span class="source-line-no">061</span><span id="line.61"></span>
 <span class="source-line-no">062</span><span id="line.62">    /**</span>
-<span class="source-line-no">063</span><span id="line.63">    *  &lt;p&gt;Platform-generated unique identifier of the Cart from which you can create an Order.&lt;/p&gt;</span>
-<span class="source-line-no">064</span><span id="line.64">    */</span>
+<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Platform-generated unique identifier of the Cart from which you can create an Order.&lt;/p&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">     */</span>
 <span class="source-line-no">065</span><span id="line.65">    @Deprecated</span>
 <span class="source-line-no">066</span><span id="line.66">    public String getId() {</span>
 <span class="source-line-no">067</span><span id="line.67">        return this.id;</span>
 <span class="source-line-no">068</span><span id="line.68">    }</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">    *  &lt;p&gt;ResourceIdentifier to the Cart from which this order is created.&lt;/p&gt;</span>
-<span class="source-line-no">072</span><span id="line.72">    */</span>
+<span class="source-line-no">071</span><span id="line.71">     *  &lt;p&gt;ResourceIdentifier to the Cart from which this order is created.&lt;/p&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
 <span class="source-line-no">073</span><span id="line.73">    public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {</span>
 <span class="source-line-no">074</span><span id="line.74">        return this.cart;</span>
 <span class="source-line-no">075</span><span id="line.75">    }</span>
@@ -92,8 +92,8 @@
 <span class="source-line-no">079</span><span id="line.79">    }</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
 <span class="source-line-no">081</span><span id="line.81">    /**</span>
-<span class="source-line-no">082</span><span id="line.82">    *  &lt;p&gt;String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression &lt;code&gt;[a-z0-9_\-]{2,36}&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">083</span><span id="line.83">    */</span>
+<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression &lt;code&gt;[a-z0-9_\-]{2,36}&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">083</span><span id="line.83">     */</span>
 <span class="source-line-no">084</span><span id="line.84">    public String getOrderNumber() {</span>
 <span class="source-line-no">085</span><span id="line.85">        return this.orderNumber;</span>
 <span class="source-line-no">086</span><span id="line.86">    }</span>
@@ -107,8 +107,8 @@
 <span class="source-line-no">094</span><span id="line.94">    }</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
 <span class="source-line-no">096</span><span id="line.96">    /**</span>
-<span class="source-line-no">097</span><span id="line.97">    *  &lt;p&gt;Order will be created with &lt;code&gt;Open&lt;/code&gt; status by default.&lt;/p&gt;</span>
-<span class="source-line-no">098</span><span id="line.98">    */</span>
+<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;Order will be created with &lt;code&gt;Open&lt;/code&gt; status by default.&lt;/p&gt;</span>
+<span class="source-line-no">098</span><span id="line.98">     */</span>
 <span class="source-line-no">099</span><span id="line.99">    public com.commercetools.api.models.order.OrderState getOrderState() {</span>
 <span class="source-line-no">100</span><span id="line.100">        return this.orderState;</span>
 <span class="source-line-no">101</span><span id="line.101">    }</span>
@@ -118,8 +118,8 @@
 <span class="source-line-no">105</span><span id="line.105">    }</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
 <span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">    *  &lt;p&gt;Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.&lt;/p&gt;</span>
-<span class="source-line-no">109</span><span id="line.109">    */</span>
+<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.&lt;/p&gt;</span>
+<span class="source-line-no">109</span><span id="line.109">     */</span>
 <span class="source-line-no">110</span><span id="line.110">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
 <span class="source-line-no">111</span><span id="line.111">        return this.custom;</span>
 <span class="source-line-no">112</span><span id="line.112">    }</span>

@@ -80,8 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ImportSummaryImpl.html" title="class in com.commercetools.importapi.models.importsummaries">ImportSummaryImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.19">ImportSummary</a></span></div>
-<div class="block"><p>Describes the status of an ImportContainer by the number of resources in each Processing State. Can be used to monitor the import progress per Import Container.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.29">ImportSummary</a></span></div>
+<div class="block"><p>Describes the status of an ImportContainer by the number of resources in each Processing State. Can be used to monitor the import progress per Import Container.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ImportSummary importSummary = ImportSummary.builder()
+           .states(statesBuilder -> statesBuilder)
+           .total(1)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -149,7 +159,7 @@ loadScripts(document, 'script');</script>
 <h3>getStates</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.26">getStates</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.36">getStates</a></span>()</div>
 <div class="block"><p>The import status of an ImportContainer given by the number of resources in each Processing State.</p></div>
 </section>
 </li>
@@ -157,56 +167,56 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.34">getTotal</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.44">getTotal</a></span>()</div>
 <div class="block"><p>The total number of ImportOperations received for this Import Summary.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStates(com.commercetools.importapi.models.importsummaries.OperationStates)">
 <h3>setStates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.38">setStates</a></span>&#8203;<span class="parameters">(<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>&nbsp;states)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.48">setStates</a></span>&#8203;<span class="parameters">(<a href="OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a>&nbsp;states)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTotal(java.lang.Long)">
 <h3>setTotal</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.40">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.50">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.42">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.52">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importsummaries.ImportSummary)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSummaryBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">ImportSummaryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.53">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSummaryBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">ImportSummaryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.63">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.importsummaries.ImportSummary)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSummaryBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">ImportSummaryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ImportSummaryBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">ImportSummaryBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.67">builder</a></span>&#8203;<span class="parameters">(<a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withImportSummary(java.util.function.Function)">
 <h3>withImportSummary</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.61">withImportSummary</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.71">withImportSummary</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.65">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importsummaries/ImportSummary.html#line.75">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

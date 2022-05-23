@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartClassificationTierImpl.html" title="class in com.commercetools.importapi.models.orders">CartClassificationTierImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.17">CartClassificationTier</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.29">CartClassificationTier</a></span><span class="extends-implements">
 extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetools.importapi.models.orders">ShippingRatePriceTier</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartClassificationTier cartClassificationTier = CartClassificationTier.builder()
+           .value("{value}")
+           .price(priceBuilder -> priceBuilder)
+           .plusTiers(tiersBuilder -> tiersBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -180,7 +190,7 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <li>
 <section class="detail" id="CART_CLASSIFICATION">
 <h3>CART_CLASSIFICATION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.21">CART_CLASSIFICATION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.33">CART_CLASSIFICATION</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.importapi.models.orders.CartClassificationTier.CART_CLASSIFICATION">Constant Field Values</a></dd>
@@ -199,7 +209,7 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.23">getValue</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.35">getValue</a></span>()</div>
 </section>
 </li>
 <li>
@@ -207,7 +217,7 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <h3>getPrice</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.importapi.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.27">getPrice</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.importapi.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.39">getPrice</a></span>()</div>
 </section>
 </li>
 <li>
@@ -215,79 +225,79 @@ extends <a href="ShippingRatePriceTier.html" title="interface in com.commercetoo
 <h3>getTiers</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.importapi.models.orders">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.32">getTiers</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.importapi.models.orders">ShippingRatePriceTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.44">getTiers</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsMatching()">
 <h3>getIsMatching</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.37">getIsMatching</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.49">getIsMatching</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValue(java.lang.String)">
 <h3>setValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.40">setValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.52">setValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setPrice(com.commercetools.importapi.models.common.Money)">
 <h3>setPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.42">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.importapi.models.common">Money</a>&nbsp;price)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.54">setPrice</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.importapi.models.common">Money</a>&nbsp;price)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTiers(com.commercetools.importapi.models.orders.ShippingRatePriceTier...)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.44">setTiers</a></span>&#8203;<span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.importapi.models.orders">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.56">setTiers</a></span>&#8203;<span class="parameters">(<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.importapi.models.orders">ShippingRatePriceTier</a>...&nbsp;tiers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTiers(java.util.List)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.47">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.importapi.models.orders">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.59">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ShippingRatePriceTier.html" title="interface in com.commercetools.importapi.models.orders">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIsMatching(java.lang.Boolean)">
 <h3>setIsMatching</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.49">setIsMatching</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.61">setIsMatching</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMatching)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.51">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.63">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.orders.CartClassificationTier)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.55">of</a></span>&#8203;<span class="parameters">(<a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.67">of</a></span>&#8203;<span class="parameters">(<a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTierBuilder.html" title="class in com.commercetools.importapi.models.orders">CartClassificationTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.64">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTierBuilder.html" title="class in com.commercetools.importapi.models.orders">CartClassificationTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.76">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.importapi.models.orders.CartClassificationTier)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTierBuilder.html" title="class in com.commercetools.importapi.models.orders">CartClassificationTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartClassificationTierBuilder.html" title="class in com.commercetools.importapi.models.orders">CartClassificationTierBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.80">builder</a></span>&#8203;<span class="parameters">(<a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartClassificationTier(java.util.function.Function)">
 <h3>withCartClassificationTier</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.72">withCartClassificationTier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.84">withCartClassificationTier</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.76">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartClassificationTier.html" title="interface in com.commercetools.importapi.models.orders">CartClassificationTier</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/orders/CartClassificationTier.html#line.88">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

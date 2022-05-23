@@ -85,10 +85,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.24">ByProjectKeyProductProjectionsSearchPost</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.35">ByProjectKeyProductProjectionsSearchPost</a></span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a>,&#8203;<a href="../models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a>&gt;</span></div>
-<div class="block"><p>Search Product Projection</p></div>
+<div class="block"><p>Search Product Projection</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>> result = apiRoot
+           .withProjectKey("{projectKey}")
+           .productProjections()
+           .search()
+           .post(null)
+           .execute()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -217,7 +228,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="&lt;init&gt;(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String,java.util.List)">
 <h3>ByProjectKeyProductProjectionsSearchPost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.33">ByProjectKeyProductProjectionsSearchPost</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.44">ByProjectKeyProductProjectionsSearchPost</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="class in io.vrap.rmf.base.client">ApiMethod.ParamEntry</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;&nbsp;formParams)</span></div>
 </section>
@@ -225,7 +236,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="&lt;init&gt;(com.commercetools.api.client.ByProjectKeyProductProjectionsSearchPost)">
 <h3>ByProjectKeyProductProjectionsSearchPost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.43">ByProjectKeyProductProjectionsSearchPost</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a>&nbsp;t)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.54">ByProjectKeyProductProjectionsSearchPost</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a>&nbsp;t)</span></div>
 </section>
 </li>
 </ul>
@@ -239,7 +250,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">
 <h3>executeBlocking</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.60">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.71">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -252,7 +263,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.67">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.78">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html#execute(io.vrap.rmf.base.client.ApiHttpClient)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/product/ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a>&gt;</code></dd>
@@ -264,19 +275,19 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.73">getProjectKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.84">getProjectKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.77">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.88">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addFormParam(java.lang.String,V)">
 <h3 id="addFormParam(java.lang.String,java.lang.Object)">addFormParam</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;V&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.88">addFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;V&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.99">addFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  V&nbsp;value)</span></div>
 <div class="block">add an additional form parameter</div>
 <dl class="notes">
@@ -293,7 +304,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="withFormParam(java.lang.String,V)">
 <h3 id="withFormParam(java.lang.String,java.lang.Object)">withFormParam</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;V&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.101">withFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;V&gt;</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.112">withFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  V&nbsp;value)</span></div>
 <div class="block">set the form parameter with the specified value</div>
 <dl class="notes">
@@ -310,7 +321,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="withoutFormParam(java.lang.String)">
 <h3>withoutFormParam</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.110">withoutFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.121">withoutFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <div class="block">removes the specified form parameter</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -323,7 +334,7 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="withFormParams(java.util.List)">
 <h3>withFormParams</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.123">withFormParams</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="class in io.vrap.rmf.base.client">ApiMethod.ParamEntry</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;&nbsp;formParams)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductProjectionsSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsSearchPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.134">withFormParams</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="class in io.vrap.rmf.base.client">ApiMethod.ParamEntry</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;&nbsp;formParams)</span></div>
 <div class="block">set the form parameters</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -336,44 +347,44 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <li>
 <section class="detail" id="getFormParams()">
 <h3>getFormParams</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="class in io.vrap.rmf.base.client">ApiMethod.ParamEntry</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.129">getFormParams</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiMethod.ParamEntry.html" title="class in io.vrap.rmf.base.client">ApiMethod.ParamEntry</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.140">getFormParams</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFormParam(java.lang.String)">
 <h3>getFormParam</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.133">getFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.144">getFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFormParamUriStrings()">
 <h3>getFormParamUriStrings</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.140">getFormParamUriStrings</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.151">getFormParamUriStrings</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFormParamUriString()">
 <h3>getFormParamUriString</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.144">getFormParamUriString</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.155">getFormParamUriString</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getFirstFormParam(java.lang.String)">
 <h3>getFirstFormParam</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.148">getFirstFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.159">getFirstFormParam</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.157">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.168">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.170">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/api/client/ByProjectKeyProductProjectionsSearchPost.html#line.181">hashCode</a></span>()</div>
 </section>
 </li>
 <li>

@@ -83,9 +83,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.12">OrderFieldBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.21">OrderFieldBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderField orderField = OrderField.builder()
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -294,7 +301,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderFieldBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.13">OrderFieldBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.22">OrderFieldBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -308,14 +315,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addReturnInfo(java.util.function.Function)">
 <h3>addReturnInfo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.46">addReturnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a>,&#8203;<a href="ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.55">addReturnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a>,&#8203;<a href="ReturnInfoBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ReturnInfoBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.returnInfo</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addReturnInfo(com.commercetools.importapi.models.order_patches.ReturnInfo)">
 <h3>addReturnInfo</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.57">addReturnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.66">addReturnInfo</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a>&nbsp;addReturnInfo)</span></div>
 <div class="block"><p>Maps to <code>Order.returnInfo</code></p></div>
 </section>
@@ -323,14 +330,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addParcelToDelivery(java.util.function.Function)">
 <h3>addParcelToDelivery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.67">addParcelToDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryParcelBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryParcelBuilder</a>,&#8203;<a href="DeliveryParcelBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryParcelBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.76">addParcelToDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryParcelBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryParcelBuilder</a>,&#8203;<a href="DeliveryParcelBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryParcelBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.delivery</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addParcelToDelivery(com.commercetools.importapi.models.order_patches.DeliveryParcel)">
 <h3>addParcelToDelivery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.79">addParcelToDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.88">addParcelToDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="DeliveryParcel.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryParcel</a>&nbsp;addParcelToDelivery)</span></div>
 <div class="block"><p>Maps to <code>Order.delivery</code></p></div>
 </section>
@@ -338,7 +345,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addDeliveries(com.commercetools.importapi.models.order_patches.DeliveryDraft...)">
 <h3>addDeliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.89">addDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.98">addDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="DeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryDraft</a>...&nbsp;addDeliveries)</span></div>
 <div class="block"><p>Maps to <code>Order.delivery</code></p></div>
 </section>
@@ -346,7 +353,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addDeliveries(java.util.List)">
 <h3>addDeliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.99">addDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.108">addDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryDraft</a>&gt;&nbsp;addDeliveries)</span></div>
 <div class="block"><p>Maps to <code>Order.delivery</code></p></div>
 </section>
@@ -354,7 +361,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusAddDeliveries(com.commercetools.importapi.models.order_patches.DeliveryDraft...)">
 <h3>plusAddDeliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.109">plusAddDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.118">plusAddDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="DeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryDraft</a>...&nbsp;addDeliveries)</span></div>
 <div class="block"><p>Maps to <code>Order.delivery</code></p></div>
 </section>
@@ -362,28 +369,28 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusAddDeliveries(java.util.function.Function)">
 <h3>plusAddDeliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.122">plusAddDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryDraftBuilder</a>,&#8203;<a href="DeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.131">plusAddDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryDraftBuilder</a>,&#8203;<a href="DeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.delivery</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAddDeliveries(java.util.function.Function)">
 <h3>withAddDeliveries</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.136">withAddDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryDraftBuilder</a>,&#8203;<a href="DeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.145">withAddDeliveries</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryDraftBuilder</a>,&#8203;<a href="DeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.delivery</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeDelivery(java.util.function.Function)">
 <h3>removeDelivery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.148">removeDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="RemoveDeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">RemoveDeliveryDraftBuilder</a>,&#8203;<a href="RemoveDeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">RemoveDeliveryDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.157">removeDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="RemoveDeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">RemoveDeliveryDraftBuilder</a>,&#8203;<a href="RemoveDeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">RemoveDeliveryDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.removeDelivery</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeDelivery(com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft)">
 <h3>removeDelivery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.160">removeDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.169">removeDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="RemoveDeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">RemoveDeliveryDraft</a>&nbsp;removeDelivery)</span></div>
 <div class="block"><p>Maps to <code>Order.removeDelivery</code></p></div>
 </section>
@@ -391,14 +398,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="removeParcelFromDelivery(java.util.function.Function)">
 <h3>removeParcelFromDelivery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.170">removeParcelFromDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="RemoveParcelFromDeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">RemoveParcelFromDeliveryDraftBuilder</a>,&#8203;<a href="RemoveParcelFromDeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">RemoveParcelFromDeliveryDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.179">removeParcelFromDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="RemoveParcelFromDeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">RemoveParcelFromDeliveryDraftBuilder</a>,&#8203;<a href="RemoveParcelFromDeliveryDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">RemoveParcelFromDeliveryDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.removeParcelFromDelivery</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeParcelFromDelivery(com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft)">
 <h3>removeParcelFromDelivery</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.182">removeParcelFromDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.191">removeParcelFromDelivery</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="RemoveParcelFromDeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">RemoveParcelFromDeliveryDraft</a>&nbsp;removeParcelFromDelivery)</span></div>
 <div class="block"><p>Maps to <code>Order.removeParcelFromDelivery</code></p></div>
 </section>
@@ -406,14 +413,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="setDeliveryAddress(java.util.function.Function)">
 <h3>setDeliveryAddress</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.192">setDeliveryAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryAddressDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryAddressDraftBuilder</a>,&#8203;<a href="DeliveryAddressDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryAddressDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.201">setDeliveryAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryAddressDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryAddressDraftBuilder</a>,&#8203;<a href="DeliveryAddressDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">DeliveryAddressDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.addressDraft</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDeliveryAddress(com.commercetools.importapi.models.order_patches.DeliveryAddressDraft)">
 <h3>setDeliveryAddress</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.204">setDeliveryAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.213">setDeliveryAddress</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="DeliveryAddressDraft.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryAddressDraft</a>&nbsp;setDeliveryAddress)</span></div>
 <div class="block"><p>Maps to <code>Order.addressDraft</code></p></div>
 </section>
@@ -421,14 +428,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="setParcelMeasurements(java.util.function.Function)">
 <h3>setParcelMeasurements</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.214">setParcelMeasurements</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelMeasurementDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelMeasurementDraftBuilder</a>,&#8203;<a href="ParcelMeasurementDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelMeasurementDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.223">setParcelMeasurements</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelMeasurementDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelMeasurementDraftBuilder</a>,&#8203;<a href="ParcelMeasurementDraftBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelMeasurementDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.parcelMeasurements</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setParcelMeasurements(com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft)">
 <h3>setParcelMeasurements</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.226">setParcelMeasurements</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.235">setParcelMeasurements</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ParcelMeasurementDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelMeasurementDraft</a>&nbsp;setParcelMeasurements)</span></div>
 <div class="block"><p>Maps to <code>Order.parcelMeasurements</code></p></div>
 </section>
@@ -436,14 +443,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="setParcelTrackingData(java.util.function.Function)">
 <h3>setParcelTrackingData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.236">setParcelTrackingData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelTrackingDataBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelTrackingDataBuilder</a>,&#8203;<a href="ParcelTrackingDataBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelTrackingDataBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.245">setParcelTrackingData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelTrackingDataBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelTrackingDataBuilder</a>,&#8203;<a href="ParcelTrackingDataBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelTrackingDataBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.parcelTrackingData</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setParcelTrackingData(com.commercetools.importapi.models.order_patches.ParcelTrackingData)">
 <h3>setParcelTrackingData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.248">setParcelTrackingData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.257">setParcelTrackingData</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ParcelTrackingData.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelTrackingData</a>&nbsp;setParcelTrackingData)</span></div>
 <div class="block"><p>Maps to <code>Order.parcelTrackingData</code></p></div>
 </section>
@@ -451,7 +458,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="setParcelItems(com.commercetools.importapi.models.order_patches.ParcelItems...)">
 <h3>setParcelItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.258">setParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.267">setParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ParcelItems.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelItems</a>...&nbsp;setParcelItems)</span></div>
 <div class="block"><p>Maps to <code>Order.parcelItems</code></p></div>
 </section>
@@ -459,7 +466,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="setParcelItems(java.util.List)">
 <h3>setParcelItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.268">setParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.277">setParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ParcelItems.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelItems</a>&gt;&nbsp;setParcelItems)</span></div>
 <div class="block"><p>Maps to <code>Order.parcelItems</code></p></div>
 </section>
@@ -467,7 +474,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusSetParcelItems(com.commercetools.importapi.models.order_patches.ParcelItems...)">
 <h3>plusSetParcelItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.278">plusSetParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.287">plusSetParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ParcelItems.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelItems</a>...&nbsp;setParcelItems)</span></div>
 <div class="block"><p>Maps to <code>Order.parcelItems</code></p></div>
 </section>
@@ -475,14 +482,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusSetParcelItems(java.util.function.Function)">
 <h3>plusSetParcelItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.291">plusSetParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelItemsBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelItemsBuilder</a>,&#8203;<a href="ParcelItemsBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelItemsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.300">plusSetParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelItemsBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelItemsBuilder</a>,&#8203;<a href="ParcelItemsBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelItemsBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.parcelItems</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSetParcelItems(java.util.function.Function)">
 <h3>withSetParcelItems</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.305">withSetParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelItemsBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelItemsBuilder</a>,&#8203;<a href="ParcelItemsBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelItemsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.314">withSetParcelItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ParcelItemsBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelItemsBuilder</a>,&#8203;<a href="ParcelItemsBuilder.html" title="class in com.commercetools.importapi.models.order_patches">ParcelItemsBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Maps to <code>Order.parcelItems</code></p></div>
 </section>
 </li>
@@ -490,69 +497,69 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getAddReturnInfo()">
 <h3>getAddReturnInfo</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.313">getAddReturnInfo</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnInfo.html" title="interface in com.commercetools.importapi.models.order_patches">ReturnInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.322">getAddReturnInfo</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddParcelToDelivery()">
 <h3>getAddParcelToDelivery</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DeliveryParcel.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryParcel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.318">getAddParcelToDelivery</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DeliveryParcel.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryParcel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.327">getAddParcelToDelivery</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddDeliveries()">
 <h3>getAddDeliveries</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.323">getAddDeliveries</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="DeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.332">getAddDeliveries</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRemoveDelivery()">
 <h3>getRemoveDelivery</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RemoveDeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">RemoveDeliveryDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.328">getRemoveDelivery</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RemoveDeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">RemoveDeliveryDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.337">getRemoveDelivery</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRemoveParcelFromDelivery()">
 <h3>getRemoveParcelFromDelivery</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RemoveParcelFromDeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">RemoveParcelFromDeliveryDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.333">getRemoveParcelFromDelivery</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RemoveParcelFromDeliveryDraft.html" title="interface in com.commercetools.importapi.models.order_patches">RemoveParcelFromDeliveryDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.342">getRemoveParcelFromDelivery</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSetDeliveryAddress()">
 <h3>getSetDeliveryAddress</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DeliveryAddressDraft.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryAddressDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.338">getSetDeliveryAddress</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DeliveryAddressDraft.html" title="interface in com.commercetools.importapi.models.order_patches">DeliveryAddressDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.347">getSetDeliveryAddress</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSetParcelMeasurements()">
 <h3>getSetParcelMeasurements</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelMeasurementDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelMeasurementDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.343">getSetParcelMeasurements</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelMeasurementDraft.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelMeasurementDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.352">getSetParcelMeasurements</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSetParcelTrackingData()">
 <h3>getSetParcelTrackingData</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelTrackingData.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelTrackingData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.348">getSetParcelTrackingData</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParcelTrackingData.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelTrackingData</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.357">getSetParcelTrackingData</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSetParcelItems()">
 <h3>getSetParcelItems</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ParcelItems.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelItems</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.353">getSetParcelItems</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ParcelItems.html" title="interface in com.commercetools.importapi.models.order_patches">ParcelItems</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.362">getSetParcelItems</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.358">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.367">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a>&gt;</code></dd>
@@ -562,20 +569,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.366">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.375">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderField without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.371">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.380">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.order_patches.OrderField)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.375">of</a></span>&#8203;<span class="parameters">(<a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#line.384">of</a></span>&#8203;<span class="parameters">(<a href="OrderField.html" title="interface in com.commercetools.importapi.models.order_patches">OrderField</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.9">TaskTokenBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.20">TaskTokenBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TaskToken taskToken = TaskToken.builder()
+           .taskId("{taskId}")
+           .uriPath("{uriPath}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -163,7 +172,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TaskTokenBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.10">TaskTokenBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.21">TaskTokenBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -177,33 +186,33 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="taskId(java.lang.String)">
 <h3>taskId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaskTokenBuilder.html" title="class in com.commercetools.ml.models.common">TaskTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.20">taskId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;taskId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaskTokenBuilder.html" title="class in com.commercetools.ml.models.common">TaskTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.31">taskId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;taskId)</span></div>
 <div class="block"><p>The ID for the task. Used to find the status of the task.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="uriPath(java.lang.String)">
 <h3>uriPath</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaskTokenBuilder.html" title="class in com.commercetools.ml.models.common">TaskTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.29">uriPath</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uriPath)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaskTokenBuilder.html" title="class in com.commercetools.ml.models.common">TaskTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.40">uriPath</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;uriPath)</span></div>
 <div class="block"><p>The URI path to poll for the status of the task.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaskId()">
 <h3>getTaskId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.34">getTaskId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.45">getTaskId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getUriPath()">
 <h3>getUriPath</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.38">getUriPath</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.49">getUriPath</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.42">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.53">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a>&gt;</code></dd>
@@ -213,20 +222,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.51">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.62">buildUnchecked</a></span>()</div>
 <div class="block">builds TaskToken without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaskTokenBuilder.html" title="class in com.commercetools.ml.models.common">TaskTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.55">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaskTokenBuilder.html" title="class in com.commercetools.ml.models.common">TaskTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.66">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.common.TaskToken)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaskTokenBuilder.html" title="class in com.commercetools.ml.models.common">TaskTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.59">of</a></span>&#8203;<span class="parameters">(<a href="TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TaskTokenBuilder.html" title="class in com.commercetools.ml.models.common">TaskTokenBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/common/TaskTokenBuilder.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="TaskToken.html" title="interface in com.commercetools.ml.models.common">TaskToken</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

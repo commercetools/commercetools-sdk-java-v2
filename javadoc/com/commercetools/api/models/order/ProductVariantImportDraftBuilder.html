@@ -83,9 +83,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductVariantImportDraft.html" title="interface in com.commercetools.api.models.order">ProductVariantImportDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.12">ProductVariantImportDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.21">ProductVariantImportDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductVariantImportDraft.html" title="interface in com.commercetools.api.models.order">ProductVariantImportDraft</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductVariantImportDraft productVariantImportDraft = ProductVariantImportDraft.builder()
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -247,7 +254,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProductVariantImportDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.13">ProductVariantImportDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.22">ProductVariantImportDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -261,7 +268,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.Long)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.34">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.43">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;id)</span></div>
 <div class="block"><p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p></div>
 </section>
@@ -269,7 +276,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="sku(java.lang.String)">
 <h3>sku</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.43">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.52">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
 <div class="block"><p>The SKU of the existing variant.</p></div>
 </section>
@@ -277,7 +284,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="prices(com.commercetools.api.models.common.PriceDraft...)">
 <h3>prices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.52">prices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.61">prices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</span></div>
 <div class="block"><p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
@@ -285,7 +292,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="prices(java.util.List)">
 <h3>prices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.62">prices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.71">prices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;&nbsp;prices)</span></div>
 <div class="block"><p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
@@ -293,7 +300,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusPrices(com.commercetools.api.models.common.PriceDraft...)">
 <h3>plusPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.72">plusPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.81">plusPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>...&nbsp;prices)</span></div>
 <div class="block"><p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
@@ -301,21 +308,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusPrices(java.util.function.Function)">
 <h3>plusPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.85">plusPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.94">plusPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPrices(java.util.function.Function)">
 <h3>withPrices</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.98">withPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.107">withPrices</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>,&#8203;<a href="../common/PriceDraftBuilder.html" title="class in com.commercetools.api.models.common">PriceDraftBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The EmbeddedPrices of the variant. The prices should not contain two prices for the same price scope (same currency, country and customer group). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="attributes(com.commercetools.api.models.product.Attribute...)">
 <h3>attributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.109">attributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.118">attributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
@@ -323,7 +330,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="attributes(java.util.List)">
 <h3>attributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.119">attributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.128">attributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;attributes)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
@@ -331,7 +338,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusAttributes(com.commercetools.api.models.product.Attribute...)">
 <h3>plusAttributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.129">plusAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.138">plusAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
@@ -339,21 +346,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusAttributes(java.util.function.Function)">
 <h3>plusAttributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.142">plusAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,&#8203;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.151">plusAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,&#8203;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withAttributes(java.util.function.Function)">
 <h3>withAttributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.155">withAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,&#8203;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.164">withAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,&#8203;<a href="../product/AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="images(com.commercetools.api.models.common.Image...)">
 <h3>images</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.166">images</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.175">images</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>...&nbsp;images)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
@@ -361,7 +368,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="images(java.util.List)">
 <h3>images</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.176">images</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.185">images</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;&nbsp;images)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
@@ -369,7 +376,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusImages(com.commercetools.api.models.common.Image...)">
 <h3>plusImages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.186">plusImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.195">plusImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>...&nbsp;images)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
@@ -377,14 +384,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusImages(java.util.function.Function)">
 <h3>plusImages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.199">plusImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.208">plusImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withImages(java.util.function.Function)">
 <h3>withImages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.212">withImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.221">withImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>,&#8203;<a href="../common/ImageBuilder.html" title="class in com.commercetools.api.models.common">ImageBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p></div>
 </section>
 </li>
@@ -392,41 +399,41 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.219">getId</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.228">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.224">getSku</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.233">getSku</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPrices()">
 <h3>getPrices</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.229">getPrices</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceDraft.html" title="interface in com.commercetools.api.models.common">PriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.238">getPrices</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAttributes()">
 <h3>getAttributes</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.234">getAttributes</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.243">getAttributes</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getImages()">
 <h3>getImages</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.239">getImages</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.248">getImages</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraft.html" title="interface in com.commercetools.api.models.order">ProductVariantImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.244">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraft.html" title="interface in com.commercetools.api.models.order">ProductVariantImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.253">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductVariantImportDraft.html" title="interface in com.commercetools.api.models.order">ProductVariantImportDraft</a>&gt;</code></dd>
@@ -436,20 +443,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraft.html" title="interface in com.commercetools.api.models.order">ProductVariantImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.251">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraft.html" title="interface in com.commercetools.api.models.order">ProductVariantImportDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.260">buildUnchecked</a></span>()</div>
 <div class="block">builds ProductVariantImportDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.255">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.264">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.ProductVariantImportDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.259">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantImportDraft.html" title="interface in com.commercetools.api.models.order">ProductVariantImportDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductVariantImportDraftBuilder.html" title="class in com.commercetools.api.models.order">ProductVariantImportDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/ProductVariantImportDraftBuilder.html#line.268">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantImportDraft.html" title="interface in com.commercetools.api.models.order">ProductVariantImportDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

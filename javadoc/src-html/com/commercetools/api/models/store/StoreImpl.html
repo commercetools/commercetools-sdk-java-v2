@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class StoreImpl implements Store, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String id;</span>
@@ -104,29 +104,29 @@
 <span class="source-line-no">091</span><span id="line.91">    }</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
 <span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">095</span><span id="line.95">    */</span>
+<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
 <span class="source-line-no">096</span><span id="line.96">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
 <span class="source-line-no">097</span><span id="line.97">        return this.lastModifiedBy;</span>
 <span class="source-line-no">098</span><span id="line.98">    }</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
 <span class="source-line-no">100</span><span id="line.100">    /**</span>
-<span class="source-line-no">101</span><span id="line.101">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">102</span><span id="line.102">    */</span>
+<span class="source-line-no">101</span><span id="line.101">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
 <span class="source-line-no">104</span><span id="line.104">        return this.createdBy;</span>
 <span class="source-line-no">105</span><span id="line.105">    }</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
 <span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">    *  &lt;p&gt;User-specific unique identifier for the store. The &lt;code&gt;key&lt;/code&gt; is mandatory and immutable. It is used to reference the store.&lt;/p&gt;</span>
-<span class="source-line-no">109</span><span id="line.109">    */</span>
+<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;User-specific unique identifier for the store. The &lt;code&gt;key&lt;/code&gt; is mandatory and immutable. It is used to reference the store.&lt;/p&gt;</span>
+<span class="source-line-no">109</span><span id="line.109">     */</span>
 <span class="source-line-no">110</span><span id="line.110">    public String getKey() {</span>
 <span class="source-line-no">111</span><span id="line.111">        return this.key;</span>
 <span class="source-line-no">112</span><span id="line.112">    }</span>
 <span class="source-line-no">113</span><span id="line.113"></span>
 <span class="source-line-no">114</span><span id="line.114">    /**</span>
-<span class="source-line-no">115</span><span id="line.115">    *  &lt;p&gt;The name of the store&lt;/p&gt;</span>
-<span class="source-line-no">116</span><span id="line.116">    */</span>
+<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;The name of the store&lt;/p&gt;</span>
+<span class="source-line-no">116</span><span id="line.116">     */</span>
 <span class="source-line-no">117</span><span id="line.117">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
 <span class="source-line-no">118</span><span id="line.118">        return this.name;</span>
 <span class="source-line-no">119</span><span id="line.119">    }</span>
@@ -136,22 +136,22 @@
 <span class="source-line-no">123</span><span id="line.123">    }</span>
 <span class="source-line-no">124</span><span id="line.124"></span>
 <span class="source-line-no">125</span><span id="line.125">    /**</span>
-<span class="source-line-no">126</span><span id="line.126">    *  &lt;p&gt;Set of References to a Channel with &lt;code&gt;ProductDistribution&lt;/code&gt; role&lt;/p&gt;</span>
-<span class="source-line-no">127</span><span id="line.127">    */</span>
+<span class="source-line-no">126</span><span id="line.126">     *  &lt;p&gt;Set of References to a Channel with &lt;code&gt;ProductDistribution&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">127</span><span id="line.127">     */</span>
 <span class="source-line-no">128</span><span id="line.128">    public java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; getDistributionChannels() {</span>
 <span class="source-line-no">129</span><span id="line.129">        return this.distributionChannels;</span>
 <span class="source-line-no">130</span><span id="line.130">    }</span>
 <span class="source-line-no">131</span><span id="line.131"></span>
 <span class="source-line-no">132</span><span id="line.132">    /**</span>
-<span class="source-line-no">133</span><span id="line.133">    *  &lt;p&gt;Set of ResourceIdentifiers of Channels with &lt;code&gt;InventorySupply&lt;/code&gt; role&lt;/p&gt;</span>
-<span class="source-line-no">134</span><span id="line.134">    */</span>
+<span class="source-line-no">133</span><span id="line.133">     *  &lt;p&gt;Set of ResourceIdentifiers of Channels with &lt;code&gt;InventorySupply&lt;/code&gt; role&lt;/p&gt;</span>
+<span class="source-line-no">134</span><span id="line.134">     */</span>
 <span class="source-line-no">135</span><span id="line.135">    public java.util.List&lt;com.commercetools.api.models.channel.ChannelReference&gt; getSupplyChannels() {</span>
 <span class="source-line-no">136</span><span id="line.136">        return this.supplyChannels;</span>
 <span class="source-line-no">137</span><span id="line.137">    }</span>
 <span class="source-line-no">138</span><span id="line.138"></span>
 <span class="source-line-no">139</span><span id="line.139">    /**</span>
-<span class="source-line-no">140</span><span id="line.140">    *  &lt;p&gt;Set of References to Product Selections along with settings. If &lt;code&gt;productSelections&lt;/code&gt; is empty all products in the project are available in this Store. If &lt;code&gt;productSelections&lt;/code&gt; is not empty but there exists no &lt;code&gt;active&lt;/code&gt; Product Selection then no Product is available in this Store.&lt;/p&gt;</span>
-<span class="source-line-no">141</span><span id="line.141">    */</span>
+<span class="source-line-no">140</span><span id="line.140">     *  &lt;p&gt;Set of References to Product Selections along with settings. If &lt;code&gt;productSelections&lt;/code&gt; is empty all products in the project are available in this Store. If &lt;code&gt;productSelections&lt;/code&gt; is not empty but there exists no &lt;code&gt;active&lt;/code&gt; Product Selection then no Product is available in this Store.&lt;/p&gt;</span>
+<span class="source-line-no">141</span><span id="line.141">     */</span>
 <span class="source-line-no">142</span><span id="line.142">    public java.util.List&lt;com.commercetools.api.models.store.ProductSelectionSetting&gt; getProductSelections() {</span>
 <span class="source-line-no">143</span><span id="line.143">        return this.productSelections;</span>
 <span class="source-line-no">144</span><span id="line.144">    }</span>

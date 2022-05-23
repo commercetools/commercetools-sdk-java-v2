@@ -83,9 +83,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TransitionCustomLineItemStateChange.html" title="interface in com.commercetools.history.models.change">TransitionCustomLineItemStateChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.10">TransitionCustomLineItemStateChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.24">TransitionCustomLineItemStateChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TransitionCustomLineItemStateChange.html" title="interface in com.commercetools.history.models.change">TransitionCustomLineItemStateChange</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TransitionCustomLineItemStateChange transitionCustomLineItemStateChange = TransitionCustomLineItemStateChange.builder()
+           .change("{change}")
+           .lineItemId("{lineItemId}")
+           .stateId("{stateId}")
+           .plusNextValue(nextValueBuilder -> nextValueBuilder)
+           .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -203,7 +215,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>TransitionCustomLineItemStateChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.11">TransitionCustomLineItemStateChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.25">TransitionCustomLineItemStateChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -217,116 +229,116 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.27">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.41">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <div class="block"><p>Update action for <code>transitionCustomLineItemState</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="lineItemId(java.lang.String)">
 <h3>lineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.32">lineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.46">lineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="stateId(java.lang.String)">
 <h3>stateId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.37">stateId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stateId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.51">stateId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;stateId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.ItemState...)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.42">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.56">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.List)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.48">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>&gt;&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.62">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>&gt;&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusNextValue(com.commercetools.history.models.common.ItemState...)">
 <h3>plusNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.54">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>...&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.68">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>...&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusNextValue(java.util.function.Function)">
 <h3>plusNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.63">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>,&#8203;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.77">plusNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>,&#8203;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withNextValue(java.util.function.Function)">
 <h3>withNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.72">withNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>,&#8203;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.86">withNextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>,&#8203;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(com.commercetools.history.models.common.ItemState...)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.79">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.93">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.util.List)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.85">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>&gt;&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.99">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>&gt;&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPreviousValue(com.commercetools.history.models.common.ItemState...)">
 <h3>plusPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.91">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>...&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.105">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>...&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPreviousValue(java.util.function.Function)">
 <h3>plusPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.100">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>,&#8203;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.114">plusPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>,&#8203;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPreviousValue(java.util.function.Function)">
 <h3>withPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.109">withPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>,&#8203;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.123">withPreviousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>,&#8203;<a href="../common/ItemStateBuilder.html" title="class in com.commercetools.history.models.common">ItemStateBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.116">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.130">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLineItemId()">
 <h3>getLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.120">getLineItemId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.134">getLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStateId()">
 <h3>getStateId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.124">getStateId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.138">getStateId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.128">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.142">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.132">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ItemState.html" title="interface in com.commercetools.history.models.common">ItemState</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.146">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChange.html" title="interface in com.commercetools.history.models.change">TransitionCustomLineItemStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.136">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChange.html" title="interface in com.commercetools.history.models.change">TransitionCustomLineItemStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.150">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="TransitionCustomLineItemStateChange.html" title="interface in com.commercetools.history.models.change">TransitionCustomLineItemStateChange</a>&gt;</code></dd>
@@ -336,20 +348,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChange.html" title="interface in com.commercetools.history.models.change">TransitionCustomLineItemStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.148">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChange.html" title="interface in com.commercetools.history.models.change">TransitionCustomLineItemStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.162">buildUnchecked</a></span>()</div>
 <div class="block">builds TransitionCustomLineItemStateChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.152">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.166">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.TransitionCustomLineItemStateChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.156">of</a></span>&#8203;<span class="parameters">(<a href="TransitionCustomLineItemStateChange.html" title="interface in com.commercetools.history.models.change">TransitionCustomLineItemStateChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="TransitionCustomLineItemStateChangeBuilder.html" title="class in com.commercetools.history.models.change">TransitionCustomLineItemStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/TransitionCustomLineItemStateChangeBuilder.html#line.170">of</a></span>&#8203;<span class="parameters">(<a href="TransitionCustomLineItemStateChange.html" title="interface in com.commercetools.history.models.change">TransitionCustomLineItemStateChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

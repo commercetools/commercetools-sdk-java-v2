@@ -22,145 +22,157 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder</span>
-<span class="source-line-no">014</span><span id="line.14">        implements Builder&lt;StagedOrderSetShippingAddressAndCustomShippingMethodAction&gt; {</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">    private com.commercetools.api.models.common.BaseAddress address;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    private String shippingMethodName;</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;</span>
-<span class="source-line-no">021</span><span id="line.21"></span>
-<span class="source-line-no">022</span><span id="line.22">    @Nullable</span>
-<span class="source-line-no">023</span><span id="line.23">    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;</span>
-<span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    @Nullable</span>
-<span class="source-line-no">026</span><span id="line.26">    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">016</span><span id="line.16">   StagedOrderSetShippingAddressAndCustomShippingMethodAction stagedOrderSetShippingAddressAndCustomShippingMethodAction = StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()</span>
+<span class="source-line-no">017</span><span id="line.17">           .address(addressBuilder -&gt; addressBuilder)</span>
+<span class="source-line-no">018</span><span id="line.18">           .shippingMethodName("{shippingMethodName}")</span>
+<span class="source-line-no">019</span><span id="line.19">           .shippingRate(shippingRateBuilder -&gt; shippingRateBuilder)</span>
+<span class="source-line-no">020</span><span id="line.20">           .build()</span>
+<span class="source-line-no">021</span><span id="line.21"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> &lt;/div&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> */</span>
+<span class="source-line-no">024</span><span id="line.24">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">025</span><span id="line.25">public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder</span>
+<span class="source-line-no">026</span><span id="line.26">        implements Builder&lt;StagedOrderSetShippingAddressAndCustomShippingMethodAction&gt; {</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder address(</span>
-<span class="source-line-no">029</span><span id="line.29">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
-<span class="source-line-no">030</span><span id="line.30">        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();</span>
-<span class="source-line-no">031</span><span id="line.31">        return this;</span>
-<span class="source-line-no">032</span><span id="line.32">    }</span>
+<span class="source-line-no">028</span><span id="line.28">    private com.commercetools.api.models.common.BaseAddress address;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    private String shippingMethodName;</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;</span>
 <span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder address(</span>
-<span class="source-line-no">035</span><span id="line.35">            final com.commercetools.api.models.common.BaseAddress address) {</span>
-<span class="source-line-no">036</span><span id="line.36">        this.address = address;</span>
-<span class="source-line-no">037</span><span id="line.37">        return this;</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
+<span class="source-line-no">034</span><span id="line.34">    @Nullable</span>
+<span class="source-line-no">035</span><span id="line.35">    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    @Nullable</span>
+<span class="source-line-no">038</span><span id="line.38">    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;</span>
 <span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingMethodName(</span>
-<span class="source-line-no">041</span><span id="line.41">            final String shippingMethodName) {</span>
-<span class="source-line-no">042</span><span id="line.42">        this.shippingMethodName = shippingMethodName;</span>
+<span class="source-line-no">040</span><span id="line.40">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder address(</span>
+<span class="source-line-no">041</span><span id="line.41">            Function&lt;com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder&gt; builder) {</span>
+<span class="source-line-no">042</span><span id="line.42">        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();</span>
 <span class="source-line-no">043</span><span id="line.43">        return this;</span>
 <span class="source-line-no">044</span><span id="line.44">    }</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingRate(</span>
-<span class="source-line-no">047</span><span id="line.47">            Function&lt;com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">048</span><span id="line.48">        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())</span>
-<span class="source-line-no">049</span><span id="line.49">                .build();</span>
-<span class="source-line-no">050</span><span id="line.50">        return this;</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingRate(</span>
-<span class="source-line-no">054</span><span id="line.54">            final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.shippingRate = shippingRate;</span>
-<span class="source-line-no">056</span><span id="line.56">        return this;</span>
-<span class="source-line-no">057</span><span id="line.57">    }</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">    *  &lt;p&gt;ResourceIdentifier to a TaxCategory.&lt;/p&gt;</span>
-<span class="source-line-no">061</span><span id="line.61">    */</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder taxCategory(</span>
-<span class="source-line-no">064</span><span id="line.64">            Function&lt;com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">065</span><span id="line.65">        this.taxCategory = builder</span>
-<span class="source-line-no">066</span><span id="line.66">                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())</span>
-<span class="source-line-no">067</span><span id="line.67">                .build();</span>
+<span class="source-line-no">046</span><span id="line.46">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder address(</span>
+<span class="source-line-no">047</span><span id="line.47">            final com.commercetools.api.models.common.BaseAddress address) {</span>
+<span class="source-line-no">048</span><span id="line.48">        this.address = address;</span>
+<span class="source-line-no">049</span><span id="line.49">        return this;</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingMethodName(</span>
+<span class="source-line-no">053</span><span id="line.53">            final String shippingMethodName) {</span>
+<span class="source-line-no">054</span><span id="line.54">        this.shippingMethodName = shippingMethodName;</span>
+<span class="source-line-no">055</span><span id="line.55">        return this;</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingRate(</span>
+<span class="source-line-no">059</span><span id="line.59">            Function&lt;com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">060</span><span id="line.60">        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())</span>
+<span class="source-line-no">061</span><span id="line.61">                .build();</span>
+<span class="source-line-no">062</span><span id="line.62">        return this;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder shippingRate(</span>
+<span class="source-line-no">066</span><span id="line.66">            final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {</span>
+<span class="source-line-no">067</span><span id="line.67">        this.shippingRate = shippingRate;</span>
 <span class="source-line-no">068</span><span id="line.68">        return this;</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">    *  &lt;p&gt;ResourceIdentifier to a TaxCategory.&lt;/p&gt;</span>
-<span class="source-line-no">073</span><span id="line.73">    */</span>
+<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;ResourceIdentifier to a TaxCategory.&lt;/p&gt;</span>
+<span class="source-line-no">073</span><span id="line.73">     */</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
 <span class="source-line-no">075</span><span id="line.75">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder taxCategory(</span>
-<span class="source-line-no">076</span><span id="line.76">            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
-<span class="source-line-no">077</span><span id="line.77">        this.taxCategory = taxCategory;</span>
-<span class="source-line-no">078</span><span id="line.78">        return this;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder externalTaxRate(</span>
-<span class="source-line-no">082</span><span id="line.82">            Function&lt;com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">083</span><span id="line.83">        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())</span>
-<span class="source-line-no">084</span><span id="line.84">                .build();</span>
-<span class="source-line-no">085</span><span id="line.85">        return this;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder externalTaxRate(</span>
-<span class="source-line-no">089</span><span id="line.89">            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {</span>
-<span class="source-line-no">090</span><span id="line.90">        this.externalTaxRate = externalTaxRate;</span>
-<span class="source-line-no">091</span><span id="line.91">        return this;</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public com.commercetools.api.models.common.BaseAddress getAddress() {</span>
-<span class="source-line-no">095</span><span id="line.95">        return this.address;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public String getShippingMethodName() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return this.shippingMethodName;</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return this.shippingRate;</span>
+<span class="source-line-no">076</span><span id="line.76">            Function&lt;com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">077</span><span id="line.77">        this.taxCategory = builder</span>
+<span class="source-line-no">078</span><span id="line.78">                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())</span>
+<span class="source-line-no">079</span><span id="line.79">                .build();</span>
+<span class="source-line-no">080</span><span id="line.80">        return this;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    /**</span>
+<span class="source-line-no">084</span><span id="line.84">     *  &lt;p&gt;ResourceIdentifier to a TaxCategory.&lt;/p&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">     */</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder taxCategory(</span>
+<span class="source-line-no">088</span><span id="line.88">            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
+<span class="source-line-no">089</span><span id="line.89">        this.taxCategory = taxCategory;</span>
+<span class="source-line-no">090</span><span id="line.90">        return this;</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder externalTaxRate(</span>
+<span class="source-line-no">094</span><span id="line.94">            Function&lt;com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">095</span><span id="line.95">        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())</span>
+<span class="source-line-no">096</span><span id="line.96">                .build();</span>
+<span class="source-line-no">097</span><span id="line.97">        return this;</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder externalTaxRate(</span>
+<span class="source-line-no">101</span><span id="line.101">            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {</span>
+<span class="source-line-no">102</span><span id="line.102">        this.externalTaxRate = externalTaxRate;</span>
+<span class="source-line-no">103</span><span id="line.103">        return this;</span>
 <span class="source-line-no">104</span><span id="line.104">    }</span>
 <span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    @Nullable</span>
-<span class="source-line-no">107</span><span id="line.107">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
-<span class="source-line-no">108</span><span id="line.108">        return this.taxCategory;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    @Nullable</span>
-<span class="source-line-no">112</span><span id="line.112">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return this.externalTaxRate;</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public StagedOrderSetShippingAddressAndCustomShippingMethodAction build() {</span>
-<span class="source-line-no">117</span><span id="line.117">        Objects.requireNonNull(address,</span>
-<span class="source-line-no">118</span><span id="line.118">            StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": address is missing");</span>
-<span class="source-line-no">119</span><span id="line.119">        Objects.requireNonNull(shippingMethodName,</span>
-<span class="source-line-no">120</span><span id="line.120">            StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": shippingMethodName is missing");</span>
-<span class="source-line-no">121</span><span id="line.121">        Objects.requireNonNull(shippingRate,</span>
-<span class="source-line-no">122</span><span id="line.122">            StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": shippingRate is missing");</span>
-<span class="source-line-no">123</span><span id="line.123">        return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,</span>
-<span class="source-line-no">124</span><span id="line.124">            shippingRate, taxCategory, externalTaxRate);</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    /**</span>
-<span class="source-line-no">128</span><span id="line.128">     * builds StagedOrderSetShippingAddressAndCustomShippingMethodAction without checking for non null required values</span>
-<span class="source-line-no">129</span><span id="line.129">     */</span>
-<span class="source-line-no">130</span><span id="line.130">    public StagedOrderSetShippingAddressAndCustomShippingMethodAction buildUnchecked() {</span>
-<span class="source-line-no">131</span><span id="line.131">        return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,</span>
-<span class="source-line-no">132</span><span id="line.132">            shippingRate, taxCategory, externalTaxRate);</span>
-<span class="source-line-no">133</span><span id="line.133">    }</span>
-<span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder of() {</span>
-<span class="source-line-no">136</span><span id="line.136">        return new StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder();</span>
+<span class="source-line-no">106</span><span id="line.106">    public com.commercetools.api.models.common.BaseAddress getAddress() {</span>
+<span class="source-line-no">107</span><span id="line.107">        return this.address;</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    public String getShippingMethodName() {</span>
+<span class="source-line-no">111</span><span id="line.111">        return this.shippingMethodName;</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {</span>
+<span class="source-line-no">115</span><span id="line.115">        return this.shippingRate;</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    @Nullable</span>
+<span class="source-line-no">119</span><span id="line.119">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
+<span class="source-line-no">120</span><span id="line.120">        return this.taxCategory;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    @Nullable</span>
+<span class="source-line-no">124</span><span id="line.124">    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {</span>
+<span class="source-line-no">125</span><span id="line.125">        return this.externalTaxRate;</span>
+<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">    public StagedOrderSetShippingAddressAndCustomShippingMethodAction build() {</span>
+<span class="source-line-no">129</span><span id="line.129">        Objects.requireNonNull(address,</span>
+<span class="source-line-no">130</span><span id="line.130">            StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": address is missing");</span>
+<span class="source-line-no">131</span><span id="line.131">        Objects.requireNonNull(shippingMethodName,</span>
+<span class="source-line-no">132</span><span id="line.132">            StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": shippingMethodName is missing");</span>
+<span class="source-line-no">133</span><span id="line.133">        Objects.requireNonNull(shippingRate,</span>
+<span class="source-line-no">134</span><span id="line.134">            StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": shippingRate is missing");</span>
+<span class="source-line-no">135</span><span id="line.135">        return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,</span>
+<span class="source-line-no">136</span><span id="line.136">            shippingRate, taxCategory, externalTaxRate);</span>
 <span class="source-line-no">137</span><span id="line.137">    }</span>
 <span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder of(</span>
-<span class="source-line-no">140</span><span id="line.140">            final StagedOrderSetShippingAddressAndCustomShippingMethodAction template) {</span>
-<span class="source-line-no">141</span><span id="line.141">        StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder = new StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder();</span>
-<span class="source-line-no">142</span><span id="line.142">        builder.address = template.getAddress();</span>
-<span class="source-line-no">143</span><span id="line.143">        builder.shippingMethodName = template.getShippingMethodName();</span>
-<span class="source-line-no">144</span><span id="line.144">        builder.shippingRate = template.getShippingRate();</span>
-<span class="source-line-no">145</span><span id="line.145">        builder.taxCategory = template.getTaxCategory();</span>
-<span class="source-line-no">146</span><span id="line.146">        builder.externalTaxRate = template.getExternalTaxRate();</span>
-<span class="source-line-no">147</span><span id="line.147">        return builder;</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">}</span>
+<span class="source-line-no">139</span><span id="line.139">    /**</span>
+<span class="source-line-no">140</span><span id="line.140">     * builds StagedOrderSetShippingAddressAndCustomShippingMethodAction without checking for non null required values</span>
+<span class="source-line-no">141</span><span id="line.141">     */</span>
+<span class="source-line-no">142</span><span id="line.142">    public StagedOrderSetShippingAddressAndCustomShippingMethodAction buildUnchecked() {</span>
+<span class="source-line-no">143</span><span id="line.143">        return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,</span>
+<span class="source-line-no">144</span><span id="line.144">            shippingRate, taxCategory, externalTaxRate);</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder of() {</span>
+<span class="source-line-no">148</span><span id="line.148">        return new StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder();</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder of(</span>
+<span class="source-line-no">152</span><span id="line.152">            final StagedOrderSetShippingAddressAndCustomShippingMethodAction template) {</span>
+<span class="source-line-no">153</span><span id="line.153">        StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder = new StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder();</span>
+<span class="source-line-no">154</span><span id="line.154">        builder.address = template.getAddress();</span>
+<span class="source-line-no">155</span><span id="line.155">        builder.shippingMethodName = template.getShippingMethodName();</span>
+<span class="source-line-no">156</span><span id="line.156">        builder.shippingRate = template.getShippingRate();</span>
+<span class="source-line-no">157</span><span id="line.157">        builder.taxCategory = template.getTaxCategory();</span>
+<span class="source-line-no">158</span><span id="line.158">        builder.externalTaxRate = template.getExternalTaxRate();</span>
+<span class="source-line-no">159</span><span id="line.159">        return builder;</span>
+<span class="source-line-no">160</span><span id="line.160">    }</span>
+<span class="source-line-no">161</span><span id="line.161"></span>
+<span class="source-line-no">162</span><span id="line.162">}</span>
 
 
 

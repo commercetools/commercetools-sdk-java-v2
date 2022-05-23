@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class StateSetTransitionsActionImpl implements StateSetTransitionsAction, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String action;</span>
@@ -50,11 +50,11 @@
 <span class="source-line-no">037</span><span id="line.37">    }</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
 <span class="source-line-no">039</span><span id="line.39">    /**</span>
-<span class="source-line-no">040</span><span id="line.40">    *  &lt;p&gt;Value to set. If empty, any existing value will be removed.&lt;/p&gt;</span>
-<span class="source-line-no">041</span><span id="line.41">    *  &lt;p&gt;Possible transformations of the current State to other States of the same &lt;code&gt;type&lt;/code&gt; (for example, &lt;em&gt;Initial&lt;/em&gt; -&amp;gt; &lt;em&gt;Shipped&lt;/em&gt;). When performing a &lt;code&gt;transitionState&lt;/code&gt; update action and &lt;code&gt;transitions&lt;/code&gt; is set, the currently referenced State must have a transition to the new State.&lt;/p&gt;</span>
-<span class="source-line-no">042</span><span id="line.42">    *  &lt;p&gt;If &lt;code&gt;transitions&lt;/code&gt; is an empty list, it means the current State is a final State and no further transitions are allowed. If &lt;code&gt;transitions&lt;/code&gt; is not set, the validation is turned off.&lt;/p&gt;</span>
-<span class="source-line-no">043</span><span id="line.43">    *  &lt;p&gt;When performing a &lt;code&gt;transitionState&lt;/code&gt; update action, any other State of the same &lt;code&gt;type&lt;/code&gt; can be transitioned to.&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">    */</span>
+<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;Value to set. If empty, any existing value will be removed.&lt;/p&gt;</span>
+<span class="source-line-no">041</span><span id="line.41">     *  &lt;p&gt;Possible transformations of the current State to other States of the same &lt;code&gt;type&lt;/code&gt; (for example, &lt;em&gt;Initial&lt;/em&gt; -&amp;gt; &lt;em&gt;Shipped&lt;/em&gt;). When performing a &lt;code&gt;transitionState&lt;/code&gt; update action and &lt;code&gt;transitions&lt;/code&gt; is set, the currently referenced State must have a transition to the new State.&lt;/p&gt;</span>
+<span class="source-line-no">042</span><span id="line.42">     *  &lt;p&gt;If &lt;code&gt;transitions&lt;/code&gt; is an empty list, it means the current State is a final State and no further transitions are allowed. If &lt;code&gt;transitions&lt;/code&gt; is not set, the validation is turned off.&lt;/p&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;When performing a &lt;code&gt;transitionState&lt;/code&gt; update action, any other State of the same &lt;code&gt;type&lt;/code&gt; can be transitioned to.&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     */</span>
 <span class="source-line-no">045</span><span id="line.45">    public java.util.List&lt;com.commercetools.api.models.state.StateResourceIdentifier&gt; getTransitions() {</span>
 <span class="source-line-no">046</span><span id="line.46">        return this.transitions;</span>
 <span class="source-line-no">047</span><span id="line.47">    }</span>

@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="GeoJsonPointImpl.html" title="class in com.commercetools.api.models.common">GeoJsonPointImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.15">GeoJsonPoint</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.25">GeoJsonPoint</a></span><span class="extends-implements">
 extends <a href="GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   GeoJsonPoint geoJsonPoint = GeoJsonPoint.builder()
+           .plusCoordinates(coordinatesBuilder -> coordinatesBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -164,7 +172,7 @@ extends <a href="GeoJson.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="POINT">
 <h3>POINT</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.19">POINT</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.29">POINT</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.common.GeoJsonPoint.POINT">Constant Field Values</a></dd>
@@ -183,56 +191,56 @@ extends <a href="GeoJson.html" title="interface in com.commercetools.api.models.
 <section class="detail" id="getCoordinates()">
 <h3>getCoordinates</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.24">getCoordinates</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.34">getCoordinates</a></span>()</div>
 <div class="block"><p>Longitude (stored on index <code>[0]</code>) and latitude (stored on index <code>[1]</code>) of the Point.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCoordinates(java.lang.Double...)">
 <h3>setCoordinates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.28">setCoordinates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>...&nbsp;coordinates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.38">setCoordinates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>...&nbsp;coordinates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCoordinates(java.util.List)">
 <h3>setCoordinates</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.31">setCoordinates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;coordinates)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.41">setCoordinates</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&gt;&nbsp;coordinates)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.33">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.43">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.common.GeoJsonPoint)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.37">of</a></span>&#8203;<span class="parameters">(<a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GeoJsonPointBuilder.html" title="class in com.commercetools.api.models.common">GeoJsonPointBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.43">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GeoJsonPointBuilder.html" title="class in com.commercetools.api.models.common">GeoJsonPointBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.53">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.common.GeoJsonPoint)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GeoJsonPointBuilder.html" title="class in com.commercetools.api.models.common">GeoJsonPointBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.47">builder</a></span>&#8203;<span class="parameters">(<a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="GeoJsonPointBuilder.html" title="class in com.commercetools.api.models.common">GeoJsonPointBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withGeoJsonPoint(java.util.function.Function)">
 <h3>withGeoJsonPoint</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.51">withGeoJsonPoint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.61">withGeoJsonPoint</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.55">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="GeoJsonPoint.html" title="interface in com.commercetools.api.models.common">GeoJsonPoint</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/common/GeoJsonPoint.html#line.65">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

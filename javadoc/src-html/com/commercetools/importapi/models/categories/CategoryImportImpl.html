@@ -28,9 +28,9 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;The data representation for a Category to be imported that is persisted as a Category in the Project.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19">*/</span>
-<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;The data representation for a Category to be imported that is persisted as a Category in the Project.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> */</span>
+<span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class CategoryImportImpl implements CategoryImport, ModelBase {</span>
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    private String key;</span>
@@ -91,64 +91,64 @@
 <span class="source-line-no">078</span><span id="line.78">    }</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">    *  &lt;p&gt;Maps to &lt;code&gt;Category.name&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">    */</span>
+<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Maps to &lt;code&gt;Category.name&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     */</span>
 <span class="source-line-no">083</span><span id="line.83">    public com.commercetools.importapi.models.common.LocalizedString getName() {</span>
 <span class="source-line-no">084</span><span id="line.84">        return this.name;</span>
 <span class="source-line-no">085</span><span id="line.85">    }</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
 <span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">    *  &lt;p&gt;Maps to &lt;code&gt;Category.slug&lt;/code&gt;. Must match the pattern &lt;code&gt;[-a-zA-Z0-9_]{2,256}&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">089</span><span id="line.89">    */</span>
+<span class="source-line-no">088</span><span id="line.88">     *  &lt;p&gt;Maps to &lt;code&gt;Category.slug&lt;/code&gt;. Must match the pattern &lt;code&gt;[-a-zA-Z0-9_]{2,256}&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">089</span><span id="line.89">     */</span>
 <span class="source-line-no">090</span><span id="line.90">    public com.commercetools.importapi.models.common.LocalizedString getSlug() {</span>
 <span class="source-line-no">091</span><span id="line.91">        return this.slug;</span>
 <span class="source-line-no">092</span><span id="line.92">    }</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
 <span class="source-line-no">094</span><span id="line.94">    /**</span>
-<span class="source-line-no">095</span><span id="line.95">    *  &lt;p&gt;Maps to &lt;code&gt;Category.description&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">096</span><span id="line.96">    */</span>
+<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;Maps to &lt;code&gt;Category.description&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">096</span><span id="line.96">     */</span>
 <span class="source-line-no">097</span><span id="line.97">    public com.commercetools.importapi.models.common.LocalizedString getDescription() {</span>
 <span class="source-line-no">098</span><span id="line.98">        return this.description;</span>
 <span class="source-line-no">099</span><span id="line.99">    }</span>
 <span class="source-line-no">100</span><span id="line.100"></span>
 <span class="source-line-no">101</span><span id="line.101">    /**</span>
-<span class="source-line-no">102</span><span id="line.102">    *  &lt;p&gt;Maps to &lt;code&gt;Category.parent&lt;/code&gt;. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Category is created.&lt;/p&gt;</span>
-<span class="source-line-no">103</span><span id="line.103">    */</span>
+<span class="source-line-no">102</span><span id="line.102">     *  &lt;p&gt;Maps to &lt;code&gt;Category.parent&lt;/code&gt;. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Category is created.&lt;/p&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
 <span class="source-line-no">104</span><span id="line.104">    public com.commercetools.importapi.models.common.CategoryKeyReference getParent() {</span>
 <span class="source-line-no">105</span><span id="line.105">        return this.parent;</span>
 <span class="source-line-no">106</span><span id="line.106">    }</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
 <span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">    *  &lt;p&gt;Maps to &lt;code&gt;Category.orderHint&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">110</span><span id="line.110">    */</span>
+<span class="source-line-no">109</span><span id="line.109">     *  &lt;p&gt;Maps to &lt;code&gt;Category.orderHint&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">110</span><span id="line.110">     */</span>
 <span class="source-line-no">111</span><span id="line.111">    public String getOrderHint() {</span>
 <span class="source-line-no">112</span><span id="line.112">        return this.orderHint;</span>
 <span class="source-line-no">113</span><span id="line.113">    }</span>
 <span class="source-line-no">114</span><span id="line.114"></span>
 <span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">    *  &lt;p&gt;Maps to &lt;code&gt;Category.externalId&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">117</span><span id="line.117">    */</span>
+<span class="source-line-no">116</span><span id="line.116">     *  &lt;p&gt;Maps to &lt;code&gt;Category.externalId&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
 <span class="source-line-no">118</span><span id="line.118">    public String getExternalId() {</span>
 <span class="source-line-no">119</span><span id="line.119">        return this.externalId;</span>
 <span class="source-line-no">120</span><span id="line.120">    }</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
 <span class="source-line-no">122</span><span id="line.122">    /**</span>
-<span class="source-line-no">123</span><span id="line.123">    *  &lt;p&gt;Maps to &lt;code&gt;Category.metaTitle&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">124</span><span id="line.124">    */</span>
+<span class="source-line-no">123</span><span id="line.123">     *  &lt;p&gt;Maps to &lt;code&gt;Category.metaTitle&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">124</span><span id="line.124">     */</span>
 <span class="source-line-no">125</span><span id="line.125">    public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {</span>
 <span class="source-line-no">126</span><span id="line.126">        return this.metaTitle;</span>
 <span class="source-line-no">127</span><span id="line.127">    }</span>
 <span class="source-line-no">128</span><span id="line.128"></span>
 <span class="source-line-no">129</span><span id="line.129">    /**</span>
-<span class="source-line-no">130</span><span id="line.130">    *  &lt;p&gt;Maps to &lt;code&gt;Category.metaDescription&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">131</span><span id="line.131">    */</span>
+<span class="source-line-no">130</span><span id="line.130">     *  &lt;p&gt;Maps to &lt;code&gt;Category.metaDescription&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">131</span><span id="line.131">     */</span>
 <span class="source-line-no">132</span><span id="line.132">    public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {</span>
 <span class="source-line-no">133</span><span id="line.133">        return this.metaDescription;</span>
 <span class="source-line-no">134</span><span id="line.134">    }</span>
 <span class="source-line-no">135</span><span id="line.135"></span>
 <span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">    *  &lt;p&gt;Maps to &lt;code&gt;Category.metaKeywords&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">138</span><span id="line.138">    */</span>
+<span class="source-line-no">137</span><span id="line.137">     *  &lt;p&gt;Maps to &lt;code&gt;Category.metaKeywords&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">138</span><span id="line.138">     */</span>
 <span class="source-line-no">139</span><span id="line.139">    public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {</span>
 <span class="source-line-no">140</span><span id="line.140">        return this.metaKeywords;</span>
 <span class="source-line-no">141</span><span id="line.141">    }</span>
@@ -158,8 +158,8 @@
 <span class="source-line-no">145</span><span id="line.145">    }</span>
 <span class="source-line-no">146</span><span id="line.146"></span>
 <span class="source-line-no">147</span><span id="line.147">    /**</span>
-<span class="source-line-no">148</span><span id="line.148">    *  &lt;p&gt;The custom fields for this Category.&lt;/p&gt;</span>
-<span class="source-line-no">149</span><span id="line.149">    */</span>
+<span class="source-line-no">148</span><span id="line.148">     *  &lt;p&gt;The custom fields for this Category.&lt;/p&gt;</span>
+<span class="source-line-no">149</span><span id="line.149">     */</span>
 <span class="source-line-no">150</span><span id="line.150">    public com.commercetools.importapi.models.customfields.Custom getCustom() {</span>
 <span class="source-line-no">151</span><span id="line.151">        return this.custom;</span>
 <span class="source-line-no">152</span><span id="line.152">    }</span>

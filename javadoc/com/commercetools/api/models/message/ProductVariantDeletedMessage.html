@@ -84,8 +84,24 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductVariantDeletedMessageImpl.html" title="class in com.commercetools.api.models.message">ProductVariantDeletedMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.17">ProductVariantDeletedMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.35">ProductVariantDeletedMessage</a></span><span class="extends-implements">
 extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductVariantDeletedMessage productVariantDeletedMessage = ProductVariantDeletedMessage.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .sequenceNumber(0.3)
+           .resource(resourceBuilder -> resourceBuilder)
+           .resourceVersion(0.3)
+           .variant(variantBuilder -> variantBuilder)
+           .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -174,7 +190,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="PRODUCT_VARIANT_DELETED">
 <h3>PRODUCT_VARIANT_DELETED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.21">PRODUCT_VARIANT_DELETED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.39">PRODUCT_VARIANT_DELETED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.ProductVariantDeletedMessage.PRODUCT_VARIANT_DELETED">Constant Field Values</a></dd>
@@ -194,68 +210,68 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <h3>getVariant</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.23">getVariant</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.41">getVariant</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRemovedImageUrls()">
 <h3>getRemovedImageUrls</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.28">getRemovedImageUrls</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.46">getRemovedImageUrls</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setVariant(com.commercetools.api.models.product.ProductVariant)">
 <h3>setVariant</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.32">setVariant</a></span>&#8203;<span class="parameters">(<a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.50">setVariant</a></span>&#8203;<span class="parameters">(<a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRemovedImageUrls(java.lang.String...)">
 <h3>setRemovedImageUrls</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.34">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;removedImageUrls)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.52">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;removedImageUrls)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRemovedImageUrls(java.util.List)">
 <h3>setRemovedImageUrls</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.37">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;removedImageUrls)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.55">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;removedImageUrls)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.39">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.57">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ProductVariantDeletedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.43">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.61">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantDeletedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantDeletedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.60">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantDeletedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantDeletedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.78">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.ProductVariantDeletedMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantDeletedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantDeletedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.64">builder</a></span>&#8203;<span class="parameters">(<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductVariantDeletedMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductVariantDeletedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.82">builder</a></span>&#8203;<span class="parameters">(<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductVariantDeletedMessage(java.util.function.Function)">
 <h3>withProductVariantDeletedMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.68">withProductVariantDeletedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.86">withProductVariantDeletedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.72">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductVariantDeletedMessage.html#line.90">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

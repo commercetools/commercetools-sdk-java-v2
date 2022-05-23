@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MissingImagesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesVariantLevel</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.9">MissingImagesVariantLevelBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.20">MissingImagesVariantLevelBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MissingImagesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesVariantLevel</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MissingImagesVariantLevel missingImagesVariantLevel = MissingImagesVariantLevel.builder()
+           .missingImages(0.3)
+           .total(0.3)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -163,7 +172,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>MissingImagesVariantLevelBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.10">MissingImagesVariantLevelBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.21">MissingImagesVariantLevelBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -177,33 +186,33 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="missingImages(java.lang.Long)">
 <h3>missingImages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingImagesVariantLevelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.20">missingImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;missingImages)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingImagesVariantLevelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.31">missingImages</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;missingImages)</span></div>
 <div class="block"><p>Number of product variants missing images.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="total(java.lang.Long)">
 <h3>total</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingImagesVariantLevelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.29">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingImagesVariantLevelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.40">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
 <div class="block"><p>Number of products scanned.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMissingImages()">
 <h3>getMissingImages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.34">getMissingImages</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.45">getMissingImages</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.38">getTotal</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.49">getTotal</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesVariantLevel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.42">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesVariantLevel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.53">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="MissingImagesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesVariantLevel</a>&gt;</code></dd>
@@ -213,20 +222,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesVariantLevel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.51">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesVariantLevel</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.62">buildUnchecked</a></span>()</div>
 <div class="block">builds MissingImagesVariantLevel without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingImagesVariantLevelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.55">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingImagesVariantLevelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.66">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.missing_data.MissingImagesVariantLevel)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingImagesVariantLevelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.59">of</a></span>&#8203;<span class="parameters">(<a href="MissingImagesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesVariantLevel</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MissingImagesVariantLevelBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingImagesVariantLevelBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/missing_data/MissingImagesVariantLevelBuilder.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="MissingImagesVariantLevel.html" title="interface in com.commercetools.ml.models.missing_data">MissingImagesVariantLevel</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

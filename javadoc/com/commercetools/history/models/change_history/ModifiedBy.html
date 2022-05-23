@@ -80,8 +80,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ModifiedByImpl.html" title="class in com.commercetools.history.models.change_history">ModifiedByImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.20">ModifiedBy</a></span></div>
-<div class="block"><p>Information about the user or the API client who performed the change. This is a variant of LastModifiedBy.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.31">ModifiedBy</a></span></div>
+<div class="block"><p>Information about the user or the API client who performed the change. This is a variant of LastModifiedBy.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ModifiedBy modifiedBy = ModifiedBy.builder()
+           .id("{id}")
+           .type("{type}")
+           .isPlatformClient(true)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -180,7 +191,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.27">getId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.38">getId</a></span>()</div>
 <div class="block"><p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p></div>
 </section>
 </li>
@@ -188,7 +199,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.34">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.45">getType</a></span>()</div>
 <div class="block"><p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p></div>
 </section>
 </li>
@@ -196,21 +207,21 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getCustomer()">
 <h3>getCustomer</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.41">getCustomer</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.52">getCustomer</a></span>()</div>
 <div class="block"><p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAnonymousId()">
 <h3>getAnonymousId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.49">getAnonymousId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.60">getAnonymousId</a></span>()</div>
 <div class="block"><p>Present only if the change was made using a token from an Anonymous Session.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getClientId()">
 <h3>getClientId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.56">getClientId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.67">getClientId</a></span>()</div>
 <div class="block"><p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p></div>
 </section>
 </li>
@@ -218,80 +229,80 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getIsPlatformClient()">
 <h3>getIsPlatformClient</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.62">getIsPlatformClient</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.73">getIsPlatformClient</a></span>()</div>
 <div class="block"><p><code>true</code> if the change was made via Merchant Center or ImpEx.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.66">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.77">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(java.lang.String)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.68">setType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.79">setType</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomer(com.commercetools.history.models.common.Reference)">
 <h3>setCustomer</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.70">setCustomer</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;customer)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.81">setCustomer</a></span>&#8203;<span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.history.models.common">Reference</a>&nbsp;customer)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAnonymousId(java.lang.String)">
 <h3>setAnonymousId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.72">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.83">setAnonymousId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;anonymousId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setClientId(java.lang.String)">
 <h3>setClientId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.74">setClientId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;clientId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.85">setClientId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;clientId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIsPlatformClient(java.lang.Boolean)">
 <h3>setIsPlatformClient</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.76">setIsPlatformClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isPlatformClient)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.87">setIsPlatformClient</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isPlatformClient)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.78">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.89">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change_history.ModifiedBy)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.82">of</a></span>&#8203;<span class="parameters">(<a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.93">of</a></span>&#8203;<span class="parameters">(<a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModifiedByBuilder.html" title="class in com.commercetools.history.models.change_history">ModifiedByBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.93">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModifiedByBuilder.html" title="class in com.commercetools.history.models.change_history">ModifiedByBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.104">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.history.models.change_history.ModifiedBy)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModifiedByBuilder.html" title="class in com.commercetools.history.models.change_history">ModifiedByBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.97">builder</a></span>&#8203;<span class="parameters">(<a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ModifiedByBuilder.html" title="class in com.commercetools.history.models.change_history">ModifiedByBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.108">builder</a></span>&#8203;<span class="parameters">(<a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withModifiedBy(java.util.function.Function)">
 <h3>withModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.101">withModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.112">withModifiedBy</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.105">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ModifiedBy.html" title="interface in com.commercetools.history.models.change_history">ModifiedBy</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_history/ModifiedBy.html#line.116">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

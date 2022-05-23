@@ -20,92 +20,103 @@
 <span class="source-line-no">007</span><span id="line.7">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">008</span><span id="line.8">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">011</span><span id="line.11">public class ItemShippingDetailsBuilder implements Builder&lt;ItemShippingDetails&gt; {</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    private java.util.List&lt;com.commercetools.history.models.common.ItemShippingTarget&gt; targets;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    private Boolean valid;</span>
-<span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">    public ItemShippingDetailsBuilder targets(</span>
-<span class="source-line-no">018</span><span id="line.18">            final com.commercetools.history.models.common.ItemShippingTarget... targets) {</span>
-<span class="source-line-no">019</span><span id="line.19">        this.targets = new ArrayList&lt;&gt;(Arrays.asList(targets));</span>
-<span class="source-line-no">020</span><span id="line.20">        return this;</span>
-<span class="source-line-no">021</span><span id="line.21">    }</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    public ItemShippingDetailsBuilder targets(</span>
-<span class="source-line-no">024</span><span id="line.24">            final java.util.List&lt;com.commercetools.history.models.common.ItemShippingTarget&gt; targets) {</span>
-<span class="source-line-no">025</span><span id="line.25">        this.targets = targets;</span>
-<span class="source-line-no">026</span><span id="line.26">        return this;</span>
-<span class="source-line-no">027</span><span id="line.27">    }</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    public ItemShippingDetailsBuilder plusTargets(</span>
-<span class="source-line-no">030</span><span id="line.30">            final com.commercetools.history.models.common.ItemShippingTarget... targets) {</span>
-<span class="source-line-no">031</span><span id="line.31">        if (this.targets == null) {</span>
-<span class="source-line-no">032</span><span id="line.32">            this.targets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">033</span><span id="line.33">        }</span>
-<span class="source-line-no">034</span><span id="line.34">        this.targets.addAll(Arrays.asList(targets));</span>
-<span class="source-line-no">035</span><span id="line.35">        return this;</span>
-<span class="source-line-no">036</span><span id="line.36">    }</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    public ItemShippingDetailsBuilder plusTargets(</span>
-<span class="source-line-no">039</span><span id="line.39">            Function&lt;com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder&gt; builder) {</span>
-<span class="source-line-no">040</span><span id="line.40">        if (this.targets == null) {</span>
-<span class="source-line-no">041</span><span id="line.41">            this.targets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">042</span><span id="line.42">        }</span>
-<span class="source-line-no">043</span><span id="line.43">        this.targets.add(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()).build());</span>
-<span class="source-line-no">044</span><span id="line.44">        return this;</span>
-<span class="source-line-no">045</span><span id="line.45">    }</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public ItemShippingDetailsBuilder withTargets(</span>
-<span class="source-line-no">048</span><span id="line.48">            Function&lt;com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder&gt; builder) {</span>
-<span class="source-line-no">049</span><span id="line.49">        this.targets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">050</span><span id="line.50">        this.targets.add(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()).build());</span>
-<span class="source-line-no">051</span><span id="line.51">        return this;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">    *  &lt;p&gt;true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in &lt;code&gt;targets&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise. A cart cannot be ordered when the value is &lt;code&gt;false&lt;/code&gt;. The error InvalidItemShippingDetails will be triggered.&lt;/p&gt;</span>
-<span class="source-line-no">056</span><span id="line.56">    */</span>
+<span class="source-line-no">010</span><span id="line.10">/**</span>
+<span class="source-line-no">011</span><span id="line.11"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">012</span><span id="line.12"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">013</span><span id="line.13"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">014</span><span id="line.14">   ItemShippingDetails itemShippingDetails = ItemShippingDetails.builder()</span>
+<span class="source-line-no">015</span><span id="line.15">           .plusTargets(targetsBuilder -&gt; targetsBuilder)</span>
+<span class="source-line-no">016</span><span id="line.16">           .valid(true)</span>
+<span class="source-line-no">017</span><span id="line.17">           .build()</span>
+<span class="source-line-no">018</span><span id="line.18"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> &lt;/div&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> */</span>
+<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">022</span><span id="line.22">public class ItemShippingDetailsBuilder implements Builder&lt;ItemShippingDetails&gt; {</span>
+<span class="source-line-no">023</span><span id="line.23"></span>
+<span class="source-line-no">024</span><span id="line.24">    private java.util.List&lt;com.commercetools.history.models.common.ItemShippingTarget&gt; targets;</span>
+<span class="source-line-no">025</span><span id="line.25"></span>
+<span class="source-line-no">026</span><span id="line.26">    private Boolean valid;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    public ItemShippingDetailsBuilder targets(</span>
+<span class="source-line-no">029</span><span id="line.29">            final com.commercetools.history.models.common.ItemShippingTarget... targets) {</span>
+<span class="source-line-no">030</span><span id="line.30">        this.targets = new ArrayList&lt;&gt;(Arrays.asList(targets));</span>
+<span class="source-line-no">031</span><span id="line.31">        return this;</span>
+<span class="source-line-no">032</span><span id="line.32">    }</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    public ItemShippingDetailsBuilder targets(</span>
+<span class="source-line-no">035</span><span id="line.35">            final java.util.List&lt;com.commercetools.history.models.common.ItemShippingTarget&gt; targets) {</span>
+<span class="source-line-no">036</span><span id="line.36">        this.targets = targets;</span>
+<span class="source-line-no">037</span><span id="line.37">        return this;</span>
+<span class="source-line-no">038</span><span id="line.38">    }</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    public ItemShippingDetailsBuilder plusTargets(</span>
+<span class="source-line-no">041</span><span id="line.41">            final com.commercetools.history.models.common.ItemShippingTarget... targets) {</span>
+<span class="source-line-no">042</span><span id="line.42">        if (this.targets == null) {</span>
+<span class="source-line-no">043</span><span id="line.43">            this.targets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">044</span><span id="line.44">        }</span>
+<span class="source-line-no">045</span><span id="line.45">        this.targets.addAll(Arrays.asList(targets));</span>
+<span class="source-line-no">046</span><span id="line.46">        return this;</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public ItemShippingDetailsBuilder plusTargets(</span>
+<span class="source-line-no">050</span><span id="line.50">            Function&lt;com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder&gt; builder) {</span>
+<span class="source-line-no">051</span><span id="line.51">        if (this.targets == null) {</span>
+<span class="source-line-no">052</span><span id="line.52">            this.targets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">053</span><span id="line.53">        }</span>
+<span class="source-line-no">054</span><span id="line.54">        this.targets.add(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()).build());</span>
+<span class="source-line-no">055</span><span id="line.55">        return this;</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public ItemShippingDetailsBuilder valid(final Boolean valid) {</span>
-<span class="source-line-no">059</span><span id="line.59">        this.valid = valid;</span>
-<span class="source-line-no">060</span><span id="line.60">        return this;</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public java.util.List&lt;com.commercetools.history.models.common.ItemShippingTarget&gt; getTargets() {</span>
-<span class="source-line-no">064</span><span id="line.64">        return this.targets;</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public Boolean getValid() {</span>
-<span class="source-line-no">068</span><span id="line.68">        return this.valid;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public ItemShippingDetails build() {</span>
-<span class="source-line-no">072</span><span id="line.72">        Objects.requireNonNull(targets, ItemShippingDetails.class + ": targets is missing");</span>
-<span class="source-line-no">073</span><span id="line.73">        Objects.requireNonNull(valid, ItemShippingDetails.class + ": valid is missing");</span>
-<span class="source-line-no">074</span><span id="line.74">        return new ItemShippingDetailsImpl(targets, valid);</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">     * builds ItemShippingDetails without checking for non null required values</span>
-<span class="source-line-no">079</span><span id="line.79">     */</span>
-<span class="source-line-no">080</span><span id="line.80">    public ItemShippingDetails buildUnchecked() {</span>
-<span class="source-line-no">081</span><span id="line.81">        return new ItemShippingDetailsImpl(targets, valid);</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public static ItemShippingDetailsBuilder of() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return new ItemShippingDetailsBuilder();</span>
+<span class="source-line-no">058</span><span id="line.58">    public ItemShippingDetailsBuilder withTargets(</span>
+<span class="source-line-no">059</span><span id="line.59">            Function&lt;com.commercetools.history.models.common.ItemShippingTargetBuilder, com.commercetools.history.models.common.ItemShippingTargetBuilder&gt; builder) {</span>
+<span class="source-line-no">060</span><span id="line.60">        this.targets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">061</span><span id="line.61">        this.targets.add(builder.apply(com.commercetools.history.models.common.ItemShippingTargetBuilder.of()).build());</span>
+<span class="source-line-no">062</span><span id="line.62">        return this;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in &lt;code&gt;targets&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise. A cart cannot be ordered when the value is &lt;code&gt;false&lt;/code&gt;. The error InvalidItemShippingDetails will be triggered.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     */</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public ItemShippingDetailsBuilder valid(final Boolean valid) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.valid = valid;</span>
+<span class="source-line-no">071</span><span id="line.71">        return this;</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public java.util.List&lt;com.commercetools.history.models.common.ItemShippingTarget&gt; getTargets() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return this.targets;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public Boolean getValid() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return this.valid;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public ItemShippingDetails build() {</span>
+<span class="source-line-no">083</span><span id="line.83">        Objects.requireNonNull(targets, ItemShippingDetails.class + ": targets is missing");</span>
+<span class="source-line-no">084</span><span id="line.84">        Objects.requireNonNull(valid, ItemShippingDetails.class + ": valid is missing");</span>
+<span class="source-line-no">085</span><span id="line.85">        return new ItemShippingDetailsImpl(targets, valid);</span>
 <span class="source-line-no">086</span><span id="line.86">    }</span>
 <span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public static ItemShippingDetailsBuilder of(final ItemShippingDetails template) {</span>
-<span class="source-line-no">089</span><span id="line.89">        ItemShippingDetailsBuilder builder = new ItemShippingDetailsBuilder();</span>
-<span class="source-line-no">090</span><span id="line.90">        builder.targets = template.getTargets();</span>
-<span class="source-line-no">091</span><span id="line.91">        builder.valid = template.getValid();</span>
-<span class="source-line-no">092</span><span id="line.92">        return builder;</span>
+<span class="source-line-no">088</span><span id="line.88">    /**</span>
+<span class="source-line-no">089</span><span id="line.89">     * builds ItemShippingDetails without checking for non null required values</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91">    public ItemShippingDetails buildUnchecked() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return new ItemShippingDetailsImpl(targets, valid);</span>
 <span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">}</span>
+<span class="source-line-no">095</span><span id="line.95">    public static ItemShippingDetailsBuilder of() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return new ItemShippingDetailsBuilder();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static ItemShippingDetailsBuilder of(final ItemShippingDetails template) {</span>
+<span class="source-line-no">100</span><span id="line.100">        ItemShippingDetailsBuilder builder = new ItemShippingDetailsBuilder();</span>
+<span class="source-line-no">101</span><span id="line.101">        builder.targets = template.getTargets();</span>
+<span class="source-line-no">102</span><span id="line.102">        builder.valid = template.getValid();</span>
+<span class="source-line-no">103</span><span id="line.103">        return builder;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">}</span>
 
 
 

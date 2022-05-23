@@ -84,7 +84,15 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CustomTokenizerImpl.html" title="class in com.commercetools.api.models.product">CustomTokenizerImpl</a></code>, <code><a href="SuggestTokenizerImpl.html" title="class in com.commercetools.api.models.product">SuggestTokenizerImpl</a></code>, <code><a href="WhitespaceTokenizerImpl.html" title="class in com.commercetools.api.models.product">WhitespaceTokenizerImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.15">SuggestTokenizer</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.25">SuggestTokenizer</a></span></div>
+<div class="block">Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SuggestTokenizer suggestTokenizer = SuggestTokenizer.customBuilder()
+           plusInputs(inputsBuilder -> inputsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -132,31 +140,31 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.23">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.33">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="customBuilder()">
 <h3>customBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomTokenizerBuilder.html" title="class in com.commercetools.api.models.product">CustomTokenizerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.27">customBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomTokenizerBuilder.html" title="class in com.commercetools.api.models.product">CustomTokenizerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.37">customBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="whitespaceBuilder()">
 <h3>whitespaceBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="WhitespaceTokenizerBuilder.html" title="class in com.commercetools.api.models.product">WhitespaceTokenizerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.31">whitespaceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="WhitespaceTokenizerBuilder.html" title="class in com.commercetools.api.models.product">WhitespaceTokenizerBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.41">whitespaceBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSuggestTokenizer(java.util.function.Function)">
 <h3>withSuggestTokenizer</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.35">withSuggestTokenizer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SuggestTokenizer.html" title="interface in com.commercetools.api.models.product">SuggestTokenizer</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.45">withSuggestTokenizer</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SuggestTokenizer.html" title="interface in com.commercetools.api.models.product">SuggestTokenizer</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SuggestTokenizer.html" title="interface in com.commercetools.api.models.product">SuggestTokenizer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.39">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SuggestTokenizer.html" title="interface in com.commercetools.api.models.product">SuggestTokenizer</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/SuggestTokenizer.html#line.49">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

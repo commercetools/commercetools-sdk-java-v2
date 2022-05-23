@@ -88,8 +88,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductSelectionAddProductActionImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionAddProductActionImpl</a></code>, <code><a href="ProductSelectionChangeNameActionImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionChangeNameActionImpl</a></code>, <code><a href="ProductSelectionRemoveProductActionImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionRemoveProductActionImpl</a></code>, <code><a href="ProductSelectionSetCustomFieldActionImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetCustomFieldActionImpl</a></code>, <code><a href="ProductSelectionSetCustomTypeActionImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetCustomTypeActionImpl</a></code>, <code><a href="ProductSelectionSetKeyActionImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetKeyActionImpl</a></code>, <code><a href="ProductSelectionUpdateActionImpl.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionUpdateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.15">ProductSelectionUpdateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.25">ProductSelectionUpdateAction</a></span><span class="extends-implements">
 extends <a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="ProductSelectionUpdateAction.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionUpdateAction</a>&gt;</span></div>
+<div class="block">Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSelectionUpdateAction productSelectionUpdateAction = ProductSelectionUpdateAction.addProductBuilder()
+           product(productBuilder -> productBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -152,7 +160,7 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.28">getAction</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.38">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="ProductSelectionUpdateAction.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionUpdateAction</a>&gt;</code></dd>
@@ -162,49 +170,49 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="addProductBuilder()">
 <h3>addProductBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAddProductActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionAddProductActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.32">addProductBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionAddProductActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionAddProductActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.42">addProductBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="changeNameBuilder()">
 <h3>changeNameBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionChangeNameActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionChangeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.36">changeNameBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionChangeNameActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionChangeNameActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.46">changeNameBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="removeProductBuilder()">
 <h3>removeProductBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionRemoveProductActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionRemoveProductActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.40">removeProductBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionRemoveProductActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionRemoveProductActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.50">removeProductBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomFieldBuilder()">
 <h3>setCustomFieldBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.44">setCustomFieldBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionSetCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetCustomFieldActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.54">setCustomFieldBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomTypeBuilder()">
 <h3>setCustomTypeBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.48">setCustomTypeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionSetCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.58">setCustomTypeBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKeyBuilder()">
 <h3>setKeyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionSetKeyActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.52">setKeyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSelectionSetKeyActionBuilder.html" title="class in com.commercetools.api.models.product_selection">ProductSelectionSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.62">setKeyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductSelectionUpdateAction(java.util.function.Function)">
 <h3>withProductSelectionUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.56">withProductSelectionUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSelectionUpdateAction.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.66">withProductSelectionUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSelectionUpdateAction.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSelectionUpdateAction.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.60">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSelectionUpdateAction.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_selection/ProductSelectionUpdateAction.html#line.70">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

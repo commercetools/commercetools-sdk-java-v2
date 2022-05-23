@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StagedOrderSetCustomLineItemTaxRateActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.18">StagedOrderSetCustomLineItemTaxRateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.28">StagedOrderSetCustomLineItemTaxRateAction</a></span><span class="extends-implements">
 extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StagedOrderSetCustomLineItemTaxRateAction stagedOrderSetCustomLineItemTaxRateAction = StagedOrderSetCustomLineItemTaxRateAction.builder()
+           .customLineItemId("{customLineItemId}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -168,7 +176,7 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <li>
 <section class="detail" id="SET_CUSTOM_LINE_ITEM_TAX_RATE">
 <h3>SET_CUSTOM_LINE_ITEM_TAX_RATE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.22">SET_CUSTOM_LINE_ITEM_TAX_RATE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.32">SET_CUSTOM_LINE_ITEM_TAX_RATE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxRateAction.SET_CUSTOM_LINE_ITEM_TAX_RATE">Constant Field Values</a></dd>
@@ -187,62 +195,62 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="getCustomLineItemId()">
 <h3>getCustomLineItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.24">getCustomLineItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.34">getCustomLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExternalTaxRate()">
 <h3>getExternalTaxRate</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.28">getExternalTaxRate</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.38">getExternalTaxRate</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomLineItemId(java.lang.String)">
 <h3>setCustomLineItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.32">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.42">setCustomLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft)">
 <h3>setExternalTaxRate</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.34">setExternalTaxRate</a></span>&#8203;<span class="parameters">(<a href="../cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.44">setExternalTaxRate</a></span>&#8203;<span class="parameters">(<a href="../cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.36">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxRateAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.40">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetCustomLineItemTaxRateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.48">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetCustomLineItemTaxRateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.58">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxRateAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetCustomLineItemTaxRateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.52">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StagedOrderSetCustomLineItemTaxRateActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.62">builder</a></span>&#8203;<span class="parameters">(<a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStagedOrderSetCustomLineItemTaxRateAction(java.util.function.Function)">
 <h3>withStagedOrderSetCustomLineItemTaxRateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.57">withStagedOrderSetCustomLineItemTaxRateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.67">withStagedOrderSetCustomLineItemTaxRateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.62">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StagedOrderSetCustomLineItemTaxRateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetCustomLineItemTaxRateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/StagedOrderSetCustomLineItemTaxRateAction.html#line.72">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

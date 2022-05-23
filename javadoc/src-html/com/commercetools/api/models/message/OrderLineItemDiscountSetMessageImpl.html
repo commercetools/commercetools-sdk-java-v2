@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscountSetMessage, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String id;</span>
@@ -97,8 +97,8 @@
 <span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
 <span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">    *  &lt;p&gt;Platform-generated unique identifier of the Message.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">    */</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;Platform-generated unique identifier of the Message.&lt;/p&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     */</span>
 <span class="source-line-no">089</span><span id="line.89">    public String getId() {</span>
 <span class="source-line-no">090</span><span id="line.90">        return this.id;</span>
 <span class="source-line-no">091</span><span id="line.91">    }</span>
@@ -116,15 +116,15 @@
 <span class="source-line-no">103</span><span id="line.103">    }</span>
 <span class="source-line-no">104</span><span id="line.104"></span>
 <span class="source-line-no">105</span><span id="line.105">    /**</span>
-<span class="source-line-no">106</span><span id="line.106">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">107</span><span id="line.107">    */</span>
+<span class="source-line-no">106</span><span id="line.106">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">107</span><span id="line.107">     */</span>
 <span class="source-line-no">108</span><span id="line.108">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
 <span class="source-line-no">109</span><span id="line.109">        return this.lastModifiedBy;</span>
 <span class="source-line-no">110</span><span id="line.110">    }</span>
 <span class="source-line-no">111</span><span id="line.111"></span>
 <span class="source-line-no">112</span><span id="line.112">    /**</span>
-<span class="source-line-no">113</span><span id="line.113">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">114</span><span id="line.114">    */</span>
+<span class="source-line-no">113</span><span id="line.113">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">114</span><span id="line.114">     */</span>
 <span class="source-line-no">115</span><span id="line.115">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
 <span class="source-line-no">116</span><span id="line.116">        return this.createdBy;</span>
 <span class="source-line-no">117</span><span id="line.117">    }</span>
@@ -134,8 +134,8 @@
 <span class="source-line-no">121</span><span id="line.121">    }</span>
 <span class="source-line-no">122</span><span id="line.122"></span>
 <span class="source-line-no">123</span><span id="line.123">    /**</span>
-<span class="source-line-no">124</span><span id="line.124">    *  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
-<span class="source-line-no">125</span><span id="line.125">    */</span>
+<span class="source-line-no">124</span><span id="line.124">     *  &lt;p&gt;A Reference represents a loose reference to another resource in the same commercetools Project identified by its &lt;code&gt;id&lt;/code&gt;. The &lt;code&gt;typeId&lt;/code&gt; indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional &lt;code&gt;obj&lt;/code&gt; field then.&lt;/p&gt;</span>
+<span class="source-line-no">125</span><span id="line.125">     */</span>
 <span class="source-line-no">126</span><span id="line.126">    public com.commercetools.api.models.common.Reference getResource() {</span>
 <span class="source-line-no">127</span><span id="line.127">        return this.resource;</span>
 <span class="source-line-no">128</span><span id="line.128">    }</span>
@@ -161,9 +161,9 @@
 <span class="source-line-no">148</span><span id="line.148">    }</span>
 <span class="source-line-no">149</span><span id="line.149"></span>
 <span class="source-line-no">150</span><span id="line.150">    /**</span>
-<span class="source-line-no">151</span><span id="line.151">    *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">152</span><span id="line.152">    *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
-<span class="source-line-no">153</span><span id="line.153">    */</span>
+<span class="source-line-no">151</span><span id="line.151">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">152</span><span id="line.152">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
+<span class="source-line-no">153</span><span id="line.153">     */</span>
 <span class="source-line-no">154</span><span id="line.154">    public com.commercetools.api.models.common.Money getTotalPrice() {</span>
 <span class="source-line-no">155</span><span id="line.155">        return this.totalPrice;</span>
 <span class="source-line-no">156</span><span id="line.156">    }</span>

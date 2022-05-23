@@ -87,10 +87,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Secured_by_manage_productsTrait.html" title="interface in com.commercetools.importapi.client">Secured_by_manage_productsTrait</a>&lt;<a href="ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</code>, <code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.19">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.30">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a></span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a>,&#8203;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>,&#8203;<a href="../models/importrequests/ProductImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductImportRequest</a>&gt;
 implements <a href="Secured_by_manage_productsTrait.html" title="interface in com.commercetools.importapi.client">Secured_by_manage_productsTrait</a>&lt;<a href="ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a>&gt;</span></div>
-<div class="block"><p>Creates import request for creating new products or updating existing ones.</p></div>
+<div class="block"><p>Creates import request for creating new products or updating existing ones.</p>
+
+ <div class=code-example>
+ <pre><code class='java'>
+   CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse>> result = apiRoot
+           .withProjectKeyValue("{projectKey}")
+           .products()
+           .importSinkKeyWithImportSinkKeyValue("{importSinkKey}")
+           .post(null)
+           .execute()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -195,7 +206,7 @@ implements <a href="Secured_by_manage_productsTrait.html" title="interface in co
 <li>
 <section class="detail" id="&lt;init&gt;(io.vrap.rmf.base.client.ApiHttpClient,java.lang.String,java.lang.String,com.commercetools.importapi.models.importrequests.ProductImportRequest)">
 <h3>ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.30">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.41">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;importSinkKey,
  <a href="../models/importrequests/ProductImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductImportRequest</a>&nbsp;productImportRequest)</span></div>
@@ -204,7 +215,7 @@ implements <a href="Secured_by_manage_productsTrait.html" title="interface in co
 <li>
 <section class="detail" id="&lt;init&gt;(com.commercetools.importapi.client.ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost)">
 <h3>ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.39">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a>&nbsp;t)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.50">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a></span>&#8203;<span class="parameters">(<a href="ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a>&nbsp;t)</span></div>
 </section>
 </li>
 </ul>
@@ -218,7 +229,7 @@ implements <a href="Secured_by_manage_productsTrait.html" title="interface in co
 <li>
 <section class="detail" id="executeBlocking(io.vrap.rmf.base.client.ApiHttpClient,java.time.Duration)">
 <h3>executeBlocking</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.60">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.71">executeBlocking</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -231,7 +242,7 @@ implements <a href="Secured_by_manage_productsTrait.html" title="interface in co
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ApiHttpClient)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.66">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;&gt;</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.77">execute</a></span>&#8203;<span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;client)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html#execute(io.vrap.rmf.base.client.ApiHttpClient)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</code></dd>
@@ -243,31 +254,31 @@ implements <a href="Secured_by_manage_productsTrait.html" title="interface in co
 <li>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.72">getProjectKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.83">getProjectKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getImportSinkKey()">
 <h3>getImportSinkKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.76">getImportSinkKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.87">getImportSinkKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.80">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.91">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setImportSinkKey(java.lang.String)">
 <h3>setImportSinkKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.84">setImportSinkKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;importSinkKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.95">setImportSinkKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;importSinkKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getBody()">
 <h3>getBody</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../models/importrequests/ProductImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.88">getBody</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../models/importrequests/ProductImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductImportRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.99">getBody</a></span>()</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html#getBody()">getBody</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a>,&#8203;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>,&#8203;<a href="../models/importrequests/ProductImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductImportRequest</a>&gt;</code></dd>
@@ -277,7 +288,7 @@ implements <a href="Secured_by_manage_productsTrait.html" title="interface in co
 <li>
 <section class="detail" id="withBody(com.commercetools.importapi.models.importrequests.ProductImportRequest)">
 <h3>withBody</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.92">withBody</a></span>&#8203;<span class="parameters">(<a href="../models/importrequests/ProductImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductImportRequest</a>&nbsp;productImportRequest)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a></span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.103">withBody</a></span>&#8203;<span class="parameters">(<a href="../models/importrequests/ProductImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductImportRequest</a>&nbsp;productImportRequest)</span></div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html#withBody(TBody)">withBody</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a>&lt;<a href="ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost</a>,&#8203;<a href="../models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>,&#8203;<a href="../models/importrequests/ProductImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductImportRequest</a>&gt;</code></dd>
@@ -287,13 +298,13 @@ implements <a href="Secured_by_manage_productsTrait.html" title="interface in co
 <li>
 <section class="detail" id="equals(java.lang.Object)">
 <h3>equals</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.99">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.110">equals</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="hashCode()">
 <h3>hashCode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.115">hashCode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name"><a href="../../../../src-html/com/commercetools/importapi/client/ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost.html#line.126">hashCode</a></span>()</div>
 </section>
 </li>
 <li>

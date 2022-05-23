@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.12">DiscountCodeReferenceBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.22">DiscountCodeReferenceBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DiscountCodeReference discountCodeReference = DiscountCodeReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -168,7 +176,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DiscountCodeReferenceBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.13">DiscountCodeReferenceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.23">DiscountCodeReferenceBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -182,21 +190,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.24">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.34">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <div class="block"><p>Platform-generated unique identifier of the referenced DiscountCode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="obj(java.util.function.Function)">
 <h3>obj</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.33">obj</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a>,&#8203;<a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.43">obj</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a>,&#8203;<a href="DiscountCodeBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="obj(com.commercetools.api.models.discount_code.DiscountCode)">
 <h3>obj</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.43">obj</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.53">obj</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a>&nbsp;obj)</span></div>
 <div class="block"><p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p></div>
 </section>
@@ -204,20 +212,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.49">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.59">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getObj()">
 <h3>getObj</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.53">getObj</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCode.html" title="interface in com.commercetools.api.models.discount_code">DiscountCode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.63">getObj</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.58">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.68">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&gt;</code></dd>
@@ -227,20 +235,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.66">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.76">buildUnchecked</a></span>()</div>
 <div class="block">builds DiscountCodeReference without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.70">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.80">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.discount_code.DiscountCodeReference)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.74">of</a></span>&#8203;<span class="parameters">(<a href="DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountCodeReferenceBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/discount_code/DiscountCodeReferenceBuilder.html#line.84">of</a></span>&#8203;<span class="parameters">(<a href="DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -26,113 +26,126 @@
 <span class="source-line-no">013</span><span id="line.13"></span>
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">017</span><span id="line.17">@JsonDeserialize(as = TaxRateImpl.class)</span>
-<span class="source-line-no">018</span><span id="line.18">public interface TaxRate {</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    /**</span>
-<span class="source-line-no">021</span><span id="line.21">    *  &lt;p&gt;Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.&lt;/p&gt;</span>
-<span class="source-line-no">022</span><span id="line.22">    */</span>
-<span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    @JsonProperty("id")</span>
-<span class="source-line-no">025</span><span id="line.25">    public String getId();</span>
-<span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    /**</span>
-<span class="source-line-no">028</span><span id="line.28">    *  &lt;p&gt;Name of the TaxRate.&lt;/p&gt;</span>
-<span class="source-line-no">029</span><span id="line.29">    */</span>
-<span class="source-line-no">030</span><span id="line.30">    @NotNull</span>
-<span class="source-line-no">031</span><span id="line.31">    @JsonProperty("name")</span>
-<span class="source-line-no">032</span><span id="line.32">    public String getName();</span>
-<span class="source-line-no">033</span><span id="line.33"></span>
-<span class="source-line-no">034</span><span id="line.34">    /**</span>
-<span class="source-line-no">035</span><span id="line.35">    *  &lt;p&gt;Tax rate. If subrates are used, the amount must be the sum of all subrates.&lt;/p&gt;</span>
-<span class="source-line-no">036</span><span id="line.36">    */</span>
-<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
-<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("amount")</span>
-<span class="source-line-no">039</span><span id="line.39">    public Double getAmount();</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">    *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, tax is included in Prices and the &lt;code&gt;taxedPrice&lt;/code&gt; is present on LineItems. In this case, the platform calculates the &lt;code&gt;totalNet&lt;/code&gt; price based on the TaxRate.&lt;/p&gt;</span>
-<span class="source-line-no">043</span><span id="line.43">    */</span>
-<span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
-<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("includedInPrice")</span>
-<span class="source-line-no">046</span><span id="line.46">    public Boolean getIncludedInPrice();</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    /**</span>
-<span class="source-line-no">049</span><span id="line.49">    *  &lt;p&gt;Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.&lt;/p&gt;</span>
-<span class="source-line-no">050</span><span id="line.50">    */</span>
-<span class="source-line-no">051</span><span id="line.51">    @NotNull</span>
-<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("country")</span>
-<span class="source-line-no">053</span><span id="line.53">    public String getCountry();</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    /**</span>
-<span class="source-line-no">056</span><span id="line.56">    *  &lt;p&gt;State within the country, such as Texas in the United States.&lt;/p&gt;</span>
-<span class="source-line-no">057</span><span id="line.57">    */</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    @JsonProperty("state")</span>
-<span class="source-line-no">060</span><span id="line.60">    public String getState();</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    /**</span>
-<span class="source-line-no">063</span><span id="line.63">    *  &lt;p&gt;Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).&lt;/p&gt;</span>
-<span class="source-line-no">064</span><span id="line.64">    */</span>
-<span class="source-line-no">065</span><span id="line.65">    @Valid</span>
-<span class="source-line-no">066</span><span id="line.66">    @JsonProperty("subRates")</span>
-<span class="source-line-no">067</span><span id="line.67">    public List&lt;SubRate&gt; getSubRates();</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public void setId(final String id);</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public void setName(final String name);</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public void setAmount(final Double amount);</span>
+<span class="source-line-no">016</span><span id="line.16">/**</span>
+<span class="source-line-no">017</span><span id="line.17"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">018</span><span id="line.18"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">020</span><span id="line.20">   TaxRate taxRate = TaxRate.builder()</span>
+<span class="source-line-no">021</span><span id="line.21">           .name("{name}")</span>
+<span class="source-line-no">022</span><span id="line.22">           .amount(0.3)</span>
+<span class="source-line-no">023</span><span id="line.23">           .includedInPrice(true)</span>
+<span class="source-line-no">024</span><span id="line.24">           .country("{country}")</span>
+<span class="source-line-no">025</span><span id="line.25">           .build()</span>
+<span class="source-line-no">026</span><span id="line.26"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> &lt;/div&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> */</span>
+<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = TaxRateImpl.class)</span>
+<span class="source-line-no">031</span><span id="line.31">public interface TaxRate {</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    /**</span>
+<span class="source-line-no">034</span><span id="line.34">     *  &lt;p&gt;Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.&lt;/p&gt;</span>
+<span class="source-line-no">035</span><span id="line.35">     */</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    @JsonProperty("id")</span>
+<span class="source-line-no">038</span><span id="line.38">    public String getId();</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    /**</span>
+<span class="source-line-no">041</span><span id="line.41">     *  &lt;p&gt;Name of the TaxRate.&lt;/p&gt;</span>
+<span class="source-line-no">042</span><span id="line.42">     */</span>
+<span class="source-line-no">043</span><span id="line.43">    @NotNull</span>
+<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("name")</span>
+<span class="source-line-no">045</span><span id="line.45">    public String getName();</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    /**</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;Tax rate. If subrates are used, the amount must be the sum of all subrates.&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     */</span>
+<span class="source-line-no">050</span><span id="line.50">    @NotNull</span>
+<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("amount")</span>
+<span class="source-line-no">052</span><span id="line.52">    public Double getAmount();</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, tax is included in Prices and the &lt;code&gt;taxedPrice&lt;/code&gt; is present on LineItems. In this case, the platform calculates the &lt;code&gt;totalNet&lt;/code&gt; price based on the TaxRate.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">     */</span>
+<span class="source-line-no">057</span><span id="line.57">    @NotNull</span>
+<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("includedInPrice")</span>
+<span class="source-line-no">059</span><span id="line.59">    public Boolean getIncludedInPrice();</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    /**</span>
+<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.&lt;/p&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     */</span>
+<span class="source-line-no">064</span><span id="line.64">    @NotNull</span>
+<span class="source-line-no">065</span><span id="line.65">    @JsonProperty("country")</span>
+<span class="source-line-no">066</span><span id="line.66">    public String getCountry();</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    /**</span>
+<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;State within the country, such as Texas in the United States.&lt;/p&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">     */</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    @JsonProperty("state")</span>
+<span class="source-line-no">073</span><span id="line.73">    public String getState();</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public void setIncludedInPrice(final Boolean includedInPrice);</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public void setCountry(final String country);</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public void setState(final String state);</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    @JsonIgnore</span>
-<span class="source-line-no">082</span><span id="line.82">    public void setSubRates(final SubRate... subRates);</span>
+<span class="source-line-no">075</span><span id="line.75">    /**</span>
+<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).&lt;/p&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">     */</span>
+<span class="source-line-no">078</span><span id="line.78">    @Valid</span>
+<span class="source-line-no">079</span><span id="line.79">    @JsonProperty("subRates")</span>
+<span class="source-line-no">080</span><span id="line.80">    public List&lt;SubRate&gt; getSubRates();</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public void setId(final String id);</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public void setSubRates(final List&lt;SubRate&gt; subRates);</span>
+<span class="source-line-no">084</span><span id="line.84">    public void setName(final String name);</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public static TaxRate of() {</span>
-<span class="source-line-no">087</span><span id="line.87">        return new TaxRateImpl();</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">086</span><span id="line.86">    public void setAmount(final Double amount);</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public void setIncludedInPrice(final Boolean includedInPrice);</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public static TaxRate of(final TaxRate template) {</span>
-<span class="source-line-no">091</span><span id="line.91">        TaxRateImpl instance = new TaxRateImpl();</span>
-<span class="source-line-no">092</span><span id="line.92">        instance.setId(template.getId());</span>
-<span class="source-line-no">093</span><span id="line.93">        instance.setName(template.getName());</span>
-<span class="source-line-no">094</span><span id="line.94">        instance.setAmount(template.getAmount());</span>
-<span class="source-line-no">095</span><span id="line.95">        instance.setIncludedInPrice(template.getIncludedInPrice());</span>
-<span class="source-line-no">096</span><span id="line.96">        instance.setCountry(template.getCountry());</span>
-<span class="source-line-no">097</span><span id="line.97">        instance.setState(template.getState());</span>
-<span class="source-line-no">098</span><span id="line.98">        instance.setSubRates(template.getSubRates());</span>
-<span class="source-line-no">099</span><span id="line.99">        return instance;</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public static TaxRateBuilder builder() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return TaxRateBuilder.of();</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    public static TaxRateBuilder builder(final TaxRate template) {</span>
-<span class="source-line-no">107</span><span id="line.107">        return TaxRateBuilder.of(template);</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    default &lt;T&gt; T withTaxRate(Function&lt;TaxRate, T&gt; helper) {</span>
-<span class="source-line-no">111</span><span id="line.111">        return helper.apply(this);</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TaxRate&gt; typeReference() {</span>
-<span class="source-line-no">115</span><span id="line.115">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TaxRate&gt;() {</span>
-<span class="source-line-no">116</span><span id="line.116">            @Override</span>
-<span class="source-line-no">117</span><span id="line.117">            public String toString() {</span>
-<span class="source-line-no">118</span><span id="line.118">                return "TypeReference&lt;TaxRate&gt;";</span>
-<span class="source-line-no">119</span><span id="line.119">            }</span>
-<span class="source-line-no">120</span><span id="line.120">        };</span>
+<span class="source-line-no">090</span><span id="line.90">    public void setCountry(final String country);</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public void setState(final String state);</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    @JsonIgnore</span>
+<span class="source-line-no">095</span><span id="line.95">    public void setSubRates(final SubRate... subRates);</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public void setSubRates(final List&lt;SubRate&gt; subRates);</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public static TaxRate of() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return new TaxRateImpl();</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public static TaxRate of(final TaxRate template) {</span>
+<span class="source-line-no">104</span><span id="line.104">        TaxRateImpl instance = new TaxRateImpl();</span>
+<span class="source-line-no">105</span><span id="line.105">        instance.setId(template.getId());</span>
+<span class="source-line-no">106</span><span id="line.106">        instance.setName(template.getName());</span>
+<span class="source-line-no">107</span><span id="line.107">        instance.setAmount(template.getAmount());</span>
+<span class="source-line-no">108</span><span id="line.108">        instance.setIncludedInPrice(template.getIncludedInPrice());</span>
+<span class="source-line-no">109</span><span id="line.109">        instance.setCountry(template.getCountry());</span>
+<span class="source-line-no">110</span><span id="line.110">        instance.setState(template.getState());</span>
+<span class="source-line-no">111</span><span id="line.111">        instance.setSubRates(template.getSubRates());</span>
+<span class="source-line-no">112</span><span id="line.112">        return instance;</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public static TaxRateBuilder builder() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return TaxRateBuilder.of();</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public static TaxRateBuilder builder(final TaxRate template) {</span>
+<span class="source-line-no">120</span><span id="line.120">        return TaxRateBuilder.of(template);</span>
 <span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122">}</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    default &lt;T&gt; T withTaxRate(Function&lt;TaxRate, T&gt; helper) {</span>
+<span class="source-line-no">124</span><span id="line.124">        return helper.apply(this);</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TaxRate&gt; typeReference() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TaxRate&gt;() {</span>
+<span class="source-line-no">129</span><span id="line.129">            @Override</span>
+<span class="source-line-no">130</span><span id="line.130">            public String toString() {</span>
+<span class="source-line-no">131</span><span id="line.131">                return "TypeReference&lt;TaxRate&gt;";</span>
+<span class="source-line-no">132</span><span id="line.132">            }</span>
+<span class="source-line-no">133</span><span id="line.133">        };</span>
+<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">135</span><span id="line.135">}</span>
 
 
 

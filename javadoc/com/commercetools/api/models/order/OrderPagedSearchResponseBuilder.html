@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.12">OrderPagedSearchResponseBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.23">OrderPagedSearchResponseBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderPagedSearchResponse orderPagedSearchResponse = OrderPagedSearchResponse.builder()
+           .total(0.3)
+           .plusHits(hitsBuilder -> hitsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -199,7 +208,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderPagedSearchResponseBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.13">OrderPagedSearchResponseBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.24">OrderPagedSearchResponseBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -213,14 +222,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="total(java.lang.Long)">
 <h3>total</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.29">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.40">total</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
 <div class="block"><p>Total number of results matching the query.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="offset(java.lang.Long)">
 <h3>offset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.38">offset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.49">offset</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
 <div class="block"><p>Number of elements skipped.</p></div>
 </section>
@@ -228,7 +237,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="limit(java.lang.Long)">
 <h3>limit</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.47">limit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.58">limit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
 <div class="block"><p>Number of results requested.</p></div>
 </section>
@@ -236,68 +245,68 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="hits(com.commercetools.api.models.order.Hit...)">
 <h3>hits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.56">hits</a></span>&#8203;<span class="parameters">(<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>...&nbsp;hits)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.67">hits</a></span>&#8203;<span class="parameters">(<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>...&nbsp;hits)</span></div>
 <div class="block"><p>Actual results.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="hits(java.util.List)">
 <h3>hits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.65">hits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>&gt;&nbsp;hits)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.76">hits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>&gt;&nbsp;hits)</span></div>
 <div class="block"><p>Actual results.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusHits(com.commercetools.api.models.order.Hit...)">
 <h3>plusHits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.74">plusHits</a></span>&#8203;<span class="parameters">(<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>...&nbsp;hits)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.85">plusHits</a></span>&#8203;<span class="parameters">(<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>...&nbsp;hits)</span></div>
 <div class="block"><p>Actual results.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusHits(java.util.function.Function)">
 <h3>plusHits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.86">plusHits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HitBuilder.html" title="class in com.commercetools.api.models.order">HitBuilder</a>,&#8203;<a href="HitBuilder.html" title="class in com.commercetools.api.models.order">HitBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.97">plusHits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HitBuilder.html" title="class in com.commercetools.api.models.order">HitBuilder</a>,&#8203;<a href="HitBuilder.html" title="class in com.commercetools.api.models.order">HitBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Actual results.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withHits(java.util.function.Function)">
 <h3>withHits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.99">withHits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HitBuilder.html" title="class in com.commercetools.api.models.order">HitBuilder</a>,&#8203;<a href="HitBuilder.html" title="class in com.commercetools.api.models.order">HitBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.110">withHits</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="HitBuilder.html" title="class in com.commercetools.api.models.order">HitBuilder</a>,&#8203;<a href="HitBuilder.html" title="class in com.commercetools.api.models.order">HitBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Actual results.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.106">getTotal</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.117">getTotal</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOffset()">
 <h3>getOffset</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.110">getOffset</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.121">getOffset</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.115">getLimit</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.126">getLimit</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getHits()">
 <h3>getHits</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.120">getHits</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Hit.html" title="interface in com.commercetools.api.models.order">Hit</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.131">getHits</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.124">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.135">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a>&gt;</code></dd>
@@ -307,20 +316,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.133">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.144">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderPagedSearchResponse without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.137">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.148">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.OrderPagedSearchResponse)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.141">of</a></span>&#8203;<span class="parameters">(<a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.order">OrderPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderPagedSearchResponseBuilder.html#line.152">of</a></span>&#8203;<span class="parameters">(<a href="OrderPagedSearchResponse.html" title="interface in com.commercetools.api.models.order">OrderPagedSearchResponse</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

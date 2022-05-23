@@ -23,22 +23,31 @@
 <span class="source-line-no">010</span><span id="line.10"></span>
 <span class="source-line-no">011</span><span id="line.11">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">014</span><span id="line.14">public interface OrderMessagePayload extends MessagePayload {</span>
-<span class="source-line-no">015</span><span id="line.15"></span>
-<span class="source-line-no">016</span><span id="line.16">    default &lt;T&gt; T withOrderMessagePayload(Function&lt;OrderMessagePayload, T&gt; helper) {</span>
-<span class="source-line-no">017</span><span id="line.17">        return helper.apply(this);</span>
-<span class="source-line-no">018</span><span id="line.18">    }</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderMessagePayload&gt; typeReference() {</span>
-<span class="source-line-no">021</span><span id="line.21">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderMessagePayload&gt;() {</span>
-<span class="source-line-no">022</span><span id="line.22">            @Override</span>
-<span class="source-line-no">023</span><span id="line.23">            public String toString() {</span>
-<span class="source-line-no">024</span><span id="line.24">                return "TypeReference&lt;OrderMessagePayload&gt;";</span>
-<span class="source-line-no">025</span><span id="line.25">            }</span>
-<span class="source-line-no">026</span><span id="line.26">        };</span>
+<span class="source-line-no">013</span><span id="line.13">/**</span>
+<span class="source-line-no">014</span><span id="line.14"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">015</span><span id="line.15"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">016</span><span id="line.16"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">017</span><span id="line.17">   OrderMessagePayload orderMessagePayload = OrderMessagePayload.builder()</span>
+<span class="source-line-no">018</span><span id="line.18">           .build()</span>
+<span class="source-line-no">019</span><span id="line.19"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> &lt;/div&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> */</span>
+<span class="source-line-no">022</span><span id="line.22">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">023</span><span id="line.23">public interface OrderMessagePayload extends MessagePayload {</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    default &lt;T&gt; T withOrderMessagePayload(Function&lt;OrderMessagePayload, T&gt; helper) {</span>
+<span class="source-line-no">026</span><span id="line.26">        return helper.apply(this);</span>
 <span class="source-line-no">027</span><span id="line.27">    }</span>
-<span class="source-line-no">028</span><span id="line.28">}</span>
+<span class="source-line-no">028</span><span id="line.28"></span>
+<span class="source-line-no">029</span><span id="line.29">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderMessagePayload&gt; typeReference() {</span>
+<span class="source-line-no">030</span><span id="line.30">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderMessagePayload&gt;() {</span>
+<span class="source-line-no">031</span><span id="line.31">            @Override</span>
+<span class="source-line-no">032</span><span id="line.32">            public String toString() {</span>
+<span class="source-line-no">033</span><span id="line.33">                return "TypeReference&lt;OrderMessagePayload&gt;";</span>
+<span class="source-line-no">034</span><span id="line.34">            }</span>
+<span class="source-line-no">035</span><span id="line.35">        };</span>
+<span class="source-line-no">036</span><span id="line.36">    }</span>
+<span class="source-line-no">037</span><span id="line.37">}</span>
 
 
 

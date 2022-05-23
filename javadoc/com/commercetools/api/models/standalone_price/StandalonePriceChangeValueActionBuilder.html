@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StandalonePriceChangeValueAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.10">StandalonePriceChangeValueActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.20">StandalonePriceChangeValueActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StandalonePriceChangeValueAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StandalonePriceChangeValueAction standalonePriceChangeValueAction = StandalonePriceChangeValueAction.builder()
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -160,7 +168,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>StandalonePriceChangeValueActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.11">StandalonePriceChangeValueActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.21">StandalonePriceChangeValueActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -174,27 +182,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="value(java.util.function.Function)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.19">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.29">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,&#8203;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>New value to set. Must not be empty.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(com.commercetools.api.models.common.Money)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.29">value</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.39">value</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
 <div class="block"><p>New value to set. Must not be empty.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.34">getValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.44">getValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.38">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.48">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="StandalonePriceChangeValueAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueAction</a>&gt;</code></dd>
@@ -204,20 +212,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.46">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.56">buildUnchecked</a></span>()</div>
 <div class="block">builds StandalonePriceChangeValueAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.50">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.60">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.54">of</a></span>&#8203;<span class="parameters">(<a href="StandalonePriceChangeValueAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StandalonePriceChangeValueActionBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceChangeValueActionBuilder.html#line.64">of</a></span>&#8203;<span class="parameters">(<a href="StandalonePriceChangeValueAction.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceChangeValueAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

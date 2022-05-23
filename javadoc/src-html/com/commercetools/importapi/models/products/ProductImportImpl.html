@@ -28,10 +28,10 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18">*  &lt;p&gt;The data representation for a Product to be imported that is persisted as a Product in the Project.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19">*  &lt;p&gt;This is the minimal representation required for creating a Product in commercetools.&lt;/p&gt;</span>
-<span class="source-line-no">020</span><span id="line.20">*/</span>
-<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;The data representation for a Product to be imported that is persisted as a Product in the Project.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;This is the minimal representation required for creating a Product in commercetools.&lt;/p&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> */</span>
+<span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">022</span><span id="line.22">public class ProductImportImpl implements ProductImport, ModelBase {</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
 <span class="source-line-no">024</span><span id="line.24">    private String key;</span>
@@ -97,116 +97,116 @@
 <span class="source-line-no">084</span><span id="line.84">    }</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
 <span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">    *  &lt;p&gt;Maps to &lt;code&gt;Product.name&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">    */</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;Maps to &lt;code&gt;Product.name&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     */</span>
 <span class="source-line-no">089</span><span id="line.89">    public com.commercetools.importapi.models.common.LocalizedString getName() {</span>
 <span class="source-line-no">090</span><span id="line.90">        return this.name;</span>
 <span class="source-line-no">091</span><span id="line.91">    }</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
 <span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">    *  &lt;p&gt;The &lt;code&gt;productType&lt;/code&gt; of a Product. Maps to &lt;code&gt;Product.productType&lt;/code&gt;. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductType is created.&lt;/p&gt;</span>
-<span class="source-line-no">095</span><span id="line.95">    */</span>
+<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;The &lt;code&gt;productType&lt;/code&gt; of a Product. Maps to &lt;code&gt;Product.productType&lt;/code&gt;. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductType is created.&lt;/p&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
 <span class="source-line-no">096</span><span id="line.96">    public com.commercetools.importapi.models.common.ProductTypeKeyReference getProductType() {</span>
 <span class="source-line-no">097</span><span id="line.97">        return this.productType;</span>
 <span class="source-line-no">098</span><span id="line.98">    }</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
 <span class="source-line-no">100</span><span id="line.100">    /**</span>
-<span class="source-line-no">101</span><span id="line.101">    *  &lt;p&gt;Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.&lt;/p&gt;</span>
-<span class="source-line-no">102</span><span id="line.102">    */</span>
+<span class="source-line-no">101</span><span id="line.101">     *  &lt;p&gt;Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.&lt;/p&gt;</span>
+<span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103">    public com.commercetools.importapi.models.common.LocalizedString getSlug() {</span>
 <span class="source-line-no">104</span><span id="line.104">        return this.slug;</span>
 <span class="source-line-no">105</span><span id="line.105">    }</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
 <span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">    *  &lt;p&gt;Maps to &lt;code&gt;Product.description&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">109</span><span id="line.109">    */</span>
+<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;Maps to &lt;code&gt;Product.description&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">109</span><span id="line.109">     */</span>
 <span class="source-line-no">110</span><span id="line.110">    public com.commercetools.importapi.models.common.LocalizedString getDescription() {</span>
 <span class="source-line-no">111</span><span id="line.111">        return this.description;</span>
 <span class="source-line-no">112</span><span id="line.112">    }</span>
 <span class="source-line-no">113</span><span id="line.113"></span>
 <span class="source-line-no">114</span><span id="line.114">    /**</span>
-<span class="source-line-no">115</span><span id="line.115">    *  &lt;p&gt;Maps to &lt;code&gt;Product.categories&lt;/code&gt;. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Categories are created.&lt;/p&gt;</span>
-<span class="source-line-no">116</span><span id="line.116">    */</span>
+<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;Maps to &lt;code&gt;Product.categories&lt;/code&gt;. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Categories are created.&lt;/p&gt;</span>
+<span class="source-line-no">116</span><span id="line.116">     */</span>
 <span class="source-line-no">117</span><span id="line.117">    public java.util.List&lt;com.commercetools.importapi.models.common.CategoryKeyReference&gt; getCategories() {</span>
 <span class="source-line-no">118</span><span id="line.118">        return this.categories;</span>
 <span class="source-line-no">119</span><span id="line.119">    }</span>
 <span class="source-line-no">120</span><span id="line.120"></span>
 <span class="source-line-no">121</span><span id="line.121">    /**</span>
-<span class="source-line-no">122</span><span id="line.122">    *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">123</span><span id="line.123">    *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">124</span><span id="line.124">    *    "de": "Hundefutter",</span>
-<span class="source-line-no">125</span><span id="line.125">    *    "en": "dog food"</span>
-<span class="source-line-no">126</span><span id="line.126">    *  }</span>
-<span class="source-line-no">127</span><span id="line.127">    *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">128</span><span id="line.128">    */</span>
+<span class="source-line-no">122</span><span id="line.122">     *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">123</span><span id="line.123">     *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">124</span><span id="line.124">     *    "de": "Hundefutter",</span>
+<span class="source-line-no">125</span><span id="line.125">     *    "en": "dog food"</span>
+<span class="source-line-no">126</span><span id="line.126">     *  }</span>
+<span class="source-line-no">127</span><span id="line.127">     *  &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">128</span><span id="line.128">     */</span>
 <span class="source-line-no">129</span><span id="line.129">    public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {</span>
 <span class="source-line-no">130</span><span id="line.130">        return this.metaTitle;</span>
 <span class="source-line-no">131</span><span id="line.131">    }</span>
 <span class="source-line-no">132</span><span id="line.132"></span>
 <span class="source-line-no">133</span><span id="line.133">    /**</span>
-<span class="source-line-no">134</span><span id="line.134">    *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">135</span><span id="line.135">    *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">136</span><span id="line.136">    *    "de": "Hundefutter",</span>
-<span class="source-line-no">137</span><span id="line.137">    *    "en": "dog food"</span>
-<span class="source-line-no">138</span><span id="line.138">    *  }</span>
-<span class="source-line-no">139</span><span id="line.139">    *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">140</span><span id="line.140">    */</span>
+<span class="source-line-no">134</span><span id="line.134">     *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">135</span><span id="line.135">     *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">136</span><span id="line.136">     *    "de": "Hundefutter",</span>
+<span class="source-line-no">137</span><span id="line.137">     *    "en": "dog food"</span>
+<span class="source-line-no">138</span><span id="line.138">     *  }</span>
+<span class="source-line-no">139</span><span id="line.139">     *  &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">140</span><span id="line.140">     */</span>
 <span class="source-line-no">141</span><span id="line.141">    public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {</span>
 <span class="source-line-no">142</span><span id="line.142">        return this.metaDescription;</span>
 <span class="source-line-no">143</span><span id="line.143">    }</span>
 <span class="source-line-no">144</span><span id="line.144"></span>
 <span class="source-line-no">145</span><span id="line.145">    /**</span>
-<span class="source-line-no">146</span><span id="line.146">    *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
-<span class="source-line-no">147</span><span id="line.147">    *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">148</span><span id="line.148">    *    "de": "Hundefutter",</span>
-<span class="source-line-no">149</span><span id="line.149">    *    "en": "dog food"</span>
-<span class="source-line-no">150</span><span id="line.150">    *  }</span>
-<span class="source-line-no">151</span><span id="line.151">    *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">152</span><span id="line.152">    */</span>
+<span class="source-line-no">146</span><span id="line.146">     *  &lt;p&gt;A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.&lt;/p&gt;</span>
+<span class="source-line-no">147</span><span id="line.147">     *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">148</span><span id="line.148">     *    "de": "Hundefutter",</span>
+<span class="source-line-no">149</span><span id="line.149">     *    "en": "dog food"</span>
+<span class="source-line-no">150</span><span id="line.150">     *  }</span>
+<span class="source-line-no">151</span><span id="line.151">     *  &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">152</span><span id="line.152">     */</span>
 <span class="source-line-no">153</span><span id="line.153">    public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {</span>
 <span class="source-line-no">154</span><span id="line.154">        return this.metaKeywords;</span>
 <span class="source-line-no">155</span><span id="line.155">    }</span>
 <span class="source-line-no">156</span><span id="line.156"></span>
 <span class="source-line-no">157</span><span id="line.157">    /**</span>
-<span class="source-line-no">158</span><span id="line.158">    *  &lt;p&gt;The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary TaxCategory is created.&lt;/p&gt;</span>
-<span class="source-line-no">159</span><span id="line.159">    */</span>
+<span class="source-line-no">158</span><span id="line.158">     *  &lt;p&gt;The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary TaxCategory is created.&lt;/p&gt;</span>
+<span class="source-line-no">159</span><span id="line.159">     */</span>
 <span class="source-line-no">160</span><span id="line.160">    public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {</span>
 <span class="source-line-no">161</span><span id="line.161">        return this.taxCategory;</span>
 <span class="source-line-no">162</span><span id="line.162">    }</span>
 <span class="source-line-no">163</span><span id="line.163"></span>
 <span class="source-line-no">164</span><span id="line.164">    /**</span>
-<span class="source-line-no">165</span><span id="line.165">    *  &lt;p&gt;Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.&lt;/p&gt;</span>
-<span class="source-line-no">166</span><span id="line.166">    *  &lt;pre&gt;&lt;code&gt;{</span>
-<span class="source-line-no">167</span><span id="line.167">    *    "en": [</span>
-<span class="source-line-no">168</span><span id="line.168">    *      { "text": "Multi tool" },</span>
-<span class="source-line-no">169</span><span id="line.169">    *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }</span>
-<span class="source-line-no">170</span><span id="line.170">    *    ],</span>
-<span class="source-line-no">171</span><span id="line.171">    *    "de": [</span>
-<span class="source-line-no">172</span><span id="line.172">    *      {</span>
-<span class="source-line-no">173</span><span id="line.173">    *        "text": "Schweizer Messer",</span>
-<span class="source-line-no">174</span><span id="line.174">    *        "suggestTokenizer": {</span>
-<span class="source-line-no">175</span><span id="line.175">    *          "type": "custom",</span>
-<span class="source-line-no">176</span><span id="line.176">    *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]</span>
-<span class="source-line-no">177</span><span id="line.177">    *        }</span>
-<span class="source-line-no">178</span><span id="line.178">    *      }</span>
-<span class="source-line-no">179</span><span id="line.179">    *    ]</span>
-<span class="source-line-no">180</span><span id="line.180">    *  }</span>
-<span class="source-line-no">181</span><span id="line.181">    *  &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">182</span><span id="line.182">    */</span>
+<span class="source-line-no">165</span><span id="line.165">     *  &lt;p&gt;Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.&lt;/p&gt;</span>
+<span class="source-line-no">166</span><span id="line.166">     *  &lt;pre&gt;&lt;code&gt;{</span>
+<span class="source-line-no">167</span><span id="line.167">     *    "en": [</span>
+<span class="source-line-no">168</span><span id="line.168">     *      { "text": "Multi tool" },</span>
+<span class="source-line-no">169</span><span id="line.169">     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }</span>
+<span class="source-line-no">170</span><span id="line.170">     *    ],</span>
+<span class="source-line-no">171</span><span id="line.171">     *    "de": [</span>
+<span class="source-line-no">172</span><span id="line.172">     *      {</span>
+<span class="source-line-no">173</span><span id="line.173">     *        "text": "Schweizer Messer",</span>
+<span class="source-line-no">174</span><span id="line.174">     *        "suggestTokenizer": {</span>
+<span class="source-line-no">175</span><span id="line.175">     *          "type": "custom",</span>
+<span class="source-line-no">176</span><span id="line.176">     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]</span>
+<span class="source-line-no">177</span><span id="line.177">     *        }</span>
+<span class="source-line-no">178</span><span id="line.178">     *      }</span>
+<span class="source-line-no">179</span><span id="line.179">     *    ]</span>
+<span class="source-line-no">180</span><span id="line.180">     *  }</span>
+<span class="source-line-no">181</span><span id="line.181">     *  &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">182</span><span id="line.182">     */</span>
 <span class="source-line-no">183</span><span id="line.183">    public com.commercetools.importapi.models.products.SearchKeywords getSearchKeywords() {</span>
 <span class="source-line-no">184</span><span id="line.184">        return this.searchKeywords;</span>
 <span class="source-line-no">185</span><span id="line.185">    }</span>
 <span class="source-line-no">186</span><span id="line.186"></span>
 <span class="source-line-no">187</span><span id="line.187">    /**</span>
-<span class="source-line-no">188</span><span id="line.188">    *  &lt;p&gt;The Reference to the State with which the Product is associated. If referenced State does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary State is created.&lt;/p&gt;</span>
-<span class="source-line-no">189</span><span id="line.189">    */</span>
+<span class="source-line-no">188</span><span id="line.188">     *  &lt;p&gt;The Reference to the State with which the Product is associated. If referenced State does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary State is created.&lt;/p&gt;</span>
+<span class="source-line-no">189</span><span id="line.189">     */</span>
 <span class="source-line-no">190</span><span id="line.190">    public com.commercetools.importapi.models.common.StateKeyReference getState() {</span>
 <span class="source-line-no">191</span><span id="line.191">        return this.state;</span>
 <span class="source-line-no">192</span><span id="line.192">    }</span>
 <span class="source-line-no">193</span><span id="line.193"></span>
 <span class="source-line-no">194</span><span id="line.194">    /**</span>
-<span class="source-line-no">195</span><span id="line.195">    *  &lt;p&gt;If &lt;code&gt;publish&lt;/code&gt; is set to either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;, both staged and current projections are set to the same value provided by the import data. If &lt;code&gt;publish&lt;/code&gt; is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether &lt;code&gt;publish&lt;/code&gt; is set or not.&lt;/p&gt;</span>
-<span class="source-line-no">196</span><span id="line.196">    */</span>
+<span class="source-line-no">195</span><span id="line.195">     *  &lt;p&gt;If &lt;code&gt;publish&lt;/code&gt; is set to either &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;, both staged and current projections are set to the same value provided by the import data. If &lt;code&gt;publish&lt;/code&gt; is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product in the platform, the import induces no change in the existing Product whether &lt;code&gt;publish&lt;/code&gt; is set or not.&lt;/p&gt;</span>
+<span class="source-line-no">196</span><span id="line.196">     */</span>
 <span class="source-line-no">197</span><span id="line.197">    public Boolean getPublish() {</span>
 <span class="source-line-no">198</span><span id="line.198">        return this.publish;</span>
 <span class="source-line-no">199</span><span id="line.199">    }</span>

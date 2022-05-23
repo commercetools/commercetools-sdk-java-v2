@@ -80,8 +80,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductSetSelectorImpl.html" title="class in com.commercetools.ml.models.similar_products">ProductSetSelectorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.18">ProductSetSelector</a></span></div>
-<div class="block"><p>A set of ProductData for comparison. If no optional attributes are specified, all <code>current</code> ProductData are selected for comparison.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.27">ProductSetSelector</a></span></div>
+<div class="block"><p>A set of ProductData for comparison. If no optional attributes are specified, all <code>current</code> ProductData are selected for comparison.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSetSelector productSetSelector = ProductSetSelector.builder()
+           .projectKey("{projectKey}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -186,127 +195,127 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.25">getProjectKey</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.34">getProjectKey</a></span>()</div>
 <div class="block"><p>The project containing the project set.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductIds()">
 <h3>getProductIds</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.33">getProductIds</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.42">getProductIds</a></span>()</div>
 <div class="block"><p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductTypeIds()">
 <h3>getProductTypeIds</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.40">getProductTypeIds</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.49">getProductTypeIds</a></span>()</div>
 <div class="block"><p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.47">getStaged</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.56">getStaged</a></span>()</div>
 <div class="block"><p>Specifies use of staged or current product data.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIncludeVariants()">
 <h3>getIncludeVariants</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.54">getIncludeVariants</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.63">getIncludeVariants</a></span>()</div>
 <div class="block"><p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductSetLimit()">
 <h3>getProductSetLimit</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.61">getProductSetLimit</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.70">getProductSetLimit</a></span>()</div>
 <div class="block"><p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.64">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.73">setProjectKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductIds(java.lang.String...)">
 <h3>setProductIds</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.66">setProductIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;productIds)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.75">setProductIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;productIds)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductIds(java.util.List)">
 <h3>setProductIds</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.69">setProductIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productIds)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.78">setProductIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productIds)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductTypeIds(java.lang.String...)">
 <h3>setProductTypeIds</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.71">setProductTypeIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;productTypeIds)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.80">setProductTypeIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;productTypeIds)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductTypeIds(java.util.List)">
 <h3>setProductTypeIds</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.74">setProductTypeIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productTypeIds)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.83">setProductTypeIds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productTypeIds)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStaged(java.lang.Boolean)">
 <h3>setStaged</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.76">setStaged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.85">setStaged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setIncludeVariants(java.lang.Boolean)">
 <h3>setIncludeVariants</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.78">setIncludeVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includeVariants)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.87">setIncludeVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;includeVariants)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductSetLimit(java.lang.Long)">
 <h3>setProductSetLimit</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.80">setProductSetLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;productSetLimit)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.89">setProductSetLimit</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;productSetLimit)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.82">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.91">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.similar_products.ProductSetSelector)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.86">of</a></span>&#8203;<span class="parameters">(<a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.95">of</a></span>&#8203;<span class="parameters">(<a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetSelectorBuilder.html" title="class in com.commercetools.ml.models.similar_products">ProductSetSelectorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.97">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetSelectorBuilder.html" title="class in com.commercetools.ml.models.similar_products">ProductSetSelectorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.106">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.ml.models.similar_products.ProductSetSelector)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetSelectorBuilder.html" title="class in com.commercetools.ml.models.similar_products">ProductSetSelectorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.101">builder</a></span>&#8203;<span class="parameters">(<a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductSetSelectorBuilder.html" title="class in com.commercetools.ml.models.similar_products">ProductSetSelectorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.110">builder</a></span>&#8203;<span class="parameters">(<a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductSetSelector(java.util.function.Function)">
 <h3>withProductSetSelector</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.105">withProductSetSelector</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.114">withProductSetSelector</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.109">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSetSelector.html" title="interface in com.commercetools.ml.models.similar_products">ProductSetSelector</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/similar_products/ProductSetSelector.html#line.118">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

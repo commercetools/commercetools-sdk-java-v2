@@ -84,8 +84,23 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProductRevertedStagedChangesMessageImpl.html" title="class in com.commercetools.api.models.message">ProductRevertedStagedChangesMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.15">ProductRevertedStagedChangesMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.32">ProductRevertedStagedChangesMessage</a></span><span class="extends-implements">
 extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductRevertedStagedChangesMessage productRevertedStagedChangesMessage = ProductRevertedStagedChangesMessage.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .sequenceNumber(0.3)
+           .resource(resourceBuilder -> resourceBuilder)
+           .resourceVersion(0.3)
+           .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -168,7 +183,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="PRODUCT_REVERTED_STAGED_CHANGES">
 <h3>PRODUCT_REVERTED_STAGED_CHANGES</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.19">PRODUCT_REVERTED_STAGED_CHANGES</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.36">PRODUCT_REVERTED_STAGED_CHANGES</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.ProductRevertedStagedChangesMessage.PRODUCT_REVERTED_STAGED_CHANGES">Constant Field Values</a></dd>
@@ -187,55 +202,55 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <section class="detail" id="getRemovedImageUrls()">
 <h3>getRemovedImageUrls</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.21">getRemovedImageUrls</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.38">getRemovedImageUrls</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRemovedImageUrls(java.lang.String...)">
 <h3>setRemovedImageUrls</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.25">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;removedImageUrls)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.42">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;removedImageUrls)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRemovedImageUrls(java.util.List)">
 <h3>setRemovedImageUrls</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.28">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;removedImageUrls)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.45">setRemovedImageUrls</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;removedImageUrls)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.30">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.47">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.ProductRevertedStagedChangesMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.34">of</a></span>&#8203;<span class="parameters">(<a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.51">of</a></span>&#8203;<span class="parameters">(<a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRevertedStagedChangesMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductRevertedStagedChangesMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.50">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRevertedStagedChangesMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductRevertedStagedChangesMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.67">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.ProductRevertedStagedChangesMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRevertedStagedChangesMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductRevertedStagedChangesMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProductRevertedStagedChangesMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductRevertedStagedChangesMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.71">builder</a></span>&#8203;<span class="parameters">(<a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProductRevertedStagedChangesMessage(java.util.function.Function)">
 <h3>withProductRevertedStagedChangesMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.59">withProductRevertedStagedChangesMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.76">withProductRevertedStagedChangesMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.63">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductRevertedStagedChangesMessage.html" title="interface in com.commercetools.api.models.message">ProductRevertedStagedChangesMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/ProductRevertedStagedChangesMessage.html#line.80">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

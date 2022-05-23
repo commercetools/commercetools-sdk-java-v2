@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="FieldDefinitionOrderValue.html" title="interface in com.commercetools.history.models.change_value">FieldDefinitionOrderValue</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.10">FieldDefinitionOrderValueBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.21">FieldDefinitionOrderValueBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="FieldDefinitionOrderValue.html" title="interface in com.commercetools.history.models.change_value">FieldDefinitionOrderValue</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   FieldDefinitionOrderValue fieldDefinitionOrderValue = FieldDefinitionOrderValue.builder()
+           .name("{name}")
+           .label(labelBuilder -> labelBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +171,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>FieldDefinitionOrderValueBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.11">FieldDefinitionOrderValueBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.22">FieldDefinitionOrderValueBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -176,37 +185,37 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.17">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.28">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="label(java.util.function.Function)">
 <h3>label</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.22">label</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.33">label</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="label(com.commercetools.history.models.common.LocalizedString)">
 <h3>label</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.28">label</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;label)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.39">label</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;label)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.33">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.44">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLabel()">
 <h3>getLabel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.37">getLabel</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.48">getLabel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValue.html" title="interface in com.commercetools.history.models.change_value">FieldDefinitionOrderValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.41">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValue.html" title="interface in com.commercetools.history.models.change_value">FieldDefinitionOrderValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.52">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="FieldDefinitionOrderValue.html" title="interface in com.commercetools.history.models.change_value">FieldDefinitionOrderValue</a>&gt;</code></dd>
@@ -216,20 +225,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValue.html" title="interface in com.commercetools.history.models.change_value">FieldDefinitionOrderValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.50">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValue.html" title="interface in com.commercetools.history.models.change_value">FieldDefinitionOrderValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.61">buildUnchecked</a></span>()</div>
 <div class="block">builds FieldDefinitionOrderValue without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.54">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.65">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change_value.FieldDefinitionOrderValue)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.58">of</a></span>&#8203;<span class="parameters">(<a href="FieldDefinitionOrderValue.html" title="interface in com.commercetools.history.models.change_value">FieldDefinitionOrderValue</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionOrderValueBuilder.html" title="class in com.commercetools.history.models.change_value">FieldDefinitionOrderValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change_value/FieldDefinitionOrderValueBuilder.html#line.69">of</a></span>&#8203;<span class="parameters">(<a href="FieldDefinitionOrderValue.html" title="interface in com.commercetools.history.models.change_value">FieldDefinitionOrderValue</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

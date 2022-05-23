@@ -83,9 +83,23 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomLineItemReturnItem.html" title="interface in com.commercetools.api.models.order">CustomLineItemReturnItem</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.12">CustomLineItemReturnItemBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.28">CustomLineItemReturnItemBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomLineItemReturnItem.html" title="interface in com.commercetools.api.models.order">CustomLineItemReturnItem</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomLineItemReturnItem customLineItemReturnItem = CustomLineItemReturnItem.builder()
+           .id("{id}")
+           .quantity(0.3)
+           .shipmentState(ReturnShipmentState.ADVISED)
+           .paymentState(ReturnPaymentState.NON_REFUNDABLE)
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .customLineItemId("{customLineItemId}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -210,7 +224,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>CustomLineItemReturnItemBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.13">CustomLineItemReturnItemBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.29">CustomLineItemReturnItemBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -224,46 +238,46 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.39">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.55">id</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <div class="block"><p>Platform-generated unique identifier of the ReturnItem.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="quantity(java.lang.Long)">
 <h3>quantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.44">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.60">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="comment(java.lang.String)">
 <h3>comment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.49">comment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.65">comment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;comment)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shipmentState(com.commercetools.api.models.order.ReturnShipmentState)">
 <h3>shipmentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.54">shipmentState</a></span>&#8203;<span class="parameters">(<a href="ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a>&nbsp;shipmentState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.70">shipmentState</a></span>&#8203;<span class="parameters">(<a href="ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a>&nbsp;shipmentState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="paymentState(com.commercetools.api.models.order.ReturnPaymentState)">
 <h3>paymentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.60">paymentState</a></span>&#8203;<span class="parameters">(<a href="ReturnPaymentState.html" title="interface in com.commercetools.api.models.order">ReturnPaymentState</a>&nbsp;paymentState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.76">paymentState</a></span>&#8203;<span class="parameters">(<a href="ReturnPaymentState.html" title="interface in com.commercetools.api.models.order">ReturnPaymentState</a>&nbsp;paymentState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="custom(java.util.function.Function)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.70">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.86">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,&#8203;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Custom Fields of this return item.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="custom(com.commercetools.api.models.type.CustomFields)">
 <h3>custom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.80">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.96">custom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
 <div class="block"><p>Custom Fields of this return item.</p></div>
 </section>
@@ -271,81 +285,81 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.86">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.102">lastModifiedAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.91">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.107">createdAt</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customLineItemId(java.lang.String)">
 <h3>customLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.96">customLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.112">customLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.101">getId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.117">getId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.105">getQuantity</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.121">getQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getComment()">
 <h3>getComment</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.109">getComment</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.125">getComment</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShipmentState()">
 <h3>getShipmentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.114">getShipmentState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.130">getShipmentState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPaymentState()">
 <h3>getPaymentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnPaymentState.html" title="interface in com.commercetools.api.models.order">ReturnPaymentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.118">getPaymentState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnPaymentState.html" title="interface in com.commercetools.api.models.order">ReturnPaymentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.134">getPaymentState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.122">getCustom</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.138">getCustom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.127">getLastModifiedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.143">getLastModifiedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.131">getCreatedAt</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.147">getCreatedAt</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomLineItemId()">
 <h3>getCustomLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.135">getCustomLineItemId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.151">getCustomLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItem.html" title="interface in com.commercetools.api.models.order">CustomLineItemReturnItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.139">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItem.html" title="interface in com.commercetools.api.models.order">CustomLineItemReturnItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.155">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="CustomLineItemReturnItem.html" title="interface in com.commercetools.api.models.order">CustomLineItemReturnItem</a>&gt;</code></dd>
@@ -355,20 +369,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItem.html" title="interface in com.commercetools.api.models.order">CustomLineItemReturnItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.154">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItem.html" title="interface in com.commercetools.api.models.order">CustomLineItemReturnItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.170">buildUnchecked</a></span>()</div>
 <div class="block">builds CustomLineItemReturnItem without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.159">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.175">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.CustomLineItemReturnItem)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.163">of</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemReturnItem.html" title="interface in com.commercetools.api.models.order">CustomLineItemReturnItem</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="CustomLineItemReturnItemBuilder.html" title="class in com.commercetools.api.models.order">CustomLineItemReturnItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/CustomLineItemReturnItemBuilder.html#line.179">of</a></span>&#8203;<span class="parameters">(<a href="CustomLineItemReturnItem.html" title="interface in com.commercetools.api.models.order">CustomLineItemReturnItem</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

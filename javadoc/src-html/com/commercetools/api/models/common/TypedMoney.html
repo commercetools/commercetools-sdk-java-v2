@@ -26,57 +26,68 @@
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
 <span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16">*  &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">017</span><span id="line.17">*/</span>
-<span class="source-line-no">018</span><span id="line.18">@JsonSubTypes({</span>
-<span class="source-line-no">019</span><span id="line.19">        @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyImpl.class, name = CentPrecisionMoney.CENT_PRECISION),</span>
-<span class="source-line-no">020</span><span id="line.20">        @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyImpl.class, name = HighPrecisionMoney.HIGH_PRECISION) })</span>
-<span class="source-line-no">021</span><span id="line.21">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyImpl.class, visible = true)</span>
-<span class="source-line-no">022</span><span id="line.22">@JsonDeserialize(as = TypedMoneyImpl.class)</span>
-<span class="source-line-no">023</span><span id="line.23">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">024</span><span id="line.24">public interface TypedMoney extends Money {</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    /**</span>
-<span class="source-line-no">027</span><span id="line.27">    *  &lt;p&gt;The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.&lt;/p&gt;</span>
-<span class="source-line-no">028</span><span id="line.28">    */</span>
-<span class="source-line-no">029</span><span id="line.29">    @NotNull</span>
-<span class="source-line-no">030</span><span id="line.30">    @JsonProperty("type")</span>
-<span class="source-line-no">031</span><span id="line.31">    public MoneyType getType();</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    /**</span>
-<span class="source-line-no">034</span><span id="line.34">    *  &lt;p&gt;Number of digits after the decimal separator:&lt;/p&gt;</span>
-<span class="source-line-no">035</span><span id="line.35">    *  &lt;ul&gt;</span>
-<span class="source-line-no">036</span><span id="line.36">    *   &lt;li&gt;Equal to the default number of fraction digits for a currency in CentPrecisionMoney.&lt;/li&gt;</span>
-<span class="source-line-no">037</span><span id="line.37">    *   &lt;li&gt;Greater than the default number of fraction digits for a currency in HighPrecisionMoney.&lt;/li&gt;</span>
-<span class="source-line-no">038</span><span id="line.38">    *  &lt;/ul&gt;</span>
-<span class="source-line-no">039</span><span id="line.39">    */</span>
+<span class="source-line-no">016</span><span id="line.16"> &lt;p&gt;Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the &lt;code&gt;type&lt;/code&gt; field.&lt;/p&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"></span>
+<span class="source-line-no">018</span><span id="line.18"> Example to create a subtype instance using the builder pattern</span>
+<span class="source-line-no">019</span><span id="line.19"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">021</span><span id="line.21">   TypedMoney typedMoney = TypedMoney.centPrecisionBuilder()</span>
+<span class="source-line-no">022</span><span id="line.22">           centAmount(0.3)</span>
+<span class="source-line-no">023</span><span id="line.23">           currencyCode("{currencyCode}")</span>
+<span class="source-line-no">024</span><span id="line.24">           fractionDigits(0.3)</span>
+<span class="source-line-no">025</span><span id="line.25">           .build()</span>
+<span class="source-line-no">026</span><span id="line.26"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> &lt;/div&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> */</span>
+<span class="source-line-no">029</span><span id="line.29">@JsonSubTypes({</span>
+<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyImpl.class, name = CentPrecisionMoney.CENT_PRECISION),</span>
+<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyImpl.class, name = HighPrecisionMoney.HIGH_PRECISION) })</span>
+<span class="source-line-no">032</span><span id="line.32">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyImpl.class, visible = true)</span>
+<span class="source-line-no">033</span><span id="line.33">@JsonDeserialize(as = TypedMoneyImpl.class)</span>
+<span class="source-line-no">034</span><span id="line.34">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">035</span><span id="line.35">public interface TypedMoney extends Money {</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    /**</span>
+<span class="source-line-no">038</span><span id="line.38">     *  &lt;p&gt;The commercetools Platform supports two different types of Money: one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.&lt;/p&gt;</span>
+<span class="source-line-no">039</span><span id="line.39">     */</span>
 <span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
-<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("fractionDigits")</span>
-<span class="source-line-no">042</span><span id="line.42">    public Integer getFractionDigits();</span>
+<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("type")</span>
+<span class="source-line-no">042</span><span id="line.42">    public MoneyType getType();</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    public void setFractionDigits(final Integer fractionDigits);</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public static com.commercetools.api.models.common.CentPrecisionMoneyBuilder centPrecisionBuilder() {</span>
-<span class="source-line-no">047</span><span id="line.47">        return com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of();</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public static com.commercetools.api.models.common.HighPrecisionMoneyBuilder highPrecisionBuilder() {</span>
-<span class="source-line-no">051</span><span id="line.51">        return com.commercetools.api.models.common.HighPrecisionMoneyBuilder.of();</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    default &lt;T&gt; T withTypedMoney(Function&lt;TypedMoney, T&gt; helper) {</span>
-<span class="source-line-no">055</span><span id="line.55">        return helper.apply(this);</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoney&gt; typeReference() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoney&gt;() {</span>
-<span class="source-line-no">060</span><span id="line.60">            @Override</span>
-<span class="source-line-no">061</span><span id="line.61">            public String toString() {</span>
-<span class="source-line-no">062</span><span id="line.62">                return "TypeReference&lt;TypedMoney&gt;";</span>
-<span class="source-line-no">063</span><span id="line.63">            }</span>
-<span class="source-line-no">064</span><span id="line.64">        };</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66">}</span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;Number of digits after the decimal separator:&lt;/p&gt;</span>
+<span class="source-line-no">046</span><span id="line.46">     *  &lt;ul&gt;</span>
+<span class="source-line-no">047</span><span id="line.47">     *   &lt;li&gt;Equal to the default number of fraction digits for a currency in CentPrecisionMoney.&lt;/li&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     *   &lt;li&gt;Greater than the default number of fraction digits for a currency in HighPrecisionMoney.&lt;/li&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">     */</span>
+<span class="source-line-no">051</span><span id="line.51">    @NotNull</span>
+<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("fractionDigits")</span>
+<span class="source-line-no">053</span><span id="line.53">    public Integer getFractionDigits();</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    public void setFractionDigits(final Integer fractionDigits);</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    public static com.commercetools.api.models.common.CentPrecisionMoneyBuilder centPrecisionBuilder() {</span>
+<span class="source-line-no">058</span><span id="line.58">        return com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of();</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public static com.commercetools.api.models.common.HighPrecisionMoneyBuilder highPrecisionBuilder() {</span>
+<span class="source-line-no">062</span><span id="line.62">        return com.commercetools.api.models.common.HighPrecisionMoneyBuilder.of();</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    default &lt;T&gt; T withTypedMoney(Function&lt;TypedMoney, T&gt; helper) {</span>
+<span class="source-line-no">066</span><span id="line.66">        return helper.apply(this);</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoney&gt; typeReference() {</span>
+<span class="source-line-no">070</span><span id="line.70">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TypedMoney&gt;() {</span>
+<span class="source-line-no">071</span><span id="line.71">            @Override</span>
+<span class="source-line-no">072</span><span id="line.72">            public String toString() {</span>
+<span class="source-line-no">073</span><span id="line.73">                return "TypeReference&lt;TypedMoney&gt;";</span>
+<span class="source-line-no">074</span><span id="line.74">            }</span>
+<span class="source-line-no">075</span><span id="line.75">        };</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77">}</span>
 
 
 

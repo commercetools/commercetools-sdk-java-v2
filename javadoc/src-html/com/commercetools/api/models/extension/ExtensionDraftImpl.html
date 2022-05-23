@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String key;</span>
@@ -53,30 +53,30 @@
 <span class="source-line-no">040</span><span id="line.40">    }</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
 <span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">    *  &lt;p&gt;User-defined unique identifier for the Extension.&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">    */</span>
+<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;User-defined unique identifier for the Extension.&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     */</span>
 <span class="source-line-no">045</span><span id="line.45">    public String getKey() {</span>
 <span class="source-line-no">046</span><span id="line.46">        return this.key;</span>
 <span class="source-line-no">047</span><span id="line.47">    }</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
 <span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">    *  &lt;p&gt;Defines where the Extension can be reached.&lt;/p&gt;</span>
-<span class="source-line-no">051</span><span id="line.51">    */</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Defines where the Extension can be reached.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     */</span>
 <span class="source-line-no">052</span><span id="line.52">    public com.commercetools.api.models.extension.ExtensionDestination getDestination() {</span>
 <span class="source-line-no">053</span><span id="line.53">        return this.destination;</span>
 <span class="source-line-no">054</span><span id="line.54">    }</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
 <span class="source-line-no">056</span><span id="line.56">    /**</span>
-<span class="source-line-no">057</span><span id="line.57">    *  &lt;p&gt;Describes what triggers the Extension.&lt;/p&gt;</span>
-<span class="source-line-no">058</span><span id="line.58">    */</span>
+<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;Describes what triggers the Extension.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     */</span>
 <span class="source-line-no">059</span><span id="line.59">    public java.util.List&lt;com.commercetools.api.models.extension.ExtensionTrigger&gt; getTriggers() {</span>
 <span class="source-line-no">060</span><span id="line.60">        return this.triggers;</span>
 <span class="source-line-no">061</span><span id="line.61">    }</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
 <span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">    *  &lt;p&gt;Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for &lt;code&gt;payment&lt;/code&gt; Extensions and 2000 ms (2 seconds) for all other Extensions.&lt;/p&gt;</span>
-<span class="source-line-no">065</span><span id="line.65">    *  &lt;p&gt;This limit can be increased per Project after we review the performance impact. Please contact our support via the support portal and provide the Region, Project key, and use case.&lt;/p&gt;</span>
-<span class="source-line-no">066</span><span id="line.66">    */</span>
+<span class="source-line-no">064</span><span id="line.64">     *  &lt;p&gt;Maximum time (in milliseconds) the commercetools Platform waits for a response from the Extension. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for &lt;code&gt;payment&lt;/code&gt; Extensions and 2000 ms (2 seconds) for all other Extensions.&lt;/p&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;This limit can be increased per Project after we review the performance impact. Please contact our support via the support portal and provide the Region, Project key, and use case.&lt;/p&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">     */</span>
 <span class="source-line-no">067</span><span id="line.67">    public Integer getTimeoutInMs() {</span>
 <span class="source-line-no">068</span><span id="line.68">        return this.timeoutInMs;</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>

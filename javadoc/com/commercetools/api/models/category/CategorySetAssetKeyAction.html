@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CategorySetAssetKeyActionImpl.html" title="class in com.commercetools.api.models.category">CategorySetAssetKeyActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.15">CategorySetAssetKeyAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.25">CategorySetAssetKeyAction</a></span><span class="extends-implements">
 extends <a href="CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CategorySetAssetKeyAction categorySetAssetKeyAction = CategorySetAssetKeyAction.builder()
+           .assetId("{assetId}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -170,7 +178,7 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="SET_ASSET_KEY">
 <h3>SET_ASSET_KEY</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.19">SET_ASSET_KEY</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.29">SET_ASSET_KEY</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.category.CategorySetAssetKeyAction.SET_ASSET_KEY">Constant Field Values</a></dd>
@@ -189,62 +197,62 @@ extends <a href="CategoryUpdateAction.html" title="interface in com.commercetool
 <section class="detail" id="getAssetId()">
 <h3>getAssetId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.21">getAssetId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.31">getAssetId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAssetKey()">
 <h3>getAssetKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.29">getAssetKey</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.39">getAssetKey</a></span>()</div>
 <div class="block"><p>User-defined identifier for the asset. If left blank or set to <code>null</code>, the asset key is unset/removed.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssetId(java.lang.String)">
 <h3>setAssetId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.32">setAssetId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;assetId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.42">setAssetId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;assetId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAssetKey(java.lang.String)">
 <h3>setAssetKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.34">setAssetKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;assetKey)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.44">setAssetKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;assetKey)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.36">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.46">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.category.CategorySetAssetKeyAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.40">of</a></span>&#8203;<span class="parameters">(<a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategorySetAssetKeyActionBuilder.html" title="class in com.commercetools.api.models.category">CategorySetAssetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.47">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategorySetAssetKeyActionBuilder.html" title="class in com.commercetools.api.models.category">CategorySetAssetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.57">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.category.CategorySetAssetKeyAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategorySetAssetKeyActionBuilder.html" title="class in com.commercetools.api.models.category">CategorySetAssetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.51">builder</a></span>&#8203;<span class="parameters">(<a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CategorySetAssetKeyActionBuilder.html" title="class in com.commercetools.api.models.category">CategorySetAssetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.61">builder</a></span>&#8203;<span class="parameters">(<a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCategorySetAssetKeyAction(java.util.function.Function)">
 <h3>withCategorySetAssetKeyAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.55">withCategorySetAssetKeyAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.65">withCategorySetAssetKeyAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.59">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CategorySetAssetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetAssetKeyAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/category/CategorySetAssetKeyAction.html#line.69">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.9">ItemShippingTargetBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.20">ItemShippingTargetBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ItemShippingTarget itemShippingTarget = ItemShippingTarget.builder()
+           .addressKey("{addressKey}")
+           .quantity(1)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -163,7 +172,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ItemShippingTargetBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.10">ItemShippingTargetBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.21">ItemShippingTargetBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -177,33 +186,33 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addressKey(java.lang.String)">
 <h3>addressKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.20">addressKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addressKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.31">addressKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;addressKey)</span></div>
 <div class="block"><p>The key of the address in the cart's <code>itemShippingAddresses</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="quantity(java.lang.Integer)">
 <h3>quantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.29">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.40">quantity</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;quantity)</span></div>
 <div class="block"><p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAddressKey()">
 <h3>getAddressKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.34">getAddressKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.45">getAddressKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getQuantity()">
 <h3>getQuantity</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.38">getQuantity</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.49">getQuantity</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.42">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.53">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&gt;</code></dd>
@@ -213,20 +222,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.51">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.62">buildUnchecked</a></span>()</div>
 <div class="block">builds ItemShippingTarget without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.55">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.66">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.ItemShippingTarget)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.59">of</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingTargetBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/ItemShippingTargetBuilder.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="ItemShippingTarget.html" title="interface in com.commercetools.history.models.common">ItemShippingTarget</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ApiClientDraft.html" title="interface in com.commercetools.api.models.api_client">ApiClientDraft</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.11">ApiClientDraftBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.22">ApiClientDraftBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ApiClientDraft.html" title="interface in com.commercetools.api.models.api_client">ApiClientDraft</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ApiClientDraft apiClientDraft = ApiClientDraft.builder()
+           .name("{name}")
+           .scope("{scope}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -187,7 +196,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ApiClientDraftBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.12">ApiClientDraftBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.23">ApiClientDraftBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -201,21 +210,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.31">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.42">name</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 <div class="block"><p>Name of the APIClient.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="scope(java.lang.String)">
 <h3>scope</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.40">scope</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scope)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.51">scope</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;scope)</span></div>
 <div class="block"><p>Whitespace-separated list of OAuth scopes that can be used when obtaining an access token.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="deleteDaysAfterCreation(java.lang.Long)">
 <h3>deleteDaysAfterCreation</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.49">deleteDaysAfterCreation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.60">deleteDaysAfterCreation</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;deleteDaysAfterCreation)</span></div>
 <div class="block"><p>If set, the Client will be deleted after the specified amount of days.</p></div>
 </section>
@@ -223,7 +232,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="accessTokenValiditySeconds(java.lang.Integer)">
 <h3>accessTokenValiditySeconds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.58">accessTokenValiditySeconds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.69">accessTokenValiditySeconds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;accessTokenValiditySeconds)</span></div>
 <div class="block"><p>Expiration time in seconds for each access token obtained by the APIClient. If not set the default value applies.</p></div>
 </section>
@@ -231,7 +240,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="refreshTokenValiditySeconds(java.lang.Integer)">
 <h3>refreshTokenValiditySeconds</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.67">refreshTokenValiditySeconds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.78">refreshTokenValiditySeconds</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;refreshTokenValiditySeconds)</span></div>
 <div class="block"><p>Inactivity expiration time in seconds for each refresh token obtained by the APIClient. The expiration time for refresh tokens is restarted each time the token is used. If not set the default value applies.</p></div>
 </section>
@@ -239,40 +248,40 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.72">getName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.83">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getScope()">
 <h3>getScope</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.76">getScope</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.87">getScope</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDeleteDaysAfterCreation()">
 <h3>getDeleteDaysAfterCreation</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.80">getDeleteDaysAfterCreation</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.91">getDeleteDaysAfterCreation</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAccessTokenValiditySeconds()">
 <h3>getAccessTokenValiditySeconds</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.85">getAccessTokenValiditySeconds</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.96">getAccessTokenValiditySeconds</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getRefreshTokenValiditySeconds()">
 <h3>getRefreshTokenValiditySeconds</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.90">getRefreshTokenValiditySeconds</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.101">getRefreshTokenValiditySeconds</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraft.html" title="interface in com.commercetools.api.models.api_client">ApiClientDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.95">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraft.html" title="interface in com.commercetools.api.models.api_client">ApiClientDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.106">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ApiClientDraft.html" title="interface in com.commercetools.api.models.api_client">ApiClientDraft</a>&gt;</code></dd>
@@ -282,20 +291,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraft.html" title="interface in com.commercetools.api.models.api_client">ApiClientDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.105">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiClientDraft.html" title="interface in com.commercetools.api.models.api_client">ApiClientDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.116">buildUnchecked</a></span>()</div>
 <div class="block">builds ApiClientDraft without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.110">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.121">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.api_client.ApiClientDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.114">of</a></span>&#8203;<span class="parameters">(<a href="ApiClientDraft.html" title="interface in com.commercetools.api.models.api_client">ApiClientDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiClientDraftBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/api_client/ApiClientDraftBuilder.html#line.125">of</a></span>&#8203;<span class="parameters">(<a href="ApiClientDraft.html" title="interface in com.commercetools.api.models.api_client">ApiClientDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

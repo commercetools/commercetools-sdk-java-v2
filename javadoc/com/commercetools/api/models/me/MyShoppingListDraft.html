@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="MyShoppingListDraftImpl.html" title="class in com.commercetools.api.models.me">MyShoppingListDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.21">MyShoppingListDraft</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.31">MyShoppingListDraft</a></span><span class="extends-implements">
 extends <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MyShoppingListDraft myShoppingListDraft = MyShoppingListDraft.builder()
+           .name(nameBuilder -> nameBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -192,35 +200,35 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.25">getName</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.35">getName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.30">getDescription</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.40">getDescription</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLineItems()">
 <h3>getLineItems</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../shopping_list/ShoppingListLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.34">getLineItems</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../shopping_list/ShoppingListLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.44">getLineItems</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTextLineItems()">
 <h3>getTextLineItems</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../shopping_list/TextLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">TextLineItemDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.38">getTextLineItems</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../shopping_list/TextLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">TextLineItemDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.48">getTextLineItems</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.45">getCustom</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.55">getCustom</a></span>()</div>
 <div class="block"><p>The custom fields.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -231,7 +239,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="getDeleteDaysAfterLastModification()">
 <h3>getDeleteDaysAfterLastModification</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.53">getDeleteDaysAfterLastModification</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.63">getDeleteDaysAfterLastModification</a></span>()</div>
 <div class="block"><p>The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</p></div>
 </section>
 </li>
@@ -239,49 +247,49 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getStore()">
 <h3>getStore</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.56">getStore</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.66">getStore</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.60">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.70">setName</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDescription(com.commercetools.api.models.common.LocalizedString)">
 <h3>setDescription</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.62">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.72">setDescription</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLineItems(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft...)">
 <h3>setLineItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.64">setLineItems</a></span>&#8203;<span class="parameters">(<a href="../shopping_list/ShoppingListLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraft</a>...&nbsp;lineItems)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.74">setLineItems</a></span>&#8203;<span class="parameters">(<a href="../shopping_list/ShoppingListLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraft</a>...&nbsp;lineItems)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLineItems(java.util.List)">
 <h3>setLineItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.67">setLineItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../shopping_list/ShoppingListLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraft</a>&gt;&nbsp;lineItems)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.77">setLineItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../shopping_list/ShoppingListLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraft</a>&gt;&nbsp;lineItems)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTextLineItems(com.commercetools.api.models.shopping_list.TextLineItemDraft...)">
 <h3>setTextLineItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.69">setTextLineItems</a></span>&#8203;<span class="parameters">(<a href="../shopping_list/TextLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">TextLineItemDraft</a>...&nbsp;textLineItems)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.79">setTextLineItems</a></span>&#8203;<span class="parameters">(<a href="../shopping_list/TextLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">TextLineItemDraft</a>...&nbsp;textLineItems)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTextLineItems(java.util.List)">
 <h3>setTextLineItems</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.72">setTextLineItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../shopping_list/TextLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">TextLineItemDraft</a>&gt;&nbsp;textLineItems)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.82">setTextLineItems</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../shopping_list/TextLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">TextLineItemDraft</a>&gt;&nbsp;textLineItems)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.74">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.84">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>&gt;</code></dd>
@@ -291,49 +299,49 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <li>
 <section class="detail" id="setDeleteDaysAfterLastModification(java.lang.Long)">
 <h3>setDeleteDaysAfterLastModification</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.76">setDeleteDaysAfterLastModification</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;deleteDaysAfterLastModification)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.86">setDeleteDaysAfterLastModification</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;deleteDaysAfterLastModification)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStore(com.commercetools.api.models.store.StoreResourceIdentifier)">
 <h3>setStore</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.78">setStore</a></span>&#8203;<span class="parameters">(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&nbsp;store)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.88">setStore</a></span>&#8203;<span class="parameters">(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&nbsp;store)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.80">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.90">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.me.MyShoppingListDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.84">of</a></span>&#8203;<span class="parameters">(<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.94">of</a></span>&#8203;<span class="parameters">(<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyShoppingListDraftBuilder.html" title="class in com.commercetools.api.models.me">MyShoppingListDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.96">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyShoppingListDraftBuilder.html" title="class in com.commercetools.api.models.me">MyShoppingListDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.106">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.me.MyShoppingListDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyShoppingListDraftBuilder.html" title="class in com.commercetools.api.models.me">MyShoppingListDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.100">builder</a></span>&#8203;<span class="parameters">(<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MyShoppingListDraftBuilder.html" title="class in com.commercetools.api.models.me">MyShoppingListDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.110">builder</a></span>&#8203;<span class="parameters">(<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMyShoppingListDraft(java.util.function.Function)">
 <h3>withMyShoppingListDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.104">withMyShoppingListDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.114">withMyShoppingListDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.108">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MyShoppingListDraft.html" title="interface in com.commercetools.api.models.me">MyShoppingListDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/me/MyShoppingListDraft.html#line.118">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

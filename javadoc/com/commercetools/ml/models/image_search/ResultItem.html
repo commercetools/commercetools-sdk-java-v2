@@ -80,8 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ResultItemImpl.html" title="class in com.commercetools.ml.models.image_search">ResultItemImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.20">ResultItem</a></span></div>
-<div class="block"><p>An image URL and the product variants it is contained in. If no matching images are found, ResultItem is not present.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.30">ResultItem</a></span></div>
+<div class="block"><p>An image URL and the product variants it is contained in. If no matching images are found, ResultItem is not present.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ResultItem resultItem = ResultItem.builder()
+           .imageUrl("{imageUrl}")
+           .plusProductVariants(productVariantsBuilder -> productVariantsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -151,7 +161,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getImageUrl()">
 <h3>getImageUrl</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.27">getImageUrl</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.37">getImageUrl</a></span>()</div>
 <div class="block"><p>The URL of the image.</p></div>
 </section>
 </li>
@@ -160,62 +170,62 @@ loadScripts(document, 'script');</script>
 <h3>getProductVariants</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.34">getProductVariants</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.44">getProductVariants</a></span>()</div>
 <div class="block"><p>An array of product variants containing the image URL.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setImageUrl(java.lang.String)">
 <h3>setImageUrl</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.39">setImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;imageUrl)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.49">setImageUrl</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;imageUrl)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductVariants(com.commercetools.ml.models.common.ProductVariant...)">
 <h3>setProductVariants</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.41">setProductVariants</a></span>&#8203;<span class="parameters">(<a href="../common/ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>...&nbsp;productVariants)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.51">setProductVariants</a></span>&#8203;<span class="parameters">(<a href="../common/ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>...&nbsp;productVariants)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setProductVariants(java.util.List)">
 <h3>setProductVariants</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.44">setProductVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&gt;&nbsp;productVariants)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.54">setProductVariants</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/ProductVariant.html" title="interface in com.commercetools.ml.models.common">ProductVariant</a>&gt;&nbsp;productVariants)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.46">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.56">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.ml.models.image_search.ResultItem)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.50">of</a></span>&#8203;<span class="parameters">(<a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResultItemBuilder.html" title="class in com.commercetools.ml.models.image_search">ResultItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.57">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResultItemBuilder.html" title="class in com.commercetools.ml.models.image_search">ResultItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.67">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.ml.models.image_search.ResultItem)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResultItemBuilder.html" title="class in com.commercetools.ml.models.image_search">ResultItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.61">builder</a></span>&#8203;<span class="parameters">(<a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResultItemBuilder.html" title="class in com.commercetools.ml.models.image_search">ResultItemBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.71">builder</a></span>&#8203;<span class="parameters">(<a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withResultItem(java.util.function.Function)">
 <h3>withResultItem</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.65">withResultItem</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.75">withResultItem</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.69">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ResultItem.html" title="interface in com.commercetools.ml.models.image_search">ResultItem</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/ml/models/image_search/ResultItem.html#line.79">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.10">DiscountedPriceBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.21">DiscountedPriceBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DiscountedPrice discountedPrice = DiscountedPrice.builder()
+           .value(valueBuilder -> valueBuilder)
+           .discount(discountBuilder -> discountBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -169,7 +178,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DiscountedPriceBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.11">DiscountedPriceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.22">DiscountedPriceBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -183,45 +192,45 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="value(com.commercetools.importapi.models.common.TypedMoney)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.17">value</a></span>&#8203;<span class="parameters">(<a href="TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.28">value</a></span>&#8203;<span class="parameters">(<a href="TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="value(java.util.function.Function)">
 <h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.22">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyBuilder.html" title="class in com.commercetools.importapi.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.33">value</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TypedMoneyBuilder.html" title="class in com.commercetools.importapi.models.common">TypedMoneyBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="discount(java.util.function.Function)">
 <h3>discount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.32">discount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductDiscountKeyReferenceBuilder</a>,&#8203;<a href="ProductDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductDiscountKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.43">discount</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductDiscountKeyReferenceBuilder</a>,&#8203;<a href="ProductDiscountKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductDiscountKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Reference to a ProductDiscount.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="discount(com.commercetools.importapi.models.common.ProductDiscountKeyReference)">
 <h3>discount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.43">discount</a></span>&#8203;<span class="parameters">(<a href="ProductDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductDiscountKeyReference</a>&nbsp;discount)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.54">discount</a></span>&#8203;<span class="parameters">(<a href="ProductDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductDiscountKeyReference</a>&nbsp;discount)</span></div>
 <div class="block"><p>Reference to a ProductDiscount.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.49">getValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.60">getValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDiscount()">
 <h3>getDiscount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductDiscountKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.53">getDiscount</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductDiscountKeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.64">getDiscount</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.57">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.68">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a>&gt;</code></dd>
@@ -231,20 +240,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.66">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.77">buildUnchecked</a></span>()</div>
 <div class="block">builds DiscountedPrice without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.70">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.81">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.common.DiscountedPrice)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.74">of</a></span>&#8203;<span class="parameters">(<a href="DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DiscountedPriceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountedPriceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/common/DiscountedPriceBuilder.html#line.85">of</a></span>&#8203;<span class="parameters">(<a href="DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

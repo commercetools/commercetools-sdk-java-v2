@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderRemovePaymentAction.html" title="interface in com.commercetools.api.models.order">OrderRemovePaymentAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.10">OrderRemovePaymentActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.20">OrderRemovePaymentActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderRemovePaymentAction.html" title="interface in com.commercetools.api.models.order">OrderRemovePaymentAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderRemovePaymentAction orderRemovePaymentAction = OrderRemovePaymentAction.builder()
+           .payment(paymentBuilder -> paymentBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -160,7 +168,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderRemovePaymentActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.11">OrderRemovePaymentActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.21">OrderRemovePaymentActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -174,27 +182,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="payment(java.util.function.Function)">
 <h3>payment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.order">OrderRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.19">payment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.payment">PaymentResourceIdentifierBuilder</a>,&#8203;<a href="../payment/PaymentResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.payment">PaymentResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.order">OrderRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.29">payment</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../payment/PaymentResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.payment">PaymentResourceIdentifierBuilder</a>,&#8203;<a href="../payment/PaymentResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.payment">PaymentResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>ResourceIdentifier to a Payment.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="payment(com.commercetools.api.models.payment.PaymentResourceIdentifier)">
 <h3>payment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.order">OrderRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.30">payment</a></span>&#8203;<span class="parameters">(<a href="../payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a>&nbsp;payment)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.order">OrderRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.40">payment</a></span>&#8203;<span class="parameters">(<a href="../payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a>&nbsp;payment)</span></div>
 <div class="block"><p>ResourceIdentifier to a Payment.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPayment()">
 <h3>getPayment</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.36">getPayment</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../payment/PaymentResourceIdentifier.html" title="interface in com.commercetools.api.models.payment">PaymentResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.46">getPayment</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentAction.html" title="interface in com.commercetools.api.models.order">OrderRemovePaymentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.40">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentAction.html" title="interface in com.commercetools.api.models.order">OrderRemovePaymentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.50">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderRemovePaymentAction.html" title="interface in com.commercetools.api.models.order">OrderRemovePaymentAction</a>&gt;</code></dd>
@@ -204,20 +212,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentAction.html" title="interface in com.commercetools.api.models.order">OrderRemovePaymentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.48">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentAction.html" title="interface in com.commercetools.api.models.order">OrderRemovePaymentAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.58">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderRemovePaymentAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.order">OrderRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.52">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.order">OrderRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.62">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.OrderRemovePaymentAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.order">OrderRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.56">of</a></span>&#8203;<span class="parameters">(<a href="OrderRemovePaymentAction.html" title="interface in com.commercetools.api.models.order">OrderRemovePaymentAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderRemovePaymentActionBuilder.html" title="class in com.commercetools.api.models.order">OrderRemovePaymentActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderRemovePaymentActionBuilder.html#line.66">of</a></span>&#8203;<span class="parameters">(<a href="OrderRemovePaymentAction.html" title="interface in com.commercetools.api.models.order">OrderRemovePaymentAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

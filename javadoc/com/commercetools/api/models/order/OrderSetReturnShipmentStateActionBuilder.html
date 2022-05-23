@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderSetReturnShipmentStateAction.html" title="interface in com.commercetools.api.models.order">OrderSetReturnShipmentStateAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.9">OrderSetReturnShipmentStateActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.20">OrderSetReturnShipmentStateActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderSetReturnShipmentStateAction.html" title="interface in com.commercetools.api.models.order">OrderSetReturnShipmentStateAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderSetReturnShipmentStateAction orderSetReturnShipmentStateAction = OrderSetReturnShipmentStateAction.builder()
+           .returnItemId("{returnItemId}")
+           .shipmentState(ReturnShipmentState.ADVISED)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -159,7 +168,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderSetReturnShipmentStateActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.10">OrderSetReturnShipmentStateActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.21">OrderSetReturnShipmentStateActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -173,31 +182,31 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="returnItemId(java.lang.String)">
 <h3>returnItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetReturnShipmentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.16">returnItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnItemId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetReturnShipmentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.27">returnItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;returnItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="shipmentState(com.commercetools.api.models.order.ReturnShipmentState)">
 <h3>shipmentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetReturnShipmentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.21">shipmentState</a></span>&#8203;<span class="parameters">(<a href="ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a>&nbsp;shipmentState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetReturnShipmentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.32">shipmentState</a></span>&#8203;<span class="parameters">(<a href="ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a>&nbsp;shipmentState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getReturnItemId()">
 <h3>getReturnItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.27">getReturnItemId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.38">getReturnItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getShipmentState()">
 <h3>getShipmentState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.31">getShipmentState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReturnShipmentState.html" title="interface in com.commercetools.api.models.order">ReturnShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.42">getShipmentState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateAction.html" title="interface in com.commercetools.api.models.order">OrderSetReturnShipmentStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.35">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateAction.html" title="interface in com.commercetools.api.models.order">OrderSetReturnShipmentStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.46">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderSetReturnShipmentStateAction.html" title="interface in com.commercetools.api.models.order">OrderSetReturnShipmentStateAction</a>&gt;</code></dd>
@@ -207,20 +216,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateAction.html" title="interface in com.commercetools.api.models.order">OrderSetReturnShipmentStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.44">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateAction.html" title="interface in com.commercetools.api.models.order">OrderSetReturnShipmentStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.55">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderSetReturnShipmentStateAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetReturnShipmentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.48">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetReturnShipmentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.59">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.OrderSetReturnShipmentStateAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetReturnShipmentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.52">of</a></span>&#8203;<span class="parameters">(<a href="OrderSetReturnShipmentStateAction.html" title="interface in com.commercetools.api.models.order">OrderSetReturnShipmentStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderSetReturnShipmentStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderSetReturnShipmentStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderSetReturnShipmentStateActionBuilder.html#line.63">of</a></span>&#8203;<span class="parameters">(<a href="OrderSetReturnShipmentStateAction.html" title="interface in com.commercetools.api.models.order">OrderSetReturnShipmentStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

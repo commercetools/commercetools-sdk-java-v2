@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductVariantPatchRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequest</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.10">ProductVariantPatchRequestBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.20">ProductVariantPatchRequestBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductVariantPatchRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequest</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductVariantPatchRequest productVariantPatchRequest = ProductVariantPatchRequest.builder()
+           .plusPatches(patchesBuilder -> patchesBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -175,7 +183,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProductVariantPatchRequestBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.11">ProductVariantPatchRequestBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.21">ProductVariantPatchRequestBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -189,48 +197,48 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="patches(com.commercetools.importapi.models.productvariants.ProductVariantPatch...)">
 <h3>patches</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.19">patches</a></span>&#8203;<span class="parameters">(<a href="../productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a>...&nbsp;patches)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.29">patches</a></span>&#8203;<span class="parameters">(<a href="../productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a>...&nbsp;patches)</span></div>
 <div class="block"><p>The product variant patches of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="patches(java.util.List)">
 <h3>patches</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.29">patches</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a>&gt;&nbsp;patches)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.39">patches</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a>&gt;&nbsp;patches)</span></div>
 <div class="block"><p>The product variant patches of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPatches(com.commercetools.importapi.models.productvariants.ProductVariantPatch...)">
 <h3>plusPatches</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.39">plusPatches</a></span>&#8203;<span class="parameters">(<a href="../productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a>...&nbsp;patches)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.49">plusPatches</a></span>&#8203;<span class="parameters">(<a href="../productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a>...&nbsp;patches)</span></div>
 <div class="block"><p>The product variant patches of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusPatches(java.util.function.Function)">
 <h3>plusPatches</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.52">plusPatches</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../productvariants/ProductVariantPatchBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantPatchBuilder</a>,&#8203;<a href="../productvariants/ProductVariantPatchBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantPatchBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.62">plusPatches</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../productvariants/ProductVariantPatchBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantPatchBuilder</a>,&#8203;<a href="../productvariants/ProductVariantPatchBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantPatchBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The product variant patches of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withPatches(java.util.function.Function)">
 <h3>withPatches</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.66">withPatches</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../productvariants/ProductVariantPatchBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantPatchBuilder</a>,&#8203;<a href="../productvariants/ProductVariantPatchBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantPatchBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.76">withPatches</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../productvariants/ProductVariantPatchBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantPatchBuilder</a>,&#8203;<a href="../productvariants/ProductVariantPatchBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantPatchBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>The product variant patches of this request.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPatches()">
 <h3>getPatches</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.74">getPatches</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.84">getPatches</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.78">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.88">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductVariantPatchRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequest</a>&gt;</code></dd>
@@ -240,20 +248,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.86">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequest</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.96">buildUnchecked</a></span>()</div>
 <div class="block">builds ProductVariantPatchRequest without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.90">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.100">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.94">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantPatchRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequest</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductVariantPatchRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequestBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/importapi/models/importrequests/ProductVariantPatchRequestBuilder.html#line.104">of</a></span>&#8203;<span class="parameters">(<a href="ProductVariantPatchRequest.html" title="interface in com.commercetools.importapi.models.importrequests">ProductVariantPatchRequest</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.10">SetCustomLineItemShippingDetailsChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.23">SetCustomLineItemShippingDetailsChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetCustomLineItemShippingDetailsChange setCustomLineItemShippingDetailsChange = SetCustomLineItemShippingDetailsChange.builder()
+           .change("{change}")
+           .customLineItemId("{customLineItemId}")
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -179,7 +190,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>SetCustomLineItemShippingDetailsChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.11">SetCustomLineItemShippingDetailsChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.24">SetCustomLineItemShippingDetailsChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -193,68 +204,68 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.25">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.38">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <div class="block"><p>Update action for <code>setCustomLineItemShippingDetails</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customLineItemId(java.lang.String)">
 <h3>customLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.30">customLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.43">customLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customLineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.function.Function)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.35">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a>,&#8203;<a href="../common/ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.48">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a>,&#8203;<a href="../common/ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.ItemShippingDetails)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.41">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.54">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.util.function.Function)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.47">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a>,&#8203;<a href="../common/ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.60">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a>,&#8203;<a href="../common/ItemShippingDetailsBuilder.html" title="class in com.commercetools.history.models.common">ItemShippingDetailsBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(com.commercetools.history.models.common.ItemShippingDetails)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.54">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.67">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.60">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.73">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomLineItemId()">
 <h3>getCustomLineItemId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.64">getCustomLineItemId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.77">getCustomLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.68">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.81">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.72">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ItemShippingDetails.html" title="interface in com.commercetools.history.models.common">ItemShippingDetails</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.85">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.76">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.89">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a>&gt;</code></dd>
@@ -264,20 +275,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.89">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.102">buildUnchecked</a></span>()</div>
 <div class="block">builds SetCustomLineItemShippingDetailsChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.93">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.106">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.SetCustomLineItemShippingDetailsChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.97">of</a></span>&#8203;<span class="parameters">(<a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetCustomLineItemShippingDetailsChangeBuilder.html" title="class in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetCustomLineItemShippingDetailsChangeBuilder.html#line.110">of</a></span>&#8203;<span class="parameters">(<a href="SetCustomLineItemShippingDetailsChange.html" title="interface in com.commercetools.history.models.change">SetCustomLineItemShippingDetailsChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

@@ -84,8 +84,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TermFacetResultImpl.html" title="class in com.commercetools.api.models.product">TermFacetResultImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.16">TermFacetResult</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.30">TermFacetResult</a></span><span class="extends-implements">
 extends <a href="FacetResult.html" title="interface in com.commercetools.api.models.product">FacetResult</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   TermFacetResult termFacetResult = TermFacetResult.builder()
+           .dataType(TermFacetResultType.TEXT)
+           .missing(0.3)
+           .total(0.3)
+           .other(0.3)
+           .plusTerms(termsBuilder -> termsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -186,7 +198,7 @@ extends <a href="FacetResult.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="TERMS">
 <h3>TERMS</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.20">TERMS</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.34">TERMS</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.product.TermFacetResult.TERMS">Constant Field Values</a></dd>
@@ -205,28 +217,28 @@ extends <a href="FacetResult.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getDataType()">
 <h3>getDataType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.22">getDataType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.36">getDataType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMissing()">
 <h3>getMissing</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.26">getMissing</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.40">getMissing</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotal()">
 <h3>getTotal</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.30">getTotal</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.44">getTotal</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOther()">
 <h3>getOther</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.34">getOther</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.48">getOther</a></span>()</div>
 </section>
 </li>
 <li>
@@ -234,79 +246,79 @@ extends <a href="FacetResult.html" title="interface in com.commercetools.api.mod
 <h3>getTerms</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.38">getTerms</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.52">getTerms</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDataType(com.commercetools.api.models.product.TermFacetResultType)">
 <h3>setDataType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.43">setDataType</a></span>&#8203;<span class="parameters">(<a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a>&nbsp;dataType)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.57">setDataType</a></span>&#8203;<span class="parameters">(<a href="TermFacetResultType.html" title="interface in com.commercetools.api.models.product">TermFacetResultType</a>&nbsp;dataType)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMissing(java.lang.Long)">
 <h3>setMissing</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.45">setMissing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;missing)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.59">setMissing</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;missing)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTotal(java.lang.Long)">
 <h3>setTotal</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.47">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.61">setTotal</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOther(java.lang.Long)">
 <h3>setOther</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.49">setOther</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;other)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.63">setOther</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;other)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTerms(com.commercetools.api.models.product.FacetTerm...)">
 <h3>setTerms</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.51">setTerms</a></span>&#8203;<span class="parameters">(<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>...&nbsp;terms)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.65">setTerms</a></span>&#8203;<span class="parameters">(<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>...&nbsp;terms)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTerms(java.util.List)">
 <h3>setTerms</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.54">setTerms</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>&gt;&nbsp;terms)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.68">setTerms</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FacetTerm.html" title="interface in com.commercetools.api.models.product">FacetTerm</a>&gt;&nbsp;terms)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.56">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.70">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product.TermFacetResult)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.74">of</a></span>&#8203;<span class="parameters">(<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.70">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.84">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.product.TermFacetResult)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.74">builder</a></span>&#8203;<span class="parameters">(<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.88">builder</a></span>&#8203;<span class="parameters">(<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTermFacetResult(java.util.function.Function)">
 <h3>withTermFacetResult</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.78">withTermFacetResult</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.92">withTermFacetResult</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.82">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="TermFacetResult.html" title="interface in com.commercetools.api.models.product">TermFacetResult</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/TermFacetResult.html#line.96">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

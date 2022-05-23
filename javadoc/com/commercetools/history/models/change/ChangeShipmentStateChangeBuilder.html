@@ -83,9 +83,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeShipmentStateChange.html" title="interface in com.commercetools.history.models.change">ChangeShipmentStateChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.9">ChangeShipmentStateChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.21">ChangeShipmentStateChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeShipmentStateChange.html" title="interface in com.commercetools.history.models.change">ChangeShipmentStateChange</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangeShipmentStateChange changeShipmentStateChange = ChangeShipmentStateChange.builder()
+           .change("{change}")
+           .nextValue(ShipmentState.SHIPPED)
+           .previousValue(ShipmentState.SHIPPED)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -167,7 +177,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ChangeShipmentStateChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.10">ChangeShipmentStateChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.22">ChangeShipmentStateChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -181,44 +191,44 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.22">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.34">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <div class="block"><p>Update action for <code>changeShipmentState</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.ShipmentState)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.27">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ShipmentState.html" title="interface in com.commercetools.history.models.common">ShipmentState</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.39">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/ShipmentState.html" title="interface in com.commercetools.history.models.common">ShipmentState</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(com.commercetools.history.models.common.ShipmentState)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.33">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ShipmentState.html" title="interface in com.commercetools.history.models.common">ShipmentState</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.45">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/ShipmentState.html" title="interface in com.commercetools.history.models.common">ShipmentState</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.39">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.51">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ShipmentState.html" title="interface in com.commercetools.history.models.common">ShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.43">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ShipmentState.html" title="interface in com.commercetools.history.models.common">ShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.55">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ShipmentState.html" title="interface in com.commercetools.history.models.common">ShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.47">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ShipmentState.html" title="interface in com.commercetools.history.models.common">ShipmentState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.59">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChange.html" title="interface in com.commercetools.history.models.change">ChangeShipmentStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.51">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChange.html" title="interface in com.commercetools.history.models.change">ChangeShipmentStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.63">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangeShipmentStateChange.html" title="interface in com.commercetools.history.models.change">ChangeShipmentStateChange</a>&gt;</code></dd>
@@ -228,20 +238,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChange.html" title="interface in com.commercetools.history.models.change">ChangeShipmentStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.61">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChange.html" title="interface in com.commercetools.history.models.change">ChangeShipmentStateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.73">buildUnchecked</a></span>()</div>
 <div class="block">builds ChangeShipmentStateChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.65">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.77">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.ChangeShipmentStateChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.69">of</a></span>&#8203;<span class="parameters">(<a href="ChangeShipmentStateChange.html" title="interface in com.commercetools.history.models.change">ChangeShipmentStateChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangeShipmentStateChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangeShipmentStateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangeShipmentStateChangeBuilder.html#line.81">of</a></span>&#8203;<span class="parameters">(<a href="ChangeShipmentStateChange.html" title="interface in com.commercetools.history.models.change">ChangeShipmentStateChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

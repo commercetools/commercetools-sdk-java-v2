@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.10">AttributeLocalizedEnumValueBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.21">AttributeLocalizedEnumValueBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   AttributeLocalizedEnumValue attributeLocalizedEnumValue = AttributeLocalizedEnumValue.builder()
+           .key("{key}")
+           .label(labelBuilder -> labelBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -166,7 +175,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>AttributeLocalizedEnumValueBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.11">AttributeLocalizedEnumValueBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.22">AttributeLocalizedEnumValueBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -180,39 +189,39 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.17">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.28">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="label(java.util.function.Function)">
 <h3>label</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.26">label</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.37">label</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,&#8203;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="label(com.commercetools.api.models.common.LocalizedString)">
 <h3>label</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.36">label</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.47">label</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
 <div class="block"><p>JSON object where the keys are of IETF language tag, and the values are the corresponding strings used for that language.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.41">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.52">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getLabel()">
 <h3>getLabel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.45">getLabel</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.56">getLabel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.49">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.60">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&gt;</code></dd>
@@ -222,20 +231,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.58">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.69">buildUnchecked</a></span>()</div>
 <div class="block">builds AttributeLocalizedEnumValue without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.62">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.73">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product_type.AttributeLocalizedEnumValue)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.66">of</a></span>&#8203;<span class="parameters">(<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="AttributeLocalizedEnumValueBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeLocalizedEnumValueBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product_type/AttributeLocalizedEnumValueBuilder.html#line.77">of</a></span>&#8203;<span class="parameters">(<a href="AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type">AttributeLocalizedEnumValue</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

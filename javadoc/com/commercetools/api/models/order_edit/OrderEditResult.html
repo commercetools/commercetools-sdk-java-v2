@@ -84,7 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderEditAppliedImpl.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedImpl</a></code>, <code><a href="OrderEditNotProcessedImpl.html" title="class in com.commercetools.api.models.order_edit">OrderEditNotProcessedImpl</a></code>, <code><a href="OrderEditPreviewFailureImpl.html" title="class in com.commercetools.api.models.order_edit">OrderEditPreviewFailureImpl</a></code>, <code><a href="OrderEditPreviewSuccessImpl.html" title="class in com.commercetools.api.models.order_edit">OrderEditPreviewSuccessImpl</a></code>, <code><a href="OrderEditResultImpl.html" title="class in com.commercetools.api.models.order_edit">OrderEditResultImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.15">OrderEditResult</a></span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.27">OrderEditResult</a></span></div>
+<div class="block">Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderEditResult orderEditResult = OrderEditResult.appliedBuilder()
+           appliedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           excerptBeforeEdit(excerptBeforeEditBuilder -> excerptBeforeEditBuilder)
+           excerptAfterEdit(excerptAfterEditBuilder -> excerptAfterEditBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -138,43 +148,43 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.25">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.37">getType</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="appliedBuilder()">
 <h3>appliedBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.29">appliedBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditAppliedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAppliedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.41">appliedBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="notProcessedBuilder()">
 <h3>notProcessedBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditNotProcessedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditNotProcessedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.33">notProcessedBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditNotProcessedBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditNotProcessedBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.45">notProcessedBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="previewFailureBuilder()">
 <h3>previewFailureBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditPreviewFailureBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPreviewFailureBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.37">previewFailureBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditPreviewFailureBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPreviewFailureBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.49">previewFailureBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="previewSuccessBuilder()">
 <h3>previewSuccessBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditPreviewSuccessBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPreviewSuccessBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.41">previewSuccessBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderEditPreviewSuccessBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPreviewSuccessBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.53">previewSuccessBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderEditResult(java.util.function.Function)">
 <h3>withOrderEditResult</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.45">withOrderEditResult</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderEditResult.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResult</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.57">withOrderEditResult</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderEditResult.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResult</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderEditResult.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResult</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.49">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderEditResult.html" title="interface in com.commercetools.api.models.order_edit">OrderEditResult</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order_edit/OrderEditResult.html#line.61">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

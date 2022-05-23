@@ -84,8 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="TransactionImpl.html" title="class in com.commercetools.api.models.payment">TransactionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.19">Transaction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.31">Transaction</a></span><span class="extends-implements">
 extends <a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   Transaction transaction = Transaction.builder()
+           .id("{id}")
+           .type(TransactionType.AUTHORIZATION)
+           .amount(amountBuilder -> amountBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -193,14 +203,14 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.26">getId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.38">getId</a></span>()</div>
 <div class="block"><p>Platform-generated unique identifier of the Transaction.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTimestamp()">
 <h3>getTimestamp</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.34">getTimestamp</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.46">getTimestamp</a></span>()</div>
 <div class="block"><p>The time at which the transaction took place.</p></div>
 </section>
 </li>
@@ -208,7 +218,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="TransactionType.html" title="interface in com.commercetools.api.models.payment">TransactionType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.40">getType</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="TransactionType.html" title="interface in com.commercetools.api.models.payment">TransactionType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.52">getType</a></span>()</div>
 <div class="block"><p>The type of this transaction.</p></div>
 </section>
 </li>
@@ -217,20 +227,20 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <h3>getAmount</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.44">getAmount</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.56">getAmount</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInteractionId()">
 <h3>getInteractionId</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.53">getInteractionId</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.65">getInteractionId</a></span>()</div>
 <div class="block"><p>The identifier that is used by the interface that managed the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="return-type"><a href="TransactionState.html" title="interface in com.commercetools.api.models.payment">TransactionState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.60">getState</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="TransactionState.html" title="interface in com.commercetools.api.models.payment">TransactionState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.72">getState</a></span>()</div>
 <div class="block"><p>The state of this transaction.</p></div>
 </section>
 </li>
@@ -238,7 +248,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.66">getCustom</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.78">getCustom</a></span>()</div>
 <div class="block"><p>Custom Fields for the Transaction.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -249,43 +259,43 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.70">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.82">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTimestamp(java.time.ZonedDateTime)">
 <h3>setTimestamp</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.72">setTimestamp</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;timestamp)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.84">setTimestamp</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;timestamp)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.payment.TransactionType)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.74">setType</a></span>&#8203;<span class="parameters">(<a href="TransactionType.html" title="interface in com.commercetools.api.models.payment">TransactionType</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.86">setType</a></span>&#8203;<span class="parameters">(<a href="TransactionType.html" title="interface in com.commercetools.api.models.payment">TransactionType</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAmount(com.commercetools.api.models.common.TypedMoney)">
 <h3>setAmount</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.76">setAmount</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;amount)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.88">setAmount</a></span>&#8203;<span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;amount)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInteractionId(java.lang.String)">
 <h3>setInteractionId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.78">setInteractionId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interactionId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.90">setInteractionId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interactionId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(com.commercetools.api.models.payment.TransactionState)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.80">setState</a></span>&#8203;<span class="parameters">(<a href="TransactionState.html" title="interface in com.commercetools.api.models.payment">TransactionState</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.92">setState</a></span>&#8203;<span class="parameters">(<a href="TransactionState.html" title="interface in com.commercetools.api.models.payment">TransactionState</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFields)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.82">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.94">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../Customizable.html#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a>&lt;<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>&gt;</code></dd>
@@ -295,37 +305,37 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.84">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.96">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.payment.Transaction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.88">of</a></span>&#8203;<span class="parameters">(<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.100">of</a></span>&#8203;<span class="parameters">(<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TransactionBuilder.html" title="class in com.commercetools.api.models.payment">TransactionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.100">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TransactionBuilder.html" title="class in com.commercetools.api.models.payment">TransactionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.112">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.payment.Transaction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TransactionBuilder.html" title="class in com.commercetools.api.models.payment">TransactionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.104">builder</a></span>&#8203;<span class="parameters">(<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="TransactionBuilder.html" title="class in com.commercetools.api.models.payment">TransactionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.116">builder</a></span>&#8203;<span class="parameters">(<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withTransaction(java.util.function.Function)">
 <h3>withTransaction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.108">withTransaction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.120">withTransaction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.112">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Transaction.html" title="interface in com.commercetools.api.models.payment">Transaction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/payment/Transaction.html#line.124">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

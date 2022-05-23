@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.9">KeyReferenceBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.20">KeyReferenceBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   KeyReference keyReference = KeyReference.builder()
+           .key("{key}")
+           .typeId(ReferenceTypeId.CART)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -159,7 +168,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>KeyReferenceBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.10">KeyReferenceBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.21">KeyReferenceBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -173,31 +182,31 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="KeyReferenceBuilder.html" title="class in com.commercetools.history.models.common">KeyReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.16">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="KeyReferenceBuilder.html" title="class in com.commercetools.history.models.common">KeyReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.27">key</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeId(com.commercetools.history.models.common.ReferenceTypeId)">
 <h3>typeId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="KeyReferenceBuilder.html" title="class in com.commercetools.history.models.common">KeyReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.21">typeId</a></span>&#8203;<span class="parameters">(<a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a>&nbsp;typeId)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="KeyReferenceBuilder.html" title="class in com.commercetools.history.models.common">KeyReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.32">typeId</a></span>&#8203;<span class="parameters">(<a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a>&nbsp;typeId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.26">getKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.37">getKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTypeId()">
 <h3>getTypeId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.30">getTypeId</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.41">getTypeId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.34">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.45">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&gt;</code></dd>
@@ -207,20 +216,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.43">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.54">buildUnchecked</a></span>()</div>
 <div class="block">builds KeyReference without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="KeyReferenceBuilder.html" title="class in com.commercetools.history.models.common">KeyReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.47">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="KeyReferenceBuilder.html" title="class in com.commercetools.history.models.common">KeyReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.58">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.common.KeyReference)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="KeyReferenceBuilder.html" title="class in com.commercetools.history.models.common">KeyReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.51">of</a></span>&#8203;<span class="parameters">(<a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="KeyReferenceBuilder.html" title="class in com.commercetools.history.models.common">KeyReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/common/KeyReferenceBuilder.html#line.62">of</a></span>&#8203;<span class="parameters">(<a href="KeyReference.html" title="interface in com.commercetools.history.models.common">KeyReference</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

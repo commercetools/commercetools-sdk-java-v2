@@ -84,8 +84,15 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ChannelSetAddressCustomTypeActionImpl.html" title="class in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.17">ChannelSetAddressCustomTypeAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.26">ChannelSetAddressCustomTypeAction</a></span><span class="extends-implements">
 extends <a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChannelSetAddressCustomTypeAction channelSetAddressCustomTypeAction = ChannelSetAddressCustomTypeAction.builder()
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -172,7 +179,7 @@ extends <a href="ChannelUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="SET_ADDRESS_CUSTOM_TYPE">
 <h3>SET_ADDRESS_CUSTOM_TYPE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.21">SET_ADDRESS_CUSTOM_TYPE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.30">SET_ADDRESS_CUSTOM_TYPE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.channel.ChannelSetAddressCustomTypeAction.SET_ADDRESS_CUSTOM_TYPE">Constant Field Values</a></dd>
@@ -191,7 +198,7 @@ extends <a href="ChannelUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.26">getType</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.35">getType</a></span>()</div>
 <div class="block"><p>Defines the Type that extends the <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code>.</p></div>
 </section>
 </li>
@@ -199,56 +206,56 @@ extends <a href="ChannelUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getFields()">
 <h3>getFields</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.33">getFields</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.42">getFields</a></span>()</div>
 <div class="block"><p>Sets the Custom Fields fields for the <code>address</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.type.TypeResourceIdentifier)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.37">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.46">setType</a></span>&#8203;<span class="parameters">(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setFields(com.commercetools.api.models.type.FieldContainer)">
 <h3>setFields</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.39">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.48">setFields</a></span>&#8203;<span class="parameters">(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.41">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.50">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.channel.ChannelSetAddressCustomTypeAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.45">of</a></span>&#8203;<span class="parameters">(<a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.54">of</a></span>&#8203;<span class="parameters">(<a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelSetAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.52">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelSetAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.61">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.channel.ChannelSetAddressCustomTypeAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelSetAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.56">builder</a></span>&#8203;<span class="parameters">(<a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChannelSetAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.65">builder</a></span>&#8203;<span class="parameters">(<a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withChannelSetAddressCustomTypeAction(java.util.function.Function)">
 <h3>withChannelSetAddressCustomTypeAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.60">withChannelSetAddressCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.69">withChannelSetAddressCustomTypeAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.64">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChannelSetAddressCustomTypeAction.html" title="interface in com.commercetools.api.models.channel">ChannelSetAddressCustomTypeAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelSetAddressCustomTypeAction.html#line.73">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

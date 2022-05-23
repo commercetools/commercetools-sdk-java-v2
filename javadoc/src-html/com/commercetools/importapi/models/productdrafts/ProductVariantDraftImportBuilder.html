@@ -22,245 +22,255 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public class ProductVariantDraftImportBuilder implements Builder&lt;ProductVariantDraftImport&gt; {</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    @Nullable</span>
-<span class="source-line-no">016</span><span id="line.16">    private String sku;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    private String key;</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    @Nullable</span>
-<span class="source-line-no">021</span><span id="line.21">    private java.util.List&lt;com.commercetools.importapi.models.productdrafts.PriceDraftImport&gt; prices;</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    @Nullable</span>
-<span class="source-line-no">024</span><span id="line.24">    private java.util.List&lt;com.commercetools.importapi.models.productvariants.Attribute&gt; attributes;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    @Nullable</span>
-<span class="source-line-no">027</span><span id="line.27">    private java.util.List&lt;com.commercetools.importapi.models.common.Image&gt; images;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    @Nullable</span>
-<span class="source-line-no">030</span><span id="line.30">    private java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; assets;</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32">    public ProductVariantDraftImportBuilder sku(@Nullable final String sku) {</span>
-<span class="source-line-no">033</span><span id="line.33">        this.sku = sku;</span>
-<span class="source-line-no">034</span><span id="line.34">        return this;</span>
-<span class="source-line-no">035</span><span id="line.35">    }</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public ProductVariantDraftImportBuilder key(final String key) {</span>
-<span class="source-line-no">038</span><span id="line.38">        this.key = key;</span>
-<span class="source-line-no">039</span><span id="line.39">        return this;</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">016</span><span id="line.16">   ProductVariantDraftImport productVariantDraftImport = ProductVariantDraftImport.builder()</span>
+<span class="source-line-no">017</span><span id="line.17">           .key("{key}")</span>
+<span class="source-line-no">018</span><span id="line.18">           .build()</span>
+<span class="source-line-no">019</span><span id="line.19"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> &lt;/div&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> */</span>
+<span class="source-line-no">022</span><span id="line.22">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">023</span><span id="line.23">public class ProductVariantDraftImportBuilder implements Builder&lt;ProductVariantDraftImport&gt; {</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">    @Nullable</span>
+<span class="source-line-no">026</span><span id="line.26">    private String sku;</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    private String key;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">    @Nullable</span>
+<span class="source-line-no">031</span><span id="line.31">    private java.util.List&lt;com.commercetools.importapi.models.productdrafts.PriceDraftImport&gt; prices;</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">    @Nullable</span>
+<span class="source-line-no">034</span><span id="line.34">    private java.util.List&lt;com.commercetools.importapi.models.productvariants.Attribute&gt; attributes;</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    @Nullable</span>
+<span class="source-line-no">037</span><span id="line.37">    private java.util.List&lt;com.commercetools.importapi.models.common.Image&gt; images;</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    @Nullable</span>
+<span class="source-line-no">040</span><span id="line.40">    private java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; assets;</span>
 <span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    public ProductVariantDraftImportBuilder prices(</span>
-<span class="source-line-no">043</span><span id="line.43">            @Nullable final com.commercetools.importapi.models.productdrafts.PriceDraftImport... prices) {</span>
-<span class="source-line-no">044</span><span id="line.44">        this.prices = new ArrayList&lt;&gt;(Arrays.asList(prices));</span>
-<span class="source-line-no">045</span><span id="line.45">        return this;</span>
-<span class="source-line-no">046</span><span id="line.46">    }</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public ProductVariantDraftImportBuilder prices(</span>
-<span class="source-line-no">049</span><span id="line.49">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.productdrafts.PriceDraftImport&gt; prices) {</span>
-<span class="source-line-no">050</span><span id="line.50">        this.prices = prices;</span>
-<span class="source-line-no">051</span><span id="line.51">        return this;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public ProductVariantDraftImportBuilder plusPrices(</span>
-<span class="source-line-no">055</span><span id="line.55">            @Nullable final com.commercetools.importapi.models.productdrafts.PriceDraftImport... prices) {</span>
-<span class="source-line-no">056</span><span id="line.56">        if (this.prices == null) {</span>
-<span class="source-line-no">057</span><span id="line.57">            this.prices = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">058</span><span id="line.58">        }</span>
-<span class="source-line-no">059</span><span id="line.59">        this.prices.addAll(Arrays.asList(prices));</span>
-<span class="source-line-no">060</span><span id="line.60">        return this;</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public ProductVariantDraftImportBuilder plusPrices(</span>
-<span class="source-line-no">064</span><span id="line.64">            Function&lt;com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder, com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder&gt; builder) {</span>
-<span class="source-line-no">065</span><span id="line.65">        if (this.prices == null) {</span>
-<span class="source-line-no">066</span><span id="line.66">            this.prices = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">067</span><span id="line.67">        }</span>
-<span class="source-line-no">068</span><span id="line.68">        this.prices.add(</span>
-<span class="source-line-no">069</span><span id="line.69">            builder.apply(com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder.of()).build());</span>
+<span class="source-line-no">042</span><span id="line.42">    public ProductVariantDraftImportBuilder sku(@Nullable final String sku) {</span>
+<span class="source-line-no">043</span><span id="line.43">        this.sku = sku;</span>
+<span class="source-line-no">044</span><span id="line.44">        return this;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    public ProductVariantDraftImportBuilder key(final String key) {</span>
+<span class="source-line-no">048</span><span id="line.48">        this.key = key;</span>
+<span class="source-line-no">049</span><span id="line.49">        return this;</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    public ProductVariantDraftImportBuilder prices(</span>
+<span class="source-line-no">053</span><span id="line.53">            @Nullable final com.commercetools.importapi.models.productdrafts.PriceDraftImport... prices) {</span>
+<span class="source-line-no">054</span><span id="line.54">        this.prices = new ArrayList&lt;&gt;(Arrays.asList(prices));</span>
+<span class="source-line-no">055</span><span id="line.55">        return this;</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    public ProductVariantDraftImportBuilder prices(</span>
+<span class="source-line-no">059</span><span id="line.59">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.productdrafts.PriceDraftImport&gt; prices) {</span>
+<span class="source-line-no">060</span><span id="line.60">        this.prices = prices;</span>
+<span class="source-line-no">061</span><span id="line.61">        return this;</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public ProductVariantDraftImportBuilder plusPrices(</span>
+<span class="source-line-no">065</span><span id="line.65">            @Nullable final com.commercetools.importapi.models.productdrafts.PriceDraftImport... prices) {</span>
+<span class="source-line-no">066</span><span id="line.66">        if (this.prices == null) {</span>
+<span class="source-line-no">067</span><span id="line.67">            this.prices = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">068</span><span id="line.68">        }</span>
+<span class="source-line-no">069</span><span id="line.69">        this.prices.addAll(Arrays.asList(prices));</span>
 <span class="source-line-no">070</span><span id="line.70">        return this;</span>
 <span class="source-line-no">071</span><span id="line.71">    }</span>
 <span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public ProductVariantDraftImportBuilder withPrices(</span>
+<span class="source-line-no">073</span><span id="line.73">    public ProductVariantDraftImportBuilder plusPrices(</span>
 <span class="source-line-no">074</span><span id="line.74">            Function&lt;com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder, com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder&gt; builder) {</span>
-<span class="source-line-no">075</span><span id="line.75">        this.prices = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">076</span><span id="line.76">        this.prices.add(</span>
-<span class="source-line-no">077</span><span id="line.77">            builder.apply(com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder.of()).build());</span>
-<span class="source-line-no">078</span><span id="line.78">        return this;</span>
-<span class="source-line-no">079</span><span id="line.79">    }</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public ProductVariantDraftImportBuilder attributes(</span>
-<span class="source-line-no">082</span><span id="line.82">            @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {</span>
-<span class="source-line-no">083</span><span id="line.83">        this.attributes = new ArrayList&lt;&gt;(Arrays.asList(attributes));</span>
-<span class="source-line-no">084</span><span id="line.84">        return this;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public ProductVariantDraftImportBuilder attributes(</span>
-<span class="source-line-no">088</span><span id="line.88">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.productvariants.Attribute&gt; attributes) {</span>
-<span class="source-line-no">089</span><span id="line.89">        this.attributes = attributes;</span>
-<span class="source-line-no">090</span><span id="line.90">        return this;</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public ProductVariantDraftImportBuilder plusAttributes(</span>
-<span class="source-line-no">094</span><span id="line.94">            @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {</span>
-<span class="source-line-no">095</span><span id="line.95">        if (this.attributes == null) {</span>
-<span class="source-line-no">096</span><span id="line.96">            this.attributes = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">097</span><span id="line.97">        }</span>
-<span class="source-line-no">098</span><span id="line.98">        this.attributes.addAll(Arrays.asList(attributes));</span>
-<span class="source-line-no">099</span><span id="line.99">        return this;</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public ProductVariantDraftImportBuilder plusAttributes(</span>
-<span class="source-line-no">103</span><span id="line.103">            Function&lt;com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder&lt;? extends com.commercetools.importapi.models.productvariants.Attribute&gt;&gt; builder) {</span>
-<span class="source-line-no">104</span><span id="line.104">        if (this.attributes == null) {</span>
-<span class="source-line-no">105</span><span id="line.105">            this.attributes = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">106</span><span id="line.106">        }</span>
-<span class="source-line-no">107</span><span id="line.107">        this.attributes</span>
-<span class="source-line-no">108</span><span id="line.108">                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());</span>
+<span class="source-line-no">075</span><span id="line.75">        if (this.prices == null) {</span>
+<span class="source-line-no">076</span><span id="line.76">            this.prices = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">077</span><span id="line.77">        }</span>
+<span class="source-line-no">078</span><span id="line.78">        this.prices.add(</span>
+<span class="source-line-no">079</span><span id="line.79">            builder.apply(com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder.of()).build());</span>
+<span class="source-line-no">080</span><span id="line.80">        return this;</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public ProductVariantDraftImportBuilder withPrices(</span>
+<span class="source-line-no">084</span><span id="line.84">            Function&lt;com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder, com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder&gt; builder) {</span>
+<span class="source-line-no">085</span><span id="line.85">        this.prices = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">086</span><span id="line.86">        this.prices.add(</span>
+<span class="source-line-no">087</span><span id="line.87">            builder.apply(com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder.of()).build());</span>
+<span class="source-line-no">088</span><span id="line.88">        return this;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public ProductVariantDraftImportBuilder attributes(</span>
+<span class="source-line-no">092</span><span id="line.92">            @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {</span>
+<span class="source-line-no">093</span><span id="line.93">        this.attributes = new ArrayList&lt;&gt;(Arrays.asList(attributes));</span>
+<span class="source-line-no">094</span><span id="line.94">        return this;</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public ProductVariantDraftImportBuilder attributes(</span>
+<span class="source-line-no">098</span><span id="line.98">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.productvariants.Attribute&gt; attributes) {</span>
+<span class="source-line-no">099</span><span id="line.99">        this.attributes = attributes;</span>
+<span class="source-line-no">100</span><span id="line.100">        return this;</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    public ProductVariantDraftImportBuilder plusAttributes(</span>
+<span class="source-line-no">104</span><span id="line.104">            @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {</span>
+<span class="source-line-no">105</span><span id="line.105">        if (this.attributes == null) {</span>
+<span class="source-line-no">106</span><span id="line.106">            this.attributes = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">107</span><span id="line.107">        }</span>
+<span class="source-line-no">108</span><span id="line.108">        this.attributes.addAll(Arrays.asList(attributes));</span>
 <span class="source-line-no">109</span><span id="line.109">        return this;</span>
 <span class="source-line-no">110</span><span id="line.110">    }</span>
 <span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public ProductVariantDraftImportBuilder withAttributes(</span>
+<span class="source-line-no">112</span><span id="line.112">    public ProductVariantDraftImportBuilder plusAttributes(</span>
 <span class="source-line-no">113</span><span id="line.113">            Function&lt;com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder&lt;? extends com.commercetools.importapi.models.productvariants.Attribute&gt;&gt; builder) {</span>
-<span class="source-line-no">114</span><span id="line.114">        this.attributes = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">115</span><span id="line.115">        this.attributes</span>
-<span class="source-line-no">116</span><span id="line.116">                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());</span>
-<span class="source-line-no">117</span><span id="line.117">        return this;</span>
-<span class="source-line-no">118</span><span id="line.118">    }</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    public ProductVariantDraftImportBuilder images(</span>
-<span class="source-line-no">121</span><span id="line.121">            @Nullable final com.commercetools.importapi.models.common.Image... images) {</span>
-<span class="source-line-no">122</span><span id="line.122">        this.images = new ArrayList&lt;&gt;(Arrays.asList(images));</span>
-<span class="source-line-no">123</span><span id="line.123">        return this;</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public ProductVariantDraftImportBuilder images(</span>
-<span class="source-line-no">127</span><span id="line.127">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.common.Image&gt; images) {</span>
-<span class="source-line-no">128</span><span id="line.128">        this.images = images;</span>
-<span class="source-line-no">129</span><span id="line.129">        return this;</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public ProductVariantDraftImportBuilder plusImages(</span>
-<span class="source-line-no">133</span><span id="line.133">            @Nullable final com.commercetools.importapi.models.common.Image... images) {</span>
-<span class="source-line-no">134</span><span id="line.134">        if (this.images == null) {</span>
-<span class="source-line-no">135</span><span id="line.135">            this.images = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">136</span><span id="line.136">        }</span>
-<span class="source-line-no">137</span><span id="line.137">        this.images.addAll(Arrays.asList(images));</span>
-<span class="source-line-no">138</span><span id="line.138">        return this;</span>
-<span class="source-line-no">139</span><span id="line.139">    }</span>
-<span class="source-line-no">140</span><span id="line.140"></span>
-<span class="source-line-no">141</span><span id="line.141">    public ProductVariantDraftImportBuilder plusImages(</span>
-<span class="source-line-no">142</span><span id="line.142">            Function&lt;com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder&gt; builder) {</span>
-<span class="source-line-no">143</span><span id="line.143">        if (this.images == null) {</span>
-<span class="source-line-no">144</span><span id="line.144">            this.images = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">145</span><span id="line.145">        }</span>
-<span class="source-line-no">146</span><span id="line.146">        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());</span>
-<span class="source-line-no">147</span><span id="line.147">        return this;</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    public ProductVariantDraftImportBuilder withImages(</span>
-<span class="source-line-no">151</span><span id="line.151">            Function&lt;com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder&gt; builder) {</span>
-<span class="source-line-no">152</span><span id="line.152">        this.images = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">153</span><span id="line.153">        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());</span>
-<span class="source-line-no">154</span><span id="line.154">        return this;</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    public ProductVariantDraftImportBuilder assets(</span>
-<span class="source-line-no">158</span><span id="line.158">            @Nullable final com.commercetools.importapi.models.common.Asset... assets) {</span>
-<span class="source-line-no">159</span><span id="line.159">        this.assets = new ArrayList&lt;&gt;(Arrays.asList(assets));</span>
-<span class="source-line-no">160</span><span id="line.160">        return this;</span>
-<span class="source-line-no">161</span><span id="line.161">    }</span>
-<span class="source-line-no">162</span><span id="line.162"></span>
-<span class="source-line-no">163</span><span id="line.163">    public ProductVariantDraftImportBuilder assets(</span>
-<span class="source-line-no">164</span><span id="line.164">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; assets) {</span>
-<span class="source-line-no">165</span><span id="line.165">        this.assets = assets;</span>
-<span class="source-line-no">166</span><span id="line.166">        return this;</span>
-<span class="source-line-no">167</span><span id="line.167">    }</span>
-<span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    public ProductVariantDraftImportBuilder plusAssets(</span>
-<span class="source-line-no">170</span><span id="line.170">            @Nullable final com.commercetools.importapi.models.common.Asset... assets) {</span>
-<span class="source-line-no">171</span><span id="line.171">        if (this.assets == null) {</span>
-<span class="source-line-no">172</span><span id="line.172">            this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">173</span><span id="line.173">        }</span>
-<span class="source-line-no">174</span><span id="line.174">        this.assets.addAll(Arrays.asList(assets));</span>
-<span class="source-line-no">175</span><span id="line.175">        return this;</span>
-<span class="source-line-no">176</span><span id="line.176">    }</span>
-<span class="source-line-no">177</span><span id="line.177"></span>
-<span class="source-line-no">178</span><span id="line.178">    public ProductVariantDraftImportBuilder plusAssets(</span>
-<span class="source-line-no">179</span><span id="line.179">            Function&lt;com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder&gt; builder) {</span>
-<span class="source-line-no">180</span><span id="line.180">        if (this.assets == null) {</span>
-<span class="source-line-no">181</span><span id="line.181">            this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">182</span><span id="line.182">        }</span>
-<span class="source-line-no">183</span><span id="line.183">        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());</span>
-<span class="source-line-no">184</span><span id="line.184">        return this;</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    public ProductVariantDraftImportBuilder withAssets(</span>
-<span class="source-line-no">188</span><span id="line.188">            Function&lt;com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder&gt; builder) {</span>
-<span class="source-line-no">189</span><span id="line.189">        this.assets = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">190</span><span id="line.190">        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());</span>
-<span class="source-line-no">191</span><span id="line.191">        return this;</span>
-<span class="source-line-no">192</span><span id="line.192">    }</span>
-<span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">    @Nullable</span>
-<span class="source-line-no">195</span><span id="line.195">    public String getSku() {</span>
-<span class="source-line-no">196</span><span id="line.196">        return this.sku;</span>
-<span class="source-line-no">197</span><span id="line.197">    }</span>
-<span class="source-line-no">198</span><span id="line.198"></span>
-<span class="source-line-no">199</span><span id="line.199">    public String getKey() {</span>
-<span class="source-line-no">200</span><span id="line.200">        return this.key;</span>
-<span class="source-line-no">201</span><span id="line.201">    }</span>
-<span class="source-line-no">202</span><span id="line.202"></span>
-<span class="source-line-no">203</span><span id="line.203">    @Nullable</span>
-<span class="source-line-no">204</span><span id="line.204">    public java.util.List&lt;com.commercetools.importapi.models.productdrafts.PriceDraftImport&gt; getPrices() {</span>
-<span class="source-line-no">205</span><span id="line.205">        return this.prices;</span>
-<span class="source-line-no">206</span><span id="line.206">    }</span>
-<span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    @Nullable</span>
-<span class="source-line-no">209</span><span id="line.209">    public java.util.List&lt;com.commercetools.importapi.models.productvariants.Attribute&gt; getAttributes() {</span>
-<span class="source-line-no">210</span><span id="line.210">        return this.attributes;</span>
+<span class="source-line-no">114</span><span id="line.114">        if (this.attributes == null) {</span>
+<span class="source-line-no">115</span><span id="line.115">            this.attributes = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">116</span><span id="line.116">        }</span>
+<span class="source-line-no">117</span><span id="line.117">        this.attributes</span>
+<span class="source-line-no">118</span><span id="line.118">                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());</span>
+<span class="source-line-no">119</span><span id="line.119">        return this;</span>
+<span class="source-line-no">120</span><span id="line.120">    }</span>
+<span class="source-line-no">121</span><span id="line.121"></span>
+<span class="source-line-no">122</span><span id="line.122">    public ProductVariantDraftImportBuilder withAttributes(</span>
+<span class="source-line-no">123</span><span id="line.123">            Function&lt;com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder&lt;? extends com.commercetools.importapi.models.productvariants.Attribute&gt;&gt; builder) {</span>
+<span class="source-line-no">124</span><span id="line.124">        this.attributes = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">125</span><span id="line.125">        this.attributes</span>
+<span class="source-line-no">126</span><span id="line.126">                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());</span>
+<span class="source-line-no">127</span><span id="line.127">        return this;</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    public ProductVariantDraftImportBuilder images(</span>
+<span class="source-line-no">131</span><span id="line.131">            @Nullable final com.commercetools.importapi.models.common.Image... images) {</span>
+<span class="source-line-no">132</span><span id="line.132">        this.images = new ArrayList&lt;&gt;(Arrays.asList(images));</span>
+<span class="source-line-no">133</span><span id="line.133">        return this;</span>
+<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    public ProductVariantDraftImportBuilder images(</span>
+<span class="source-line-no">137</span><span id="line.137">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.common.Image&gt; images) {</span>
+<span class="source-line-no">138</span><span id="line.138">        this.images = images;</span>
+<span class="source-line-no">139</span><span id="line.139">        return this;</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    public ProductVariantDraftImportBuilder plusImages(</span>
+<span class="source-line-no">143</span><span id="line.143">            @Nullable final com.commercetools.importapi.models.common.Image... images) {</span>
+<span class="source-line-no">144</span><span id="line.144">        if (this.images == null) {</span>
+<span class="source-line-no">145</span><span id="line.145">            this.images = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">146</span><span id="line.146">        }</span>
+<span class="source-line-no">147</span><span id="line.147">        this.images.addAll(Arrays.asList(images));</span>
+<span class="source-line-no">148</span><span id="line.148">        return this;</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    public ProductVariantDraftImportBuilder plusImages(</span>
+<span class="source-line-no">152</span><span id="line.152">            Function&lt;com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder&gt; builder) {</span>
+<span class="source-line-no">153</span><span id="line.153">        if (this.images == null) {</span>
+<span class="source-line-no">154</span><span id="line.154">            this.images = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">155</span><span id="line.155">        }</span>
+<span class="source-line-no">156</span><span id="line.156">        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());</span>
+<span class="source-line-no">157</span><span id="line.157">        return this;</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">    public ProductVariantDraftImportBuilder withImages(</span>
+<span class="source-line-no">161</span><span id="line.161">            Function&lt;com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.ImageBuilder&gt; builder) {</span>
+<span class="source-line-no">162</span><span id="line.162">        this.images = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">163</span><span id="line.163">        this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());</span>
+<span class="source-line-no">164</span><span id="line.164">        return this;</span>
+<span class="source-line-no">165</span><span id="line.165">    }</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">    public ProductVariantDraftImportBuilder assets(</span>
+<span class="source-line-no">168</span><span id="line.168">            @Nullable final com.commercetools.importapi.models.common.Asset... assets) {</span>
+<span class="source-line-no">169</span><span id="line.169">        this.assets = new ArrayList&lt;&gt;(Arrays.asList(assets));</span>
+<span class="source-line-no">170</span><span id="line.170">        return this;</span>
+<span class="source-line-no">171</span><span id="line.171">    }</span>
+<span class="source-line-no">172</span><span id="line.172"></span>
+<span class="source-line-no">173</span><span id="line.173">    public ProductVariantDraftImportBuilder assets(</span>
+<span class="source-line-no">174</span><span id="line.174">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; assets) {</span>
+<span class="source-line-no">175</span><span id="line.175">        this.assets = assets;</span>
+<span class="source-line-no">176</span><span id="line.176">        return this;</span>
+<span class="source-line-no">177</span><span id="line.177">    }</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">    public ProductVariantDraftImportBuilder plusAssets(</span>
+<span class="source-line-no">180</span><span id="line.180">            @Nullable final com.commercetools.importapi.models.common.Asset... assets) {</span>
+<span class="source-line-no">181</span><span id="line.181">        if (this.assets == null) {</span>
+<span class="source-line-no">182</span><span id="line.182">            this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">183</span><span id="line.183">        }</span>
+<span class="source-line-no">184</span><span id="line.184">        this.assets.addAll(Arrays.asList(assets));</span>
+<span class="source-line-no">185</span><span id="line.185">        return this;</span>
+<span class="source-line-no">186</span><span id="line.186">    }</span>
+<span class="source-line-no">187</span><span id="line.187"></span>
+<span class="source-line-no">188</span><span id="line.188">    public ProductVariantDraftImportBuilder plusAssets(</span>
+<span class="source-line-no">189</span><span id="line.189">            Function&lt;com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder&gt; builder) {</span>
+<span class="source-line-no">190</span><span id="line.190">        if (this.assets == null) {</span>
+<span class="source-line-no">191</span><span id="line.191">            this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">192</span><span id="line.192">        }</span>
+<span class="source-line-no">193</span><span id="line.193">        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());</span>
+<span class="source-line-no">194</span><span id="line.194">        return this;</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    public ProductVariantDraftImportBuilder withAssets(</span>
+<span class="source-line-no">198</span><span id="line.198">            Function&lt;com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.AssetBuilder&gt; builder) {</span>
+<span class="source-line-no">199</span><span id="line.199">        this.assets = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">200</span><span id="line.200">        this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());</span>
+<span class="source-line-no">201</span><span id="line.201">        return this;</span>
+<span class="source-line-no">202</span><span id="line.202">    }</span>
+<span class="source-line-no">203</span><span id="line.203"></span>
+<span class="source-line-no">204</span><span id="line.204">    @Nullable</span>
+<span class="source-line-no">205</span><span id="line.205">    public String getSku() {</span>
+<span class="source-line-no">206</span><span id="line.206">        return this.sku;</span>
+<span class="source-line-no">207</span><span id="line.207">    }</span>
+<span class="source-line-no">208</span><span id="line.208"></span>
+<span class="source-line-no">209</span><span id="line.209">    public String getKey() {</span>
+<span class="source-line-no">210</span><span id="line.210">        return this.key;</span>
 <span class="source-line-no">211</span><span id="line.211">    }</span>
 <span class="source-line-no">212</span><span id="line.212"></span>
 <span class="source-line-no">213</span><span id="line.213">    @Nullable</span>
-<span class="source-line-no">214</span><span id="line.214">    public java.util.List&lt;com.commercetools.importapi.models.common.Image&gt; getImages() {</span>
-<span class="source-line-no">215</span><span id="line.215">        return this.images;</span>
+<span class="source-line-no">214</span><span id="line.214">    public java.util.List&lt;com.commercetools.importapi.models.productdrafts.PriceDraftImport&gt; getPrices() {</span>
+<span class="source-line-no">215</span><span id="line.215">        return this.prices;</span>
 <span class="source-line-no">216</span><span id="line.216">    }</span>
 <span class="source-line-no">217</span><span id="line.217"></span>
 <span class="source-line-no">218</span><span id="line.218">    @Nullable</span>
-<span class="source-line-no">219</span><span id="line.219">    public java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; getAssets() {</span>
-<span class="source-line-no">220</span><span id="line.220">        return this.assets;</span>
+<span class="source-line-no">219</span><span id="line.219">    public java.util.List&lt;com.commercetools.importapi.models.productvariants.Attribute&gt; getAttributes() {</span>
+<span class="source-line-no">220</span><span id="line.220">        return this.attributes;</span>
 <span class="source-line-no">221</span><span id="line.221">    }</span>
 <span class="source-line-no">222</span><span id="line.222"></span>
-<span class="source-line-no">223</span><span id="line.223">    public ProductVariantDraftImport build() {</span>
-<span class="source-line-no">224</span><span id="line.224">        Objects.requireNonNull(key, ProductVariantDraftImport.class + ": key is missing");</span>
-<span class="source-line-no">225</span><span id="line.225">        return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);</span>
+<span class="source-line-no">223</span><span id="line.223">    @Nullable</span>
+<span class="source-line-no">224</span><span id="line.224">    public java.util.List&lt;com.commercetools.importapi.models.common.Image&gt; getImages() {</span>
+<span class="source-line-no">225</span><span id="line.225">        return this.images;</span>
 <span class="source-line-no">226</span><span id="line.226">    }</span>
 <span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    /**</span>
-<span class="source-line-no">229</span><span id="line.229">     * builds ProductVariantDraftImport without checking for non null required values</span>
-<span class="source-line-no">230</span><span id="line.230">     */</span>
-<span class="source-line-no">231</span><span id="line.231">    public ProductVariantDraftImport buildUnchecked() {</span>
-<span class="source-line-no">232</span><span id="line.232">        return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);</span>
-<span class="source-line-no">233</span><span id="line.233">    }</span>
-<span class="source-line-no">234</span><span id="line.234"></span>
-<span class="source-line-no">235</span><span id="line.235">    public static ProductVariantDraftImportBuilder of() {</span>
-<span class="source-line-no">236</span><span id="line.236">        return new ProductVariantDraftImportBuilder();</span>
-<span class="source-line-no">237</span><span id="line.237">    }</span>
-<span class="source-line-no">238</span><span id="line.238"></span>
-<span class="source-line-no">239</span><span id="line.239">    public static ProductVariantDraftImportBuilder of(final ProductVariantDraftImport template) {</span>
-<span class="source-line-no">240</span><span id="line.240">        ProductVariantDraftImportBuilder builder = new ProductVariantDraftImportBuilder();</span>
-<span class="source-line-no">241</span><span id="line.241">        builder.sku = template.getSku();</span>
-<span class="source-line-no">242</span><span id="line.242">        builder.key = template.getKey();</span>
-<span class="source-line-no">243</span><span id="line.243">        builder.prices = template.getPrices();</span>
-<span class="source-line-no">244</span><span id="line.244">        builder.attributes = template.getAttributes();</span>
-<span class="source-line-no">245</span><span id="line.245">        builder.images = template.getImages();</span>
-<span class="source-line-no">246</span><span id="line.246">        builder.assets = template.getAssets();</span>
-<span class="source-line-no">247</span><span id="line.247">        return builder;</span>
-<span class="source-line-no">248</span><span id="line.248">    }</span>
-<span class="source-line-no">249</span><span id="line.249"></span>
-<span class="source-line-no">250</span><span id="line.250">}</span>
+<span class="source-line-no">228</span><span id="line.228">    @Nullable</span>
+<span class="source-line-no">229</span><span id="line.229">    public java.util.List&lt;com.commercetools.importapi.models.common.Asset&gt; getAssets() {</span>
+<span class="source-line-no">230</span><span id="line.230">        return this.assets;</span>
+<span class="source-line-no">231</span><span id="line.231">    }</span>
+<span class="source-line-no">232</span><span id="line.232"></span>
+<span class="source-line-no">233</span><span id="line.233">    public ProductVariantDraftImport build() {</span>
+<span class="source-line-no">234</span><span id="line.234">        Objects.requireNonNull(key, ProductVariantDraftImport.class + ": key is missing");</span>
+<span class="source-line-no">235</span><span id="line.235">        return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);</span>
+<span class="source-line-no">236</span><span id="line.236">    }</span>
+<span class="source-line-no">237</span><span id="line.237"></span>
+<span class="source-line-no">238</span><span id="line.238">    /**</span>
+<span class="source-line-no">239</span><span id="line.239">     * builds ProductVariantDraftImport without checking for non null required values</span>
+<span class="source-line-no">240</span><span id="line.240">     */</span>
+<span class="source-line-no">241</span><span id="line.241">    public ProductVariantDraftImport buildUnchecked() {</span>
+<span class="source-line-no">242</span><span id="line.242">        return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);</span>
+<span class="source-line-no">243</span><span id="line.243">    }</span>
+<span class="source-line-no">244</span><span id="line.244"></span>
+<span class="source-line-no">245</span><span id="line.245">    public static ProductVariantDraftImportBuilder of() {</span>
+<span class="source-line-no">246</span><span id="line.246">        return new ProductVariantDraftImportBuilder();</span>
+<span class="source-line-no">247</span><span id="line.247">    }</span>
+<span class="source-line-no">248</span><span id="line.248"></span>
+<span class="source-line-no">249</span><span id="line.249">    public static ProductVariantDraftImportBuilder of(final ProductVariantDraftImport template) {</span>
+<span class="source-line-no">250</span><span id="line.250">        ProductVariantDraftImportBuilder builder = new ProductVariantDraftImportBuilder();</span>
+<span class="source-line-no">251</span><span id="line.251">        builder.sku = template.getSku();</span>
+<span class="source-line-no">252</span><span id="line.252">        builder.key = template.getKey();</span>
+<span class="source-line-no">253</span><span id="line.253">        builder.prices = template.getPrices();</span>
+<span class="source-line-no">254</span><span id="line.254">        builder.attributes = template.getAttributes();</span>
+<span class="source-line-no">255</span><span id="line.255">        builder.images = template.getImages();</span>
+<span class="source-line-no">256</span><span id="line.256">        builder.assets = template.getAssets();</span>
+<span class="source-line-no">257</span><span id="line.257">        return builder;</span>
+<span class="source-line-no">258</span><span id="line.258">    }</span>
+<span class="source-line-no">259</span><span id="line.259"></span>
+<span class="source-line-no">260</span><span id="line.260">}</span>
 
 
 

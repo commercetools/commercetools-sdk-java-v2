@@ -84,8 +84,23 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CustomerAddressChangedMessageImpl.html" title="class in com.commercetools.api.models.message">CustomerAddressChangedMessageImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.17">CustomerAddressChangedMessage</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.34">CustomerAddressChangedMessage</a></span><span class="extends-implements">
 extends <a href="Message.html" title="interface in com.commercetools.api.models.message">Message</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CustomerAddressChangedMessage customerAddressChangedMessage = CustomerAddressChangedMessage.builder()
+           .id("{id}")
+           .version(0.3)
+           .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+           .sequenceNumber(0.3)
+           .resource(resourceBuilder -> resourceBuilder)
+           .resourceVersion(0.3)
+           .address(addressBuilder -> addressBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -165,7 +180,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <li>
 <section class="detail" id="CUSTOMER_ADDRESS_CHANGED">
 <h3>CUSTOMER_ADDRESS_CHANGED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.21">CUSTOMER_ADDRESS_CHANGED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.38">CUSTOMER_ADDRESS_CHANGED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.CustomerAddressChangedMessage.CUSTOMER_ADDRESS_CHANGED">Constant Field Values</a></dd>
@@ -185,49 +200,49 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <h3>getAddress</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.23">getAddress</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.40">getAddress</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAddress(com.commercetools.api.models.common.Address)">
 <h3>setAddress</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.28">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;address)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.45">setAddress</a></span>&#8203;<span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;address)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.30">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.47">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.CustomerAddressChangedMessage)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.34">of</a></span>&#8203;<span class="parameters">(<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.51">of</a></span>&#8203;<span class="parameters">(<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.50">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.67">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.CustomerAddressChangedMessage)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CustomerAddressChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressChangedMessageBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.71">builder</a></span>&#8203;<span class="parameters">(<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCustomerAddressChangedMessage(java.util.function.Function)">
 <h3>withCustomerAddressChangedMessage</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.58">withCustomerAddressChangedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.75">withCustomerAddressChangedMessage</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.62">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerAddressChangedMessage.html" title="interface in com.commercetools.api.models.message">CustomerAddressChangedMessage</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/CustomerAddressChangedMessage.html#line.79">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

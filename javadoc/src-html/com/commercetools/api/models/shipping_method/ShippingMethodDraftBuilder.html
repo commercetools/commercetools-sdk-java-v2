@@ -22,245 +22,258 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">013</span><span id="line.13">public class ShippingMethodDraftBuilder implements Builder&lt;ShippingMethodDraft&gt; {</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">    @Nullable</span>
-<span class="source-line-no">016</span><span id="line.16">    private String key;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">    private String name;</span>
-<span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">    @Nullable</span>
-<span class="source-line-no">021</span><span id="line.21">    private com.commercetools.api.models.common.LocalizedString localizedName;</span>
-<span class="source-line-no">022</span><span id="line.22"></span>
-<span class="source-line-no">023</span><span id="line.23">    @Nullable</span>
-<span class="source-line-no">024</span><span id="line.24">    private String description;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">    @Nullable</span>
-<span class="source-line-no">027</span><span id="line.27">    private com.commercetools.api.models.common.LocalizedString localizedDescription;</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;</span>
+<span class="source-line-no">012</span><span id="line.12">/**</span>
+<span class="source-line-no">013</span><span id="line.13"> Example to create an instance using the builder pattern</span>
+<span class="source-line-no">014</span><span id="line.14"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">015</span><span id="line.15"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">016</span><span id="line.16">   ShippingMethodDraft shippingMethodDraft = ShippingMethodDraft.builder()</span>
+<span class="source-line-no">017</span><span id="line.17">           .name("{name}")</span>
+<span class="source-line-no">018</span><span id="line.18">           .taxCategory(taxCategoryBuilder -&gt; taxCategoryBuilder)</span>
+<span class="source-line-no">019</span><span id="line.19">           .plusZoneRates(zoneRatesBuilder -&gt; zoneRatesBuilder)</span>
+<span class="source-line-no">020</span><span id="line.20">           .isDefault(true)</span>
+<span class="source-line-no">021</span><span id="line.21">           .build()</span>
+<span class="source-line-no">022</span><span id="line.22"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> &lt;/div&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> */</span>
+<span class="source-line-no">025</span><span id="line.25">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">026</span><span id="line.26">public class ShippingMethodDraftBuilder implements Builder&lt;ShippingMethodDraft&gt; {</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    @Nullable</span>
+<span class="source-line-no">029</span><span id="line.29">    private String key;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    private java.util.List&lt;com.commercetools.api.models.shipping_method.ZoneRateDraft&gt; zoneRates;</span>
+<span class="source-line-no">031</span><span id="line.31">    private String name;</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    private Boolean isDefault;</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    @Nullable</span>
-<span class="source-line-no">036</span><span id="line.36">    private String predicate;</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    @Nullable</span>
-<span class="source-line-no">039</span><span id="line.39">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">    *  &lt;p&gt;User-defined unique identifier for the ShippingMethod.&lt;/p&gt;</span>
-<span class="source-line-no">043</span><span id="line.43">    */</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public ShippingMethodDraftBuilder key(@Nullable final String key) {</span>
-<span class="source-line-no">046</span><span id="line.46">        this.key = key;</span>
-<span class="source-line-no">047</span><span id="line.47">        return this;</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    public ShippingMethodDraftBuilder name(final String name) {</span>
-<span class="source-line-no">051</span><span id="line.51">        this.name = name;</span>
-<span class="source-line-no">052</span><span id="line.52">        return this;</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public ShippingMethodDraftBuilder localizedName(</span>
-<span class="source-line-no">056</span><span id="line.56">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">058</span><span id="line.58">        return this;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public ShippingMethodDraftBuilder localizedName(</span>
-<span class="source-line-no">062</span><span id="line.62">            @Nullable final com.commercetools.api.models.common.LocalizedString localizedName) {</span>
-<span class="source-line-no">063</span><span id="line.63">        this.localizedName = localizedName;</span>
-<span class="source-line-no">064</span><span id="line.64">        return this;</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    public ShippingMethodDraftBuilder description(@Nullable final String description) {</span>
-<span class="source-line-no">068</span><span id="line.68">        this.description = description;</span>
-<span class="source-line-no">069</span><span id="line.69">        return this;</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public ShippingMethodDraftBuilder localizedDescription(</span>
-<span class="source-line-no">073</span><span id="line.73">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">074</span><span id="line.74">        this.localizedDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of())</span>
-<span class="source-line-no">075</span><span id="line.75">                .build();</span>
-<span class="source-line-no">076</span><span id="line.76">        return this;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public ShippingMethodDraftBuilder localizedDescription(</span>
-<span class="source-line-no">080</span><span id="line.80">            @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {</span>
-<span class="source-line-no">081</span><span id="line.81">        this.localizedDescription = localizedDescription;</span>
+<span class="source-line-no">033</span><span id="line.33">    @Nullable</span>
+<span class="source-line-no">034</span><span id="line.34">    private com.commercetools.api.models.common.LocalizedString localizedName;</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    @Nullable</span>
+<span class="source-line-no">037</span><span id="line.37">    private String description;</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    @Nullable</span>
+<span class="source-line-no">040</span><span id="line.40">    private com.commercetools.api.models.common.LocalizedString localizedDescription;</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    private java.util.List&lt;com.commercetools.api.models.shipping_method.ZoneRateDraft&gt; zoneRates;</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    private Boolean isDefault;</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    @Nullable</span>
+<span class="source-line-no">049</span><span id="line.49">    private String predicate;</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    @Nullable</span>
+<span class="source-line-no">052</span><span id="line.52">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;User-defined unique identifier for the ShippingMethod.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">     */</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    public ShippingMethodDraftBuilder key(@Nullable final String key) {</span>
+<span class="source-line-no">059</span><span id="line.59">        this.key = key;</span>
+<span class="source-line-no">060</span><span id="line.60">        return this;</span>
+<span class="source-line-no">061</span><span id="line.61">    }</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    public ShippingMethodDraftBuilder name(final String name) {</span>
+<span class="source-line-no">064</span><span id="line.64">        this.name = name;</span>
+<span class="source-line-no">065</span><span id="line.65">        return this;</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public ShippingMethodDraftBuilder localizedName(</span>
+<span class="source-line-no">069</span><span id="line.69">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">071</span><span id="line.71">        return this;</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public ShippingMethodDraftBuilder localizedName(</span>
+<span class="source-line-no">075</span><span id="line.75">            @Nullable final com.commercetools.api.models.common.LocalizedString localizedName) {</span>
+<span class="source-line-no">076</span><span id="line.76">        this.localizedName = localizedName;</span>
+<span class="source-line-no">077</span><span id="line.77">        return this;</span>
+<span class="source-line-no">078</span><span id="line.78">    }</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public ShippingMethodDraftBuilder description(@Nullable final String description) {</span>
+<span class="source-line-no">081</span><span id="line.81">        this.description = description;</span>
 <span class="source-line-no">082</span><span id="line.82">        return this;</span>
 <span class="source-line-no">083</span><span id="line.83">    }</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    public ShippingMethodDraftBuilder taxCategory(</span>
-<span class="source-line-no">086</span><span id="line.86">            Function&lt;com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder&gt; builder) {</span>
-<span class="source-line-no">087</span><span id="line.87">        this.taxCategory = builder</span>
-<span class="source-line-no">088</span><span id="line.88">                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())</span>
-<span class="source-line-no">089</span><span id="line.89">                .build();</span>
-<span class="source-line-no">090</span><span id="line.90">        return this;</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public ShippingMethodDraftBuilder taxCategory(</span>
-<span class="source-line-no">094</span><span id="line.94">            final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
-<span class="source-line-no">095</span><span id="line.95">        this.taxCategory = taxCategory;</span>
-<span class="source-line-no">096</span><span id="line.96">        return this;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public ShippingMethodDraftBuilder zoneRates(</span>
-<span class="source-line-no">100</span><span id="line.100">            final com.commercetools.api.models.shipping_method.ZoneRateDraft... zoneRates) {</span>
-<span class="source-line-no">101</span><span id="line.101">        this.zoneRates = new ArrayList&lt;&gt;(Arrays.asList(zoneRates));</span>
-<span class="source-line-no">102</span><span id="line.102">        return this;</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public ShippingMethodDraftBuilder zoneRates(</span>
-<span class="source-line-no">106</span><span id="line.106">            final java.util.List&lt;com.commercetools.api.models.shipping_method.ZoneRateDraft&gt; zoneRates) {</span>
-<span class="source-line-no">107</span><span id="line.107">        this.zoneRates = zoneRates;</span>
-<span class="source-line-no">108</span><span id="line.108">        return this;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public ShippingMethodDraftBuilder plusZoneRates(</span>
-<span class="source-line-no">112</span><span id="line.112">            final com.commercetools.api.models.shipping_method.ZoneRateDraft... zoneRates) {</span>
-<span class="source-line-no">113</span><span id="line.113">        if (this.zoneRates == null) {</span>
-<span class="source-line-no">114</span><span id="line.114">            this.zoneRates = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">115</span><span id="line.115">        }</span>
-<span class="source-line-no">116</span><span id="line.116">        this.zoneRates.addAll(Arrays.asList(zoneRates));</span>
-<span class="source-line-no">117</span><span id="line.117">        return this;</span>
-<span class="source-line-no">118</span><span id="line.118">    }</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    public ShippingMethodDraftBuilder plusZoneRates(</span>
-<span class="source-line-no">121</span><span id="line.121">            Function&lt;com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">122</span><span id="line.122">        if (this.zoneRates == null) {</span>
-<span class="source-line-no">123</span><span id="line.123">            this.zoneRates = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">124</span><span id="line.124">        }</span>
-<span class="source-line-no">125</span><span id="line.125">        this.zoneRates</span>
-<span class="source-line-no">126</span><span id="line.126">                .add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()).build());</span>
-<span class="source-line-no">127</span><span id="line.127">        return this;</span>
-<span class="source-line-no">128</span><span id="line.128">    }</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    public ShippingMethodDraftBuilder withZoneRates(</span>
-<span class="source-line-no">131</span><span id="line.131">            Function&lt;com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">132</span><span id="line.132">        this.zoneRates = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">133</span><span id="line.133">        this.zoneRates</span>
-<span class="source-line-no">134</span><span id="line.134">                .add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()).build());</span>
-<span class="source-line-no">135</span><span id="line.135">        return this;</span>
-<span class="source-line-no">136</span><span id="line.136">    }</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    /**</span>
-<span class="source-line-no">139</span><span id="line.139">    *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt; the shipping method will be the default one in a project.&lt;/p&gt;</span>
-<span class="source-line-no">140</span><span id="line.140">    */</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public ShippingMethodDraftBuilder isDefault(final Boolean isDefault) {</span>
-<span class="source-line-no">143</span><span id="line.143">        this.isDefault = isDefault;</span>
-<span class="source-line-no">144</span><span id="line.144">        return this;</span>
-<span class="source-line-no">145</span><span id="line.145">    }</span>
-<span class="source-line-no">146</span><span id="line.146"></span>
-<span class="source-line-no">147</span><span id="line.147">    /**</span>
-<span class="source-line-no">148</span><span id="line.148">    *  &lt;p&gt;A Cart predicate which can be used to more precisely select a shipping method for a cart.&lt;/p&gt;</span>
-<span class="source-line-no">149</span><span id="line.149">    */</span>
+<span class="source-line-no">085</span><span id="line.85">    public ShippingMethodDraftBuilder localizedDescription(</span>
+<span class="source-line-no">086</span><span id="line.86">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.localizedDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of())</span>
+<span class="source-line-no">088</span><span id="line.88">                .build();</span>
+<span class="source-line-no">089</span><span id="line.89">        return this;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public ShippingMethodDraftBuilder localizedDescription(</span>
+<span class="source-line-no">093</span><span id="line.93">            @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {</span>
+<span class="source-line-no">094</span><span id="line.94">        this.localizedDescription = localizedDescription;</span>
+<span class="source-line-no">095</span><span id="line.95">        return this;</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public ShippingMethodDraftBuilder taxCategory(</span>
+<span class="source-line-no">099</span><span id="line.99">            Function&lt;com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder&gt; builder) {</span>
+<span class="source-line-no">100</span><span id="line.100">        this.taxCategory = builder</span>
+<span class="source-line-no">101</span><span id="line.101">                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())</span>
+<span class="source-line-no">102</span><span id="line.102">                .build();</span>
+<span class="source-line-no">103</span><span id="line.103">        return this;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public ShippingMethodDraftBuilder taxCategory(</span>
+<span class="source-line-no">107</span><span id="line.107">            final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {</span>
+<span class="source-line-no">108</span><span id="line.108">        this.taxCategory = taxCategory;</span>
+<span class="source-line-no">109</span><span id="line.109">        return this;</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    public ShippingMethodDraftBuilder zoneRates(</span>
+<span class="source-line-no">113</span><span id="line.113">            final com.commercetools.api.models.shipping_method.ZoneRateDraft... zoneRates) {</span>
+<span class="source-line-no">114</span><span id="line.114">        this.zoneRates = new ArrayList&lt;&gt;(Arrays.asList(zoneRates));</span>
+<span class="source-line-no">115</span><span id="line.115">        return this;</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    public ShippingMethodDraftBuilder zoneRates(</span>
+<span class="source-line-no">119</span><span id="line.119">            final java.util.List&lt;com.commercetools.api.models.shipping_method.ZoneRateDraft&gt; zoneRates) {</span>
+<span class="source-line-no">120</span><span id="line.120">        this.zoneRates = zoneRates;</span>
+<span class="source-line-no">121</span><span id="line.121">        return this;</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    public ShippingMethodDraftBuilder plusZoneRates(</span>
+<span class="source-line-no">125</span><span id="line.125">            final com.commercetools.api.models.shipping_method.ZoneRateDraft... zoneRates) {</span>
+<span class="source-line-no">126</span><span id="line.126">        if (this.zoneRates == null) {</span>
+<span class="source-line-no">127</span><span id="line.127">            this.zoneRates = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">128</span><span id="line.128">        }</span>
+<span class="source-line-no">129</span><span id="line.129">        this.zoneRates.addAll(Arrays.asList(zoneRates));</span>
+<span class="source-line-no">130</span><span id="line.130">        return this;</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">    public ShippingMethodDraftBuilder plusZoneRates(</span>
+<span class="source-line-no">134</span><span id="line.134">            Function&lt;com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">135</span><span id="line.135">        if (this.zoneRates == null) {</span>
+<span class="source-line-no">136</span><span id="line.136">            this.zoneRates = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">137</span><span id="line.137">        }</span>
+<span class="source-line-no">138</span><span id="line.138">        this.zoneRates</span>
+<span class="source-line-no">139</span><span id="line.139">                .add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()).build());</span>
+<span class="source-line-no">140</span><span id="line.140">        return this;</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    public ShippingMethodDraftBuilder withZoneRates(</span>
+<span class="source-line-no">144</span><span id="line.144">            Function&lt;com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">145</span><span id="line.145">        this.zoneRates = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">146</span><span id="line.146">        this.zoneRates</span>
+<span class="source-line-no">147</span><span id="line.147">                .add(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()).build());</span>
+<span class="source-line-no">148</span><span id="line.148">        return this;</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
 <span class="source-line-no">150</span><span id="line.150"></span>
-<span class="source-line-no">151</span><span id="line.151">    public ShippingMethodDraftBuilder predicate(@Nullable final String predicate) {</span>
-<span class="source-line-no">152</span><span id="line.152">        this.predicate = predicate;</span>
-<span class="source-line-no">153</span><span id="line.153">        return this;</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public ShippingMethodDraftBuilder custom(</span>
-<span class="source-line-no">157</span><span id="line.157">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
-<span class="source-line-no">158</span><span id="line.158">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
-<span class="source-line-no">159</span><span id="line.159">        return this;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    public ShippingMethodDraftBuilder custom(</span>
-<span class="source-line-no">163</span><span id="line.163">            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">164</span><span id="line.164">        this.custom = custom;</span>
-<span class="source-line-no">165</span><span id="line.165">        return this;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    @Nullable</span>
-<span class="source-line-no">169</span><span id="line.169">    public String getKey() {</span>
-<span class="source-line-no">170</span><span id="line.170">        return this.key;</span>
-<span class="source-line-no">171</span><span id="line.171">    }</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public String getName() {</span>
-<span class="source-line-no">174</span><span id="line.174">        return this.name;</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    @Nullable</span>
-<span class="source-line-no">178</span><span id="line.178">    public com.commercetools.api.models.common.LocalizedString getLocalizedName() {</span>
-<span class="source-line-no">179</span><span id="line.179">        return this.localizedName;</span>
-<span class="source-line-no">180</span><span id="line.180">    }</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    @Nullable</span>
-<span class="source-line-no">183</span><span id="line.183">    public String getDescription() {</span>
-<span class="source-line-no">184</span><span id="line.184">        return this.description;</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    @Nullable</span>
-<span class="source-line-no">188</span><span id="line.188">    public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {</span>
-<span class="source-line-no">189</span><span id="line.189">        return this.localizedDescription;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
-<span class="source-line-no">193</span><span id="line.193">        return this.taxCategory;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public java.util.List&lt;com.commercetools.api.models.shipping_method.ZoneRateDraft&gt; getZoneRates() {</span>
-<span class="source-line-no">197</span><span id="line.197">        return this.zoneRates;</span>
+<span class="source-line-no">151</span><span id="line.151">    /**</span>
+<span class="source-line-no">152</span><span id="line.152">     *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt; the shipping method will be the default one in a project.&lt;/p&gt;</span>
+<span class="source-line-no">153</span><span id="line.153">     */</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    public ShippingMethodDraftBuilder isDefault(final Boolean isDefault) {</span>
+<span class="source-line-no">156</span><span id="line.156">        this.isDefault = isDefault;</span>
+<span class="source-line-no">157</span><span id="line.157">        return this;</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">    /**</span>
+<span class="source-line-no">161</span><span id="line.161">     *  &lt;p&gt;A Cart predicate which can be used to more precisely select a shipping method for a cart.&lt;/p&gt;</span>
+<span class="source-line-no">162</span><span id="line.162">     */</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">    public ShippingMethodDraftBuilder predicate(@Nullable final String predicate) {</span>
+<span class="source-line-no">165</span><span id="line.165">        this.predicate = predicate;</span>
+<span class="source-line-no">166</span><span id="line.166">        return this;</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    public ShippingMethodDraftBuilder custom(</span>
+<span class="source-line-no">170</span><span id="line.170">            Function&lt;com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder&gt; builder) {</span>
+<span class="source-line-no">171</span><span id="line.171">        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();</span>
+<span class="source-line-no">172</span><span id="line.172">        return this;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    public ShippingMethodDraftBuilder custom(</span>
+<span class="source-line-no">176</span><span id="line.176">            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">177</span><span id="line.177">        this.custom = custom;</span>
+<span class="source-line-no">178</span><span id="line.178">        return this;</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    @Nullable</span>
+<span class="source-line-no">182</span><span id="line.182">    public String getKey() {</span>
+<span class="source-line-no">183</span><span id="line.183">        return this.key;</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    public String getName() {</span>
+<span class="source-line-no">187</span><span id="line.187">        return this.name;</span>
+<span class="source-line-no">188</span><span id="line.188">    }</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    @Nullable</span>
+<span class="source-line-no">191</span><span id="line.191">    public com.commercetools.api.models.common.LocalizedString getLocalizedName() {</span>
+<span class="source-line-no">192</span><span id="line.192">        return this.localizedName;</span>
+<span class="source-line-no">193</span><span id="line.193">    }</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    @Nullable</span>
+<span class="source-line-no">196</span><span id="line.196">    public String getDescription() {</span>
+<span class="source-line-no">197</span><span id="line.197">        return this.description;</span>
 <span class="source-line-no">198</span><span id="line.198">    }</span>
 <span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    public Boolean getIsDefault() {</span>
-<span class="source-line-no">201</span><span id="line.201">        return this.isDefault;</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    @Nullable</span>
-<span class="source-line-no">205</span><span id="line.205">    public String getPredicate() {</span>
-<span class="source-line-no">206</span><span id="line.206">        return this.predicate;</span>
+<span class="source-line-no">200</span><span id="line.200">    @Nullable</span>
+<span class="source-line-no">201</span><span id="line.201">    public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {</span>
+<span class="source-line-no">202</span><span id="line.202">        return this.localizedDescription;</span>
+<span class="source-line-no">203</span><span id="line.203">    }</span>
+<span class="source-line-no">204</span><span id="line.204"></span>
+<span class="source-line-no">205</span><span id="line.205">    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {</span>
+<span class="source-line-no">206</span><span id="line.206">        return this.taxCategory;</span>
 <span class="source-line-no">207</span><span id="line.207">    }</span>
 <span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    @Nullable</span>
-<span class="source-line-no">210</span><span id="line.210">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">211</span><span id="line.211">        return this.custom;</span>
-<span class="source-line-no">212</span><span id="line.212">    }</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">    public ShippingMethodDraft build() {</span>
-<span class="source-line-no">215</span><span id="line.215">        Objects.requireNonNull(name, ShippingMethodDraft.class + ": name is missing");</span>
-<span class="source-line-no">216</span><span id="line.216">        Objects.requireNonNull(taxCategory, ShippingMethodDraft.class + ": taxCategory is missing");</span>
-<span class="source-line-no">217</span><span id="line.217">        Objects.requireNonNull(zoneRates, ShippingMethodDraft.class + ": zoneRates is missing");</span>
-<span class="source-line-no">218</span><span id="line.218">        Objects.requireNonNull(isDefault, ShippingMethodDraft.class + ": isDefault is missing");</span>
-<span class="source-line-no">219</span><span id="line.219">        return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,</span>
-<span class="source-line-no">220</span><span id="line.220">            zoneRates, isDefault, predicate, custom);</span>
-<span class="source-line-no">221</span><span id="line.221">    }</span>
-<span class="source-line-no">222</span><span id="line.222"></span>
-<span class="source-line-no">223</span><span id="line.223">    /**</span>
-<span class="source-line-no">224</span><span id="line.224">     * builds ShippingMethodDraft without checking for non null required values</span>
-<span class="source-line-no">225</span><span id="line.225">     */</span>
-<span class="source-line-no">226</span><span id="line.226">    public ShippingMethodDraft buildUnchecked() {</span>
-<span class="source-line-no">227</span><span id="line.227">        return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,</span>
-<span class="source-line-no">228</span><span id="line.228">            zoneRates, isDefault, predicate, custom);</span>
-<span class="source-line-no">229</span><span id="line.229">    }</span>
-<span class="source-line-no">230</span><span id="line.230"></span>
-<span class="source-line-no">231</span><span id="line.231">    public static ShippingMethodDraftBuilder of() {</span>
-<span class="source-line-no">232</span><span id="line.232">        return new ShippingMethodDraftBuilder();</span>
-<span class="source-line-no">233</span><span id="line.233">    }</span>
-<span class="source-line-no">234</span><span id="line.234"></span>
-<span class="source-line-no">235</span><span id="line.235">    public static ShippingMethodDraftBuilder of(final ShippingMethodDraft template) {</span>
-<span class="source-line-no">236</span><span id="line.236">        ShippingMethodDraftBuilder builder = new ShippingMethodDraftBuilder();</span>
-<span class="source-line-no">237</span><span id="line.237">        builder.key = template.getKey();</span>
-<span class="source-line-no">238</span><span id="line.238">        builder.name = template.getName();</span>
-<span class="source-line-no">239</span><span id="line.239">        builder.localizedName = template.getLocalizedName();</span>
-<span class="source-line-no">240</span><span id="line.240">        builder.description = template.getDescription();</span>
-<span class="source-line-no">241</span><span id="line.241">        builder.localizedDescription = template.getLocalizedDescription();</span>
-<span class="source-line-no">242</span><span id="line.242">        builder.taxCategory = template.getTaxCategory();</span>
-<span class="source-line-no">243</span><span id="line.243">        builder.zoneRates = template.getZoneRates();</span>
-<span class="source-line-no">244</span><span id="line.244">        builder.isDefault = template.getIsDefault();</span>
-<span class="source-line-no">245</span><span id="line.245">        builder.predicate = template.getPredicate();</span>
-<span class="source-line-no">246</span><span id="line.246">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">247</span><span id="line.247">        return builder;</span>
-<span class="source-line-no">248</span><span id="line.248">    }</span>
-<span class="source-line-no">249</span><span id="line.249"></span>
-<span class="source-line-no">250</span><span id="line.250">}</span>
+<span class="source-line-no">209</span><span id="line.209">    public java.util.List&lt;com.commercetools.api.models.shipping_method.ZoneRateDraft&gt; getZoneRates() {</span>
+<span class="source-line-no">210</span><span id="line.210">        return this.zoneRates;</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public Boolean getIsDefault() {</span>
+<span class="source-line-no">214</span><span id="line.214">        return this.isDefault;</span>
+<span class="source-line-no">215</span><span id="line.215">    }</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">    @Nullable</span>
+<span class="source-line-no">218</span><span id="line.218">    public String getPredicate() {</span>
+<span class="source-line-no">219</span><span id="line.219">        return this.predicate;</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    @Nullable</span>
+<span class="source-line-no">223</span><span id="line.223">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">224</span><span id="line.224">        return this.custom;</span>
+<span class="source-line-no">225</span><span id="line.225">    }</span>
+<span class="source-line-no">226</span><span id="line.226"></span>
+<span class="source-line-no">227</span><span id="line.227">    public ShippingMethodDraft build() {</span>
+<span class="source-line-no">228</span><span id="line.228">        Objects.requireNonNull(name, ShippingMethodDraft.class + ": name is missing");</span>
+<span class="source-line-no">229</span><span id="line.229">        Objects.requireNonNull(taxCategory, ShippingMethodDraft.class + ": taxCategory is missing");</span>
+<span class="source-line-no">230</span><span id="line.230">        Objects.requireNonNull(zoneRates, ShippingMethodDraft.class + ": zoneRates is missing");</span>
+<span class="source-line-no">231</span><span id="line.231">        Objects.requireNonNull(isDefault, ShippingMethodDraft.class + ": isDefault is missing");</span>
+<span class="source-line-no">232</span><span id="line.232">        return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,</span>
+<span class="source-line-no">233</span><span id="line.233">            zoneRates, isDefault, predicate, custom);</span>
+<span class="source-line-no">234</span><span id="line.234">    }</span>
+<span class="source-line-no">235</span><span id="line.235"></span>
+<span class="source-line-no">236</span><span id="line.236">    /**</span>
+<span class="source-line-no">237</span><span id="line.237">     * builds ShippingMethodDraft without checking for non null required values</span>
+<span class="source-line-no">238</span><span id="line.238">     */</span>
+<span class="source-line-no">239</span><span id="line.239">    public ShippingMethodDraft buildUnchecked() {</span>
+<span class="source-line-no">240</span><span id="line.240">        return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,</span>
+<span class="source-line-no">241</span><span id="line.241">            zoneRates, isDefault, predicate, custom);</span>
+<span class="source-line-no">242</span><span id="line.242">    }</span>
+<span class="source-line-no">243</span><span id="line.243"></span>
+<span class="source-line-no">244</span><span id="line.244">    public static ShippingMethodDraftBuilder of() {</span>
+<span class="source-line-no">245</span><span id="line.245">        return new ShippingMethodDraftBuilder();</span>
+<span class="source-line-no">246</span><span id="line.246">    }</span>
+<span class="source-line-no">247</span><span id="line.247"></span>
+<span class="source-line-no">248</span><span id="line.248">    public static ShippingMethodDraftBuilder of(final ShippingMethodDraft template) {</span>
+<span class="source-line-no">249</span><span id="line.249">        ShippingMethodDraftBuilder builder = new ShippingMethodDraftBuilder();</span>
+<span class="source-line-no">250</span><span id="line.250">        builder.key = template.getKey();</span>
+<span class="source-line-no">251</span><span id="line.251">        builder.name = template.getName();</span>
+<span class="source-line-no">252</span><span id="line.252">        builder.localizedName = template.getLocalizedName();</span>
+<span class="source-line-no">253</span><span id="line.253">        builder.description = template.getDescription();</span>
+<span class="source-line-no">254</span><span id="line.254">        builder.localizedDescription = template.getLocalizedDescription();</span>
+<span class="source-line-no">255</span><span id="line.255">        builder.taxCategory = template.getTaxCategory();</span>
+<span class="source-line-no">256</span><span id="line.256">        builder.zoneRates = template.getZoneRates();</span>
+<span class="source-line-no">257</span><span id="line.257">        builder.isDefault = template.getIsDefault();</span>
+<span class="source-line-no">258</span><span id="line.258">        builder.predicate = template.getPredicate();</span>
+<span class="source-line-no">259</span><span id="line.259">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">260</span><span id="line.260">        return builder;</span>
+<span class="source-line-no">261</span><span id="line.261">    }</span>
+<span class="source-line-no">262</span><span id="line.262"></span>
+<span class="source-line-no">263</span><span id="line.263">}</span>
 
 
 

@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class InventoryEntryImpl implements InventoryEntry, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String id;</span>
@@ -91,8 +91,8 @@
 <span class="source-line-no">078</span><span id="line.78">    }</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">    *  &lt;p&gt;Platform-generated unique identifier of the InventoryEntry.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">    */</span>
+<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Platform-generated unique identifier of the InventoryEntry.&lt;/p&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     */</span>
 <span class="source-line-no">083</span><span id="line.83">    public String getId() {</span>
 <span class="source-line-no">084</span><span id="line.84">        return this.id;</span>
 <span class="source-line-no">085</span><span id="line.85">    }</span>
@@ -110,22 +110,22 @@
 <span class="source-line-no">097</span><span id="line.97">    }</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    /**</span>
-<span class="source-line-no">100</span><span id="line.100">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">101</span><span id="line.101">    */</span>
+<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">101</span><span id="line.101">     */</span>
 <span class="source-line-no">102</span><span id="line.102">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
 <span class="source-line-no">103</span><span id="line.103">        return this.lastModifiedBy;</span>
 <span class="source-line-no">104</span><span id="line.104">    }</span>
 <span class="source-line-no">105</span><span id="line.105"></span>
 <span class="source-line-no">106</span><span id="line.106">    /**</span>
-<span class="source-line-no">107</span><span id="line.107">    *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">108</span><span id="line.108">    */</span>
+<span class="source-line-no">107</span><span id="line.107">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">108</span><span id="line.108">     */</span>
 <span class="source-line-no">109</span><span id="line.109">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
 <span class="source-line-no">110</span><span id="line.110">        return this.createdBy;</span>
 <span class="source-line-no">111</span><span id="line.111">    }</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
 <span class="source-line-no">113</span><span id="line.113">    /**</span>
-<span class="source-line-no">114</span><span id="line.114">    *  &lt;p&gt;User-defined unique identifier of the InventoryEntry.&lt;/p&gt;</span>
-<span class="source-line-no">115</span><span id="line.115">    */</span>
+<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;User-defined unique identifier of the InventoryEntry.&lt;/p&gt;</span>
+<span class="source-line-no">115</span><span id="line.115">     */</span>
 <span class="source-line-no">116</span><span id="line.116">    public String getKey() {</span>
 <span class="source-line-no">117</span><span id="line.117">        return this.key;</span>
 <span class="source-line-no">118</span><span id="line.118">    }</span>
@@ -135,36 +135,36 @@
 <span class="source-line-no">122</span><span id="line.122">    }</span>
 <span class="source-line-no">123</span><span id="line.123"></span>
 <span class="source-line-no">124</span><span id="line.124">    /**</span>
-<span class="source-line-no">125</span><span id="line.125">    *  &lt;p&gt;Connection to a particular supplier.&lt;/p&gt;</span>
-<span class="source-line-no">126</span><span id="line.126">    */</span>
+<span class="source-line-no">125</span><span id="line.125">     *  &lt;p&gt;Connection to a particular supplier.&lt;/p&gt;</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
 <span class="source-line-no">127</span><span id="line.127">    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {</span>
 <span class="source-line-no">128</span><span id="line.128">        return this.supplyChannel;</span>
 <span class="source-line-no">129</span><span id="line.129">    }</span>
 <span class="source-line-no">130</span><span id="line.130"></span>
 <span class="source-line-no">131</span><span id="line.131">    /**</span>
-<span class="source-line-no">132</span><span id="line.132">    *  &lt;p&gt;Overall amount of stock. (available + reserved)&lt;/p&gt;</span>
-<span class="source-line-no">133</span><span id="line.133">    */</span>
+<span class="source-line-no">132</span><span id="line.132">     *  &lt;p&gt;Overall amount of stock. (available + reserved)&lt;/p&gt;</span>
+<span class="source-line-no">133</span><span id="line.133">     */</span>
 <span class="source-line-no">134</span><span id="line.134">    public Long getQuantityOnStock() {</span>
 <span class="source-line-no">135</span><span id="line.135">        return this.quantityOnStock;</span>
 <span class="source-line-no">136</span><span id="line.136">    }</span>
 <span class="source-line-no">137</span><span id="line.137"></span>
 <span class="source-line-no">138</span><span id="line.138">    /**</span>
-<span class="source-line-no">139</span><span id="line.139">    *  &lt;p&gt;Available amount of stock. (available means: &lt;code&gt;quantityOnStock&lt;/code&gt; - reserved quantity)&lt;/p&gt;</span>
-<span class="source-line-no">140</span><span id="line.140">    */</span>
+<span class="source-line-no">139</span><span id="line.139">     *  &lt;p&gt;Available amount of stock. (available means: &lt;code&gt;quantityOnStock&lt;/code&gt; - reserved quantity)&lt;/p&gt;</span>
+<span class="source-line-no">140</span><span id="line.140">     */</span>
 <span class="source-line-no">141</span><span id="line.141">    public Long getAvailableQuantity() {</span>
 <span class="source-line-no">142</span><span id="line.142">        return this.availableQuantity;</span>
 <span class="source-line-no">143</span><span id="line.143">    }</span>
 <span class="source-line-no">144</span><span id="line.144"></span>
 <span class="source-line-no">145</span><span id="line.145">    /**</span>
-<span class="source-line-no">146</span><span id="line.146">    *  &lt;p&gt;The time period in days, that tells how often this inventory entry is restocked.&lt;/p&gt;</span>
-<span class="source-line-no">147</span><span id="line.147">    */</span>
+<span class="source-line-no">146</span><span id="line.146">     *  &lt;p&gt;The time period in days, that tells how often this inventory entry is restocked.&lt;/p&gt;</span>
+<span class="source-line-no">147</span><span id="line.147">     */</span>
 <span class="source-line-no">148</span><span id="line.148">    public Long getRestockableInDays() {</span>
 <span class="source-line-no">149</span><span id="line.149">        return this.restockableInDays;</span>
 <span class="source-line-no">150</span><span id="line.150">    }</span>
 <span class="source-line-no">151</span><span id="line.151"></span>
 <span class="source-line-no">152</span><span id="line.152">    /**</span>
-<span class="source-line-no">153</span><span id="line.153">    *  &lt;p&gt;The date and time of the next restock.&lt;/p&gt;</span>
-<span class="source-line-no">154</span><span id="line.154">    */</span>
+<span class="source-line-no">153</span><span id="line.153">     *  &lt;p&gt;The date and time of the next restock.&lt;/p&gt;</span>
+<span class="source-line-no">154</span><span id="line.154">     */</span>
 <span class="source-line-no">155</span><span id="line.155">    public java.time.ZonedDateTime getExpectedDelivery() {</span>
 <span class="source-line-no">156</span><span id="line.156">        return this.expectedDelivery;</span>
 <span class="source-line-no">157</span><span id="line.157">    }</span>

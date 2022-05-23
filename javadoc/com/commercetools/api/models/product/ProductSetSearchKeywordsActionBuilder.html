@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductSetSearchKeywordsAction.html" title="interface in com.commercetools.api.models.product">ProductSetSearchKeywordsAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.12">ProductSetSearchKeywordsActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.22">ProductSetSearchKeywordsActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductSetSearchKeywordsAction.html" title="interface in com.commercetools.api.models.product">ProductSetSearchKeywordsAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProductSetSearchKeywordsAction productSetSearchKeywordsAction = ProductSetSearchKeywordsAction.builder()
+           .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +170,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ProductSetSearchKeywordsActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.13">ProductSetSearchKeywordsActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.23">ProductSetSearchKeywordsActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -176,39 +184,39 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="searchKeywords(java.util.function.Function)">
 <h3>searchKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.20">searchKeywords</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>,&#8203;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.30">searchKeywords</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>,&#8203;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>&gt;&nbsp;builder)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="searchKeywords(com.commercetools.api.models.product.SearchKeywords)">
 <h3>searchKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.26">searchKeywords</a></span>&#8203;<span class="parameters">(<a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.36">searchKeywords</a></span>&#8203;<span class="parameters">(<a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="staged(java.lang.Boolean)">
 <h3>staged</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.32">staged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.42">staged</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSearchKeywords()">
 <h3>getSearchKeywords</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.37">getSearchKeywords</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.47">getSearchKeywords</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.41">getStaged</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.51">getStaged</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsAction.html" title="interface in com.commercetools.api.models.product">ProductSetSearchKeywordsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.46">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsAction.html" title="interface in com.commercetools.api.models.product">ProductSetSearchKeywordsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.56">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ProductSetSearchKeywordsAction.html" title="interface in com.commercetools.api.models.product">ProductSetSearchKeywordsAction</a>&gt;</code></dd>
@@ -218,20 +226,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsAction.html" title="interface in com.commercetools.api.models.product">ProductSetSearchKeywordsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.54">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsAction.html" title="interface in com.commercetools.api.models.product">ProductSetSearchKeywordsAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.64">buildUnchecked</a></span>()</div>
 <div class="block">builds ProductSetSearchKeywordsAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.58">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.68">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.product.ProductSetSearchKeywordsAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.62">of</a></span>&#8203;<span class="parameters">(<a href="ProductSetSearchKeywordsAction.html" title="interface in com.commercetools.api.models.product">ProductSetSearchKeywordsAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ProductSetSearchKeywordsActionBuilder.html" title="class in com.commercetools.api.models.product">ProductSetSearchKeywordsActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/product/ProductSetSearchKeywordsActionBuilder.html#line.72">of</a></span>&#8203;<span class="parameters">(<a href="ProductSetSearchKeywordsAction.html" title="interface in com.commercetools.api.models.product">ProductSetSearchKeywordsAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

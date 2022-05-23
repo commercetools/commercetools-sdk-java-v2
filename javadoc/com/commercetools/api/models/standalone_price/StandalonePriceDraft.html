@@ -80,8 +80,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="StandalonePriceDraftImpl.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceDraftImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.26">StandalonePriceDraft</a></span></div>
-<div class="block"><p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection. Creating a Standalone Price is rejected if there already exists a Standalone Price for the same SKU with exactly the same price scope, or with overlapping validity periods within the same price scope. A Price without validity period does not conflict with a Price defined for a time period.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.36">StandalonePriceDraft</a></span></div>
+<div class="block"><p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection. Creating a Standalone Price is rejected if there already exists a Standalone Price for the same SKU with exactly the same price scope, or with overlapping validity periods within the same price scope. A Price without validity period does not conflict with a Price defined for a time period.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   StandalonePriceDraft standalonePriceDraft = StandalonePriceDraft.builder()
+           .sku("{sku}")
+           .value(valueBuilder -> valueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -222,7 +232,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.34">getKey</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.44">getKey</a></span>()</div>
 <div class="block"><p>User-defined unique identifier for the StandalonePrice.</p></div>
 </section>
 </li>
@@ -230,7 +240,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.40">getSku</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.50">getSku</a></span>()</div>
 <div class="block"><p>Specifies to which ProductVariant the Platform associates this Price. It is not validated to exist in product variants.</p></div>
 </section>
 </li>
@@ -239,14 +249,14 @@ loadScripts(document, 'script');</script>
 <h3>getValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.47">getValue</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.57">getValue</a></span>()</div>
 <div class="block"><p>Sets the money value of this Price.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.56">getCountry</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.66">getCountry</a></span>()</div>
 <div class="block"><p>Sets the country for which this Price is valid.</p></div>
 </section>
 </li>
@@ -254,7 +264,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getCustomerGroup()">
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.62">getCustomerGroup</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.72">getCustomerGroup</a></span>()</div>
 <div class="block"><p>Sets the CustomerGroup for which this Price is valid.</p></div>
 </section>
 </li>
@@ -262,21 +272,21 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getChannel()">
 <h3>getChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.69">getChannel</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.79">getChannel</a></span>()</div>
 <div class="block"><p>Sets the product distribution Channel for which this Price is valid.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.77">getValidFrom</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.87">getValidFrom</a></span>()</div>
 <div class="block"><p>Sets the date from which the Price is valid.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.84">getValidUntil</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.94">getValidUntil</a></span>()</div>
 <div class="block"><p>Sets the date until the Price is valid.</p></div>
 </section>
 </li>
@@ -284,7 +294,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getTiers()">
 <h3>getTiers</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.90">getTiers</a></span>()</div>
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.100">getTiers</a></span>()</div>
 <div class="block"><p>Sets price tiers.</p></div>
 </section>
 </li>
@@ -292,7 +302,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getDiscounted()">
 <h3>getDiscounted</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../common/DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.97">getDiscounted</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../common/DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.107">getDiscounted</a></span>()</div>
 <div class="block"><p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p></div>
 </section>
 </li>
@@ -300,116 +310,116 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getCustom()">
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.104">getCustom</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.114">getCustom</a></span>()</div>
 <div class="block"><p>Custom Fields for the StandalonePrice.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.108">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.118">setKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSku(java.lang.String)">
 <h3>setSku</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.110">setSku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.120">setSku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValue(com.commercetools.api.models.common.Money)">
 <h3>setValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.112">setValue</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.122">setValue</a></span>&#8203;<span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.114">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.124">setCountry</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier)">
 <h3>setCustomerGroup</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.116">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.126">setCustomerGroup</a></span>&#8203;<span class="parameters">(<a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>setChannel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.118">setChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.128">setChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValidFrom(java.time.ZonedDateTime)">
 <h3>setValidFrom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.120">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.130">setValidFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setValidUntil(java.time.ZonedDateTime)">
 <h3>setValidUntil</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.122">setValidUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.132">setValidUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTiers(com.commercetools.api.models.common.PriceTierDraft...)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.124">setTiers</a></span>&#8203;<span class="parameters">(<a href="../common/PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>...&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.134">setTiers</a></span>&#8203;<span class="parameters">(<a href="../common/PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>...&nbsp;tiers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setTiers(java.util.List)">
 <h3>setTiers</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.127">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;&nbsp;tiers)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.137">setTiers</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTierDraft.html" title="interface in com.commercetools.api.models.common">PriceTierDraft</a>&gt;&nbsp;tiers)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDiscounted(com.commercetools.api.models.common.DiscountedPriceDraft)">
 <h3>setDiscounted</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.129">setDiscounted</a></span>&#8203;<span class="parameters">(<a href="../common/DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a>&nbsp;discounted)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.139">setDiscounted</a></span>&#8203;<span class="parameters">(<a href="../common/DiscountedPriceDraft.html" title="interface in com.commercetools.api.models.common">DiscountedPriceDraft</a>&nbsp;discounted)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">
 <h3>setCustom</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.131">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.141">setCustom</a></span>&#8203;<span class="parameters">(<a href="../type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.133">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.143">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.standalone_price.StandalonePriceDraft)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.137">of</a></span>&#8203;<span class="parameters">(<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.147">of</a></span>&#8203;<span class="parameters">(<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StandalonePriceDraftBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.153">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StandalonePriceDraftBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.163">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.standalone_price.StandalonePriceDraft)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StandalonePriceDraftBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.157">builder</a></span>&#8203;<span class="parameters">(<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="StandalonePriceDraftBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceDraftBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.167">builder</a></span>&#8203;<span class="parameters">(<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withStandalonePriceDraft(java.util.function.Function)">
 <h3>withStandalonePriceDraft</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.161">withStandalonePriceDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.171">withStandalonePriceDraft</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.165">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/standalone_price/StandalonePriceDraft.html#line.175">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

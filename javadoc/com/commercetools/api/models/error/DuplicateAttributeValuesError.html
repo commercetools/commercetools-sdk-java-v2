@@ -84,8 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="DuplicateAttributeValuesErrorImpl.html" title="class in com.commercetools.api.models.error">DuplicateAttributeValuesErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.17">DuplicateAttributeValuesError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.28">DuplicateAttributeValuesError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DuplicateAttributeValuesError duplicateAttributeValuesError = DuplicateAttributeValuesError.builder()
+           .message("{message}")
+           .plusAttributes(attributesBuilder -> attributesBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -162,7 +171,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="DUPLICATE_ATTRIBUTE_VALUES">
 <h3>DUPLICATE_ATTRIBUTE_VALUES</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.21">DUPLICATE_ATTRIBUTE_VALUES</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.32">DUPLICATE_ATTRIBUTE_VALUES</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES">Constant Field Values</a></dd>
@@ -182,55 +191,55 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <h3>getAttributes</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.23">getAttributes</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.34">getAttributes</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttributes(com.commercetools.api.models.product.Attribute...)">
 <h3>setAttributes</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.28">setAttributes</a></span>&#8203;<span class="parameters">(<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.39">setAttributes</a></span>&#8203;<span class="parameters">(<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setAttributes(java.util.List)">
 <h3>setAttributes</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.31">setAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;attributes)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.42">setAttributes</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../product/Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;attributes)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.33">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.44">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.DuplicateAttributeValuesError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.37">of</a></span>&#8203;<span class="parameters">(<a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.48">of</a></span>&#8203;<span class="parameters">(<a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateAttributeValuesErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateAttributeValuesErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.45">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateAttributeValuesErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateAttributeValuesErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.56">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.DuplicateAttributeValuesError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateAttributeValuesErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateAttributeValuesErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.49">builder</a></span>&#8203;<span class="parameters">(<a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DuplicateAttributeValuesErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateAttributeValuesErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.60">builder</a></span>&#8203;<span class="parameters">(<a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withDuplicateAttributeValuesError(java.util.function.Function)">
 <h3>withDuplicateAttributeValuesError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.53">withDuplicateAttributeValuesError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.64">withDuplicateAttributeValuesError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.57">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DuplicateAttributeValuesError.html" title="interface in com.commercetools.api.models.error">DuplicateAttributeValuesError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateAttributeValuesError.html#line.68">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

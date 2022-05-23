@@ -25,377 +25,388 @@
 <span class="source-line-no">012</span><span id="line.12"></span>
 <span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">@JsonSubTypes({</span>
-<span class="source-line-no">016</span><span id="line.16">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AccessDeniedErrorImpl.class, name = AccessDeniedError.ACCESS_DENIED),</span>
-<span class="source-line-no">017</span><span id="line.17">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorImpl.class, name = AnonymousIdAlreadyInUseError.ANONYMOUS_ID_ALREADY_IN_USE),</span>
-<span class="source-line-no">018</span><span id="line.18">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorImpl.class, name = AttributeDefinitionAlreadyExistsError.ATTRIBUTE_DEFINITION_ALREADY_EXISTS),</span>
-<span class="source-line-no">019</span><span id="line.19">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorImpl.class, name = AttributeDefinitionTypeConflictError.ATTRIBUTE_DEFINITION_TYPE_CONFLICT),</span>
-<span class="source-line-no">020</span><span id="line.20">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeNameDoesNotExistErrorImpl.class, name = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),</span>
-<span class="source-line-no">021</span><span id="line.21">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.BadGatewayErrorImpl.class, name = BadGatewayError.BAD_GATEWAY),</span>
-<span class="source-line-no">022</span><span id="line.22">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),</span>
-<span class="source-line-no">023</span><span id="line.23">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE),</span>
-<span class="source-line-no">024</span><span id="line.24">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = DuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),</span>
-<span class="source-line-no">025</span><span id="line.25">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES),</span>
-<span class="source-line-no">026</span><span id="line.26">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateEnumValuesErrorImpl.class, name = DuplicateEnumValuesError.DUPLICATE_ENUM_VALUES),</span>
-<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldErrorImpl.class, name = DuplicateFieldError.DUPLICATE_FIELD),</span>
-<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = DuplicateFieldWithConflictingResourceError.DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE),</span>
-<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl.class, name = DuplicatePriceScopeError.DUPLICATE_PRICE_SCOPE),</span>
-<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateStandalonePriceScopeErrorImpl.class, name = DuplicateStandalonePriceScopeError.DUPLICATE_STANDALONE_PRICE_SCOPE),</span>
-<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateVariantValuesErrorImpl.class, name = DuplicateVariantValuesError.DUPLICATE_VARIANT_VALUES),</span>
-<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EditPreviewFailedErrorImpl.class, name = EditPreviewFailedError.EDIT_PREVIEW_FAILED),</span>
-<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorImpl.class, name = EnumKeyAlreadyExistsError.ENUM_KEY_ALREADY_EXISTS),</span>
-<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyDoesNotExistErrorImpl.class, name = EnumKeyDoesNotExistError.ENUM_KEY_DOES_NOT_EXIST),</span>
-<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValueIsUsedErrorImpl.class, name = EnumValueIsUsedError.ENUM_VALUE_IS_USED),</span>
-<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValuesMustMatchErrorImpl.class, name = EnumValuesMustMatchError.ENUM_VALUES_MUST_MATCH),</span>
-<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionBadResponseErrorImpl.class, name = ExtensionBadResponseError.EXTENSION_BAD_RESPONSE),</span>
-<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionNoResponseErrorImpl.class, name = ExtensionNoResponseError.EXTENSION_NO_RESPONSE),</span>
-<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorImpl.class, name = ExtensionUpdateActionsFailedError.EXTENSION_UPDATE_ACTIONS_FAILED),</span>
-<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExternalOAuthFailedErrorImpl.class, name = ExternalOAuthFailedError.EXTERNAL_O_AUTH_FAILED),</span>
-<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.FeatureRemovedErrorImpl.class, name = FeatureRemovedError.FEATURE_REMOVED),</span>
-<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GeneralErrorImpl.class, name = GeneralError.GENERAL),</span>
-<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InsufficientScopeErrorImpl.class, name = InsufficientScopeError.INSUFFICIENT_SCOPE),</span>
-<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InternalConstraintViolatedErrorImpl.class, name = InternalConstraintViolatedError.INTERNAL_CONSTRAINT_VIOLATED),</span>
-<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCredentialsErrorImpl.class, name = InvalidCredentialsError.INVALID_CREDENTIALS),</span>
-<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCurrentPasswordErrorImpl.class, name = InvalidCurrentPasswordError.INVALID_CURRENT_PASSWORD),</span>
-<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidFieldErrorImpl.class, name = InvalidFieldError.INVALID_FIELD),</span>
-<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidInputErrorImpl.class, name = InvalidInputError.INVALID_INPUT),</span>
-<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidItemShippingDetailsErrorImpl.class, name = InvalidItemShippingDetailsError.INVALID_ITEM_SHIPPING_DETAILS),</span>
-<span class="source-line-no">050</span><span id="line.50">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidJsonInputErrorImpl.class, name = InvalidJsonInputError.INVALID_JSON_INPUT),</span>
-<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidOperationErrorImpl.class, name = InvalidOperationError.INVALID_OPERATION),</span>
-<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidSubjectErrorImpl.class, name = InvalidSubjectError.INVALID_SUBJECT),</span>
-<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),</span>
-<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.LanguageUsedInStoresErrorImpl.class, name = LanguageUsedInStoresError.LANGUAGE_USED_IN_STORES),</span>
-<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MatchingPriceNotFoundErrorImpl.class, name = MatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND),</span>
-<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxResourceLimitExceededErrorImpl.class, name = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),</span>
-<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingRoleOnChannelErrorImpl.class, name = MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL),</span>
-<span class="source-line-no">058</span><span id="line.58">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl.class, name = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),</span>
-<span class="source-line-no">059</span><span id="line.59">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = NoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND),</span>
-<span class="source-line-no">060</span><span id="line.60">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NotEnabledErrorImpl.class, name = NotEnabledError.NOT_ENABLED),</span>
-<span class="source-line-no">061</span><span id="line.61">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ObjectNotFoundErrorImpl.class, name = ObjectNotFoundError.OBJECT_NOT_FOUND),</span>
-<span class="source-line-no">062</span><span id="line.62">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OutOfStockErrorImpl.class, name = OutOfStockError.OUT_OF_STOCK),</span>
-<span class="source-line-no">063</span><span id="line.63">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverCapacityErrorImpl.class, name = OverCapacityError.OVER_CAPACITY),</span>
-<span class="source-line-no">064</span><span id="line.64">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorImpl.class, name = OverlappingStandalonePriceValidityError.OVERLAPPING_STANDALONE_PRICE_VALIDITY),</span>
-<span class="source-line-no">065</span><span id="line.65">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PendingOperationErrorImpl.class, name = PendingOperationError.PENDING_OPERATION),</span>
-<span class="source-line-no">066</span><span id="line.66">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PriceChangedErrorImpl.class, name = PriceChangedError.PRICE_CHANGED),</span>
-<span class="source-line-no">067</span><span id="line.67">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorImpl.class, name = ProjectNotConfiguredForLanguagesError.PROJECT_NOT_CONFIGURED_FOR_LANGUAGES),</span>
-<span class="source-line-no">068</span><span id="line.68">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryComplexityLimitExceededErrorImpl.class, name = QueryComplexityLimitExceededError.QUERY_COMPLEXITY_LIMIT_EXCEEDED),</span>
-<span class="source-line-no">069</span><span id="line.69">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryTimedOutErrorImpl.class, name = QueryTimedOutError.QUERY_TIMED_OUT),</span>
-<span class="source-line-no">070</span><span id="line.70">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferenceExistsErrorImpl.class, name = ReferenceExistsError.REFERENCE_EXISTS),</span>
-<span class="source-line-no">071</span><span id="line.71">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferencedResourceNotFoundErrorImpl.class, name = ReferencedResourceNotFoundError.REFERENCED_RESOURCE_NOT_FOUND),</span>
-<span class="source-line-no">072</span><span id="line.72">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.RequiredFieldErrorImpl.class, name = RequiredFieldError.REQUIRED_FIELD),</span>
-<span class="source-line-no">073</span><span id="line.73">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceNotFoundErrorImpl.class, name = ResourceNotFoundError.RESOURCE_NOT_FOUND),</span>
-<span class="source-line-no">074</span><span id="line.74">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceSizeLimitExceededErrorImpl.class, name = ResourceSizeLimitExceededError.RESOURCE_SIZE_LIMIT_EXCEEDED),</span>
-<span class="source-line-no">075</span><span id="line.75">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchDeactivatedErrorImpl.class, name = SearchDeactivatedError.SEARCH_DEACTIVATED),</span>
-<span class="source-line-no">076</span><span id="line.76">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchExecutionFailureErrorImpl.class, name = SearchExecutionFailureError.SEARCH_EXECUTION_FAILURE),</span>
-<span class="source-line-no">077</span><span id="line.77">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchFacetPathNotFoundErrorImpl.class, name = SearchFacetPathNotFoundError.SEARCH_FACET_PATH_NOT_FOUND),</span>
-<span class="source-line-no">078</span><span id="line.78">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchIndexingInProgressErrorImpl.class, name = SearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),</span>
-<span class="source-line-no">079</span><span id="line.79">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SemanticErrorErrorImpl.class, name = SemanticErrorError.SEMANTIC_ERROR),</span>
-<span class="source-line-no">080</span><span id="line.80">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),</span>
-<span class="source-line-no">081</span><span id="line.81">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SyntaxErrorErrorImpl.class, name = SyntaxErrorError.SYNTAX_ERROR),</span>
-<span class="source-line-no">082</span><span id="line.82">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.WeakPasswordErrorImpl.class, name = WeakPasswordError.WEAK_PASSWORD) })</span>
-<span class="source-line-no">083</span><span id="line.83">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)</span>
-<span class="source-line-no">084</span><span id="line.84">@JsonDeserialize(as = ErrorObjectImpl.class)</span>
-<span class="source-line-no">085</span><span id="line.85">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
-<span class="source-line-no">086</span><span id="line.86">public interface ErrorObject {</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    @NotNull</span>
-<span class="source-line-no">089</span><span id="line.89">    @JsonProperty("code")</span>
-<span class="source-line-no">090</span><span id="line.90">    public String getCode();</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    @NotNull</span>
-<span class="source-line-no">093</span><span id="line.93">    @JsonProperty("message")</span>
-<span class="source-line-no">094</span><span id="line.94">    public String getMessage();</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    @NotNull</span>
-<span class="source-line-no">097</span><span id="line.97">    @JsonAnyGetter</span>
-<span class="source-line-no">098</span><span id="line.98">    public Map&lt;String, Object&gt; values();</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public void setMessage(final String message);</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    @JsonAnySetter</span>
-<span class="source-line-no">103</span><span id="line.103">    public void setValue(String key, Object value);</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public static com.commercetools.api.models.error.AccessDeniedErrorBuilder accessDeniedBuilder() {</span>
-<span class="source-line-no">106</span><span id="line.106">        return com.commercetools.api.models.error.AccessDeniedErrorBuilder.of();</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public static com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder anonymousIdAlreadyInUseBuilder() {</span>
-<span class="source-line-no">110</span><span id="line.110">        return com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder.of();</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">015</span><span id="line.15">/**</span>
+<span class="source-line-no">016</span><span id="line.16"> Example to create a subtype instance using the builder pattern</span>
+<span class="source-line-no">017</span><span id="line.17"> &lt;div class=code-example&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">019</span><span id="line.19">   ErrorObject errorObject = ErrorObject.accessDeniedBuilder()</span>
+<span class="source-line-no">020</span><span id="line.20">           message("{message}")</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">           .build()</span>
+<span class="source-line-no">023</span><span id="line.23"> &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> &lt;/div&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> */</span>
+<span class="source-line-no">026</span><span id="line.26">@JsonSubTypes({</span>
+<span class="source-line-no">027</span><span id="line.27">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AccessDeniedErrorImpl.class, name = AccessDeniedError.ACCESS_DENIED),</span>
+<span class="source-line-no">028</span><span id="line.28">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorImpl.class, name = AnonymousIdAlreadyInUseError.ANONYMOUS_ID_ALREADY_IN_USE),</span>
+<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorImpl.class, name = AttributeDefinitionAlreadyExistsError.ATTRIBUTE_DEFINITION_ALREADY_EXISTS),</span>
+<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorImpl.class, name = AttributeDefinitionTypeConflictError.ATTRIBUTE_DEFINITION_TYPE_CONFLICT),</span>
+<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeNameDoesNotExistErrorImpl.class, name = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),</span>
+<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.BadGatewayErrorImpl.class, name = BadGatewayError.BAD_GATEWAY),</span>
+<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),</span>
+<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE),</span>
+<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = DuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),</span>
+<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES),</span>
+<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateEnumValuesErrorImpl.class, name = DuplicateEnumValuesError.DUPLICATE_ENUM_VALUES),</span>
+<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldErrorImpl.class, name = DuplicateFieldError.DUPLICATE_FIELD),</span>
+<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = DuplicateFieldWithConflictingResourceError.DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE),</span>
+<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl.class, name = DuplicatePriceScopeError.DUPLICATE_PRICE_SCOPE),</span>
+<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateStandalonePriceScopeErrorImpl.class, name = DuplicateStandalonePriceScopeError.DUPLICATE_STANDALONE_PRICE_SCOPE),</span>
+<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateVariantValuesErrorImpl.class, name = DuplicateVariantValuesError.DUPLICATE_VARIANT_VALUES),</span>
+<span class="source-line-no">043</span><span id="line.43">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EditPreviewFailedErrorImpl.class, name = EditPreviewFailedError.EDIT_PREVIEW_FAILED),</span>
+<span class="source-line-no">044</span><span id="line.44">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorImpl.class, name = EnumKeyAlreadyExistsError.ENUM_KEY_ALREADY_EXISTS),</span>
+<span class="source-line-no">045</span><span id="line.45">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumKeyDoesNotExistErrorImpl.class, name = EnumKeyDoesNotExistError.ENUM_KEY_DOES_NOT_EXIST),</span>
+<span class="source-line-no">046</span><span id="line.46">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValueIsUsedErrorImpl.class, name = EnumValueIsUsedError.ENUM_VALUE_IS_USED),</span>
+<span class="source-line-no">047</span><span id="line.47">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValuesMustMatchErrorImpl.class, name = EnumValuesMustMatchError.ENUM_VALUES_MUST_MATCH),</span>
+<span class="source-line-no">048</span><span id="line.48">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionBadResponseErrorImpl.class, name = ExtensionBadResponseError.EXTENSION_BAD_RESPONSE),</span>
+<span class="source-line-no">049</span><span id="line.49">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionNoResponseErrorImpl.class, name = ExtensionNoResponseError.EXTENSION_NO_RESPONSE),</span>
+<span class="source-line-no">050</span><span id="line.50">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorImpl.class, name = ExtensionUpdateActionsFailedError.EXTENSION_UPDATE_ACTIONS_FAILED),</span>
+<span class="source-line-no">051</span><span id="line.51">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ExternalOAuthFailedErrorImpl.class, name = ExternalOAuthFailedError.EXTERNAL_O_AUTH_FAILED),</span>
+<span class="source-line-no">052</span><span id="line.52">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.FeatureRemovedErrorImpl.class, name = FeatureRemovedError.FEATURE_REMOVED),</span>
+<span class="source-line-no">053</span><span id="line.53">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GeneralErrorImpl.class, name = GeneralError.GENERAL),</span>
+<span class="source-line-no">054</span><span id="line.54">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InsufficientScopeErrorImpl.class, name = InsufficientScopeError.INSUFFICIENT_SCOPE),</span>
+<span class="source-line-no">055</span><span id="line.55">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InternalConstraintViolatedErrorImpl.class, name = InternalConstraintViolatedError.INTERNAL_CONSTRAINT_VIOLATED),</span>
+<span class="source-line-no">056</span><span id="line.56">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCredentialsErrorImpl.class, name = InvalidCredentialsError.INVALID_CREDENTIALS),</span>
+<span class="source-line-no">057</span><span id="line.57">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidCurrentPasswordErrorImpl.class, name = InvalidCurrentPasswordError.INVALID_CURRENT_PASSWORD),</span>
+<span class="source-line-no">058</span><span id="line.58">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidFieldErrorImpl.class, name = InvalidFieldError.INVALID_FIELD),</span>
+<span class="source-line-no">059</span><span id="line.59">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidInputErrorImpl.class, name = InvalidInputError.INVALID_INPUT),</span>
+<span class="source-line-no">060</span><span id="line.60">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidItemShippingDetailsErrorImpl.class, name = InvalidItemShippingDetailsError.INVALID_ITEM_SHIPPING_DETAILS),</span>
+<span class="source-line-no">061</span><span id="line.61">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidJsonInputErrorImpl.class, name = InvalidJsonInputError.INVALID_JSON_INPUT),</span>
+<span class="source-line-no">062</span><span id="line.62">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidOperationErrorImpl.class, name = InvalidOperationError.INVALID_OPERATION),</span>
+<span class="source-line-no">063</span><span id="line.63">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidSubjectErrorImpl.class, name = InvalidSubjectError.INVALID_SUBJECT),</span>
+<span class="source-line-no">064</span><span id="line.64">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),</span>
+<span class="source-line-no">065</span><span id="line.65">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.LanguageUsedInStoresErrorImpl.class, name = LanguageUsedInStoresError.LANGUAGE_USED_IN_STORES),</span>
+<span class="source-line-no">066</span><span id="line.66">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MatchingPriceNotFoundErrorImpl.class, name = MatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND),</span>
+<span class="source-line-no">067</span><span id="line.67">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxResourceLimitExceededErrorImpl.class, name = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),</span>
+<span class="source-line-no">068</span><span id="line.68">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingRoleOnChannelErrorImpl.class, name = MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL),</span>
+<span class="source-line-no">069</span><span id="line.69">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl.class, name = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),</span>
+<span class="source-line-no">070</span><span id="line.70">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = NoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND),</span>
+<span class="source-line-no">071</span><span id="line.71">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NotEnabledErrorImpl.class, name = NotEnabledError.NOT_ENABLED),</span>
+<span class="source-line-no">072</span><span id="line.72">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ObjectNotFoundErrorImpl.class, name = ObjectNotFoundError.OBJECT_NOT_FOUND),</span>
+<span class="source-line-no">073</span><span id="line.73">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OutOfStockErrorImpl.class, name = OutOfStockError.OUT_OF_STOCK),</span>
+<span class="source-line-no">074</span><span id="line.74">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverCapacityErrorImpl.class, name = OverCapacityError.OVER_CAPACITY),</span>
+<span class="source-line-no">075</span><span id="line.75">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorImpl.class, name = OverlappingStandalonePriceValidityError.OVERLAPPING_STANDALONE_PRICE_VALIDITY),</span>
+<span class="source-line-no">076</span><span id="line.76">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PendingOperationErrorImpl.class, name = PendingOperationError.PENDING_OPERATION),</span>
+<span class="source-line-no">077</span><span id="line.77">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.PriceChangedErrorImpl.class, name = PriceChangedError.PRICE_CHANGED),</span>
+<span class="source-line-no">078</span><span id="line.78">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorImpl.class, name = ProjectNotConfiguredForLanguagesError.PROJECT_NOT_CONFIGURED_FOR_LANGUAGES),</span>
+<span class="source-line-no">079</span><span id="line.79">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryComplexityLimitExceededErrorImpl.class, name = QueryComplexityLimitExceededError.QUERY_COMPLEXITY_LIMIT_EXCEEDED),</span>
+<span class="source-line-no">080</span><span id="line.80">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryTimedOutErrorImpl.class, name = QueryTimedOutError.QUERY_TIMED_OUT),</span>
+<span class="source-line-no">081</span><span id="line.81">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferenceExistsErrorImpl.class, name = ReferenceExistsError.REFERENCE_EXISTS),</span>
+<span class="source-line-no">082</span><span id="line.82">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferencedResourceNotFoundErrorImpl.class, name = ReferencedResourceNotFoundError.REFERENCED_RESOURCE_NOT_FOUND),</span>
+<span class="source-line-no">083</span><span id="line.83">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.RequiredFieldErrorImpl.class, name = RequiredFieldError.REQUIRED_FIELD),</span>
+<span class="source-line-no">084</span><span id="line.84">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceNotFoundErrorImpl.class, name = ResourceNotFoundError.RESOURCE_NOT_FOUND),</span>
+<span class="source-line-no">085</span><span id="line.85">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceSizeLimitExceededErrorImpl.class, name = ResourceSizeLimitExceededError.RESOURCE_SIZE_LIMIT_EXCEEDED),</span>
+<span class="source-line-no">086</span><span id="line.86">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchDeactivatedErrorImpl.class, name = SearchDeactivatedError.SEARCH_DEACTIVATED),</span>
+<span class="source-line-no">087</span><span id="line.87">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchExecutionFailureErrorImpl.class, name = SearchExecutionFailureError.SEARCH_EXECUTION_FAILURE),</span>
+<span class="source-line-no">088</span><span id="line.88">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchFacetPathNotFoundErrorImpl.class, name = SearchFacetPathNotFoundError.SEARCH_FACET_PATH_NOT_FOUND),</span>
+<span class="source-line-no">089</span><span id="line.89">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchIndexingInProgressErrorImpl.class, name = SearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),</span>
+<span class="source-line-no">090</span><span id="line.90">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SemanticErrorErrorImpl.class, name = SemanticErrorError.SEMANTIC_ERROR),</span>
+<span class="source-line-no">091</span><span id="line.91">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),</span>
+<span class="source-line-no">092</span><span id="line.92">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SyntaxErrorErrorImpl.class, name = SyntaxErrorError.SYNTAX_ERROR),</span>
+<span class="source-line-no">093</span><span id="line.93">        @JsonSubTypes.Type(value = com.commercetools.api.models.error.WeakPasswordErrorImpl.class, name = WeakPasswordError.WEAK_PASSWORD) })</span>
+<span class="source-line-no">094</span><span id="line.94">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)</span>
+<span class="source-line-no">095</span><span id="line.95">@JsonDeserialize(as = ErrorObjectImpl.class)</span>
+<span class="source-line-no">096</span><span id="line.96">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">097</span><span id="line.97">public interface ErrorObject {</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    @NotNull</span>
+<span class="source-line-no">100</span><span id="line.100">    @JsonProperty("code")</span>
+<span class="source-line-no">101</span><span id="line.101">    public String getCode();</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    @NotNull</span>
+<span class="source-line-no">104</span><span id="line.104">    @JsonProperty("message")</span>
+<span class="source-line-no">105</span><span id="line.105">    public String getMessage();</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    @NotNull</span>
+<span class="source-line-no">108</span><span id="line.108">    @JsonAnyGetter</span>
+<span class="source-line-no">109</span><span id="line.109">    public Map&lt;String, Object&gt; values();</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    public void setMessage(final String message);</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public static com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorBuilder attributeDefinitionAlreadyExistsBuilder() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorBuilder.of();</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public static com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorBuilder attributeDefinitionTypeConflictBuilder() {</span>
-<span class="source-line-no">118</span><span id="line.118">        return com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorBuilder.of();</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    public static com.commercetools.api.models.error.AttributeNameDoesNotExistErrorBuilder attributeNameDoesNotExistBuilder() {</span>
-<span class="source-line-no">122</span><span id="line.122">        return com.commercetools.api.models.error.AttributeNameDoesNotExistErrorBuilder.of();</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    public static com.commercetools.api.models.error.BadGatewayErrorBuilder badGatewayBuilder() {</span>
-<span class="source-line-no">126</span><span id="line.126">        return com.commercetools.api.models.error.BadGatewayErrorBuilder.of();</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    public static com.commercetools.api.models.error.ConcurrentModificationErrorBuilder concurrentModificationBuilder() {</span>
-<span class="source-line-no">130</span><span id="line.130">        return com.commercetools.api.models.error.ConcurrentModificationErrorBuilder.of();</span>
-<span class="source-line-no">131</span><span id="line.131">    }</span>
-<span class="source-line-no">132</span><span id="line.132"></span>
-<span class="source-line-no">133</span><span id="line.133">    public static com.commercetools.api.models.error.DiscountCodeNonApplicableErrorBuilder discountCodeNonApplicableBuilder() {</span>
-<span class="source-line-no">134</span><span id="line.134">        return com.commercetools.api.models.error.DiscountCodeNonApplicableErrorBuilder.of();</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    public static com.commercetools.api.models.error.DuplicateAttributeValueErrorBuilder duplicateAttributeValueBuilder() {</span>
-<span class="source-line-no">138</span><span id="line.138">        return com.commercetools.api.models.error.DuplicateAttributeValueErrorBuilder.of();</span>
-<span class="source-line-no">139</span><span id="line.139">    }</span>
-<span class="source-line-no">140</span><span id="line.140"></span>
-<span class="source-line-no">141</span><span id="line.141">    public static com.commercetools.api.models.error.DuplicateAttributeValuesErrorBuilder duplicateAttributeValuesBuilder() {</span>
-<span class="source-line-no">142</span><span id="line.142">        return com.commercetools.api.models.error.DuplicateAttributeValuesErrorBuilder.of();</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    public static com.commercetools.api.models.error.DuplicateEnumValuesErrorBuilder duplicateEnumValuesBuilder() {</span>
-<span class="source-line-no">146</span><span id="line.146">        return com.commercetools.api.models.error.DuplicateEnumValuesErrorBuilder.of();</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    public static com.commercetools.api.models.error.DuplicateFieldErrorBuilder duplicateFieldBuilder() {</span>
-<span class="source-line-no">150</span><span id="line.150">        return com.commercetools.api.models.error.DuplicateFieldErrorBuilder.of();</span>
-<span class="source-line-no">151</span><span id="line.151">    }</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    public static com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorBuilder duplicateFieldWithConflictingResourceBuilder() {</span>
-<span class="source-line-no">154</span><span id="line.154">        return com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorBuilder.of();</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    public static com.commercetools.api.models.error.DuplicatePriceScopeErrorBuilder duplicatePriceScopeBuilder() {</span>
-<span class="source-line-no">158</span><span id="line.158">        return com.commercetools.api.models.error.DuplicatePriceScopeErrorBuilder.of();</span>
-<span class="source-line-no">159</span><span id="line.159">    }</span>
-<span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    public static com.commercetools.api.models.error.DuplicateStandalonePriceScopeErrorBuilder duplicateStandalonePriceScopeBuilder() {</span>
-<span class="source-line-no">162</span><span id="line.162">        return com.commercetools.api.models.error.DuplicateStandalonePriceScopeErrorBuilder.of();</span>
-<span class="source-line-no">163</span><span id="line.163">    }</span>
-<span class="source-line-no">164</span><span id="line.164"></span>
-<span class="source-line-no">165</span><span id="line.165">    public static com.commercetools.api.models.error.DuplicateVariantValuesErrorBuilder duplicateVariantValuesBuilder() {</span>
-<span class="source-line-no">166</span><span id="line.166">        return com.commercetools.api.models.error.DuplicateVariantValuesErrorBuilder.of();</span>
-<span class="source-line-no">167</span><span id="line.167">    }</span>
-<span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    public static com.commercetools.api.models.error.EditPreviewFailedErrorBuilder editPreviewFailedBuilder() {</span>
-<span class="source-line-no">170</span><span id="line.170">        return com.commercetools.api.models.error.EditPreviewFailedErrorBuilder.of();</span>
-<span class="source-line-no">171</span><span id="line.171">    }</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">    public static com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorBuilder enumKeyAlreadyExistsBuilder() {</span>
-<span class="source-line-no">174</span><span id="line.174">        return com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorBuilder.of();</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    public static com.commercetools.api.models.error.EnumKeyDoesNotExistErrorBuilder enumKeyDoesNotExistBuilder() {</span>
-<span class="source-line-no">178</span><span id="line.178">        return com.commercetools.api.models.error.EnumKeyDoesNotExistErrorBuilder.of();</span>
-<span class="source-line-no">179</span><span id="line.179">    }</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public static com.commercetools.api.models.error.EnumValueIsUsedErrorBuilder enumValueIsUsedBuilder() {</span>
-<span class="source-line-no">182</span><span id="line.182">        return com.commercetools.api.models.error.EnumValueIsUsedErrorBuilder.of();</span>
-<span class="source-line-no">183</span><span id="line.183">    }</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    public static com.commercetools.api.models.error.EnumValuesMustMatchErrorBuilder enumValuesMustMatchBuilder() {</span>
-<span class="source-line-no">186</span><span id="line.186">        return com.commercetools.api.models.error.EnumValuesMustMatchErrorBuilder.of();</span>
-<span class="source-line-no">187</span><span id="line.187">    }</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    public static com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder extensionBadResponseBuilder() {</span>
-<span class="source-line-no">190</span><span id="line.190">        return com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder.of();</span>
-<span class="source-line-no">191</span><span id="line.191">    }</span>
-<span class="source-line-no">192</span><span id="line.192"></span>
-<span class="source-line-no">193</span><span id="line.193">    public static com.commercetools.api.models.error.ExtensionNoResponseErrorBuilder extensionNoResponseBuilder() {</span>
-<span class="source-line-no">194</span><span id="line.194">        return com.commercetools.api.models.error.ExtensionNoResponseErrorBuilder.of();</span>
-<span class="source-line-no">195</span><span id="line.195">    }</span>
-<span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">    public static com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorBuilder extensionUpdateActionsFailedBuilder() {</span>
-<span class="source-line-no">198</span><span id="line.198">        return com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorBuilder.of();</span>
-<span class="source-line-no">199</span><span id="line.199">    }</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    public static com.commercetools.api.models.error.ExternalOAuthFailedErrorBuilder externalOAuthFailedBuilder() {</span>
-<span class="source-line-no">202</span><span id="line.202">        return com.commercetools.api.models.error.ExternalOAuthFailedErrorBuilder.of();</span>
-<span class="source-line-no">203</span><span id="line.203">    }</span>
-<span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    public static com.commercetools.api.models.error.FeatureRemovedErrorBuilder featureRemovedBuilder() {</span>
-<span class="source-line-no">206</span><span id="line.206">        return com.commercetools.api.models.error.FeatureRemovedErrorBuilder.of();</span>
-<span class="source-line-no">207</span><span id="line.207">    }</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public static com.commercetools.api.models.error.GeneralErrorBuilder generalBuilder() {</span>
-<span class="source-line-no">210</span><span id="line.210">        return com.commercetools.api.models.error.GeneralErrorBuilder.of();</span>
-<span class="source-line-no">211</span><span id="line.211">    }</span>
-<span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    public static com.commercetools.api.models.error.InsufficientScopeErrorBuilder insufficientScopeBuilder() {</span>
-<span class="source-line-no">214</span><span id="line.214">        return com.commercetools.api.models.error.InsufficientScopeErrorBuilder.of();</span>
-<span class="source-line-no">215</span><span id="line.215">    }</span>
-<span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">    public static com.commercetools.api.models.error.InternalConstraintViolatedErrorBuilder internalConstraintViolatedBuilder() {</span>
-<span class="source-line-no">218</span><span id="line.218">        return com.commercetools.api.models.error.InternalConstraintViolatedErrorBuilder.of();</span>
-<span class="source-line-no">219</span><span id="line.219">    }</span>
-<span class="source-line-no">220</span><span id="line.220"></span>
-<span class="source-line-no">221</span><span id="line.221">    public static com.commercetools.api.models.error.InvalidCredentialsErrorBuilder invalidCredentialsBuilder() {</span>
-<span class="source-line-no">222</span><span id="line.222">        return com.commercetools.api.models.error.InvalidCredentialsErrorBuilder.of();</span>
-<span class="source-line-no">223</span><span id="line.223">    }</span>
-<span class="source-line-no">224</span><span id="line.224"></span>
-<span class="source-line-no">225</span><span id="line.225">    public static com.commercetools.api.models.error.InvalidCurrentPasswordErrorBuilder invalidCurrentPasswordBuilder() {</span>
-<span class="source-line-no">226</span><span id="line.226">        return com.commercetools.api.models.error.InvalidCurrentPasswordErrorBuilder.of();</span>
-<span class="source-line-no">227</span><span id="line.227">    }</span>
-<span class="source-line-no">228</span><span id="line.228"></span>
-<span class="source-line-no">229</span><span id="line.229">    public static com.commercetools.api.models.error.InvalidFieldErrorBuilder invalidFieldBuilder() {</span>
-<span class="source-line-no">230</span><span id="line.230">        return com.commercetools.api.models.error.InvalidFieldErrorBuilder.of();</span>
-<span class="source-line-no">231</span><span id="line.231">    }</span>
-<span class="source-line-no">232</span><span id="line.232"></span>
-<span class="source-line-no">233</span><span id="line.233">    public static com.commercetools.api.models.error.InvalidInputErrorBuilder invalidInputBuilder() {</span>
-<span class="source-line-no">234</span><span id="line.234">        return com.commercetools.api.models.error.InvalidInputErrorBuilder.of();</span>
-<span class="source-line-no">235</span><span id="line.235">    }</span>
-<span class="source-line-no">236</span><span id="line.236"></span>
-<span class="source-line-no">237</span><span id="line.237">    public static com.commercetools.api.models.error.InvalidItemShippingDetailsErrorBuilder invalidItemShippingDetailsBuilder() {</span>
-<span class="source-line-no">238</span><span id="line.238">        return com.commercetools.api.models.error.InvalidItemShippingDetailsErrorBuilder.of();</span>
-<span class="source-line-no">239</span><span id="line.239">    }</span>
-<span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">    public static com.commercetools.api.models.error.InvalidJsonInputErrorBuilder invalidJsonInputBuilder() {</span>
-<span class="source-line-no">242</span><span id="line.242">        return com.commercetools.api.models.error.InvalidJsonInputErrorBuilder.of();</span>
-<span class="source-line-no">243</span><span id="line.243">    }</span>
-<span class="source-line-no">244</span><span id="line.244"></span>
-<span class="source-line-no">245</span><span id="line.245">    public static com.commercetools.api.models.error.InvalidOperationErrorBuilder invalidOperationBuilder() {</span>
-<span class="source-line-no">246</span><span id="line.246">        return com.commercetools.api.models.error.InvalidOperationErrorBuilder.of();</span>
-<span class="source-line-no">247</span><span id="line.247">    }</span>
-<span class="source-line-no">248</span><span id="line.248"></span>
-<span class="source-line-no">249</span><span id="line.249">    public static com.commercetools.api.models.error.InvalidSubjectErrorBuilder invalidSubjectBuilder() {</span>
-<span class="source-line-no">250</span><span id="line.250">        return com.commercetools.api.models.error.InvalidSubjectErrorBuilder.of();</span>
-<span class="source-line-no">251</span><span id="line.251">    }</span>
-<span class="source-line-no">252</span><span id="line.252"></span>
-<span class="source-line-no">253</span><span id="line.253">    public static com.commercetools.api.models.error.InvalidTokenErrorBuilder invalidTokenBuilder() {</span>
-<span class="source-line-no">254</span><span id="line.254">        return com.commercetools.api.models.error.InvalidTokenErrorBuilder.of();</span>
-<span class="source-line-no">255</span><span id="line.255">    }</span>
-<span class="source-line-no">256</span><span id="line.256"></span>
-<span class="source-line-no">257</span><span id="line.257">    public static com.commercetools.api.models.error.LanguageUsedInStoresErrorBuilder languageUsedInStoresBuilder() {</span>
-<span class="source-line-no">258</span><span id="line.258">        return com.commercetools.api.models.error.LanguageUsedInStoresErrorBuilder.of();</span>
-<span class="source-line-no">259</span><span id="line.259">    }</span>
-<span class="source-line-no">260</span><span id="line.260"></span>
-<span class="source-line-no">261</span><span id="line.261">    public static com.commercetools.api.models.error.MatchingPriceNotFoundErrorBuilder matchingPriceNotFoundBuilder() {</span>
-<span class="source-line-no">262</span><span id="line.262">        return com.commercetools.api.models.error.MatchingPriceNotFoundErrorBuilder.of();</span>
-<span class="source-line-no">263</span><span id="line.263">    }</span>
-<span class="source-line-no">264</span><span id="line.264"></span>
-<span class="source-line-no">265</span><span id="line.265">    public static com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {</span>
-<span class="source-line-no">266</span><span id="line.266">        return com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder.of();</span>
-<span class="source-line-no">267</span><span id="line.267">    }</span>
-<span class="source-line-no">268</span><span id="line.268"></span>
-<span class="source-line-no">269</span><span id="line.269">    public static com.commercetools.api.models.error.MissingRoleOnChannelErrorBuilder missingRoleOnChannelBuilder() {</span>
-<span class="source-line-no">270</span><span id="line.270">        return com.commercetools.api.models.error.MissingRoleOnChannelErrorBuilder.of();</span>
-<span class="source-line-no">271</span><span id="line.271">    }</span>
-<span class="source-line-no">272</span><span id="line.272"></span>
-<span class="source-line-no">273</span><span id="line.273">    public static com.commercetools.api.models.error.MissingTaxRateForCountryErrorBuilder missingTaxRateForCountryBuilder() {</span>
-<span class="source-line-no">274</span><span id="line.274">        return com.commercetools.api.models.error.MissingTaxRateForCountryErrorBuilder.of();</span>
-<span class="source-line-no">275</span><span id="line.275">    }</span>
-<span class="source-line-no">276</span><span id="line.276"></span>
-<span class="source-line-no">277</span><span id="line.277">    public static com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorBuilder noMatchingProductDiscountFoundBuilder() {</span>
-<span class="source-line-no">278</span><span id="line.278">        return com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorBuilder.of();</span>
-<span class="source-line-no">279</span><span id="line.279">    }</span>
-<span class="source-line-no">280</span><span id="line.280"></span>
-<span class="source-line-no">281</span><span id="line.281">    public static com.commercetools.api.models.error.NotEnabledErrorBuilder notEnabledBuilder() {</span>
-<span class="source-line-no">282</span><span id="line.282">        return com.commercetools.api.models.error.NotEnabledErrorBuilder.of();</span>
-<span class="source-line-no">283</span><span id="line.283">    }</span>
-<span class="source-line-no">284</span><span id="line.284"></span>
-<span class="source-line-no">285</span><span id="line.285">    public static com.commercetools.api.models.error.ObjectNotFoundErrorBuilder objectNotFoundBuilder() {</span>
-<span class="source-line-no">286</span><span id="line.286">        return com.commercetools.api.models.error.ObjectNotFoundErrorBuilder.of();</span>
-<span class="source-line-no">287</span><span id="line.287">    }</span>
-<span class="source-line-no">288</span><span id="line.288"></span>
-<span class="source-line-no">289</span><span id="line.289">    public static com.commercetools.api.models.error.OutOfStockErrorBuilder outOfStockBuilder() {</span>
-<span class="source-line-no">290</span><span id="line.290">        return com.commercetools.api.models.error.OutOfStockErrorBuilder.of();</span>
-<span class="source-line-no">291</span><span id="line.291">    }</span>
-<span class="source-line-no">292</span><span id="line.292"></span>
-<span class="source-line-no">293</span><span id="line.293">    public static com.commercetools.api.models.error.OverCapacityErrorBuilder overCapacityBuilder() {</span>
-<span class="source-line-no">294</span><span id="line.294">        return com.commercetools.api.models.error.OverCapacityErrorBuilder.of();</span>
-<span class="source-line-no">295</span><span id="line.295">    }</span>
-<span class="source-line-no">296</span><span id="line.296"></span>
-<span class="source-line-no">297</span><span id="line.297">    public static com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder overlappingStandalonePriceValidityBuilder() {</span>
-<span class="source-line-no">298</span><span id="line.298">        return com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder.of();</span>
-<span class="source-line-no">299</span><span id="line.299">    }</span>
-<span class="source-line-no">300</span><span id="line.300"></span>
-<span class="source-line-no">301</span><span id="line.301">    public static com.commercetools.api.models.error.PendingOperationErrorBuilder pendingOperationBuilder() {</span>
-<span class="source-line-no">302</span><span id="line.302">        return com.commercetools.api.models.error.PendingOperationErrorBuilder.of();</span>
-<span class="source-line-no">303</span><span id="line.303">    }</span>
-<span class="source-line-no">304</span><span id="line.304"></span>
-<span class="source-line-no">305</span><span id="line.305">    public static com.commercetools.api.models.error.PriceChangedErrorBuilder priceChangedBuilder() {</span>
-<span class="source-line-no">306</span><span id="line.306">        return com.commercetools.api.models.error.PriceChangedErrorBuilder.of();</span>
-<span class="source-line-no">307</span><span id="line.307">    }</span>
-<span class="source-line-no">308</span><span id="line.308"></span>
-<span class="source-line-no">309</span><span id="line.309">    public static com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorBuilder projectNotConfiguredForLanguagesBuilder() {</span>
-<span class="source-line-no">310</span><span id="line.310">        return com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorBuilder.of();</span>
-<span class="source-line-no">311</span><span id="line.311">    }</span>
-<span class="source-line-no">312</span><span id="line.312"></span>
-<span class="source-line-no">313</span><span id="line.313">    public static com.commercetools.api.models.error.QueryComplexityLimitExceededErrorBuilder queryComplexityLimitExceededBuilder() {</span>
-<span class="source-line-no">314</span><span id="line.314">        return com.commercetools.api.models.error.QueryComplexityLimitExceededErrorBuilder.of();</span>
-<span class="source-line-no">315</span><span id="line.315">    }</span>
-<span class="source-line-no">316</span><span id="line.316"></span>
-<span class="source-line-no">317</span><span id="line.317">    public static com.commercetools.api.models.error.QueryTimedOutErrorBuilder queryTimedOutBuilder() {</span>
-<span class="source-line-no">318</span><span id="line.318">        return com.commercetools.api.models.error.QueryTimedOutErrorBuilder.of();</span>
-<span class="source-line-no">319</span><span id="line.319">    }</span>
-<span class="source-line-no">320</span><span id="line.320"></span>
-<span class="source-line-no">321</span><span id="line.321">    public static com.commercetools.api.models.error.ReferenceExistsErrorBuilder referenceExistsBuilder() {</span>
-<span class="source-line-no">322</span><span id="line.322">        return com.commercetools.api.models.error.ReferenceExistsErrorBuilder.of();</span>
-<span class="source-line-no">323</span><span id="line.323">    }</span>
-<span class="source-line-no">324</span><span id="line.324"></span>
-<span class="source-line-no">325</span><span id="line.325">    public static com.commercetools.api.models.error.ReferencedResourceNotFoundErrorBuilder referencedResourceNotFoundBuilder() {</span>
-<span class="source-line-no">326</span><span id="line.326">        return com.commercetools.api.models.error.ReferencedResourceNotFoundErrorBuilder.of();</span>
-<span class="source-line-no">327</span><span id="line.327">    }</span>
-<span class="source-line-no">328</span><span id="line.328"></span>
-<span class="source-line-no">329</span><span id="line.329">    public static com.commercetools.api.models.error.RequiredFieldErrorBuilder requiredFieldBuilder() {</span>
-<span class="source-line-no">330</span><span id="line.330">        return com.commercetools.api.models.error.RequiredFieldErrorBuilder.of();</span>
-<span class="source-line-no">331</span><span id="line.331">    }</span>
-<span class="source-line-no">332</span><span id="line.332"></span>
-<span class="source-line-no">333</span><span id="line.333">    public static com.commercetools.api.models.error.ResourceNotFoundErrorBuilder resourceNotFoundBuilder() {</span>
-<span class="source-line-no">334</span><span id="line.334">        return com.commercetools.api.models.error.ResourceNotFoundErrorBuilder.of();</span>
-<span class="source-line-no">335</span><span id="line.335">    }</span>
-<span class="source-line-no">336</span><span id="line.336"></span>
-<span class="source-line-no">337</span><span id="line.337">    public static com.commercetools.api.models.error.ResourceSizeLimitExceededErrorBuilder resourceSizeLimitExceededBuilder() {</span>
-<span class="source-line-no">338</span><span id="line.338">        return com.commercetools.api.models.error.ResourceSizeLimitExceededErrorBuilder.of();</span>
-<span class="source-line-no">339</span><span id="line.339">    }</span>
-<span class="source-line-no">340</span><span id="line.340"></span>
-<span class="source-line-no">341</span><span id="line.341">    public static com.commercetools.api.models.error.SearchDeactivatedErrorBuilder searchDeactivatedBuilder() {</span>
-<span class="source-line-no">342</span><span id="line.342">        return com.commercetools.api.models.error.SearchDeactivatedErrorBuilder.of();</span>
-<span class="source-line-no">343</span><span id="line.343">    }</span>
-<span class="source-line-no">344</span><span id="line.344"></span>
-<span class="source-line-no">345</span><span id="line.345">    public static com.commercetools.api.models.error.SearchExecutionFailureErrorBuilder searchExecutionFailureBuilder() {</span>
-<span class="source-line-no">346</span><span id="line.346">        return com.commercetools.api.models.error.SearchExecutionFailureErrorBuilder.of();</span>
-<span class="source-line-no">347</span><span id="line.347">    }</span>
-<span class="source-line-no">348</span><span id="line.348"></span>
-<span class="source-line-no">349</span><span id="line.349">    public static com.commercetools.api.models.error.SearchFacetPathNotFoundErrorBuilder searchFacetPathNotFoundBuilder() {</span>
-<span class="source-line-no">350</span><span id="line.350">        return com.commercetools.api.models.error.SearchFacetPathNotFoundErrorBuilder.of();</span>
-<span class="source-line-no">351</span><span id="line.351">    }</span>
-<span class="source-line-no">352</span><span id="line.352"></span>
-<span class="source-line-no">353</span><span id="line.353">    public static com.commercetools.api.models.error.SearchIndexingInProgressErrorBuilder searchIndexingInProgressBuilder() {</span>
-<span class="source-line-no">354</span><span id="line.354">        return com.commercetools.api.models.error.SearchIndexingInProgressErrorBuilder.of();</span>
-<span class="source-line-no">355</span><span id="line.355">    }</span>
-<span class="source-line-no">356</span><span id="line.356"></span>
-<span class="source-line-no">357</span><span id="line.357">    public static com.commercetools.api.models.error.SemanticErrorErrorBuilder semanticErrorBuilder() {</span>
-<span class="source-line-no">358</span><span id="line.358">        return com.commercetools.api.models.error.SemanticErrorErrorBuilder.of();</span>
-<span class="source-line-no">359</span><span id="line.359">    }</span>
-<span class="source-line-no">360</span><span id="line.360"></span>
-<span class="source-line-no">361</span><span id="line.361">    public static com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorBuilder shippingMethodDoesNotMatchCartBuilder() {</span>
-<span class="source-line-no">362</span><span id="line.362">        return com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorBuilder.of();</span>
-<span class="source-line-no">363</span><span id="line.363">    }</span>
-<span class="source-line-no">364</span><span id="line.364"></span>
-<span class="source-line-no">365</span><span id="line.365">    public static com.commercetools.api.models.error.SyntaxErrorErrorBuilder syntaxErrorBuilder() {</span>
-<span class="source-line-no">366</span><span id="line.366">        return com.commercetools.api.models.error.SyntaxErrorErrorBuilder.of();</span>
-<span class="source-line-no">367</span><span id="line.367">    }</span>
-<span class="source-line-no">368</span><span id="line.368"></span>
-<span class="source-line-no">369</span><span id="line.369">    public static com.commercetools.api.models.error.WeakPasswordErrorBuilder weakPasswordBuilder() {</span>
-<span class="source-line-no">370</span><span id="line.370">        return com.commercetools.api.models.error.WeakPasswordErrorBuilder.of();</span>
-<span class="source-line-no">371</span><span id="line.371">    }</span>
-<span class="source-line-no">372</span><span id="line.372"></span>
-<span class="source-line-no">373</span><span id="line.373">    default &lt;T&gt; T withErrorObject(Function&lt;ErrorObject, T&gt; helper) {</span>
-<span class="source-line-no">374</span><span id="line.374">        return helper.apply(this);</span>
-<span class="source-line-no">375</span><span id="line.375">    }</span>
-<span class="source-line-no">376</span><span id="line.376"></span>
-<span class="source-line-no">377</span><span id="line.377">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ErrorObject&gt; typeReference() {</span>
-<span class="source-line-no">378</span><span id="line.378">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ErrorObject&gt;() {</span>
-<span class="source-line-no">379</span><span id="line.379">            @Override</span>
-<span class="source-line-no">380</span><span id="line.380">            public String toString() {</span>
-<span class="source-line-no">381</span><span id="line.381">                return "TypeReference&lt;ErrorObject&gt;";</span>
-<span class="source-line-no">382</span><span id="line.382">            }</span>
-<span class="source-line-no">383</span><span id="line.383">        };</span>
-<span class="source-line-no">384</span><span id="line.384">    }</span>
-<span class="source-line-no">385</span><span id="line.385">}</span>
+<span class="source-line-no">113</span><span id="line.113">    @JsonAnySetter</span>
+<span class="source-line-no">114</span><span id="line.114">    public void setValue(String key, Object value);</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    public static com.commercetools.api.models.error.AccessDeniedErrorBuilder accessDeniedBuilder() {</span>
+<span class="source-line-no">117</span><span id="line.117">        return com.commercetools.api.models.error.AccessDeniedErrorBuilder.of();</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    public static com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder anonymousIdAlreadyInUseBuilder() {</span>
+<span class="source-line-no">121</span><span id="line.121">        return com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder.of();</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    public static com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorBuilder attributeDefinitionAlreadyExistsBuilder() {</span>
+<span class="source-line-no">125</span><span id="line.125">        return com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorBuilder.of();</span>
+<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">127</span><span id="line.127"></span>
+<span class="source-line-no">128</span><span id="line.128">    public static com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorBuilder attributeDefinitionTypeConflictBuilder() {</span>
+<span class="source-line-no">129</span><span id="line.129">        return com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorBuilder.of();</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    public static com.commercetools.api.models.error.AttributeNameDoesNotExistErrorBuilder attributeNameDoesNotExistBuilder() {</span>
+<span class="source-line-no">133</span><span id="line.133">        return com.commercetools.api.models.error.AttributeNameDoesNotExistErrorBuilder.of();</span>
+<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    public static com.commercetools.api.models.error.BadGatewayErrorBuilder badGatewayBuilder() {</span>
+<span class="source-line-no">137</span><span id="line.137">        return com.commercetools.api.models.error.BadGatewayErrorBuilder.of();</span>
+<span class="source-line-no">138</span><span id="line.138">    }</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">    public static com.commercetools.api.models.error.ConcurrentModificationErrorBuilder concurrentModificationBuilder() {</span>
+<span class="source-line-no">141</span><span id="line.141">        return com.commercetools.api.models.error.ConcurrentModificationErrorBuilder.of();</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    public static com.commercetools.api.models.error.DiscountCodeNonApplicableErrorBuilder discountCodeNonApplicableBuilder() {</span>
+<span class="source-line-no">145</span><span id="line.145">        return com.commercetools.api.models.error.DiscountCodeNonApplicableErrorBuilder.of();</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147"></span>
+<span class="source-line-no">148</span><span id="line.148">    public static com.commercetools.api.models.error.DuplicateAttributeValueErrorBuilder duplicateAttributeValueBuilder() {</span>
+<span class="source-line-no">149</span><span id="line.149">        return com.commercetools.api.models.error.DuplicateAttributeValueErrorBuilder.of();</span>
+<span class="source-line-no">150</span><span id="line.150">    }</span>
+<span class="source-line-no">151</span><span id="line.151"></span>
+<span class="source-line-no">152</span><span id="line.152">    public static com.commercetools.api.models.error.DuplicateAttributeValuesErrorBuilder duplicateAttributeValuesBuilder() {</span>
+<span class="source-line-no">153</span><span id="line.153">        return com.commercetools.api.models.error.DuplicateAttributeValuesErrorBuilder.of();</span>
+<span class="source-line-no">154</span><span id="line.154">    }</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">    public static com.commercetools.api.models.error.DuplicateEnumValuesErrorBuilder duplicateEnumValuesBuilder() {</span>
+<span class="source-line-no">157</span><span id="line.157">        return com.commercetools.api.models.error.DuplicateEnumValuesErrorBuilder.of();</span>
+<span class="source-line-no">158</span><span id="line.158">    }</span>
+<span class="source-line-no">159</span><span id="line.159"></span>
+<span class="source-line-no">160</span><span id="line.160">    public static com.commercetools.api.models.error.DuplicateFieldErrorBuilder duplicateFieldBuilder() {</span>
+<span class="source-line-no">161</span><span id="line.161">        return com.commercetools.api.models.error.DuplicateFieldErrorBuilder.of();</span>
+<span class="source-line-no">162</span><span id="line.162">    }</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">    public static com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorBuilder duplicateFieldWithConflictingResourceBuilder() {</span>
+<span class="source-line-no">165</span><span id="line.165">        return com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorBuilder.of();</span>
+<span class="source-line-no">166</span><span id="line.166">    }</span>
+<span class="source-line-no">167</span><span id="line.167"></span>
+<span class="source-line-no">168</span><span id="line.168">    public static com.commercetools.api.models.error.DuplicatePriceScopeErrorBuilder duplicatePriceScopeBuilder() {</span>
+<span class="source-line-no">169</span><span id="line.169">        return com.commercetools.api.models.error.DuplicatePriceScopeErrorBuilder.of();</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    public static com.commercetools.api.models.error.DuplicateStandalonePriceScopeErrorBuilder duplicateStandalonePriceScopeBuilder() {</span>
+<span class="source-line-no">173</span><span id="line.173">        return com.commercetools.api.models.error.DuplicateStandalonePriceScopeErrorBuilder.of();</span>
+<span class="source-line-no">174</span><span id="line.174">    }</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    public static com.commercetools.api.models.error.DuplicateVariantValuesErrorBuilder duplicateVariantValuesBuilder() {</span>
+<span class="source-line-no">177</span><span id="line.177">        return com.commercetools.api.models.error.DuplicateVariantValuesErrorBuilder.of();</span>
+<span class="source-line-no">178</span><span id="line.178">    }</span>
+<span class="source-line-no">179</span><span id="line.179"></span>
+<span class="source-line-no">180</span><span id="line.180">    public static com.commercetools.api.models.error.EditPreviewFailedErrorBuilder editPreviewFailedBuilder() {</span>
+<span class="source-line-no">181</span><span id="line.181">        return com.commercetools.api.models.error.EditPreviewFailedErrorBuilder.of();</span>
+<span class="source-line-no">182</span><span id="line.182">    }</span>
+<span class="source-line-no">183</span><span id="line.183"></span>
+<span class="source-line-no">184</span><span id="line.184">    public static com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorBuilder enumKeyAlreadyExistsBuilder() {</span>
+<span class="source-line-no">185</span><span id="line.185">        return com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorBuilder.of();</span>
+<span class="source-line-no">186</span><span id="line.186">    }</span>
+<span class="source-line-no">187</span><span id="line.187"></span>
+<span class="source-line-no">188</span><span id="line.188">    public static com.commercetools.api.models.error.EnumKeyDoesNotExistErrorBuilder enumKeyDoesNotExistBuilder() {</span>
+<span class="source-line-no">189</span><span id="line.189">        return com.commercetools.api.models.error.EnumKeyDoesNotExistErrorBuilder.of();</span>
+<span class="source-line-no">190</span><span id="line.190">    }</span>
+<span class="source-line-no">191</span><span id="line.191"></span>
+<span class="source-line-no">192</span><span id="line.192">    public static com.commercetools.api.models.error.EnumValueIsUsedErrorBuilder enumValueIsUsedBuilder() {</span>
+<span class="source-line-no">193</span><span id="line.193">        return com.commercetools.api.models.error.EnumValueIsUsedErrorBuilder.of();</span>
+<span class="source-line-no">194</span><span id="line.194">    }</span>
+<span class="source-line-no">195</span><span id="line.195"></span>
+<span class="source-line-no">196</span><span id="line.196">    public static com.commercetools.api.models.error.EnumValuesMustMatchErrorBuilder enumValuesMustMatchBuilder() {</span>
+<span class="source-line-no">197</span><span id="line.197">        return com.commercetools.api.models.error.EnumValuesMustMatchErrorBuilder.of();</span>
+<span class="source-line-no">198</span><span id="line.198">    }</span>
+<span class="source-line-no">199</span><span id="line.199"></span>
+<span class="source-line-no">200</span><span id="line.200">    public static com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder extensionBadResponseBuilder() {</span>
+<span class="source-line-no">201</span><span id="line.201">        return com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder.of();</span>
+<span class="source-line-no">202</span><span id="line.202">    }</span>
+<span class="source-line-no">203</span><span id="line.203"></span>
+<span class="source-line-no">204</span><span id="line.204">    public static com.commercetools.api.models.error.ExtensionNoResponseErrorBuilder extensionNoResponseBuilder() {</span>
+<span class="source-line-no">205</span><span id="line.205">        return com.commercetools.api.models.error.ExtensionNoResponseErrorBuilder.of();</span>
+<span class="source-line-no">206</span><span id="line.206">    }</span>
+<span class="source-line-no">207</span><span id="line.207"></span>
+<span class="source-line-no">208</span><span id="line.208">    public static com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorBuilder extensionUpdateActionsFailedBuilder() {</span>
+<span class="source-line-no">209</span><span id="line.209">        return com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorBuilder.of();</span>
+<span class="source-line-no">210</span><span id="line.210">    }</span>
+<span class="source-line-no">211</span><span id="line.211"></span>
+<span class="source-line-no">212</span><span id="line.212">    public static com.commercetools.api.models.error.ExternalOAuthFailedErrorBuilder externalOAuthFailedBuilder() {</span>
+<span class="source-line-no">213</span><span id="line.213">        return com.commercetools.api.models.error.ExternalOAuthFailedErrorBuilder.of();</span>
+<span class="source-line-no">214</span><span id="line.214">    }</span>
+<span class="source-line-no">215</span><span id="line.215"></span>
+<span class="source-line-no">216</span><span id="line.216">    public static com.commercetools.api.models.error.FeatureRemovedErrorBuilder featureRemovedBuilder() {</span>
+<span class="source-line-no">217</span><span id="line.217">        return com.commercetools.api.models.error.FeatureRemovedErrorBuilder.of();</span>
+<span class="source-line-no">218</span><span id="line.218">    }</span>
+<span class="source-line-no">219</span><span id="line.219"></span>
+<span class="source-line-no">220</span><span id="line.220">    public static com.commercetools.api.models.error.GeneralErrorBuilder generalBuilder() {</span>
+<span class="source-line-no">221</span><span id="line.221">        return com.commercetools.api.models.error.GeneralErrorBuilder.of();</span>
+<span class="source-line-no">222</span><span id="line.222">    }</span>
+<span class="source-line-no">223</span><span id="line.223"></span>
+<span class="source-line-no">224</span><span id="line.224">    public static com.commercetools.api.models.error.InsufficientScopeErrorBuilder insufficientScopeBuilder() {</span>
+<span class="source-line-no">225</span><span id="line.225">        return com.commercetools.api.models.error.InsufficientScopeErrorBuilder.of();</span>
+<span class="source-line-no">226</span><span id="line.226">    }</span>
+<span class="source-line-no">227</span><span id="line.227"></span>
+<span class="source-line-no">228</span><span id="line.228">    public static com.commercetools.api.models.error.InternalConstraintViolatedErrorBuilder internalConstraintViolatedBuilder() {</span>
+<span class="source-line-no">229</span><span id="line.229">        return com.commercetools.api.models.error.InternalConstraintViolatedErrorBuilder.of();</span>
+<span class="source-line-no">230</span><span id="line.230">    }</span>
+<span class="source-line-no">231</span><span id="line.231"></span>
+<span class="source-line-no">232</span><span id="line.232">    public static com.commercetools.api.models.error.InvalidCredentialsErrorBuilder invalidCredentialsBuilder() {</span>
+<span class="source-line-no">233</span><span id="line.233">        return com.commercetools.api.models.error.InvalidCredentialsErrorBuilder.of();</span>
+<span class="source-line-no">234</span><span id="line.234">    }</span>
+<span class="source-line-no">235</span><span id="line.235"></span>
+<span class="source-line-no">236</span><span id="line.236">    public static com.commercetools.api.models.error.InvalidCurrentPasswordErrorBuilder invalidCurrentPasswordBuilder() {</span>
+<span class="source-line-no">237</span><span id="line.237">        return com.commercetools.api.models.error.InvalidCurrentPasswordErrorBuilder.of();</span>
+<span class="source-line-no">238</span><span id="line.238">    }</span>
+<span class="source-line-no">239</span><span id="line.239"></span>
+<span class="source-line-no">240</span><span id="line.240">    public static com.commercetools.api.models.error.InvalidFieldErrorBuilder invalidFieldBuilder() {</span>
+<span class="source-line-no">241</span><span id="line.241">        return com.commercetools.api.models.error.InvalidFieldErrorBuilder.of();</span>
+<span class="source-line-no">242</span><span id="line.242">    }</span>
+<span class="source-line-no">243</span><span id="line.243"></span>
+<span class="source-line-no">244</span><span id="line.244">    public static com.commercetools.api.models.error.InvalidInputErrorBuilder invalidInputBuilder() {</span>
+<span class="source-line-no">245</span><span id="line.245">        return com.commercetools.api.models.error.InvalidInputErrorBuilder.of();</span>
+<span class="source-line-no">246</span><span id="line.246">    }</span>
+<span class="source-line-no">247</span><span id="line.247"></span>
+<span class="source-line-no">248</span><span id="line.248">    public static com.commercetools.api.models.error.InvalidItemShippingDetailsErrorBuilder invalidItemShippingDetailsBuilder() {</span>
+<span class="source-line-no">249</span><span id="line.249">        return com.commercetools.api.models.error.InvalidItemShippingDetailsErrorBuilder.of();</span>
+<span class="source-line-no">250</span><span id="line.250">    }</span>
+<span class="source-line-no">251</span><span id="line.251"></span>
+<span class="source-line-no">252</span><span id="line.252">    public static com.commercetools.api.models.error.InvalidJsonInputErrorBuilder invalidJsonInputBuilder() {</span>
+<span class="source-line-no">253</span><span id="line.253">        return com.commercetools.api.models.error.InvalidJsonInputErrorBuilder.of();</span>
+<span class="source-line-no">254</span><span id="line.254">    }</span>
+<span class="source-line-no">255</span><span id="line.255"></span>
+<span class="source-line-no">256</span><span id="line.256">    public static com.commercetools.api.models.error.InvalidOperationErrorBuilder invalidOperationBuilder() {</span>
+<span class="source-line-no">257</span><span id="line.257">        return com.commercetools.api.models.error.InvalidOperationErrorBuilder.of();</span>
+<span class="source-line-no">258</span><span id="line.258">    }</span>
+<span class="source-line-no">259</span><span id="line.259"></span>
+<span class="source-line-no">260</span><span id="line.260">    public static com.commercetools.api.models.error.InvalidSubjectErrorBuilder invalidSubjectBuilder() {</span>
+<span class="source-line-no">261</span><span id="line.261">        return com.commercetools.api.models.error.InvalidSubjectErrorBuilder.of();</span>
+<span class="source-line-no">262</span><span id="line.262">    }</span>
+<span class="source-line-no">263</span><span id="line.263"></span>
+<span class="source-line-no">264</span><span id="line.264">    public static com.commercetools.api.models.error.InvalidTokenErrorBuilder invalidTokenBuilder() {</span>
+<span class="source-line-no">265</span><span id="line.265">        return com.commercetools.api.models.error.InvalidTokenErrorBuilder.of();</span>
+<span class="source-line-no">266</span><span id="line.266">    }</span>
+<span class="source-line-no">267</span><span id="line.267"></span>
+<span class="source-line-no">268</span><span id="line.268">    public static com.commercetools.api.models.error.LanguageUsedInStoresErrorBuilder languageUsedInStoresBuilder() {</span>
+<span class="source-line-no">269</span><span id="line.269">        return com.commercetools.api.models.error.LanguageUsedInStoresErrorBuilder.of();</span>
+<span class="source-line-no">270</span><span id="line.270">    }</span>
+<span class="source-line-no">271</span><span id="line.271"></span>
+<span class="source-line-no">272</span><span id="line.272">    public static com.commercetools.api.models.error.MatchingPriceNotFoundErrorBuilder matchingPriceNotFoundBuilder() {</span>
+<span class="source-line-no">273</span><span id="line.273">        return com.commercetools.api.models.error.MatchingPriceNotFoundErrorBuilder.of();</span>
+<span class="source-line-no">274</span><span id="line.274">    }</span>
+<span class="source-line-no">275</span><span id="line.275"></span>
+<span class="source-line-no">276</span><span id="line.276">    public static com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {</span>
+<span class="source-line-no">277</span><span id="line.277">        return com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder.of();</span>
+<span class="source-line-no">278</span><span id="line.278">    }</span>
+<span class="source-line-no">279</span><span id="line.279"></span>
+<span class="source-line-no">280</span><span id="line.280">    public static com.commercetools.api.models.error.MissingRoleOnChannelErrorBuilder missingRoleOnChannelBuilder() {</span>
+<span class="source-line-no">281</span><span id="line.281">        return com.commercetools.api.models.error.MissingRoleOnChannelErrorBuilder.of();</span>
+<span class="source-line-no">282</span><span id="line.282">    }</span>
+<span class="source-line-no">283</span><span id="line.283"></span>
+<span class="source-line-no">284</span><span id="line.284">    public static com.commercetools.api.models.error.MissingTaxRateForCountryErrorBuilder missingTaxRateForCountryBuilder() {</span>
+<span class="source-line-no">285</span><span id="line.285">        return com.commercetools.api.models.error.MissingTaxRateForCountryErrorBuilder.of();</span>
+<span class="source-line-no">286</span><span id="line.286">    }</span>
+<span class="source-line-no">287</span><span id="line.287"></span>
+<span class="source-line-no">288</span><span id="line.288">    public static com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorBuilder noMatchingProductDiscountFoundBuilder() {</span>
+<span class="source-line-no">289</span><span id="line.289">        return com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorBuilder.of();</span>
+<span class="source-line-no">290</span><span id="line.290">    }</span>
+<span class="source-line-no">291</span><span id="line.291"></span>
+<span class="source-line-no">292</span><span id="line.292">    public static com.commercetools.api.models.error.NotEnabledErrorBuilder notEnabledBuilder() {</span>
+<span class="source-line-no">293</span><span id="line.293">        return com.commercetools.api.models.error.NotEnabledErrorBuilder.of();</span>
+<span class="source-line-no">294</span><span id="line.294">    }</span>
+<span class="source-line-no">295</span><span id="line.295"></span>
+<span class="source-line-no">296</span><span id="line.296">    public static com.commercetools.api.models.error.ObjectNotFoundErrorBuilder objectNotFoundBuilder() {</span>
+<span class="source-line-no">297</span><span id="line.297">        return com.commercetools.api.models.error.ObjectNotFoundErrorBuilder.of();</span>
+<span class="source-line-no">298</span><span id="line.298">    }</span>
+<span class="source-line-no">299</span><span id="line.299"></span>
+<span class="source-line-no">300</span><span id="line.300">    public static com.commercetools.api.models.error.OutOfStockErrorBuilder outOfStockBuilder() {</span>
+<span class="source-line-no">301</span><span id="line.301">        return com.commercetools.api.models.error.OutOfStockErrorBuilder.of();</span>
+<span class="source-line-no">302</span><span id="line.302">    }</span>
+<span class="source-line-no">303</span><span id="line.303"></span>
+<span class="source-line-no">304</span><span id="line.304">    public static com.commercetools.api.models.error.OverCapacityErrorBuilder overCapacityBuilder() {</span>
+<span class="source-line-no">305</span><span id="line.305">        return com.commercetools.api.models.error.OverCapacityErrorBuilder.of();</span>
+<span class="source-line-no">306</span><span id="line.306">    }</span>
+<span class="source-line-no">307</span><span id="line.307"></span>
+<span class="source-line-no">308</span><span id="line.308">    public static com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder overlappingStandalonePriceValidityBuilder() {</span>
+<span class="source-line-no">309</span><span id="line.309">        return com.commercetools.api.models.error.OverlappingStandalonePriceValidityErrorBuilder.of();</span>
+<span class="source-line-no">310</span><span id="line.310">    }</span>
+<span class="source-line-no">311</span><span id="line.311"></span>
+<span class="source-line-no">312</span><span id="line.312">    public static com.commercetools.api.models.error.PendingOperationErrorBuilder pendingOperationBuilder() {</span>
+<span class="source-line-no">313</span><span id="line.313">        return com.commercetools.api.models.error.PendingOperationErrorBuilder.of();</span>
+<span class="source-line-no">314</span><span id="line.314">    }</span>
+<span class="source-line-no">315</span><span id="line.315"></span>
+<span class="source-line-no">316</span><span id="line.316">    public static com.commercetools.api.models.error.PriceChangedErrorBuilder priceChangedBuilder() {</span>
+<span class="source-line-no">317</span><span id="line.317">        return com.commercetools.api.models.error.PriceChangedErrorBuilder.of();</span>
+<span class="source-line-no">318</span><span id="line.318">    }</span>
+<span class="source-line-no">319</span><span id="line.319"></span>
+<span class="source-line-no">320</span><span id="line.320">    public static com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorBuilder projectNotConfiguredForLanguagesBuilder() {</span>
+<span class="source-line-no">321</span><span id="line.321">        return com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesErrorBuilder.of();</span>
+<span class="source-line-no">322</span><span id="line.322">    }</span>
+<span class="source-line-no">323</span><span id="line.323"></span>
+<span class="source-line-no">324</span><span id="line.324">    public static com.commercetools.api.models.error.QueryComplexityLimitExceededErrorBuilder queryComplexityLimitExceededBuilder() {</span>
+<span class="source-line-no">325</span><span id="line.325">        return com.commercetools.api.models.error.QueryComplexityLimitExceededErrorBuilder.of();</span>
+<span class="source-line-no">326</span><span id="line.326">    }</span>
+<span class="source-line-no">327</span><span id="line.327"></span>
+<span class="source-line-no">328</span><span id="line.328">    public static com.commercetools.api.models.error.QueryTimedOutErrorBuilder queryTimedOutBuilder() {</span>
+<span class="source-line-no">329</span><span id="line.329">        return com.commercetools.api.models.error.QueryTimedOutErrorBuilder.of();</span>
+<span class="source-line-no">330</span><span id="line.330">    }</span>
+<span class="source-line-no">331</span><span id="line.331"></span>
+<span class="source-line-no">332</span><span id="line.332">    public static com.commercetools.api.models.error.ReferenceExistsErrorBuilder referenceExistsBuilder() {</span>
+<span class="source-line-no">333</span><span id="line.333">        return com.commercetools.api.models.error.ReferenceExistsErrorBuilder.of();</span>
+<span class="source-line-no">334</span><span id="line.334">    }</span>
+<span class="source-line-no">335</span><span id="line.335"></span>
+<span class="source-line-no">336</span><span id="line.336">    public static com.commercetools.api.models.error.ReferencedResourceNotFoundErrorBuilder referencedResourceNotFoundBuilder() {</span>
+<span class="source-line-no">337</span><span id="line.337">        return com.commercetools.api.models.error.ReferencedResourceNotFoundErrorBuilder.of();</span>
+<span class="source-line-no">338</span><span id="line.338">    }</span>
+<span class="source-line-no">339</span><span id="line.339"></span>
+<span class="source-line-no">340</span><span id="line.340">    public static com.commercetools.api.models.error.RequiredFieldErrorBuilder requiredFieldBuilder() {</span>
+<span class="source-line-no">341</span><span id="line.341">        return com.commercetools.api.models.error.RequiredFieldErrorBuilder.of();</span>
+<span class="source-line-no">342</span><span id="line.342">    }</span>
+<span class="source-line-no">343</span><span id="line.343"></span>
+<span class="source-line-no">344</span><span id="line.344">    public static com.commercetools.api.models.error.ResourceNotFoundErrorBuilder resourceNotFoundBuilder() {</span>
+<span class="source-line-no">345</span><span id="line.345">        return com.commercetools.api.models.error.ResourceNotFoundErrorBuilder.of();</span>
+<span class="source-line-no">346</span><span id="line.346">    }</span>
+<span class="source-line-no">347</span><span id="line.347"></span>
+<span class="source-line-no">348</span><span id="line.348">    public static com.commercetools.api.models.error.ResourceSizeLimitExceededErrorBuilder resourceSizeLimitExceededBuilder() {</span>
+<span class="source-line-no">349</span><span id="line.349">        return com.commercetools.api.models.error.ResourceSizeLimitExceededErrorBuilder.of();</span>
+<span class="source-line-no">350</span><span id="line.350">    }</span>
+<span class="source-line-no">351</span><span id="line.351"></span>
+<span class="source-line-no">352</span><span id="line.352">    public static com.commercetools.api.models.error.SearchDeactivatedErrorBuilder searchDeactivatedBuilder() {</span>
+<span class="source-line-no">353</span><span id="line.353">        return com.commercetools.api.models.error.SearchDeactivatedErrorBuilder.of();</span>
+<span class="source-line-no">354</span><span id="line.354">    }</span>
+<span class="source-line-no">355</span><span id="line.355"></span>
+<span class="source-line-no">356</span><span id="line.356">    public static com.commercetools.api.models.error.SearchExecutionFailureErrorBuilder searchExecutionFailureBuilder() {</span>
+<span class="source-line-no">357</span><span id="line.357">        return com.commercetools.api.models.error.SearchExecutionFailureErrorBuilder.of();</span>
+<span class="source-line-no">358</span><span id="line.358">    }</span>
+<span class="source-line-no">359</span><span id="line.359"></span>
+<span class="source-line-no">360</span><span id="line.360">    public static com.commercetools.api.models.error.SearchFacetPathNotFoundErrorBuilder searchFacetPathNotFoundBuilder() {</span>
+<span class="source-line-no">361</span><span id="line.361">        return com.commercetools.api.models.error.SearchFacetPathNotFoundErrorBuilder.of();</span>
+<span class="source-line-no">362</span><span id="line.362">    }</span>
+<span class="source-line-no">363</span><span id="line.363"></span>
+<span class="source-line-no">364</span><span id="line.364">    public static com.commercetools.api.models.error.SearchIndexingInProgressErrorBuilder searchIndexingInProgressBuilder() {</span>
+<span class="source-line-no">365</span><span id="line.365">        return com.commercetools.api.models.error.SearchIndexingInProgressErrorBuilder.of();</span>
+<span class="source-line-no">366</span><span id="line.366">    }</span>
+<span class="source-line-no">367</span><span id="line.367"></span>
+<span class="source-line-no">368</span><span id="line.368">    public static com.commercetools.api.models.error.SemanticErrorErrorBuilder semanticErrorBuilder() {</span>
+<span class="source-line-no">369</span><span id="line.369">        return com.commercetools.api.models.error.SemanticErrorErrorBuilder.of();</span>
+<span class="source-line-no">370</span><span id="line.370">    }</span>
+<span class="source-line-no">371</span><span id="line.371"></span>
+<span class="source-line-no">372</span><span id="line.372">    public static com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorBuilder shippingMethodDoesNotMatchCartBuilder() {</span>
+<span class="source-line-no">373</span><span id="line.373">        return com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorBuilder.of();</span>
+<span class="source-line-no">374</span><span id="line.374">    }</span>
+<span class="source-line-no">375</span><span id="line.375"></span>
+<span class="source-line-no">376</span><span id="line.376">    public static com.commercetools.api.models.error.SyntaxErrorErrorBuilder syntaxErrorBuilder() {</span>
+<span class="source-line-no">377</span><span id="line.377">        return com.commercetools.api.models.error.SyntaxErrorErrorBuilder.of();</span>
+<span class="source-line-no">378</span><span id="line.378">    }</span>
+<span class="source-line-no">379</span><span id="line.379"></span>
+<span class="source-line-no">380</span><span id="line.380">    public static com.commercetools.api.models.error.WeakPasswordErrorBuilder weakPasswordBuilder() {</span>
+<span class="source-line-no">381</span><span id="line.381">        return com.commercetools.api.models.error.WeakPasswordErrorBuilder.of();</span>
+<span class="source-line-no">382</span><span id="line.382">    }</span>
+<span class="source-line-no">383</span><span id="line.383"></span>
+<span class="source-line-no">384</span><span id="line.384">    default &lt;T&gt; T withErrorObject(Function&lt;ErrorObject, T&gt; helper) {</span>
+<span class="source-line-no">385</span><span id="line.385">        return helper.apply(this);</span>
+<span class="source-line-no">386</span><span id="line.386">    }</span>
+<span class="source-line-no">387</span><span id="line.387"></span>
+<span class="source-line-no">388</span><span id="line.388">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ErrorObject&gt; typeReference() {</span>
+<span class="source-line-no">389</span><span id="line.389">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ErrorObject&gt;() {</span>
+<span class="source-line-no">390</span><span id="line.390">            @Override</span>
+<span class="source-line-no">391</span><span id="line.391">            public String toString() {</span>
+<span class="source-line-no">392</span><span id="line.392">                return "TypeReference&lt;ErrorObject&gt;";</span>
+<span class="source-line-no">393</span><span id="line.393">            }</span>
+<span class="source-line-no">394</span><span id="line.394">        };</span>
+<span class="source-line-no">395</span><span id="line.395">    }</span>
+<span class="source-line-no">396</span><span id="line.396">}</span>
 
 
 

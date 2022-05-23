@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="ProjectChangeMessagesConfigurationActionImpl.html" title="class in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.17">ProjectChangeMessagesConfigurationAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.27">ProjectChangeMessagesConfigurationAction</a></span><span class="extends-implements">
 extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ProjectChangeMessagesConfigurationAction projectChangeMessagesConfigurationAction = ProjectChangeMessagesConfigurationAction.builder()
+           .messagesConfiguration(messagesConfigurationBuilder -> messagesConfigurationBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -164,7 +172,7 @@ extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="CHANGE_MESSAGES_CONFIGURATION">
 <h3>CHANGE_MESSAGES_CONFIGURATION</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.21">CHANGE_MESSAGES_CONFIGURATION</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.31">CHANGE_MESSAGES_CONFIGURATION</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction.CHANGE_MESSAGES_CONFIGURATION">Constant Field Values</a></dd>
@@ -184,50 +192,50 @@ extends <a href="ProjectUpdateAction.html" title="interface in com.commercetools
 <h3>getMessagesConfiguration</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../message/MessagesConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessagesConfigurationDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.26">getMessagesConfiguration</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../message/MessagesConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessagesConfigurationDraft</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.36">getMessagesConfiguration</a></span>()</div>
 <div class="block"><p>Configuration for the Messages Query feature.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMessagesConfiguration(com.commercetools.api.models.message.MessagesConfigurationDraft)">
 <h3>setMessagesConfiguration</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.31">setMessagesConfiguration</a></span>&#8203;<span class="parameters">(<a href="../message/MessagesConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessagesConfigurationDraft</a>&nbsp;messagesConfiguration)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.41">setMessagesConfiguration</a></span>&#8203;<span class="parameters">(<a href="../message/MessagesConfigurationDraft.html" title="interface in com.commercetools.api.models.message">MessagesConfigurationDraft</a>&nbsp;messagesConfiguration)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.33">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.43">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.37">of</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.47">of</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeMessagesConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.43">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeMessagesConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.53">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeMessagesConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.47">builder</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeMessagesConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.57">builder</a></span>&#8203;<span class="parameters">(<a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withProjectChangeMessagesConfigurationAction(java.util.function.Function)">
 <h3>withProjectChangeMessagesConfigurationAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.52">withProjectChangeMessagesConfigurationAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.62">withProjectChangeMessagesConfigurationAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.57">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/project/ProjectChangeMessagesConfigurationAction.html#line.67">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

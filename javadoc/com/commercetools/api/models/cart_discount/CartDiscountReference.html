@@ -84,9 +84,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartDiscountReferenceImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.20">CartDiscountReference</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.29">CartDiscountReference</a></span><span class="extends-implements">
 extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>, <a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="CartDiscount.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscount</a>&gt;</span></div>
-<div class="block"><p>Reference to a CartDiscount.</p></div>
+<div class="block"><p>Reference to a CartDiscount.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartDiscountReference cartDiscountReference = CartDiscountReference.builder()
+           .id("{id}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -170,7 +179,7 @@ extends <a href="../common/Reference.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="CART_DISCOUNT">
 <h3>CART_DISCOUNT</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.24">CART_DISCOUNT</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.33">CART_DISCOUNT</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart_discount.CartDiscountReference.CART_DISCOUNT">Constant Field Values</a></dd>
@@ -189,7 +198,7 @@ extends <a href="../common/Reference.html" title="interface in com.commercetools
 <section class="detail" id="getObj()">
 <h3>getObj</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="CartDiscount.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscount</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.29">getObj</a></span>()</div>
+</span><span class="return-type">@Valid <a href="CartDiscount.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscount</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.38">getObj</a></span>()</div>
 <div class="block"><p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p></div>
 </section>
 </li>
@@ -197,7 +206,7 @@ extends <a href="../common/Reference.html" title="interface in com.commercetools
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.36">getId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.45">getId</a></span>()</div>
 <div class="block"><p>Platform-generated unique identifier of the referenced CartDiscount.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -212,13 +221,13 @@ extends <a href="../common/Reference.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="setObj(com.commercetools.api.models.cart_discount.CartDiscount)">
 <h3>setObj</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.40">setObj</a></span>&#8203;<span class="parameters">(<a href="CartDiscount.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscount</a>&nbsp;obj)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.49">setObj</a></span>&#8203;<span class="parameters">(<a href="CartDiscount.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscount</a>&nbsp;obj)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.42">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.51">setId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/Reference.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></dd>
@@ -228,37 +237,37 @@ extends <a href="../common/Reference.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.44">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.53">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart_discount.CartDiscountReference)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.48">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.57">of</a></span>&#8203;<span class="parameters">(<a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.55">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.64">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart_discount.CartDiscountReference)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.68">builder</a></span>&#8203;<span class="parameters">(<a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartDiscountReference(java.util.function.Function)">
 <h3>withCartDiscountReference</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.63">withCartDiscountReference</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.72">withCartDiscountReference</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.67">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart_discount/CartDiscountReference.html#line.76">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

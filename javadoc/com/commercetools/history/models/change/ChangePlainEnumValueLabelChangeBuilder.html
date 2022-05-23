@@ -83,9 +83,21 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangePlainEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangePlainEnumValueLabelChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.9">ChangePlainEnumValueLabelChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.23">ChangePlainEnumValueLabelChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangePlainEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangePlainEnumValueLabelChange</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChangePlainEnumValueLabelChange changePlainEnumValueLabelChange = ChangePlainEnumValueLabelChange.builder()
+           .change("{change}")
+           .attributeName("{attributeName}")
+           .valueKey("{valueKey}")
+           .previousValue("{previousValue}")
+           .nextValue("{nextValue}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -183,7 +195,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ChangePlainEnumValueLabelChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.10">ChangePlainEnumValueLabelChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.24">ChangePlainEnumValueLabelChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -197,70 +209,70 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.26">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.40">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <div class="block"><p>Update action for <code>changePlainEnumValueLabel</code> on types</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="attributeName(java.lang.String)">
 <h3>attributeName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.35">attributeName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.49">attributeName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span></div>
 <div class="block"><p>The name of the attribute updated.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="valueKey(java.lang.String)">
 <h3>valueKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.44">valueKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;valueKey)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.58">valueKey</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;valueKey)</span></div>
 <div class="block"><p>Key of the values that was updated</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.lang.String)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.49">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.63">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;previousValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.lang.String)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.54">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.68">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nextValue)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.59">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.73">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getAttributeName()">
 <h3>getAttributeName</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.63">getAttributeName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.77">getAttributeName</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValueKey()">
 <h3>getValueKey</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.67">getValueKey</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.81">getValueKey</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.71">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.85">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.75">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.89">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangePlainEnumValueLabelChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.79">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangePlainEnumValueLabelChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.93">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChangePlainEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangePlainEnumValueLabelChange</a>&gt;</code></dd>
@@ -270,20 +282,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangePlainEnumValueLabelChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.91">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangePlainEnumValueLabelChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.105">buildUnchecked</a></span>()</div>
 <div class="block">builds ChangePlainEnumValueLabelChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.95">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.109">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.ChangePlainEnumValueLabelChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.99">of</a></span>&#8203;<span class="parameters">(<a href="ChangePlainEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangePlainEnumValueLabelChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChangePlainEnumValueLabelChangeBuilder.html" title="class in com.commercetools.history.models.change">ChangePlainEnumValueLabelChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/ChangePlainEnumValueLabelChangeBuilder.html#line.113">of</a></span>&#8203;<span class="parameters">(<a href="ChangePlainEnumValueLabelChange.html" title="interface in com.commercetools.history.models.change">ChangePlainEnumValueLabelChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

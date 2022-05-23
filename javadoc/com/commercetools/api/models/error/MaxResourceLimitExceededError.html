@@ -84,8 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="MaxResourceLimitExceededErrorImpl.html" title="class in com.commercetools.api.models.error">MaxResourceLimitExceededErrorImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.16">MaxResourceLimitExceededError</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.27">MaxResourceLimitExceededError</a></span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   MaxResourceLimitExceededError maxResourceLimitExceededError = MaxResourceLimitExceededError.builder()
+           .message("{message}")
+           .exceededResource(ReferenceTypeId.CART)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -161,7 +170,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <li>
 <section class="detail" id="MAX_RESOURCE_LIMIT_EXCEEDED">
 <h3>MAX_RESOURCE_LIMIT_EXCEEDED</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.20">MAX_RESOURCE_LIMIT_EXCEEDED</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.31">MAX_RESOURCE_LIMIT_EXCEEDED</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED">Constant Field Values</a></dd>
@@ -180,50 +189,50 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="getExceededResource()">
 <h3>getExceededResource</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.25">getExceededResource</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.36">getExceededResource</a></span>()</div>
 <div class="block"><p>supported resource type identifiers:</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExceededResource(com.commercetools.api.models.common.ReferenceTypeId)">
 <h3>setExceededResource</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.29">setExceededResource</a></span>&#8203;<span class="parameters">(<a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a>&nbsp;exceededResource)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.40">setExceededResource</a></span>&#8203;<span class="parameters">(<a href="../common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a>&nbsp;exceededResource)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.31">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.42">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.MaxResourceLimitExceededError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.35">of</a></span>&#8203;<span class="parameters">(<a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.46">of</a></span>&#8203;<span class="parameters">(<a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MaxResourceLimitExceededErrorBuilder.html" title="class in com.commercetools.api.models.error">MaxResourceLimitExceededErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.43">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MaxResourceLimitExceededErrorBuilder.html" title="class in com.commercetools.api.models.error">MaxResourceLimitExceededErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.54">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.error.MaxResourceLimitExceededError)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MaxResourceLimitExceededErrorBuilder.html" title="class in com.commercetools.api.models.error">MaxResourceLimitExceededErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.47">builder</a></span>&#8203;<span class="parameters">(<a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MaxResourceLimitExceededErrorBuilder.html" title="class in com.commercetools.api.models.error">MaxResourceLimitExceededErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.58">builder</a></span>&#8203;<span class="parameters">(<a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withMaxResourceLimitExceededError(java.util.function.Function)">
 <h3>withMaxResourceLimitExceededError</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.51">withMaxResourceLimitExceededError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.62">withMaxResourceLimitExceededError</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.55">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MaxResourceLimitExceededError.html" title="interface in com.commercetools.api.models.error">MaxResourceLimitExceededError</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/MaxResourceLimitExceededError.html#line.66">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

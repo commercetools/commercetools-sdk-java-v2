@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderLineItemDistributionChannelSetMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.17">OrderLineItemDistributionChannelSetMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.27">OrderLineItemDistributionChannelSetMessagePayload</a></span><span class="extends-implements">
 extends <a href="OrderMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderMessagePayload</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderLineItemDistributionChannelSetMessagePayload orderLineItemDistributionChannelSetMessagePayload = OrderLineItemDistributionChannelSetMessagePayload.builder()
+           .lineItemId("{lineItemId}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -170,7 +178,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET">
 <h3>ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.21">ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.31">ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayload.ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET">Constant Field Values</a></dd>
@@ -189,63 +197,63 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <section class="detail" id="getLineItemId()">
 <h3>getLineItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.23">getLineItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.33">getLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getDistributionChannel()">
 <h3>getDistributionChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.30">getDistributionChannel</a></span>()</div>
+</span><span class="return-type">@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.40">getDistributionChannel</a></span>()</div>
 <div class="block"><p>Reference to a Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLineItemId(java.lang.String)">
 <h3>setLineItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.34">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.44">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDistributionChannel(com.commercetools.api.models.channel.ChannelReference)">
 <h3>setDistributionChannel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.36">setDistributionChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;distributionChannel)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.46">setDistributionChannel</a></span>&#8203;<span class="parameters">(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;distributionChannel)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.38">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.48">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.42">of</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.52">of</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDistributionChannelSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.50">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDistributionChannelSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.60">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDistributionChannelSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.54">builder</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderLineItemDistributionChannelSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.64">builder</a></span>&#8203;<span class="parameters">(<a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderLineItemDistributionChannelSetMessagePayload(java.util.function.Function)">
 <h3>withOrderLineItemDistributionChannelSetMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.59">withOrderLineItemDistributionChannelSetMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.69">withOrderLineItemDistributionChannelSetMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.64">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderLineItemDistributionChannelSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderLineItemDistributionChannelSetMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderLineItemDistributionChannelSetMessagePayload.html#line.74">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

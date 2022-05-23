@@ -80,8 +80,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="FieldDefinitionImpl.html" title="class in com.commercetools.api.models.type">FieldDefinitionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.20">FieldDefinition</a></span></div>
-<div class="block"><p>Defines a Custom Field and its meta-information. This FieldDefinition is similar to an AttributeDefinition of Product Types.</p></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.32">FieldDefinition</a></span></div>
+<div class="block"><p>Defines a Custom Field and its meta-information. This FieldDefinition is similar to an AttributeDefinition of Product Types.</p>
+
+ Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   FieldDefinition fieldDefinition = FieldDefinition.builder()
+           .type(typeBuilder -> typeBuilder)
+           .name("{name}")
+           .label(labelBuilder -> labelBuilder)
+           .required(true)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -173,7 +185,7 @@ loadScripts(document, 'script');</script>
 <h3>getType</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.27">getType</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.39">getType</a></span>()</div>
 <div class="block"><p>Data type of the Custom Field to define.</p></div>
 </section>
 </li>
@@ -181,7 +193,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.35">getName</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.47">getName</a></span>()</div>
 <div class="block"><p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>.</p></div>
 </section>
 </li>
@@ -190,7 +202,7 @@ loadScripts(document, 'script');</script>
 <h3>getLabel</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.42">getLabel</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.54">getLabel</a></span>()</div>
 <div class="block"><p>A human-readable label for the field.</p></div>
 </section>
 </li>
@@ -198,81 +210,81 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getRequired()">
 <h3>getRequired</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.50">getRequired</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.62">getRequired</a></span>()</div>
 <div class="block"><p>Defines whether the field is required to have a value.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getInputHint()">
 <h3>getInputHint</h3>
-<div class="member-signature"><span class="return-type"><a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.58">getInputHint</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.70">getInputHint</a></span>()</div>
 <div class="block"><p>Must be either <code>SingleLine</code> or <code>MultiLine</code>. Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setType(com.commercetools.api.models.type.FieldType)">
 <h3>setType</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.61">setType</a></span>&#8203;<span class="parameters">(<a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a>&nbsp;type)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.73">setType</a></span>&#8203;<span class="parameters">(<a href="FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a>&nbsp;type)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.63">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.75">setName</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLabel(com.commercetools.api.models.common.LocalizedString)">
 <h3>setLabel</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.65">setLabel</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.77">setLabel</a></span>&#8203;<span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setRequired(java.lang.Boolean)">
 <h3>setRequired</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.67">setRequired</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;required)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.79">setRequired</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;required)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setInputHint(com.commercetools.api.models.type.TypeTextInputHint)">
 <h3>setInputHint</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.69">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.81">setInputHint</a></span>&#8203;<span class="parameters">(<a href="TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.71">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.83">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.type.FieldDefinition)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.75">of</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.87">of</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.85">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.97">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.type.FieldDefinition)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.89">builder</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.101">builder</a></span>&#8203;<span class="parameters">(<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withFieldDefinition(java.util.function.Function)">
 <h3>withFieldDefinition</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.93">withFieldDefinition</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.105">withFieldDefinition</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.97">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/type/FieldDefinition.html#line.109">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

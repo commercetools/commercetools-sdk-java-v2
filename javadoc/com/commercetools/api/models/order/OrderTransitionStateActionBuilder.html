@@ -83,9 +83,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderTransitionStateAction.html" title="interface in com.commercetools.api.models.order">OrderTransitionStateAction</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.12">OrderTransitionStateActionBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.22">OrderTransitionStateActionBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderTransitionStateAction.html" title="interface in com.commercetools.api.models.order">OrderTransitionStateAction</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderTransitionStateAction orderTransitionStateAction = OrderTransitionStateAction.builder()
+           .state(stateBuilder -> stateBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -166,7 +174,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>OrderTransitionStateActionBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.13">OrderTransitionStateActionBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.23">OrderTransitionStateActionBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -180,41 +188,41 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="state(java.util.function.Function)">
 <h3>state</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.24">state</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../state/StateResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.state">StateResourceIdentifierBuilder</a>,&#8203;<a href="../state/StateResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.state">StateResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.34">state</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../state/StateResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.state">StateResourceIdentifierBuilder</a>,&#8203;<a href="../state/StateResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.state">StateResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>ResourceIdentifier to a State.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="state(com.commercetools.api.models.state.StateResourceIdentifier)">
 <h3>state</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.34">state</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.44">state</a></span>&#8203;<span class="parameters">(<a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;state)</span></div>
 <div class="block"><p>ResourceIdentifier to a State.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="force(java.lang.Boolean)">
 <h3>force</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.40">force</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.50">force</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;force)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.45">getState</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.55">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getForce()">
 <h3>getForce</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.49">getForce</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.59">getForce</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateAction.html" title="interface in com.commercetools.api.models.order">OrderTransitionStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.54">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateAction.html" title="interface in com.commercetools.api.models.order">OrderTransitionStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.64">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="OrderTransitionStateAction.html" title="interface in com.commercetools.api.models.order">OrderTransitionStateAction</a>&gt;</code></dd>
@@ -224,20 +232,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateAction.html" title="interface in com.commercetools.api.models.order">OrderTransitionStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.62">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateAction.html" title="interface in com.commercetools.api.models.order">OrderTransitionStateAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.72">buildUnchecked</a></span>()</div>
 <div class="block">builds OrderTransitionStateAction without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.66">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.76">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.order.OrderTransitionStateAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.70">of</a></span>&#8203;<span class="parameters">(<a href="OrderTransitionStateAction.html" title="interface in com.commercetools.api.models.order">OrderTransitionStateAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="OrderTransitionStateActionBuilder.html" title="class in com.commercetools.api.models.order">OrderTransitionStateActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/order/OrderTransitionStateActionBuilder.html#line.80">of</a></span>&#8203;<span class="parameters">(<a href="OrderTransitionStateAction.html" title="interface in com.commercetools.api.models.order">OrderTransitionStateAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

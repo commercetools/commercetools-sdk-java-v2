@@ -88,8 +88,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="SubscriptionChangeDestinationActionImpl.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionImpl</a></code>, <code><a href="SubscriptionSetChangesActionImpl.html" title="class in com.commercetools.api.models.subscription">SubscriptionSetChangesActionImpl</a></code>, <code><a href="SubscriptionSetKeyActionImpl.html" title="class in com.commercetools.api.models.subscription">SubscriptionSetKeyActionImpl</a></code>, <code><a href="SubscriptionSetMessagesActionImpl.html" title="class in com.commercetools.api.models.subscription">SubscriptionSetMessagesActionImpl</a></code>, <code><a href="SubscriptionUpdateActionImpl.html" title="class in com.commercetools.api.models.subscription">SubscriptionUpdateActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.15">SubscriptionUpdateAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.25">SubscriptionUpdateAction</a></span><span class="extends-implements">
 extends <a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="SubscriptionUpdateAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionUpdateAction</a>&gt;</span></div>
+<div class="block">Example to create a subtype instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SubscriptionUpdateAction subscriptionUpdateAction = SubscriptionUpdateAction.changeDestinationBuilder()
+           destination(destinationBuilder -> destinationBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -146,7 +154,7 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <section class="detail" id="getAction()">
 <h3>getAction</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.26">getAction</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.36">getAction</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../ResourceUpdateAction.html#getAction()">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="SubscriptionUpdateAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionUpdateAction</a>&gt;</code></dd>
@@ -156,37 +164,37 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <li>
 <section class="detail" id="changeDestinationBuilder()">
 <h3>changeDestinationBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.30">changeDestinationBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionChangeDestinationActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionChangeDestinationActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.40">changeDestinationBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setChangesBuilder()">
 <h3>setChangesBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionSetChangesActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionSetChangesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.34">setChangesBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionSetChangesActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionSetChangesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.44">setChangesBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setKeyBuilder()">
 <h3>setKeyBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionSetKeyActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.38">setKeyBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionSetKeyActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionSetKeyActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.48">setKeyBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setMessagesBuilder()">
 <h3>setMessagesBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionSetMessagesActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionSetMessagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.42">setMessagesBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="SubscriptionSetMessagesActionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionSetMessagesActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.52">setMessagesBuilder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="withSubscriptionUpdateAction(java.util.function.Function)">
 <h3>withSubscriptionUpdateAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.46">withSubscriptionUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubscriptionUpdateAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.56">withSubscriptionUpdateAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubscriptionUpdateAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionUpdateAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SubscriptionUpdateAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.50">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="SubscriptionUpdateAction.html" title="interface in com.commercetools.api.models.subscription">SubscriptionUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/subscription/SubscriptionUpdateAction.html#line.60">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

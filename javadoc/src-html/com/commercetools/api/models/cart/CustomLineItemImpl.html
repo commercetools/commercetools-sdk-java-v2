@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.EqualsBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
-<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")</span>
+<span class="source-line-no">017</span><span id="line.17">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">018</span><span id="line.18">public class CustomLineItemImpl implements CustomLineItem, ModelBase {</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
 <span class="source-line-no">020</span><span id="line.20">    private String id;</span>
@@ -88,50 +88,50 @@
 <span class="source-line-no">075</span><span id="line.75">    }</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">    *  &lt;p&gt;Platform-generated unique identifier of the CustomLineItem.&lt;/p&gt;</span>
-<span class="source-line-no">079</span><span id="line.79">    */</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;Platform-generated unique identifier of the CustomLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80">    public String getId() {</span>
 <span class="source-line-no">081</span><span id="line.81">        return this.id;</span>
 <span class="source-line-no">082</span><span id="line.82">    }</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
 <span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">    *  &lt;p&gt;The name of this CustomLineItem.&lt;/p&gt;</span>
-<span class="source-line-no">086</span><span id="line.86">    */</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;The name of this CustomLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
 <span class="source-line-no">087</span><span id="line.87">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
 <span class="source-line-no">088</span><span id="line.88">        return this.name;</span>
 <span class="source-line-no">089</span><span id="line.89">    }</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
 <span class="source-line-no">091</span><span id="line.91">    /**</span>
-<span class="source-line-no">092</span><span id="line.92">    *  &lt;p&gt;The cost to add to the cart. The amount can be negative.&lt;/p&gt;</span>
-<span class="source-line-no">093</span><span id="line.93">    */</span>
+<span class="source-line-no">092</span><span id="line.92">     *  &lt;p&gt;The cost to add to the cart. The amount can be negative.&lt;/p&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
 <span class="source-line-no">094</span><span id="line.94">    public com.commercetools.api.models.common.TypedMoney getMoney() {</span>
 <span class="source-line-no">095</span><span id="line.95">        return this.money;</span>
 <span class="source-line-no">096</span><span id="line.96">    }</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
 <span class="source-line-no">098</span><span id="line.98">    /**</span>
-<span class="source-line-no">099</span><span id="line.99">    *  &lt;p&gt;Set once the &lt;code&gt;taxRate&lt;/code&gt; is set.&lt;/p&gt;</span>
-<span class="source-line-no">100</span><span id="line.100">    */</span>
+<span class="source-line-no">099</span><span id="line.99">     *  &lt;p&gt;Set once the &lt;code&gt;taxRate&lt;/code&gt; is set.&lt;/p&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
 <span class="source-line-no">101</span><span id="line.101">    public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {</span>
 <span class="source-line-no">102</span><span id="line.102">        return this.taxedPrice;</span>
 <span class="source-line-no">103</span><span id="line.103">    }</span>
 <span class="source-line-no">104</span><span id="line.104"></span>
 <span class="source-line-no">105</span><span id="line.105">    /**</span>
-<span class="source-line-no">106</span><span id="line.106">    *  &lt;p&gt;The total price of this custom line item. If custom line item is discounted, then the &lt;code&gt;totalPrice&lt;/code&gt; would be the discounted custom line item price multiplied by &lt;code&gt;quantity&lt;/code&gt;. Otherwise a total price is just a &lt;code&gt;money&lt;/code&gt; multiplied by the &lt;code&gt;quantity&lt;/code&gt;. &lt;code&gt;totalPrice&lt;/code&gt; may or may not include the taxes: it depends on the taxRate.includedInPrice property.&lt;/p&gt;</span>
-<span class="source-line-no">107</span><span id="line.107">    */</span>
+<span class="source-line-no">106</span><span id="line.106">     *  &lt;p&gt;The total price of this custom line item. If custom line item is discounted, then the &lt;code&gt;totalPrice&lt;/code&gt; would be the discounted custom line item price multiplied by &lt;code&gt;quantity&lt;/code&gt;. Otherwise a total price is just a &lt;code&gt;money&lt;/code&gt; multiplied by the &lt;code&gt;quantity&lt;/code&gt;. &lt;code&gt;totalPrice&lt;/code&gt; may or may not include the taxes: it depends on the taxRate.includedInPrice property.&lt;/p&gt;</span>
+<span class="source-line-no">107</span><span id="line.107">     */</span>
 <span class="source-line-no">108</span><span id="line.108">    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {</span>
 <span class="source-line-no">109</span><span id="line.109">        return this.totalPrice;</span>
 <span class="source-line-no">110</span><span id="line.110">    }</span>
 <span class="source-line-no">111</span><span id="line.111"></span>
 <span class="source-line-no">112</span><span id="line.112">    /**</span>
-<span class="source-line-no">113</span><span id="line.113">    *  &lt;p&gt;A unique String in the cart to identify this CustomLineItem.&lt;/p&gt;</span>
-<span class="source-line-no">114</span><span id="line.114">    */</span>
+<span class="source-line-no">113</span><span id="line.113">     *  &lt;p&gt;A unique String in the cart to identify this CustomLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">114</span><span id="line.114">     */</span>
 <span class="source-line-no">115</span><span id="line.115">    public String getSlug() {</span>
 <span class="source-line-no">116</span><span id="line.116">        return this.slug;</span>
 <span class="source-line-no">117</span><span id="line.117">    }</span>
 <span class="source-line-no">118</span><span id="line.118"></span>
 <span class="source-line-no">119</span><span id="line.119">    /**</span>
-<span class="source-line-no">120</span><span id="line.120">    *  &lt;p&gt;The amount of a CustomLineItem in the cart. Must be a positive integer.&lt;/p&gt;</span>
-<span class="source-line-no">121</span><span id="line.121">    */</span>
+<span class="source-line-no">120</span><span id="line.120">     *  &lt;p&gt;The amount of a CustomLineItem in the cart. Must be a positive integer.&lt;/p&gt;</span>
+<span class="source-line-no">121</span><span id="line.121">     */</span>
 <span class="source-line-no">122</span><span id="line.122">    public Long getQuantity() {</span>
 <span class="source-line-no">123</span><span id="line.123">        return this.quantity;</span>
 <span class="source-line-no">124</span><span id="line.124">    }</span>
@@ -145,8 +145,8 @@
 <span class="source-line-no">132</span><span id="line.132">    }</span>
 <span class="source-line-no">133</span><span id="line.133"></span>
 <span class="source-line-no">134</span><span id="line.134">    /**</span>
-<span class="source-line-no">135</span><span id="line.135">    *  &lt;p&gt;Will be set automatically in the &lt;code&gt;Platform&lt;/code&gt; TaxMode once the shipping address is set is set. For the &lt;code&gt;External&lt;/code&gt; tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.&lt;/p&gt;</span>
-<span class="source-line-no">136</span><span id="line.136">    */</span>
+<span class="source-line-no">135</span><span id="line.135">     *  &lt;p&gt;Will be set automatically in the &lt;code&gt;Platform&lt;/code&gt; TaxMode once the shipping address is set is set. For the &lt;code&gt;External&lt;/code&gt; tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.&lt;/p&gt;</span>
+<span class="source-line-no">136</span><span id="line.136">     */</span>
 <span class="source-line-no">137</span><span id="line.137">    public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {</span>
 <span class="source-line-no">138</span><span id="line.138">        return this.taxRate;</span>
 <span class="source-line-no">139</span><span id="line.139">    }</span>
@@ -160,8 +160,8 @@
 <span class="source-line-no">147</span><span id="line.147">    }</span>
 <span class="source-line-no">148</span><span id="line.148"></span>
 <span class="source-line-no">149</span><span id="line.149">    /**</span>
-<span class="source-line-no">150</span><span id="line.150">    *  &lt;p&gt;Container for custom line item specific address(es). CustomLineItem fields that can be used in query predicates: &lt;code&gt;slug&lt;/code&gt;, &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;quantity&lt;/code&gt;, &lt;code&gt;money&lt;/code&gt;, &lt;code&gt;state&lt;/code&gt;, &lt;code&gt;discountedPricePerQuantity&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">151</span><span id="line.151">    */</span>
+<span class="source-line-no">150</span><span id="line.150">     *  &lt;p&gt;Container for custom line item specific address(es). CustomLineItem fields that can be used in query predicates: &lt;code&gt;slug&lt;/code&gt;, &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;quantity&lt;/code&gt;, &lt;code&gt;money&lt;/code&gt;, &lt;code&gt;state&lt;/code&gt;, &lt;code&gt;discountedPricePerQuantity&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">151</span><span id="line.151">     */</span>
 <span class="source-line-no">152</span><span id="line.152">    public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails() {</span>
 <span class="source-line-no">153</span><span id="line.153">        return this.shippingDetails;</span>
 <span class="source-line-no">154</span><span id="line.154">    }</span>

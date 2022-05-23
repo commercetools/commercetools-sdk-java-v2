@@ -83,9 +83,18 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.10">ChannelUpdateBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.21">ChannelUpdateBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   ChannelUpdate channelUpdate = ChannelUpdate.builder()
+           .version(0.3)
+           .plusActions(actionsBuilder -> actionsBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -183,7 +192,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>ChannelUpdateBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.11">ChannelUpdateBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.22">ChannelUpdateBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -197,61 +206,61 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.21">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.32">version</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <div class="block"><p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="actions(com.commercetools.api.models.channel.ChannelUpdateAction...)">
 <h3>actions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.30">actions</a></span>&#8203;<span class="parameters">(<a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>...&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.41">actions</a></span>&#8203;<span class="parameters">(<a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>...&nbsp;actions)</span></div>
 <div class="block"><p>Update actions to be performed on the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="actions(java.util.List)">
 <h3>actions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.39">actions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>&gt;&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.50">actions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>&gt;&nbsp;actions)</span></div>
 <div class="block"><p>Update actions to be performed on the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusActions(com.commercetools.api.models.channel.ChannelUpdateAction...)">
 <h3>plusActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.49">plusActions</a></span>&#8203;<span class="parameters">(<a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>...&nbsp;actions)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.60">plusActions</a></span>&#8203;<span class="parameters">(<a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>...&nbsp;actions)</span></div>
 <div class="block"><p>Update actions to be performed on the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="plusActions(java.util.function.Function)">
 <h3>plusActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.61">plusActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelUpdateActionBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.72">plusActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelUpdateActionBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Update actions to be performed on the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withActions(java.util.function.Function)">
 <h3>withActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.74">withActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelUpdateActionBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.85">withActions</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChannelUpdateActionBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateActionBuilder</a>,&#8203;<a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>&gt;&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Update actions to be performed on the Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.81">getVersion</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.92">getVersion</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getActions()">
 <h3>getActions</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.85">getActions</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChannelUpdateAction.html" title="interface in com.commercetools.api.models.channel">ChannelUpdateAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.96">getActions</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.89">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.100">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a>&gt;</code></dd>
@@ -261,20 +270,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.98">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.109">buildUnchecked</a></span>()</div>
 <div class="block">builds ChannelUpdate without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.102">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.113">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.channel.ChannelUpdate)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.106">of</a></span>&#8203;<span class="parameters">(<a href="ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ChannelUpdateBuilder.html" title="class in com.commercetools.api.models.channel">ChannelUpdateBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/channel/ChannelUpdateBuilder.html#line.117">of</a></span>&#8203;<span class="parameters">(<a href="ChannelUpdate.html" title="interface in com.commercetools.api.models.channel">ChannelUpdate</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

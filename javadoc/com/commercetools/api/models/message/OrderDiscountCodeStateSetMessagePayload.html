@@ -84,8 +84,17 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="OrderDiscountCodeStateSetMessagePayloadImpl.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayloadImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.18">OrderDiscountCodeStateSetMessagePayload</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.29">OrderDiscountCodeStateSetMessagePayload</a></span><span class="extends-implements">
 extends <a href="OrderMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderMessagePayload</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   OrderDiscountCodeStateSetMessagePayload orderDiscountCodeStateSetMessagePayload = OrderDiscountCodeStateSetMessagePayload.builder()
+           .discountCode(discountCodeBuilder -> discountCodeBuilder)
+           .state(DiscountCodeState.NOT_ACTIVE)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -176,7 +185,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <li>
 <section class="detail" id="ORDER_DISCOUNT_CODE_STATE_SET">
 <h3>ORDER_DISCOUNT_CODE_STATE_SET</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.22">ORDER_DISCOUNT_CODE_STATE_SET</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.33">ORDER_DISCOUNT_CODE_STATE_SET</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload.ORDER_DISCOUNT_CODE_STATE_SET">Constant Field Values</a></dd>
@@ -196,7 +205,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <h3>getDiscountCode</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
-</span><span class="return-type">@NotNull @Valid <a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.27">getDiscountCode</a></span>()</div>
+</span><span class="return-type">@NotNull @Valid <a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.38">getDiscountCode</a></span>()</div>
 <div class="block"><p>Reference to a DiscountCode.</p></div>
 </section>
 </li>
@@ -204,67 +213,67 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.32">getState</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.43">getState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getOldState()">
 <h3>getOldState</h3>
-<div class="member-signature"><span class="return-type"><a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.36">getOldState</a></span>()</div>
+<div class="member-signature"><span class="return-type"><a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.47">getOldState</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setDiscountCode(com.commercetools.api.models.discount_code.DiscountCodeReference)">
 <h3>setDiscountCode</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.39">setDiscountCode</a></span>&#8203;<span class="parameters">(<a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&nbsp;discountCode)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.50">setDiscountCode</a></span>&#8203;<span class="parameters">(<a href="../discount_code/DiscountCodeReference.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeReference</a>&nbsp;discountCode)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(com.commercetools.api.models.cart.DiscountCodeState)">
 <h3>setState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.41">setState</a></span>&#8203;<span class="parameters">(<a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a>&nbsp;state)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.52">setState</a></span>&#8203;<span class="parameters">(<a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a>&nbsp;state)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setOldState(com.commercetools.api.models.cart.DiscountCodeState)">
 <h3>setOldState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.43">setOldState</a></span>&#8203;<span class="parameters">(<a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a>&nbsp;oldState)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.54">setOldState</a></span>&#8203;<span class="parameters">(<a href="../cart/DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a>&nbsp;oldState)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.45">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.56">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.49">of</a></span>&#8203;<span class="parameters">(<a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.60">of</a></span>&#8203;<span class="parameters">(<a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeStateSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.57">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeStateSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.68">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeStateSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.61">builder</a></span>&#8203;<span class="parameters">(<a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="OrderDiscountCodeStateSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayloadBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.72">builder</a></span>&#8203;<span class="parameters">(<a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withOrderDiscountCodeStateSetMessagePayload(java.util.function.Function)">
 <h3>withOrderDiscountCodeStateSetMessagePayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.66">withOrderDiscountCodeStateSetMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.77">withOrderDiscountCodeStateSetMessagePayload</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.71">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="OrderDiscountCodeStateSetMessagePayload.html" title="interface in com.commercetools.api.models.message">OrderDiscountCodeStateSetMessagePayload</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/message/OrderDiscountCodeStateSetMessagePayload.html#line.82">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

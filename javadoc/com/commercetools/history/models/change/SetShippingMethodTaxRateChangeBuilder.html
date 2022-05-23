@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetShippingMethodTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetShippingMethodTaxRateChange</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.10">SetShippingMethodTaxRateChangeBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.23">SetShippingMethodTaxRateChangeBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetShippingMethodTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetShippingMethodTaxRateChange</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   SetShippingMethodTaxRateChange setShippingMethodTaxRateChange = SetShippingMethodTaxRateChange.builder()
+           .change("{change}")
+           .taxMode(TaxMode.PLATFORM)
+           .nextValue(nextValueBuilder -> nextValueBuilder)
+           .previousValue(previousValueBuilder -> previousValueBuilder)
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -187,7 +198,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>SetShippingMethodTaxRateChangeBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.11">SetShippingMethodTaxRateChangeBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.24">SetShippingMethodTaxRateChangeBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -201,72 +212,72 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="change(java.lang.String)">
 <h3>change</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.25">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.38">change</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</span></div>
 <div class="block"><p>Update action for <code>setShippingMethodTaxRate</code></p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="taxMode(com.commercetools.history.models.common.TaxMode)">
 <h3>taxMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.30">taxMode</a></span>&#8203;<span class="parameters">(<a href="../common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;taxMode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.43">taxMode</a></span>&#8203;<span class="parameters">(<a href="../common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a>&nbsp;taxMode)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(java.util.function.Function)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.40">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>,&#8203;<a href="../common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.53">nextValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>,&#8203;<a href="../common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="nextValue(com.commercetools.history.models.common.TaxRate)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.50">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.63">nextValue</a></span>&#8203;<span class="parameters">(<a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;nextValue)</span></div>
 <div class="block"><p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(java.util.function.Function)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.60">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>,&#8203;<a href="../common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.73">previousValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>,&#8203;<a href="../common/TaxRateBuilder.html" title="class in com.commercetools.history.models.common">TaxRateBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="previousValue(com.commercetools.history.models.common.TaxRate)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.70">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.83">previousValue</a></span>&#8203;<span class="parameters">(<a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a>&nbsp;previousValue)</span></div>
 <div class="block"><p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChange()">
 <h3>getChange</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.76">getChange</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.89">getChange</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTaxMode()">
 <h3>getTaxMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.80">getTaxMode</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TaxMode.html" title="interface in com.commercetools.history.models.common">TaxMode</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.93">getTaxMode</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.84">getNextValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.97">getNextValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.88">getPreviousValue</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TaxRate.html" title="interface in com.commercetools.history.models.common">TaxRate</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.101">getPreviousValue</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetShippingMethodTaxRateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.92">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetShippingMethodTaxRateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.105">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="SetShippingMethodTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetShippingMethodTaxRateChange</a>&gt;</code></dd>
@@ -276,20 +287,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetShippingMethodTaxRateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.103">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetShippingMethodTaxRateChange</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.116">buildUnchecked</a></span>()</div>
 <div class="block">builds SetShippingMethodTaxRateChange without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.107">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.120">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.history.models.change.SetShippingMethodTaxRateChange)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.111">of</a></span>&#8203;<span class="parameters">(<a href="SetShippingMethodTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetShippingMethodTaxRateChange</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="SetShippingMethodTaxRateChangeBuilder.html" title="class in com.commercetools.history.models.change">SetShippingMethodTaxRateChangeBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/history/models/change/SetShippingMethodTaxRateChangeBuilder.html#line.124">of</a></span>&#8203;<span class="parameters">(<a href="SetShippingMethodTaxRateChange.html" title="interface in com.commercetools.history.models.change">SetShippingMethodTaxRateChange</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>

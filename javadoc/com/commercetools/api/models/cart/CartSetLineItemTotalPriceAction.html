@@ -84,8 +84,16 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="CartSetLineItemTotalPriceActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetLineItemTotalPriceActionImpl</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.16">CartSetLineItemTotalPriceAction</a></span><span class="extends-implements">
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.26">CartSetLineItemTotalPriceAction</a></span><span class="extends-implements">
 extends <a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   CartSetLineItemTotalPriceAction cartSetLineItemTotalPriceAction = CartSetLineItemTotalPriceAction.builder()
+           .lineItemId("{lineItemId}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -168,7 +176,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <li>
 <section class="detail" id="SET_LINE_ITEM_TOTAL_PRICE">
 <h3>SET_LINE_ITEM_TOTAL_PRICE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.20">SET_LINE_ITEM_TOTAL_PRICE</a></span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.30">SET_LINE_ITEM_TOTAL_PRICE</a></span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart.CartSetLineItemTotalPriceAction.SET_LINE_ITEM_TOTAL_PRICE">Constant Field Values</a></dd>
@@ -187,62 +195,62 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <section class="detail" id="getLineItemId()">
 <h3>getLineItemId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.22">getLineItemId</a></span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.32">getLineItemId</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getExternalTotalPrice()">
 <h3>getExternalTotalPrice</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.26">getExternalTotalPrice</a></span>()</div>
+</span><span class="return-type">@Valid <a href="ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.36">getExternalTotalPrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="setLineItemId(java.lang.String)">
 <h3>setLineItemId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.30">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.40">setLineItemId</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;lineItemId)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setExternalTotalPrice(com.commercetools.api.models.cart.ExternalLineItemTotalPrice)">
 <h3>setExternalTotalPrice</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.32">setExternalTotalPrice</a></span>&#8203;<span class="parameters">(<a href="ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a>&nbsp;externalTotalPrice)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.42">setExternalTotalPrice</a></span>&#8203;<span class="parameters">(<a href="ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a>&nbsp;externalTotalPrice)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.34">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.44">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.cart.CartSetLineItemTotalPriceAction)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.38">of</a></span>&#8203;<span class="parameters">(<a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.48">of</a></span>&#8203;<span class="parameters">(<a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder()">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemTotalPriceActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemTotalPriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.45">builder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemTotalPriceActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemTotalPriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.55">builder</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="builder(com.commercetools.api.models.cart.CartSetLineItemTotalPriceAction)">
 <h3>builder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemTotalPriceActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemTotalPriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.49">builder</a></span>&#8203;<span class="parameters">(<a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartSetLineItemTotalPriceActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetLineItemTotalPriceActionBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.59">builder</a></span>&#8203;<span class="parameters">(<a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a>&nbsp;template)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="withCartSetLineItemTotalPriceAction(java.util.function.Function)">
 <h3>withCartSetLineItemTotalPriceAction</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.53">withCartSetLineItemTotalPriceAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.63">withCartSetLineItemTotalPriceAction</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a>,&#8203;T&gt;&nbsp;helper)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="typeReference()">
 <h3>typeReference</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.57">typeReference</a></span>()</div>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type">com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartSetLineItemTotalPriceAction.html" title="interface in com.commercetools.api.models.cart">CartSetLineItemTotalPriceAction</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/cart/CartSetLineItemTotalPriceAction.html#line.67">typeReference</a></span>()</div>
 </section>
 </li>
 </ul>

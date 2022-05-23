@@ -83,9 +83,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DuplicateStandalonePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicateStandalonePriceScopeError</a>&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.12">DuplicateStandalonePriceScopeErrorBuilder</a></span>
+<div class="type-signature"><span class="modifiers">public class </span><span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.25">DuplicateStandalonePriceScopeErrorBuilder</a></span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DuplicateStandalonePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicateStandalonePriceScopeError</a>&gt;</span></div>
+<div class="block">Example to create an instance using the builder pattern
+ <div class=code-example>
+ <pre><code class='java'>
+   DuplicateStandalonePriceScopeError duplicateStandalonePriceScopeError = DuplicateStandalonePriceScopeError.builder()
+           .message("{message}")
+           .conflictingStandalonePrice(conflictingStandalonePriceBuilder -> conflictingStandalonePriceBuilder)
+           .sku("{sku}")
+           .currency("{currency}")
+           .build()
+ </code></pre>
+ </div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -232,7 +243,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="&lt;init&gt;()">
 <h3>DuplicateStandalonePriceScopeErrorBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.13">DuplicateStandalonePriceScopeErrorBuilder</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.26">DuplicateStandalonePriceScopeErrorBuilder</a></span>()</div>
 </section>
 </li>
 </ul>
@@ -246,66 +257,66 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="message(java.lang.String)">
 <h3>message</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.40">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.53">message</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="values(java.util.Map)">
 <h3>values</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.45">values</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;values)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.58">values</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;values)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="addValue(java.lang.String,java.lang.Object)">
 <h3>addValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.50">addValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.63">addValue</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="conflictingStandalonePrice(java.util.function.Function)">
 <h3>conflictingStandalonePrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.62">conflictingStandalonePrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../standalone_price/StandalonePriceReferenceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceReferenceBuilder</a>,&#8203;<a href="../standalone_price/StandalonePriceReferenceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.75">conflictingStandalonePrice</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../standalone_price/StandalonePriceReferenceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceReferenceBuilder</a>,&#8203;<a href="../standalone_price/StandalonePriceReferenceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Reference to a StandalonePrice.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="conflictingStandalonePrice(com.commercetools.api.models.standalone_price.StandalonePriceReference)">
 <h3>conflictingStandalonePrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.74">conflictingStandalonePrice</a></span>&#8203;<span class="parameters">(<a href="../standalone_price/StandalonePriceReference.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceReference</a>&nbsp;conflictingStandalonePrice)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.87">conflictingStandalonePrice</a></span>&#8203;<span class="parameters">(<a href="../standalone_price/StandalonePriceReference.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceReference</a>&nbsp;conflictingStandalonePrice)</span></div>
 <div class="block"><p>Reference to a StandalonePrice.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="sku(java.lang.String)">
 <h3>sku</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.80">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.93">sku</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="currency(java.lang.String)">
 <h3>currency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.85">currency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currency)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.98">currency</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currency)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="country(java.lang.String)">
 <h3>country</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.90">country</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.103">country</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customerGroup(java.util.function.Function)">
 <h3>customerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.99">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierBuilder</a>,&#8203;<a href="../customer_group/CustomerGroupResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.112">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierBuilder</a>,&#8203;<a href="../customer_group/CustomerGroupResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>ResourceIdentifier to a CustomerGroup.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="customerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier)">
 <h3>customerGroup</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.111">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.124">customerGroup</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
 <div class="block"><p>ResourceIdentifier to a CustomerGroup.</p></div>
 </section>
@@ -313,14 +324,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="channel(java.util.function.Function)">
 <h3>channel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.121">channel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>,&#8203;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.134">channel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>,&#8203;<a href="../channel/ChannelResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.channel">ChannelResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>ResourceIdentifier to a Channel.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="channel(com.commercetools.api.models.channel.ChannelResourceIdentifier)">
 <h3>channel</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.132">channel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.145">channel</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</span></div>
 <div class="block"><p>ResourceIdentifier to a Channel.</p></div>
 </section>
@@ -328,86 +339,86 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="validFrom(java.time.ZonedDateTime)">
 <h3>validFrom</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.138">validFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.151">validFrom</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="validUntil(java.time.ZonedDateTime)">
 <h3>validUntil</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.143">validUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.156">validUntil</a></span>&#8203;<span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="getMessage()">
 <h3>getMessage</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.148">getMessage</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.161">getMessage</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValues()">
 <h3>getValues</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.152">getValues</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.165">getValues</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getConflictingStandalonePrice()">
 <h3>getConflictingStandalonePrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../standalone_price/StandalonePriceReference.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.156">getConflictingStandalonePrice</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../standalone_price/StandalonePriceReference.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceReference</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.169">getConflictingStandalonePrice</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getSku()">
 <h3>getSku</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.160">getSku</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.173">getSku</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCurrency()">
 <h3>getCurrency</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.164">getCurrency</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.177">getCurrency</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.168">getCountry</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.181">getCountry</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getCustomerGroup()">
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.173">getCustomerGroup</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.186">getCustomerGroup</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getChannel()">
 <h3>getChannel</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.178">getChannel</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.191">getChannel</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.183">getValidFrom</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.196">getValidFrom</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.188">getValidUntil</a></span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.201">getValidUntil</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicateStandalonePriceScopeError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.193">build</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicateStandalonePriceScopeError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.206">build</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../../../../../io/vrap/rmf/base/client/Builder.html#build()">build</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="DuplicateStandalonePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicateStandalonePriceScopeError</a>&gt;</code></dd>
@@ -417,20 +428,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="buildUnchecked()">
 <h3>buildUnchecked</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicateStandalonePriceScopeError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.207">buildUnchecked</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicateStandalonePriceScopeError</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.220">buildUnchecked</a></span>()</div>
 <div class="block">builds DuplicateStandalonePriceScopeError without checking for non null required values</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.212">of</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.225">of</a></span>()</div>
 </section>
 </li>
 <li>
 <section class="detail" id="of(com.commercetools.api.models.error.DuplicateStandalonePriceScopeError)">
 <h3>of</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.216">of</a></span>&#8203;<span class="parameters">(<a href="DuplicateStandalonePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicateStandalonePriceScopeError</a>&nbsp;template)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="DuplicateStandalonePriceScopeErrorBuilder.html" title="class in com.commercetools.api.models.error">DuplicateStandalonePriceScopeErrorBuilder</a></span>&nbsp;<span class="element-name"><a href="../../../../../src-html/com/commercetools/api/models/error/DuplicateStandalonePriceScopeErrorBuilder.html#line.229">of</a></span>&#8203;<span class="parameters">(<a href="DuplicateStandalonePriceScopeError.html" title="interface in com.commercetools.api.models.error">DuplicateStandalonePriceScopeError</a>&nbsp;template)</span></div>
 </section>
 </li>
 </ul>
